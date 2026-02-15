@@ -121,7 +121,7 @@ These Fedora Linux platforms are primarily aimed at container based development 
 For general troubleshooting help related to Fedora, please refer to link:https://fedoraproject.org/wiki/Communicating_and_getting_help[this page on the Fedora wiki].
 For anything NeuroFedora related, please use the following channels:
 
-* You can chat with us at link:https://webchat.libera.chat/?channels=#fedora-neuro[#fedora-neuro on Libera.chat], or our link:https://matrix.to/#/#neuro:fedoraproject.org[Element/Matrix channel], or at link:https://t.me/NeuroFedora[@NeuroFedora on Telegram]. They are all bridged so one can use any of them.
+* You can chat with us at link:https://matrix.to/#/#neuro:fedoraproject.org[Element/Matrix channel], or at link:https://t.me/NeuroFedora[@NeuroFedora on Telegram]. They are all bridged so one can use any of them.
 * You can e-mail us on the NeuroFedora mailing list at link:https://lists.fedoraproject.org/admin/lists/neurofedora@lists.fedoraproject.org/[neurofedora@lists.fedoraproject.org].
 * You can follow updates related to NeuroFedora on the link:https://neuroblog.fedoraproject.org/[NeuroFedora blog at neuroblog.fedoraproject.org].
 * On Mastodon, we use the link:https://fosstodon.org/tags/neurofedora[#NeuroFedora] hash tag.
