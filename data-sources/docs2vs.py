@@ -10,7 +10,6 @@ Author: Ankur Sinha <sanjay DOT ankur AT gmail DOT com>
 
 import json
 import logging
-import mimetypes
 from glob import glob
 from hashlib import sha256
 from pathlib import Path
@@ -73,18 +72,15 @@ class FedoraDocs(object):
         self.logger.debug("Setting up/loading Chroma vector store")
 
         self.logger.debug(f"{self.stores_sources_path =}")
-        vec_store_sources = glob(f"{self.stores_sources_path}/*", recursive=False)
-        self.logger.debug(f"{vec_store_sources =}")
+        info_files = glob(f"{self.stores_sources_path}/*.md", recursive=True)
 
-        assert len(vec_store_sources)
-
-        for src in vec_store_sources:
-            self.logger.debug(f"Setting up vector store: {src}")
+        for src in info_files[:5]:
             src_path = Path(src)
+            url_map_file = Path(str(src_path).replace(".md", ".json"))
 
-            assert src_path.is_dir()
+            self.logger.debug(f"Loaded {url_map_file} url map file from {src}")
 
-            vs_persist_dir = f"./vector-stores/{src_path.name}_{self.embedding_model.replace(':', '_')}.db"
+            vs_persist_dir = f"./vector-stores/{src_path.name.replace('.md', '')}_{self.embedding_model.replace(':', '_')}.db"
             self.logger.debug(f"{vs_persist_dir =}")
 
             chroma_client_settings_text = chromadb.config.Settings(
@@ -98,40 +94,17 @@ class FedoraDocs(object):
                 client_settings=chroma_client_settings_text,
             )
 
-            info_files = glob(f"{src}/*.md", recursive=True)
-            url_maps = glob(f"{src}/*.json", recursive=True)
             self.logger.debug(f"Loaded {len(info_files)} files from {src}")
-            self.logger.debug(f"Loaded {len(url_maps)} url map files from {src}")
 
-            # only a single url map file is allowed here
-            assert len(url_maps) <= 1
-
-            if len(url_maps) == 1:
-                with open(url_maps[0], "r") as f:
+            if url_map_file.exists():
+                with open(url_map_file, "r") as f:
                     url_map_data = json.load(f)
             else:
                 url_map_data = {}
 
-            for info_file in info_files:
-                try:
-                    file_type = mimetypes.guess_file_type(info_file)[0]
-                except AttributeError:
-                    # for py<3.13
-                    file_type = mimetypes.guess_type(info_file)[0]
+            self.process_file(store, src_path, url_map_data)
 
-                if file_type:
-                    if "markdown" in file_type:
-                        self.add_md(store, info_file, url_map_data)
-                    else:
-                        self.logger.warning(
-                            f"File {info_file} is of type {file_type} which is not currently supported. Skipping"
-                        )
-                else:
-                    self.logger.warning(
-                        f"Could not guess file type for file {info_file}. Skipping"
-                    )
-
-    def add_md(self, store, file, url_map):
+    def process_file(self, store, file, url_map):
         """Add a markdown file to the vector store
 
         We add the file hash as extra metadata so that we can filter on it
