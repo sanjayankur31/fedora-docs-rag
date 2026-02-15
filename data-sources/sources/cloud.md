@@ -1,0 +1,590 @@
+Fedora 42 introduced a new image for use with [Windows Subsystem for
+Linux](https://learn.microsoft.com/en-us/windows/wsl/) (commonly
+referred to as WSL). This will allow users to have a simple, easy to set
+up Fedora environment for development and testing use.
+
+Multiple distributions may be run side by side in different namespaces,
+sharing the same kernel. Conceptually, the workflow is similar to a
+container, but it has been optimized to support an interactive Linux
+development & testing. WSL manages a lightweight VM with Wayland,
+PulseAudio, and some extra filesystem mounts provided. The user's choice
+of distro, such as Fedora, is run in an isolated namespace with its own
+root image. Filesystem state, including the root filesystem and home
+directories are also preserved between uses.
+
+The Fedora WSL image is similar to the cloud and container images, but
+some developer-focused packages such as manual pages, wget, and vim (as
+`vi`) have been preinstalled. Some changes specific to WSL for X11 and
+Wayland compatibility have also been preconfigured. The [Fedora 42
+change proposal](https://fedoraproject.org/wiki/Changes/FedoraWSL)
+provides some more background information as well.
+
+- Windows 11 (recommended), amd64 or arm64. Windows 10 may work, but is
+  not a focus as it will be [end-of-life
+  soon](https://www.microsoft.com/en-us/windows/end-of-support)
+
+- Virtualization extensions must be available. If you are testing in a
+  VM - be sure this is enabled in your VM settings. Some cloud services
+  restrict this to specific instance types.
+
+> Windows Server 2022 needs to be updated to KB5014678 (OS Build
+> 20348.768) or later first before installing WSL2. Please see the blog
+> post [WSL 2 distros are now supported on Windows
+> Server](https://devblogs.microsoft.com/commandline/wsl-2-distros-are-now-supported-on-windows-server/)
+> for more details.
+
+Microsoft has full instructions on setting up WSL at [WSL
+Install](https://learn.microsoft.com/en-us/windows/wsl/install). A
+summary follows.
+
+`wsl --install` will enable the hypervisor prerequisites, and prompt for
+reboot if needed.
+
+    wsl --install
+    Downloading: Windows Subsystem for Linux 2.4.10
+    Installing: Windows Subsystem for Linux 2.4.10
+    Windows Subsystem for Linux 2.4.10 has been installed.
+    Installing Windows optional component: VirtualMachinePlatform
+
+    Deployment Image Servicing and Management tool
+    Version: 10.0.26100.1150
+
+    Image Version: 10.0.26100.2894
+
+    Enabling feature(s)
+    [==========================100.0%==========================]
+    The operation completed successfully.
+    The requested operation is successful. Changes will not be effective until the system is rebooted.
+    The requested operation is successful. Changes will not be effective until the system is rebooted.
+
+After rebooting, you can proceed to the next section to install Fedora
+as a distribution in WSL.
+
+Fedora Linux is available for installation from the official
+distribution list. For example, to install and run Fedora Linux 42:
+
+    wsl --install FedoraLinux-42
+    wsl -d FedoraLinux-42
+
+To get a list of currently available images, you can run:
+
+    wsl --list --online
+
+If you're interested in experimenting with Rawhide images, or want a
+nightly stable image to check if a bug is fixed, tarballs can be
+[downloaded directly from
+koji](https://koji.fedoraproject.org/koji/packageinfo?packageID=41688).
+
+Checksums may be verified using the same steps used to validate other
+Fedora images as described at [Verifying checksums on Windows
+systems](https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/#sect-verifying-images).
+
+These tarballs can be installed using `wsl.exe`. First, check the
+version of WSL you are using by running `wsl.exe --version`. Follow the
+steps below based on the version.
+
+**For WSL versions 2.4.4+:**
+
+1.  From the command line, install the tarball with
+    `wsl --install --from-file .\path\to\Fedora.wsl`
+
+<!-- -->
+
+    wsl --install --from-file .\Fedora-WSL-Base-43-1.6.x86_64.wsl
+    Installing: .\Fedora-WSL-Base-43-1.6.x86_64.wsl
+    Distribution successfully installed. It can be launched via 'wsl.exe -d Fedora'
+
+1.  Enter the environment by running `wsl -d Fedora`
+
+2.  When prompted, provide a username. This will be the default user,
+    and it will be added to the groups for `sudo` usage
+
+**For WSL versions prior to 2.4.4:**
+
+(These steps assume you are using PowerShell)
+
+1.  Make a directory for the Fedora distribution with
+    `mkdir $ENV:LOCALAPPDATA\WSL\Fedora`
+
+2.  Import the WSL tarball with
+    `wsl --import Fedora $ENV:LOCALAPPDATA\WSL\Fedora .\Path\To\Fedora.x86_64-Rawhide.tar.xz`
+
+3.  Enter the environment with `wsl -d Fedora -u root`
+
+4.  Manually run `/usr/libexec/wsl/oobe.sh` to create the default user
+
+5.  `exit` the environment logged in as root
+
+6.  Enter the environment as the newly created user with
+    `wsl -d Fedora -u <username>`
+
+Perhaps you've found an already-reported bug. Please look at:
+
+- [Bugzilla - component:
+  wsl-setup](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&classification=Fedora&component=wsl-setup&product=Fedora&product=Fedora%20EPEL) -
+  for initial user creation & WSL configurations.
+
+- [fedora-kiwi-descriptions
+  issues](https://pagure.io/fedora-kiwi-descriptions/issues) - for
+  feedback & issues related to the preinstalled packages in the WSL
+  package.
+
+- When filing the bug, it's very helpful to include:
+
+  - WSL & Windows versions, which you can retrieve with \<code\>wsl.exe
+    \--version\</code\>
+
+  - exact steps you've performed (and whether you can reproduce it
+    again)
+
+  - screenshots or videos, if applicable
+
+  - system journal (log), which you can retrieve by
+    `journalctl -b > journal.txt`
+
+  - all output in a terminal, if started from a terminal
+
+  - your system description
+
+Package sources are at:
+[rpms/wsl-setup](https://src.fedoraproject.org/rpms/wsl-setup)
+
+Microsoft Azure is one of the major cloud platforms where Fedora Cloud
+images are officially supported and regularly updated by the Fedora
+Cloud SIG.
+
+Fedora images are directly accessible through Azure's Community Gallery,
+providing a seamless deployment experience without requiring manual
+image uploads.
+
+For secure access to your Fedora virtual machines, SSH key pairs are
+required. Azure can generate these automatically during VM creation, or
+you can provide your own existing keys.
+
+There are two primary methods to deploy Fedora virtual machines on
+Azure:
+
+1.  **Web Portal**: Using either the Fedora Project's cloud launch page
+    or Azure's Community Gallery
+
+2.  **Azure CLI**: Command-line deployment
+
+Ensure you are authenticated to [Azure
+Portal](https://portal.azure.com/) before proceeding.
+
+This method provides the quickest deployment path. The Fedora Project
+website integrates directly with Azure, automatically selecting the
+appropriate image for your chosen region.
+
+:::: note
+::: title
+:::
+
+Toggle \"Show Beta downloads\" on the Cloud launch page to access the
+latest beta images for deployment.
+::::
+
+1.  Navigate to [Fedora Cloud
+    Launch](https://fedoraproject.org/cloud/download#cloud_launch) page.
+
+2.  Choose your preferred Azure region from the available options
+
+3.  The system will redirect you directly to Azure's VM creation
+    interface
+
+For more control over the deployment process, manually navigate through
+Azure's Community Gallery to select Fedora images.
+
+1.  Access the [Community images
+    service](https://portal.azure.com/#view/Microsoft_Azure_ComputeHub/ComputeHubMenuBlade/~/communityImagesBrowse)
+    in Azure Portal
+
+2.  Apply a filter for \"Public gallery name\" and locate Fedora's
+    gallery: `Fedora-5e266ba4-2250-406d-adad-5d73860d958f`
+
+3.  Select the Fedora image that matches your requirements (version and
+    architecture)
+
+4.  Use [Azure Quick
+    Create](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)
+    Documentation for the vm configuration.
+
+Once deployment completes (typically takes 2-3 minutes), Azure displays
+your VM details including the assigned public IP address. To connect to
+your Fedora instance:
+
+1.  Download your SSH private key when prompted
+
+2.  Connect to Virtual Machine with default user `azureuser`.
+
+``` bash
+ssh -i ~/Downloads/your-key-name.pem azureuser@YOUR-PUBLIC-IP
+```
+
+The Azure Command Line Interface provides a powerful alternative for
+users who prefer programmatic deployment or need to automate VM creation
+processes. While the CLI requires more specific knowledge of Azure
+parameters, it offers greater speed and automation capabilities.
+
+Install the Azure CLI on your local machine to manage deployments and
+configure resources.
+
+``` bash
+sudo dnf install azure-cli
+az login  # Authenticate your account
+az account show # Verify correct subscription
+```
+
+:::: note
+::: title
+:::
+
+The login process will open your browser and may take a few moments to
+complete.
+::::
+
+Fedora maintains multiple image definitions within Azure's Community
+Gallery, covering different releases and hardware architectures. Each
+image definition contains various versions, with new versions added
+regularly for security updates and improvements.
+
+To list all available Fedora image definitions:
+
+``` bash
+az sig image-definition list-community \
+--public-gallery-name Fedora-5e266ba4-2250-406d-adad-5d73860d958f \
+--location eastus \
+--query '[].name'
+```
+
+Creating For viewing specific versions of an image definition:
+
+``` bash
+az sig image-version list-community \
+--public-gallery-name Fedora-5e266ba4-2250-406d-adad-5d73860d958f \
+--gallery-image-definition "Fedora-Cloud-42-x64" \
+--location eastus \
+--query '[?!excludeFromLatest].uniqueId'
+```
+
+Please follow this [Virtual Machine
+Creation](https://learn.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-manage-vm)
+guide from the Azure documentation using Azure CLI
+
+:::: note
+::: title
+:::
+
+Use \--image option with specific fedora version
+/CommunityGalleries/Fedora-5e266ba4-2250-406d-adad-5d73860d958f/Images/\<Fedora-Cloud-42-x64\>/\<Versions\>/\<latest\>
+during vm creation.
+::::
+
+We will install Fedora 43 onto a AWS EC2 instance in the us-west-2
+region.
+
+To launch an instance in AWS, you will need the Amazon Machine Image
+(AMI) ID for the Fedora image for the region and machine architecture
+you want to use.
+
+The list of regions for both x86_64 and aarch64 are available under the
+"Launch on public cloud platforms" section of
+<https://fedoraproject.org/cloud/download#cloud_launch>
+
+For example, to launch an x86_64 Fedora 43 AMI in the us-west-2 region,
+the AMI ID is ami-09d4a84b1cda0ac74. Note that the AMI ID changes with
+each release.
+
+**Step 1: Download the Installer**
+
+Download the AWS CLI from the AWS CLI Website site:
+<https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html>
+Choose the type of CLI software based on your OS specifications
+
+**Step 2: Run the Installer**
+
+Install the AWS CLI on Fedora using the DNF package manager as follows.
+
+``` bash
+$ sudo dnf install awscli -y
+```
+
+To install the AWS CLI on other Linux, run the following commands.
+
+``` bash
+$ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+$ unzip awscliv2.zip
+$ sudo ./aws/install
+```
+
+**Step 3: Verify the Installation**
+
+Verify the installation of AWS with the following command:
+
+``` bash
+$ aws - version
+```
+
+**Step 4: Configure the AWS CLI**
+
+Now, configure with your aws credentials such as Access Key and Secret
+Key by running the following command:
+
+``` bash
+$ aws configure
+```
+
+If you have an existing VPC, with Subnets, Internet Gateway, Route
+Table, Security Group, and key pairs, skip to the Running the EC2
+instance step. If not, follow the next steps listed to create a default
+VPC. Creating the default VPC, creates the Subnets, Internet Gateway,
+Route Table, etc. for you.
+
+Create a VPC (Virtual Private Cloud) as shown below.
+
+``` bash
+$ aws ec2 create-default-vpc
+{
+"Vpc": {
+"OwnerId": "985539757503",
+"InstanceTenancy": "default",
+"Ipv6CidrBlockAssociationSet": [],
+"CidrBlockAssociationSet": [
+{
+"AssociationId": "vpc-cidr-assoc-0111c20e708b227a2",
+"CidrBlock": "172.31.0.0/16",
+"CidrBlockState": {
+"State": "associated"
+}
+}
+],
+"IsDefault": true,
+"Tags": [],
+"VpcId": "vpc-00617799cf31e2740",
+"State": "pending",
+"CidrBlock": "172.31.0.0/16",
+"DhcpOptionsId": "dopt-02320dcaf6fd91eb3"
+}
+}
+```
+
+Here the CIDR block is 172.31.0.0/16. The output will be given in a JSON
+format. Note the vpcId.
+
+Check if the subnets are created successfully:
+
+``` bash
+aws ec2 describe-subnets - filters "Name=vpc-id,Values=<vpcId>" - query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
+```
+
+Example:
+
+``` bash
+$ aws ec2 describe-subnets --filters "Name=vpc-id,Values=vpc-00617799cf31e2740" --query "Subnets[*].{ID:SubnetId,CIDR:CidrBlock}"
+[
+{
+"ID": "subnet-0cfbac16072874109",
+"CIDR": "172.31.0.0/20"
+},
+{
+"ID": "subnet-0bf950784376cab19",
+"CIDR": "172.31.16.0/20"
+},
+{
+"ID": "subnet-0d10af3548785ccc7",
+"CIDR": "172.31.48.0/20"
+},
+{
+"ID": "subnet-08c1988b07451008b",
+"CIDR": "172.31.32.0/20"
+}
+]
+```
+
+Internet gateway are created as part of creating the default VPC. Check
+if the subnets are created successfully.
+
+``` bash
+aws ec2 describe-internet-gateways
+```
+
+Example:
+
+``` bash
+$ aws ec2 describe-internet-gateways
+{
+"InternetGateways": [
+{
+"Attachments": [
+{
+"State": "available",
+"VpcId": "vpc-00617799cf31e2740"
+}
+],
+"InternetGatewayId": "igw-0edf1325238ca299f",
+"OwnerId": "985539757503",
+"Tags": []
+}
+]
+}
+```
+
+A Route Table is also created and assigned to the default VPC.
+
+``` bash
+$ aws ec2 describe-route-tables
+{
+"RouteTables": [
+{
+"Associations": [
+{
+"Main": true,
+"RouteTableAssociationId": "rtbassoc-0ed54d31a73dc80c2",
+"RouteTableId": "rtb-0571c0444bafe3dbc",
+"AssociationState": {
+"State": "associated"
+}
+}
+],
+"PropagatingVgws": [],
+"RouteTableId": "rtb-0571c0444bafe3dbc",
+"Routes": [
+{
+"DestinationCidrBlock": "172.31.0.0/16",
+"GatewayId": "local",
+"Origin": "CreateRouteTable",
+"State": "active"
+},
+{
+"DestinationCidrBlock": "0.0.0.0/0",
+"GatewayId": "igw-0edf1325238ca299f",
+"Origin": "CreateRoute",
+"State": "active"
+}
+],
+"Tags": [],
+"VpcId": "vpc-00617799cf31e2740",
+"OwnerId": "985539757503"
+}
+]
+}
+```
+
+An AWS key pair is a set of secure credentials consisting of a public
+key and a private key, used primarily to securely connect to Amazon EC2
+instances
+
+Now, create the key-pair using the below command:
+
+``` bash
+$ aws ec2 create-key-pair --key-name my-keypair --query "KeyMaterial" --output text > my-keypair.pem
+```
+
+Here we have named the key pair file as my-keypair.pem and it is
+downloaded into the current directory where the command was run from.
+
+For creating the Security Group use the below commands:
+
+``` bash
+aws ec2 create-security-group --group-name <security-group-name> --description "<description>"  --vpc-id <vpcId>
+```
+
+Example:
+
+``` bash
+$ aws ec2 create-security-group --group-name FedoraSG --description "Fedora Security Group"  --vpc-id vpc-00617799cf31e2740
+{
+"GroupId": "sg-07a6089d022898d5e",
+"SecurityGroupArn": "arn:aws:ec2:us-west-2:985539757503:security-group/sg-07a6089d022898d5e"
+}
+```
+
+Note the GroupId and use it in the next step.
+
+``` bash
+aws ec2 authorize-security-group-ingress - group-id <GroupId> - protocol tcp - port 22 - cidr 0.0.0.0/0
+```
+
+Example:
+
+``` bash
+$ aws ec2 authorize-security-group-ingress --group-id sg-07a6089d022898d5e --protocol tcp --port 22 --cidr 0.0.0.0/0
+{
+"Return": true,
+"SecurityGroupRules": [
+{
+"SecurityGroupRuleId": "sgr-0ad9c03c1d572224c",
+"GroupId": "sg-07a6089d022898d5e",
+"GroupOwnerId": "985539757503",
+"IsEgress": false,
+"IpProtocol": "tcp",
+"FromPort": 22,
+"ToPort": 22,
+"CidrIpv4": "0.0.0.0/0",
+"SecurityGroupRuleArn": "arn:aws:ec2:us-west-2:985539757503:security-group-rule/sgr-0ad9c03c1d572224c"
+}
+]
+}
+```
+
+The protocol/port we use here is TCP/22, which is the standard port for
+the Secure Shell (SSH) protocol.
+
+Running the EC2 Instance Next, run the EC2 Instance using the command as
+given below.
+
+``` bash
+aws ec2 run-instances - image-id <ami-id> - instance-type t2.micro
+- key-name <Keypair-name> - security-group-ids <SecurityGroupId>
+- subnet-id <SubnetId>
+- associate-public-ip-address
+- tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyEC2Instance}]'
+```
+
+Example:
+
+``` bash
+$ aws ec2 run-instances - image-id ami-09d4a84b1cda0ac74 - instance-type t2.micro - key-name my-keypair - subnet-id subnet-08c1988b07451008b - security-group-ids sg-07a6089d022898d5e - associate-public-ip-address - tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyEC2Instance}]'
+At this step, you will need an AMI (Amazon Machine Image) image ID. Use the Fedora AMI Id for the us-west-2 region we noted above ie. ami-09d4a84b1cda0ac74
+```
+
+- Open an SSH client.
+
+- Locate your private key file. The key used to launch this instance is
+  my-keypair.pem
+
+- Run this command, if necessary, to ensure your key is not publicly
+  viewable.
+
+``` bash
+$ chmod 400 "my-keypair.pem"
+```
+
+- Connect to your instance using its Public DNS:
+
+Example:
+
+``` bash
+$ ssh -i "my-keypair.pem" fedora@ec2–54–218–117–248.us-west-2.compute.amazonaws.com
+The authenticity of host 'ec2–54–218–117–248.us-west-2.compute.amazonaws.com (54.218.117.248)' can't be established.
+ED25519 key fingerprint is SHA256:/Gw7ysOzRvVsvbz3xdOyFP1F7mm3sFIYE1hPhJCCZ8M.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2–54–218–117–248.us-west-2.compute.amazonaws.com' (ED25519) to the list of known hosts.
+
+[fedora@ip-172–31–39–204 ~]$
+[fedora@ip-172–31–39–204 ~]$ cat /etc/redhat-release
+Fedora release 43 (Forty Three)
+```
+
+**Q:** Can I see a built preview of this template to get a better idea
+about the result?
+
+**A:** Of course you can! Just look at the README of the repository ---
+it should tell you everything.
+
+**Q:** Is writing documentation hard and dreadful?
+
+**A:** Absolutely not. Writing documentation in asciidoc is very simple
+and straightforward. And in fact, writing documentation makes you very
+happy. Just try and see for yourself!
