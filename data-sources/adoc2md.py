@@ -9,9 +9,11 @@ Author: Ankur Sinha <sanjay DOT ankur AT gmail DOT com>
 """
 
 import logging
+import sys
 from contextlib import chdir
 from pathlib import Path
 from subprocess import run
+from typing import Optional
 
 logging.basicConfig(
     format="%(name)s (%(levelname)s) >>> %(message)s\n", level=logging.WARNING
@@ -21,10 +23,14 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 
 
-def runner():
+def runner(filename: Optional[str] = None):
     with chdir("sources"):
         cwd = Path(".")
-        adocs = cwd.glob("*.adoc")
+        if not filename:
+            adocs = list(cwd.glob("*.adoc"))
+        else:
+            adocs = [Path(filename)]
+        failures = []
         for adoc in adocs:
             logger.info(f"Processing {str(adoc)}")
             docbook_file = str(adoc).replace(".adoc", ".xml")
@@ -32,12 +38,25 @@ def runner():
 
             logger.debug(f"Converting {str(adoc)} -> {docbook_file}")
             cmd1 = f"asciidoctor -b docbook {str(adoc)} -o {docbook_file}"
-            run(cmd1.split())
+            res = run(cmd1.split())
+            if res.returncode != 0:
+                failures.append(str(adoc))
 
             logger.debug(f"Converting {docbook_file} -> {md_file}")
             cmd2 = f"pandoc -f docbook -t markdown {str(docbook_file)} -o {md_file}"
-            run(cmd2.split())
+            res2 = run(cmd2.split())
+            if res2.returncode != 0:
+                failures.append(str(docbook_file))
+
+        with open("adoc2md-failures.txt", "w") as f:
+            f.write(str(failures))
 
 
 if __name__ == "__main__":
-    runner()
+    if len(sys.argv) == 1:
+        runner()
+    elif len(sys.argv) == 2:
+        filename = sys.argv[1]
+        runner(filename)
+    else:
+        print("Error: only zero or one arguments allowed.")
