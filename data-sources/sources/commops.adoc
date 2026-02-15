@@ -1517,7 +1517,7 @@ Read the {url_commblog}/how-to-log-in/[help page] for more detailed instructions
 
 Fedora uses the Matrix protocol for instant messaging and communication.
 Our Matrix rooms can be accessed using any Matrix client, but https://element.io/[Element client] and the https://chat.fedoraproject.org/[chat.fedoraproject.org] web app are the most common and easiest ways to get started.
-Discussions and planning take place in Matrix channel https://matrix.to/#/#commops:fedoraproject.org[#commops:fedoraproject.org], while our monthly team meetings are held in a meeting room such as https://matrix.to/#/#meeting:fedoraproject.org/[#meeting:fedoraproject.org].
+Discussions and planning take place in Matrix channel https://matrix.to/#/#commops:fedoraproject.org while our monthly team meetings are held in a meeting room such as https://matrix.to/#/#meeting:fedoraproject.org/.
 
 [[first-steps]]
 == Make your first steps
@@ -2483,7 +2483,7 @@ Here, you can add custom help texts to individual fields and headlines by clicki
 Add new questions for your form by clicking on *Add a new question*.
 
 .Add a new question in Pretalx
-image::pretalx-cfp-editor-add-question.png[Screenshot of the CFP editor, where the "Add a new question" button is shown in the upper-right corner of the screen.]
+image::pretalx-cfp-editor-add-question.png[Screenshot of the CFP editor, where the 'Add a new question' button is shown in the upper-right corner of the screen.]
 
 * Questions can be tailored to suit the speaker, proposal, or reviewer.
 These options are seen when the drop-down is clicked on.

@@ -1,0 +1,3775 @@
+- Community Outreach Badges
+
+# Event Badges {#_event_badges}
+
+Dhairya Chaudhary; Justin W. Wheeler; Sumantro Mukherjee :page-authors:
+{author}, {author_2}, {author_3}
+
+The following badges are awarded for participation in Fedora events.
+
+## Advocates {#_advocates}
+
+The [Fedora Advocate
+badge](https://badges.fedoraproject.org/badge/fedora-advocate) is
+awarded for being a organizing an event through the Advocate Program.
+
+![Advocates](https://pagure.io/fedora-badges/issue/raw/files/192ea0085e39847f517c417ff42599256ac425324466cbcc5ad3e3384ae1a71d-633-advocate-2.png)
+
+## Panda Sighting {#_panda_sighting}
+
+The [Panda Sighting](https://pagure.io/fedora-badges/issue/835) badge is
+awarded for making an appearance on the Fedora YouTube Channel.
+
+![Panda
+Sighting](https://pagure.io/fedora-badges/issue/raw/files/7ce2c7cbdc27db57e7add0c8fd33790f546d2f847e8150a1b5fea70827bc6641-sighting.png)
+
+# Team Member Badges {#_team_member_badges}
+
+Dhairya Chaudhary; Justin W. Wheeler; Sumantrom :page-authors: {author},
+{author_2}, {author_3}
+
+These badges are earned for becoming a member of a team, working group,
+or special interest group in the Fedora Community.
+
+## Ambassador Badge {#_ambassador_badge}
+
+The [Ambassador](https://badges.fedoraproject.org/badge/ambassador)
+badge is awarded for being a Fedora Ambassador.
+
+![Fedora
+Ambassador](https://badges.fedoraproject.org/pngs/fas-ambassador.png)
+
+## Ambassador Emeritus Badge {#_ambassador_emeritus_badge}
+
+The [Ambassador Emeritus](https://pagure.io/fedora-badges/issue/632)
+Badge is awarded for retiring from the Fedora Ambassador Team.
+
+![Ambassador
+Emeritus](https://pagure.io/fedora-badges/issue/raw/files/d689147b14b843b82784f04d28213a6ae98c825055b64003a5bb8f57b9d07da7-emeritus.png)
+
+## Called to Action {#_called_to_action}
+
+The [Called to Action](https://pagure.io/fedora-badges/issue/833) badge
+is awarded for being a member of the [Fedora Marketing
+Team](https://fedoraproject.org/wiki/Marketing).
+
+![Marketing](https://pagure.io/fedora-badges/issue/raw/files/1f0dbca7b58b2571d6af76e3e4642e85e329d8785bee05c13cde7d23f236896d-marketing.png)
+
+## CommOps Superstar {#_commops_superstar}
+
+The [CommOps
+Superstar](https://badges.fedoraproject.org/badge/commops-superstar)
+badge is awarded for being a member of the [Fedora CommOps
+Team](https://docs.fedoraproject.org/en-US/commops/).
+
+![Commops
+Star](https://pagure.io/Fedora-Badges/issue/raw/ce8faf2664dc1471c9a3b30ce031fb314b4fbde70f66e4041e9f377f007b4a48-464_2.2.png)
+
+## Welcome Wagon {#_welcome_wagon}
+
+The [Welcome Wagon](https://pagure.io/fedora-badges/issue/736) badge is
+awarded for being a member of the [Fedora Join Special Interest
+Group](https://docs.fedoraproject.org/en-US/fedora-join/).
+
+![Welcome
+Wagon](https://pagure.io/fedora-badges/issue/raw/files/00793571ff965fec5ae38b2d945f279b962cc474a2a29b842afa816572e634ed-Join_SIG.png)
+
+# Repo Badges {#_repo_badges}
+
+Dhairya Chaudhary; Justin W. Wheeler; Sumantro Mukherjee :page-authors:
+{author}, {author_2}, {author_3}
+
+## CommOps Busy Bee {#_commops_busy_bee}
+
+The [CommOps Busy Bee](https://pagure.io/fedora-badges/issue/831) badges
+is awarded for opening tickets on the [CommOps pagure
+repo](https://pagure.io/fedora-commops/issues).
+
+![Busy
+Bee](https://pagure.io/fedora-badges/issue/raw/files/4216ba774fac615a23106a47fc36d07b06770e7b41f4a00d4419de5db2049331-busybee1.png)
+
+## The Bees Knees {#_the_bees_knees}
+
+The [Bees Knees](https://pagure.io/fedora-badges/issue/832) badge is
+award for closing tickets on the [CommOps pagure
+repo](https://pagure.io/fedora-commops/issues).
+
+![Busy
+Knees](https://pagure.io/fedora-badges/issue/raw/files/4d7d22cbf3309681126596594103b56e894eaaee5e30e3160a31e02881d4fd23-beesknees1.png)
+
+## Onboarding Ideas Specialist {#_onboarding_ideas_specialist}
+
+The [Onboarding Ideas
+Specialist](https://pagure.io/fedora-badges/issue/836) badge is awarded
+for opening tickets on the [Fedora Join SIG pagure
+repo](https://pagure.io/fedora-join/Fedora-Join/issues).
+
+![Onboarding
+Ideas](https://pagure.io/fedora-badges/issue/raw/files/a94c54ba9dca17be06fc1ba3f52577bb87f84e71b439c6b50da1fec45c346e26-onboarding-idea1.png)
+
+## Onboarding Specialist {#_onboarding_specialist}
+
+The [Onboarding Specialist](https://pagure.io/fedora-badges/issue/837)
+badge is awarded for closing tickets on the [Fedora Join SIG pagure
+repo](https://pagure.io/fedora-join/Fedora-Join/issues).
+
+![Onboarding
+Specialists](https://pagure.io/fedora-badges/issue/raw/files/b78a855c25d77f428d3325cbc4a314336b412600790f81eb6911767dd909d2e0-onboarding1.png)
+
+## Welcoming Committee {#_welcoming_committee}
+
+The [Welcoming Committee](https://pagure.io/fedora-badges/issue/834)
+badge is awarded for closing tickets on the [Welcome-to-Fedora pagure
+repo](https://pagure.io/fedora-join/Welcome-to-Fedora/issues)
+
+![Welcoming
+Committee](https://pagure.io/fedora-badges/issue/raw/files/0d94003ab209b9a94621f8f8b9cf16386849b9e9b120a0dc56adc6b723bd299a-welcome1.png)
+
+# Matrix @ Fedora CommOps Working Group {#_matrix_fedora_commops_working_group}
+
+A CommOps Working Group focused on the governance and user experience of
+Fedora's presence on the Matrix platform. This group concentrates on
+establishing policy, developing best practices, and providing support
+for Fedora's Matrix spaces and moderation teams, rather than directly
+executing all moderation tasks.
+
+## Scope
+
+The primary goals of this working group are to:
+
+- Establish clear guidelines and policies for the creation, moderation,
+  and maintenance of official `fedoraproject.org` Matrix rooms.
+
+- Provide support and resources to Matrix room admins and moderators.
+
+- Develop best practices for moderation, including tools and techniques
+  to address abuse and ensure a safe environment.
+
+- Facilitate communication and collaboration between Matrix room admins
+  and moderators.
+
+- Collaborate with the CommOps team to align Matrix governance with
+  broader Fedora communication strategies.
+
+- Improve the overall user experience within Fedora's Matrix presence.
+
+## Responsibilities
+
+The working group has the following responsibilities:
+
+- Define the criteria for a Matrix room to be considered an official
+  `fedoraproject.org` room.
+
+- Develop and maintain documentation for Matrix room governance and
+  moderation practices.
+
+- Define and document the process for nominating and approving Matrix
+  room admins and moderators.
+
+- Evaluate and recommend tools and methods for abuse prevention and
+  moderation support.
+
+- Organize regular meetings for Matrix room admins and moderators to
+  discuss issues, share best practices, and facilitate support.
+
+- Coordinate with the CommOps team on communication strategies and
+  support needs.
+
+- Identify and recommend potential improvements to Matrix chat bots used
+  by the community.
+
+- Facilitate communication and collaboration primarily with other Fedora
+  Project teams, Special Interest Groups (SIGs), and Working Groups
+  regarding Matrix usage, governance, and best practices.
+
+- Engage with external open source communities on shared moderation
+  tools or common challenges when beneficial for Fedora.
+
+## Membership
+
+The working group includes participants from the following groups:
+
+- Representatives from the CommOps team.
+
+- Active Matrix room admins and moderators for official Fedora spaces.
+
+- Representatives from the Fedora Infrastructure team.
+
+- Other interested Fedora contributors.
+
+Contributors interested in participating are encouraged to join the
+discussions in the `#commops:fedoraproject.org` room and attend CommOps
+Team meetings.
+
+## Operating Procedures
+
+- The working group uses the [lazy consensus
+  model](council::index.xml#decisions) for its internal decisions.
+
+- The working group uses the `#commops:fedoraproject.org` Matrix room
+  for its discussions.
+
+- The working group uses the CommOps Team repository at
+  <https://gitlab.com/fedora/commops/home> to manage tasks and track
+  progress.
+
+## Meetings
+
+The Matrix WG meets as a part of the CommOps Team meetings. The CommOps
+Team meetings alternate between video conferences and text-based
+sessions on Matrix, resulting in approximately one video meeting and one
+text-based meeting per month. Meeting schedules are announced in the
+`#commops:fedoraproject.org` Matrix room.
+
+## Relationship to CommOps {#commops}
+
+- This working group operates under the umbrella of the Fedora Community
+  Operations (CommOps) team.
+
+- It aligns its activities with CommOps\' goals to improve communication
+  and community health.
+
+- CommOps provides guidance and support to the working group.
+
+- Design Assets
+
+# Cheat cubes {#_cheat_cubes}
+
+Fedora Cheat Cubes are a long time community favorite. They are designed
+to print, cut, and tape together cubes covered with various Fedora
+related designs. The traditional theme for Cheat Cubes is Packaging- but
+we modernized this project by creating other variations!
+
+## Packaging {#_packaging}
+
+Find the Packaging Cheat Cube source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes).
+
+![S](cheatcube_packaging.png)
+
+## How to Join Fedora {#_how_to_join_fedora}
+
+Find the How to Join Fedora Cheat Cube source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes).
+
+![Static](cheatcube_howtojoinFedora_version2.png)
+
+## Four Foundations {#_four_foundations}
+
+Find the Four Foundations Cheat Cube source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes).
+
+![cheatcube fourfoundations](cheatcube_fourfoundations.png)
+
+## Community Outreach Teams {#_community_outreach_teams}
+
+Find the Community Outreach Teams Cheat Cube source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes).
+
+![cheatcube
+communityoutreachteams](cheatcube_communityoutreachteams.png)
+
+# How to join Fedora: slide deck presentation {#_how_to_join_fedora_slide_deck_presentation}
+
+Community Outreach can often mean presenting on a Fedora related topic.
+In order to help maintain our brand aesthetic, we encourage folks to use
+this deck of slide templates. Find the source files
+[here](https://gitlab.com/fedora/commops/archive/-/tree/main/docs/modules/all-assets/Fedora%20Slide%20Template?ref_type=heads).
+
+![fedoraslidetemplate newbrand](fedoraslidetemplate_newbrand.png)
+
+# How to Join Fedora Resources {#_how_to_join_fedora_resources}
+
+This page holds resources related to "How to Join Fedora". The printouts
+explain the basic steps to joining Fedora and connecting with the
+community. The slide presentation covers a lot of material. These
+resources are meant to be used by anyone implementing outreach for
+Fedora.
+
+## Slide Presentation {#_slide_presentation}
+
+This "How to Join Fedora" slide presentation has been designed for
+general use. There are PDF and ODP files available. The typeface used
+throughout the deck is Montserrat. Find the files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora).
+
+### Outline of the presentation {#_outline_of_the_presentation}
+
+- Who and what Fedora is
+
+- How Fedora is organized
+
+- How to start contributing to Fedora
+
+- Tips on becoming a successful contributor
+
+![howtojoinfedorapresentation
+pic](join-us/howtojoinfedorapresentation_pic.png)
+
+## Print Version 1 {#_print_version_1}
+
+This "How to Join Fedora" resource has been designed to print at an A4
+size and it is also suitable for sharing on the web. It has been
+translated into French, German, Hindi, Portuguese, and Spanish. Find all
+the variations and source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora).
+
+![howtojoinfedora printversion1
+english](join-us/howtojoinfedora_printversion1_english.png)
+
+## Print Version 2 {#_print_version_2}
+
+This "How to Join Fedora" resource has been designed to print at an A4
+size and it is also suitable for sharing on the web. It has been
+translated into French, German, Hindi, Portuguese, and Spanish. Find all
+the variations and source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora).
+
+![howtojoinfedora printversion2
+english](join-us/howtojoinfedora_printversion2_english.png)
+
+## Web Version {#_web_version}
+
+This "How to Join Fedora" resource has been designed specifically for
+sharing on the web. It has been translated into French, German, Hindi,
+Portuguese, and Spanish. Find all the variations and source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora).
+
+![howtojoinfedora webversion1
+english](join-us/howtojoinfedora_webversion1_english.png)
+
+## Cheat Cube Version 1 {#_cheat_cube_version_1}
+
+Fedora Cheat Cubes are a long time community favorite. They are designed
+to print, cut, and tape together cubes covered with various Fedora
+related designs. The theme for this Cheat Cube is "How to Join Fedora"
+version 1. Find the source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora).
+
+![cheatcube howtojoinfedora
+version1](join-us/cheatcube_howtojoinfedora_version1.png)
+
+## Cheat Cube Version 2 {#_cheat_cube_version_2}
+
+Fedora Cheat Cubes are a long time community favorite. They are designed
+to print, cut, and tape together cubes covered with various Fedora
+related designs. The theme for this Cheat Cube is "How to Join Fedora"
+version 2. Find the source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora).
+
+![cheatcube howtojoinFedora
+version2](join-us/cheatcube_howtojoinFedora_version2.png)
+
+# Fedora Project Organizational Chart {#_fedora_project_organizational_chart}
+
+Find the Fedora Project Organization Chart source files
+[here](https://gitlab.com/fedora/commops/home/-/tree/main/docs/modules/all-assets/Organizational%20Charts%20_%20Infographics/Fedora%20Project%20Organizational%20Chart).
+
+![Fedora Organizational
+Chart](https://docs.fedoraproject.org/en-US/project/_images/orgchart.png)
+
+# Mindshare Teams Infographics {#_mindshare_teams_infographics}
+
+This page holds infographics for the teams "under" the Mindshare
+Committee. These designs are focused on the achievements of the various
+teams from 2019/2020(updates welcome!). Ambassadors and folks interested
+in Fedora related outreach should use these to get an understanding of
+what kinds of activities each of these teams does. They can also be
+distributed to interested contributors.
+
+There are infographics for the following teams:
+
+- Badges
+
+- Commops
+
+- Design
+
+- Diversity, Equity, & Inclusion
+
+- Join SIG
+
+- l10n
+
+- i18n
+
+- Magazine
+
+- Mindshare Committee.
+
+Find all the source files
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Organizational%20Charts%20_%20Infographics/Mindshare%20Teams%20Infographics).
+These were last updated in the summer of 2020, updates welcomed!
+
+![mindshareinfographics
+design](mindshare-infographics/mindshareinfographics_design.png)
+
+# Team logos {#_team_logos}
+
+This page holds the logo files for Fedora's Community Outreach Teams.
+You can find more variations of the logos
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets).
+Variations include vertical logo compositions and logo files for dark
+backgrounds.
+
+## Advocates Logos {#_advocates_logos}
+
+Find all the Advocates logos & variations in the [CommOps Docs
+repo](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Advocates).
+
+![Advocates](team-logos/Advocates/Advocates.png)
+
+## Ambassadors Logos {#_ambassadors_logos}
+
+Find all the CommOps logos & variations in the [CommOps Docs
+repo](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors).
+
+![Ambassadors](team-logos/Ambassadors/Ambassadors.png)
+
+## Ambassadors Emeritus Logos {#_ambassadors_emeritus_logos}
+
+Find all the Ambassadors Emeritus logos & variations [CommOps Docs
+repo](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors%20Emeritus).
+
+![Ambassadors
+emeritus](team-logos/Ambassadors%20Emeritus/Ambassadors%20emeritus.png)
+
+## CommOps Logos {#_commops_logos}
+
+Find all the CommOps logos & variations in the [CommOps Docs
+repo](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/CommOps).
+
+![CommOps](team-logos/CommOps/CommOps.png)
+
+## Join SIG Logos {#_join_sig_logos}
+
+Find all the Join SIG logos & variations in the [CommOps Docs
+Repo](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Join%20SIG).
+
+![Join SIG](team-logos/Join%20SIG/Join%20SIG.png)
+
+## Marketing Logos {#_marketing_logos}
+
+Find all the CommOps logos & variations in the [CommOps Docs
+repo](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Marketing).
+
+![Marketing](team-logos/Marketing/Marketing.png)
+
+# CommOps Teams {#_commops_teams}
+
+CommOps Teams are focused on helping our community with onboarding,
+outreach and metrics
+
+- [**Ambassadors**](ambassadors.xml): Ambassadors are representatives of
+  Fedora and people who organize medium and large events.
+
+- [**Advocates**](mindshare-committee::advocate.xml): Advocates are
+  people who organize or help organize small events.
+
+- [**Community Ops**](ROOT:index.xml): Community Ops provides tools,
+  resources, and utilities for different sub-projects of Fedora to
+  improve effective communication.
+
+- [**Join**](fedora-join::index.xml): The Fedora Join Special Interest
+  Group (SIG) aims to set up and maintain channels that let prospective
+  contributors engage with the community.
+
+- [**Marketing**](marketing::index.xml): The Fedora Marketing Team
+  ensures that people in Fedora can consistently explain to everyone
+  what Fedora is, why the project can help them, and how they can help
+  the project.
+
+  - Ambassadors
+
+# Fedora Ambassadors {#_fedora_ambassadors}
+
+![Banner](https://pagure.io/fedora-commops/raw/main/f/docs/modules/teams/images/ambassador_docs.png)
+
+Fedora Ambassadors are representatives of the Fedora Project.
+Ambassadors ensure the public understand Fedora Project's principles and
+the community's work. Additionally, Ambassadors are responsible for
+helping to grow the contributor base and to act as a liaison between
+other FLOSS projects and the Fedora community. You can still represent
+Fedora in public without being an Ambassador. In this case, you are a
+[Fedora
+Advocate](https://docs.fedoraproject.org/en-US/mindshare-committee/advocate/)
+Ambassadors give a face and a name to Fedora. Fedora can be big and
+scary, but Ambassadors will help make sure that one person finds their
+way through all the confusion into the place where they can contribute.
+Ambassadors are the glue. They help connect different people in
+different parts of the Project because they always deal with people
+whose interests are diverse.
+
+## Responsibilities {#_responsibilities}
+
+The primary responsibility of Ambassadors is to ensure the Fedora
+updates are being broadcasted to the public and collect feedback from
+users and contributors. Ambassadors should share their input at the
+Mindshare Committee through their representative there.
+
+- Organize Fedora's participation at events (sessions, info booths, hand
+  out swag, etc.)
+
+- Onboard new contributors and users
+
+- Organize release parties and install fests
+
+- Talk about the Fedora Four Foundations
+
+- Regularly check up on other Ambassadors to ensure others are doing
+  good and provide assistance
+
+- Promote FLOSS and open source projects
+
+- Demonstrate Fedora and other open source projects to the public
+
+- Promote Fedora at local user groups with talks etc.
+
+# Ambassador Team Member {#_ambassador_team_member}
+
+A Fedora Ambassador is a representative of the Fedora Project.
+Ambassadors ensure the public understand Fedora Project's principles and
+the work that community is doing. Additionally Ambassadors are
+responsible for helping to grow the contributor base, and to act as a
+liaison between other FLOSS projects and the Fedora community. You can
+still represent Fedora in the public without being an Ambassador. In
+this case you are a [Fedora
+Advocate](https://docs.fedoraproject.org/en-US/commops/teams/ambassador-role/).
+
+- You give a face and a name to Fedora. You are a person, friendly and
+  approachable. Fedora can be big and scary, but you are going to help
+  make sure that one person finds their way through all the confusion
+  into the place where they can contribute.
+
+- You are the glue. You help connect different people in different parts
+  of the Project because you are always dealing with people whose
+  interests are different. You should be eager and happy to work with
+  other parts of Fedora to solve problems.
+
+- People are the key. Everything that we do -- events, budgets, swag,
+  membership verifications, blogging -- it's all done as an attempt to
+  make personal connections with folks who either want to use or
+  contribute to Fedora. Places, where Ambassadors get together, are one
+  of the few times that Fedora contributors have an opportunity to meet
+  face to face (other than FUDCons and FADs).
+
+- You are the expert in your region. You understand the culture, the
+  needs, and the best ways to communicate about Fedora and FOSS in your
+  region. FAmSCo and other "leaders" in Fedora work for you, and need to
+  listen to what you are saying makes sense. We can't ignore the global
+  picture, but we need to be flexible in adapting to local needs.
+
+## How to move to Ambassador Emeritus {#_how_to_move_to_ambassador_emeritus}
+
+Write a post on the [Ambassador
+Discourse](https://discussion.fedoraproject.org/tag/ambassadors) topic
+and let the team know that you are ready to step down as an Ambassador
+and move to the Ambassador Emeritus group. If you have set
+tasks/responsibilities related to Ambassadors, ensure that you have a
+successor in place.
+
+## How does someone come back? {#_how_does_someone_come_back}
+
+Write a post on the Ambassador discourse to express your interest in
+returning. Join the next Monthly Ambassador call and raise your
+discourse thread. If you took a short break, and there are no
+objections, you can expect to be added back to the Ambassador group
+shortly. If you took a longer break, we would suggest finding a mentor
+and getting a short refresher before returning. Ambassador Rep to
+Mindshare, the FCAIC, and representatives from FAMSCo will look at the
+request and make final approval.
+
+## Ambassador Conduct {#_ambassador_conduct}
+
+The Fedora Code of Conduct apply to everyone in the Fedora community,
+and especially to you as a Fedora Ambassador.
+
+When acting as ambassador, you don't just represent yourself, you
+represent the Fedora Project. When people think of you, they will think
+of the Fedora Project. This means that there are some important rules to
+follow, and giving the right impression is important setting aside
+personal biases in favor of goodwill for yourself and for Fedora.
+
+### Know your message {#_know_your_message}
+
+As an ambassador, and as part of the Marketing project, you need to know
+the good word of Fedora, and know the differences between it and its
+cousin, Red Hat Enterprise Linux. Make sure to focuses on the strengths
+of Fedora, do not insult any other project or product.
+
+### No monetary requests {#_no_monetary_requests}
+
+Remember, you are not allowed to publish any monetary details or funding
+requests on fedoraproject.org. You are not authorized to collect funds
+on behalf of the Fedora Project or for any Fedora-related venture.
+
+### Respect the Trademark Guidelines {#_respect_the_trademark_guidelines}
+
+Always be aware of the Trademark Guidelines for the Fedora trademarks.
+They protect the Fedora brand. You should also respect the logo
+guidelines. As an ambassador, you should be especially careful not to
+violate these guidelines.
+
+### No illegal software {#_no_illegal_software}
+
+You should not direct people to software that may violate the law.
+Review and understand our Forbidden items. You can direct users to
+third-party software, but do not lead users to software that may violate
+the law or copyrights. When you direct someone to third-party software,
+please make it clear that use of the software is not supported or
+encouraged by the Fedora Project.
+
+### You represent Fedora, not Red Hat {#_you_represent_fedora_not_red_hat}
+
+This is pretty simple. You represent the Fedora Project, which is
+sponsored by Red Hat. You do not represent Red Hat. If someone is
+interested in Red Hat specific details or Red Hat Enterprise Linux,
+please put them in touch with the Fedora Project Leader. Even though you
+may believe that Fedora is perfection, you should not insult any other
+project or product.
+
+### Dress to represent {#_dress_to_represent}
+
+The Fedora brand is independent, and stand-alone, and it's important to
+Fedora's marketing efforts that we maintain that distinction. When
+representing Fedora in person, try not to confuse people by wearing Red
+Hat, or any other distribution, clothing or apparel.
+
+Our founding organization and main sponsor, Red Hat, has specifically
+requested that we not connect hats, red in color or otherwise, to the
+Fedora Project. Please do not use a hat, whether it's a fedora or any
+other type of hat, in any presentation of Fedora or to represent the
+Fedora Project in any way.
+
+### Online presence {#_online_presence}
+
+As an Ambassador you are representing the Fedora Project, which may
+include virtual spaces. In any virtual space that you are representing
+yourself as a Fedora representative you need to adhere to Fedora's Code
+of Conduct.
+
+### Ask for help if you get lost {#_ask_for_help_if_you_get_lost}
+
+Inevitably, things happen, and they aren't always great. If you need
+help or something goes wrong, make sure to reach out to any local event
+coordinators, or group leads, and also communicate the situation to the
+Fedora Community Action and Impact Coordinator.
+
+## Responsibilities {#_responsibilities_2}
+
+The main responsibility of Ambassadors is to ensure the Fedora updates
+are being broadcasted to the public and collect feedback from users and
+contributors. Ambassadors should share their feedback at the Mindshare
+Committee through their representative at the Mindshare Committee.
+
+- Organize Fedora participation at events (sessions, info booths, hand
+  out swag, etc)
+
+- On board new contributors and users
+
+- Organize release parties and install fests
+
+- Talk about the Fedora Four Foundations
+
+- Regularly check up on other Ambassadors in order to ensure others are
+  doing good and provide assistance
+
+- Promote FLOSS and open source projects
+
+- Demonstrate Fedora and other open source projects to the public
+
+- Promote Fedora at local user groups with talks etc...
+
+## Teams you will be closely working with {#_teams_you_will_be_closely_working_with}
+
+### Ambassadors work closely with: {#_ambassadors_work_closely_with}
+
+- [the Mindshare
+  Committee](https://docs.fedoraproject.org/en-US/mindshare-committee/)
+
+- [the Join SIG](https://docs.fedoraproject.org/en-US/fedora-join/)
+
+- [the Marketing team](https://docs.fedoraproject.org/en-US/marketing/)
+
+- [CommOps](https://docs.fedoraproject.org/en-US/commops/contribute/commops-landing/)
+
+- [Advocates](https://docs.fedoraproject.org/en-US/commops/teams/ambassador-role/)
+
+## Contact information {#_contact_information}
+
+- Discourse forum:
+  <https://discussion.fedoraproject.org/tag/ambassadors>
+
+- IRC channel: #fedora-ambassadors on Libera.Chat
+
+- Matrix/Element:
+  [https://matrix.to/#/#fedora-ambassadors:fedora.im](https://matrix.to/#/#fedora-ambassadors:fedora.im)
+
+## Ambassadors Logos {#_ambassadors_logos_2}
+
+Find all the CommOps logos & variations
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos).
+Repo structure is quite simple to navigate.
+
+![Ambassadors](Ambassadors.png)
+
+### [Ambassador Badge](https://badges.fedoraproject.org/badge/ambassador) {#_ambassador_badge_2}
+
+The Ambassador badge is awarded for being a Fedora Ambassador. Please
+read through the docs to understand the role better and how to become
+one.
+
+![fedora-amby](https://badges.fedoraproject.org/pngs/fas-ambassador.png)
+
+# Become an Ambassador {#_become_an_ambassador}
+
+## Introduction {#_introduction}
+
+Do you think you might want to be a Fedora Ambassador?
+
+Here is some of what you can expect:
+
+- You give a face and a name to Fedora. You are a person, friendly and
+  approachable. Fedora can be big and scary, but you are going to help
+  make sure that *one person* finds their way through all the confusion
+  into the place where they can contribute.
+
+- You are the glue. You help connect different people in different parts
+  of the Project because you are always dealing with people whose
+  interests are different. You should be eager and happy to work with
+  other parts of Fedora to solve problems.
+
+- People are the key. Everything that we do --- events, budgets, swag,
+  membership verifications, blogging --- it's all done as an attempt to
+  make personal connections with folks who either want to use or
+  contribute to Fedora. Places, where Ambassadors get together, are one
+  of the few times that Fedora contributors have an opportunity to meet
+  face to face (other than FUDCons and FADs).
+
+- You are the expert in your region. You understand the culture, the
+  needs, and the best ways to communicate about Fedora and FOSS in your
+  region. Mindshare and other \"leaders\" in Fedora *work for you*, and
+  need to listen to the needs of the local Fedora communities. We can't
+  ignore the global picture, but we need to be flexible in adapting to
+  local needs.
+
+## Get Started with Fedora Ambassadors {#_get_started_with_fedora_ambassadors}
+
+To become a official Fedora Ambassador, there are a few steps you need
+to complete.
+
+### Step 1: Create your user wiki page {#_step_1_create_your_user_wiki_page}
+
+:::: important
+::: title
+Requires CLA+1 status to complete
+:::
+
+To edit the wiki, you now have to have CLA+1 status (which means you
+belong to at least one other group in FAS than the CLA-related
+groups).If you are unable to edit the wiki, skip this step and work with
+your mentor on a temporary workaround. Once you have CLA+1 status, make
+sure to create a user wiki page. To learn more about the Fedora CLA,
+visit this [page](https://fedoraproject.org/wiki/Legal:Licenses/CLA).
+::::
+
+Creating your user page lets you introduce yourself to the Fedora
+community. These pages let you collect useful information, like your
+email, your real name, or your IRC nick, in a public place so that
+others may contact you. Your user page is your own space, so feel free
+to make it look as you wish. Here's what you'll need to do to create
+
+Your user page:
+
+- Go to [your user page](https://fedoraproject.org/wiki/Special:MyPage).
+
+  - Click create, at the top, to start editing your user page. If you've
+    already created a user page, click edit.
+
+  - Write your introduction in the textbox. Your introduction can
+    contain whatever you'd like, butplease have an English translation.
+
+  - When you're finished writing,click Save page.
+
+Here's some ideas on what you can include in your introduction:
+
+- Email address
+
+- Homepage or blog
+
+- Fedora Badges
+
+- IRC channels you're typically in
+
+- Pictures, headings\*
+
+- What you do, or would like to do, in the Fedora Project
+
+:::: tip
+::: title
+:::
+
+While a wiki user page can be created with just plain text, you'll
+likely want to add some headings, bold text, or a picture. These can all
+be added using markup. Every page on this wiki is made of this markup,
+so you can use any of them as an example. Learn more about wiki syntax
+and markup
+[here](https://fedoraproject.org/wiki/Help:Wikisyntaxandmarkup)
+::::
+
+If you're interested in examples, this user page template provides a
+basic layout that you can copy. You can also look at the markup for
+other users\' pages. Here's a selection of some that have stood out:
+
+- [Ben Cotton](https://fedoraproject.org/wiki/User:Bcotton)
+
+- [Vipul Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1)
+
+- [Máirín Duffy](https://fedoraproject.org/wiki/User:Duffy)
+
+- [Jona Azizaj](https://fedoraproject.org/wiki/User:Jonatoni)
+
+### Step 2: Explore the Fedora Project {#_step_2_explore_the_fedora_project}
+
+As an Ambassador, you'll be asked about numerous parts of the Fedora
+Project. You don't need to have all the answers, but you need general
+familiarity with Fedora Project, and you'll need to know how to find
+answers. You're most likely well versed in your area of interest, but
+there is a lot happening in Fedora.
+
+- Login to and explore
+  [discussion.fedoraproject.org](https://discussion.fedoraproject.org/).
+  Follow the #ambassor & #mindshare tags
+
+- Read the [how to be a successful
+  contributor](https://docs.fedoraproject.org/en-US/commops/contribute/successful-contributor/)
+  page.
+
+- Read [Fedora Magazine](https://fedoramagazine.org/) and the [Community
+  Blog](https://communityblog.fedoraproject.org/) regularly.
+
+Think about which parts of the Fedora Project capture your attention and
+imagination.
+
+- Read the [Planet Fedora](http://fedoraplanet.org/) regularly.
+
+- Read [opensource.com](https://opensource.com/) for more open source
+  news.
+
+- Peruse the [Fedora Mailing
+  lists](https://lists.fedoraproject.org/archives/) as a lot of
+  communication in Fedora happens on mailing lists.
+
+  - Read the [mailing list
+    guidelines](https://fedoraproject.org/wiki/Mailing_list_guidelines).
+
+  - Here are possible [lists to
+    join](https://fedoraproject.org/wiki/Communicating_and_getting_help?rd=Communicate#Contributors_Mailing_Lists).
+
+  - You will be asked to join the ambassadors list later on in this
+    process.
+
+- Join and observe in a variety of the Fedora chat channels from your
+  chat platform of choice.
+
+  - Element/matrix is the recommended chat platform, learn more
+    [here](https://element.io/).
+
+  - #fedora-ambassadors is recommended, but a full list can be found
+    [here](https://fedoraproject.org/wiki/Communicating_and_getting_help?rd=Communicate#IRC)
+
+### Step 3: Subscribe to the Ambassadors Mailing List {#_step_3_subscribe_to_the_ambassadors_mailing_list}
+
+- Subscribe to [Fedora Ambassadors Mailing
+  List](https://lists.fedoraproject.org/admin/lists/ambassadors.lists.fedoraproject.org/).
+
+:::: note
+::: title
+:::
+
+There are a lot of people on the list, so make sure your mail is
+relevant to the broader Ambassador audience. Please keep the discussion
+focused on Fedora Ambassadors and save any introductions for chat
+channels. This includes invites to social-networking sites, technical
+support questions or advice, or anything else which is not Fedora
+ambassador related.
+::::
+
+### Step 4: Find a mentor {#_step_4_find_a_mentor}
+
+A Mentor is your partner to get sponsored!
+
+Mentors are experienced Ambassadors who can help you quickly become
+acclimated to the work expected of Ambassadors as well as ensuring that
+Ambassadors within Fedora do an acceptable job of representing Fedora.
+
+:::: note
+::: title
+:::
+
+- Most mentors have full time jobs, families, and many responsibilities
+  within Fedora. Please be patient and do not expect an immediate reply.
+
+- Mentors do not initiate contact, please contact a mentor to see if
+  they can support your Ambassadorship.
+
+- Please note that even if you contact a mentor, they may already have
+  enough current obligations that they are committed to. In that case,
+  they may decline, and you should try to find a different mentor.
+::::
+
+Finding a Mentor:
+
+- Join our Ambassador Monthly Calls.
+
+- If you already have potential mentor. Please contact the Mentor via
+  email and introduce yourself. This email will help the Mentor
+  understand your interest in Fedora Ambassador.
+
+- You can also talk to them at a conference or virtual event to
+  establish a rappot, which can help you break the ice
+
+Please include the following information: \* Your main purpose for
+joining the Fedora Ambassadors.
+
+- Note: The mentor may ask you to expand upon this if it's incomplete,
+  or seems inconsistent with the goals of the Fedora Ambassadors.
+
+  - A link to your Fedora User wiki page
+
+  - A bit of information about what you have done so far to promote
+    Fedora amongst your peers/friends.
+
+### Step 5: Get approval to become an Ambassador {#_step_5_get_approval_to_become_an_ambassador}
+
+Confirm you completed the following steps to become a Fedora Ambassador:
+
+1.  Create User Wiki Page
+
+2.  Explore the Fedora Project
+
+3.  Subscribe to the Ambassadors mailing list
+
+4.  Find a mentor
+
+Once you have verified the steps above, the approval process below will
+then begin. The approval process can take 60-90 days on average.
+
+If an Ambassador candidate is actively contributing to another Team
+within Fedora, their mentorship period may be shortened.
+
+Approval process After you have completed all of the above steps, your
+mentor will approve and sponsor your membership to the Ambassador Group
+in FAS. Once you're official,
+[comment](https://discussion.fedoraproject.org/t/welcome-new-ambassadors/39224)
+on the \"Welcome New Ambassadors\" thread on
+Discussion.fedoraproject.org.
+
+# Ambassadors Emeritus {#_ambassadors_emeritus}
+
+Ambassadors Emeritus are people who held ambassador position for at
+least one full year and leave the Ambassador role in good standing.
+
+The Emeritus title is to publicly recognize them as former Ambassador
+and to thank them for contributing to the Fedora Project.
+
+These can also be ambassadors who want to take a step back from the
+ambassador's responsibility for a while to focus on their personal
+lives, work or to avoid burnout.
+
+# Ambassador Emeritus Member {#_ambassador_emeritus_member}
+
+Life happens, things get busy, and interests change. This is a natural
+part of life that we embrace in the Fedora community. Whether you are
+moving to a new team in Fedora or taking a break altogether, it is
+important to have an avenue to retire. [Ambassador team
+members](https://accounts.fedoraproject.org/group/ambassadors/) looking
+to retire should send an email to the [Ambassador Mailing
+List](https://lists.fedoraproject.org/admin/lists/ambassadors.lists.fedoraproject.org/)
+with a retirement message- it doesn't have to be long (or it can be!) to
+let your teammates know you will be retiring or taking a break. This
+gives everyone a chance to thank you for all your efforts in the
+Ambassador Program!
+
+The CommOps Team will also run a yearly group cleanup. This entails
+running a script to search for inactive users(Fedora Account System) and
+reaching out to them directly via their Fedora Project email. It is
+absolutely fine to respond to this as "I want to stay involved" or "I
+will be back soon" or "I am unable to be a part at this time".
+
+## How does someone come back? {#_how_does_someone_come_back_2}
+
+Just like the first time you joined Fedora, you are always welcomed to
+come back and join. Same as the first time you joined the Ambassadors
+group, you should create a thread at the [Ambassadors
+Disc.](https://discussion.fedoraproject.org/tag/ambassadors) in order to
+express your interest to come back, give a brief explanation of the
+reason that made you retire (no personal details are required!) and
+share some ideas about how you can help the community. If you have been
+away for a long time and you would like some "Fedora orientation", don't
+forget to mention that as well.
+
+In the meantime, you can check what the rest of the community is up to
+by reading the Mailing Lists' archives, checking Fedora social media
+accounts, check Fedora Discussion, have a look at the Fedora repos in
+order to see what the community is currently working on. Don't hesitate
+to participate in all the above by providing your assistance when help
+is needed or by simply joining that discussion.
+
+### [Ambassador Emeritus Badge](https://pagure.io/fedora-badges/issue/632) {#_ambassador_emeritus_badge_2}
+
+The Ambassador Emeritus Badge is awarded for retiring from the Fedora
+Ambassador Team.
+
+![emeritus](https://pagure.io/fedora-badges/issue/raw/files/d689147b14b843b82784f04d28213a6ae98c825055b64003a5bb8f57b9d07da7-emeritus.png)
+
+## Ambassadors Emeritus Logos {#_ambassadors_emeritus_logos_2}
+
+Find all the Ambassadors Emeritus logos & variations
+[here](https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors%20Emeritus).
+
+![Ambassadors emeritus](Ambassadors%20emeritus.png)
+
+# Ambassador Mentor {#_ambassador_mentor}
+
+# Ambassador Mentorship Process {#_ambassador_mentorship_process}
+
+## The Process for Mentorship {#_the_process_for_mentorship}
+
+- Candidates approach with interest
+
+- Write to Ambassador Mailing List
+
+- Discourse thread
+
+- Ambassador Rep to Mindshare works with interested folks and schedules
+  a call for 2-3 weeks out.
+
+- The purpose of the call:
+
+- candidates ask general questions
+
+- interacts with a mentor on call
+
+- clarify doubts during application process
+
+- review funding eligibility documentation (mindshare - under
+  development)
+
+- Candidates move ahead :
+
+- Apply by opening ticket on Ambassador repo (can be public or private).
+  Viewable by FaMa & Ambassador Mentors.
+
+- Tickets need to include this information:
+
+- FAS
+
+- User WIKI Page
+
+- Preferred email address
+
+- Answers to the Ambassador questionnaire
+
+## Application Process {#_application_process}
+
+- The application process is async and self paced. An applicant can
+  makes a copy of
+  \[<https://docs.google.com/document/d/1-cP5hbdwiMxQEFs1-6DhFEnlRXHTAffq21sFAfiDzKw/edit>\]
+  or copy the question from a docs.fp.o.\[TO BE PUT IN SEPARATE PAGE\]
+
+- Once the answers are finalized and a ticket is opened.
+
+- An applicant will have to wait for evaluation
+
+- There is a two week follow up period wherein Ambassador mentors or
+  FaMa can ask any questions and for further details.
+
+- Mentor can choose to have a 1x1 interview or a IRC chat or simply feel
+  satisfied enough by reading answers and few questions.
+
+  - Community Ops
+
+# CommOps Badges {#_commops_badges}
+
+## [CommOps Busy Bee](https://pagure.io/fedora-badges/issue/831) {#_commops_busy_bee_2}
+
+The CommOps Busy Bee badges is awarded for opening tickets on the
+[CommOps pagure repo](https://pagure.io/fedora-commops/issues)
+
+![Busy
+Bee](https://pagure.io/fedora-badges/issue/raw/files/4216ba774fac615a23106a47fc36d07b06770e7b41f4a00d4419de5db2049331-busybee1.png)
+
+## [The Bees Knees](https://pagure.io/fedora-badges/issue/832) {#_the_bees_knees_2}
+
+The Bees Knees badge is award for closing tickets on the [CommOps pagure
+repo](https://pagure.io/fedora-commops/issues)
+
+![Busy
+Knees](https://pagure.io/fedora-badges/issue/raw/files/4d7d22cbf3309681126596594103b56e894eaaee5e30e3160a31e02881d4fd23-beesknees1.png)
+
+## [Onboarding Ideas Specialist](https://pagure.io/fedora-badges/issue/836) {#_onboarding_ideas_specialist_2}
+
+The Onboarding Ideas Specialist badge is awarded for opening tickets on
+the [Fedora Join SIG pagure
+repo](https://pagure.io/fedora-join/Fedora-Join/issues)
+
+![Onboarding
+Ideas](https://pagure.io/fedora-badges/issue/raw/files/a94c54ba9dca17be06fc1ba3f52577bb87f84e71b439c6b50da1fec45c346e26-onboarding-idea1.png)
+
+## [Onboarding Specialist](https://pagure.io/fedora-badges/issue/837) {#_onboarding_specialist_2}
+
+The Onboarding Specialist badge is awarded for closing tickets on the
+[Fedora Join SIG pagure
+repo](https://pagure.io/fedora-join/Fedora-Join/issues)
+
+![Onboarding
+Specialists](https://pagure.io/fedora-badges/issue/raw/files/b78a855c25d77f428d3325cbc4a314336b412600790f81eb6911767dd909d2e0-onboarding1.png)
+
+## [Welcoming Committee](https://pagure.io/fedora-badges/issue/834) {#_welcoming_committee_2}
+
+The Welcoming Committee badge is awarded for closing tickets on the
+[Welcome-to-Fedora pagure
+repo](https://pagure.io/fedora-join/Welcome-to-Fedora/issues)
+
+![Welcoming
+Committee](https://pagure.io/fedora-badges/issue/raw/files/0d94003ab209b9a94621f8f8b9cf16386849b9e9b120a0dc56adc6b723bd299a-welcome1.png)
+
+# What the Community Ops Team did (2015--2020) {#_what_the_community_ops_team_did_20152020}
+
+This article historically describes the Community Operations Team
+charter that guided the team from 2015 until 2020. 2024-07-15
+
+From its founding in 2015 until its pause in 2020, the Community Ops
+Team focused on a few key areas, both technical and non-technical.
+
+<figure id="img-infographic">
+<img src="ROOT:infographic-2020.png"
+alt="Infographic with statistics about Fedora Community Operations. Created by Smera Goel." />
+<figcaption>2020 Community Ops infographic. Created by Smera Goel. CC
+BY-SA 4.0.</figcaption>
+</figure>
+
+## Culture
+
+The Fedora Project builds and ships a Linux distribution, but there is a
+community behind the technical work and planning. In Fedora, we have the
+[Four Foundations](project::index.xml#_what_is_fedora_all_about) to
+represent our community culture. The Fedora community represents a set
+of ethics and values to how we build our distribution. These ethics and
+values create the culture of the Fedora Project. When working in the
+community, mindfulness of this culture enriches and supports the
+different sub-communities inside of Fedora.
+
+CommOps builds community infrastructure of support and acceptance for
+the Fedora community's culture. The *Friends* foundation is there for a
+reason. The community infrastructure CommOps assists with builds on top
+of the *Friends* foundation. People enjoy contributing in a community
+where they feel valued for who they are and what they bring to the
+community, not just that they are useful. CommOps supports this through
+some of our tasks relating to culture.
+
+Examples of things we help with to build and support the culture of the
+Fedora community:
+
+- [Interviewing Fedora community
+  members](https://pagure.io/fedora-commops/issue/17)
+
+- [Fedora Appreciation Week](https://pagure.io/fedora-commops/issue/110)
+
+- [Top Badgers of the Year](https://pagure.io/fedora-commops/issue/138)
+
+## Elections
+
+There are a few elected bodies in Fedora: the [Fedora
+Council](project::leadership.xml), [Mindshare
+Committee](mindshare::index.xml), and [FESCo](fesco::index.xml). Every
+new Fedora release, the community holds elections for these bodies. Each
+election takes \"wrangling\" work to pull it together. This includes
+calling for nominations, conducting interviews with candidates, and
+raising awareness during the voting window.
+
+CommOps supports the [Fedora Program Manager](council::fpgm.xml) in
+organizing and executing elections. These responsibilities consist of
+curating content on the [Community Blog](community-blog.xml), creating
+interview templates, and outreach to grow awareness.
+
+Examples of things we do to help organize and execute Fedora elections:
+
+- [Fedora Elections and CommOps
+  Coverage](https://pagure.io/fedora-commops/issue/7)
+
+- [Improve automation of Elections
+  communication](https://pagure.io/fedora-commops/issue/19)
+
+- [Better explain roles of Council and
+  FESCo](https://pagure.io/fedora-commops/issue/93)
+
+- [Automated Fedocal reminders to send to all mailing lists for upcoming
+  Elections](https://pagure.io/fedora-commops/issue/107)
+
+- [Create August 2017 election interview templates for
+  candidates](https://pagure.io/fedora-commops/issue/112)
+
+## Storytelling
+
+Messaging and storytelling bring the Fedora Project \"story\" to both
+contributors and user communities. Every year, a [couple thousand
+people](https://mattdm.org/fedora/2018flock/2018-State-of-Fedora.pdf)
+work on Fedora. Messaging is a way of sharing our story in multiple
+formats. We bring the message of what we *as a community* are doing out
+to others. Others include our contributors working in other areas of the
+project and users interested in what the Fedora community produces. When
+we share our story with each other, we are aware of other work happening
+in the Fedora community. Communicating the story of Fedora keeps our
+contributors moving together towards our goals. Good messaging helps our
+users better understand the goals and objectives of Fedora and how we
+plan to get there.
+
+CommOps supports messaging by working with other sub-projects and teams
+to tell their own stories. CommOps provides help to \"dig out\" the
+stories and tools to share them widely. This includes tasks like
+interviews, sharing activities by Fedora contributors, running
+retrospectives, and more. These tasks keep contributors in sync with
+what we're working on. They are direct actions to keep everyone on the
+same page.
+
+Examples of things we do to support messaging and tell stories:
+
+- [Interviews about goals for team
+  sprints](https://pagure.io/fedora-commops/issue/4)
+
+- [Call for nominations of a Working
+  Group](https://pagure.io/fedora-commops/issue/66)
+
+- [Covering upcoming talks by Fedora contributors at a major
+  conference](https://pagure.io/fedora-commops/issue/98)
+
+- [\"Help Wanted\" columns](https://pagure.io/fedora-commops/issue/100)
+
+- [Year in Review blog
+  series](https://pagure.io/fedora-commops/issue/129)
+
+## Metrics
+
+CommOps measures community health and engagement through extensive
+metrics and data available about Fedora. {url_fedmsg}\[fedmsg\] is a
+messaging bus with data about activity in the Fedora community. The data
+includes activity like git commits, new blog posts, wiki page edits,
+software build status, IRC meeting notes, and more. CommOps works with
+fedmsg to tell stories about our community, but specific types of
+stories. The stories told with metrics are helpful to understand what we
+may be doing right or wrong. It gives us a data-driven way to understand
+our huge community.
+
+CommOps directly supports metrics in Fedora through development time and
+data-driven storytelling. Some members develop existing software or
+build new scripts to analyze data. Others use the data to write reports
+or studies on how the Fedora community works. Ultimately, metrics are a
+largely technical area that CommOps helps with.
+
+Examples of metrics work and data-driven storytelling we do:
+
+- [Analyzing Fedora contributor
+  activity](https://pagure.io/fedora-commops/issue/32)
+
+- [Fedora release party
+  metrics](https://pagure.io/fedora-commops/issue/88)
+
+- [Understanding contributor activity by geographic
+  location](https://pagure.io/fedora-commops/issue/109)
+
+### Tools {#metrics-tools}
+
+These tools access and use the Fedora messaging bus,
+{url_fedmsg}\[**fedmsg**\]. With these tools, you can generate metrics,
+analyze data, and interact with fedmsg.
+
+[annualgrepper](https://github.com/fedora-infra/fedora-stats-tools/blob/develop/annualgrepper.py)
+
+:   Gather raw fedmsg totals on
+    [topics](https://fedora-fedmsg.readthedocs.io/en/latest/topics.html)
+    in the last year
+
+[cardsite](https://pagure.io/cardsite)
+
+:   Live fedmsg tracker inspired by
+    [emojitracker](http://emojitracker.com/)
+
+[daily-briefing.py](https://github.com/fedora-infra/fedora-stats-tools/blob/develop/daily-briefing.py)
+
+:   Template that takes lists of URLs, generates summary reports of
+    daily Meetbot links and action items (manual now, can be automated!)
+
+[datagrepper](https://apps.fedoraproject.org/datagrepper/)
+
+:   The powerhouse tool to interact with fedmsg. Using HTTP GET
+    requests, query for historical data from fedmsg. Examples include
+    events by username, by package, by message source, and more.
+
+{url_fedmsg}\[fedmsg\]
+
+:   Python package and API that hooks into various Fedora Infrastructure
+    services. Sends messages from each service to a unified message bus
+    in real-time. fedmsg drives and powers all the metrics tools we
+    have.
+
+[fedora-stats-tools](https://github.com/fedora-infra/fedora-stats-tools)
+
+:   Multiple statistics tools, data, and slide decks for fedmsg metrics,
+    Year in Reviews, and Fedora event metrics
+
+[feedcloud](https://pagure.io/feedcloud)
+
+:   Takes an RSS feed or list of RSS feeds and generates fancy
+    word-clouds for them
+
+[gsoc-stats](https://pagure.io/gsoc-stats)
+
+:   Python tool to generate statistics about Fedora contributors
+
+[longtail-analyze.py](https://github.com/fedora-infra/fedora-stats-tools/blob/develop/longtail-analyze.py), [longtail-gather.py](https://github.com/fedora-infra/fedora-stats-tools/blob/develop/longtail-gather.py)
+
+:   Measure the ratio of activity per user to approximate burnout
+
+[meetbot-fedmsg-activity.py](https://github.com/fedora-infra/fedora-stats-tools/blob/develop/meetbot-fedmsg-activity.py)
+
+:   Jinja2 template that creates links to Meetbot activities
+
+[wordcloudbot](https://pagure.io/wordcloudbot)
+
+:   Create pretty wordclouds from IRC meeting logs
+
+## Supporting sub-projects {#support}
+
+CommOps assists other sub-projects and teams in following best practices
+and communicating effectively. We work with other teams to help them
+on-board new contributors into their teams. This includes creating
+Fedora Badge requests, reviewing guidelines, and making Fedora services
+and tools more understandable.
+
+Examples of sub-project support and on-boarding work:
+
+- [Wiki gardening of Fedora
+  Join](https://pagure.io/fedora-commops/issue/62)
+
+- [Fedora Modularity
+  onboarding](https://pagure.io/fedora-commops/issue/69)
+
+- [Update Onboarding Calendar for GSoC
+  2016](https://pagure.io/fedora-commops/issue/76)
+
+- [Onboarding: DotNet SIG](https://pagure.io/fedora-commops/issue/95)
+
+  - Community Polls
+
+# Overview {#_overview}
+
+Various surveys were developed during the Community Outreach Revamp. The
+most useful questions were refined and collected here for future
+implementation. Any contributor interested in community metrics should
+feel free to run these polls using
+[discussion.fedoraproject.org](http://discussion.fedoraproject.org/).
+Record your findings on the Informal Poll Results wiki page.
+
+Folks interested in community metrics and health should feel free to
+take the results and analyze the data. Please share your findings with a
+post on
+[Discussion.fedoraproject.org](https://discussion.fedoraproject.org/c/project/commops)
+and use #commops as the topic.
+
+# Template for Question {#_template_for_question}
+
+This document outlines the types of question the organizer can run. The
+questions listed here are formatted for use on
+Discussion.fedoraproject.org.
+
+## Single Choice {#_single_choice}
+
+    Question: Lorem ipsum
+    [poll type=regular results=always chartType=bar]
+
+    Option 1
+    Option 2
+    Option 3
+    [/poll]
+
+## Multiple Choice {#_multiple_choice}
+
+    Question: Lorem ipsum
+    [poll name=poll2 type=multiple results=always min=1 max=2 chartType=bar]
+
+    option 1
+    or option 2
+    or option 3
+    [/poll]
+
+## Schedule {#_schedule}
+
+These questions should be run as often as the CommOps and/or Mindshare
+team can initiate them.
+
+# Questions {#_questions}
+
+Below are the set of question which can serve as example.
+
+    What Linux/FOSS related groups are you connected with in your local area?
+
+    [poll name=poll2 type=multiple results=always min=1 max=6 chartType=bar]
+
+    Government
+    Hobbiest
+    Open Source Communities
+    Professional
+    Tech Communities
+    University/College/Grade School
+    None
+    Other
+    [/poll]
+
+    If you fall into the “Other” category, please tell us more about that in the comments section. Thank you!
+
+    What kind of participation have you had in Fedora’s Outreach in the past/currently?
+
+    [poll name=poll2 type=multiple results=always min=1 max=7 chartType=bar]
+
+    Attendance/representation at events
+    Casual/Personal Networks
+    Coordinating/organizing events
+    Creating/organizing demos/Workshops
+    Promotion/outreach at schools or universities
+    Outreach in professional networks
+    Online Promotion
+    None
+    Other
+    [/poll]
+
+    If you fall into the “Other” category, please tell us more about that in the comments section. Thank you!
+
+    How many non-Fedora organized events(in person or virtual) did you attend this year and talk about the Fedora Project?
+
+    [poll type=regular results=always chartType=bar]
+
+    None
+    1-5 events
+    More than 5
+    More than 10
+    More than 20
+    [/poll]
+
+    Who would you first try to contact if you wanted to run a Fedora event/needed swag?
+
+
+    [poll type=regular results=always chartType=bar]
+
+    FCAIC
+    Fedora Council
+    Fedora Documentation
+    IRC/Element/Telegram
+    Local User Group
+    Mindshare Committee
+    Online Forum(Ask, Discussion)
+    Regional Fedora Ambassador group
+    I don’t know
+    Not applicable
+    Other
+    [/poll]
+
+    If you fall into the “Other” category, please tell us more about that in the comments section.
+    Thank you!
+
+    Did you attend Nest with Fedora?
+
+    [poll type=regular results=always chartType=bar]
+
+    Yes, 2020
+    Yes, 2021
+    Yes, 2020 & 2021
+    No, I couldn’t make it to either.
+    What is Nest with Fedora?
+    [/poll]
+
+    On a scale from 1-5 how familiar are you on how Fedora is organized as a project?
+
+    [poll type=regular results=always chartType=bar]
+
+    1 (unfamiliar)
+    2
+    3
+    4
+    5 (familiar)
+    [/poll]
+
+    On a scale of 1-5, how accessible do you find Fedora resources to be? (such as docs, wiki pages, pagure repo, IRC/chatroom)
+
+    [poll type=regular results=always chartType=bar]
+
+    1 (not accessible)
+    2
+    3
+    4
+    5 (easily accessible)
+    [/poll]
+
+    Are you aware that Fedora provides concrete resources to further Fedora’s vision and initiatives? (event sponsorships, travel assistance, swag for local projects/events)
+
+    [poll type=regular results=always chartType=bar]
+
+    Yes, and I have taken advantage of those resources
+    Yes, but I have no need to request them
+    Yes, but the process did not go well for me
+    Yes, but I am not sure how to request resources
+    No, I was previously unaware
+    Other
+    [/poll]
+
+    If you fall into the “Other” category, please tell us more about that in the comments section. Thank you!
+
+    How satisfied are you with community outreach within the Fedora community?
+
+    [poll type=regular results=always chartType=bar]
+
+    1 (not satisfied)
+    2
+    3
+    4
+    5 (completely satisfied)
+    [/poll]
+
+    How satisfied are you with community outreach outside of the Fedora community?
+
+    [poll type=regular results=always chartType=bar]
+
+    1 (not satisfied)
+    2
+    3
+    4
+    5 (completely satisfied)
+    [/poll]
+
+    Do you feel like you know what is going in the Fedora community?
+
+    [poll type=regular results=always chartType=bar]
+
+    1 (no idea)
+    2
+    3
+    4
+    5 (I feel well informed)
+    [/poll]
+
+    What would you be doing even more of in Fedora if you had the resources?
+
+    Open ended?
+
+- [Join SIG ](https://docs.fedoraproject.org/en-US/fedora-join/)
+
+- [Marketing ](https://docs.fedoraproject.org/en-US/marketing/)
+
+# CommOps & Ambassador Reps to Mindshare {#_commops_ambassador_reps_to_mindshare}
+
+There are two representatives from the CommOps structure to Mindshare.
+Ideally, this would be one Ambassador representative and one
+representative from CommOps. These people are responsible for
+representing Ambassadors/CommOps as a collective to the Mindshare
+Committee and not as a single voice. They will be required to work with
+all the various groups that collaborate with Mindshare and act as a
+liaison between these groups and CommOps. These roles will require a
+fair amount of time investment and good communication skills.
+
+## Current representatives {#_current_representatives}
+
+- Nick Bebout (nb) \[Ambassador Rep\]
+
+- Alberto Rodríguez Sánchez (bt0dotninja) \[CommOps Rep\]
+
+## Responsibilities {#_responsibilities_3}
+
+Representatives are a crucial point to keep communication flowing
+between CommOps, Ambassadors, and Mindshare. As a CommOps/Ambassador
+representative to Mindshare you will be involved with:
+
+- Participate in weekly meetings at #fedora-mindshare [IRC
+  channel](https://libera.chat/).
+
+- Review and comment on tickets in the mindshare [Pagure
+  repo](https://pagure.io/mindshare).
+
+- Work closely and collaborate with the other outreach teams'
+  representatives to ensure that the most effective decisions are made.
+
+- Give valuable feedback to the Mindshare Committee.
+
+- Share the best practices: one of the Mindshare's goals is to take down
+  barriers or whatever is blocking sharing best practices.
+
+- Ensure that CommOps/Ambassadors are being represented and bring to the
+  Mindshare meetings any problems or obstacles they might encounter.
+
+- Ensure that the Fedora budget is managed in the most effective way
+  across all regions.
+
+- Listen to the needs, concerns and hopes of the Fedora community and
+  relay them to the Mindshare Committee.
+
+## Duration of Service {#_duration_of_service}
+
+The duration of service is two Fedora release cycles, or one year.
+However, terms may run shorter or longer depending on the personal
+situation of the persons filling the Representative roles. In an
+unlikely event of the representative(s), Mindshare Committee, or the
+CommOps Team wish to make a change in representation, sufficient
+reasoning must be provided. Following the SOP, a new representative will
+then be selected by the CommOps Team.
+
+## Selection {#_selection}
+
+This section explains how the representatives are nominated and
+selected. The selection process documented below is initiated when a
+rotation of representatives is motioned by the existing representative,
+the Mindshare committee, or the Fedora Council.
+
+## Nomination {#_nomination}
+
+There will be a two-week nomination period for potential
+representatives. Nominees can be self-nominated or nominated by other
+members of CommOps/Ambassadors with their consent. Nominees are required
+to be members of CommOps/Ambassadors and should have a basic
+understanding of various Fedora sub-projects, and have sufficient time
+to perform the responsibilities required.
+
+In the event that there are no nominees, Commops/Ambassadors will work
+with the Mindshare Committee to broaden the search message and request
+more time. Should no nominees be found after that, the role will rotate
+among existing CommOps/Ambassador members until the next representative
+is identified.
+
+## Confirmation {#_confirmation}
+
+After the one-week nomination period expires, the CommOps teams
+(including Ambassadors) will discuss candidates in a public meeting. In
+a meeting discussion, it provides an opportunity for the team to weigh
+in and share other context. In the event that three or more nominees are
+interested in the Representative roles, the Fedora CommOps Team will
+coordinate with the [Fedora Program
+Manager](https://docs.fedoraproject.org/en-US/council/fpgm/) to run an
+election.
+
+For the Fedora Elections application, use these conditions:
+
+- Nominee must be a member of fedora-commops [Fedora Account
+  group](https://accounts.fedoraproject.org/group/commops/)
+
+- Voting is open to CLA+1 voters (like Council elections)
+
+The selected person and the Mindshare Committee will be notified once
+the selection is confirmed. The selected person will begin serving as
+the CommOps/Ambassador representative to the Mindshare Committee as soon
+as possible.
+
+## Teams you will be closely working with {#_teams_you_will_be_closely_working_with_2}
+
+- [Fedora Mindshare](https://docs.fedoraproject.org/en-US/mindshare/)
+
+- [CommOps](https://docs.fedoraproject.org/en-US/commops/contribute/commops-landing/)
+
+- [Ambassadors](https://docs.fedoraproject.org/en-US/commops/teams/ambassadors/)
+
+- Various other Outreach teams as required
+
+# IRC / Libera Chat Group Contacts {#_irc_libera_chat_group_contacts}
+
+[libera.chat](https://libera.chat/) IRC network has a concept of
+'Groups' for various projects. Group contacts for each of those groups
+are granted special powers on the network over their groups channels.
+Additionally, requests from Group contacts can be taken as 'official'
+requests from the group. Fedora group contacts represent Fedora to
+libera.chat.
+
+The primary functions of group contacts are:
+
+- Check/process 'cloak' requests and request them from libera.chat
+  admins to process. (Cloaks are a hostmask with the project name in
+  them instead of hostname or ip address. It's a way to note your
+  affiliation with a group)
+
+- To (re)gain and configure control of irc channels in the group
+  namespace "#fedora\*"
+
+## How to join the team / step down {#_how_to_join_the_team_step_down}
+
+Group contacts are added from very trusted project members and kept to a
+small number. Council should approve changes in libera.chat group
+members. Changes will then be made by libera admins to joining / leaving
+accounts.
+
+## Responsibilities {#_responsibilities_4}
+
+- Process the 'cloaks' requests:
+  <https://fedoraproject.org/wiki/LiberaCloaks> as time permits.
+
+- Process requests in the <https://pagure.io/irc> tracker for matrix
+  bridges or regaining control of a channel in the #fedora\* namespace
+  as requested.
+
+- Idle in the #libera-communities channel to make requests to libera
+  admins as needed.
+
+## Teams you will be working closely with {#_teams_you_will_be_working_closely_with}
+
+- libera.chat admins in #libera.communities
+
+- Any fedora groups needing irc work
+
+## Current members {#_current_members}
+
+- Tom Calloway / spot
+
+- Nick Bebout / nb
+
+- Kevin Fenzi / nirik
+
+## Contact information {#_contact_information_2}
+
+Link : <https://pagure.io/irc>
+
+# {team_name} {#_team_name}
+
+![Fedora Community Ops team logo.](team-logos/community-ops/commops.png)
+
+{team_summary}
+
+## Team profile {#profile}
+
++-----------------------------------+-----------------------------------+
+| **Team URL**                      | {team_url}                        |
++-----------------------------------+-----------------------------------+
+| **Team status**                   | {team_status}                     |
++-----------------------------------+-----------------------------------+
+| **Forum**                         | [{team_synch_communication_n      |
+|                                   | ame}]({team_synch_communication}) |
++-----------------------------------+-----------------------------------+
+| **Chat**                          | [{team_asynch_communication_na    |
+|                                   | me}]({team_asynch_communication}) |
++-----------------------------------+-----------------------------------+
+| **Issue tracker**                 | [{team_issue_tra                  |
+|                                   | cker_name}]({team_issue_tracker}) |
++-----------------------------------+-----------------------------------+
+| **Meeting schedule**              | [{team                            |
+|                                   | _meetings_name}]({team_meetings}) |
++-----------------------------------+-----------------------------------+
+| **Meeting agenda** (A/V meetings) | [{team_meetings_agenda_n          |
+|                                   | ame}]({team_meetings_agenda_url}) |
++-----------------------------------+-----------------------------------+
+| **Meeting minutes** (Matrix       | [{team_meetings_minutes_na        |
+| meetings)                         | me}]({team_meetings_minutes_url}) |
++-----------------------------------+-----------------------------------+
+
+## Vision
+
+To foster a transparent, inclusive, and data-informed Fedora community
+that empowers collaboration, celebrates diversity, and continuously
+evolves. We envision a community where contributors, teams, and leaders
+have the insight, tools, and support needed to sustain a thriving open
+source ecosystem.
+
+## Mission
+
+The {team_name} (CommOps) strengthens the Fedora Project by connecting
+people, data, and process to create a more resilient, informed, and
+cohesive community. Community Operations supports the lifecycle of
+community collaboration by supporting contributors and sustaining teams
+through data-driven insights, clear communication, and process
+excellence.
+
+## Focus Areas
+
+- **Community Activities**: Supporting teams and community projects &
+  initiatives that build contributor engagement and community growth.
+
+- **Moderation & Community Collaboration**: Partnering with moderation
+  working groups to support a safe, respectful, and inclusive community
+  culture.
+
+- **Data & Analytics**: Building and maintaining ethical,
+  privacy-conscious analytics that provide visibility into community
+  health, participation, and trends.
+
+- **Events & Outreach**: Collaborating with event organizers and
+  outreach teams to enhance community experiences, from global
+  conferences and local meetups.
+
+- **Process Improvement & Incubation**: Experimenting with and
+  incubating new methods, tools, and workflows that improve how Fedora
+  collaborates, communicates, and evolves.
+
+## Goals & objectives {#goals}
+
+The following are examples of where the {team_name} focuses:
+
+- Work closely with [Fedora Community Architect](council::fca.xml) to
+  prioritize key focus areas
+
+- Assist [Fedora Operations Architect](council::foa.xml) with release
+  preparations
+
+- Support preparation and execution of [Fedora
+  Elections]({url_wiki}/Elections)
+
+- Work with sub-projects and teams to improve on-boarding methods and
+  practices
+
+- Use metrics and data to improve understanding of Fedora community
+
+  - Support development of metrics tooling
+
+## Get in touch with us {#contact}
+
+The {team_name} uses a
+{team_asynch_communication}\[{team_asynch_communication_name}\] forum
+tag and a {team_synch_communication}\[{team_synch_communication_name}\]
+room to communicate.
+
+The {team_asynch_communication}\[{team_asynch_communication_name} forum
+tag\] is best for *asynchronous* communication. This means it is best
+for questions or topics that someone may respond to later. It is better
+for longer, threaded discussions.
+
+The {team_synch_communication_name} room is best for *synchronous*
+communication. This means it is best for quick feedback, like in a
+conversation. It is helpful for real-time discussions or getting
+someone's attention.
+
+{team_asynch_communication_name} forum tag
+
+:   {team_asynch_communication}\[{team_asynch_communication}\]
+
+{team_synch_communication_name} room
+
+:   [`#commops:fedoraproject.org`]({team_synch_communication})
+
+## Workflow
+
+The {team_name} uses a ticket-based workflow to keep track of our work.
+The repository with tickets is found on
+[{team_issue_tracker_name}]({team_issue_tracker}). Tickets are found
+under the [*Issues*]({team_issue_tracker}/-/issues) tab in the sidebar.
+
+Various labels are used to sort and triage GitLab Issues. For good
+beginner tasks, look at the [*good first
+issue*]({team_issue_tracker}/-/issues/?label_name[]=good%20first%20issue)
+tag.
+
+## Meetings {#meetings}
+
+The {team_name} holds meetings every other week to check in on tasks and
+plan ahead. This translates to two meetings a month. One of the meetings
+is run via a text chat in a Matrix room. The other meeting is run as an
+audio/video call. Check [{team_meetings_name}]({team_meetings}) for the
+next meeting date and time.
+
+Past text meeting minutes are recorded in
+[{team_meetings_minutes_name}]({team_meetings_minutes_url}).
+
+### Meeting format
+
+The upcoming meeting agenda is found on
+[{team_meetings_agenda_name}]({team_meetings_agenda_url}). Meetings
+follow an agenda split into six parts:
+
+1.  **Intros, welcomes, hellos**: Appx. 5 minutes. Waiting for others to
+    arrive, opportunity to introduce yourself, and ask general
+    questions.
+
+2.  **Team announcements & news**: Appx. 5-10 minutes. Any Fedora news
+    or updates to share with the wider team.
+
+3.  **Initiative Co-leads updates to the team**: Appx. 5-10 minutes.
+    Fedora Council updates from the Initiative Co-leads, if there are
+    any.
+
+4.  **Follow-ups from last meeting (if any)**: Appx. 5-10 minutes.
+    Follow up on pending action items from the previous meeting.
+
+5.  **Ticket discussions**: Use the remaining meeting time. Discussion
+    and follow-up on tickets [marked for
+    meetings]({team_issue_tracker}/-/issues/?label_name[]=meeting%20topic%20request).
+
+6.  **Open floor**: Final 5-10 minutes of the meeting. General
+    discussion or comments, or time to discuss anything that had to be
+    revisited during the meeting.
+
+## Get involved {#join}
+
+Read our guide on [how to join the {team_name}](join.xml).
+
+The team always welcomes new contributors. Whether you are a newcomer or
+an old-timer, there are ways to get involved. Join our team to do some
+or all of the following:
+
+- Build your portfolio in open source community management
+
+- Directly see the impact of your contributions over time
+
+- Gain a holistic view of the Fedora Project and learn how the pieces
+  fit together
+
+- Work directly with Fedora Project leadership
+
+- Work with teammates from around the world
+
+- Aspire to the greatness of a community superhero
+
+<figure id="img-panda">
+<img src="https://fedoraproject.org/w/uploads/7/72/Happypanda.png"
+alt="Happy Panda" />
+<figcaption>Join the {team_name} today!</figcaption>
+</figure>
+
+# Join Community Operations {#_join_community_operations}
+
+Become a member of Fedora Community Operations (CommOps) by following
+these steps.
+
+## Create a FAS account {#fas}
+
+Create a {url_wiki}/Account_System\[Fedora Account System account\] and
+sign the {url_wiki}/Legal:Fedora_Project_Contributor_Agreement\[Fedora
+Project Contributor Agreement\]. Do this through the [Fedora Account
+System](https://admin.fedoraproject.org/accounts/).
+
+## Log into {team_asynch_communication_name} {#discourse}
+
+Log into the
+{team_asynch_communication}\[{team_asynch_communication_name} forum\]
+using your FAS account credentials. News, updates, and discussion are
+shared through on the forum. It is a **key part** to how we communicate.
+It receives low to medium traffic.
+
+## Post a self-introduction {#introduction}
+
+Say hello and introduce yourself to the team!
+{team_asynch_communication}\[Post a self-introduction\] to
+{team_asynch_communication_name} and tell us a little about yourself.
+
+Not sure what to say? Answer these questions to start:
+
+- Why are you interested in contributing to Fedora?
+
+- Why are you interested in contributing to {team_name}?
+
+- If you are involved with other things in Fedora, what are/were you
+  working on?
+
+- Do you have any experience in open source or online communities? If
+  so, what?
+
+- What parts of {team_name} were interesting to you?
+
+- Do you have any questions for us? How can we help *you* get started?
+
+## Register on Community Blog {#community-blog}
+
+The Fedora {url_commblog}\[Community Blog\] is a key component to
+CommOps. An account gives permissions to view article drafts and
+previews before they are published. If you ever write an article, you
+will need an account. To register, log in at the
+{url_commblog}/wp-login.php\[login page\] with your Fedora Account
+System (FAS) credentials.
+
+Need more help logging in? Read the {url_commblog}/how-to-log-in/\[help
+page\] for more detailed instructions.
+
+## Join our Matrix channel {#matrix}
+
+Fedora uses the Matrix protocol for instant messaging and communication.
+Our Matrix rooms can be accessed using any Matrix client, but [Element
+client](https://element.io/) and the
+[chat.fedoraproject.org](https://chat.fedoraproject.org/) web app are
+the most common and easiest ways to get started. Discussions and
+planning take place in Matrix channel
+<https://matrix.to/>*/#commops:fedoraproject.org while our monthly team
+meetings are held in a meeting room such as
+<https://matrix.to/>*/#meeting:fedoraproject.org/.
+
+## Make your first steps {#first-steps}
+
+See [Make your first steps in Fedora](contribute/first-steps.xml) for
+more info.
+
+## Start on a task {#start-task}
+
+CommOps uses [this GitLab repository](https://gitlab.com/fedora/commops)
+to track our tasks and what we're working on. Tasks, problems, and goals
+are filed as tickets in the [issue
+tracker](https://gitlab.com/fedora/commops/home/-/issues). There are a
+lot of tickets, but we're not working on everything at once. Scrolling
+through the issue tracker gives a good idea of what CommOps helps with.
+
+Look for the [good first
+issue](https://gitlab.com/fedora/commops/home/-/issues/?label_name%5B%5D=good%20first%20issue)
+tag on tickets to find good tasks for beginners.
+
+Does something look interesting? Leave a comment if you have a question
+or want to work on something. Also check and see if the ticket is
+assigned to someone. If it is unassigned, you can start working on it
+now. If there is an assignee, ask them if they need help or if they are
+still working on the ticket.
+
+This provides an opportunity to receive mentorship and get help to start
+a new task.
+
+## Join our meetings {#meetings}
+
+CommOps has an IRC team meeting each week. In our meeting, the team
+discusses items on our agenda and checks in on any progress of current
+tasks. Tickets selected for meetings are updated after the meeting with
+new information.
+
+The meetings are open to the public and anyone can join. See when our
+meetings are in your time zone on the [CommOps meeting
+calendar](https://apps.fedoraproject.org/calendar/commops/). Feel free
+to attend and introduce yourself during roll call!
+
+## Request to be added to CommOps in FAS {#fasgroup}
+
+To get updates, and to gain access to different tools in CommOps, you'll
+need to join our FAS group. To be sponsored as a member of CommOps,
+raise a issue request in our [repo
+here](https://gitlab.com/fedora/commops/home) with the following
+information. \* Your FAS ID \* What areas of Fedora Community Operations
+are you intersted in (community growth, analytics, engagement, etc)
+
+The issue will be reviwed and after two members of CommOps add a +1 to
+the issue, you will be added to the FAS group. Periodically, we may
+review the list of members in the FAS group and check in if you're still
+interested in contributing. Inactive members may be removed after two
+Fedora Linux releases.
+
+# Community Blog {#_community_blog}
+
+The [Fedora Community Blog]({url_commblog}) (CommBlog) is a
+WordPress-based site that delivers news, updates, and calls for help
+from contributors across Fedora.
+
+![Community Blog
+screenshot](https://fedoraproject.org/w/uploads/0/09/Community_Blog_screenshot.png)
+
+## Content
+
+The Community Blog focuses on updates and information about the Fedora
+Project community. Topics vary, but mostly include...
+
+- News from specific sub-projects
+
+- Updates on new features or changes in Fedora
+
+- Calls for help from other contributors
+
+- Official {url_wiki}/Elections\[Fedora Elections\] coverage
+
+- Anything related to Fedora *contributor* community
+
+## Fedora Magazine vs. Community Blog {#magazine-vs-community-blog}
+
+What is the difference between the [Fedora
+Magazine](https://fedoramagazine.org) and the Community Blog? They focus
+on two different audiences (or types of readers).
+
+The Fedora Magazine targets everyday Fedora users, Linux enthusiasts,
+and technology hobbyists. Fedora contributors are included in these
+audiences, but they are not the main focus. The Community Blog is the
+news hub for Fedora contributors and people working inside of the Fedora
+community. The Community Blog specifically focuses on our contributors.
+
+For example, an article on how to use a new package in Fedora is better
+for the Magazine. Any Fedora user may be interested in using the
+package. An article that announces a new feature to a Fedora
+Infrastructure service or an Ambassador event report is better for the
+Community Blog. A Fedora user may not be interested, but our
+contributors have a stronger interest.
+
+Sometimes there is some overlap between the two. Think hard about who
+you are writing for and who you want to read your article. This should
+answer the question of where to write your article. The CommOps and
+Fedora Magazine teams are happy to answer any doubts or questions if you
+are unsure.
+
+## Write an article {#write-article}
+
+The Community Blog is managed by the CommOps team. The system
+administration is managed by {url_wiki}/Infrastructure\[Fedora
+Infrastructure\]. However, we need *your help* to share the awesome
+things you and your area of Fedora are working on.
+
+Articles don't need to be long. Short snippets are useful too. If you're
+not sure how much to write, 300 words is a good target. If needed, you
+can always write more.
+
+See the [*Writing an
+article*]({url_commblog}/writing-community-blog-article/) guide to get
+started. This page explains the process for writing and how to get your
+post published.
+
+## Community Blog theme
+
+The Community Blog WordPress theme is open source. Find the source code
+[on Pagure](https://pagure.io/communityblog-theme). Open a ticket if you
+find a bug, problem, or something to improve. Pull requests are also
+welcome! Before submitting a pull request, post to
+{team_asynch_communication}\[{team_asynch_communication_name}\] first
+and ask for feedback on your planned contribution.
+
+## Editors
+
+Community Blog editors review article drafts and schedule new posts.
+Editors are reachable on
+{team_asynch_communication}\[{team_asynch_communication_name}\].
+
+Below, you can find a current list of editors:
+
++-----------------------------------+-----------------------------------+
+| Name                              | FAS account                       |
++===================================+===================================+
+| Justin W. Wheeler                 | {                                 |
+|                                   | url_wiki}/User:Jflory7\[jflory7\] |
++-----------------------------------+-----------------------------------+
+| Michal Konecny                    | {url_wiki}/User:Zlopez\[zlopez\]  |
++-----------------------------------+-----------------------------------+
+| Sumantro Mukherjee                | {url_                             |
+|                                   | wiki}/User:Sumantrom\[sumantrom\] |
++-----------------------------------+-----------------------------------+
+
+# How to enroll in Fedora Planet {#_how_to_enroll_in_fedora_planet}
+
+Justin W. Wheeler \<<jww@fedoraproject.org>\>; Fedora community
+contributors 2025-02-17
+
+:::: important
+::: title
+:::
+
+Before you federate with the Fedora Planet, understand the guidelines on
+appropriate material to federate to Fedora Planet. Read [these
+guidelines on appropriate
+material]({url_wiki}/Planet#Appropriate_Material) before you aggregate
+your blog.
+::::
+
+## Prerequisites
+
+1.  Register a Fedora Account System (FAS) account.
+
+2.  Sign the Fedora Project Contributor Agreement (FPCA).
+
+3.  Be a member of at least one other group in the FAS system (also
+    known as FPCA+1).
+
+## Enroll your feed in Fedora Planet {#enroll}
+
+1.  Configure a category on your blog for content containing
+    [appropriate material]({url_wiki}/Planet#Appropriate_Material) for
+    Fedora Planet. (For help with this, [see below](#categories).)
+
+2.  Log into the [Fedora Account
+    System](https://accounts.fedoraproject.org/). Navigate to your
+    profile and click *Edit Profile*.
+
+3.  Find the *RSS URL* option.
+
+4.  Paste the URL of your category-specific RSS/RSS2/Atom feed into the
+    option box.
+
+5.  Scroll to the bottom and click *Save*.
+
+Your blog content will eventually appear on Fedora Planet, together with
+independently-authored content from other Fedora community members.
+
+:::: note
+::: title
+:::
+
+There are two fields on the Fedora Account System profile page: **RSS
+URL** and **Blog URL**. RSS URL is used to build Fedora Planet. Any RSS
+feed you add to your profile will automatically be pulled into Fedora
+Planet. Blog URL is used to publish a link to your public blog, so it
+can appear in your profile. Blog URL is not used to build Fedora Planet.
+::::
+
+### Using categories, labels, or tags {#categories}
+
+Use a single category, label, or tag on your personal blog to enroll in
+Fedora Planet, rather than your whole blog. This allows you to highlight
+posts that are interesting for the Fedora community. Here are some
+specific instructions for making a category or label and finding your
+correct URL:
+
+- [How to provide a category specific feed using
+  WordPress]({url_wiki}/How_to_provide_a_category_specific_feed_using_WordPress)
+
+- [How to provide a category specific feed using
+  Blogger]({url_wiki}/How_to_provide_a_category_specific_feed_using_Blogger)
+
+- [How to provide a category specific feed using
+  Blogspot]({url_wiki}/How_to_provide_a_category_specific_feed_using_Blogspot)
+
+- [How to provide a category specific feed using
+  Tumblr]({url_wiki}/How_to_provide_a_category_specific_feed_using_Tumblr)
+
+# Creating a Fedora SIG {#_creating_a_fedora_sig}
+
+Nancy Nwankwo; Justin Wheeler; Fedora community contributors
+:page-authors: {author}, {author_2}, {author_3}
+
+This page provides instructional steps on how to start a Fedora SIG
+using current communication platforms and tools.
+
+A Fedora Special Interest Group (SIG) is a group of people who share an
+interest in a specific topic or project within Fedora. SIGs are easy to
+start and offer a great way to collaborate and work together on things
+you are passionate about, such as a new idea, project, or community
+effort. This guide will show you the simple steps to create your own SIG
+using available tools and resources.
+
+## Step 1: Explore Other SIGs & Subprojects {#explore}
+
+You don't have to reinvent the wheel! Other SIGs may already be tackling
+related ideas or have systems in place that you can learn from. Reach
+out and collaborate!
+
+Examples:
+
+- [**Fedora Design Team**](design::index.xml): Helpful for logos,
+  visuals, and branding your SIG.
+
+- **[Fedora Docs](fedora-docs::index.xml) or
+  [Infrastructure](infra::index.xml) teams**: Great for guidance on
+  hosting content or automation tools.
+
+## Step 2: Get Others Interested {#build-interest}
+
+Before creating a SIG, confirm that at least a few other Fedora
+contributors are interested in the topic. You can:
+
+- Post on
+  [{team_asynch_communication_name}]({team_asynch_communication}) (using
+  the appropriate category or tag) and the [Fedora devel mailing
+  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org//).
+
+- Join a relevant {team_synch_communication_name} room and share your
+  ideas. The Fedora devel mailing list is a good place to start if you
+  are not sure of what group to join. Many Fedora developers and
+  packagers can be found there.
+
+Your post should clearly explain:
+
+- What your proposed SIG is about
+
+- Why it matters
+
+- How others can get involved
+
+:::: formalpara
+::: title
+Example titles
+:::
+
+    “Looking to start a Fedora Edge Computing SIG, anyone interested?”
+    “Fedora for Students SIG: anyone want to join?”
+::::
+
+## Step 3: Set Up the Basics {#basics}
+
+Once there is enough interest, establish your SIG's basic footprint in
+Fedora's ecosystem. This helps others find you and contributes to
+long-term sustainability.
+
+<div>
+
+::: title
+Required Setup
+:::
+
+- Create a tag on {team_asynch_communication_name} (to organize
+  conversations).
+
+- [Request a {team_synch_communication_name}
+  room](project::communications.xml#_primary_channels). If a related
+  room exists or there isn't much traffic yet, use the existing room and
+  wait until there's enough interest to request a new one.
+
+- Create a Forgejo repository or project board (optional but useful for
+  tracking tasks).
+
+- Create a private mailing list for Bugzilla bugs (required for SIGs
+  that maintain packages).
+
+</div>
+
+If you are unsure where to start, the [Fedora Join
+SIG](fedora-join::index.xml) can assist.
+
+:::: tip
+::: title
+:::
+
+Create a dedicated {team_asynch_communication_name} tag for your SIG
+early on. It helps organize all related topics and makes your group
+easier to discover. Drop into community-wide
+{team_synch_communication_name} rooms like
+[`#social:fedoraproject.org`](https://matrix.to/#/#social:fedoraproject.org)
+or
+[`#join:fedoraproject.org`](https://matrix.to/#/#join:fedoraproject.org)
+for community social chatter and quick help.
+::::
+
+## Step 4: Document the SIG {#documentation}
+
+Create a Fedora Docs site that introduces your SIG. The Fedora Docs site
+index page should include:
+
+- The SIG's mission and scope
+
+- A list of communication channels
+
+- Links to resources ({team_asynch_communication_name} tag,
+  {team_synch_communication_name} room, Forgejo repo, etc.)
+
+- How others can join or contribute
+
+- Team leads or go-to people
+
+You may:
+
+- Publish this on the Fedora Docs page (*recommended*)
+
+- Or as part of your Forgejo README
+
+:::: note
+::: title
+:::
+
+While Fedora Wiki is still in use, SIGs are starting to move their
+documentation to Fedora Docs. Fedora Docs are better because they are
+easier to find information and show up better in search results.
+::::
+
+## Step 5: Plan Your First Activities {#activities}
+
+SIGs gain momentum by working together toward shared goals. Early
+actions might include:
+
+- Tracking to-do items in a Forgejo issue board
+
+- Organizing an async planning thread in
+  {team_asynch_communication_name}
+
+- Hosting a regular or one-time {team_synch_communication_name} meeting
+
+You can also:
+
+- Submit articles to [Fedora Magazine](https://fedoramagazine.org/) to
+  promote what your SIG is doing in Fedora
+
+- Share contributor journeys and milestones on the [Community
+  Blog]({url_commblog})
+
+- Ping the [Marketing Team](marketing::index.xml) for help with
+  graphics, campaign ideas, and event promotion
+
+- Get community planning and coordination tips from the [Community Ops
+  team](commops::index.xml)
+
+- Reach out to other related SIGs for cross-group support
+
+Further Reading:
+
+- [*How to run good async
+  meetings*](https://www.runn.io/blog/asynchronous-meeting/)
+
+## Step 6: Keep It Going {#keep-going}
+
+Successful SIGs grow by being active, inclusive, and goal-driven. Some
+tips:
+
+- Review progress regularly (monthly/quarterly) and share public reports
+  on progress.
+
+- Actively welcome and onboard new contributors with documentation for
+  newcomers and/or designated mentors to help onboard new contributors
+  to the community.
+
+- Share your progress publicly via blog posts, social media, local
+  outreach, or mailing list.
+
+- Define leadership roles or points of contact for long-term
+  sustainability.
+
+Need inspiration? Check out well-run SIGs like [Fedora
+CoreOS](fedora-coreos::index.xml) for best practices.
+
+## Step 7: Where to Get Help {#get-help}
+
+You are not doing this alone! Fedora has a helpful, friendly community
+and lots of places where you can ask questions, get guidance, and find
+people to work with. Here is a quick decision path:
+
++-----------------------------------+-----------------------------------+
+| I need help with...               | Try reaching out to...            |
++===================================+===================================+
+| Setting up SIG tools              | [Join                             |
+|                                   | SIG](fedora-join::index.xml),     |
+|                                   | [Infra Team](infra::index.xml)    |
++-----------------------------------+-----------------------------------+
+| Finding collaborators             | [{team_asynch_communication_nam   |
+|                                   | e}]({team_asynch_communication}), |
+|                                   | [Join                             |
+|                                   | SIG](fedora-join::index.xml)      |
++-----------------------------------+-----------------------------------+
+| Writing docs or onboarding guides | [Docs                             |
+|                                   | Team](fedora-docs::index.xml),    |
+|                                   | [Community                        |
+|                                   | Ops](commops::index.xml)          |
++-----------------------------------+-----------------------------------+
+| Promotion & outreach              | [Marketing                        |
+|                                   | Team](marketing::index.xml),      |
+|                                   | [Fedora                           |
+|                                   | Magazine](fedora-magazin          |
+|                                   | e::workflow-article-proposal.xml) |
++-----------------------------------+-----------------------------------+
+| Hosting meetings or async         | [{team_synch_communication_name}  |
+| planning                          | rooms](project::commun            |
+|                                   | ications.xml#_primary_channels/), |
+|                                   | [Community Blog]({url_commblog})  |
++-----------------------------------+-----------------------------------+
+| Ending or pausing a SIG           | [Fedora                           |
+|                                   | Council](council::index.xml),     |
+|                                   | [Join                             |
+|                                   | SIG](fedora-join::index.xml)      |
++-----------------------------------+-----------------------------------+
+
+# Flock to Fedora: The Fedora Project Contributor Conference {#_flock_to_fedora_the_fedora_project_contributor_conference}
+
+Flock to Fedora is the annual contributor conference for the Fedora
+Project. The purpose of Flock is to invite developers, enthusiasts, and
+innovators to collaborate on Fedora Linux, learn about the latest Open
+Source technologies, and be part of our vibrant community.
+
+## What is Flock to Fedora? {#what}
+
+Flock to Fedora is the annual contributor conference that brings
+together the global Fedora Project community. It is a unique opportunity
+for developers, designers, documentation writers, testers, and other
+contributors to connect, collaborate, and celebrate the Free Software
+spirit that drives Fedora Linux. Flock to Fedora is more than just a
+conference; it is a vibrant gathering of passionate individuals shaping
+the future of open source.
+
+## Purpose of Flock to Fedora {#purpose}
+
+Flock to Fedora serves several key purposes:
+
+- **Strategic Alignment**: It provides a forum to discuss and advance
+  the Fedora Project's strategic goals, ensuring our community is
+  aligned and working towards common objectives.
+
+- **Community Celebration**: It is a chance to recognize and celebrate
+  the contributions of the Fedora community, fostering a sense of
+  belonging and shared purpose.
+
+- **Networking and Collaboration**: It facilitates connections and
+  collaboration among Fedora contributors worldwide.
+
+## What to Expect at Flock to Fedora {#expectations}
+
+Flock to Fedora offers a diverse range of activities:
+
+- **Keynote Presentations**: Hear from influential figures in the Linux
+  world.
+
+- **Workshops**: Get hands-on experience with Fedora and related Linux
+  technologies.
+
+- **Hackfests**: Collaborate on projects and contribute to the Fedora
+  and Linux ecosystems.
+
+- **Social Events**: Network and connect with fellow Fedora
+  contributors.
+
+- **Discussions**: Engage in in-depth conversations about the latest
+  developments in Fedora Linux and upstream Linux components.
+
+## Key Themes and Topics {#themes}
+
+Flock to Fedora explores themes relevant to the Fedora Project's current
+priorities and the broader Open Source landscape. Past topics have
+included collaboration tools and workflows, workshops to train new
+contributors, driving innovation in areas like cloud computing and
+containerization, and exploring emerging technologies. The conference
+provides a platform for discussing and shaping the future of Fedora.
+
+## Why Attend Flock to Fedora? {#why}
+
+Attending Flock to Fedora offers numerous benefits:
+
+- Learn about the Fedora Project directly from project leaders, team
+  leads, and developers.
+
+- Connect with fellow contributors from around the world. Flock 2024 in
+  Rochester, New York included attendees from 14 countries.
+
+- Collaborate on projects and contribute to the Fedora ecosystem.
+
+- Share your knowledge and expertise with the community.
+
+- Be inspired by the passion and innovation of the Fedora community.
+
+- Forge connections that lead to real-world impact.
+
+## Flock to Fedora: Cost and Accessibility {#cost}
+
+Flock to Fedora strives to be an accessible event. While attendance is
+free, attendees may be encouraged to contribute to travel funding to
+help others participate.
+
+## Sponsoring Flock to Fedora {#sponsoring}
+
+Organizations that share the Fedora Project's values of *Freedom,
+Friends, Features, First* can sponsor Flock to Fedora and gain
+visibility within the community. Contact us to learn more about
+sponsorship opportunities.
+
+## Join the Flock team {#join}
+
+There are multiple ways to get involved with the Flock to Fedora team.
+The list below describes the different types of roles:
+
+- Content & outreach
+
+- Design
+
+- Event production
+
+- Speaker management
+
+- Sponsor management
+
+More about these roles and how to get involved is coming soon. \*\* 2025
+= Flock 2025 Volunteer Role Handbook :matrix-room-flock:
+<https://matrix.to/>*/#flock:fedoraproject.org :matrix-room-commops:
+<https://matrix.to/>*/#commops:fedoraproject.org :url-coc:
+<https://docs.fedoraproject.org/en-US/project/code-of-conduct/>
+:url-commblog: <https://communityblog.fedoraproject.org/>
+:url-design-guidelines: <https://design.fedoraproject.org/>
+:url-flock-website: <https://fedoraproject.org/flock/2025/> :url-venue:
+<https://www.wyndhamhotels.com/en-uk/vienna-house/prague-czech-republic/vienna-house-andels-prague/overview>
+:url-websites-team: <https://docs.fedoraproject.org/en-US/websites/>
+
+Welcome, potential Flock 2025 volunteer!
+
+Flock to Fedora is the heart of the Fedora Project's contributor
+community. It brings us together for collaboration, planning, and
+strengthening the \"Friends\" foundation of Fedora. This event, taking
+place in Prague from June 5th to 8th, 2025, relies heavily on the
+enthusiasm and dedication of volunteers like you to succeed.
+
+This handbook outlines the key areas where volunteer support is crucial,
+both before and during the conference. Whether you help shape content,
+design visuals, manage logistics, or ensure things run smoothly onsite,
+your contributions are invaluable. Please review the roles below to see
+where your skills and interests can best help the Fedora community
+gather for another productive and engaging Flock.
+
+All volunteers play a vital role in creating a positive atmosphere. We
+expect everyone involved to read and uphold the {url-coc}\[Fedora Code
+of Conduct\].
+
+## Content & Outreach Team {#content-outreach}
+
+The Content & Outreach team serves as the voice of Flock. The team
+ensures the Fedora community and the wider open source world know about
+the event and have the information they need.
+
+**Role Type**: Primarily Pre-Event (some activity during) **Estimated
+Time Commitment**: Variable. 2-10 hours/week. Peak activity occurs 2-3
+months before, during, and immediately after Flock.
+
+The team's responsibilities include:
+
+- **Website Management**:
+
+  - Regularly updating the official {url-flock-website}\[Flock website\]
+    with news, schedules, speaker info, registration details, and venue
+    logistics.
+
+  - Working with the {url-websites-team}\[Fedora Websites & Apps Team\]
+    and using Fedora's content management systems.
+
+- **Promotional Content Creation**:
+
+  - Crafting engaging content (blog posts, announcements, social media
+    updates) to promote Flock.
+
+  - Publishing posts on the {url-commblog}\[Fedora Community Blog\] and
+    other relevant channels (Mastodon, LinkedIn, etc.).
+
+- **Community Engagement**:
+
+  - Spreading the word through Fedora channels and social media.
+
+  - Encouraging participation and answering questions about the event,
+    including helping in the conference Matrix room
+    ({matrix-room-flock}\[#flock:fedoraproject.org\]).
+
+## Design Team {#design}
+
+The Design Team shapes the visual identity of Flock. The team creates a
+cohesive and welcoming aesthetic that reflects the Fedora brand and the
+spirit of the conference.
+
+**Role Type**: Pre-Event **Estimated Time Commitment**: Variable: 4-8
+hours/week. Peak activity occurs 1-2 months before Flock.
+
+Key tasks include:
+
+- **Logo and Branding**: Designing and finalizing the official Flock
+  2025 logo, ensuring it aligns with {url-design-guidelines}\[Fedora's
+  design guidelines\].
+
+- **Visual Mockups**: Creating mockups for the website, social media,
+  signage, etc., and iterating based on feedback.
+
+- **Swag Design Coordination**: Developing designs for conference swag
+  (T-shirts, stickers) and preparing print-ready files, coordinating
+  with the Event Production team.
+
+- **Presentation Assets**: Designing elements like projector splash
+  screens or slide templates.
+
+## Event Production Team {#event-production}
+
+The Event Production team handles the core logistics and infrastructure
+that make Flock possible. This team ensures the venue, schedule, and
+services are in place.
+
+**Role Type**: Primarily Pre-Event (some onsite coordination needed)
+**Estimated Time Commitment**: High. Peak activity occurs during the
+weeks immediately before and during the conference.
+
+The team's responsibilities cover:
+
+- **Call for Proposals (CFP) Management**: Setting up and managing the
+  CFP platform, defining guidelines, and timelines.
+
+- **Session Review Coordination**: Assembling a review team and
+  coordinating the review process.
+
+- **Schedule Development**: Building the conference schedule based on
+  accepted sessions, coordinating with speakers and teams.
+
+- **Vendor Liaison & Logistics**: Confirming arrangements and serving as
+  point of contact for key vendors (A/V, etc.).
+
+- **Social Event Planning**: Organizing official social gatherings
+  (welcome reception, dinner).
+
+- **Onsite Logistics Planning**: Planning for signage, registration
+  setup, sponsor booths, and venue coordination.
+
+- **Budget and Negotiation Support**: Assisting the core committee with
+  budget elements and potentially negotiating vendor pricing (food, A/V,
+  swag).
+
+## Speaker Management Team {#speaker-management}
+
+This team supports contributors sharing their knowledge at Flock. The
+team ensures speakers have a smooth experience from acceptance to
+presentation.
+
+**Role Type**: Primarily Pre-Event (some follow-up possible during/post)
+**Estimated Time Commitment**: Medium (e.g., 3-5 hours/week, higher
+during acceptance/travel booking phases).
+
+Key duties include:
+
+- **Speaker Communication**: Serving as the primary contact,
+  communicating acceptance, confirming participation, and providing
+  information.
+
+- **Travel Sponsorship Coordination**: Identifying speakers needing
+  travel assistance, collecting information, and managing the
+  sponsorship budget.
+
+  - This requires working closely with Fedora's legal and finance
+    contacts to process sponsorships according to established procedures
+    and maintaining clear tracking sheets.
+
+- **Accommodation Management**: Managing the allocation of reserved
+  hotel rooms for sponsored speakers.
+
+- **Flight Booking Coordination**: Compiling flight needs, liaising with
+  the travel agent, confirming details, and approving bookings within
+  budget.
+
+- **Schedule Confirmation**: Informing speakers of session times and
+  communicating changes.
+
+- **Travel Information Dissemination**: Sending confirmed itineraries
+  and logistical details to sponsored speakers.
+
+## Sponsor Management Team {#sponsor-management}
+
+The Sponsor Management team builds and maintains relationships with
+organizations providing financial or in-kind support. This team helps
+make Flock affordable.
+
+**Role Type**: Pre-Event **Estimated Time Commitment**: Medium (e.g.,
+2-4 hours/week during outreach periods).
+
+The team's responsibilities include:
+
+- **Prospecting and Outreach**: Identifying potential sponsors and
+  initiating contact using the sponsorship prospectus.
+
+- **Sponsorship Tracking**: Maintaining an organized inventory of
+  discussions, commitments, and declinations.
+
+- **Financial Coordination**: Working with Fedora's finance
+  administrators to ensure sponsors pay correctly via purchase orders or
+  invoices.
+
+- **Benefit Fulfillment**: Ensuring sponsors receive all agreed-upon
+  benefits (logo placement, promotion, etc.) before, during, and after
+  the event.
+
+## Onsite Volunteering Team {#onsite-volunteering}
+
+This team is crucial during the event days (June 5th-8th, 2025). The
+team ensures the conference runs smoothly and attendees have a positive
+experience at the {url-venue}\[Vienna House by Wyndham Andel's Prague\].
+
+**Role Type**: During Event **Estimated Time Commitment**: High
+(Requires availability during conference days, specific shifts TBD).
+
+Roles include:
+
+- **Session Chairs/Room Monitors**: Introducing speakers, helping with
+  A/V, managing time, and facilitating Q&A in session rooms.
+
+- **Registration & Help Desk Staff**: Managing attendee check-in,
+  distributing badges/swag, and answering questions at the main desk.
+
+- **Photography & Media Support**: Capturing photos/videos of sessions
+  and interactions, potentially assisting with live social media
+  updates.
+
+## Important Notes
+
+- This handbook provides an overview of the teamwork involved in Flock.
+
+- Specific tasks and time commitments for volunteer roles may vary.
+
+- Team leads will provide further details.
+
+- **Clarification on Scope**: Some listed responsibilities, particularly
+  those involving direct financial transactions (invoicing, payment
+  processing), budget authority, or final vendor negotiations, are
+  typically handled by core Flock organizers or designated Fedora
+  Project members due to requirements for specific access or authority.
+
+- Volunteer opportunities focus on the many other crucial tasks outlined
+  for each team where community contributions are essential.
+
+- **Code of Conduct**: All volunteers play a key role in our community's
+  health. Please read and adhere to the {url-coc}\[Fedora Code of
+  Conduct\] to help ensure Flock is a welcoming and inclusive event for
+  everyone.
+
+## How to Volunteer
+
+Interested in helping make Flock a great success? We'd love to have you!
+
+A specific volunteer sign-up form will be available soon. This form will
+be managed by the [Fedora Community Operations (CommOps)
+Team](commops::index.xml). Keep an eye on the Flock website and Fedora
+communication channels for the announcement.
+
+In the meantime, the best way to express interest, stay informed, and
+ask questions is to join the discussion on Matrix:
+
+- Main conference room:
+  {matrix-room-flock}\[`#flock:fedoraproject.org`\]
+
+- Fedora CommOps (for volunteering coordination):
+  {matrix-room-commops}\[`#commops:fedoraproject.org`\]
+
+Introduce yourself in the Matrix rooms! The CommOps team in
+{matrix-room-commops}\[`#commops:fedoraproject.org`\] can help direct
+initial questions about volunteering roles and getting involved. =
+Managing the Flock Website Adrian Edwards (moralcode); Justin W. Wheeler
+(jflory7)
+
+This document provides instructions for managing the Flock conference
+website, which was recently redesigned to align with the Fedora
+website's design language and leverage existing infrastructure,
+including the CMS, community translations, and a unified navbar.
+
+## Website Structure {#structure}
+
+The Flock website's content is divided into two primary sections to
+cater to different user needs:
+
+- **Main page**: This section provides general information about Flock
+  for new contributors and those unfamiliar with the conference.
+
+- **Year page**: This section contains specific details about the Flock
+  conference in a specific year.
+
+Each year of Flock will have its dedicated page under the `/flock`
+directory (e.g., `/flock/2025`, `/flock/2026`, etc.).
+
+## CMS Features
+
+Migrating the website to the CMS enabled the implementation of several
+useful features, including:
+
+- Toggle switches for showing/hiding website sections, allowing for
+  content relevance management.
+
+- Alt text and attribution fields for images, improving accessibility
+  and copyright clarity.
+
+## Known Issues and Future Improvements {#issues}
+
+The following areas require further attention:
+
+- **Call for Proposals (CFP) Section**: The CFP section within the CMS
+  has been disabled and may contain unresolved issues. Testing is
+  required before enabling this feature.
+
+- **\"Thank You\" Section**: A dedicated \"thank you\" section for quick
+  activation is currently absent.
+
+Future development will focus on creating a new page for each year of
+the conference. The process for adding these pages is described in the
+following section. While the CMS supports dynamic page creation, this
+approach was not used for Flock 2024 to minimize complexity.
+
+## Adding New Flock Year Pages {#add-year-page}
+
+Adding a new year page for a future Flock conference involves modifying
+both the CMS and the main website repositories. The process is detailed
+below:
+
+### CMS Repository Changes {#cms-changes}
+
+1.  **Fork the CMS Repository**: Fork the [Fedora websites CMS
+    repository](https://gitlab.com/fedora/websites-apps/fedora-websites/cms/fedoraproject.org/).
+
+2.  **Copy and Paste Event Data**: Copy the Flock event data block [from
+    the `events.yml`
+    file](https://gitlab.com/fedora/websites-apps/fedora-websites/cms/fedoraproject.org/-/blob/main/public/admin/data/events.yml?ref_type=heads#L421)
+    (starting around line 421 and ending before the next event block).
+    Paste this block below the existing Flock event entries.
+
+3.  **Modify Event Data**: Update the first three lines of the copied
+    block to reflect the new year (replace `X` with the appropriate
+    year).
+
+    ``` yaml
+    label: "Flock 202X"
+    name: "flock-202X"
+    file: "/content/events/flock/202X.yml"
+    ```
+
+4.  **Duplicate Event Content File**: Navigate to the
+    `/content/events/flock` directory within the repository. Duplicate
+    the existing year's YAML file (e.g., `2024.yml`) and rename it to
+    match the new year (e.g., `2025.yml`).
+
+5.  **Commit and Create Merge Request**: Commit your changes to a new
+    branch and create a merge request to the main CMS repository for
+    review.
+
+### Website Repository Changes {#repo-changes}
+
+After the CMS changes are merged, the following steps are required to
+update the website:
+
+1.  **Fork the Website Repository**: Fork the [main Fedora websites
+    repository](https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0/).
+
+2.  **Duplicate Page File**: Duplicate the existing year's page file
+    (e.g., `/pages/flock/2024.vue`) and rename it to match the new year
+    (e.g., `/pages/flock/2025.vue`).
+
+3.  **Update Page File**: Inside the new page file, modify the second
+    line to point to the new year's CMS data (replace `X` with the
+    appropriate year):
+
+    ``` javascript
+    const data = await getCMS("events/flock/202X");
+    ```
+
+4.  **Commit and Create Merge Request**: Commit your changes to a new
+    branch and create a merge request to the main website repository.
+    Ensure this merge request is submitted **after** the CMS merge
+    request to avoid website errors.
+
+## CMS Management
+
+Following the above procedures, all other website updates should be
+manageable directly [within the CMS
+interface](https://fedora.gitlab.io/websites-apps/fedora-websites/cms/fedoraproject.org/admin/).
+
+# Pretalx CFP Reviewer Guide {#_pretalx_cfp_reviewer_guide}
+
+Oluwatosin Olatunji; Justin Wheeler v1.1; 2026-02-10 :page-aliases:
+commops:flock:cfp-reviewer-guidelines.adoc,
+community:flock:cfp-pretalx-reviewer-guidelines.adoc,
+community:flock:cfp-reviewer-guidelines.adoc
+
+> Thank you for contributing as a reviewer for Flock to Fedora! Your
+> expertise is vital in shaping an outstanding conference experience.
+> This guide is designed to streamline your navigation of the Pretalx
+> review process for Flock.
+
+This page provides guidance to call for proposal (CFP) reviewers for the
+[Flock to Fedora](https://fedoraproject.org/flock/) conference. CFP
+reviewers are invited as volunteers by Flock core organizers to help
+curate diverse content and programming at our contributor conference.
+
+:::: important
+::: title
+:::
+
+Your feedback should be constructive, insightful, and focused on the
+content of the submissions. Your role plays a significant part in
+ensuring a high-quality experience for Flock.
+::::
+
+This guide is organized into multiple sections below.
+
+## Gain Reviewer account access {#access}
+
+You will receive an invitation from a Pretalx administrator with login
+instructions. You will be prompted to create a reviewer profile if it is
+your first time.
+
+<figure>
+<img src="pretalx-account-invite.png"
+alt="Screenshot of the email invitation sent by the Pretalx system to the user’s email inbox. The email subject reads" />
+<figcaption>Email invitation from Pretalx</figcaption>
+</figure>
+
+<figure>
+<img src="pretalx-invite-acceptance.png"
+alt="Screenshot of the dialogue to accept the email invitation to join a Pretalx team. Two options are presented to accept" />
+<figcaption>Accepting the invitation on Pretalx</figcaption>
+</figure>
+
+## View proposals {#proposals}
+
+Upon logging in, your dashboard will display a list of proposals
+assigned to you for review. Also note that depending on settings,
+reviewers will be able to view and review all proposals, or only
+assigned proposals (determined by the Pretalx administrator).
+
+<figure>
+<img src="pretalx-reviewer-dashboard.png"
+alt="Screenshot of the reviewer dashboard from Pretalx. Four panes are shown: 5 proposals" />
+<figcaption>Reviewer dashboard in Pretalx</figcaption>
+</figure>
+
+## Review proposals {#review}
+
+A Pretalx proposal submission is typically composed of a title,
+abstract, track, theme(s), a brief speaker bio, and other notes. If
+blind review for reviewers is enabled, speaker identities are hidden.
+
+All reviewers can give **up to four points** to a session. Each point is
+weighed on a different criteria, much like a rubric. The four point
+categories guide each reviewer to reflect on four different aspects of
+the proposal:
+
+1.  **Submission Quality**: The basics. Is the proposal well-written? Is
+    it thoughtful? Does the speaker adequately describe their topic in a
+    way that others can understand?
+
+2.  **Theme Relevance**: All proposals link themselves to one or many of
+    the four themes: *\*Freedom\* -- The Open Frontier*; *\*Friends\* --
+    Our Fedora Story*; *\*Features\* -- Engineering Fedora's Core*;
+    *\*First\* -- Blueprint for the Future: Fedora Linux 45 & 46*. Does
+    the connection between the proposal and theme make sense? Is it a
+    good fit?
+
+3.  **Probability of Success**: Is the speaker adequately prepared to
+    deliver their content? If they will run a workshop, will it connect
+    to the Flock audience and attendees? If they present a session, do
+    they have a clear connection to Fedora? What is the likelihood that
+    this session contributes to something positive for the future of
+    Fedora?
+
+4.  **Personal Appeal**: This is your personal point. Use it however you
+    want! If there is a session you just *really like* and you have a
+    hard time explaining why, this point is for you. Alternatively, if
+    there is something you really don't like, you can also downvote it
+    (although we likely want to know why in the comments).
+
+The following sections explain each point in more detail and provides
+guidance to CFP reviewers on how to cast a vote.
+
+### Q1: Submission Quality {#voting-quality}
+
+- **Give one point (+1)**: If abstract is written clearly and the
+  submitter did a good job of describing their topics. It should be
+  clear what the submitter will talk about and why their topic(s) are
+  relevant to the Fedora contributor community.
+
+- **Give no point (+0)**: They submit an interesting abstract, but there
+  are missing details or uncertainties about what the submitter will
+  prepare.
+
+- **Take one point (-1)**: The abstract is poorly written and/or it is
+  unclear what the speaker is proposing.
+
+### Q2: Theme Relevance {#voting-themes}
+
+- **Give one point (+1)**: The proposal has a clear connection to a
+  Flock 2026 theme. The submitter acknowledges the focus area in their
+  abstract or describes the connection between the focus area and their
+  topic(s) well.
+
+- **Give no point (+0)**: The proposal acknowledges a theme, but the
+  submitter does NOT connect the theme and their topic(s) well.
+
+- **Take one point (-1)**: The proposal does not acknowledge a theme or
+  seems irrelevant to the theme selected by the submitter.
+
+As a reminder, the Flock 2026 themes are below:
+
+- **Freedom -- The Open Frontier**: This theme explores how Fedora
+  pushes the boundaries of technological freedom. We invite proposals on
+  FOSS approaches to Artificial Intelligence, the advancement of open
+  hardware like RISC-V, the development of open standards, and the
+  protection of data privacy. Sessions should focus on how our work in
+  the Fedora Project creates a more free and collaborative technological
+  world for everyone.
+
+- **Friends -- Our Fedora Story**: This theme celebrates the people and
+  practices that make our community unique. We seek proposals that share
+  stories of mentorship, successful team collaboration, and effective
+  onboarding within Fedora. Collaboration is key to our success, so
+  sessions about our partnerships with other FOSS communities should
+  center on the mutual benefits and the positive impact these
+  relationships have on the Fedora Project.
+
+- **Features -- Engineering Fedora's Core**: As a contributor
+  conference, this theme dives deep into the craft of building our
+  distribution and other Fedora outputs. We welcome sessions on
+  improvements to our infrastructure, release engineering processes,
+  quality assurance, packaging, and community tooling. This is the place
+  for technical talks that showcase our engineering excellence and the
+  collaborative work that makes Fedora's deliverables possible, from
+  code to final artifact.
+
+- **First -- Blueprint for the Future: Fedora Linux 45 & 46**: This
+  theme focuses on the near-term innovations that will define the next
+  generation of Linux. With the next few Fedora Linux releases serving
+  as the foundation for RHEL 11 and EPEL 11, this is a critical time. We
+  are looking for forward-looking technical talks on the changes,
+  features, and architectural decisions in F45 and F46 that will shape
+  the future of the operating system, from the community desktop to the
+  core of the enterprise platforms.
+
+### Q3: Probability of Success {#voting-success}
+
+- **Give one point (+1)**: You believe that this proposal has a high
+  probability of success at Flock. The speaker(s) appear to have
+  sufficient knowledge and expertise to present the topic at Flock.
+
+- **Give no point (+0)**: It is unclear whether the speaker will be able
+  to deliver the content successfully at Flock.
+
+- **Take one point (-1)**: You believe that this proposal will not be
+  successful at Flock. This could be because the proposal is too
+  ambitious, it is not relevant to a Fedora contributor audience, or the
+  speaker does not seem to understand the topic they are proposing.
+
+### Q4: Personal Appeal {#voting-appeal}
+
+- **Give one point (+1)**: You see *positive* value for this session to
+  be at Flock, based on your personal involvement with Fedora.
+
+- **Give no point (+0)**: You see *neutral* value for this session to be
+  at Flock, based on your personal involvement with Fedora.
+
+- **Take one point (-1)**: You see *negative* value for this session to
+  be at Flock, based on your personal involvement with Fedora. = Setting
+  Up Call For Proposals with Pretalx Oluwatosin Olatunji; Justin W.
+  Wheeler :page-aliases: community:flock:cfp-pretalx-setup.adoc
+
+Fedora now uses a new tool called Pretalx to manage Call for Proposals
+(***CFPs***). This user guide will walk you through setting up your CFP
+on Pretalx, making the process smooth and efficient. Whether you are
+organizing a workshop, a talk session, or any other event that requires
+submissions, Pretalx will help create a clear and easy-to-follow CFP.
+
+First-time Fedora CFP organizers are the set of people who require this
+guide. By following this, a newbie should be able to set up a CFP
+successfully without getting confused.
+
+## Create a New Event {#create}
+
+As a Pretalx admin, visit the [Fedora Pretalx
+platform](https://cfp.fedoraproject.org) to log in and create a new
+event. If you are not an admin, contact existing admins to create your
+event.
+
+Click on the Pretalx logo which appears in the top left corner of the
+page. The Pretalx platform already has a past event, hence, a new event
+would have to be created by clicking on the "plus sign icon" to set up
+the appropriate CFP.
+
+## Managing Settings {#settings}
+
+Expand the hamburger menu to view the settings features.
+
+1.  Click **Settings**, then **General** to edit your event information.
+
+    a.  ***Optional***: Add landing page text (the sentence displayed on
+        your form).
+
+2.  Save any changes you have made.
+
+3.  Navigate to **Teams** to invite team members.
+
+4.  Modify other sub-settings within the **Settings** section as needed.
+
+5.  Other sub-settings under the settings feature can be modified as
+    required.
+
+## CFP Set-Up {#config}
+
+### Content {#config-content}
+
+To set up the content for your CFP, navigate to the main CFP feature
+page and click on **Content**.
+
+1.  Input a headline and text under the **text and headline** section.
+
+    a.  This is not compulsory. However, it gives your CFP a complete
+        feel when people see necessary information about your event.
+
+2.  Under the proposal information section, there is a list of required
+    information that can be set to one of the following options:
+
+    a.  Ask and require input
+
+    b.  Ask but do not require input
+
+    c.  Do not ask
+
+3.  These can be selected as needed, and sections not needed can be set
+    to do not ask.
+
+4.  Once they are edited per the needs of the event, click on the save
+    button.
+
+## CFP editor {#editor}
+
+Here, you can add custom help texts to individual fields and headlines
+by clicking on them and editing them to suit the required information
+you need.
+
+### Questions {#editor-questions}
+
+Add new questions for your form by clicking on **Add a new question**.
+
+<figure>
+<img src="pretalx-cfp-editor-add-question.png"
+alt="Screenshot of the CFP editor" />
+<figcaption>Add a new question in Pretalx</figcaption>
+</figure>
+
+- Questions can be tailored to suit the speaker, proposal, or reviewer.
+  These options are seen when the drop-down is clicked on. A user can
+  also select the kind of question to be asked by clicking on the
+  drop-down and choosing the question types. E.g, one-line text,
+  multi-line text, choose one from a list, etc.
+
+- A help text that further explains the question being asked can be
+  filled, to provide more guidance to end users of the form.
+
+- When the question variant is set to **choose one from a list** or
+  **choose multiple from a list**, the answer options can be uploaded
+  below, on the questions page.
+
+<figure>
+<img src="pretalx-cfp-editor-answer-values.png"
+alt="Screenshot of the Pretalx CFP editor interface. Shown are three text boxes" />
+<figcaption>Answer options in the Pretalx CFP editor</figcaption>
+</figure>
+
+:::: tip
+::: title
+:::
+
+All types of questions relating to the proposal or speaker can be set
+under the Questions page, using the right-asking formats.
+::::
+
+### Tracks & Session Types {#editor-types}
+
+These fields are very explanatory. All that is required from a user
+would be to add necessary tracks to your event by clicking on ***new
+track*** or ***new type*** for session types.
+
+## Other notes & suggestions {#notes}
+
+- An admin should run a test session by filling and submitting a sample
+  proposal before sharing the CFP link to participants, to ensure it is
+  properly set up.
+
+- Reviewer settings should also be tested, by ensuring proposals are
+  accurately assigned to a reviewer.
+
+- All proposal and event settings should also be cross-checked to
+  eliminate mistakes.
+
+# 2024 Fedora events {#_2024_fedora_events}
+
+This page captures details about community events that the Fedora
+Project is planning for in 2024.
+
+## Proposed events {#proposed}
+
+The list below represents the final list of events proposed for 2024.
+These events are proposed and not yet final. Check back soon for the
+final, approved list of events.
+
+1.  **February 2024**:
+
+    a.  [FOSDEM 2024]({url-wiki}/FOSDEM_2024) (Brussels, BE)
+        \[[Mindshare
+        #47](https://gitlab.com/fedora/mindshare/home/-/issues/47)\]
+
+    b.  [Fedora Hackfest --- Council]({url-wiki}/Council_Hackfest_2024)
+        (Amsterdam, NL) \[[Council
+        #469](https://pagure.io/Fedora-Council/tickets/issue/469)\]
+
+2.  **March 2024**: [SCaLE 21x]({url-wiki}/SCaLE_21X_Event) (Pasadena,
+    CA US) \[[Mindshare
+    #48](https://gitlab.com/fedora/mindshare/home/-/issues/48)\]
+
+3.  **April 2024**: Linux App Summit 2024 (Monterrey, MX)
+
+4.  **May 2024**: PyCon US 2024 (Pittsburgh, PA US)
+
+5.  **June 2024**:
+
+    a.  Fedora Hackfest --- Fedora Badges (Brno, CZ)
+
+    b.  DevConf CZ (Brno, CZ)
+
+6.  **July 2024**: FOSS Yearly (FOSSY) (Portland, OR US)
+
+7.  **August 2024**: Fedora Flock (Mexico City, MX)
+
+8.  **October 2024**:
+
+    a.  GNOME Asia 2024 (Jaipur, IN)
+
+    b.  All Things Open 2024 (Raleigh, NC US)
+
+## Mindshare planning workshop at Flock 2023 {#mindshare-planning-flock}
+
+The [Fedora Community Architect](council::fca.xml), Justin W. Wheeler,
+[hosted a
+workshop](https://flock2023.sched.com/event/1Or5n/help-fedora-spend-our-2024-budget)
+with Nick Bebout to brainstorm with the community about what events the
+Fedora community should plan for in 2024. The sections below capture
+feedback shared by participants on sticky notes during the workshop.
+These were events or types of events that community members wished to
+see a Fedora presence in 2024.
+
+### Flagship Fedora events {#flagship}
+
+Flagship Fedora events are main events for all Fedora contributors.
+These are typically run at a global scale and represent major
+congregations of people who work in and around the Fedora community.
+
+- Fedora Flock
+
+  - A Flock in LATAM or APAC?
+
+- Fedora Hatch
+
+- Fedora Mentor Summit
+
+- Fedora hackfests: Great way to gather in-person with your team and
+  work on new ideas.
+
+- Fedora Release Parties (virtual)
+
+### Community ecosystem events {#ecosystem}
+
+Community ecosystem events are ones where our upstreams or neighborly
+Linux communities gather. There is a strategic importance for Fedora to
+participate and attend these events, so that Fedora efforts and
+initiatives are represented across the Linux and open source ecosystem.
+
+- GNOME GUADEC
+
+- KDE aKademy
+
+- openSUSE Conference
+
+- Academic conferences (e.g. NeuroFedora)
+
+### Local & regional events & festivals {#local-regional}
+
+These are open source and Linux-focused events and festivals that happen
+on a smaller scale in cities or in a region/state. Typically, Fedora
+does not send representatives or Ambassadors internationally to attend
+these events, but local Fedora community members may participate as
+speakers or organize a booth to talk about Fedora with their local
+communities.
+
+- Local meetups to talk to other groups
+
+- Fedora Women's Day
+
+- Local events
+
+- Community outreach (local)
+
+- Regional Linux festivals
+
+  - LinuxFest Northwest (LFNW), near Seattle, Washington, US
+
+  - Boston LinuxFest
+
+- Support local events (i.e. community and universities)
+
+  - Help with swag and paying for a venue
+
+### European open source events {#europe}
+
+- FOSDEM, in Brussels, BE
+
+  - Fedora booth was great there in 2023
+
+- DevConf CZ, in Brno, CZ
+
+- FOSS Backstage, in Berlin, DE
+
+### LATAM open source events {#latam}
+
+- Launching a new, big event for Fedora contributors in LATAM?
+
+- Fedora University: An old idea about promoting Fedora Linux and the
+  Fedora community to students in local universities.
+
+- Presence at community events in Spanish (LATAM)
+
+- FLISoL
+
+- PyCon LATAM
+
+- PyLATAM
+
+- CCOSS
+
+- Support to cross-border meeting events in LATAM
+
+- Conference Panamá
+
+- Conference LATAM
+
+### North America open source events {#north-america}
+
+- FOSS Yearly (FOSSY), in Portland, Oregon, US
+
+# Best practices for Fedora Ambassadors {#_best_practices_for_fedora_ambassadors}
+
+This page documents best practices and standard operating procedures for
+Fedora Ambassadors on duty at Fedora-supported events. It does not
+prescribe a hard requirement of what to do as an Ambassador, but it
+provides guidelines on how to align in-person interaction with the
+values of the Fedora community.
+
+*Have your own suggestions to these best practices?* *Propose your ideas
+[as a new issue](https://gitlab.com/fedora/commops/home/-/issues) or by
+[opening a Merge
+Request](https://gitlab.com/fedora/commops/home/-/edit/main/docs/modules/events/pages/sop-ambassadors.adoc?ref_type=heads).*
+
+## Know and understand the Four Foundations {#four-foundations}
+
+**TL;DNR**: When in doubt, remember the Four F's. Freedom, Friends,
+Features, First.
+
+The Fedora community is a diverse community of people with a variety of
+backgrounds, nationalities, languages, and views. We share common ground
+but we do not agree on everything as a project all the time. However,
+all our actions as a community should be centered on a set of shared
+values that we agree upon. Fedora has four key values that define who we
+are as a community, and we call those key values the *Four Foundations*.
+
+Ambassadors are real, human faces behind our project. For many people, a
+Fedora Ambassador at an event represents someone who is familiar with
+the project and knows how things work. This means they can share their
+favorite successes of Fedora and/or their biggest challenges or
+frustrations with Fedora. When an Ambassador responds to someone at an
+event, there is not a fixed script. Often in conversation, one has to
+improvise.
+
+When an Ambassador needs to do that real-time improvisation, this is
+when the Four Foundations are a helpful reminder of how to speak rightly
+as a representative of our diverse community. Any response should fit
+within the bounds of our four key values as a community: *Freedom*,
+*Friends*, *Features*, *First.* You can read more about the meaning of
+each Foundation in [Fedora's Mission and
+Foundations](projects::index.xml).
+
+## Etiquette
+
+As representatives of the Fedora community, an Ambassador has important
+responsibility in being that representative. The actions of one
+Ambassador can have a far-reaching effect, for better and for worse.
+These etiquette tips will help you start community interactions off on
+the right footing.
+
+### Know your team. {#etiquette-team}
+
+Spend time to get to know your fellow Fedorans at the event with you.
+Learn about their background and topics of knowledge. This way, if a
+conference-goer asks a question that one Ambassador cannot answer, there
+is always someone else who could help answer a query or solve an issue
+that someone is having. Knowing about what skills and knowledge your
+team is bringing to the table makes you an effective community
+connector.
+
+### Prioritize in-front booth conversations with visitors. {#etiquette-visitors}
+
+When running a booth or stand, make sure that visitors to the booth have
+first priority for conversations. While it is natural to want to catch
+up with fellow Fedora contributors and Ambassadors, a shift at a booth
+is service to our community to interact with the Fedora community.
+Catching up should happen outside of a booth shift or when there is a
+pause in booth traffic. It is important to be respectful of visitors to
+the booth. If a conversation behind the booth is not inclusive of
+unattended booth visitors, put it on pause until after interacting with
+the visitor. = Matrix Event Bot Adrian Edwards (moralcode); Justin W.
+Wheeler (jflory7) :page-aliases: workflows:matrix-event-bot.adoc
+
+Fedora transitioned its virtual events (e.g. Release Parties) to Pretix
+(for ticketing) and Matrix (for communication) in May 2024, starting
+with the Fedora Linux 40 Release Party. The manual process used then was
+to periodically download CSV data from Pretix and sort through it in a
+spreadsheet to determine who had not been invited yet. This happened
+while attendees continued to register leading up to and during the
+event.
+
+To help make this work more efficient for future volunteers, a [Matrix
+bot](https://github.com/fedora-infra/maubot-pretix-invite) was created
+to assist with automating this process. This document aims to serve as a
+high-level overview of how to set up and make use of the bot for event
+organizers.
+
+## Bot Setup and Infrastructure {#bot-setup}
+
+The bot is implemented as a plugin for the popular Matrix bot platform
+[Maubot](https://docs.mau.fi/maubot/index.html), the same system that
+[other fedora Matrix bots](https://github.com/fedora-infra/matrix-bots/)
+are made with. The instructions for setting up the bot are largely the
+same regardless of where it runs and can be found in the
+[README](https://github.com/fedora-infra/maubot-pretix-invite#basic-setup).
+
+Ultimately, the goal is for this bot to be run on Fedora-managed
+infrastructure alongside the existing bots (such as meetbot and zodbot)
+so that the task of bot hosting and setup can be taken off the shoulders
+of event organizers.
+
+If you would like to host an instance of the bot yourself, it is helpful
+to have the following things ready before starting:
+
+- A Matrix account to use for the bot (one can be obtained from the
+  current Fedora Community Architect to avoid using a personal one tied
+  to a FAS login)
+
+- The ability to access Pretix and manage the event that you plan to use
+  the bot with
+
+- (Optionally, for additional automation) a public facing web domain
+  that you can point at the bot
+
+### Running on Communishift {#communishift}
+
+If you are planning to use [Communishift](infra::pages/communishift.xml)
+to host the bot for multiple fedora events, be aware that some
+[additional
+work](https://github.com/fedora-infra/maubot-pretix-invite/milestone/1)
+may still needed to fully support multiple events, as well as GDPR
+considerations.
+
+#### GDPR Considerations {#gdpr}
+
+When hosting on Communishift, you should also be aware of Communishift's
+policy on Personal Information. This section is based on
+[this](https://pagure.io/fedora-infrastructure/issue/11970) communishift
+provisioning ticket.
+
+:::: note
+::: title
+:::
+
+This bot does require processing, and potentially storing, a very
+limited set of personal information. You may have some additional
+responsibilities as the organizer of the event (or operator of the bot)
+in the event that someone chooses to exercise their rights under the
+GDPR.
+::::
+
+**What information does the bot process?** The bot fetches the Pretix
+order identifier and the users Matrix ID from Pretix.
+
+**What information does the bot store?** The bot may store the Pretix
+order identifier in memory or on disk. The bot does not directly store
+the users Matrix ID, however their Matrix ID may still appear in the
+bot's logs (there is an [open
+issue](https://github.com/fedora-infra/maubot-pretix-invite/issues/8) to
+address this)
+
+**Why is this information needed and how is it used?** The Pretix order
+identifer is used for the purposes of allowing the bot to avoid
+repeat-processing of duplicate orders. The user's Matrix ID is used in
+order to invite the user to the Matrix room. [The directions in the
+README](https://github.com/fedora-infra/maubot-pretix-invite?tab=readme-ov-file#setting-up-an-event)
+mention that event organizers should add help text next to the Matrix ID
+prompt to both inform the user that this is how their Matrix ID wil be
+used, and also direct them to enter it in the correct format.
+
+## Bot Usage {#usage}
+
+The bot aims to be as simple as possible for event organizers to use and
+has a few basic commands.
+
+Prior to the event, the bot needs to be given a few pieces of
+information:
+
+1.  What Matrix rooms you want to use for the event
+
+2.  How the bot should connect to Pretix
+
+This information is provided via commands such as `!setroom` and
+`!authorize`. The bot also has a few convenience commands for checking
+the status of various aspects of the bot, as well as a command to
+mass-invite users from Pretix.
+
+For full documentation about the commands available, see the [Usage
+section of the
+README](https://github.com/fedora-infra/maubot-pretix-invite?tab=readme-ov-file#basic-usage-and-commands).
+
+One notable drawback of the bot with regard to commands is that, in
+order to prevent event attendees from messing with the bot, the bot is
+set up to only respond to commands that are given by Matrix accounts
+specifically listed in the bot's configuration. There is an [open
+issue](https://github.com/fedora-infra/maubot-pretix-invite/issues/9) to
+improve this.
+
+# What is Fedocal? {#_what_is_fedocal}
+
+Fedocal is the community calendar used by the Fedora community. It
+houses the various events, meetings, and important dates for the wider
+community.
+
+Fedocal has multiple calendars for different teams and purposes, for
+example:
+
+- Calendar for Fedora Release Updates:
+  <https://calendar.fedoraproject.org/Fedora%20release/>
+
+- CommOps Team Calendar: <https://calendar.fedoraproject.org/commops/>
+
+- Fedora Infra Calendar:
+  <https://calendar.fedoraproject.org/infrastructure/>
+
+To see any calendar in Fedora, visit the Fedocal homepage at:
+<https://calendar.fedoraproject.org/>
+
+## What events should be in Fedocal? {#_what_events_should_be_in_fedocal}
+
+Anything to do with Fedora can be added to Fedocal!
+
+- Ongoing working meetings or workshops
+
+- Events where Fedora has a presence
+
+- Hackathons or get togethers with regional / local teams
+
+Fedocal is for all of the Fedora community and has many differnet
+meetings.
+
+## FOSS / Open Source Events in Fedocal {#_foss_open_source_events_in_fedocal}
+
+We also recommend community members use the Events calendar in Fedocal
+to announce events they're aware of or Fedora communtiy may have a
+presence at. We have a dedicated calendar called **Events** available
+at: <https://calendar.fedoraproject.org/Events/>
+
+Contributing your event to Fedocal helps the community in many ways:
+
+- Visibility: Other Fedora contributors and users can discover local or
+  virtual OSS events in their areas.
+
+- Collaboration: More local face to face with collaborators can help you
+  get new ideas or learn more about Fedora, our upstreams and/or
+  downstream communities.
+
+- Promotion: Fedora Marketing or Community Ops can feature events more
+  easily if they are in Fedocal.
+
+We especially encourage FOSS events that:
+
+- Are **Open Source / Free Software** in nature (easy rule of thumb is
+  if an event aligns with our Four Foundations)
+
+- Involve Fedora community presence (speaking, booth, workshop,
+  participation)
+
+- Are accessible (time zones, language, free or low registration)
+
+If you're organizing, hosting, or simply aware of such events please
+consider adding them to the Events calendar in Fedocal.
+
+## How to Add an Event to Fedocal {#_how_to_add_an_event_to_fedocal}
+
+To add an event:
+
+1.  Access Fedocal at: <https://calendar.fedoraproject.org/>
+
+2.  Log in on the top left hand corner and sign in using your Fedora
+    Account System (FAS) credentials.
+
+3.  Select the calendar
+
+4.  Click the + in the bottom right of the page to Add Event
+
+5.  Fill in the event details:
+
+    - Title of the event
+
+    - Date and time (ensure time zone is correct)
+
+    - Location (if in person) or virtual link (if online)
+
+    - Additional description
+
+    - Optional: reminders, recurring-event settings if applicable
+
+6.  Review the information, then click Add.
+
+7.  After adding, verify your event appears on the calendar.
+
+:::: tip
+::: title
+:::
+
+You can add a group or distribution list to the reminders. Many teams
+copy their FAS group using the pattern `groupname@fedoraproject.org` to
+notify all members.
+::::
+
+## How to Get an iCal Feed {#_how_to_get_an_ical_feed}
+
+If you want to view Fedora events in your own calendar app (such as
+Thunderbird, Google Calendar, etc), you can use the iCal export as a
+subscribed calendar rather than downloading the calendar.
+
+Example Steps in Thunderbird:
+
+1.  Get the iCal URL by replacing your calendar name in this URL String
+    [https://calendar.fedoraproject.org/ical/\<calendar\>/](https://calendar.fedoraproject.org/ical/<calendar>/)
+    Where CommOps calendar would be
+    <https://calendar.fedoraproject.org/ical/commops/>
+
+2.  Follow the directions from Mozilla Thunderbird to enter a Network
+    Calendar with the iCal URL available here:
+    <https://support.mozilla.org/en-US/kb/creating-new-calendars#w_icalendar-ics>
+
+:::: tip
+::: title
+:::
+
+You can get all calendars by subscribing to
+<https://calendar.fedoraproject.org/ical> however be aware this will
+contain a lot of events. \* Community Analytics
+::::
+
+# Data Dictionary for Fedora {#_data_dictionary_for_fedora}
+
+The purpose of this Data Dictionary is to provide a key starting point
+for the definitions of terms, data, and concepts relevant to the Fedora
+Project. It serves as a reference to ensure a common understanding of
+data-related terminology within the community. Please note, this
+dictionary is not a comprehensive glossary, but it aims to cover the
+most essential terms used in the Fedora Project.
+
+## What to Include {#what}
+
+When contributing to this Data Dictionary, please include:
+
+- The term
+
+- A clear and concise definition
+
+- The source of the gold record data
+
+- Any other relevant notes that can help clarify the term
+
+## Data Dictionary {#data}
+
++-----------------+-----------------+-----------------+-----------------+
+| Term            | Definition      | Gold Record     | Other Notes     |
+|                 |                 | Data Source     |                 |
++=================+=================+=================+=================+
+| Package         | A collection of |                 |                 |
+|                 | software that   |                 |                 |
+|                 | can be          |                 |                 |
+|                 | installed and   |                 |                 |
+|                 | managed by a    |                 |                 |
+|                 | package         |                 |                 |
+|                 | manager.        |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| Update          | A newer version |                 |                 |
+|                 | of a software   |                 |                 |
+|                 | package that    |                 |                 |
+|                 | replaces or     |                 |                 |
+|                 | enhances the    |                 |                 |
+|                 | existing one.   |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| Contribution    | Any code,       | Fedora          | Contributions   |
+|                 | documentation,  | Repositories    | are reviewed    |
+|                 | or other work   |                 | and integrated  |
+|                 | submitted by a  |                 | by maintainers. |
+|                 | community       |                 |                 |
+|                 | member to the   |                 |                 |
+|                 | Fedora project. |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| Attribution     | The recognition | Fedora          |                 |
+| (Personal)      | given to an     | Contributor     |                 |
+|                 | individual for  | System          |                 |
+|                 | their           |                 |                 |
+|                 | contributions   |                 |                 |
+|                 | to the Fedora   |                 |                 |
+|                 | project.        |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
+| Attribution     | The recognition | Fedora          |                 |
+| (Organization)  | given to an     | Contributor     |                 |
+|                 | organization    | System          |                 |
+|                 | for its         |                 |                 |
+|                 | contributions   |                 |                 |
+|                 | to the Fedora   |                 |                 |
+|                 | project.        |                 |                 |
++-----------------+-----------------+-----------------+-----------------+
