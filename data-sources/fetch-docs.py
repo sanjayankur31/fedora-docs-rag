@@ -8,13 +8,14 @@ Copyright 2026 Ankur Sinha
 Author: Ankur Sinha <sanjay DOT ankur AT gmail DOT com>
 """
 
-import re
-import subprocess
-import requests
 import json
 import logging
+import re
+import subprocess
 from contextlib import chdir
 from pathlib import Path
+
+import requests
 from yaml import load
 
 try:
@@ -37,6 +38,7 @@ exclude_doc_urls = [
 ]
 repo_config_file = "antora.yml"
 docs_url_base = "https://docs.fedoraproject.org/en-US"
+current_release = "f43"
 
 
 class RepoToSingleAdoc(object):
@@ -114,20 +116,42 @@ class RepoToSingleAdoc(object):
                     repo_name = repo_config["name"]
                     web_url += f"/{repo_name}"
 
-                    repo_branch = repo_config.get("version", "")
-                    if repo_branch != "~" and len(branches) > 1:
-                        web_url += f"/{repo_branch}"
+                    repo_branch = repo_config.get("version", "main")
+                    # TODO: how can it be None here?
+                    if not repo_branch:
+                        repo_branch = "main"
+
+                    self.logger.debug(f"{repo_branch = } ({type(repo_branch)})")
+                    self.logger.debug(f"{branches = }")
+
+                    ignore_branches = ["None", "master", "main"]
+                    if repo_branch not in ignore_branches:
+                        if isinstance(branches, list):
+                            if len(branches) > 1:
+                                if current_release in branches:
+                                    web_url += f"/{current_release}"
+                                else:
+                                    web_url += f"/{branches[0]}"
+                        else:
+                            web_url += f"/{repo_branch}"
 
                     self.logger.debug(f"Repo web url: {web_url}")
                     url_map["DEFAULT"] = web_url
 
                 for nav_file in nav_files:
                     self.logger.debug(f"Processing {nav_file}")
+                    if "ROOT" not in str(nav_file.parent):
+                        module = str(nav_file.parent).split("/")[-1]
+                    else:
+                        module = ""
+                    self.logger.debug(f"{ module = }")
+
                     with chdir(nav_file.parent):
                         pagesdir = Path("./pages")
                         partialsdir = Path("./partials")
                         full_text += self.process_adoc(
                             Path(nav_file.name),
+                            module,
                             pagesdir,
                             partialsdir,
                             variables,
@@ -140,16 +164,17 @@ class RepoToSingleAdoc(object):
                     full_text = full_text.replace("{" + key + "}", value)
 
             self.logger.debug(full_text)
-            with open(f"{self.output_path}/{repo_name}.adoc", "w") as f:
+            with open(f"{self.output_path}/{repo}-{repo_name}.adoc", "w") as f:
                 f.write(full_text)
 
             self.logger.debug(url_map)
-            with open(f"{self.output_path}/{repo_name}.json", "w") as f:
+            with open(f"{self.output_path}/{repo}-{repo_name}.json", "w") as f:
                 json.dump(url_map, f)
 
     def process_adoc(
         self,
         afile: Path,
+        module: str,
         pagesdir: Path,
         partialsdir: Path,
         variables: dict[str, str],
@@ -176,13 +201,18 @@ class RepoToSingleAdoc(object):
 
                 if "xref:" in line and afile.name == "nav.adoc":
                     self.logger.debug(f"Processing xref: {line}")
-                    matchres = re.match(r".*xref:(.+\.adoc)\[.+", line)
+                    matchres = re.match(r".*xref:(.+\.adoc).*\[.+", line)
                     assert matchres and (len(matchres.groups()) > 0)
                     file_ref = matchres.group(1)
                     file_ref_path = pagesdir / Path(file_ref)
                     self.logger.debug(f"Referenced file: {file_ref_path}")
                     text += self.process_adoc(
-                        Path(file_ref_path), pagesdir, partialsdir, variables, url_map
+                        Path(file_ref_path),
+                        module,
+                        pagesdir,
+                        partialsdir,
+                        variables,
+                        url_map,
                     )
                 # includes
                 elif line.startswith("include::"):
@@ -198,6 +228,7 @@ class RepoToSingleAdoc(object):
                         self.logger.debug(f"Included file: {include_file_path}")
                         text += self.process_adoc(
                             Path(include_file_path),
+                            module,
                             pagesdir,
                             partialsdir,
                             variables,
@@ -206,12 +237,22 @@ class RepoToSingleAdoc(object):
                 # a header: update map
                 elif line.startswith("=") and not line.endswith("="):
                     header = line.replace("=", "").strip()
+
+                    for key, value in variables.items():
+                        header = header.replace("{" + key + "}", value)
+
                     url_map[header] = (
-                        url_map["DEFAULT"] + "/" + afile.name.replace(".adoc", "")
+                        url_map["DEFAULT"]
+                        + "/"
+                        + module
+                        + "/"
+                        + afile.name.replace(".adoc", "")
                     )
 
                 else:
                     text += f"{line}\n"
+                    for key, value in variables.items():
+                        text = text.replace("{" + key + "}", value)
 
             return text
 
