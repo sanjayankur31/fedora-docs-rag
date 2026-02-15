@@ -37,13 +37,12 @@ The base images of https://fedoraproject.org[Fedora] and https://www.centos.org/
 == Building bootc Images
 As mentioned above, bootable containers can be built with existing tooling such as https://github.com/containers/common/blob/main/docs/Containerfile.5.md[Containerfiles] and Podman. That means you can use any existing bootc base image and customize it to your needs (e.g., install further packages, copy files from the host, run config scripts, etc.) in a container build as exemplified in the following Containerfile:
 
-[source,subs="attributes"]
 ----
 FROM {container-fedora-full}
-RUN dnf install -y [system agents] [dependencies] && dnf clean all
-COPY [unpackaged application]
-COPY [configuration files]
-RUN [config scripts]
+RUN dnf install -y <system agents> <dependencies> && dnf clean all
+COPY <unpackaged application>
+COPY <configuration files>
+RUN <config scripts>
 ----
 
 In case the bootable container will be run in `podman-bootc`, see the xref:#_podman_bootc[podman-bootc] section for setting up `podman-machine` and building the image.
@@ -485,7 +484,7 @@ an illustrative aspect is that we move content from `/var` into `/usr`.
 It expects an `index.html` colocated with the Containerfile.
 
 .Containerfile
-[source,dockerfile,subs="attributes"]
+
 ----
 FROM {container-fedora-full}
 # The default package drops content in /var/www, and on bootc systems
@@ -1609,7 +1608,7 @@ xref:building-containers.adoc[Building containers].
 
 This uses https://github.com/osbuild/bootc-image-builder[bootc-image-builder]:
 
-[source,subs="attributes"]
+
 ----
 $ podman run --rm -it --privileged -v /var/lib/containers/storage:/var/lib/containers/storage -v .:/output --security-opt label=type:unconfined_t \
 --pull newer {bib-image} --local --rootfs xfs --type vmdk <your container image>
@@ -1619,7 +1618,7 @@ The generated VMDK file will be present in `vmdk/disk.vmdk`.
 
 == Uploading the VMDK
 
-[source]
+
 ----
 govc import.vmdk \
 -dc="${DATACENTER}" \
@@ -1631,7 +1630,7 @@ ${DESTINATION_FOLDER}
 
 == Creating a new virtual machine from the VMDK
 
-[source]
+
 ----
 govc vm.create \
 -dc="${DATACENTER}" \
