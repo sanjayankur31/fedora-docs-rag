@@ -1,7 +1,9 @@
+= Fedora Magazine
 
 
 https://fedoramagazine.org[Fedora Magazine] is a __WordPress-based__ site which delivers all the news of the Fedora Community. (It replaced the older publication, Fedora Weekly News.)
 
+== What does the Magazine publish?
 
 The content of the magazine varies, but mostly includes:
 
@@ -12,6 +14,7 @@ The content of the magazine varies, but mostly includes:
 * DIY hardware projects you can power with Fedora
 * ... And everything else related to Fedora in general!
 
+== Join the Magazine Team
 
 We really need your help on the Magazine. Consider xref:contributing.adoc[writing an article].
 There is also a detailed guide on how to make a post on the magazine.
@@ -34,6 +37,7 @@ All non-article-proposal posts concerning Fedora Magazine should be tagged with 
 ** Click https://discussion.fedoraproject.org/new-topic?category=workflows/magazine[here] to start a new article proposal.
 ** Click https://discussion.fedoraproject.org/new-topic?category=project&tags=magazine-team[here] to start a new conversation about anything else related to Fedora Magazine.
 
+= Fedora Magazine Editorial Workflow
 
 
 image::fedora-magazine-workflow.jpg[,100%,]
@@ -51,6 +55,7 @@ After some clarification, a specific article goes through five states.
 Starting as an __idea__, it progresses to __in progress__, __review__, __to edit__, and finally ending up being __scheduled__.
 Each step in the workflow has its own page in this documentation that provides guidance.
 
+== Tracking
 
 Article proposals in are initiated and discussed under the _Team Workflows_ section
 of the https://discussion.fedoraproject.org/c/workflows/magazine/57[Fedora Magazine Discourse forum].
@@ -62,6 +67,7 @@ Each state has its own column on the board with the appropriate title.
 
 Join our team either as a xref:contributing.adoc[writer] or as an xref:editorial.adoc[editor]
 and help us make wonderful content read by tens of thousands of readers every week!
+= Proposing Articles
 
 
 image::fedora-magazine-workflow-1.jpg[,100%,]
@@ -70,6 +76,7 @@ Anyone is welcome to propose an article!
 
 Proposals can be ideas or specific pitches (an example is below). Proposing an article doesn't automatically mean the same person needs to write it. Having a good set of ideas helps writers to write what they know is relevant for the Magazine.
 
+== Submitting an idea
 
 Join the community on the https://discussion.fedoraproject.org/new-topic?category=workflows/magazine[Fedora Magazine Discourse forum]
 and submit your idea as a new topic.
@@ -80,6 +87,7 @@ our https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban section of
 — Select the __Log In__ button to log in with your Fedora Account.
 That is required before an article can be assigned to you.
 
+== A specific pitch example
 
 __The following article serves as an example outline for proposing a new pitch for the Fedora Magazine.
 This example was used for the https://fedoramagazine.org/never-leave-irc-znc/[Never leave IRC again with ZNC] article.__
@@ -98,7 +106,9 @@ The flow of the article would be as follows:
 * Download, installing, and configuring ZNC on a Fedora machine
 * Configuring IRC client to use your ZNC bouncer
 
+== Workflow
 **Next step:** xref:workflow-clarification.adoc[Clarification]
+= Clarifying Proposals
 
 
 image::fedora-magazine-workflow-2.jpg[,100%,]
@@ -109,6 +119,7 @@ Proposals might be discussed with the person who proposed them, with subject mat
 and anyone who wants (or has the technical ability to) give an input.
 We encourage anyone in the community to provide feedback to the proposals!
 
+== Discussing and approving proposals
 
 Proposals are submitted to the https://discussion.fedoraproject.org/c/workflows/magazine/57[Fedora Magazine Discourse forum]
 as topics, and discussion happens right there.
@@ -128,9 +139,11 @@ This operation is performed by the editor.
 
 This card now represents a specific article and goes through all the other steps of the workflow.
 
+== Workflow
 **Previous step:** xref:workflow-article-proposal.adoc[Article Proposal]
 
 **Next step:** xref:writing-an-article.adoc[Writing]
+= Writing Articles
 
 
 image::fedora-magazine-workflow-3.jpg[,100%,]
@@ -144,7 +157,9 @@ and to our https://fedoramagazine.org/admin[Wordpress instance]
 (where the articles are written).
 Read the xref:getting-access.adoc[Getting Access] page for more information.__
 
+== Writing an article
 
+=== 1. Choose what to write
 
 **Choose** any article you like in the __ideas__ column in the
 https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban board of the Fedora Magazine Pagure].
@@ -159,6 +174,7 @@ If you have been in contact with the editors regarding an article, simply let th
 The editors will assign the article to you and move it to _in-progress_ in the
 https://pagure.io/fedora-magazine-newsroom/boards/articles[Fedora Magazine Kanban board].
 
+=== 2. Write it
 
 **Write** your article https://fedoramagazine.org/admin[in the Magazine Wordpress]
 (create a new article there).
@@ -174,6 +190,7 @@ Don’t skip this step!
 The guidelines tell you how to use markup, write better sentences, and get your article ranked well in search engines.
 Also, if you write a better article, the editors are more likely to publish it sooner.
 
+=== 3. Mark it as done
 
 When you feel you are done writing the article and it is ready for review,
 state that in a comment on your card in Pagure.
@@ -187,27 +204,34 @@ In that case, you'll receive feedback in the card, and it will be moved back to 
 Please make the requested change and let the editors know in the comments.
 They will move it back to _review_.
 
+== Workflow
 **Previous step:** xref:workflow-clarification.adoc[Clarification]
 
 **Next step:** xref:workflow-review.adoc[Review]
+= Reviewing Articles
 
 
 image::fedora-magazine-workflow-4.jpg[,100%,]
 
 The Editorial Board makes a decision whether the article is ready to go.
 
+== Reviewing an article
 
 Articles that are ready for review are in the __review__ column in the https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban board of the Fedora Magazine Pagure].
 
+=== When article is good to go
 
 If the article is good to go, a member of the Editorial Board simply moves it to the __to-edit__ column in the https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban board].
 
+=== When article needs changes
 
 If the article needs changes, a member of the Editorial Board provides feedback in the comments section of the respective card, and moves it back to the __in-progress__ column in the https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban board].
 
+== Workflow
 **Previous step:** xref:writing-an-article.adoc[Writing]
 
 **Next step:** xref:workflow-edit-image.adoc[Edit & Image]
+= Editing and Creating Images
 
 
 image::fedora-magazine-workflow-5.jpg[,100%,]
@@ -216,6 +240,7 @@ Before an article can be published, it needs to be edited, and it needs a cover 
 
 Members of the Editorial Board provide both of those.
 
+== Editing
 
 Articles that require editing are in the __to-edit__ column in the https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban board of the Fedora Magazine Pagure].
 
@@ -226,6 +251,7 @@ When done, they indicate that in the comments.
 
 If the cover image has also been done that will be indicated in the comments as well and the __needs-image__ tag will be removed from the METADATA column.
 
+== Creating a cover image
 
 Articles that require a cover image are in the __to-edit__ column in the https://pagure.io/fedora-magazine-newsroom/boards/articles[Kanban board of the Fedora Magazine Pagure].
 
@@ -237,7 +263,9 @@ they have a specific idea. Please carefully read over xref:creating-an-image.ado
 
 When the image is done this will be indicated in the comments and the __needs-image__ tag will be removed from the METADATA column by an editor.
 
+== Workflow
 **Previous step:** xref:workflow-review.adoc[Review]
+= Proposing Articles for Fedora Magazine
 
 
 Fedora Magazine welcomes anyone to submit ideas for articles.
@@ -247,6 +275,7 @@ Just propose your idea on our https://discussion.fedoraproject.org/new-topic?cat
 See the xref:workflow-article-proposal.adoc[Editorial Workflow - Article Proposal] page for more information.
 
 **Note:** All contributions MUST conform to the https://docs.fedoraproject.org/en-US/council/policy/ai-contribution-policy/[Fedora AI-Assisted Contributions Policy]
+= Contributing as a Fedora Magazine Writer
 
 
 Fedora Magazine welcomes new writers to contribute their skill by writing an article or two... or five! There are several ways you can find something to write about:
@@ -260,6 +289,7 @@ Either way, your writing goes out to tens of thousands of readers that visit Fed
 If this is your first contribution, you will need to xref:getting-access.adoc[get access] first.
 
 **Need help on how to write better? See the xref:writing-an-article.adoc[Editorial Workflow - Writing] page for guidance.**
+= Getting access
 
 
 
@@ -285,10 +315,12 @@ Introduce yourself and tell us that you wish to contribute to the Fedora Magazin
 The Fedora Magazine editors monitor this Discourse forum and will be able to help you and answer any Fedora
 Magazine related questions.
 
+= Tips for article style, grammar, content, and SEO
 
 
 These tips will help your article sail through editing. Be kind to your editor(s), and read this before you start.
 
+== Markup
 
 Primary rule: don’t get too fancy. Legibility is important.
 
@@ -310,6 +342,7 @@ output line 2
 . **Use boldface only for an extremely important phrase or statement.**
 
 
+== Grammar and style tips
 
 . **Use sentence case for the post title and heading titles.** Don’t capitalize words in your article title or any heading, other than proper nouns. This avoids needless arguments about title case, which differs by region.
 ** Incorrect heading: __Use Sentence Case for Post Titles in Fedora Magazine__
@@ -333,6 +366,7 @@ output line 2
 . **Use standard US English for spelling and other international differences.** US English is the lingua franca for the Fedora Project overall.
 . **Have a smooth flow from general information to specific instructions.** If you’re not sure how to structure your article like this, check out our starter template.
 
+== Content tips
 
 These tips are about things to do — and avoid — in what you tell users to do. Remember that thousands of readers trust Fedora Magazine to tell them how to carry out tasks. Be responsible and helpful, advocate best practices, and respect the user’s security and choice.
 
@@ -355,6 +389,7 @@ A non-exhaustive list:
 .. *Red Hat* instead of _Redhat_ or _RedHat_
 .. *ThinkPad* instead of _Thinkpad_
 
+== Image and screenshot tips
 
 . **Use a fresh, standard Fedora Workstation**, not your personal desktop or setup.
 (It's best to make a VM with a fresh Fedora Workstation install, and do the steps there.)
@@ -365,6 +400,7 @@ If you're showing something that *relies* on another desktop, do a fresh install
 . **Upload and use that original media in your article.**
 If the shot is large, like a large browser window, app, or whole screen, choose a medium size thumbnail and let WordPress handle the conversion.
 
+== WordPress tips
 
 . **Use a simple, relevant title.** Preferably this should be a call to action, like __Build a widget using GTK+__, or a list description, like __5 fun games in Fedora__. The title affects search engines, and leads to more hits and higher page ranking. That helps drive traffic to the Magazine.
 . **Provide a featured image.** Look at https://fedoramagazine.org/creating-a-featured-image-for-a-fedora-magazine-article/[the information here] for tips on featured images. You can also feel free to ask the editors to assign this for you. If you make your own image, try to match the style of other images. Use the assets provided https://fedoramagazine.org/creating-a-featured-image-for-a-fedora-magazine-article/[in the featured image guide]. Don’t add your own fonts or deviate from the guide.
@@ -374,9 +410,11 @@ If the shot is large, like a large browser window, app, or whole screen, choose 
 ** Don’t feel like you have to eliminate every warning. A “green” rating overall is the only goal.
 . **Use the Edit as HTML option when pasting into preformatted blocks.** Current versions of WordPress are known to strip leading hash marks (#) and leading whitespace when content is pasted into preformatted blocks. Some non-alphanumeric characters may also get garbled (&, <, >, etc.). Using the __Edit as HTML__ option (listed under the vertical ellipsis) prior to pasting content into the block seems to workaround this problem. Be sure to paste your content between the <pre> tags and do not overwrite them. After pasting your content, switch back to visual mode by using the __Edit visually__ option to see a better representation of what the final result will look like to the reader.
 
+== Other hints
 
 
 Got an idea for better writing? Discuss with the editors in the https://matrix.to/#/#magazine:fedoraproject.org?web-instance%5Belement.io%5D=chat.fedoraproject.org[#magazine:fedoraproject.org] Matrix channel on chat.fedoraproject.org.
+= Creating a featured image for the Fedora Magazine
 
 
 Each article in the Fedora Magazine must have a featured image. The image gives the article added visual appeal. It also appears in links on social media, to attract more viewers.
@@ -385,11 +423,13 @@ These images are created as SVG (scalable vector graphic) images. To work with t
 
 Watch the https://youtu.be/F6Nf1gsR9S4[Creating Featured Images Workshop video] on our YouTube channel for a visual demo of the guidelines and instructions below, plus some additional Inkscape tips.
 
+== Important guidelines
 
 * Only use the Fedora logo occasionally, such as for important announcements, or to indicate a project affinity.
 * Do not use logos from other projects. Most require permission for use, and it is difficult to assign a recipient for permission in a group-owned project like the Magazine.
 * Only use acceptably licensed pictures, photos, or screenshots, or ones that you have made yourself and thus can contribute with such a license. __(More on this below.)__
 
+== Getting the image repository
 
 Open a Terminal. (You’ll type commands into the terminal for some of the following steps.)
 
@@ -400,6 +440,7 @@ $ sudo dnf install git inkscape
 
 Fork the image repository at https://pagure.io/fedoramagazine-images[fedoramagazine-images] .
 
+== Creating a new image using the template
 
 Open Inkscape, and choose File > Open… (or hit Ctrl+O). Navigate to the project folder, then into fedoramagazine-images, then into images. Choose the template.svg file.
 
@@ -407,6 +448,7 @@ Save this as a new file with a different name.
 
 You can use the assets inside this file to start with the right-sized document, with some pre-configured backgrounds. Feel free to look at other SVGs for guidance. If you don’t have experience with these images, try to stick with fonts and motifs that you see in recent banners. But also feel free to experiment! For instance, use photographs (freely licensed, such as CC-BY or CC-BY-SA) with a text overlay for a nice look. https://unsplash.com/[Unsplash.com] has a large library of images in the public domain you can use to get started.
 
+== Reusing an old image
 
 It makes sense to reuse an old image if there is a thematic link from the previous article to the new one. Try to vary something about the image, such as the text. If the background is abstract (not a photo), consider rebalancing the color.
 
@@ -416,14 +458,17 @@ grep font <IMAGE_FILE_NAME> | sed 's/^.*font-family:\([^;]*\).*$/\1/'
 
 You can ignore font names "serif" and "sans-serif." Be sure to install any fonts that you don't have on your system already, so the image is rendered correctly both on your screen and when you build a JPG later.
 
+=== Background images
 
 You can find compatibly licensed images at https://unsplash.com[Unsplash], or you can try other image search engines. Be sure to choose only images with CC0, CC-BY, or CC-BY-SA licenses. (Commercial and derivative uses must be permissible.)
 
+=== Dimensions
 
 Before you import your background to the SVG, scale and trim it using GIMP or another image editor to an 1890x800 size, and a JPG quality of about 75-80%. This keeps the SVG from being too large -- it will reduce the size from many MB to just a few hundred KB.
 
 The SVG template contains guidelines to indicate what portion of the cover image's edge might get clipped when the article is shared on various social media sites. The portion that might get clipped is about 10% of the left and right sides of the image and about 13% of the top and bottom. In the SVG template, the guidelines provide margins of exactly 183 pixels on the left and right and 107 pixels on the top and bottom for an image that is sized to 1890x800 pixels. This leaves an interior region of 1524x586 pixels within which it is safe to place text without concern that it will get clipped when the article is shared out to other social media sites.
 
+=== Fonts
 
 There are a few fonts that are commonly used in featured images. You are encouraged to use these fonts in your images to help featured images fit into the general “theme” that other images follow. They are all freely available at the links provided. The fonts we commonly use on the Fedora Magazine are listed below.
 
@@ -447,6 +492,7 @@ $ dnf install open-sans-fonts vernnobile-oswald-fonts mozilla-zilla-slab-fonts a
 
 You will need to close and reopen Inkscape, GIMP, or other applications to take advantage of the new fonts.
 
+== Getting your work reviewed
 
 If you’d like to post your work somewhere, convert it to a JPG first. This will typically be a smaller file. Make sure your SVG file is saved in the fedoramagazine-images/images/ folder as above. Typically these should be named after the article in some way to make it easier to find images later. For this example, let’s assume your SVG file is named using-inkscape.svg.
 
@@ -461,6 +507,7 @@ $ make using-inkscape.jpg
 Now you can post this file, using-inkscape.jpg, online, and then provide that URL in the comments section of your article's Pagure card for review.
 
 If the image is approved, and if it might be reused for later articles, then consider creating a pull request against the upstream repository to have your work archived for reuse.
+= Contributing as a Fedora Magazine Editor
 
 
 The duties of an editor are much like any blog owner. Occasionally editors also xref:contributing.adoc[contribute content] when the queue or backlog of content is running a little low.
@@ -473,10 +520,12 @@ Editors hold a xref:editorial-meetings.adoc[weekly editorial meeting] to discuss
 Editors also xref:editorial-add-contributors.adoc[extend access to new contributors] so they can help with writing, art, and sometimes even editing itself.
 
 Like most blogs and news sites, the Magazine receives feedback and comments from the public. Editors xref:approving-comments.adoc[moderate comments based on common guidelines]. They ensure that discussions stay constructive and discourage trolls and other bad actors.
+= Fedora Magazine Editor of the Week
 
 
 In order to promote accountability and spread the workload, we have the Editor of the Week role for Fedora Magazine.
 
+== Selection
 
 The Editor of the Week will be selected by volunteer basis at each week's Magazine Editorial Board meeting.
 Editors who cannot attend the meeting can volunteer by contacting the current Editor of the Week prior to the start of the meeting.
@@ -487,9 +536,11 @@ However, in general we should prefer the volunteer who has least recently served
 
 If no one volunteers, then the current Editor of the Week should request volunteers via the asynchronous communication channel.
 
+== Term
 
 The term of the Editor of the Week is one calendar week (beginning the Sunday following the meeting where the Editor of the Week was selected and ending on Saturday).
 
+== Responsibilities
 
 The Editor of the Week is expected to:
 
@@ -500,9 +551,11 @@ The Editor of the Week is expected to:
 * Chair the weekly xref:editorial-meetings.adoc[Magazine Editorial Board meeting]
 
 Note that Editors who are not the Editor of the Week may still perform the tasks above.
+= Checklist for editors
 
 Editors should follow this checklist to help articles meet standards before being published.
 
+== Special notes for release announcements
 
 * [ ] Set the article slug to match the pattern `announcing-fedora-<N>` for final releases and `announcing-fedora-<N>-beta` for beta releases.
 This pattern is expected for things like the CommonBugs templates in the wiki.
@@ -513,18 +566,22 @@ In addition to the release announcement, each new release is accompanied by arti
 
 \https://fedorapeople.org/groups/schedule/f-XX/f-XX-magazine-tasks.html
 
+== Formatting
 
 * [ ] Ensure the author's first and last name appears in the preview. If not, follow the instructions xref:technical-wordpress.adoc[here].
 * [ ] After the introductory paragraph, include the __--- Read More ---__ element. This causes RSS readers to visit the site to view the article.
 * [ ] Remove any monospace text mixed into paragraphs, such as <tt> elements. Either convert these to italics, or move them into Preformatted blocks in WordPress, fixing surrounding text as necessary.
 
+== Style
 
 * [ ] Check the article for adherence to the xref:writing-guidelines.adoc[guidelines for writers]. **This may take a while, so leave yourself sufficient time for this step.**
 * [ ] Set all article and section titles to sentence case.
 
+== Usage
 
 * [ ] Eliminate use of __I, we, us,__ and __our__ in the article, rewriting where necessary. Articles should not refer to the author if avoidable.
 
+== SEO and metadata
 
 * [ ] Set an appropriate https://yoast.com/focus-keyword/[focus keyword].
 * [ ] Address any article shortcomings that affect readability. (It may not be possible to turn the readability score to "green" in all cases.)
@@ -536,16 +593,19 @@ This should exclude common short words like "of", "and", and "the".
 The slug should give a sense of what the article is about but be succicnt.
 Putting the focus keyword at the beginning of the slug will make the SEO plugin happy.
 
+== Featured images
 
 * [ ] Make sure the article has an appropriate xref:creating-an-image.adoc[featured image].  This is **not** the same as an image in the article text itself, and should not appear there. Use the Featured Image box in the document details in WordPress.
 * [ ] Featured images should be captioned with an appropriate attribution if they are not original or make use of third party components.
 * [ ] Featured images **submitted by the author** should  be captioned using **Contributed by:** and indicate the author's name.
 * [ ] Featured images should be included or submitted to the https://pagure.io/fedoramagazine-images[featured images repo on Pagure]. Refer to the xref:creating-an-image.adoc[documentation on featured images] for more information.
 
+== Publishing
 
 * [ ] Schedule the article to publish at 08:00 UTC (the Magazine default timezone) on the selected day, unless decided otherwise.
 * [ ] Schedule for **Beta** and **General Availability** releases is approximately 14:00 UTC so the article for those should be published at 14:00 UTC or a short time after that on the selected day, unless decided otherwise. Ref. https://docs.fedoraproject.org/en-US/releases/lifecycle/#_development_schedule[Fedora Linux Releases Life Cycle].
 * [ ] For articles that are part of a series, it is necessary to visit the post in WordPress AFTER it has been published and add the series indicator. Refer to the section *Adding an article to a series* in the xref:technical-wordpress.adoc[WordPress Operations] page for instructions.
+= Fedora Magazine editorial meetings
 
 
 The goal of this meeting is to set and execute a publishing schedule of appropriate material for the Fedora Magazine.
@@ -556,10 +616,12 @@ See the https://calendar.fedoraproject.org/meeting/10800/[Fedora Magazine Editor
 Meetings are chaired by that week's xref:editor-of-the-week.adoc[Editor of the Week].
 If the meeting time changes, be sure to update the link in this paragraph.
 
+== Chairing the meeting
 
 The meeting is powered by https://fedoraproject.org/wiki/Zodbot[zodbot]. You can use the following commands the start the meeting, to set topics, record important information and decisions, etc.
 
 
+=== Roll call
 
 To start the meeting, run the following set of commands.
 
@@ -570,6 +632,7 @@ To start the meeting, run the following set of commands.
 
 People will then join using a `.hello2` or a `.hello NICK` command.
 
+=== Agenda
 
 This is the standard agenda. Announcing it in advance helps newcomers understand the structure of the meeting.
 
@@ -584,6 +647,7 @@ This is the standard agenda. Announcing it in advance helps newcomers understand
 #info -- 7/ open floor --
 
 
+=== 1/ Last week's stats
 
 #topic 1/ last week's stats
 
@@ -592,6 +656,7 @@ First, let's look back at the previous week in terms of pageviews. This data can
 #info Week of <MONTH DD>: <NN.N>K pageviews -- <COMMENT>
 
 
+=== 2/ In progress followup
 
 #topic 2/ in progress followup
 #info Looking at the 'in progress' column, is there something that's been finished? Anything to follow up on with its author?
@@ -615,6 +680,7 @@ This is generally only important a few weeks before the Beta and Final releases,
 
 (where <N> is the release being developed)
 
+=== 3/ Finished articles to review
 
 #topic 3/ articles to review
 #info Looking at the 'review' column, let's decide which articles are good to go. Move each either to the 'to-edit' (finished) column or to the 'in-progress' (needs more work) column and provide feedback.
@@ -625,6 +691,7 @@ and ether move them to the _to-edit_ column, or in case they need some additiona
 author in the card about it and move it back to _in-progress_.
 
 
+=== 4/ Articles to edit
 
 #topic 4/ articles to edit
 #info Looking at the 'to-edit' column, assign an editor and a cover image creator.
@@ -633,6 +700,7 @@ author in the card about it and move it back to _in-progress_.
 Assign an editor and a cover image designer to each article so it can be moved forward.
 
 
+=== 5/ Publishing schedule
 
 #topic 5/ Publishing schedule
 #info Looking at the 'to-edit' column, decide the publishing schedule for the upcoming week.
@@ -666,6 +734,7 @@ DAY DATE, NAME (NICK:edit/NICK:image) --
 DAY DATE, NAME (NICK:edit/NICK:image) --
 
 
+=== 6/ Editor of the Week
 
 Before the end of the meeting, we need to select next week's xref:editor-of-the-week.adoc[Editor of the Week].
 
@@ -675,24 +744,29 @@ Announce the volunteer using:
 
 #info XXXX will be Editor of the Week next week
 
+=== 7/ Open floor
 
 #topic 7/ open floor
 
 
+=== Meeting ends
 
 #endmeeting
 
 
+=== After the meeting
 
 Send the minutes to the forum. That includes the three links zodbot prints out after the meeting is ended.
 
 Subject: Editorial board meeting recap YYYY-Mmm-DD
 
 
+== Exceptions
 
 The following types of articles generally can route around the weekly meetings. This helps us get critical information out to the audience without waiting for the next board meeting.
 
 * **Security updates:** Critical security updates that affect a broad user audience are pre-authorized. Generally an editor will write the update article. If possible, one other editor does a quick spot check. If that would affect the timing, however, the posting editor simply publishes the article and notifies the magazine list. An example is a Firefox security issue.
+= Approving comments
 
 
 We moderate comments on the Fedora Magazine to make sure discussions stay constructive and useful. Some sites do not moderate comments, which usually results in spammers, trolls, or other bad actors creating a less appealing environment. Fedora Magazine editors agree that:
@@ -710,6 +784,7 @@ Therefore, Magazine editors follow a common set of guidelines to approve comment
 * Comments that point to technologies Fedora doesn't ship are OK to approve; the site has a legal disclaimer that says content expresses the views of individual authors only.
 * Comments that are indirect spam should be discarded. You can usually recognize these comments because they are very general, do not include any context from the article, and include a product or other suspect URL as an author name and/or site.
 * Duplicate comments should be discarded. (Sometimes comment authors don't read the text that tells them their comment will be held and moderated.)
+= Adding a Writer
 
 
 When a new writer joins the Magazine, they usually want to track their work in our kanban.
@@ -718,12 +793,14 @@ When a new writer joins the Magazine, they usually want to track their work in o
 . Have the writer set up a Fedora Account, if they don’t already have one. They can link:https://accounts.fedoraproject.org/#register[sign up here]. Remind them that contributors are required to sign the Fedora Project Contributor Agreement (FPCA).
 . Find out the writer's Fedora Account System information. For instance, using link:https://fedoraproject.org/wiki/Zodbot[Zodbot] you can use the command `fasinfo <fas-username>`.
 . Follow these instructions to xref:technical-wordpress.adoc#_changing_a_users_role[promote the account] to the Author role in WordPress.
+= Technical Notes and Processes
 
 The Magazine site itself is simply a https://wordpress.org[WordPress site]. Like any website, it may require maintenance from time to time.
 
 Pagure is the system used to track the status of cards ("Issues") for the articles.
 
 One system that sometimes requires changes or fixes is the https://pagure.io/fedoramagazine-theme[Magazine theme]. There is a process to xref:technical-theme.adoc[modify, test, and deploy theme changes].
+= Maintaining the Magazine Theme
 
 The Magazine theme is maintained in
 https://pagure.io/fedoramagazine-theme[a Pagure repository].
@@ -732,6 +809,7 @@ This page does not cover git workflow;
 consult https://git-scm.com/doc[git documentation] for more information,
 or ask the Magazine staff for help.
 
+== Testing your changes
 
 The `build.sh` and `preview.sh` scripts let you deploy WordPress in a local container
 to test your work before you push your changes to the live site.
@@ -756,6 +834,7 @@ If you remove all the artifacts (WordPress plugins, databases, etc.)
 it will take longer to run the `build.sh` and `preview.sh` commands the
 next time because everything will need to be re-downloaded and re-installed.
 
+== Tagging the theme
 
 Once the theme modifications are complete, you should make a release. This means that anyone can return to this iteration of the theme in case of a problem with a future version.
 
@@ -771,6 +850,7 @@ Description: The theme for the Fedora Magazine. This iteration first rolled out 
 
 _(For theme committers:)_ Apply a tag to this commit to mark it for release, such as `v1.03`, and push the tag to the repo using `git push --tags`.
 
+== Releasing the theme
 
 While in the repo, run these commands to make a zip file in which to deliver the theme. **Remember to use the correct, new version number in place of 1.03 below.**
 
@@ -782,13 +862,16 @@ $ rm -f fedoramagazine-1.03
 
 The resulting `fedoramagazine-theme-1.03.zip` is a release of the theme.
 
+== Installing the updated theme
 
 This step must be done by someone with "administrator" rights in the Fedora Magazine WordPress site.
 
 Use the built-in functions to add a new theme. Upload the resulting `fedoramagazine-theme-1.03.zip` file and activate it.
 
 If you need to switch themes and get confused about which theme is correct, the theme details will show you the version number.
+= Pagure Operations
 
+== Adding a new user
 
 If an author has not accessed Pagure before, they must login
 with their https://accounts.fedoraproject.org/#register[FAS account].
@@ -798,6 +881,7 @@ This will allow the editors to assign cards to them.
 
 There is nothing more to do administratively.
 
+== Creating a new card (user story)
 
 When a proposal is approved, follow these steps.
 
@@ -823,6 +907,7 @@ new Issue number.
 If you do not know the Issue number, select _Issues_ at the top of the Kanban
 page and locate it in the list of issues.
 
+== Changing the state of the cards
 
 Authors must indicate, in the comments of each card, when they feel the state needs
 to change from _ideas_ to _in-progress_ to _review_.
@@ -832,6 +917,7 @@ The editors will change the state by "dragging" the cards on the Kanban page as 
 The editors will determine when the articles are ready to move to _to-edit_, drag
 the cards on the Kanban board, and add a comment to that effect to inform the author.
 
+== Adding editors
 
 Editors should be admins on the board. You must be an Administrator to add an editor.
 
@@ -845,6 +931,7 @@ have logged into Pagure prior to this operation for the name to be available.
 . Set the next field (a selection field) to _Admin_.
 . Select _Add_.
 
+== Removing editors
 
 You must be an Administrator to remove an editor.
 
@@ -858,11 +945,14 @@ of the name.
 
 NOTE: Update the https://pagure.io/group/fedora-magazine[Pagure group] membership as well
 so that the docs and images repos have the correct permissions.
+= WordPress Operations
 
+== Adding a new user
 
 Do *not* add new users manually.
 User accounts are created on login with Fedora Account System credentials.
 
+== User details
 
 We use real names on the Magazine for authors.
 This reflects accountability for posts on a more official Fedora outlet.
@@ -870,6 +960,7 @@ This reflects accountability for posts on a more official Fedora outlet.
 Locate the user in the _Users_ control panel, and select _Edit_.
 Switch the default display of the user name to first and last name.
 
+== User permissions
 
 We use the _User Role Editor_ plugin to manage user permissions at a fine-grained level.
 There are five roles in our WordPress instance:
@@ -889,6 +980,7 @@ Magazine editors should have this role.
 This role only allows for reading posts.
 We probably don't need to add anyone to this role in general.
 
+=== Changing a user's role
 
 In the https://fedoramagazine.org/wp-admin/[WordPress dashboard]:
 
@@ -898,6 +990,7 @@ In the https://fedoramagazine.org/wp-admin/[WordPress dashboard]:
 . Change the *Role* dropdown to the desired role
 . Click the *Update User* button
 
+== Adding an article to a series
 
 Fedora Magazine uses "series" in WordPress to display related articles in a sidebar.
 This is often used for Copr articles.
@@ -913,6 +1006,7 @@ In the https://fedoramagazine.org/wp-admin/[WordPress dashboard]:
 If you do not know what the name of the series is, you can look in the https://fedoramagazine.org/wp-admin/edit-tags.php?taxonomy=post_series[Post Series] screen.
 This is located under the *Posts* section of the left-hand menu.
 
+== Update the current release image/text/link in the Fedora Magazine sidebar
 
 The Fedora Magazine WordPress site contains a column on the right side of the page
 that includes several "Widgets". One of these contains the default image (often
@@ -923,6 +1017,7 @@ The information in this widget must be changed when a new release occurs. This
 section describes the process for making the necessary changes.
 
 
+=== Navigate to the Sidebar Widget
 
 In the https://fedoramagazine.org/[Fedora Magazine Page] select:
 
@@ -944,6 +1039,7 @@ the right hand sidebar menu on the Fedora magazine page. This starts with
 the "Search Fedora Magazine (magnifying glass)" followed by the
 currently available Fedora Linux version, subscription option, and so on.
 
+=== Add the feature image for the new Fedora Linux version
 
 Select the currently available image and then select "Add media". The items
 in the Media library will be shown. Select the feature image for the
@@ -951,6 +1047,7 @@ new Fedora linux version announcement from the media library.
 
 There will now be two images appearing.
 
+=== Edit the HTML text
 
 Select the "Text" tab and edit the html that now appears as follows:
 
@@ -960,6 +1057,7 @@ Select the "Text" tab and edit the html that now appears as follows:
 
 . Change the "release announcement" link to point to the new release announcement.
 
+==== Text editing example
 
 In this example the changes reflect moving from Fedora 35 to 36.
 
@@ -1000,9 +1098,11 @@ Read the <a href="https://fedoramagazine.org/announcing-fedora-36/">
 release announcement</a> for all the details.
 ....
 
+=== Commit your changes
 
 When done go to the top of the "Customizing > Widget" window and select the
 "Publish" button.
+= Zinebot Operations
 
 Zinebot is a chatbot designed to help the xref:editor-of-the-week.adoc[editor of the week] run the xref:editorial-meetings.adoc[weekly meetings].
 Importantly, Zinebot is just an aid.
@@ -1012,6 +1112,7 @@ to save the meeting chair from having to jump between several browser tabs or ap
 and copy-paste information to or from the meeting chatroom.
 The meetings can still be run in the traditional way if Zinebot crashes or otherwise fails to function.
 
+== Installation
 
 See https://pagure.io/fedora-magazine-chatbot[the Fedora Magazine chatbot repo] for installation instructions.
 A good way to test Zinebot outside of meeting times
@@ -1020,6 +1121,7 @@ and invite the _zinebot_ user to the room.
 You will need to assign the room a https://github.com/vector-im/element-web/issues/13077[local address].
 You can then configure Zinebot to join that room.
 
+== Commands
 
 
 Most of the Zinebot commands operate against https://pagure.io/fedora-magazine-newsroom/boards/articles[the Fedora Magazine kanban board].
@@ -1049,6 +1151,7 @@ TIP: The full list of predefined compose keys can be found in the
 TIP: You can customize the single character codes that Zinebot will respond to
 by editing the ~/.local/opt/zinebot/commands/hotkeys.pm file.
 
+=== 🔹 next topic
 
 Included with Zinebot is a `topics.txt` file containing a copy of xref:editorial-meetings.adoc[the meeting script].
 The `next topic` command will iteratively read the blocks of text listed in the `topics.txt` file and write them out in the chatroom.
@@ -1062,11 +1165,13 @@ an indication of whether or not the author has signed the Fedora Project Contrib
 The status of the author's FPCA signature is retrieved directly
 from the Fedora Account System each time a card is retrieved from the kanban board.
 
+=== 🔹 next col[umn]
 
 Internally, Zinebot keeps track of which kanban column is currently being viewed.
 This command advances to the next column on the kanban board and lists its cards.
 Normally, this command should not be needed since the `next topic` command will take care of advancing to the appropriate column.
 
+=== 🔹 next card
 
 Internally, Zinebot keeps track of which card on the current kanban column is being viewed.
 This command advances to the next card in the column and displays its summary.
@@ -1076,12 +1181,14 @@ see the `view` command below.
 As a shorthand for this command, Zinebot will accept a lone unicode _right-pointing arrow_ (→).
 The call sign should be omitted when using the shorthand.
 
+=== 🔹 skip topic <number|text>
 
 This command allows you to skip to a specific topic.
 For example, `skip topic agenda` or `skip topic 7`.
 This command will reset the internal topic counter such that the result of a subsequent `next topic` command will be changed.
 Otherwise, this command behaves exactly like the `next topic` command.
 
+=== 🔹 show proposed
 
 When the _to-edit_ column is loaded in the current internal card deck,
 this command will read the scheduled publication dates from all the cards in the deck and list them out
@@ -1092,6 +1199,7 @@ The call sign should be omitted when using the shorthand.
 
 NOTE: The default compose key sequence for the _because_ symbol is **<compose-key>**, **.**, **:**.
 
+=== 🔹 show agreed
 
 This command generates the same output as the `proposed` command described above.
 However, instead of starting with _#proposed_, the output will begin with _#agreed_.
@@ -1108,17 +1216,20 @@ The call sign should be omitted when using the shorthand.
 
 NOTE: The default compose key sequence for the _therefore_ symbol is **<compose-key>**, **:**, **.**.
 
+=== 🔹 show testdays
 
 This command scans https://calendar.fedoraproject.org/QA[the Fedora Project QA calendar] for test day events
 and displays them in the chatroom.
 The scan is limited to a three-week period that begins on Sunday of the current week.
 Test day events are identified as those whose _meeting location_ is set to _fedora-test-day*_.
 
+=== 🔹 show schedule
 
 This command scans https://fedorapeople.org/groups/schedule[the Fedora Project schedule] for scheduled Fedora Magazine publications
 such as beta and final release announcements.
 The results are then listed in the chatroom.
 
+=== 🔹 list [column]
 
 This command generates a summarized list of kanban cards from either
 the current kanban column or, if specified, the requested kanban column.
@@ -1131,12 +1242,14 @@ This command repopulates the internal cache whenever it is called.
 The current card is also reset to the first card in the list.
 If you modify any of the cards that are cached, you may need to rerun this command to update the internal cache.
 
+=== 🔹 view [number]
 
 This command does exactly the same thing as the `next card` command.
 However, unlike the latter, it allows you to specify a specific card number to display.
 The requested card must be loaded in the current card cache from a prior run of the `list` command.
 When a specific card is requested, the current card index for the next run of the `next card` command is not advanced.
 
+=== 🔹 card <number> <property> [<property> ...]
 
 This is a low-level command that allows you to access individual card properties.
 When provided a card number, this command operates directly against Pagure.
@@ -1155,6 +1268,7 @@ By default, the last three comments are retrieved from the card when the `commen
 The number of comments to retrieve can be specified by appending **:N** to the property name where **N** is a positive integer.
 All card comments can be requested by appending **:0** to the property name.
 
+=== 🔹 move <number> <column> [row]
 
 This command moves the specified card to the specified kanban column.
 Optionally, the row offset at which the card should be placed in the target column can be specified.
@@ -1167,12 +1281,14 @@ NOTE: The default compose key sequence for the _leftwards arrow_ symbol is **<co
 
 NOTE: The default compose key sequence for the _rightwards arrow_ symbol is **<compose-key>**, **-**, **>**.
 
+=== 🔹 ping <number> <comment>
 
 This command adds a one-line comment to the specified card.
 Pagure should send an email notification to the card's assignee containing the comment.
 The comment does not need to be quoted.
 Everything after the card number is considered part of the comment.
 
+=== 🔹 post <title> [date [time]]
 
 This command posts an event to the Fedora Magazine calendar on Fedora's Discourse forum.
 If the date is not specified, it defaults to one week from the current day.
@@ -1186,6 +1302,7 @@ Anything that does not match a date or time pattern is considered part of the ev
 This command is called automatically by the `show agreed` command
 to add the agreed-upon articles to the publication calendar.
 
+=== 🔹 eotw <username>
 
 This command posts the editor of the week line.
 Just for fun, `king` and `queen` are aliases for this command. They may be easier to remember.

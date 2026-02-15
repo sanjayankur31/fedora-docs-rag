@@ -1,5 +1,7 @@
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -18,6 +20,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -37,6 +40,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -66,6 +70,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -75,6 +80,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -90,6 +96,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -114,6 +121,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -125,6 +133,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -135,6 +144,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -148,6 +158,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -156,6 +167,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -163,6 +175,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -176,6 +189,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -184,6 +198,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -192,8 +207,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -212,6 +229,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -231,6 +249,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -260,6 +279,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -269,6 +289,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -284,6 +305,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -308,6 +330,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -319,6 +342,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -329,6 +353,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -342,6 +367,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -350,6 +376,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -357,6 +384,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -370,6 +398,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -378,6 +407,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -386,8 +416,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -406,6 +438,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -425,6 +458,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -454,6 +488,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -463,6 +498,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -478,6 +514,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -502,6 +539,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -513,6 +551,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -523,6 +562,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -536,6 +576,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -544,6 +585,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -551,6 +593,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -564,6 +607,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -572,6 +616,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -580,8 +625,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -600,6 +647,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -619,6 +667,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -648,6 +697,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -657,6 +707,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -672,6 +723,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -696,6 +748,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -707,6 +760,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -717,6 +771,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -730,6 +785,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -738,6 +794,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -745,6 +802,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -758,6 +816,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -766,6 +825,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -774,8 +834,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -794,6 +856,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -813,6 +876,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -842,6 +906,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -851,6 +916,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -866,6 +932,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -890,6 +957,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -901,6 +969,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -911,6 +980,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -924,6 +994,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -932,6 +1003,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -939,6 +1011,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -952,6 +1025,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -960,6 +1034,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -968,8 +1043,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -988,6 +1065,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -1007,6 +1085,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -1036,6 +1115,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -1045,6 +1125,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -1060,6 +1141,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -1084,6 +1166,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -1095,6 +1178,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -1105,6 +1189,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -1118,6 +1203,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -1126,6 +1212,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -1133,6 +1220,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -1146,6 +1234,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -1154,6 +1243,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -1162,8 +1252,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -1182,6 +1274,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -1201,6 +1294,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -1230,6 +1324,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -1239,6 +1334,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -1254,6 +1350,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -1278,6 +1375,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -1289,6 +1387,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -1299,6 +1398,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -1312,6 +1412,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -1320,6 +1421,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -1327,6 +1429,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -1340,6 +1443,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -1348,6 +1452,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -1356,8 +1461,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -1376,6 +1483,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -1395,6 +1503,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -1424,6 +1533,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -1433,6 +1543,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -1448,6 +1559,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -1472,6 +1584,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -1483,6 +1596,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -1493,6 +1607,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -1506,6 +1621,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -1514,6 +1630,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -1521,6 +1638,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -1534,6 +1652,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -1542,6 +1661,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -1550,8 +1670,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -1570,6 +1692,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -1589,6 +1712,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -1618,6 +1742,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -1627,6 +1752,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -1642,6 +1768,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -1666,6 +1793,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -1677,6 +1805,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -1687,6 +1816,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -1700,6 +1830,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -1708,6 +1839,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -1715,6 +1847,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -1728,6 +1861,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -1736,6 +1870,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -1744,8 +1879,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -1764,6 +1901,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -1783,6 +1921,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -1812,6 +1951,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -1821,6 +1961,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -1836,6 +1977,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -1860,6 +2002,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -1871,6 +2014,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -1881,6 +2025,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -1894,6 +2039,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -1902,6 +2048,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -1909,6 +2056,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -1922,6 +2070,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -1930,6 +2079,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -1938,8 +2088,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -1958,6 +2110,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -1977,6 +2130,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -2006,6 +2160,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -2015,6 +2170,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -2030,6 +2186,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -2054,6 +2211,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -2065,6 +2223,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -2075,6 +2234,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -2088,6 +2248,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -2096,6 +2257,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -2103,6 +2265,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -2116,6 +2279,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -2124,6 +2288,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -2132,8 +2297,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -2152,6 +2319,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -2171,6 +2339,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -2200,6 +2369,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -2209,6 +2379,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -2224,6 +2395,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -2248,6 +2420,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -2259,6 +2432,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -2269,6 +2443,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -2282,6 +2457,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -2290,6 +2466,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -2297,6 +2474,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -2310,6 +2488,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -2318,6 +2497,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -2326,8 +2506,10 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+= Using Fedora Accounts
 
 [#newaccounts]
+== How do I create a new account?
 
 To create a new account, go to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 choose the register tab, and fill out your basic details:
@@ -2346,6 +2528,7 @@ automatically:
 image:screenshots/newaccount3.png[image]
 
 [#resetpassword]
+== How do I reset my password?
 
 To reset your password, navigate to the home page (either for https://accounts.fedoraproject.org/[Fedora Accounts] or https://accounts.centos.org/[CentOS accounts])
 and click on the "Forgot Password or OTP" link:
@@ -2365,6 +2548,7 @@ If successful, you should see the following message:
 image:screenshots/reset_password4.png[image]
 
 [#twofactor]
+== How do I add and use two-factor authentication?
 
 Fedora Accounts / CentOS Accounts features the ability to configure and user two-factor
 authentication through the user of OTP tokens. by default, the system
@@ -2394,6 +2578,7 @@ app.
 
 
 [#pkinit]
+== How do I get a kerberos ticket if I have two-factor authentication enabled?
 When two-factor authentication is enabled on an account (i.e. at least one OTP token
 is defined in your account), additional configuration is required to get a kerberos ticket
 with kinit. Running kinit without this configuration will result in the following error:
@@ -2403,6 +2588,7 @@ kinit: Pre-authentication failed: Invalid argument while getting initial credent
 To configure your system to get a kerberos ticket for an account with two-factor
 authentication enabled:
 
+=== 1. Install / Update `fedora-packager`
 
 Install / Update the `fedora-packager` package from the Fedora repositories:
 
@@ -2418,6 +2604,7 @@ The newest version contains updates to ensure this procedure works with Fedora A
 `fedora-packager` provides a range of tools for fedora packagers and contributors. It also provides
 krb5 configurations (in `/etc/krb5.conf.d/`) for connecting to the FEDORAPROJECT.ORG realm.
 
+=== 2. Request the kerberos ticket
 
 [NOTE]
 ====
@@ -2442,6 +2629,7 @@ unless you enter your password, followed by the OTP token value
 
 
 [#join-group]
+== How do I become a member of a group?
 
 Group Sponsors have the ability to add new members to the group. A group
 should provide the information required to request access to the group,
@@ -2453,6 +2641,7 @@ simply added to the group by a sponsor after requesting access
 through other channels for that group, such as email or IRC.
 
 [#leave-group]
+== How do I stop being a member of a group?
 
 As a group member, you can choose to leave a group at anytime. Press the
 leave group button on the group detail page:
@@ -2463,6 +2652,7 @@ If you are the sponsor of a group, you can simply remove yourself from
 the group, as you would remove any other user.
 
 [#sponsorwhat]
+== What is a group sponsor?
 
 Groups have users with a special _sponsor_ privilege. If a
 user is a sponsor of a group, they are able to add and remove group
@@ -2476,6 +2666,7 @@ Now, groups have _Sponsors_ which have the ability to add new
 members to a group.
 
 [#becomingasponsor]
+== How do I become a sponsor of a group?
 
 Becoming a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To apply for sponsor status of a group, file a ticket in
@@ -2484,6 +2675,7 @@ https://pagure.io/fedora-infrastructure/new_issue
 
 
 [#stopbeingasponsor]
+== How do I stop being a sponsor of a group?
 
 Stopping being a sponsor of a group is a special process that is completed by the
 Fedora Infra team. To remove your sponsor status of a group, file a ticket in
@@ -2491,6 +2683,7 @@ the fedora infrastructure ticket tracker:
 https://pagure.io/fedora-infrastructure/new_issue
 
 [#addingmembers]
+== As a group sponsor, how do I add members to the group?
 
 Add new members to a group in the group detail page. If you are the
 sponsor of a group, a search bar is visible at the top of the user
@@ -2504,6 +2697,7 @@ them to the group:
 image:screenshots/adduser2.png[image]
 
 [#removingmembers]
+== As a group sponsor, how do I remove members from a group?
 
 Remove members from a group in the group detail page. If you are the
 sponsor of a group, each of the users in the user listing have a trash
@@ -2512,6 +2706,7 @@ icon button. Simply click this to remove this user from the group.
 image:screenshots/deleteuser.png[image]
 
 [#personaldatarequests]
+== How do I make a request about my personal data such as having it removed?
 
 Please file a ticket here: https://pagure.io/fedora-pdr
 
@@ -2520,6 +2715,7 @@ More detailed questions about this process can also be addressed to the https://
 Note that personal data requests are subject to some limitations. For details on these limitations as well as how your personal data is used and processed in Fedora, refer to the https://docs.fedoraproject.org/en-US/legal/privacy/[Fedora Privacy Statement].
 
 
+== Brief History
 
 The current iteration of Fedora Accounts / CentOS Accounts launched at the start of 2021, and is an entirely new system that uses the Noggin frontend, and FreeIPA behind the scenes.
 
@@ -2536,6 +2732,7 @@ After the migration to the new Fedora Accounts, a read-only version of the Fedor
 
 image:screenshots/fas2.png[A screenshot of the old FAS2 system]
 
+== Fedora and CentOS Accounts
 
 Prior to the launch of Fedora Accounts / CentOS Accounts, both the Fedora and CentOS communities ran seperate instances of the FAS2 software.
 A user that contributed to both communities was required to have two seperate accounts.

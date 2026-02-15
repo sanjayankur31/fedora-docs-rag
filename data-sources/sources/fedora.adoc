@@ -2,6 +2,7 @@
 
 // Change this to the latest version
 
+= Release Notes
 
 Release Notes for Fedora Linux rawhide
 
@@ -49,6 +50,7 @@ All other trademarks are the property of their respective owners.
 // Change this to the latest version
 
 [[sect-welcome_to_fedora]]
+= Welcome to Fedora
 
 The Fedora Project is a partnership of free software community members from around the globe. The Fedora Project builds open source software communities and produces a Linux distribution called Fedora.
 
@@ -71,6 +73,7 @@ To find out more general information about Fedora, refer to the following pages,
 * link:++https://fedoraproject.org/wiki/Join++[Participate in the Fedora Project]
 
 [[sect-need-help]]
+== Need Help?
 
 There are a number of places you can get assistance should you run into problems.
 
@@ -79,15 +82,18 @@ If you run into a problem and would like some assistance, go to link:++https://a
 You may also find assistance on the `#fedora` channel on the IRC network `irc.libera.chat`. Keep in mind that the channel is populated by volunteers wanting to help, but folks knowledgeable about a specific topic might not always be available.
 
 [[sect-providing-help]]
+== Want to Contribute?
 
 You can help the Fedora Project community continue to improve Fedora if you file bug reports and enhancement requests. Refer to link:++https://fedoraproject.org/wiki/BugsAndFeatureRequests++[Bugs And Feature Requests] on the Fedora Wiki for more information about bug and feature reporting. Thank you for your participation.
 // Change this to the latest version
 
 [[sect-hardware-overview]]
+= Hardware Overview
 
 Fedora rawhide provides software to suit a wide variety of applications. The storage, memory and processing requirements vary depending on usage. For example, a high traffic database server requires much more memory and storage than a business desktop, which in turn has higher requirements than a single-purpose virtual machine.
 
 [[hardware_overview-specs]]
+== Minimum System Configuration
 
 The figures below are a recommended minimum for the default installation. Your requirements may differ, and most applications will benefit from more than the minimum resources.
 
@@ -106,6 +112,7 @@ Fedora rawhide can be installed and used on systems with limited resources for s
 
 For best results on systems with less than 1GB of memory, use the DVD installation image.
 ====
+== Recommended System Configuration
 
 The figures below are recommended for the default x86_64 Workstation installation featuring the Gnome desktop . Your requirements may differ, depending on Desktop Environment and use case.
 
@@ -124,14 +131,17 @@ For best results on systems with less than 1GB of memory, use the DVD installati
 ====
 
 [[hardware_overview-resolution]]
+== Display resolution
 
 Graphical installation of Fedora requires a minimum screen resolution of **1024x768**. Owners of devices with lower resolution, such as some netbooks, should use text or VNC installation.
 
 Once installed, Fedora will support these lower resolution devices. The minimum resolution requirement applies only to graphical installation.
 
 [[hardware_overview-graphics]]
+== Graphics Hardware
 
 [[hardware_overview-graphics-legacy_gpus]]
+=== Minimum Hardware for Accelerated Desktops
 
 Fedora rawhide supports most display adapters. Modern, feature-rich desktop environments like *GNOME* and *KDE Plasma Workspaces* use video devices to provide 3D-accelerated desktops. Older graphics hardware may *not support* acceleration:
 
@@ -142,10 +152,12 @@ Fedora rawhide supports most display adapters. Modern, feature-rich desktop envi
 * Radeon prior to R300 (Radeon 9500)
 
 [[hardware_overview-graphics-cpu_acceleration]]
+=== CPU Accelerated Graphics
 
 Systems with older or no graphics acceleration devices can have accelerated desktop environments using *LLVMpipe* technology, which uses the CPU to render graphics. *LLVMpipe* requires a processor with `SSE2` extensions. The extensions supported by your processor are listed in the `flags:` section of `/proc/cpuinfo`
 
 [[hardware_overview-graphics-desktops]]
+=== Choosing a Desktop Environment for your hardware
 
 Fedora rawhide's default desktop environment, *GNOME*, functions best with hardware acceleration. Alternative desktops are recommended for users with older graphics hardware or those seeing insufficient performance with *LLVMpipe*.
 
@@ -166,12 +178,15 @@ For more information, see the `dnf5-environment` man page.
 // Change this to the latest version
 
 [[sect-Release_Notes-Feedback]]
+= Feedback
 
 Thank you for taking the time to provide your comments, suggestions, and bug reports to the Fedora community; this helps improve the state of Fedora, Linux, and free software worldwide.
 
+== Providing Feedback on Fedora Software
 
 To provide feedback on Fedora software or other system elements, please refer to link:++https://docs.fedoraproject.org/en-US/quick-docs/bugzilla-file-a-bug/++[Bugs And Feature Requests]. A list of commonly reported bugs and known issues for this release is available from link:https://discussion.fedoraproject.org/tags/c/ask/common-issues/82/all/f40[Common Bugs] on the forums.
 
+== Providing Feedback on Release Notes
 
 If you feel these release notes could be improved in any way, you can provide your feedback directly to the beat writers. There are several ways to provide feedback, in order of preference:
 
@@ -181,10 +196,13 @@ If you feel these release notes could be improved in any way, you can provide yo
 :experimental:
 // Change this to the latest version
 
+= Changes in Fedora rawhide For System Administrators
 :experimental:
 // Change this to the latest version
 
+= Changes in Fedora rawhide For Desktop Users
 :experimental:
 // Change this to the latest version
 
+= Changes in Fedora rawhide For Developers
 ** link:https://discussion.fedoraproject.org/tags/c/ask/common-issues/82/all/f40[Common Bugs]

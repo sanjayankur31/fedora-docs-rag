@@ -248,6 +248,7 @@ class RepoToSingleAdoc(object):
                         + "/"
                         + afile.name.replace(".adoc", "")
                     )
+                    text += f"{line}\n"
 
                 else:
                     text += f"{line}\n"

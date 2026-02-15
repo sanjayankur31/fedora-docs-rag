@@ -1,20 +1,25 @@
+= Fedora Gaming documentation
 Jan Kuparinen; Andrew Thurman; Ian Meyer
 :page-authors: {author}, {author_2}, {author_3}
 
+== Introduction
 
 Gaming on Linux is getting better and better every day, and these docs aim to aid new and experienced Fedora users alike in gaming on the Fedora Linux distributions.
 
+== Getting Started
 
 If you'd like to get going right away, take a look at our recommended xref:game-installation.adoc[game launchers]!
 
 If you have an NVIDIA Graphics card, be sure to follow the xref:drivers.adoc[guide].
 
+== Welcome to the Fedora Games SIG!
 
 Hello and welcome to the Fedora Games SIG! We are a small group of volunteers, gamers, and game developers trying to make gaming and game development on Fedora fun for everyone.
 
 Every skill is valuable here. Whether you want to write documentation, create magazine articles, package games and development tools, work with game developers, market Fedora as a gaming platform, or simply discuss gaming experiences, we'd love your help! If you're interested, see our xref:contributing.adoc[contributing guide].
 
 
+== Our Mission
 
 Our mission is to help make gaming and game development on Fedora Linux better for everyone!. The Fedora Project is full of gamers and game developers, and we want to talk about it! Whether you want technical help or just want to discuss gameplay,
 you can come to the Games SIG and feel at home.
@@ -42,6 +47,7 @@ Let's try and avoid the use of possibly copyrighted characters, even if they are
 ////
 
 image::fedora-dark2.png[REPLACEME LOGO; a custom games SIG logo would be cool.]
+= Communicating and Getting Help
 
 For general troubleshooting help related to Fedora, please refer to link:https://ask.fedoraproject.org[Ask Fedora Forum].
 
@@ -57,28 +63,34 @@ and join the team, come visit us at the link:https://discussion.fedoraproject.or
 * You can chat with us at link:https://web.libera.chat/\#fedora-games[#fedora-games on irc.libera.chat], or our link:https://matrix.to/#/#gaming:fedoraproject.org[Element/Matrix channel]. Chats are bridged, so you can use either one of them.
 
 * You can e-mail us on the Games mailing list at link:https://lists.fedoraproject.org/admin/lists/games@lists.fedoraproject.org/[games@lists.fedoraproject.org].
+= Glossary
 
+== DNF
 
 DNF stands for Dandified Yum. It is the default package manager (software installer) for Fedora used to install, update, and manage RPM packages from official and third-party software repositories (online storage locations for software).
 
 *Usage:* DNF lets you install native Linux games, game engines, libraries, and utilities that are not available as Flatpaks. It is also useful for installing Wine dependencies, performance tools, and emulator packages via the terminal. You can find more information in the https://docs.fedoraproject.org/en-US/quick-docs/dnf/[Fedora Quick Docs - DNF]
 
+== Emulator
 A gaming emulator is software that mimics (copies the behavior of) the hardware of a video game console. It allows games from that console to run on a different platform like a Fedora-based PC. See also: xref:gameboy-emulator.adoc[Game Boy Emulator]
 
 *Usage:* On Fedora, emulators such as RetroArch, PCSX2, and Dolphin can be installed via Flatpak or RPM packages. Gamers use them to run ROMs (game files) or ISOs (disc images) of console games. You can configure input, video, and audio settings to enhance compatibility and performance.
 
 
+== Flatpak
 
 Flatpak is a software packaging and distribution format that runs applications in isolated containers to ensure compatibility across different Linux distributions.
 
 *Usage:* Flatpak is commonly used to install and run emulators, game launchers, and indie titles from Flathub-the main Flatpak app store. It avoids dependency issues and sandboxes applications for security. You can manage Flatpaks via GNOME Software (graphical app store) or the command line (flatpak install, flatpak run).
 
+== Immutable OS
 
 An immutable Operating system(OS) is a Linux system where the core filesystem  is read-only. It prevents unintended or unauthorized changes to system files and ensures consistency across reboots. Think of it as a "locked down" system that's harder to break.
 
 *Usage:* Fedora gaming variants like Bazzite or Fedora Silverblue use an immutable design to enhance system stability and security. Since the system is immutable, gamers typically install applications through Flatpak or use containerized environments like Distrobox for tools and scripts that need system access.
 
 
+== Lutris
 Lutris is an open source game manager for Linux that helps users install, configure, and launch games from various platforms, including native Linux titles, Windows games (via Wine or Proton) and emulators. It serves as a unified game launcher that handles the complex setup for you.
 
 *Usage:* Lutris simplifies running games by managing different runtime environments like different Wine versions, graphics translation layers (DXVK), and dependencies (required files). It integrates with platforms like GOG, Epic Games, and Steam, and can be installed via RPM Fusion or Flathub. Essentially, it does the hard work so you don't have to manually configure each game.
@@ -86,11 +98,13 @@ You can find more information about https://lutris.net/about[Lutris] here.
 
 
 
+== NVIDIA Drivers
 
 NVIDIA drivers are closed source proprietary software made by NVIDIA, including kernel modules (low-level system components) and user-space software that enable full hardware acceleration and performance features for NVIDIA graphics cards on Linux.
 
 *Usage:* Fedora gamers install NVIDIA drivers from the RPM Fusion repository because the default open source Nouveau driver has limited performance. These proprietary drivers offer better gaming performance and broader game support, and are essential for many gaming setups involving Steam, Proton, or Lutris.
 
+== Proton
 
 Proton is a compatibility layer (translation software) developed by Valve that allows Windows games to run on Linux. It combines Wine with additional tools like DXVK and Direct3D 12 to Vulkan translator(vkd3d ) to improve game compatibility.
 
@@ -98,23 +112,28 @@ Proton is a compatibility layer (translation software) developed by Valve that a
 https://github.com/ValveSoftware/Proton[Proton], https://www.protondb.com/explore[ProtonDB]
 
 
+== RPM
 RPM stands for RPM Package Manager. It is a package format (file type for software) and the underlying technology used by Fedora and other Red Hat-based distributions to install, upgrade, and manage software.
 
 *Usage:* RPM packages provide access to native tools, libraries, and some games via DNF or direct download. You might use RPMs when installing performance tools, system utilities, or emulators that aren't available through Flatpak or Flathub.
 
+== SIG
 "SIG" stands for Special Interest Group. These are informal teams within the Fedora Project that focus on specific areas of interest, like gaming, security, or documentation. The Fedora Games SIG works on improving gaming support in Fedora, so they're the people making Linux gaming better for Fedora users.
 
+== Steam
 
 Steam is a digital distribution platform (online game store) developed by Valve. It provides access to a large library of games, as well as features like multiplayer gaming, game streaming, and mod support.
 
 *Usage:* On Linux, Steam uses Proton to run Windows-based games that don't have native Linux versions. Steam can be installed via RPM Fusion (recommended) or Flatpak. It is your main gateway to playing both Linux-native games and Windows games (through Proton). You can configure graphical settings, performance options, and controllers through the Steam client.
 
 
+== Wayland
 
 Wayland is a modern display server protocol (communication system) that replaces the traditional X11 system. It provides a simpler, secure, and efficient way for your desktop environment to communicate with applications and your graphics card.
 
 *Usage:* On Fedora, Wayland is the default session and works well with most games. Games run either natively under Wayland (via toolkits like SDL2 or Qt) or through XWayland for compatibility. The benefits include reduced input latency (faster response), better frame pacing (smoother gameplay), and stricter security isolation.
 
+== Wine
 
 Wine is a compatibility layer (translation software) that enables Windows applications and games to run on Linux by translating Windows system calls (requests to the operating system) into POSIX-compliant calls (Linux-compatible requests). Wine stands for "Wine Is Not an Emulator" - it translates rather than emulates.
 
@@ -123,10 +142,12 @@ https://gitlab.winehq.org/wine/wine/-/wikis/FAQ[FAQ],
 https://gitlab.winehq.org/wine/wine/-/wikis/Fedora[Fedora], https://gitlab.winehq.org/wine/wine/-/wikis/Winetricks[Winetricks], https://appdb.winehq.org/[AppDB]
 
 
+== X11
 
 X11 (also called X Window System) is a display server protocol (communication system) that has historically been the standard for managing graphical user interfaces on Unix-like operating systems, including Linux.
 
 *Usage:* Although Fedora and other distributions are transitioning to Wayland as the default, X11 is still widely used for gaming and applications that require compatibility. Many games, especially older ones, continue to rely on X11 for display rendering. Some gaming tools or environments may not yet fully support Wayland, so you might need to switch to an X11 session for certain games or applications.
+= Frequently Asked Questions (FAQ)
 
 [qanda]
 Can I see a built preview of this template to get a better idea about the result?::
@@ -145,6 +166,7 @@ I have a great idea::
 
 We welcome all new ideas and help. You can use the link at the bottom of this page or see xref:contributing.adoc[our contributing page].
 
+= Contributing
 
 
 :toc-title: Contents
@@ -163,6 +185,7 @@ Please xref:communicating.adoc[get in touch] if you would like to join the team!
 
 
 
+= Game Installation
 
 NOTE: Fedora does not support some of these platforms out of the box due to
 current policies, thus requiring some additional steps to use. The most common
@@ -172,6 +195,7 @@ setting up https://flatpak.org/setup/Fedora/[Flathub].
 
 Games can be installed and played in several ways, here are some of them:
 
+== Game Launchers
 
 === Flatpak ===
 
@@ -181,12 +205,15 @@ pretty much any Linux app where you don't want the hassle of an RPM.
 
 Below is a list of popular game launchers available as flatpak apps that you can install from Flathub
 
+==== Heroic Games Launcher
 
 A popular FOSS Epic Games, GOG, and Prime Gaming launcher that uses Proton-GE: a custom version of Proton made by GloriousEggroll
 
+==== Prism Launcher
 
 A popular, FOSS Minecraft: Java Edition launcher with tons of features
 
+==== Lutris
 
 Lutris is an Open-Source gaming platform for Linux. It installs and launches
 games so you can start playing without the hassle of setting up your games.
@@ -194,15 +221,18 @@ Get your games from GOG, Steam, Battle.net, Origin, Uplay and many other sources
 running on any Linux-powered gaming machine. Lutris is also available in the default
 Fedora repos and the software stores, making it an absolute breeze to install.
 
+==== Emulators
 
 Some of them are already packaged into Fedora. Most are available as Flatpaks.
 Retroarch (combined frontend for a lot of older (pre-2000) emulators) is
 trending these days. Retroarch is already in the repos. We also recommend Gnome
 Games, a Retroarch frontend designed to better integrate with the GNOME Desktop.
 
+=== Native Game Launchers
 
 These are game launchers that are better installed as native RPMs to avoid problems or quirks specific to their Flathub version.
 
+==== Steam
 
 Steam’s Proton is the single biggest thing that has boosted Linux gaming.
 When anyone thinks of Linux gaming, they think of Proton.
@@ -213,9 +243,11 @@ which is a VR title. You can see how to install Steam xref:proton.adoc[here]
 NOTE: While Steam Proton is https://github.com/ValveSoftware/Proton[open source],
 the Steam client is not.
 
+== Open-Source Games
 
 There are many excellent open-source games as well! Try running
 `dnf groupinfo “Games”` or checking out https://flathub.org/en/apps/category/game/1[Flathub's games list].
+= Steam Installation
 
 NOTE: This will require enabling an external repository.
 
@@ -223,7 +255,9 @@ NOTE: If you enabled "Third Party Software" (`rpmfusion Nonfree`) at installatio
 
 :toc:
 
+== Using the terminal
 
+=== Enabling the external repository (`rpmfusion Nonfree`)
 
 * Launch The terminal prompt of your choice
 
@@ -246,6 +280,7 @@ For older versions (Fedora 40 and lower):
 sudo dnf config-manager --enable fedora-cisco-openh264 -y
 ----
 
+=== Installing Steam
 
 * Run the following command with a user that has root acess or can use the `sudo` command
 
@@ -254,11 +289,13 @@ sudo dnf config-manager --enable fedora-cisco-openh264 -y
 sudo dnf install steam -y
 ----
 
+== Using `Software` GUI Package Manager
 
 Open Software under the Activities in the top left corner.
 
 image::software.png[Software, 800, 600]
 
+=== Enabling the external repository (`rpmfusion Nonfree`)
 
 * Click the Menu Button (☰) on upper right corner and choose Software Repositories. (Circled red for visual aide)
 
@@ -275,6 +312,7 @@ image::repos.png[800, 600]
 
 image::search.png[800, 600]
 
+=== Installing Steam
 
 NOTE: Following installation requires you to be online.
 
@@ -284,9 +322,11 @@ image::steam.png[800, 600]
 
 * Launch Steam.
 
+== Installing Steam on Atomic Desktops
 
 NOTE: If you enabled "Third Party Software" (`rpmfusion Nonfree`) at installation you can skip to installing Steam.
 
+=== Enabling the external repository (`rpmfusion Nonfree`)
 
 * Launch The terminal prompt of your choice
 
@@ -312,6 +352,7 @@ rpm-ostree update \
 
 For more information, see https://discussion.fedoraproject.org/t/simplifying-updates-for-rpm-fusion-packages-and-other-packages-shipping-their-own-rpm-repos/30364[this thread] on Fedora Discussion.
 
+=== Installing Steam
 
 * Run the following command with a user that has root acess or can use the `sudo` command
 
@@ -326,6 +367,7 @@ NOTE: you can append `--apply-live` at the end of the command above to not need 
 
 === Troubleshooting ===
 
+==== Steam does not start after initial installation
 
 In case you are not able to run Steam application after initial installation, please try running it from terminal via following command:
 
@@ -334,6 +376,7 @@ In case you are not able to run Steam application after initial installation, pl
 __GL_CONSTANT_FRAME_RATE_HINT=3 steam
 ----
 
+==== Certain games have missing textures
 
 Games that have linux native versions are sometimes poorly maintained. You can force Steam to use Proton in such cases.
 
@@ -345,11 +388,13 @@ Games that have linux native versions are sometimes poorly maintained. You can f
 
 image::force_proton.png[800, 600]
 
+==== Flathub installation
 
 IMPORTANT: With Fedora 38 there is an issue where Steam installed from Flathub
 will not start. This issue is being tracked on the
 https://discussion.fedoraproject.org/t/steam-from-flathub-might-not-start-on-fedora-38/80839[Fedora Discussion] page
 
+== Changing Proton engine versions
 
 NOTE: As of 2026, Steam enables Proton by default for every game in your library (unless it has a linux native version). Only follow this section if you have problems, or want to change Proton versions
 
@@ -370,6 +415,7 @@ Install available title from the Library menu and play it.
 NOTE: It is recommended that games are checked on https://www.protondb.com/[ProtonDB].
 This will give an idea of how well a game might run under Steam on Fedora.
 
+= Game Boy Emulator
 
 This will enable running of Game Boy games (which often have .gba extension)
 
@@ -402,8 +448,10 @@ You can choose (and verify) your game-keys from:
 Options .. Input .. Configure
 
 //We need to be cautious when writing documentation like this. The emulator.games link was unacceptable. See also: https://www.howtogeek.com/262758/is-downloading-retro-video-game-roms-ever-legal/
+= Optimization & Tools
 
 Below you can find dedicated articles for more complex topic, that may be required for you to fully enjoy gaming under Fedora OS.
+= Controllers
 
 This guide explains how to connect PlayStation, Xbox, and Nintendo Switch controllers to Fedora for gaming. You’ll learn to pair controllers via USB and Bluetooth, and troubleshoot common issues.
 
@@ -642,6 +690,7 @@ UserspaceHID=false
 === Other controllers ===
 
 Support may vary based on controller - please look into community boards for information, if your controller will be supported.
+= Performance Monitoring
 
 NOTE: This guide covers MangoHud installation, and basic configuration
 
@@ -831,6 +880,7 @@ You can reference the example configuration located at:
 
 This file includes various examples of toggles and values to help you fine-tune your overlay.
 --
+= Gamescope
 
 == Introduction ==
 
@@ -944,6 +994,7 @@ gamescope --adaptive-sync -- %command%
 --
 You can combine multiple options depending on your use case. It is strongly recommended to read the available options and their usage by running `gamescope --help` in your terminal.
 --
+= NVIDIA GPU Driver Installation
 
 CAUTION: The NVIDIA binary drivers are not maintained by the Fedora Project and may sometimes not be available for the kernel version included in Fedora.
 
@@ -953,6 +1004,7 @@ NOTE: If you enabled "Third Party Software" (`rpmfusion Nonfree`) at installatio
 
 To game effectively when you have an NVIDIA graphics card, it is necessary for you to install the drivers first
 
+== Enabling the external repository (`rpmfusion Nonfree`)
 
 * Launch The terminal prompt of your choice
 
@@ -963,6 +1015,7 @@ To game effectively when you have an NVIDIA graphics card, it is necessary for y
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
 ----
 
+== Installing
 
 * Run the following command with a user that has root acess or can use the `sudo` command
 
@@ -975,6 +1028,7 @@ NOTE: It is important to wait a few minutes for the driver to build properly bef
 
 * Reboot your system to load the driver
 
+= GPU Overclocking
 
 == Introduction ==
 Overclocking has been a common practice among advanced users seeking to maximize the performance of their hardware. In the context of gaming, GPU overclocking is typically used to achieve higher frame rates, smoother gameplay, and improved performance in graphically intensive applications. Technically, GPU overclocking involves increasing the core and memory clock speeds of the graphics card beyond the manufacturer's default settings to enhance rendering capabilities and throughput.
@@ -1161,6 +1215,7 @@ Enabling either `Curve` or `Static` mode may disable the "Quiet mode" or "Zero R
 
 
 // TODO Need contributor for Nvidia section.
+= Game Development
 
 Mission for game development:
 
@@ -1180,10 +1235,12 @@ Game development tooling that is available on Linux include
 === Possible Sample Projects ===
 
 Blender and Godot are fantastic pieces of software.
+= Gaming Links
 
 We are currently discussing about games on Fedora
 
 https://discussion.fedoraproject.org/t/alienarena-7-71-2-release/26310?u=copperi[AlienArena]
+= Gaming News sites
 
 * https://freegamer.blogspot.com/[Free Gamer]
 * https://libregamewiki.org/[Libregamewiki]
@@ -1191,6 +1248,7 @@ https://discussion.fedoraproject.org/t/alienarena-7-71-2-release/26310?u=copperi
 MobyGames] CONTAINS NON FREE SOFTWARE
 * https://www.linuxgaming.de/[1] (German with Wiki, Forum and News)
 * https://unixgames.org[Unixgames Q&A]
+= Game List References
 
 * https://www.allegro.cc/[Allegro games] Instructions: genre -> listing
 -> show options -> "Source" to "yes" -> Apply

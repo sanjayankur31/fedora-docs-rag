@@ -1,3 +1,4 @@
+= Fedora Server Installation Guide
 Peter Boy; Kevin Fenzi; Jan Kuparinen
 :page-authors: {author}, {author_2}, {author_3}
 :page-aliases: installation-an-introduction.adoc
@@ -20,8 +21,10 @@ Having done various decisions and some preparations, the installation itself is 
 
 
 
+== Planning ahead
 
 
+=== Minimum requirements
 
 The question of the minimum requirements is always raised, even though it is obvious to anybody that it depends entirely on the deployment plan.
 
@@ -32,6 +35,7 @@ Again, from a purely technical point of view, a standard Fedora server would get
 So, with today's smallest possible purchasable hardware, a Fedora server can be run perfectly for a small to medium deployment.
 
 
+=== Storage organization
 Technically, a specific storage organization on a server itself will result in a specific partitioning of the built-in hard disk(s) and, beyond that, to the provision of external resources such as a SAN. However, this is about server installation and therefore only about partitioning the internal hard disk(s).
 
 If you ask 3 system administrators about the best practice for hard disk partitioning, you will get at least 5 different answers. There is no clear, best way to partition your disks. A discussion of the details is beyond the scope of this article. Talk to your friends, read up on the subject, search for articles, and make your own judgment.
@@ -39,6 +43,7 @@ If you ask 3 system administrators about the best practice for hard disk partiti
 The Fedora Server Edition working group has also discussed this topic and agreed on a recommended default configuration. This is explained in the following sections. It prioritizes the highest possible reliability and fault tolerance for servers, as well as the lowest possible service interruption, and accepts a higher level of system administration, for example.
 
 
+==== What default partitioning does
 
 A new Fedora installation creates a (modern) GPT partition table by default.
 
@@ -50,6 +55,7 @@ In the case of a _UEFI_ boot system, Anaconda creates first the required 'EFI Sy
 
 In _each_ of these alternatives, Anaconda creates one logical volume of approximately 15 GiB (the exact value depends on the disk capacity of your system) named `root` for the operating system and its software. The remaining available space is at the disposal of the system administrator for free use to store user data.
 
+==== The rationale
 
 The rationale behind this is a separation of system and user data, which eases system administration, increases security, and decreases the likelihood of errors and data loss. The system area (i.e. the operating system including installed software) must be maintainable completely independently of the storage of user data. System maintenance must not jeopardize user data under any circumstances. If necessary, it must be possible to unmount user data.
 
@@ -57,6 +63,7 @@ Following this principle, the system administrator would later set up _additiona
 
 In this way, any error that may occur in the file system should have as little impact as possible and jeopardize as little valuable data as at all possible. For this, the additional effort in system administration is purposely accepted.
 
+==== Taking the rationale further
 
 If you are a more experienced administrator, you may wish to further the rationale above with increased separation.
 
@@ -65,23 +72,28 @@ You will select `Custom` and create the `BIOSboot`, `efi` and `/boot` partitions
 Create a LV (e.g. ```sys_root```) of about  15 GiB for the operating system and maybe additional LVs for the runtime environment, e.g. a LV ```sys_log``` of about 5 GB. Mount it at ```/var/log``` to prevent log files from flooding and blocking the system and, vice versa, prevent that any other space issue on the root partition block your logs and complicate error analysis. The remaining free space is left for distribution as needed over time. Similar to the default partitioning, all user data is created as LVs in ```usrvg``` and mounted in the corresponding directories of the system. This is the maximum possible separation of system and user data with only one hard disk available. And with today's typical hard drive size of 2 TB and more, those dedicated 30 GBs don't interfere with the effective use of disk space anymore.
 
 
+==== Raid system
 
 If there is more than one disk available, the default partitioning creates, on each of the other disks, one big partition with a Physical Volume (PV) and adds it to the VG.
 
 On a server, this is usually not optimal. Rather, several disks should store data redundantly in order to maintain operation in the event of a hardware failure. xref:installation/sw-raid-upon-installation.adoc[Configuring a RAID system] is one such solution.
 
+=== Network connection
 
 Anaconda analyzes the hardware and generates at least a basic configuration file for each network interface found, regardless of whether a carrier is present. If a DHCP service is detected, anaconda creates a corresponding complete configuration.
 
 Some system administrators prefer a static configuration even if there is DHCP available, suspicious as they are of any possible source of failure. The network configuration is nevertheless a customization option during the installation.
 
 
+== Preparations
 
+=== Choosing the right installation medium
 
 Fedora Server comes with its own special installation ISO image, either as a full local installation or as a network installation. If at all possible, use one of the two https://getfedora.org/en/server/download/[Fedora Server Edition] alternatives ("Standard" or "Netinstall") and avoid booting from another image.  Anaconda, the installation program and the GUI look alike for any edition or spin, but are tailored differently under the hood, e.g. with different configuration defaults.
 
 That's why you don't get a "Fedora Server Edition" as a result with the "__Everything__" installation medium, even if you select "Fedora Server" as a software package. This can lead to various problems during operation and is __not supported__.
 
+=== Download the proper installation media
 
 Wether on hardware or on a virtual machine, an installation requires the download and the verification of an appropriate installation medium. On your Workstation, you can either use the web browser to download the image file or open a terminal window and perform the download via CLI commands.
 
@@ -102,6 +114,7 @@ sha256sum: WARNING: 17 lines are improperly formatted
 
 You can safely ignore the last command's warning about incorrectly formatted lines.
 
+=== Create a bootable installation medium
 
 A installation on bare metal requires to transfer the installation file to a bootable media, mostly an USB memory stick. There are several option:
 
@@ -130,6 +143,7 @@ Of course, adjust file and device accordingly! You may receive an error message 
 
 With everything done proceed with one of the available installation procedures.
 
+= Fedora Server interactive local installation
 Peter Boy; Stephen Daley; Kevin Fenzi
 :page-authors: {author}, {author_2}, {author_3}
 
@@ -167,6 +181,7 @@ Anaconda will display the following installation overview, with all available co
 image::installation/interactive-local-020.png[Anaconda Installation Summary]
 
 
+== Server installation steps
 
 Anaconda assigns default values to the installation steps based on a system analysis and the runtime environment. However, the overview marks 3 steps that absolutely require editing:
 
@@ -195,11 +210,13 @@ While working with Anaconda, help functions are available to you, which are indi
 
 
 
+=== Keyboard
 
 __Non-US users__ should specifically check the keyboard layout. Selecting this item opens a form where you can set the keyboard layout, even several ones and their order.  A change immediately affects the installer as well.
 
 
 
+=== Installation Source
 
 In a standard  installation (using the "Standard ISO image"), Anaconda uses "Local media" which will pull packages from the ISO image on your install media.
 
@@ -216,6 +233,7 @@ Alternatively, you may manually select a server repository directly.
 
 
 
+=== Installation Destination
 
 image::installation/interactive-local-050.png[Anaconda Installation Destination]
 
@@ -241,6 +259,7 @@ The Advanced Custom option also opens up this option, but you have to perform al
 +
 The _Add a disk_ enables you to include external storages, e.g. a SAN (Storage Attached Network) or other network attached drives as part of your Fedora Server install in this same configuration screen. However, this configuration is not covered here in this installation guide.
 
+==== Automatic default configuration
 If you are satisfied with the Fedora Server default hard disk partitioning as described in the xref:installation/index.adoc#_what_default_partitioning_does[Server installation] introduction, you can leave _Automatic_ checked under __Storage Configuration__.
 
 [TIP]
@@ -255,6 +274,7 @@ If you selected the option to free up space, a window will open after you click 
 ====
 
 
+==== Custom storage organization
 
 Select _Custom_ Storage Configuration instead of _Automatic_ and select _Done_ in the upper bar. Anaconda will take you to the _Manual Partitioning_ form.
 
@@ -265,6 +285,7 @@ By clicking onto the + sign you can add partitions according to your storage con
 
 Fedora uses a GPT partitioning scheme. Thus, on a BIOSboot system you must add a BIOSboot partion, preferrably as the first one. On a UEFIboot system you have to add a EFI system partition, preferrably as the first one. If you forget it, Anaconda will remind you.
 
+===== How to find out if firmware is efi-boot or bios-boot
 
 Open a temporay shell by using `<alt>+<ctrl>+<F2>` and type into the terminal window:
 
@@ -278,6 +299,7 @@ The command shows in the next line either UEFI or BIOS. Use `<alt>+<ctrl>+<F6>` 
 
 
 
+=== Networking
 
 Before configuring the Installation Destination configure the Network & Host Name to give your server a hostname. The new hostname can be entered at the bottom of this screen and then pressing the _Apply_ button.
 
@@ -294,6 +316,7 @@ NOTE: Post Fedora 36, NetworkManager stores the configuration  exclusively in __
 
 
 
+=== Creating users
 
 First, decide if you desire to have a root account on Fedora Server. Anaconda's default configuration disables the root account to prevent malicious actors from logging in as root. Instead, Anaconda requires a user account that can acquire administrative privileges using sudo.
 
@@ -301,15 +324,18 @@ It is possible to secure root access using an ssh key file, but server administr
 
 Second, select User Creation to create a user account for Fedora Server. You are encouraged to keep the default options of "Add administrative privileges to this user account" and "Require a password to use this account" checked. Unless you have decided against the security practice of not allowing root access with a password, your user account will need these options to have administrative access to the server after installation of Fedora Server.
 
+=== Time zone and time synchronization
 
 You may want to check Time & Date on the Installation Summary page to ensure that you have the correct time zone and Network Time is activated. These settings ensure that your server will regularly synchronize its time with a trusted source. Having the correct time on your server will make tasks like finding events at a specific time and date in your log files easier.
 
 On the "Installation Summary" page select "Time & Date" and check time, time zone and activation of time synchronization.
 
+== Start Installation
 
 Finally, check the default assignments of all options that have not been edited.
 
 Then, when all settings and configurations fit, select _Begin Installation_ and lean back (or get a coffee!). When finished, confirm the option to restart the computer. Log in and follow the xref:installation/postinstallation-tasks.adoc[post installation suggestions].
+= Fedora Server remote interactive installation guide
 Peter Boy; Kevin Fenzi; Jan Kuparinen; Jiri Konecny
 :page-authors: {author}, {author_2}, {author_3}, {author_4}
 
@@ -327,6 +353,7 @@ Peter Boy; Kevin Fenzi; Jan Kuparinen; Jiri Konecny
 With this method, the server is usually residing in a remote location, such as a data center. It boots from a prepared installation media into the Anaconda installation program configured to start and use a "remote desktop protocol" (RDP) server instead of a local physical console. The system administrator connects using a RDP client on a local desktop to the server and runs through the Anaconda graphical installer. This method is best suited for servers without any or just cumbersome available direct console access.
 
 
+== Prerequisites
 
 Proper install media available::
 You need one of the installation media variants ready to use as described in   xref:installation/index.adoc[Server Installation]
@@ -349,8 +376,10 @@ To install any of the clients listed above, execute the following command as roo
 Replace package with the package name of the client you want to use (for example, freerdp).
 
 
+== Booting the server
 There are several options to boot the server, depending on the ethernet connection method and availability of at least some, maybe cumbersome and short living local console access.
 
+=== Console access available
 
 1. Boot the server to be installed and wait for the _boot menu_ to appear.
 +
@@ -398,10 +427,12 @@ hh:mm:ss GNOME remote desktop RDP host name: fedora
 Continue with __3.2. Connecting to the server__.
 
 
+==== No console access available – patch installation medium
 If none of the above options work with your server and network configuration, you could patch the installation media as a last resort. As an example, you can change the grub boot lines in /isolinux/grub.conf. You would need to add the RDP parameter and remove the integrity test, as this is the default line but would fail after patching.
 
 We won't go into this matter any further here. This is really the very last resort and is not recommended.
 
+== Connecting to the server
 . In case of a server without a console attached determine the IP address.
 a. If possible, check the DHCP server for the IP of the server.
 b. Scan the network subnet the server is connected to for open port 3389. Adjust the network IP address accordingly!
@@ -457,6 +488,7 @@ If the screen freezes after some mouse or keyboard actions, add the kernel optio
 ====
 
 You can then proceed with xref::installation/interactive-local.adoc[Fedora Server interactive local installation].
+= Excursus: Configuring a software RAID upon interactive installation
 Peter Boy; Stephen Daley; Kevin Fenzi
 :page-authors: {author}, {author_2}, {author_3}
 
@@ -499,6 +531,7 @@ The advantage is that you can define every detail and you will get a partitionin
 
 Select all drives you want to include in the prospective RAID drive, click on the partitioning option you want to use and then on Done in the uper left corner.
 
+== Custom partitioning
 
 Anaconda opens a new window:
 
@@ -604,6 +637,7 @@ Some adminmistrators like to confine the /var/log subdirectory in its own Logica
 
 Finally, click on Done, in the upcomming list accept the Changes and return now to the original guide, probably xref::installation/interactive-local.adoc#_networking[Fedora Server interactive local installation] guide.
 
+== Advanced Custom partitioning
 
 Anaconda opens a new window:
 
@@ -835,6 +869,7 @@ image:installation/sw-raid/284-adv-custom-libvirtlist.png[]
 
 
 Finally, click on Done, in the upcomming list accept the Changes and return now to the original guide, probably xref::installation/interactive-local.adoc#_networking[Fedora Server interactive local installation] guide.
+= Post Installation Tasks
 Peter Boy; Stephen Daley; Kevin Fenzi
 :page-authors: {author}, {author_2}, {author_3}
 
@@ -856,6 +891,7 @@ This guide offers a recommended checklist of tasks to ensure the safe and reliab
 
 To perform the administrative tasks described here, you need either any Linux or any macOS desktop or laptop. On Windows computers, you need at least Windows 10 1809 or additional programs such as Putty.
 
+== Simplified access for the administrative account
 
 In a default installation, the root account is locked and administrative work is delegated to a user account that is entitled to root privileges (sudo). It is convenient to make the login process as comfortabe as possible.
 
@@ -904,6 +940,7 @@ d. Test the configuration
 
 
 
+== Check Cockpit access
 
 // Text excerpt about installing fail2ban
 // consumer postinstallation-tasks.adoc (main), hetzner-dc.adoc
@@ -917,6 +954,7 @@ Login with your administrative user account. At the top you will see a warning t
 
 
 
+== Disable SSH Login with passwords for system users
 
 System users are a systematic weak point in defending a server against compromise attacks. This is certainly unintentional on the part of the users. It is due to lack of understanding, insecure passwords, falling for phishing attacks, and alike. On the other hand, it is precisely the users that a server is operated for.
 
@@ -961,6 +999,7 @@ c. Test that everything works as expected
 
 
 
+== Increase security of Cockpit access
 
 Cockpit relies on a password based login to its web interface, even for root (unless the root account is completely locked, locking the account as part of ssh does not help here). And thus it is a potential target for brute-force attacks. In most cases, it is rarely used in daily operations and it may be a good practice to remove the general accessibility in the firewall. Instead, access Cockpit in one of the three secure alternatives described below.
 
@@ -1009,9 +1048,11 @@ c. Use a secure local proxy
 
 
 
+== Optionally: Set up root login via key file
 
 Even if you activated root access during installation, you have hopefully kept the default option to restrict root to key file authentification. So you have to set up a key file prior to any ssh login. But be aware! You can still log in to Cockpit's web interface. Therefore, in this case, be sure to implement the additional security measures described in the previous chapter!
 
+=== Prepare a pair of private / public keys
 
 This step is to be performed only if a pair of keys does not already exist. It is best to create the key in the _.ssh_ directory of the desktop user. It should not be secured by password to enable automatic processing. The naming with leading 'id_' und trailing types abbreviation, e.g. '_rsa' is just a common convention, yet helpful.
 
@@ -1026,6 +1067,7 @@ a. Execute on the local desktop
 
 Although the type rsa is widely used, you may adjust your key type accordingly.
 
+=== Transfer and install the public key onto the server
 
 You normally use _ssh-copy-id_ to install the public key on the server. However, this requires a password login, which was disabled for root during installation. Therefore, a detour is now required.
 
@@ -1059,6 +1101,7 @@ c. On the server acquire root permissions, move the key file and adjust permissi
 […]# restorecon  -R  -vF  /root/.ssh
 ----
 
+=== Test and Simplify Access
 
 a. On your local workstation test key file based access:
 +
@@ -1097,6 +1140,7 @@ c. Check if everything works:
 […]# ssh myhost
 ----
 
+== Double check hostname and time synchronisation
 
 Both are important for trouble-free server operation. Just in case you missed its configuration during  installation or it is incorrect, now is the opportunity to fix it.
 
@@ -1138,6 +1182,7 @@ timedatectl set-ntp true
 […]# timedatectl set-time  <TIME>
 ----
 
+== Consolidate network configuration
 
 Depending on installation efforts, network configuration consolidation may be required.
 
@@ -1224,6 +1269,7 @@ Finally reboot now to check everything from ground up
 
 
 
+== Check LVM storage devices
 
 With Fedora 39 the default LVM configuration has changed. The various LVM management commands now only process registered, 'legitimate' block devices connected to the system. It is essential to check the correctness of the devices file list.
 
@@ -1253,6 +1299,7 @@ This modifies the devices file in /etc/lvm/devices
 ----
 
 
+== Consolidate storage configuration
 
 Depending on how you decided on data storage during installation, different supplementary configuration may be required.
 
@@ -1273,6 +1320,7 @@ Select `Storage` in Cockpit's main menu and then your drive  in the right column
 
 
 
+== Install fail2ban
 
 If a general disabling of the password login is not an option, the installation of fail2ban is worth considering.
 
@@ -1322,6 +1370,7 @@ d. Control in the log
 
 
 
+== Install and configure Logwatch
 
 The software checks log files for anomalies and compiles a daily report that can optionally be sent to system administrators via email. It is something like a minimal defensive effort.  More powerful, but much more involved would be the installation of a monitor software.
 
@@ -1345,6 +1394,7 @@ root:		   real@address.for.root
 […]# newaliases
 ----
 
+== Disable systemd-resolved LLMNR and/or mDNS
 
 You may want to disable LLMNR and/or mDNS depending on your environment. Both protocols are subject to trivial DNS poisoning attacks by a rogue responder.
 
@@ -1364,6 +1414,7 @@ sudo systemctl restart systemd-resolved
 
 You can view the status of LLMNR and mDNS with the following command: `sudo systemd-resolve --status`
 
+== Manage system updates
 
 It is common sense among system administrators,that regular installation of bug fixes and closing of security vulnerabilities is essential, i.e. applying updates in a systremtatic way. An important step is to automate the process as much as it is reasonable.
 
@@ -1405,6 +1456,7 @@ If you want to automatically install, activate the corresponding timer instead.
 
 
 
+== Finally update system and install additional software
 
 Now that secure administrative access is in place, it's time to update the system and install some useful software. Of course, 'useful software' varies depending on the use case or applications that will be run on Fedora Server. Anyway, a good choice might be vim. With vimdiff e.g. a comparison of updates of configuration files (*.rpmnew) is very comfortable and straightforward.
 [source,]
@@ -1416,11 +1468,13 @@ Add to the software list as needed.
 
 Finally reboot the server.
 
+= Fedora Server Edition Basic Administration Guide
 Peter Boy; Jan Kuparinen; Emmanuel Seyman
 :page-authors: {author}, {author_2}, {author_3}
 
 :page-aliases: pages/sysadmin-an-introduction.adoc
 
+== What You Find Here
 
 General basic system administration is covered in Fedora's overall
 //xref:fedora::system-administrators-guide.adoc[System Administrator's Guide].
@@ -1431,6 +1485,7 @@ This section covers topics like name resolution tools, DHCP support, special net
 
 _Currently, the compilation and description of administrative tasks is still under construction. It will be continuously expanded._
 
+== Administrative Tools
 
 Fedora Server Edition is designed as a headless device, i.e. without a graphical user interface. Corresponding packages are not even installed. Accordingly, only a simple text-based terminal is available on the box by default, which is somewhat euphemistically called a __Command Line Interface__ (CLI).
 
@@ -1445,6 +1500,7 @@ Very many servers do not even have a monitor and keyboard permanently connected.
 //In addition, a lightweight web-based graphical user interface, Cockpit, is available by default and is intended to simplify many typical and repetitive maintenance tasks. For example, the creation, formatting and mounting of a logical file area can be done with a short input form consisting of 3-4 topics and one click. This saves even the experienced system administrator a lot of time and the (error-free) typing of several command lines.
 
 
+== System security
 
 Fedora is very concerned about security. Accordingly, as part of the installation, the system is already fitted with many security-relevant configurations. Thus, by default, a firewall is installed and also activated, which only allows an ssh as well as a cockpit connection. SSH uses the latest encryption algorithms and blocks outdated, insecure methods.
 
@@ -1452,6 +1508,7 @@ There is not much left for the system administrator to do. Measures that may be 
 //xref:services/index.adoc[services].
 
 However, the installation process cannot perform all security-related configurations automatically.The system manager must weigh the pros and cons and make a decision. Admins should process these items immediately after the installation. For detailed information see xref:installation/postinstallation-tasks.adoc[Post Installation Tasks].
+= Setting up dnsmasq - a lightweight DHCP and DNS server
 Peter Boy; Emmmanuel Seyman
 :page-authors: {author}, {author_2}
 // :revremark: a new beginning
@@ -1463,6 +1520,7 @@ ____
 Fedora Server Edition recommends the lightweight dnsmasq program to provide DHCP, DDNS and DNS caching service for a server and a small to medium-sized local network. It works as a NetworkManager plugin to ensure a seamless interlocking of the components. It is the preconfigured default configuration and specifically supported.
 ____
 
+== Introduction
 A typical usage of dnsmasq is to provide a DHCP service for a private network.  It is optionally supplemented by dynamic DNS, whereby a DHCP assigned IP address gets a temporary DNS entry with the hostname of the device. Additionally, it supports static hostnames, too. Another typical use case is to provide DHCP for a public subdomain, while an official public DNS server still provides the subdomain's name resolution. Of course, devices with such an address cannot be found via DNS. They are primarily used for the initial system installation, for network-supported booting (PXE), or dynamically assigning machines, identified by their MAC address, a specific IP address. And sometimes dnsmasq is used as a caching DNS proxy without any DHCP or DDNS functionality. But since release 33, Fedora uses systemd-resolved as DNS client which includes a versatile caching. Thus, dnsmasq is no longer needed for this use case.
 
 The dnsmasq DHCP and DNS is the default and recommend way to provide these services in Fedora Server Edition. Each of the components is optional. A system can use only the DHCP part without DNS, or only DNS without DHCP, or only DHCP caching, or any combination. Each component is configured separately. It is preconfigured as a NetworkManager plugin to ensure a seamless interlocking of the components.
@@ -1473,6 +1531,7 @@ A general determination of the upper limit is practically impossible.  But as a 
 
 For additional information, see the _Fedora Magazine_ article  https://fedoramagazine.org/using-the-networkmanagers-dnsmasq-plugin/[Using the NetworkManager’s DNSMasq plugin] (2019).
 
+== Installation
 The NetworkManager dnsmasq plugin included  by default provides a basic configuration skeleton, but does not install the dnsmasq package. Thus, it avoids to uselessly occupy space and to introduce a superfluous and unused binary in case dnsmasq is not going to be in use on the particular server.
 
 In case dnsmasq is not already installed
@@ -1489,6 +1548,7 @@ Calling systemctl directly would be ineffective and would rather start yet anoth
 ====
 
 
+== Basic configuration
 
 NetworkManager takes care of the dnsmasq plugin operation. Configuration files in the `/etc/NetworkManager/dnsmasq.d` directory specify the custom configuration requirements, preferably one configuration file per task. The only exception in this example is the file containing the  IP - hostname mapping of for static DNS names, `/etc/dnsmasq.hosts`.
 
@@ -1684,6 +1744,7 @@ c. Try on an other server
 […]# dhclient -v -d -s 10.10.10.1 enp6s0
 ----
 
+== Masquerading / NAT
 
 If machines in the private network need access to the public network, add masquerading / NAT to the firewall.
 
@@ -1747,6 +1808,7 @@ success
 This method is much clearer, improves maintainability and reduces sources of potential errors. The documentation of the upstream project provides https://firewalld.org/2020/09/policy-objects-introduction[more information].
 
 
+== Integrate libvirt's virtual interface
 In case libvirt and virualization including a virtual network for the virtual machines, libvirt installs and configures its own dnsmasq instance. In most cases it is just convenient, instead of replacing the libvirt _default_ network to integrate it in NetworkManagers dnsmasq plugin. Thus, two instances of dnsmasq operate along each other.
 
 To make it work, just add onother configuration file. The example uses libvirt.lan as the libvirt virtual network domain name. Adjust as appropriate.
@@ -1766,6 +1828,7 @@ server=/libvirt.lan/192.168.122.1
 <esc><:><w><q>
 ----
 
+== Managing static DNS Entries
 
 1. Edit the dnsmasq host file
 +
@@ -1791,6 +1854,7 @@ The format is the same as /etc/hosts .
 […]# nslookup {NAME}.example.lan
 ----
 
+= Setting Up a Virtual Routing Bridge (brouter)
 Peter Boy; Kevin Fenzi
 :page-authors: {author}, {author_2}
 
@@ -1814,12 +1878,14 @@ This bridge leaves the host's interface untouched and instead creates an indepen
 
 This article deals with the latter variant.
 
+== Prerequisites
 
 . Fully updated Fedora Server, any version of F33 or newer, preferrable F38.
 . Installed virtualization support according to the xref:virtualization/installation.adoc[Adding Virtualization Support] guide.
 . Completed preparations for installing VMs according to the xref:virtualization/vm-install-diskimg-fedoraserver.adoc#_provisioning_the_server_vm_image[Provisioning the Server VM image] guide.
 . Set up DNS entries for the projected VMs
 
+== Steps to configure a basic routing bridge
 
 1. Check the forwarding configuration
 +
@@ -1947,6 +2013,7 @@ ipv6.addresses '2a01:4f8:210:512d::10/64' ipv6.gateway '2a01:4f8:210:512d::2'  c
 […]# reboot
 ----
 
+=== Testing the configuration
 
 1. Check the forwarding configuration
 +
@@ -1985,6 +2052,7 @@ SELinux should be in enforcing mode and firewalld active with zone FedoraServer 
 (d) ssh external desktop → VM
 (e) traceroute external desktop → host
 (f) traceroute external desktop → VM
+= Setting Up a Point-to-Point Network Connection
 Peter Boy
 :page-authors: {author}
 
@@ -1998,6 +2066,7 @@ Peter Boy
 This configuration is a special case for environments with specific security requirements, where the connection of network nodes to each other is subject to limitation and control.
 --
 
+== How it works
 
 Typically, a server (or desktop) is directly connected to a local network and all devices can connect directly to each other. In some environments, this is exactly what is not desired. Instead, each server (or desktop) is limited to connect directly only to a network access device, which can filter, block, or allow the data stream according to a variety of criteria. Typical use cases are high-security environments or data centers that offer collocation or dedicated, self-administered servers. In the latter case, the aim is simply to prevent administrators from inadvertently "hijacking" other customer's IP addresses by typing errors.
 
@@ -2008,6 +2077,7 @@ In a IPv4 network, a server unaware of the underlying limitation tries to establ
 For an IPv6 configuration, it is sufficient to specify the link address of the gateway.
 
 
+== Configuration of current Fedora releases
 
 Given an interface enp1s0 with IPv4 address of 192.168.133.100 and the gateway 192.168.133.1 you may configure the interface
 [source,]
@@ -2061,6 +2131,7 @@ default via 192.168.133.1 dev enp1s0 proto static metric 100
 192.168.133.1 dev enp1s0 proto static scope link metric 100
 ----
 
+== Pre Fedora 35 configuration
 
 These Fedora releases used _ifcfg-IF_NAME_ files in /etc/sysconfig/network-scripts/. This method dates back to the time before NetworkManager was introduced and network connections were managed with a collection of shell scripts. The shell scripts disappeared with the introduction of NetworkManager, but the configuration files if cfg-NAME was retained as the default configuration method in Release 36 for backward compatibility.
 
@@ -2100,6 +2171,7 @@ default via 192.168.133.1 dev enp1s0 proto static metric 100
 192.168.133.1 dev enp1s0 proto static scope link metric 100
 ----
 
+== Using systemd-networkd
 
 Some server administrators might prefer systemd-network over NetworkManager. Many of the NetworkManager features are very useful for desktops and laptops, but rather superfluous for servers. The configuration tool is a plain text editor.
 [source,]
@@ -2118,6 +2190,7 @@ Peer=192.168.133.1/32       # Gateway, /32 suffix mandatory here
 
 Configuration of IPv6 is done as usual by specifying the address and the gateway.
 
+= Virtualization
 Fredrik Arneving; Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}, {author_3}
 
@@ -2146,7 +2219,9 @@ Virtualization means that several complete and probably different operating syst
 
 Containers are an alternative often discussed. Here, several containers use the kernel of the host system simultaneously. The mutual isolation is lower, but the performance overhead is also lower.
 
+== Virtualization options in Fedora
 
+=== XEN
 
 XEN was the first virtualisation technique suitable for inclusion in a open source distribution as Fedora. This solution first boots a hypervisor that manages resource access and then subsequently loads the distribution kernel, which in the case of XEN takes on a special management function (Dom0). This technology is called 'Type-1' hypervisor and is the basis of many commercial virtualisation solutions, especially in the mainframe world.
 
@@ -2156,6 +2231,7 @@ Fedora was an early adoptor of XEN but preferred later KVM as virtualization sol
 
 *XEN* is still *natively supported by Fedora Server*
 
+=== KVM
 
 The development of KVM began later, when the issues with kernel additions were largely settled. It also benefited from being a true open source project, which made it easier to integrate modules into the kernel.
 
@@ -2163,22 +2239,26 @@ Technically, KVM follows a different approach as XEN. It requires an already ins
 
 Fedora was an early adoptor of **KVM/Qemu** and it is *natively supported by Fedora Server*.
 
+=== Fedora recommended Virtualization
 
 Fedora Project decided some time ago to replace XEN as the preferred virtualization and use KVM as default instead.
 
 Due to the 'Type-2'-like concept of KVM, Fedora Server Edition is first installed and configured as usual. System software required for virtualization is not automatically installed. In a second step, virtualization capabilities are added (it can be added as an option during installation to combine both into one step on the surface. However, a subsequent, precisely fitting installation is very much preferrable).
 
+== Adding Virtualization Support
 
 This step includes the xref:virtualization/installation.adoc[installation of the libvirt software and further configuration] steps. For example, external connectivity must be set up for virtual machines, e.g. through a virtual bridge or mac-vlan. Often, an internal network is also required for protected communication between the virtual machines or with the host system.
 
 After Fedora Server is enabled for virtualization, one or more virtual machines can be installed. This might be Fedora Server, or any other Linux distribution.
 
+== Adding Virtual Machines
 
 There are two common ways to install virtual machines:
 
 - Use of the __distribution's native installer__, often a bootable iso file originally intended for burning to DVD or transferring to a USB stick. A utility boots this iso file into an initially temporary virtual machine that runs the native installer, permanently setting up the virtual machine with the desired system.
 - Use of a _virtual disk image_ containing a preconfigurated, ready to boot operational system, often optimized for virtualization. A special case are cloud (base) images.
 
+=== Distribution's native installer
 
 With this method, the distribution's own installation procedure of the targeted distribution is executed in a virtual machine. In the case of Fedora, this is Anaconda, which most administrators are already familiar with from the host server installation. The learning curve is therefore very flat.
 
@@ -2190,11 +2270,13 @@ As the tool to run the distribution's native installer, Fedora recommends __Cock
 
 Experienced administrators can also initialize an installation via the command line using VNC and virt-install. However, if you don't have a routine for this and no stock of configuration snippets to build on, this is also quite time-consuming and, moreover, then error-prone.
 
+=== Virtual disk image
 
 The basic idea is not to always create a virtual disk anew when a new VM is to be installed. This involves going through the same configuration steps in Anaconda over and over again and let Anaconda copying the same rpm packages one by one from the installation media to the virtual disk. Instead, the administrator resorts to a preconfigured, bootable generic disk image and "imports" it in its entirety unchanged into the virtual machine as a virtual hard disk on one go.
 
 This import is unproblematic, since the virtualized central hardware elements of a QEMU/kvm Linux virtual machine of the same architecture hardly differ. Any remaining differences can be adjusted in the course of post-installation tasks. In this way, an installation that would otherwise easily take about a quarter of an hour is reduced to a few minutes.
 
+==== Fedora Server KVM virtual disk images
 
 Fedora provides on the Fedora Server download page with "Fedora Server 39 QEMU" a VM disk image in the qcow2 format. This format allocates dynamically only the amount of disk space which it actually required.
 
@@ -2202,6 +2284,7 @@ This VM resembles a Fedora Server installed on hardware as complete as possible.
 
 The article xref::virtualization/vm-install-diskimg-fedoraserver.adoc[Creating a virtual machine using Fedora Server Edition disk image] describes the process in detail.
 
+==== Custom virtual disk image repositories and generation tools
 
 There are several offerings available
 
@@ -2229,6 +2312,7 @@ The tool creates an elaborated image file. But in the current implementation it 
 +
 The extent to which the VM images created replicate the respective distribution is similarly questionable as with Virtual Builder.
 
+==== Cloud base images
 
 Most distributions provide "cloud images". These are virtual disk images, each custom built for easy installation in one of the cloud systems, e.g. Amazon's AWS or Google's GCP. They use cloud system specific features for configuration and administration provided by the respective cloud system, e.g. cloud-init for initialization at the first boot. These are not readily available on an autonomous server.
 
@@ -2237,6 +2321,7 @@ In addition, most distributions also provide a "cloud base image", a base system
 It is very different to what extent these cloud base images resemble an autonomous server of the respective distribution. In the case of Fedora, there is intentionally a fairly low resemblance to Fedora Server Edition. This path might be considered to be of limited usefulness.
 
 Installation is accomplished on the command line with a single and simple invocation of the virt-install program. The article xref::virtualization/vm-install-cloudimg-centos9.adoc[Creating a virtual machine using a distribution’s Cloud base image – the example of CentOS] describes the work to do in detrail for CentOS 9 stream.
+= Adding Virtualization Support
 Fredrik Arneving; Peter Boy; Jerry James
 :page-authors: {author}, {author_2}, {author_3}
 
@@ -2259,7 +2344,9 @@ Fredrik Arneving; Peter Boy; Jerry James
 Qemu-kvm in combination with Libvirt management toolkit is the standard virtualization methodology in Fedora. This optionally includes a local virtual network that you may use for protected communication between the virtual guest systems and between the guests and the host. Its default configuration enables access to the public network via NAT, which is useful for virtual machines or containers without direct access to the public network interface.
 
 
+== Preparation
 
+=== Hardware requirements
 
 QEMU / KVM require hardware virtualization support. The first thing to do is to make sure that it is available.
 [source,bash]
@@ -2268,9 +2355,11 @@ QEMU / KVM require hardware virtualization support. The first thing to do is to 
 ----
 The command will return one line per cpu core if virtualization is enabled. If not, you should first check in the BIOS whether virtualization is disabled.
 
+=== Storage set up
 
 Libvirt stores its data including the image files of the virtual hard disk(s) for the guest systems in /var/lib/libvirt. If you adhere to the default partitioning layout, the libvirt application data is stored in its own logical volume that you have to create in advance. You need to specify the size of the storage area, a unique name, and the accommodating VG (fedora in case of default partitioning). In the new logical volume, create an xfs file system and mount it at /var/lib/libvirt.
 
+==== Cockpit
 
 The easiest way is to use Cockpit. Start your favorite browser and navigate to your server, named example.com here.
 [source,bash]
@@ -2287,6 +2376,7 @@ In the 'Logical volumes' list, a new line appears with the LV name, libvirt in t
 
 After completion, the file system is immediately available and is also permanently configured in the system accordingly.
 
+==== Command line
 
 Some administrators may prefer the command line for easy scripting. Create a Logical Volume of appropriate size, 50 GiB in this esample, either in the system Volume Group (named fedora by default) or in the user data VG if created during installation. Adjust size and VG name as required.
 [source,]
@@ -2298,6 +2388,7 @@ Some administrators may prefer the command line for easy scripting. Create a Log
 ----
 
 
+== Installing libvirt virtualization software
 
 Installing the software is quite simple.
 [source,]
@@ -2323,6 +2414,7 @@ If everything is correct, the next step is to activate autostart after re-boot a
 
 With Fedora 35 libvirt switched to a _modular archtecture_ (since version 7.6.0-3) while used a single monolithic libvirt daemon up to Fedora 34 (version 7.0.0-x). The installation procedure is the same because the packaging system takes care of the differences. But activation and start up differs as well as installation and configuration of an internal protected virtual network between VMs and the host.
 
+=== Activation and startup with Fedora 34
 
 Enable automatic startup at boot and start libvirt.
 [source,bash]
@@ -2337,6 +2429,7 @@ By default, libvirt creates a (virtual) bridge with an interface virbr0, the IP 
 […]# firewall-cmd --get-active-zones
 ----
 
+=== Activation and startup with Fedora 35 and up
 
 The libvirt Fedora installation procedure provides systemd startup scripts that take care of enabling and starting the various unix sockets and services as needed. This includes support for qemu, xen and lxc. Configuration of vbox is disabled by default. The drivers determine during startup whether the required prerequisites are met and abort otherwise. The default services, qemu and lxc in case of Fedora Server, are started at boot time. If not used for about one minute they are deactivated, but will restart on demand as soon as a virtual machine is started (either by command line or Cockpit service). There is no need for administrator intervention at all.
 
@@ -2408,6 +2501,7 @@ lines 1-23 ...
 
 
 
+== Adjusting libvirt internal network configuration
 
 The default configuration of the internal network (virbr0) activates just a DHCP Server. If the virtual machines should also be able to communicate with each other and the host, then adding a DNS server is at least very advantageous. It is easier and less error-prone to address VMs and the host by name instead of IP numbers.
 
@@ -2454,6 +2548,7 @@ Check if the DNS resolution works.
 […]# dig  @192.168.122.1  host.example.com
 ----
 
+== Adjusting the hosts DNS resolution configuration
 
 In order for the host to initiate communication with its virtual machines, it must query the name server set up in the previous step for internal domains. So we need Split DNS. The default systemd-resolved DNS client in Fedora is basically split-DNS capable. Unfortunately it currently doesn't cooperate well with libvirt's virtual network and needs additional administrative efforts.. and its usage is quite unstable. Therefore we recommend switching to dnsmasq for the time being to provide stable split DNS.
 
@@ -2560,6 +2655,7 @@ P1: default - P2: started - P3: begin   @  Mon Mar ...
 +
 Everything should work fine now.
 
+== Switch to NetworkManager's dnsmasq plugin
 
 The NetworkManager Dnsmasq plugin is an easy way to add a local caching DNS server which is split DNS enabled. It provides the host with a lightweight, capable DNS server as an alternative to using systemd-resolve. By default it forwards all queries to an external, 'official' DNS server. We just have to configure the local libvirt domain.
 
@@ -2612,6 +2708,7 @@ Check the functionality of name resolution with internal and external addresses.
 ----
 
 
+== Finishing Cockpit-machines configuration
 
 Open your browser and connect to the Cockpit instance of your host server.  Consult the xref:installation/postinstallation-tasks.adoc[post-installation guide] to learn about the possible connection paths. Log in as root or with your administrative account. In the overview (start) page select `__Virtual Machines__` in the left navigation column.
 
@@ -2624,6 +2721,7 @@ Currently, it sometimes takes a long time to display additional installation opt
 
 image::virtualization/vm-install-cockpit-010.png[Cockpit Virtual Machines Page first used]
 
+=== Storage pools
 
 When first used, the list of virtual machines displayed in the center of the page is empty, of course. A box left above that list displays 0 Storage pools. Libvirt uses pools to determine the location of typical files. The installer has already created the directories. Only the pools need to be defined here.
 
@@ -2639,12 +2737,15 @@ Activate both pools in the drop down menu of each pool.
 
 You may create additional pools as needed, e.g. disk images via iSCSI in a SAN or as a logical volume in a volume group (LVM) on the host’s local disk. The latter offers better performance in theory, but the practical gain is usually rather small, if any. We will not go into further detail here for the time being.
 
+=== Networks
 
 A box on the right above the virtual machines list shows `__1 Network__` and lists the networks managed by libvirt. By default, it contains the internal network _default_ with the interface __virbr0__. The list does not contain the external interface. It is managed by the server. Nevertheless, it is available for virtual machines.
 
+== Completed
 Virtualization is now ready to use on the server and you can start setting up guest VMs.
 
 This guide just describes the Fedora specific way to use libvirt. For further information please use the https://libvirt.org/docs.html[libvirt project documentation].
+= Creating a virtual machine using Fedora Server Edition disk image
 Peter Boy
 :page-authors: {author}
 // :revremark: a new beginning
@@ -2664,6 +2765,7 @@ In this process, a number of properties and functionalities can be adapted to lo
 There exist a multitude of virtual disk images that claim to provide a server based on the Fedora distribution. An example of this is the xref:virtualization/vm-install-diskimg-virtbuilder.adoc[virt-builder] system. However, it is not a Fedora Server, but its own, deviating concept for the configuration of a server. And accordingly, e.g., the Fedora Server administration tools and principles may not fit. System administrators can also create their own disk images using tools such as _xref::tutorials/imagefactory.adoc[Image Factory]_ or __Image Builder__.
 
 
+== What you get
 
 To begin with, you gain time. Instantiating a virtual disk image takes only a few minutes, as opposed to running through the standard installation routines. The workload is significantly lower and correspondingly faster.
 
@@ -2673,6 +2775,7 @@ Unlike a cloud image, Fedora Server VM is designed to run like any self-sustaini
 
 _Fedora Cloud Image_ and _Fedora Server Image_ have in common that they adhere to the build process and control of the distribution.
 
+== How it works
 The creation of a virtual machine image involves two steps.
 
 1. *Provisioning the server VM image*
@@ -2690,6 +2793,7 @@ Each of these alternatives then follows a more detailed, mission-specific follow
 
 Overall, the process is very straightforward and efficient.
 
+== Provisioning the Server VM image
 
 We assume a complete installation of virtualization support according to the xref:virtualization/installation.adoc[Adding Virtualization Support] guide.
 
@@ -2730,7 +2834,9 @@ The example above expands the maximal capacity to 40 GiB. You can resize the vir
 +
 If you intend to create multiple VMs with similar structure, it may be useful to customize the customised file in detail. See section _Import via CLI and elaborated initial configuration_ further down.
 
+== Instantiation of a Server virtual machine
 
+=== Alternative 1: Import efficiently via CLI
 
 Copy the customized distribution file into the disk image pool and use virt-install to instantiate the new virtual machine. In the example, we assume that the VM has 2 interfaces, one for connecting to the public network and another for connecting to the internal protected network.
 
@@ -2784,6 +2890,7 @@ which you safely can ignore for now.
 
 We continue with this form in the step after describing the Cockpit way of instantiation.
 
+=== Alternative 2: Import comfortably via Cockpit
 
 1. Open Cockpit on your __host system__. The import expects the virtual hard disk at the final location. Therefore, copy the prepared customized disk image into the disk image pool, as you did in alternative 1 (CLI import). Select _Terminal_ in the left navigation column to perform this step.
 +
@@ -2818,6 +2925,7 @@ Finally, the screen displays the same configuration menu as with a CLI setup. Co
 
 
 
+=== Minimal initial configuration
 
 You have to use the terminal for this step, whether you performed the instantiation via CLI or via Cockpit.
 
@@ -3128,6 +3236,7 @@ If you opted for Cockpit to instantiate the VM you may use Cockpits graphical in
 
 Anyway, you should now test to connect via ssh to the system, if it provides an external interface.
 
+== Set up storage
 
 Fedora Server KVM follows the same storage organization principles as the base installation. The xref:installation/index.adoc#Planning_ahead[Fedora Server Installation Guide] explains the principles and the available choices. You have to make the same choice here.
 
@@ -3202,12 +3311,14 @@ Block device           253:0
 
 As you see, the Logical Volume is of the same size as the Volume Group, about 6 GiB.
 
+=== Available alternatives
 
 1. Enlarge the LVM partition to file all of the free space and enlarge the root file system alike. In this way, there is no separation of system and user data. This is convenient, but in no way recommendable.
 2. Enlarge the LVM partition to file all of the free space and enlarge the root file system to a reasonable value between 10 and 15 gb, depending on the intended total size of the disc. The remaining space in the Volume Group remains free for now. Later, the administrator  creates logical volumes for user data or applications as needed. This is the recommended way.
 3. Enlarge the existing VG and the root file system to a reasonable size. Create a new VG in the remaining region, which later accommodates LVs for user data. This pushes the separation even further.
 4. Enlarge the distributed virtual disk to a reasonable size to accommodate the root file system only and create one or more separate virtual disk(s) to accommodate user data.
 
+==== Alternative 2: Enlarge the VG to fill the disk, and root LV to a reasonable size
 
 1. Enlarge the LVM partition to fill the disk
 +
@@ -3277,6 +3388,7 @@ Logical volume sysvg/root successfully resized.
 ----
 […]# xfs_growfs /dev/mapper/sysvg-root
 meta-data=/dev/mapper/sysvg-root isize=512    agcount=4, agsize=392960 blks
+=                       sectsz=512   attr=2, projid32bit=1
 ...
 data blocks changed from 1571840 to 3145728
 
@@ -3289,6 +3401,7 @@ Filesystem              Size  Used Avail Use% Mounted on
 
 For the last 2 steps you can also switch to __Cockpit__. But the 2 lines may not be worth it unless you use the Cockpit terminal anyway.
 
+==== Alternative 3: Create a separate Volume Group for user data
 
 1. Perform the steps described in alternative 2, but specify the size of the LVM partition by e.g. 20G and the root LV to 12G. In this way, there is still some room for disposition in case of surprises.
 
@@ -3318,11 +3431,13 @@ usrvg   1   0   0 wz--n- <16.00g <16.00g
 Later, use usrvg to create LVs for user data as needed.
 
 
+==== Alternative 4: Create a separate virtual disk for user data
 
 The prerequisite is that the configuration of the system disk has been completed. Perform the steps described in alternative 2, but enlarge the distributed system virtual diskimage and correspondingly the VG to e.g. 20G and the root LV to 12G. In this way, there is still some room for disposition in case of surprises. With a separate data disk, alternative 1 would be an option, too.
 
 You can use either _CLI_ or _Cockpit_ for this step.
 
+==== Using CLI
 
 . On the host system, create a _new virtual disk_ in /var/lib/libvirt/images
 +
@@ -3402,6 +3517,7 @@ Physical volume "/dev/vdb1" successfully created.
 
 Later, use usrvg to create LVs for user data as needed.
 
+==== Using Cockpit
 
 1. Open Cockpit on your host system, select _Virtual Machines_ in the navigation column, and then select the machine to which you want to add a disk. Scroll down until you see the disk section. Finally, select _Add disk_ on the right side of the subtitle bar.
 +
@@ -3420,10 +3536,12 @@ image::virtualization/diskimg-fedoraserver-32.png[VM storage view]
 image::virtualization/diskimg-fedoraserver-35.png[VM disk partitioning]
 
 
+== Follow-up customization
 
 It is advisable to review all the tasks in the general xref:installation/postinstallation-tasks.adoc[post-installation guide] for virtual machines as well.
 
 
+= Installing the Fedora Server Edition as a virtual machine using Cockpit
 Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}
 
@@ -3448,6 +3566,7 @@ The objective here is to install a Fedora Server in a virtual machine using the 
 The descriptions can also be used as a blueprint for installing other distributions with the respective distribution&#8217;s own installation media.
 
 
+== Why Cockpit
 
 Fedora Server is designed as a "headless" system, i.e. it comes without an elaborate graphical user interface and corresponding hardware. Only a simple text console is available. A system administrator has to perform all work on the machine using the command line.
 
@@ -3457,6 +3576,7 @@ First hand, Cockpit saves the memorization of the complex parameter zoo of __vir
 
 Therefore, Cockpit is useful for a beginner in server administration, for the part-time administrator as well as for experienced administrators. Particularly impressive is, that Cockpit does not require its own specific configuration organization, but strictly uses the standard configuration methods. So you can mix and match Cockpit based and CLI based administration work. This makes it pleasantly different from the popular NAS devices or even professional interfaces such as the old Sun Cobalt appliances or ISP Config.
 
+== Preparations
 We assume a complete installation of virtualization support according to the xref:virtualization/installation.adoc[Adding Virtualization Support] guide.
 
 Open your browser and connect to the Cockpit instance of your host server.  Consult the xref:installation/postinstallation-tasks.adoc[post-installation guide] to find out the possible connection paths. Log in as root or with your administrative account. In the overview (start) page select `__Virtual Machines__` in the left navigation column.
@@ -3467,6 +3587,7 @@ image::virtualization/vm-install-fedoraserver-cockpit-010.png[Cockpit Virtual Ma
 
 
 
+=== Provisioning installation media
 
 Cockpit offers the option to load an installation medium not only locally, but also from a remote location. Especially if several virtual machines are to be installed, it is more efficient to keep the installation medium locally.
 
@@ -3485,6 +3606,7 @@ You can safely ignore the warning of the last command about not correctly format
 
 You can provide additional installation media in an analog way. With everything necessary in place, we can start installing a virtual machine.
 
+== Basic configuration of the virtual machine to get installed
 [IMPORTANT]
 ====
 This guide uses Cockpit, version 326, and Cockpit machines, version 321. On updated systems, you may have an updated version and see slightly different screens.
@@ -3519,11 +3641,13 @@ The upper part offers the opportunity to configure a number of general propertie
 
 Adjust the options according to your need.
 
+=== Disks
 
 The disk list shows that Cockpit has created a virtual disk in the pool _Disk images_, which resides in the `~/libvirt/images` directory. The virtual machine name is used as the name of the disk image file. The file extension qcow2 indicates a dynamic image format that occupies only as much space as the available data require and grows as needed to the maximum set size. This can be seen clearly in the _Used_ and _Capacity_ columns.
 
 The administrator does not need to worry about all these details. A clear benefit of Cockpit.
 
+=== Network connections
 
 The list of network interfaces shows only one interface, the internal network managed by libvirt. However, virtual machines are mostly used for tasks that require access to the public network and also require reachability _from_ the public network. Examples are web and mail servers or other custom services. The key part is to isolate these accesses from the host server for security reasons.
 
@@ -3539,6 +3663,7 @@ Next, if you also want an internal network, select `__Add network interface__`. 
 
 Now everything is ready and the installation can begin.
 
+== Interactive installation
 
 Select `__Install__`  at the top of the form. After a short time you see the well known initial screen of the install procedure.
 
@@ -3565,6 +3690,7 @@ A comparison of the two image files reveals that the originally created image is
 Follow the accompanying tutorial to prepare the copied image for reuse.
 ____
 
+== Virtual machines post installation tasks
 
 There are some post-install task that are specific for a virtual machine. Otherwise, it is the same tasks that are performed after a bare-metal installation.
 
@@ -3586,6 +3712,7 @@ All subsequent tasks must be executed with ROOT privileges. If the root account 
 [sudo] password for <user>:
 ----
 
+=== Mandatory post-installation tasks
 
 1. *Check hostname and time synchronisation*
 +
@@ -3701,6 +3828,7 @@ The installer assigns all interfaces to the _FedoraServer_ zone, which limits ac
 +
 Refer to the corresponding section in the   xref:installation/postinstallation-tasks.adoc#_4_increase_security_of_cockpit_access[post-installation guide] to find options to enhance security of Cockpit access.
 
+=== Optional post-installation tasks
 
 1. *Making vim the default editor*
 +
@@ -3739,6 +3867,7 @@ Ensure, parameter search-domain is empty!
 
 
 It is also advisable to review all the tasks in the general xref:installation/postinstallation-tasks.adoc[post-installation guide] for virtual machines as well.
+= Creating a virtual machine using a generic disk image – the example of virt-builder
 Peter Boy
 :page-authors: {author}
 // :revremark: a new beginning
@@ -3751,6 +3880,7 @@ Many people and professional journals describe virt-builder as a way to "__quick
 The differentiation may be subtle. But those phrases distract from the fact that the entire process depends entirely on a large binary blob. And for a system built and trusted on free software, the question of how that blob is created deserves attention.
 ____
 
+== How it works
 The creation of a virtual machine image involves two steps.
 
 1. The System Administrator invokes virt-builder and specifies the desired virtual machine properties via parameters. This includes in particular a user account, if necessary a password for root, hostname, and if desired additional programs to be installed, network configuration and other options. The program usually invoked in a way to save the created image right away in the machine images pool `/var/lib/libvirt/images`.
@@ -3763,6 +3893,7 @@ This step is where the main work is done and it largely determines the final res
 
 Overall, the process is very straightforward and efficient.
 
+== Select and customize a virtual machine binary – the example of CentOS
 
 This step does the main work.
 
@@ -3810,6 +3941,7 @@ same directory.
 ----
 Some system administrator may not know off the top of their head what the @core module leaves off. And the abbreviated link provided doesn&#8217;t help much either.
 
+=== Minimal effort customization
 Even a quick and experimental setup should take the opportunity to set a number of configurations for the virtual machine very easily right from the start. These include
 
 * Either set up or block (recommended) the ROOT account
@@ -3857,6 +3989,7 @@ Free space: 4.3G (80%)
 As you see, the virtual disk size is 6.0 G with 4.3 G at your disposition.
 
 
+=== Some optional additional customization
 
 1. As noted above, the maximum disk size is 6 G  with about 4 G at your disposition (you may not fill the space 100%). That is not too much and you might want to enlarge it.
 +
@@ -3874,6 +4007,7 @@ You can resize the virtual disk later, too. Therefore, there is no reason to pla
 You should _not_ increase the maximum virtual disk image size by the _virt-builder parameter_ `--size`. It would increase the physical disk size to the same amount, which you probably don&#8217;t want.
 2. Additional information provides the virt-install https://libguestfs.org/virt-builder.1.html[man page].
 
+== Using virt-install CLI to instantiate the VM
 
 Use a terminal window. First, you may check the correct naming for the parameter os-variant.
 
@@ -3922,9 +4056,11 @@ localhost login:
 
 Log in with the administrative user account (hostmin in this example). You can log in without a password, but you must create a (new) password immediately.
 
+=== Adjust the new VM instance
 
 You did a minimal customization so var and need to do some further adjustments.
 
+==== Network consolidation
 
 1. Check the available network connections
 +
@@ -3978,6 +4114,7 @@ Specifically for the internal interface (usually enp2s0) you might want to assig
 […]# nmcli con up enp2s0
 ----
 
+== Using Cockpit's graphical UI to instantiate the VM
 
 Select _Virtual Machines_ in the left navigation bar und click on __Import VM__. A new form will open up
 
@@ -3989,15 +4126,18 @@ Fill the remaining fields accordingly. Finally, deactivate __Immediately start V
 
 Select _Import_ to create the basic virtual VM definition. It takes a short time and then the Virtual machines page is displayed again. It’s list of virtual machines now shows an entry with the just defined VM in the status "Shut off" and as next action "Run".
 
+=== Extended definition of the virtual machine
 
 Clicking the virtual machine name in the list opens a detailed configuration page.
 
 image::virtualization/vm-install-diskimg-virtbuilder-020.png[Cockpit `__Virtual machin overview form__`]
 
 
+=== Autostart
 
 Adjust the autostart option in the upper part according to your need.
 
+=== Network connections
 
 The list of network interfaces shows only one interface, the internal network managed by libvirt. However, you want to have external access, too. The key part of most VMs is to isolate public accesse from the host server for security reasons.
 
@@ -4015,6 +4155,7 @@ Now everything is ready. Select "Run" at the top to complete the import and to s
 
 The Console window shows the startup process and finally the login prompt. Log in with the administrative user account (hostmin in this example). You can log in without a password, but you must create a (new) password immediately.
 
+== Post instantiation tasks
 
 If you look around, you will find
 
@@ -4026,13 +4167,16 @@ If you look around, you will find
 
 The resemblance of a CentOS server is not perfect, but fairly well done.
 
+== Conclusion
 Overall, the virt-builder/guestfs-tools-project provides an amazing opportunity to quickly and straightforwardly create a well-crafted virtual machine, instantiating various different distributions. Fortunately, it is an open source project, but unfortunately the "openness" did not receive detailed attention. It is very hard to figure out how to access the source code. So, it is difficult to learn how the virtual machine is built in detail and to check for potential malicious ingredients. The provided information is quite scanty and sometimes misleading.  For example, the information on Fedora reads: "Fedora® 35 Server". However, the virtual machine created does not have much to do with "Fedora Server Edition". More appropriate would be something like "Some server based on Fedora RPM's". Sponsored by Red Hat, a lot of Red Hat engineers are engaged in the project. So you may (and should) pay some leap of faith, anyway.
 
 A system administrator cannot expect to get a differently built, but otherwise identical build  of a distribution. This will need a closer assessment and more or less detailed rework.
 
 An alternative is an xref:virtualization/vm-install-cloudimg-centos9.adoc[instantiating using a cloud base image]. In the end, both ways produce a similar result that requires some reworking anyway. If available, neither can replace a virtual machine disk image created directly by the distribution itself.
 
+== Appendix
 
+=== Short explanation of the virt-install parameter used
 
 --name VM_NAME:: Unique name of the VM to install as shown e.g.in VM  list
 --memory 3074:: Amount of memory to allocate, adjust as appropriate
@@ -4046,9 +4190,11 @@ Enables to login either via Cockpit terminal window or via host terminal using `
 --network direct,source=enpXsY,source_mode=bridge, model=virtio:: specify _external_ netwok (macvlan) __first__, it will get the name eth0 as usual. Adjust interface name as appropriate.
 --network bridge=virbr0,model=virtio:: specify the _internal_ network (libvirt generated bridge) _second_. It will get the name eth1 as usual.
 
+=== Virt-install in Fedora or CentOS
 
 Critical for customization to work is SELinux relabeling, not only in the case of installing additional software, but for virtually any customization.
 
+= Creating a virtual machine using a distribution&#8217;s Cloud base image – the example of CentOS
 Peter Boy; Jan Kuparinen;
 :page-authors: {author}, {author_2}
 // :revremark: a new beginning
@@ -4070,6 +4216,7 @@ Depending on the distribution, cloud images may differ more or less from a defau
 
 _The system administrator must investigate whether the cloud image does meet the requirements and expectations associated with using a VM of the distribution_.
 
+== How it works
 A cloud image is a kind of template, a runtime agnostic bootable generic operating system directory tree. It is used directly as a bootable (virtual) system disk in a virtual machine to be created, although still practically unusable due to lack of concrete runtime-specific configuration.
 
 The challenge is to initially inject the specific runtime configuration into the image. This includes first of all a user account with password and administration authorization. In addition, network configuration, console or other devices may be required. Only then does a cloud image gets the ability to run in a specific environment and, above all, become usable. This is the prerequisite for being able to perform detailed and more extensive configurations later on, if necessary.
@@ -4087,12 +4234,14 @@ A third option is
 
 a generic tool to modify any non-running virtual machine, provided by `guestfs-tools`. It allows to install cloud images of older distributions like CentOS 7 or earlier Ubuntu editions.
 
+== What you get
 In particular, you get time. The workload is significantly lower and correspondingly faster.
 
 But by cloud base image you (usually) don’t get an alternatively built but otherwise identical build of a (server) distribution. There are some subtle differences. Some are conceptual. For example, most cloud images do not install a firewall. The cloud system usually provides this function. The use concept for the persistent storage is also different due to technical differences. And last but not least, cloud image developers may have different goals than the developers of the server variant installation of a distribution.
 
 _It is up to the system administrator to decide whether the functionality is identical to the extent that the advantages outweigh the disadvantages and it makes sense to use a specific cloud image as a virtual machine._
 
+== How to proceed
 First of all you need a working Fedora Server Edition including virtualization support added and libvirtd daemon active. We assume an internal network 'default' with virbr0, DHCP, and DNS set up as well (see section 'Add Virtualization Support'). External network connectivity will be provided by macvlan (ethernet interface) rsp. macvtap (libvirt naming).
 
 You have various options:
@@ -4105,6 +4254,7 @@ You have various options:
 
 We will only cover the former two variants here. They are so universal that they are applicable to virtually all distributions. The latter ones are heavily dependent on details of a particular distribution.
 
+== General preparations
 Whichever of the presented installation methods is chosen, a cloud image always has to be downloaded and verified. In the case of CentOS, this involves the following steps.
 
 1. Check on the CentOS project site the lastest release of GenericCloud image:
@@ -4140,9 +4290,11 @@ refcount bits: 16
 +
 The virtual size, i.e. the amount of storage available to a VM at runtime, is 10 GiB. The actual file size is much smaller, due to the dynamic property of the qcow2 format. It grows on demand while executing.
 
+== Using Cockpit for a graphical interactive installation
 
 You can start without any additional preparations.
 
+=== Installation
 Select _Virtual Machines_ in the left navigation bar und click on __Create VM__. A new form will open up
 
 image::virtualization/vm-install-cloudimg-centos9-010.png[Cockpit `__Create new virtual machine__` form]
@@ -4165,6 +4317,7 @@ Select _Create_ to start the installation.
 
 _After some seconds the VM is up and running._
 
+=== Post installation tasks
 
 In the list of running virtual machines click on the newly created box.
 
@@ -4176,6 +4329,7 @@ Log in with the root account. If you look around, you will find some resemblance
 
 So there is some post-installation work to do.
 
+==== Adjust locale and non-US keyboard layout
 Users of a non-US keyborad layout probably want to customize the keyboard layout first of all.
 
 1. Check the current locale configuration
@@ -4213,6 +4367,7 @@ de-nodeadkeys
 The setting is immediately activ.
 
 
+==== Network configuration
 
 As noted, there is only one internal network connection. If the VM is only to take over internal services, this is perfect. Skip this section.
 
@@ -4241,6 +4396,7 @@ Replace the interface type by `__Direct attachment__` and select the external ph
 
 5. Start the virtual machine again.
 
+==== Check network connections
 1. *Check internal connections*
 +
 From a terminal window in the host system you should be able to ping your VM using the internal virtual network.
@@ -4264,6 +4420,7 @@ From a machine on your network try to ping the virtual machinge
 In case of issues proceed analog to the internal connection.
 
 
+=== Security Enhancement
 
 A Cockpit installation cannot implement the widely used security concept of locking the root account. It requires additional administrative modifications later on. In the CentOS default configuration, however, root can log in via ssh and password. A certain protection of the root account exists nevertheless.
 
@@ -4319,11 +4476,13 @@ Cockpit should start up as soon as you connect with your browser.
 […]# virsh autostart vm1-el9
 ----
 
+== Using virt-install for a CLI interactive minimal effort installation
 
 This type of installation uses the `--cloud-init` parameter of `virt-install` without any value or subparameters. The approach causes the generation and display of a root password shortly after the start of installation, enabling a one-time login. You have to note or copy it, of course.
 
 Apart from that, the configuration is limited to configuring and starting DHCP-supported Ethernet interfaces. Other interfaces are basically defined but not dealt with further.
 
+=== Addition preparations
 Essentially, you need to copy the downloaded image file to the libvirt disk images pool yourself and name it as needed.
 
 1. Copy the disk image from the installation media pool to the disk images pool and choose the intended VM name as target.
@@ -4346,6 +4505,7 @@ The example above adds 10 GiB to a total size of about 20 GiB.
 +
 You can resize the virtual disk later, too. Therefore, there is no reason to plan too generously in terms of size now. Due to the qcow2 format resizing does not affect the current image file size. It is dynamically adjusted as needed up to the maximum specified.
 
+=== Installation
 Use a terminal window to execute
 [source,]
 ----
@@ -4399,6 +4559,7 @@ Log in to the root account giving the password displayed early in the installati
 __**NON-US system administrators**__: Cloud Image usually configures a __US keyboard__ first! The easiest way is to copy & paste the password. Limit the new password to matching key positions, choose a rather simple one to minimize the chance ot typos, and change it to a secure password later after keyboard configuration..
 ====
 
+==== Post-Installation Tasks
 As usual, also in computer science the "law of conservation of energy" applies. The lower the installation effort, the greater the post-installation requirements.
 
 1. Non-US system administrators should adjust the layout first.
@@ -4538,13 +4699,16 @@ Everything is working fine now, nearly out of the box. You would now start confi
 *In the end it takes only some 5 minutes to set up a fully functional system with minimal effort.* It is ideal to quickly create a virtual machine for an ad-hoc solution or as an interim solution for a test.
 
 
+== Conclusion
 
 Using any of the described installation methods, provides an quite comfortable installation and configuration process that would otherwise consume a lot of time. It is this performance that makes the use of cloud images so attractive.
 
 The use of Cloud Base Images to create a distribution's virtual machine installation comes with some inevitable inconveniences and  shortcomings due to the different nature of the techniques. So, in a production deployment you may be better off with dedicated virtual machine images, if available. But for experimentation and testing it should be viable and suitable.
 
 
+== Appendix
 
+=== Short explanation of the virt-install parameter used
 
 --name VM_NAME:: Unique name of the VM to install as shown e.g.in VM  list
 --memory 3074:: Amount of memory to allocate, adjust as appropriate
@@ -4559,6 +4723,7 @@ The use of Cloud Base Images to create a distribution's virtual machine installa
 --cloud-init:: Deal with nocloud configuration using defaults
 
 
+= Managing virtual machines with Cockpit
 Peter Boy
 :page-authors: {author}
 // :revremark: a new beginning
@@ -4572,6 +4737,7 @@ A virtual machine is created under certain assumptions about required memory, da
 The article describes selected often recurring reconfiguration tasks.
 ____
 
+== Manage virtual machines configurations
 
 In your local browser, open Cockpit on the host system using port 9090, e.g. `https://example.com:9090`. Log in either as root or with your administrative account. Select "Virtual Machines" in the left navigation column.
 
@@ -4582,6 +4748,7 @@ If there is no tab "Virtual Machines" the corresponding Cockpit module, cockpit-
 
 The virtual machines _overview page_ lists in the central area all virtual machines installed along with their current state. In the example above there are 3 virtual machines, 2 of them running. The most frequently executed action, shutdown rsp. launch, is directly accessible as a button. Additional  commonly needed functions are offered in a drop-down menu to the right of it. It even offers a (simple) migration to another machine.
 
+=== Manage a virtual machines basic host runtime environment
 
 If you click onto a VMs name, a details page opens. In the top half it shows the basic runtime parameter along with a terminal window into the VM.
 
@@ -4595,9 +4762,11 @@ Very useful in everyday operations are the real-time information about the _reso
 
 And of course, especially convenient is the _terminal window_ into the virtual machine. An uncomplicated way to quickly perform a CLI operation in the graphical interface - the best of both worlds.
 
+=== Manage a virtual machines storage
 
 A VM usually uses a (virtual) disk provided as a disk image file in the Libvirt pool _images_ (/var/lib/libvirt/images), either in qcow2 or raw format. And managing storage means manipulation of the respective file.
 
+==== Increase a virtual disk
 
 Cockpit is powerful but not (yet) perfect. The current version does not provide a graphical tool for that purpose. The system administrator still has to rely on CLI tools like __qemu-img__ or the __virt-*__ utilities of __guestsfs-tools__. Fortunately, we just have to use the CLI tool to increase the virtual disk image while the VM is stopped. Afterwards, we can start the VM again and use the VM's Cockpit to reconfigure the storage.
 
@@ -4623,6 +4792,7 @@ As the info shows, the virtual disk size is now 32 GiB. The file still occupies 
 
 This is due to the qcow2 file format, which dynamically occupies the necessary space as needed. Therefore, the size of the extension should be chosen quite generously to potentially save the work of a later re-extension. In the case of multiple virtual machines, the sum of their size can also exceed the real available space. This is not a problem as long as not all virtual machines at the same time grow to a much greater extent than planned. However, flexibility is gained in the case of disproportionate growth of some single virtual machines.
 
+==== Reconfigure an increased virtual disk
 
 After starting vm2 again the _Storage_ page now shows unsurprisingly a disk of 32 GiB, but nothing else changed. So the disk has now 20 GiB unallocated space.
 
@@ -4650,6 +4820,7 @@ image::virtualization/vm-management-cockpit-007.png[Cockpit create volume group 
 
 In the form that opens, enter a name for the Volume group, here in analogy to fedora_fedora of the system area __fedora_user__, select the newly created partition __/dev/vda3__, and create the Volume group. The form closes and on the _Storage_ page you find a new device, the fedora_user Volume group of 20.0 GiB.
 
+==== Setup separated disk space for user data
 
 As already mentioned, in compliance with the Fedora Server storage concept, a data area separate from system data should contain the service and user data. One FSH-compatible way is to mount the _/srv_ directory in a separate Logical volume and store therein the respective data for all services. Another way is to mount a well-known dedicated application directory into its own Logical volume. For example, in Fedora Server, PostgreSQL stores all its data into _/var/lib/pgsql_ or Apache httpd in __/var/www__. These directories are each mounted in their own Logical volumes, preferably before the software is installed.
 
@@ -4690,6 +4861,7 @@ If you moved files out of the way at the beginning, you can restore them now. To
 
 Now is the time to install the appropriate programs. Software provided by Fedora distribution as rpm installs into the appropriate system directories via dnf tool. External software should install in either `/opt` or `/usr/local` to keep it separated from distribution files to prevent any potential mutual interference. In accordance with the storage rationale, you should also create a separate logical volume and mount it under /opt. An example of this would be Wildfly application server, which stores program, configuration and possibly data in a common place.
 
+==== Add a virtual disk
 
 Expanding the virtual (system) disk is not the only way to provide additional storage, nor is it necessarily the best way. In the case of virtual disk images, creating a dedicated virtual disk instead of creating Logical volumes is a solid, often better alternative. It adds more flexibility. For example, in case of the "cold standby" VM mentioned above, the system administrator can assign the (virtual) disk with the entire current dataset to the other VM in less than a minute.
 
@@ -4707,6 +4879,7 @@ On the right side you see the newly created disk listed as part of the (virtual 
 
 The system administrator can create a partition table and one or more partitions, can create a Volume group and Logical Volumes the same way as described in the previous section. It is also possible to set up and mount a file system directly without a partition table. Cockpit enables and supports all these options comfortably and efficiently.
 
+== Manage Libvirt disk pool
 
 It is not only the disk images of virtual machines that need to be adjusted at times. The space on the host for these files can also run out and require expansion.
 
@@ -4718,7 +4891,9 @@ In the example above, the system administrator choose to provide a separate stor
 
 It couldn't be simpler or faster.
 
+== Manage network connectivity
 
+=== Manage libvirt virtual network
 
 The current version of Cockpit (255) doesn't offer such many configuration options for a libvirt managed virtual network so far. Cockpit lists the existing virtual networks under the "Network" link at the top line by line. Mostly this is only the default network. By expanding the line, the editing options become visible.
 
@@ -4734,11 +4909,13 @@ The system administrator can select a __Forward mode__, either NAT, Open, or non
 
 All in all, a system administrator will be rather reluctant to modify anything on the network infrastructure frequently, if at all. So nothing important for daily operation is missing here.
 
+=== Manage a virtual machines network connectivity
 
 Cockpit offers a broader support for the network configuration of virtual machines. You can add and delete a network interface, but fully edit its properties as well.
 
 The network options are located at the bottom of the screen of the respective virtual machine, in most cases outside the viewable pane, and are easy to overlook.
 
+==== Add an interface
 
 You may have configured a virtual machine with just a public interface in order to provide some public service. According to the general recommendations it uses mac-vlan as an efficient connection type. In the virtual machines Cockpit GUI it shows up as "type: direct" and "Source: enp1s0", the host's physical interface [1].
 
@@ -4754,6 +4931,7 @@ In case of an internal interface leave everything as suggested, but just activat
 
 The interface shows up below the public interface. And inside the virtual machine a "__ip a__" shows and additional connection "enp7s0". Cockpit sets everything up on its own, no further involvement of the system administrator required.
 
+==== Modify an interface
 
 You may have configured a virtual machine with just an internal interface, which works perfectly as (the only) interface enp1s0. Now you need public access instead. The easiest way is to edit the interface definition in Cockpit.
 
@@ -4765,6 +4943,7 @@ The form shows the definition of the current internal network. Just modify the _
 
 Even if you need a public interface in addition to the existing internal interface you may prefer to edit the existing interface and later add a new internal interface. That way you follow the common practice of always setting up the public interface as the "first" one, i.e. enp1s0 or eth0.
 
+==== Delete an interface
 
 As an example, the virtual maschine is equipped with two interfaces, a public (enp1s0) and an internal (enp7s0).
 
@@ -4774,6 +4953,7 @@ Probably you don't want a public interface but that machine well protected from 
 
 An _nmcli conn show_ still lists the connection enp1s0, but without an attached device. The reason is that it was the first interface explicitly set up during installation. Therefore it was persisted in /etc/NetworkManager/system-connected and the file is still there (allthough without any device configuration options). Cockpit does not delete a configuration file.
 
+== Simplified Access to VMs Cockpit
 
 Typically, a (physical) server does host not only one, but several or even a huge number of VMs. Each VM will have a running Cockpit Web Interface. To access it, you have to open a Browser window, connect and login to respective VM you want to work with separately - even if you only want to do the most minimalist of tasks. It's certainly not difficult, but it is cumbersome.
 
@@ -4794,6 +4974,7 @@ On this occasion, select automatic login via ssh keyfile. Cockpit will create on
 
 You can also log in as root. However, the default configuration does block a password-supported root ssh login. You have to generate a keyfile pair manually in advance and also install the public part in the VM. You can then select it for a root connection.
 
+== Security Considerations
 
 A Fedora installation makes several efforts to minimize public exposure. One of these is to prevent password-based root login via public interface. At the same time, Fedora Server installs by default Cockpit and opens the firewall accordingly. That way it introduces a password-based login again, including terminal access. That counteracts in a way the ssh measure.
 
@@ -4829,6 +5010,7 @@ You can access the Cockpit interface using `https://localhost:9090` in your favo
 
 
 
+== Concluding remarks
 
 The examples here cover only the most common administrative tasks in virtual machine management. Currently, Cockpit can not completely replace the terminal window CLI. But the software is regularly updated and extended. A task that is currently not supported might be included in the next release. It's worth getting into the habit of briefly checking Cockpit's support for each new task.
 
@@ -4837,6 +5019,7 @@ The examples here cover only the most common administrative tasks in virtual mac
 
 
 
+= Setting up Nested Virtualization
 Peter Boy; Christopher Klooz
 :page-authors: {author}
 
@@ -4851,6 +5034,7 @@ Peter Boy; Christopher Klooz
 This technique uses virtual machines - or more generally virtualization techniques - within an (already) virtualized machine. In Fedora, this works by default "out of the box" and basically requires no further configuration - provided that hardware support is available. This is true for nearly all Intel Core-i processors released in the last decade.
 
 
+== Introduction
 
 With this technique, you can create a (nested) virtual machine running on an already virtualized Fedora Server (referred to as Level 1), which in turn runs on a physical Fedora Server host hypervisor (referred to as Level 0). The level 1 virtualized Fedora Server acts itself as hypervisor for a level 2 virtualized Fedora Server (or comparable virtualization).
 
@@ -4859,6 +5043,7 @@ Nested virtualization relies on host hardware virtualization extensions to work.
 However, that does not mean it should be used as a standard configuration. The technology generates a high processor load and requires very powerful processors to work flawlessly. With older Intel processors, it is more suitable for exceptional cases or for testing and development.
 
 
+== Checking out the current configuration
 
 1. The (physical) host CPU must support nested virtualization.
 +
@@ -4901,6 +5086,7 @@ c. To make the change permanent and cope with a restart, edit
 options kvm_intel nested=1
 ----
 
+== Setting up a VM for nested virtualization
 
 1. If not already done, create a Fedora Server Edition VM you want to use with nested virtualization. Follow the steps as described in xref:virtualization/vm-install-diskimg-fedoraserver.adoc[Creating a virtual machine using Fedora Server Edition disk image].
 +
@@ -4925,6 +5111,7 @@ There may be 2 warings about IOMMU and secure guest support, which you can savel
 
 4. Finally, create a Fedora Server Edition VM following the steps as described in xref:virtualization/vm-install-diskimg-fedoraserver.adoc[Creating a virtual machine using Fedora Server Edition disk image] and configure it as needed.
 
+=== Optional: Customize the processor configuration
 
 By default, the Prozessor of a virtual machine is a virtualized version of the host processor type. This way, nested virtualization works, but possibly with too large performance losses. A remedy may be a changed kernel configuration, especially a passthrough configuration.
 
@@ -4940,9 +5127,11 @@ The passthrough mode might resolve a performance issue for nested VMs, but usual
 
 This is also the place where you can configure a specific processor for the VM, if that is required.
 
+== Additional documentations
 
 RHEL 8 docs: link:https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_virtualization/creating-nested-virtual-machines_configuring-and-managing-virtualization#doc-wrapper[Chapter 18. Creating nested virtual machines]
 
+= Installing Fedora Server Edition as a Virtual Machine using Proxmox Virtual Environment
 Paul Maconi
 :page-authors: {author}, {author_2}
 
@@ -4964,9 +5153,11 @@ Paul Maconi
 This document outlines a method for installing link:https://fedoraproject.org/server/download[Fedora Server from the qcow2 image^] as a virtual machine in the Proxmox Virtual Environment, henceforth simply Proxmox. VMs can be spun up very quickly after importing the disk image, saving much time and frustration. The setup used when writing this document may not match what yours, so certain details like file paths for the disk images may vary.
 
 
+== Why Fedora Server on Proxmox
 
 Proxmox is an open source server virtualization management solution based on QEMU/KVM and LXC with a web interface for managing most aspects of the VM workflow. It is also popular with homelab enthusiasts. The Fedora Server disk image shortcuts the provisioning process by providing a pre-installed disk image that boots straight into the final setup menu. You can have a fresh Fedora Server VM provisioned in just a couple of minutes using this method.
 
+== Brief summary for experienced Proxmox users
 
 Here are the key details if you're already familiar with creating virtual machines in Proxmox.
 
@@ -4976,9 +5167,11 @@ Here are the key details if you're already familiar with creating virtual machin
 ** `qm disk import [vm_number] [image_name.qcow2] [target_storage] --format qcow2`
 * You must attach the disk and ensure it is selected in the boot order under `options` for the VM before you try to boot the system.
 
+== Procedure
 
 Note: This document assumes that you have ssh access to a Proxmox node and that you have already downloaded the Fedora Server qcow2 disk image. It also assumes centralized storage on an NFS mount, but your storage configuration may differ if you use local LVM storage or Ceph. We provided screenshots for each step of the VM configuration process, but the overall procedure comes from the link:https://pve.proxmox.com/wiki/Migrate_to_Proxmox_VE#Import_Disk[Proxmox Wiki].
 
+=== Locate the image file and upload it to Proxmox
 
 Before we create the VM, we will need to find and upload our disk image to the Proxmox node. In the screenshot below you can see that we explored the system to determine that it is using centralized NFS storage mounted at /mnt/pve/nfs-kraken, and we made a directory at some point called osimages to contain our disk images.
 
@@ -5018,6 +5211,7 @@ Fedora-Server-KVM-41-1.4.x86_64.qcow2          100%  659MB 110.7MB/s   00:05
 aggraxis@whirlwind:~/Desktop/osimages$
 ----
 
+=== Verify the image is in place
 
 While not completely necessary, we logged back in to the Proxmox node and verified that the file had actually uploaded to the target directory. We'll come back to this path later when it is time to import the disk image to a VM.
 
@@ -5047,16 +5241,19 @@ drwxrwxrwx 1 root root   294 Apr 16  2024 ..
 root@pve-m-0:~#
 ----
 
+=== VM Creation: General
 
 Click on the `Create VM` button in the Proxmox UI, and the VM creation wizard should start. Select a node and give the VM a name. Note the VM ID. We will need this later. Click `Next`.
 
 image::virtualization/vm-proxmox-03.png[VM General]
 
+=== VM Creation: OS
 
 We will not need to use an ISO to install the system, so change the radio button to `Do not use any media` and click `Next`.
 
 image::virtualization/vm-proxmox-04.png[VM OS]
 
+=== VM Creation: System
 
 We get a handful of options to play with on this screen.
 
@@ -5072,31 +5269,37 @@ Click `Next`.
 
 image::virtualization/vm-proxmox-05.png[VM System]
 
+=== VM Creation: Disks
 
 Click the little trash can to the left of the disk it pre-populates for you. We will be importing the disk image as our primary disk. Click `Next`.
 
 image::virtualization/vm-proxmox-06.png[VM Disks]
 
+=== VM Creation: CPU
 
 Set the CPU settings as you need them. The test cluster used when writing this documentation had identical processors across the cluster, so `host` was safe to use while still enabling live migration. Click `Next`.
 
 image::virtualization/vm-proxmox-07.png[VM CPU]
 
+=== VM Creation: Memory
 
 Set the memory the amount you want assigned to the VM. Click `Next`.
 
 image::virtualization/vm-proxmox-08.png[VM Memory]
 
+=== VM Creation: Network
 
 Select the network details. The test article had an Open vSwitch configured with VLAN port groups. `VirtIO (paravirtualized)` should yield the best performance. Click `Next`.
 
 image::virtualization/vm-proxmox-09.png[VM Network]
 
+=== VM Creation: Confirm
 
 The wizard should end with a summary of the hardware settings. Click `Finish` to create the VM.
 
 image::virtualization/vm-proxmox-10.png[VM Confirm]
 
+=== VM Disk Import
 
 Now that the VM itself has been built, we need to log in to the Proxmox node via the console feature or via SSH to import the disk image we uploaded earlier.
 
@@ -5143,27 +5346,33 @@ When the import process finishes you should get a success message like the one s
 
 
 
+=== VM Configuration: Disk
 
 Now that the disk is part of the VM, we can go back to the hardware tab, highlight the new unused disk, and click edit. You shouldn't need to change anything and can safely just click `Add`.
 
 image::virtualization/vm-proxmox-13.png[VM Configuration: Disk]
 
+=== VM Configuration: Boot Order
 
 The final step before powering on the VM is to navigate to the VM's `Options` tab, click on `Boot Order`, and ensure that the imported disk, typically `scsi0`, is selected for boot. Note that in the following screenshot, the other boot options are disabled and `scsi0` is moved to the top of the list.
 
 image::virtualization/vm-proxmox-14.png[VM Configuration: Boot Order]
 
+=== VM Console: First Boot
 
 Now we're ready open up the console and boot the VM for the first time. You should see the normal GRUB boot loader and kernel messages stream across the console until you are presented with the final setup menu.
 
 image::virtualization/vm-proxmox-15.png[VM Console: First Boot]
 
+=== End Result
 
 After you complete this process the VM is running just as if you had booted off of the ISO and went through the full server install process, only now it only takes a fraction of the time!
 
+=== Next Steps
 
 Be sure to check out the tasks in the general xref:installation/postinstallation-tasks.adoc[post-installation guide] for virtual machines as well.
 
+= Containerization
 Peter Boy
 :page-authors: {author}
 // :revremark: a new beginning
@@ -5175,11 +5384,13 @@ As we learn time and time again, one size does not fit all. A number of the adva
 
 *Fedora Server supports and allows several alternatives that can be used depending on the local context and/or user's requirement profile.*
 
+== Containerization options in Fedora Server
 
 A common feature of all container systems is the sharing of the host kernel and the use of kernel capabilities (e.g. cnames) to achieve a certain mutual isolation and autonomy.
 
 They differ in implementation, architecture principles, toolset, runtime environment and community. A rough classification is the distinction between "system container" and "application container", roughly determined by the existence and scope of an init system.
 
+=== Podman
 
 Its characteristics are
 
@@ -5191,6 +5402,7 @@ Its characteristics are
 
 Podman is *natively supported by Fedora Server* and the recommended solution for application containers.
 
+=== Docker
 
 Its characteristics are
 
@@ -5201,6 +5413,7 @@ Its characteristics are
 
 Docker releases it own Community Edition for various distributions. Therefore there is *no native support* for Fedora Server, but a *vendor repository* maintained for Fedora.
 
+=== LXC (libvirt)
 
 Its characteristics are
 
@@ -5212,6 +5425,7 @@ Its characteristics are
 
 Libvirt LXC is *natively supported by Fedora Server* (via libvirt as default virtualization tool)
 
+=== LXC (linux containers)
 
 Its characteristics are
 
@@ -5222,6 +5436,7 @@ Its characteristics are
 
 Linux Container's LXC is *natively supported by Fedora Server* (in its LTS versions)
 
+=== LXD (linux containers)
 
 Its characteristics are
 
@@ -5232,6 +5447,7 @@ Its characteristics are
 
 LXD is *not natively supported* by Fedora Server, but there is a *COPR project* available, Additionally there is *vendor support* for Fedora by a third party package manager.
 
+=== systemd-nspawn container
 
 Its characteristics are
 
@@ -5243,12 +5459,15 @@ Its characteristics are
 
 The systemd-nspawn container is *natively supported by Fedora Server*.
 
+=== Linux Vserver
 
 It requires a modified kernel and is *not supported by Fedora Server*
 
+=== OpenVZ
 
 It uses a self customized version of RHEL / CentOS and is *not supported by Fedora Server*
 
+= Setting up Systemd Nspawn Container
 Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}
 // :revremark: a new beginning
@@ -5260,6 +5479,7 @@ The prerequisite is a fully installed basic system. A standard interface of the 
 
 But of course a container can also be operated with other variations of a network connection or even without a network connection at all.
 
+== 1. Setting up the nspawn container infrastructure
 
 1. *Create a container storage area*
 +
@@ -5297,7 +5517,9 @@ Ensure that the directory belongs to root and can only be accessed by root (shou
 […]# mkdir /etc/systemd/nspawn
 ----
 
+== 2. Creating a nspawn container
 
+=== 2.1 Creating a container directory tree
 
 The creation of a container filesystem or the provision of a corresponding image is treated as "out of scope" by systemd-nspawn. There are a number of alternative options. By far the easiest and most efficient way is simply to use the distribution specific bootstrap tool, DNF in case of fedora, in the container’s directory. This is the recommended procedure.
 
@@ -5369,6 +5591,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-8
 This installs 165 packages that occupy 435 M in the file system.
 The message: `install-info: File or directory not found for /dev/null` appears several times. The cause is that the `/dev/` file system is not yet initialized at this point. You may savely ignore the message.
 
+=== 2.2 Configuration and commissioning of a system container
 
 1. Setting the password for root
 +
@@ -5569,6 +5792,7 @@ Activate the service if necessary.
 Container <CTNAME> terminated by signal KILL.
 ----
 
+=== 2.2 Configuration and commissioning of an application container
 
 1. Setting the password for root
 +
@@ -5672,6 +5896,7 @@ PING spiegel.de (128.65.210.8) 56(84) bytes of data.
 Container <CTNAME> terminated by signal KILL.
 ----
 
+== 3. Starting the container as a system service for productive operation
 
 1. Booting the container using systemctl
 +
@@ -5735,6 +5960,7 @@ After finishing all further work inside the container press <ctrl>]]] ( Mac: <ct
 […]# setenforce 1
 ----
 
+=== 3.1 Autostart of the container on reboot of the host
 
 An autostart of the container in the "enabled" state fails on Fedora 35 and older. The cause can be seen in a status query after rebooting the host, which issues an error message according to the following example:
 
@@ -5746,6 +5972,7 @@ systemd-nspawn[802]: Failed to add interface vb-{CT_NAME} to bridge vbr6s0: No s
 
 This means that systemd starts the container before all required network interfaces are available.
 
+==== Resolution for (physical) interfaces managed by NetworkManager
 
 1. The service file requires an amendment (Bug #2001631).  In section [Unit], for the `Wants=` and `After=` configurations, add a target `network-online.target` at the end of each line. The file must then look like this (ignore the commented out marker rows):
 +
@@ -5777,6 +6004,7 @@ Important is the character "@" after `nspawn`! In the opening editor make the in
 
 At the next reboot the containers will be started automatically.
 
+==== Resolution for virtual interfaces managed by libvirt
 
 For such interfaces (usually the bridge virbr0) the addition mentioned above does not help. The container must be started by script in an extra step after Libvirt initialization is complete. For this you can use a hook that Libvirt provides.
 
@@ -5832,7 +6060,9 @@ fi
 ----
 You may also use the link:{attachmentsdir}/nspawn-autostart-libvirt-hook.tgz[attached script] instead of typing.
 
+== 4. Troubleshooting
 
+=== 4.1 RPM DB problem in a CentOS 8-stream container on Fedora host
 
 For dnf / rpm queries the error message is displayed:
 `warning: Found SQLITE rpmdb.sqlite database while attempting bdb backend: using sqlite backend`
@@ -5850,6 +6080,7 @@ The output must be `bdb`. Then fix it executing
 […]# rpmdb  --rebuilddb
 ----
 
+=== 4.2 Error message dev-hugepages
 
 You will find message such as
 [source,]
@@ -5863,6 +6094,7 @@ DFN installs this by default, but it is not applicable inside a container. It is
 
 The messages can be safely ignored.
 
+=== 4.3 Package update may fail
 
 Some packages, e.g. the `filesystem` package, may not get updated in a container (error message "Error: Transaction failed"), see also https://bugzilla.redhat.com/show_bug.cgi?id=1548403 and https://bugzilla.redhat.com/show_bug.cgi?id=1912155.
 
@@ -5877,6 +6109,7 @@ As of Fedora 35, the bug should be fixed.
 
 
 * Providing services
+= Setting up PostgreSQL Database Server
 Peter Boy
 :page-authors: {author}
 // :revremark: a new beginning
@@ -5889,6 +6122,7 @@ Postgresql is the recommended database management system of Fedora. It is a key 
 
 Fedora 43 includes PostgreSQL 18.1 If you update from F42, read the release notes or the xref:index.adoc#_updating_to_fedora_43[update description on Server home page] for detailed instructions.
 
+== 1. Storage preparation
 
 In Fedora, PostgreSQL stores the databases and other runtime files in the `/var/lib/pgsql` directory.
 
@@ -5916,6 +6150,7 @@ Discarding blocks...Done.
 […]# df -h
 ----
 
+== 2. Basic installation
 
 Just one package - postgresql-server - already provides a complete and comprehensive server at your disposal. All the many other Postgresql related packages provide additional options that are only useful or needed for specific special needs.
 
@@ -5968,9 +6203,11 @@ When all the requirements are met, perform the initialization of the database cl
 […]# postgresql-setup --initdb
 ----
 
+== 3. Configuration and initialization
 
 Fedora preconfigures Postgresql in a way that in any case ensures reliable and maintainable operation on the one hand and secure operation as far as possible on the other.
 
+=== Database connection paths
 
 A client can connect to the server either by a Unix socket connection or a TCP/IP connection.
 
@@ -5995,7 +6232,9 @@ Fedora abstracts the technical details with Firewalld, so that the administrator
 In case of connection issues there is most probably a SELinux configuration missing, in most case a "__name_connect access on the tcp_socket__" issue. Check the SELinux module in Cockpit. It helps you in detail to establish a local policy to fix it. It is easy, just a matter of 2 instructions.
 ====
 
+=== Authentification options
 
+==== Administrative access
 
 For admin access Fedora postgresql is configured to obtain the host's operating system user name from the kernel and using it as the allowed database user name. Therefore, as soon as someone can authentiate on the host as user __postgres__, that person has administrative privileges on the postgresql server without any additional password prompt. The only one who can do that by default, is root. Root can configure additional users to be able to su to postgres. In any case, in a whatever emergency, if any then the system administrator is able to quickly access postgresql server unhindered and salvage what can still get salvaged.
 
@@ -6016,6 +6255,7 @@ It is really not a good idea to change the entry in the line ‘local   all ...�
 
 If local regulations make it necessary to replace these procedures with a dedicated authentication by postgresql itself, one of the other procedures can be configured later. In general, however, it is not advisable to make any changes. Once root is compromised, there are a lot of completely different problems to get tackled.
 
+==== Client user access
 
 In the initial configuration postgresql restricts any authentication to peer as above described or ident (i.e. asking an ident server, that Fedora doesn't install). In most cases you need an authentication based on a password. The details depend on the prospective clients. As a typical use case we will accept connections from the internal network to VMs, by default 192.169.122.0/24.
 
@@ -6049,6 +6289,7 @@ For further details see the PostgreSQL documentation, chapter https://www.postgr
 Some of the possible authentication methods require additional settings for SELinux. For example, the _PAM_ method requires unix_chkpwd  access permissions. A typical error message is “__SELinux is preventing auth from name_connect access on the tcp_socket port 5432__”. The easiest way to fix this is to use the SELinux module from Cockpit..
 ====
 
+=== Connection options
 
 Now you are allowed to authenticate from machines on the internal network, but you still can't connect from the internal network to the PostgreSQL server. The default configuration restricts connection initially to the local host to avoid any security vulnerabilities in the first place.
 
@@ -6075,6 +6316,7 @@ max_connections = 100                   # (change requires restart)
 
 An entry of `listen_addresses = '*'` enables connections from any address. It is probably rather a bad idea and relies solely on authentication restrictions and, if present, a supporting firewall configuration.
 
+== 4. Using PostgreSQL as permanent service
 
 You are now ready to start the PostgreSQL server.
 [source,]
@@ -6113,12 +6355,14 @@ If everything works as expected, enable autostart of postgresql,
 
 
 Enjoy a powerful DBMS.
+= Fedora Server System Administrators Cheat Sheet: PostgreSQL
 Peter Boy
 :page-authors: {author}
 
 [abstract]
 The Fedora System Administrator's Cheat Sheet series compiles typical, frequently used instructions for various application programs, most of which can be used with minor modifications via copy&paste. They also contain direct links to the relevant sections of the upstream documentation.
 
+==== Basic Commands
 
 Get administrative access to a postgresql database and get a postgres terminal prompt::
 +
@@ -6168,6 +6412,7 @@ Change password of a user / role::
 ----
 postgres=# ALTER USER user_name WITH PASSWORD 'new_password';
 ----
+= Setting up a basic web server
 Peter Boy (pboy); Emmanuel Seyman (eseyman)
 //:page-authors: {author}, {author_2}
 //:page-authors: {author}, {author_2}, {author_3}
@@ -6188,6 +6433,7 @@ The Fedora Web server httpd is basically an Apache web server. This document cov
 
 
 
+== How it works
 
 A Fedora Web Server installation stores the _configuration_ in subdirectories of /etc/httpd. Only 2 subdirectories are relevant for the system administrator. The directory /etc/httpd/conf.d is the more important one and stores especially the configuration of the different web sites. This directory is where the system administrator works the most. The directory /etc/httpd/conf.modules.d contains the modules to be loaded dynamically and their configuration. Only very rarely does anything need to be changed here.
 
@@ -6211,6 +6457,7 @@ __An alternative option__, in many cases a better fit to FHS compliance is the `
 
 In this guide we use the latter option. Therefore, we use directories like `/srv/<DOMAINNAME>/` to store all data relevant to a domain,  and `/srv/<DOMAINMANE>/htdocs/` for static HTML pages. If you want to use the former option, you can replace `/srv/` by `/var/www/`.
 
+== Storage preparation
 
 _Before_ installing the Software you have to prepare the storage. The Fedora Server Edition storage concept requires the creation of an LVM logical volume to hold the user data. There are at least two reasonable options:
 
@@ -6225,6 +6472,7 @@ And of course you can also combine both.
 
 The easiest way is to create the required volumes with __Cockpit__, the web-based server administration tool.
 
+== Installation
 
 1. Install the Apache httpd web server. Today, you will almost always need the modules for managing SSL connections and the module for domain monitoring. Everything now runs via https.
 +
@@ -6257,6 +6505,7 @@ image::services/httpd-basic-setup-030.png[Fedora test page]
 […]$ sudo dnf install letsencrypt
 ----
 
+== Setup a web site
 
 1. *Setup the web site Document Root directory*
 +
@@ -6529,15 +6778,20 @@ Delete the provisional `index.html` file and fill your Web content into the Docu
 
 
 
+== Troubleshooting
 
+=== The website shares the same name as the server
 
+==== The phenomenon
 
 1. If the website uses a DocumentRoot directory different from /var/www/html, then  the Servers http protocol variant will display the correct content and the https variant will use /var/www/html or the distribution provided default page instead.
 2. If you use Let's encrypt certbot to manage certificates, it installs a valid certificate, but a https request results in an invalid certificate complain.
 
+==== The cause
 
 The httpd service always sets a "default" server. The intended use is to answer requests for which the httpd service can not identify a web server configuration. Typically, this happens when a client addresses the web page by the server's IP address instead of its name or there is still an old DNS entry. The distribution provides a default ssl configuration as part of mod_ssl. This default gets associated with the server's hostname or DNS record and takes precedence over the user-created configuration.
 
+==== The solution
 
 Unfortunately, the only way to fix this is to modify the distribution provided mod_ssl configuration file and remove the default server configuration. First, make a backup copy of the file and then modify it as indicated.
 
@@ -6599,6 +6853,7 @@ When the httpd service is up again, everything should work as expected.
 
 
 
+= File sharing with NFS – Installation
 Peter Boy (pboy);Emmanuel Seyman (eseyman); Jason Beard (cooltshirtguy); Otto Liljalaakso; Jocelyn Gould (korora)
 //:page-authors: {author}
 //:page-aliases: installation-an-introduction.adoc
@@ -6621,6 +6876,7 @@ NFS protocol is not encrypted by default, and unlike Samba, unless you activate 
 The kernel space NFS server features high performance and is therefore selected as default. Fedora Server also supports user space NFS server. However, this is not the subject of this article.
 
 
+== Preparation
 
 There are three packages which provide basic support for kernel space NFS:
 
@@ -6643,6 +6899,7 @@ nfs-utils-2.8.4-0.fc43
 If a package missing, then a system administrator can simply reinstall it.
 
 
+=== Organizing storage
 
 In principle, NFS can share any directory on the server. However, it makes sense to concentrate at least generally shared files in a central location instead of scattering everything around.
 
@@ -6734,6 +6991,7 @@ To make the bind mount(s) permanent, add the following entries to the /etc/fstab
 ----
 
 
+== Optional server configuration
 
 NFS server configuration uses 3 files
 
@@ -6751,6 +7009,7 @@ The commented out lines describe the default built in configuration.
 /home/USER/PROJECT  /srv/nfs/PROJECT   none   bind   0   0
 ----
 
+== Activation
 
 1. *Firewall configuration*
 +
@@ -6787,6 +7046,7 @@ So the NFS server supports versions 3 and all version 4 capabilities.
 
 
 
+== File resource configuration
 
 //====
 //**Possible/intended topics**
@@ -6819,6 +7079,7 @@ the new way, a directory to collect a set of specific configuration files, which
 
 You can use both options in parallel with the grand configuration file read in first. We will use the modern form only.
 
+=== Configuration by example
 
 Example 1::
 Export the directory /srv/nfs/common with everyone, i.e. every network device and every user, can access with Read/Write and Synchronize access
@@ -6870,6 +7131,7 @@ Export the directory /srv/nfs/projects with all users of a specific network devi
 /srv/nfs/common *(rw,sync)
 ----
 
+==== Connection options
 
 Each default for every exported file system must be explicitly overridden. For example, if the rw option is not specified, then the exported file system is shared as read-only.
 
@@ -6901,6 +7163,7 @@ Read above (anonuid=UID)
 
 Setting the crossmnt option on the main psuedo mountpoint has the same effect as setting nohide on the sub-exports: It allows the client to map the sub-exports within the psuedo filesystem. These two options are mutually exclusive.
 
+=== Administration
 
 When the nfs service starts, the /usr/sbin/exportfs command launches and reads this file, passes control to rpc.mountd (if NFSv2 or NFSv3) for the actual mounting process, then to rpc.nfsd where the file systems are then available to remote users.
 
@@ -6925,6 +7188,7 @@ The following is a list of commonly used options available for /usr/sbin/exportf
 If no options are passed to the /usr/sbin/exportfs command, it displays a list of currently exported file systems.
 
 
+==== Using exportfs with NFSv4
 
 The exportfs command is used in maintaining the NFS table of exported file systems. When typed in a terminal with no arguments, the exportfs command shows all the exported directories.
 
@@ -6992,6 +7256,7 @@ The difference being "server:/home" and "server:/". To make the exports configur
 Now with these exports, both "mount server:/home /mnt/home" and "mount -t nfs server:/home /mnt/home" will work as expected.
 
 
+== Testing the configuration
 
 On client side:
 [source,]
@@ -7022,14 +7287,17 @@ Check if the NFS mount is writable
 
 
 
+== Adding user identification and encryption (NFS 4)
 
 TBD
 
+== Further reading
 
 * Upstream documentation: http://linux-nfs.org/wiki/index.php/Main_Page
 * Linux manual page: https://man7.org/linux/man-pages/man5/exports.5.html
 
 * Example Use Cases
+= Adding a graphical interface
 Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}
 // :revremark: a new beginning
@@ -7097,6 +7365,7 @@ Try it, but you may get a "Service not found" message with some desktops. No nee
 +
 Your system will start with the selected graphical desktop.
 
+== Additional options
 
 You may install multiple desktops. The utilities `switchdesk` and `switchdesk-gui` can be used to switch the desktop GUI.
 [source,bash]
@@ -7129,6 +7398,7 @@ After having switched back into text mode, you can switch to the selected deskto
 However, this does not work flawlessly for every available desktop.
 
 * Tutorials
+= ImageFactory – How to Create a Virtual Machine Disk Image
 Peter Boy (pboy); Jason Beard (cooltshirtguy)
 :page-authors: {author}
 
@@ -7140,9 +7410,11 @@ The objective here is to learn to create a standard Fedora Server Edition bootab
 
 The goal is to set up a working environment to create customized, bootable and ready to be used  Fedora Server virtual machine disk images. The tool to be used, ImageFactory, is a bit of a challenge. Therefore, we start with setting up a complete and known to work base setting. On this solid basis, they can then start modifying and adapting the configuration to their needs.  That way, in case of bugs, it is quite easy to locate the probable cause.
 
+== Why ImageFactory
 
 There are many tools to create a VM virtual disk image. ImageFactory is probably one of the oldest and not necessarily in the best of shape. Its key advantage is that it is also used for building Fedora releases. You can use a variety of resources maintained by the Fedora Release Engineering team. This greatly facilitates the work and makes up for the aforementioned disadvantage.
 
+== Requirements
 
 There are some items to take into account.
 
@@ -7161,7 +7433,9 @@ Getting a Kickstart file to work correctly according to your goals is the hardes
 
 
 
+== Preparation
 
+=== Create a working environment
 
 ImageFactory uses a virtual machine to tailor the image, so you need virtualization capabilities. If you work directly with your host (i.e. on hardware), you need to xref:virtualization/vm-install-diskimg-fedoraserver.adoc[install Virtualisation]. Furthermore, ImageFactory installs a variety of software that an admin would not necessarily want to see in the everyday working environment. It is therefore recommended to create a dedicated virtual machine for this purpose if possible and use nested virtualization in it.
 
@@ -7185,6 +7459,7 @@ Check to really install `guestfs-tools`, not `libguestfs-tools` (unless you need
 5. If you want to make use of Fedora Kickstart files you need to have `git` installed.
 
 
+=== Install ImageFactory
 ImageFactory includes the base package and various plugins for different target platforms.  To be able to use ImageFactory practically, all plugins should be installed, regardless of the target format. Additionally, the package pykickstart provides several helper programs, among others ksflatten to check and optimize the kickstart file.
 
 1. _Create logical volumes_ for ImageFactory working files. To make it easy use _Cockpit_.
@@ -7242,6 +7517,7 @@ b. Optional: _Switch the image output format_ from the default "raw" type to qco
 image_type = qcow2
 ----
 
+=== Set up a working directory
 
 At a convenient location, create a directory where you will store all your working files, for example, in your home directory.
 [source,]
@@ -7251,6 +7527,7 @@ At a convenient location, create a directory where you will store all your worki
 
 It will primarly used to store the kickstart and the template files. You may use your personal accout and use sudo for all commands. However, it is more convenient to work as root. However, this is only advisable in a dedicated VM as explained above.
 
+==== The kickstart file
 
 The kickstart file describes the content of the disk image to create. Fetch the link:{attachmentsdir}/tutorials/imagefactory/fedora-server-kvm-dev.ks[basic kickstart file "fedora-server-kvm-dev.ks"]. Probably it is a good idea to clone the https://pagure.io/fedora-kickstarts[Fedora kickstart repository] as well. It may be advantageous to check for a file with a similiar target you want to create and start with that. In any case, a look at the various Kickstart files can give you ideas on how to achieve your goal.
 
@@ -7272,6 +7549,7 @@ The kickstart file describes the content of the disk image to create. Fetch the 
 If you are planning to contribute your VM you should create a fork, too, so you can provide a pull request.
 
 
+==== The download URL helper file
 
 ImageFactory uses Anaconda to create the disk image. It uses the network installatin method and needs appropriate URLs for Download. Anaconda expects this information as part of the installation specification, i.e. within the corresponding section of the Kickstat file. To simplify the management of the download URLs, they are offloaded to an include file named "fedora-repo.ks". In this file you can easily manage different Fedora versions and download sources without disturbing the flow in the Kickstart file.
 
@@ -7306,6 +7584,7 @@ repo --name="koji-override-1" --baseurl=https://kojipkgs.fedoraproject.org/compo
 url --url="https://kojipkgs.fedoraproject.org/compose/branched/Fedora-38-20230312.n.0/compose/Everything/x86_64/os"
 ----
 
+==== The template file
 The template file describes meta data of the disk image to create. That includes the repository to download and the size of the disk image. Don't worry too much about the download URL. It will be overwritten by the kickstart file.
 
 Fetch the corresponding link:{attachmentsdir}/tutorials/imagefactory/fedora-server-kvm-dev.tdl[basic template file] and store it into the working directory. In many cases klicking the link stores the file into you default download directory, ~/Downloads in case of Fedora desktops or Macs.
@@ -7319,8 +7598,10 @@ The version number inside the template file (22) is not necessarily the Fedora t
 
 
 
+== Working with FactoryImage
 
 
+=== Create an image file
 
 1. prepare and optimize kickstart file with ksflatten:
 +
@@ -7363,6 +7644,7 @@ Image filename: /var/lib/imagefactory/storage/4ebde351-e81b-427f-96b7-5acd568001
 Image build completed SUCCESSFULLY!
 ----
 
+=== Check out a created image file
 To access the filesystem inside a generated image, use guestfs-tools. Ensure that the image in _not used_ in an active VM.
 
 1. Copy the generated vm into the libvirt installation media pool
@@ -7404,6 +7686,7 @@ Following the list of file systems above, mount each filesystem and check
 […]# guestmount -a fedora-server-kvm-dev.qcow2  -m /dev/xxx/yyy  /mnt/test
 ----
 
+=== Instantiate and test a created image
 
 1. Copy the generated vm into the libvirt disk image pool
 +
@@ -7429,6 +7712,7 @@ Follow the steps as specified in xref:virtualization/vm-install-diskimg-fedorase
 // xref:/virtualization/vm-install-diskimg-fedora-server.adoc#_minimal_initial_configuration
 
 
+=== Adjust the Kickstart file
 
 You are ready now to modify the Kickstart file according your local requirements and create an image and test it again and again.
 
@@ -7437,6 +7721,7 @@ You are ready now to modify the Kickstart file according your local requirements
 
 //* export LIBGUESTFS_BACKEND=direct
 
+= Installing Wordpress CMS
 Peter Boy (pboy)
 :page-authors: {author}
 // :revremark: a new beginning
@@ -7462,6 +7747,7 @@ The Fedora Wordpress RPM installs a closely upstream Wordpress while integrating
 Another good first overview provides the https://fedoramagazine.org/[_Fedora Magazine_] article https://fedoramagazine.org/howto-install-wordpress-fedora/[How to install WordPress on Fedora (2017)].
 
 
+== Prerequisites
 
 * We assume a correctly installed Fedora Server Edition release 38 or 39. For details see xref::installation/index.adoc[Fedora Server Installation Guide].
 
@@ -7476,6 +7762,7 @@ Before you start installation, create the xref::installation/index.adoc#_storage
 If not already done install the xref:services/httpd-basic-setup.adoc[Fedora Web Server package]. If your server will just server the Wordpress site, you may omit the section "Setup a Web site".
 
 
+== Installing Wordpress
 
 . Install the WordPress Package. It automatically installs PHP as a dependency, too.
 +
@@ -7595,6 +7882,7 @@ Re-type new password:
 […]# systemctl status httpd
 ----
 
+== Check out and configure your site
 
 . On your desktop open a Broser and navigate to the base address of the site you just configured:
 +
@@ -7625,6 +7913,7 @@ Complete the various items as appropriate.
 
 
 
+== Final fine tuning
 
 After completing the site design and content and launching the site, you may want to adjust various parameters to your liking. Among others
 
@@ -7655,6 +7944,7 @@ DocumentRoot /usr/share/wordpress            # <== Add
 
 
 
+= Fedora Server on ARM Single Board Computers - the Raspberry Pi & Co.
 Fredrik Arneving; Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}, {author_3}
 // :revremark: a new beginning
@@ -7671,6 +7961,7 @@ SBC Fedora Server Edition takes advantage of the power available on SBC today to
 But not all SBC models are equally or similarly capable for a Fedora Server deployment.
 
 
+== Required Device capabilities
 
 * The Fedora Server Edition is only available for ARMv8/aarch64.
 
@@ -7683,6 +7974,7 @@ But not all SBC models are equally or similarly capable for a Fedora Server depl
 These are just a few criteria that certainly need to be expanded.
 
 
+== Supported by Fedora
 
 Almost all board makers are very enthusiastic about using the open source Linux system to make their hardware usable at all and attractive to a wider audience, saving them the development of their own operating system or the licensing costs for a commercial system. They focus on the development of device drivers for their hardware, instead. In fact, to even boot, many of them require device specific software.
 
@@ -7697,15 +7989,18 @@ _Fedora compatible_ are only those SBCs for whose components either the manufact
 https://fedoraproject.org/wiki/Architectures/ARM[Arm SIG] provides a list of devices that are operable with Fedora.
 
 
+== Appropriate for Fedora Server Edition
 
 Supported by Fedora is not a true/false alternative but a matter of degree and intended purpose. A specific SBC model may be able to boot with Fedora and pure free software, but e.g. graphics acceleration or WiFi does not work. As a graphical device, this is not usable, but Fedora Server wouldn't bother because it is not used anyway. If PCIe and an m.2 interface are then available, the model would be more suitable for Fedora Server than a fully compatible device including accelerated graphics, but without a PCIe-attached m.2 interface.
 
 Thus, the question of appropriateness depends much on several criteria and intentions of use.
 
 
+== How Fedora supports the diversity of Single Board Computers
 
 Fedora distributes a generic Fedora Server Edition image, preconfigured for Raspberry Pi. Additionally, it provides a utility to transfer the image to the prospective boot medium, usually an SD card. To support multiplemodels, the transfer program is able to (re-)configure the disk image for an alternative SBC model. Optionally, it can also make some adjustments to the initial configuration.
 
+== Conclusion
 
 The choice of an SBC model therefore requires careful consideration if you do not want to end up in a dead end. Fedora IoT Edition provides a concise list of references. A detailed reference list is also in preparation for Fedora Server.
 
@@ -7714,6 +8009,7 @@ The choice of an SBC model therefore requires careful consideration if you do no
 When choosing a device for Fedora Server, check carefully if the available hardware capabilities are compatible with the intended use and are actually supported by Fedora. Take everything with a grain of salt. Don't expect everything to work just smoothly with SBCs. It is best to ask in advance on the arm mailing list.
 ====
 
+= Installation based on __u-boot__
 Fredrik Arneving; Peter Boy; Emmanuel Seyman
 :page-authors: {author}, {author_2}, {author_3}
 
@@ -7737,6 +8033,7 @@ ARM Single Board Computers originally had only __one data storage medium__, an S
 //====
 
 
+== How it works
 
 Even though many SBC devices now also feature eMMC modules or m.2 NVMe interfaces, the boot process remains very simple. The minimal firmware continues to boot from the SD card, and possibly supplementally from eMMC or an SPI flash module. The device expects a ready-to-use operating system, configured precisely for the respective hardware, including low-level hardware initialization.
 
@@ -7747,6 +8044,7 @@ Instead of creating a separate distribution file for each model, Fedora Server E
 Even though the installation works quite differently, Fedora Server ultimately functions just like usual at the application level.
 
 
+== Prerequisites
 
 * Of course, you need a *suitable single board computer* model, _supported by Fedora_ and with a network connection, keyboard and display. A simple text console is perfectly sufficient.
 +
@@ -7764,6 +8062,7 @@ The utility should basically be usable with any Linux desktop, but not with Wind
 * A *pluggable disk* of suitable size, practically, this is either an SD card or eMMC storage on a removable daughter board. The absolute minimum capacity is 8 GB, but a capacity of 32 GB should be fine and affordable nowadays.
 
 
+== Special considerations: Organization of the storage area
 
 Basically, Fedora Server on SBC follows the same storage configuration principles as on 'full-blown' Server Hardware. Please, read the section "Storage organization" in the xref:installation/index.adoc#_storage_organization[installation overview] and the supplementary information in the xref:installation/postinstallation-tasks.adoc#_consolidate_storage_configuration[Post installation tasks] section. Fedora Server Edition implements this principle, which originated in professional IT, __on SBCs__ as well.
 
@@ -7771,6 +8070,7 @@ Fedora uses UEFI as the boot system, but on SBCs it still uses a DOS/MBR partiti
 
 For practical reasons, the downloaded deliverable is limited to just under 8 GB in total. During or after installation, the size is adjusted to the existing hardware.
 
+== Handling different boot media
 
 Many SBC models today offer additionally alternative storage media, especially eMMC memory, either pluggable or soldered. Nevertheless, the installation procedure remains basically the same.
 
@@ -7783,7 +8083,9 @@ These bootloaders quite often support extended options to boot from, e.g. NVMe b
 Here we describe the basic steps for creating a customized boot medium (SD card or eMMC module).
 
 
+== Steps to install Fedora Server Edition on a Single Board Computer
 
+=== Preparations
 
 1. On your Fedora system, install arm-image-installer
 +
@@ -7885,6 +8187,7 @@ Consult the https://fedoraproject.org/wiki/Architectures/ARM/Installation#Arm_Im
 7. After the transfer is complete, unmount the SD card again if it was automatically re-mounted, and disconnect it.
 
 
+=== Basic installation and configuration
 
 At the SBC terminal, we perform only the minimum, absolutely necessary configuration, namely the creation of a user including password and administrative privileges. Just in case your network doesn't provide DHCP, you have to configure the IP address as well. Everything else can be more conveniently accomplished via ssh or Cockpit from the desktop.
 
@@ -8038,6 +8341,7 @@ d. Reboot. You can then disconnect monitor and keyboard. The next steps all happ
 
 
 
+=== Final Configuration
 
 1. On your desktop open a Browser. If you already set the correct hostname and DNS entry, use that. Otherwise, use the IP address for now. In the example above it is __http://192.168.158.172:9090__. After accepting a warning message due to a missing certificate, voilà, the Cockpit administration interface of your SBC appears.
 +
@@ -8086,6 +8390,7 @@ b. You should be able to log in via **ssh and your key**. Try _ssh -i .ssh/MYKEY
 9. Finally, depending on the use case, you may need to ensure you can always track which person was logged in and when. Use Cockpits account management feature to comfortably create additional users and grant them administrativ permissions ("sudo").
 
 
+== Configuration of the storage area
 
 As explained at the beginning, there are at least three alternatives to organize the storage area.
 
@@ -8099,6 +8404,7 @@ This is the most flexible solution and preserves all options for the system admi
 
 3. You may reinforce the rationale of separating system and user data even further and create a separate partition and volume group for user data. This seems a bit far-fetched for a (small) SBC, but is nevertheless worth considering if a very large volume and correspondingly a large amount of data are present (a rule of thumb: larger 500 GB).
 
+=== Enlarge partition and volume group to fill the disk space
 
 Any of the alternatives as above start with the same administrative tasks.
 
@@ -8245,6 +8551,7 @@ You can now create an user account, set the password and add it to group wheel t
 +
 In your browser open again https://192.168.158.172:9090, login with your account and proceed with section "Final configuration".
 
+= Frequently Asked Questions (FAQ)
 Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}
 // :revremark: a new beginning
@@ -8257,6 +8564,7 @@ Is writing documentation hard and dreadful?::
 Absolutely not (OK, just joking). Writing documentation in asciidoc is very simple and straightforward. And in fact, writing documentation makes you very happy. Just try and see for yourself!
 How do I manage SELinux issues?::
 First of all: Don’t deactivate but resolve issues - (Link to Server Sysadmin Cockpit page and Quick Docs)
+= Communicating and Getting Help
 Peter Boy; Jan Kuparinen
 :page-authors: {author}, {author_2}
 // :revremark: a new beginning

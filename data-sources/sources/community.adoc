@@ -1,4 +1,5 @@
 
+= Fedora Community Architecture (CommArch)
 Justin W. Flory; Fedora community
 :page-authors: {author}, {author_2}
 :license-image: https://licensebuttons.net/l/by/4.0/88x31.png
@@ -9,6 +10,7 @@ This part of Fedora Docs is the responsibility of the xref:council::fca.adoc[Fed
 
 
 [[about]]
+== About this site
 
 This documentation portal captures information about the Fedora community.
 This includes information about some teams and community efforts, but it also gathers information about processes and how to contribute.
@@ -16,6 +18,7 @@ This site does not replace other documentation, but acts as a supplement or poin
 
 
 [[commarch]]
+== What is community architecture (CommArch)?
 
 Community architecture, sometimes shortened as "CommArch", is a sub-discipline of https://en.wikipedia.org/wiki/Information_architecture[information architecture].
 It is a term with historical relevance in Open Source communities, yet there is no commonly-agreed definition of what it means.
@@ -31,11 +34,13 @@ This is an imperfect definition and likely to evolve.
 
 
 [[contribute]]
+== How to contribute
 
 The best way for now is to https://gitlab.com/fedora/council/community-architecture/-/issues[open an issue on GitLab] with any questions or ideas.
 
 
 [[legal]]
+== Legal
 
 [link={license-legal}]
 image::{license-image}[License: Creative Commons Attribution 4.0 International (CC BY 4.0)]
@@ -45,12 +50,14 @@ All content in the Fedora Community Architecture website is shared under the {li
 
 Last updated in {year}.
 
+= Unofficial Fedora Community Appendix
 
 This page is an unofficial Fedora Community Appendix.
 Have you ever wondered what an acronym meant, or what a certain phrase or word in Fedora means?
 This is an open appendix for Fedorans to collectively define and share our unique community culture.
 
 [[f]]
+== F
 
 Fedoran(s)::
 Sometimes written "Fedorian".
@@ -62,6 +69,7 @@ Also known as the "Four F's".
 Freedom, Friends, Features, First.
 These are the four values of the Fedora community.
 
+= Search Fedora Package Repositories Using Sourcegraph
 Roseline Bassey; Fedora community
 :page-authors: {author}, {author_2}
 
@@ -71,6 +79,7 @@ With Sourcegraph's Code Search, our developers, contributors, and maintainers ca
 
 
 [[what]]
+== What is Sourcegraph?
 
 https://sourcegraph.com/[Sourcegraph] is a code intelligence platform.
 You can think of it as a search engine for code.
@@ -80,6 +89,7 @@ In this article, we will explore how to use Code Search for https://src.fedorapr
 
 
 [[code-search]]
+== Using Code Search For Fedora Package Repositories
 
 Code search is a powerful search capability in Sourcegraph for searching code from a single interface.
 It supports search filtering by file type, repository, and language.
@@ -93,6 +103,7 @@ image::sourcegraph/code-search.png[Sourcegraph interface]
 
 
 [[filter-file]]
+== Filter Search: Using `file` Keyword to Find Specfiles
 
 The `file` keyword returns results from files that match the specified file path.
 The following query searches all repositories for files ending in `.spec` that contain the term `dnf5`.
@@ -107,6 +118,7 @@ image::sourcegraph/filter-file.png[find specfiles using the files keyword]
 
 
 [[filter-lang]]
+== Use the `lang` Filter to Find a Fedora Repository to Contribute to
 
 The `lang` keyword is used to filter search results by programming language.
 
@@ -122,6 +134,7 @@ image::sourcegraph/contributing.png[find projects to contribute to using the lan
 
 
 [[filter-disable-debug]]
+== Search for Specfiles Disabling Debug Packages
 
 By using the query `++"%global debug_package %{nil}"++`, you can search for specfiles that contain the line where the `debug_package` macro is set to `nil`.
 This line disables the creation of a debug package in the build process.
@@ -131,6 +144,7 @@ image::sourcegraph/debug.png[find files that disable debug package]
 
 
 [[filter-licenses]]
+== Find Repositories Using Popular OSI-approved Licenses
 
 The following query will scan all the repositories for software that is compatible with the https://opensource.org/definition-annotated[“Open Source Definition” (OSD)].
 
@@ -143,6 +157,7 @@ image::sourcegraph/license.png[search for License]
 
 
 [[filter-vulnerabilities]]
+== Find Files with a Vulnerable Version of Log4j
 
 This query will find any files that are possibly vulnerable to CVE-2021-44228, aka Log4j.
 Note that false positives can happen, so you should investigate further before making a conclusion on whether a package is actually vulnerable or not.
@@ -157,12 +172,14 @@ image::sourcegraph/log4j.png[Search for log4j]
 
 
 [[conclusion]]
+== Conclusion
 
 For more search queries, see https://sourcegraph.com/docs/code-search/queries#search-query-syntax[Sourcegraph official documentation].
 
 Having Sourcegraph Code Search integrated into our dist-git repository is a great addition to our engineering productivity toolkit.
 With Code Search's powerful capabilities, our contributors and users can efficiently search across our entire universe of open source repositories from a single place.
 
+= Participate in the Fedora community
 
 The Fedora community is large and decentralized.
 You can spend several years in Fedora and still never know everything happening at once.
@@ -179,6 +196,7 @@ You can understand the journey of participation in these key phases:
 See the page for each phase for more information.
 Each phase is meant to be followed sequentially.
 
+= Phase 0: Bootstrap
 :page-aliases: commops::contribute/first-steps.adoc
 
 There are specific tools, services, and applications we use to get work done in Fedora.
@@ -187,6 +205,7 @@ Before you can do meaningful work, you need to get through these initial steps t
 
 
 [[fas]]
+== Fedora Account System (FAS)
 
 *Register an account here: {url-accounts}*
 
@@ -195,6 +214,7 @@ A FAS account is the pre-requisite for accessing most services and tools that we
 Generally, a FAS account is the only account you will need to participate in Fedora; several other services, tools, and apps we use will use a FAS account instead of requiring you to make a new account.
 
 [[fas-fpca]]
+=== Sign the Fedora Project Contributor Agreement (FPCA)
 
 *To sign the FPCA, go to your Settings page from link:{url-accounts}[FAS], choose _Agreements_, and sign the agreement.*
 
@@ -216,6 +236,7 @@ You retain ownership of your contributions.
 ____
 
 [[fas-configure]]
+=== Configure your FAS account
 
 *Complete your FAS account profile from your Settings page in link:{url-accounts}[FAS].*
 
@@ -241,6 +262,7 @@ Please complete this important step when setting up your account for the first t
 
 
 [[collab]]
+== Collaboration tools
 
 Like many Open Source communities, Fedora has key platforms to connect, collaborate, and work together with other Fedora contributors.
 We have two primary platforms: an *asynchronous* and a *synchronous* platform.
@@ -253,6 +275,7 @@ Fedora is a big community and there are multiple asynchronous and synchronous pl
 However, there are two _primary_ platforms we recommend for all new contributors to reach out to others: Fedora Discussion and Fedora Chat.
 
 [[collab-discussion]]
+=== Fedora Discussion (asynchronous)
 
 *Sign into Fedora Discussion using your FAS account: {url-discussion}*
 
@@ -267,6 +290,7 @@ Once you sign in with your FAS account, there are two next steps:
 . link:{url-discussion}/tag/introductions[Introduce yourself] to the community so folks can get to know you better.
 
 [[collab-chat]]
+=== Fedora Chat (synchronous)
 
 *Sign into Fedora Chat using your FAS account: {url-chat}*
 

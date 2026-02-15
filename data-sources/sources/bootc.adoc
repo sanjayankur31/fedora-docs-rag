@@ -1,22 +1,31 @@
+= Getting Started with Bootable Containers
 
 video::bf1xqjLeA9M[youtube,width=640,height=480,leveloffset=+4]
 
+== What is a Bootable Container?
 
 
+== Why Bootable Containers?
 Before going into any further details, you may wonder about the benefits of bootable containers and why should pay attention to this technology?  Let's go through some of the main benefits.
 
+=== A Unified Approach for DevOps
 Linux already sits at the core of containers. Bootable containers take Linux’s role a step further, letting you manage the entire OS through container-based tooling and concepts, including https://www.redhat.com/en/topics/devops/what-is-gitops[GitOps] and continuous integration/continuous delivery (CI/CD). This streamlined approach helps address the challenges of managing Linux at scale, whether you're pushing patches to different locations or bridging gaps between the operations team and the application development cycle.
 
+=== Simplified Security
 While there are dozens of security benefits of image-based systems, we want to highlight the fact that the OS is shipped in the form of container images.  That means we can make use of the advancements of the past decade in container security such as advanced container security tools to address patching, scanning, validation and signing.  We can now apply container security scans on the kernel, drivers, the bootloader and more.
 
+=== Speed and Ecosystem Integration
 Similar to the security benefits, bootable containers integrate into a vast ecosystem of tools and technologies which have emerged around containers.  With bootable containers, we can build, deploy and manage our Linux systems at new scale and speed.  A consistent feedback from early adopters of bootable containers is the observation of a simplified toolchain for managing all these tasks in less time.
 
+== Bootc
 {bootc-upstream}/[Bootc] is at the core and center of bootable containers. It is a CLI tool that ships with a number of systemd services and timers to manage a bootable container. Among other things, bootc is responsible for downloading and queuing updates, and can be used by other higher-level tools to manage the system and inspect the system status. For that reason, bootc is an integral part of each bootable container image. For more details, please refer to the {bootc-upstream}/[bootc documentation].
 
+== Filesystem Layout
 Bootc systems follow the concept of an immutable operating system. Apart from the following two exceptions,  `/etc` and `/var`, all directories are mounted read-only once deployed on a physical or virtual machine. However, during a container build the entire file-system is writable.
 
 The fact that most parts of the file system are mounted read-only is an important attribute of deployed bootable containers and something to consider carefully when preparing workloads and updates. For more information, see the xref:filesystem.adoc[Filesystem Layout page] which elaborate in great detail on the exact behavior.
 
+== Base Images
 At the moment, there are three distributions shipping bootable containers:
 
 - https://fedoraproject.org/[Fedora]
@@ -25,6 +34,7 @@ At the moment, there are three distributions shipping bootable containers:
 
 The base images of https://fedoraproject.org[Fedora] and https://www.centos.org/centos-stream/[CentOS Stream] are listed and continuously updated on the xref:base-images.adoc[base images page]. The RHEL bootc images can be found in the https://catalog.redhat.com/software/containers/explore[Red Hat Ecosystem Catalog]; working with these requires a Red Hat account. You can get a no-cost subscription by https://developers.redhat.com/register[joining the Red Hat Developer program] in just a few clicks. You further need to login to the https://catalog.redhat.com/[Red Hat Container Registry] and register your machine with subscription-manager which is well explained in the https://www.redhat.com/en/blog/image-mode-red-hat-enterprise-linux-quick-start-guide[release blog post]. If you are using Podman Desktop, you might install the https://developers.redhat.com/articles/2024/05/07/podman-desktop-red-hat-developer-subscription[Red Hat Account Extension] which automates most of the process.
 
+== Building bootc Images
 As mentioned above, bootable containers can be built with existing tooling such as https://github.com/containers/common/blob/main/docs/Containerfile.5.md[Containerfiles] and Podman. That means you can use any existing bootc base image and customize it to your needs (e.g., install further packages, copy files from the host, run config scripts, etc.) in a container build as exemplified in the following Containerfile:
 
 [source,subs="attributes"]
@@ -40,16 +50,19 @@ In case the bootable container will be run in `podman-bootc`, see the xref:#_pod
 
 For more details on building derived bootc images, see the xref:building-containers.adoc[page in the docs]. Note that bootc is still under development. On rare occasions you might encounter problems you can find in the https://gitlab.com/fedora/bootc/tracker[upstream issue tracker] (requires a GitLab account).
 
+== Conversion to Disk Images
 Updates for bootable containers happen in the form of pulling a new image and (re-)booting into it. But how do we install a fresh bootc system? While bootc supports {bootc-upstream}/bootc-install.html#using-bootc-install-to-existing-root[installing a bootc container on top of an existing system], it is more common to convert a bootable container into a so-called disk image, such as ISO, raw or qcow2 to provision a new system.
 
 You can convert a bootable container into a disk image with the https://github.com/osbuild/bootc-image-builder[bootc-image-builder] which itself needs to be executed inside a container. `bootc-image-builder` is a feature-rich tool that further enables you to inject users, SSH keys, and define a partition layout. For more details, see the https://github.com/osbuild/bootc-image-builder?tab=readme-ov-file#-arguments[upstream documentation]. Podman Desktop also ships with a https://github.com/containers/podman-desktop-extension-bootc[bootc extension] which allows you to build and convert bootc images in just a few clicks. For more information on the extension, please see the https://developers.redhat.com/articles/2024/05/07/podman-desktop-red-hat-developer-subscription#bootc_extension_for_podman_desktop[release blog post]. Once converted, you can boot a disk image by using libvirt and qemu and other virtualization tools as described in xref:qemu-and-libvirt.adoc[in the docs].
 
 If you are using https://podman-desktop.io[Podman Desktop], you may install the https://github.com/containers/podman-desktop-extension-bootc?tab=readme-ov-file#example-images[Podman Desktop bootc extension] to manage bootc images and automatically convert them to disk images.
 
+== Running as a container
 
 You may of course run the container you've built as a container, but there are important
 considerations; more on this in xref:provisioning-container.adoc[Running as a container].
 
+== podman-bootc
 https://github.com/containers/podman-bootc[podman-bootc] enables a more bootc-native experience. It is a CLI tool that allows you to easily run a local bootc image in a VM and get shell access to it. Under the hood, podman-bootc uses `bootc install to-disk` to make a disk image from the container image.
 
 podman-bootc requires the `podman-machine` package, which provides a podman machine with a rootful connection. The bootable container has to be built inside the running machine.
@@ -106,10 +119,13 @@ quay.io/fedora/fedora-bootc  41          7b03571fae24  3 hours ago     1.66 GB
 
 podman-bootc is still under development but perfectly capable of supporting your development flow. For installation instructions and further details, please refer to the https://github.com/containers/podman-bootc[bootc upstream docs] and xref:podman-bootc-cli.adoc[section in the Fedora docs]. If you are running on a Mac, please run `brew install --head podman-bootc` to build and install the latest version.
 
+== Authentication, Users, Groups
 There are no default interactive users other than root in the base image. In the default full base images, OpenSSH is running, but there are no hardcoded credentials (passwords or SSH keys). That means that you cannot log into a booted VM without further work (e.g., injecting SSH keys for the root users). For that reason, podman-bootc automatically injects SSH keys such that you can easily get access to the VM. See the xref:authentication.adoc[section on authentication] in the docs for more information on this topic.
 
+== Installing on Bare Metal
 At this point, you know how to build a bootable container image and how to convert it into a disk image that you may want to install on your machine. Before installing Fedora/CentOS bootc, it’s recommended that you have created a customized derived container image, but this is not a hard requirement, as it is possible to enable basic system access via e.g. injecting SSH keys with kickstart or with {bootc-upstream}/bootc-install.html[bootc-install] and the `--root-ssh-authorized-keys` flag. You can find a list of examples and detailed instructions xref:bare-metal.adoc[here]. You can further find documentation on how to provision public cloud instances on xref:provisioning-aws.adoc[AWS] or xref:provisioning-gcp.adoc[GCP] and how to install on xref:provisioning-vsphere.adoc[vSphere].
 
+== Updating Bootable Containers
 
 IMPORTANT: Local package layering is not yet available for bootc. Track the issue https://gitlab.com/fedora/bootc/tracker/-/issues/4[here].
 
@@ -135,11 +151,13 @@ The following hands-on demo shows the update process of a local VM:
 video::fccox6sGCWA[youtube,width=640,height=480]
 
 
+== Next Steps
 At that point, we have learned the nature of and the concepts behind bootable containers. From building on top of available bootc base images to testing them locally with podman-bootc to understanding how to update already deployed systems.
 
 The suggested next steps are to try out the technology and browse through the other pages of this documentation.
 
 
+== Getting in touch
 
 Bugs can be reported to:
 
@@ -147,6 +165,7 @@ Bugs can be reported to:
 - CentOS: <https://gitlab.com/redhat/centos-stream/containers/bootc>
 
 You can find links to further community channels on the xref:community.adoc[community] page.
+= Base images
 
 This project closely tracks CentOS and Fedora, and aims to tightly integrate with their underlying lifecycle as well as release and test infrastructure, and in particular the CentOS Stream versions are the upstream for the RHEL product.
 
@@ -158,6 +177,7 @@ These are the default "full" images:
 
 For RHEL, see https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/using_image_mode_for_rhel_to_build_deploy_and_manage_operating_systems/index[RHEL 9 Image Mode].  Note that at the current time the RHEL product is Tech Preview status and this is also true of the upstream; the contents and interfaces of the base images are still subject to change.
 
+== "full" image philosophy
 
 The content set for the default images are intentionally quite large.
 
@@ -169,33 +189,41 @@ The content set for the default images are intentionally quite large.
 - Filesystem tools, support for LUKS, LVM, RAID etc.
 - Lots of other supporting tools, such as `sos`, `jq` etc.
 
+=== No cloud agents by default
 
 However, the image does *not* include hypervisor specific agents.
 You may install them in derived builds. For example, on Amazon Web Services, you may want to install `cloud-init`; but this is also not required.
 
 See xref:cloud-agents.adoc[Cloud agents] for more information.
 
+== "minimal" image philosophy
 
 There are also demonstration images that are much smaller that are intended to be used more as a development reference.
 These images are not currently published on Quay.io but are available in the https://gitlab.com/fedora/bootc/base-images/container_registry/6333306[GitLab container registry].
 
 This image has almost nothing; just `kernel systemd bootc`; everything else (including e.g. networking) you need to add.
+= Community and discussion forums
 
 Thanks for your interest in the {projname} project!  There
 are multiple avenues for communication.
 
+== General discussion
 
+=== Fedora discussion forum
 
 Use the https://discussion.fedoraproject.org/tag/bootc-initiative[bootc-initiative tag] on the
 Fedora discussion forum.
 
+=== Matrix
 
 There is a https://matrix.to/#/#bootc:fedoraproject.org[Matrix channel].
 
+== Issue tracker
 
 There is an https://gitlab.com/fedora/bootc/tracker[issue tracker repository] where
 you can report bugs.
 
+== Meetings and calendar
 
 Folks working on this initiative are meeting weekly on:
 
@@ -215,9 +243,11 @@ The notes are written in https://etherpad.opensuse.org/p/bootc-initiative-meetin
 and then made available in the meeting-notes folder in the
 https://gitlab.com/fedora/bootc/tracker/-/tree/main/meeting-notes?ref_type=heads[issue tracker repo].
 
+== Other community forums
 
 There is also {bootc-git}/discussions[bootc upstream discussions].
 * Building containers
+= How to build derived bootc container images
 
 The original Docker container model of using "layers" to model
 applications has been extremely successful. This project
@@ -229,6 +259,7 @@ With bootable containers, you can build and customize the entire host OS with
 the same tools as for application containers.  That means you can build on top
 of base bootc images with Dockerfiles and tailor the OS to your needs.
 
+== Container-Build Environment
 
 It is crucial to understand that a container-build environment has certain
 limitations that impact the commands we can run in a Containerfile.
@@ -239,6 +270,7 @@ configuration files as explained in the xref:sysctl.adoc[system-configuration do
 
 You may find solutions in our https://gitlab.com/fedora/bootc/examples[examples repository].
 
+=== Configuration tools using D-Bus and other IPC
 
 Some projects like firewalld include CLI configuration tools (e.g., `firewall-cmd`)
 that default to assuming they are part of a running system. However, in a
@@ -259,6 +291,7 @@ In this case, we can revert to configuring `tuned` via its configuration
 files in `/etc/tuned`.  For instance, the active profile can be written to
 `/etc/tuned/active_profile` instead of running `tuned-adm profile <profile>`.
 
+=== systemd
 
 systemd is not running in a standard container-build environment.  Hence,
 certain commands that expect a running system daemon may not work as expected
@@ -266,6 +299,7 @@ and error out.  Starting a systemd service via `systemctl start`, for instance,
 will not work. Configuring a service to start at boot time via `systemctl
 enable`, however, works.
 
+=== Deferring to systemd services
 
 Commands used to configure the system can usually be replaced by writing to the
 individual configuration files.  However, if you run into a situation where a
@@ -295,7 +329,9 @@ The systemd service can be copied to
 boot once the network is available.
 
 
+== Best Practices
 
+=== Multi-stage builds
 
 Bootc containers are shipped as ordinary OCI containers and are intended to be
 usable as part of a container build process, but are primarily designed to run
@@ -310,6 +346,7 @@ https://docs.docker.com/build/building/multi-stage/[multi-stage builds] for
 that purpose and compile the source in a build stage from which build artifacts
 can be copied into the final stage to create a derived image.
 
+=== dnf -y update
 
 Do *not* attempt to invoke `dnf -y update` (or `upgrade`) in general. While
 some things will work correctly, others will not (especially at the moment
@@ -326,6 +363,7 @@ be locked with extra effort.
 If you want to make large scale changes to the base image, instead
 look at using the xref:building-from-scratch.adoc[from scratch build].
 
+=== linting
 
 We recommend running the `bootc container lint` command as a final stage during a
 container build in Containerfile.  This command will perform a number of
@@ -339,6 +377,7 @@ FROM quay.io/fedora/fedora-bootc:42
 RUN bootc container lint
 ----
 
+=== Kernel management
 
 On recent images we introduced kernel-install integration which allows you to use DNF to manage kernel packages.
 
@@ -375,6 +414,7 @@ If you are on an older image, you can use `rpm-ostree override replace` or
 `rpm-ostree override remove pkg --install new-pkg` to manage your kernel.
 An example of using rpm-ostree is available at our https://gitlab.com/fedora/bootc/examples[examples repository].
 
+=== GitHub Actions
 
 You may want to build a derived bootc image on a GitHub project via GitHub Actions.  Since bootc-based images can grow in size quickly, you are likely to run into disk-space issues on the Action runner.  Adding the following first step to the Action may solve the space issue:
 
@@ -387,6 +427,7 @@ run: rm -rf /opt/hostedtoolcache
 
 For an example project on GitHub using the Buildah and Podman Actions, please visit https://github.com/nzwulfin/cicd-bootc[github.com/nzwulfin/cicd-bootc].
 
+=== Container metadata
 
 While one can add
 https://github.com/opencontainers/image-spec/blob/main/config.md[Container configuration metadata]
@@ -400,6 +441,7 @@ the booted system.
 For details and recommendations, please refer to the
 {bootc-upstream}/building/bootc-runtime.html[bootc-runtime documentation].
 
+== Performing "targeted" updates
 
 One scenario that may occur is when one wants to perform e.g. *just*
 a kernel patch to a running system; or other targeted fixes, without
@@ -411,6 +453,7 @@ Then create a container build which has just the changes you want,
 and have the targeted nodes use that container image via e.g.
 `bootc switch`.
 
+== Lifecycle binding code and configuration
 
 At the current time, the role of `bootc` is solely to boot and
 upgrade from a single container image. This is a very simplistic
@@ -421,6 +464,7 @@ for the base OS are tightly bound. Systems which update
 one or the other asynchronously often lead to problems with
 skew.
 
+=== Containerized vs 1:1 host:app
 
 A webserver is the classic case of something that can be run
 as a container on a generic host alongside other workloads.
@@ -434,6 +478,7 @@ have such strong bindings/requirememnts for the host system
 that they effectively require a 1:1 binding. Production
 databases often fall into this class.
 
+=== httpd (bound)
 
 Nevertheless, here's a classic static http webserver example;
 an illustrative aspect is that we move content from `/var` into `/usr`.
@@ -464,6 +509,7 @@ COPY index.html /usr/share/www/html
 EXPOSE 80
 ----
 
+=== httpd (containerized)
 
 In contrast, this example demonstrates a webserver
 as a "referenced" container image via
@@ -508,6 +554,7 @@ COPY caddy.container /usr/share/containers/systemd
 RUN systemctl enable podman-auto-update.timer
 ----
 
+== Authentication, users and groups
 
 The container images above are just illustrative demonstrations that
 are not useful standalone. It is highly likely that you will want to
@@ -516,6 +563,7 @@ run other container images, and perform other customizations.
 Among the most likely additions is configuring a mechanism for remote
 SSH; see xref:authentication.adoc[Authentication, Users, and Groups].
 
+=== Invoking `useradd` as part of a container build
 
 Often packaging scripts may invoke `useradd`. This can cause "state drift"
 in the case where `/etc/passwd` is also locally modified on the system,
@@ -541,6 +589,7 @@ You can then also switch to creating the user via https://www.freedesktop.org/so
 And at that point, you can also drop the `%post` from the RPM which
 allocates the user.
 
+==== When your package owns content shipped in `/usr`
 
 This occurs in the case of things like setuid/setgid binaries.
 The first solution: Avoid setuid/setgid binaries entirely!
@@ -560,6 +609,7 @@ via https://docs.fedoraproject.org/en-US/packaging-guidelines/UsersAndGroups/#_s
 But this should be avoided to the greatest extent
 possible.
 
+== General configuration guidance
 
 See the {bootc-upstream}/building/guidance.html[bootc upstream guidance].
 
@@ -568,6 +618,7 @@ writing configuration files into `/etc` or `/usr` - those operations
 translate seamlessly into booted hosts via a `COPY` instruction
 or similar in a container build.
 
+=== Referencing configuration as a container artifact
 
 Custom bootc image uses the 'artifact pattern' to reference
 other container images as reusable components. This approach
@@ -602,9 +653,11 @@ LABEL ostree.bootable 1
 RUN bootc container lint
 ----
 
+== More examples
 
 See {git-examples}[Examples] for many examples of
 container image definitions!
+= Configuring os-release and versions
 
 Commonly when building a bootc system, you will want to manage and maintain
 your own version numbers and branding for the resulting system.
@@ -613,6 +666,7 @@ The default base images use a `*-release` package (e.g. `fedora-release`, `cento
 that contains key files such as `/usr/lib/os-release` (symlinked from `/etc/os-release`).
 For more on the os-release file, see https://www.freedesktop.org/software/systemd/man/latest/os-release.html[this reference].
 
+== Injecting additional metadata
 
 A useful starting point is updating the https://www.freedesktop.org/software/systemd/man/latest/os-release.html#VARIANT=[`VARIANT` fields].
 
@@ -624,6 +678,7 @@ For example:
 RUN echo VARIANT="My Custom bootc OS" && echo VARIANT_ID=com.gitlab.customos.foo >> /usr/lib/os-release
 ----
 
+== Managing the version number
 
 The base images include an https://github.com/opencontainers/image-spec/blob/main/annotations.md#pre-defined-annotation-keys[OCI standard] label `org.opencontainers.image.version`.
 As part of your build process, you may want to override it.
@@ -632,6 +687,7 @@ but this is not required. In the future, it is likely that the base images will 
 the newer https://www.freedesktop.org/software/systemd/man/latest/os-release.html#IMAGE_VERSION=[IMAGE_VERSION]
 key; using this now is recommended.
 
+== Replacing the os-release package
 
 You can also entirely replace the os-release package, e.g.:
 
@@ -643,6 +699,7 @@ RUN dnf -y swap fedora-release generic-release --allowerasing && dnf clean all
 The `generic-release` package is included in Fedora to denote the system is not Fedora, but is a derivative.
 You can fork the `generic-release` package and provide your own custom one here.
 
+= From scratch {projname} base container images
 
 Creating "from scratch" base bootc images provides control the base image content, allowing you to own the OS stream and tailor the environment to suit specific needs and workflows.
 
@@ -651,6 +708,7 @@ can be accomplished with a "default" container built with the provided base imag
 on a wide range of environments and systems without any additional overhead associated with maintaining a from scratch base image.
 Also, as part of the default derivation, it is possible to xref:os-release-and-versions.adoc[swap the kernel and other fundamental components].
 
+== Default Container Build
 [source]
 ----
 FROM <base image>
@@ -662,7 +720,9 @@ However, some use cases want even more control. Specifically:
 - An organization building a bootc system may need to ensure the base image version carries a set of packages at exactly specific versions.
 - An organization may want to start from a minimal base image, adding only the necessary packages.
 
+== Goals
 
+=== Exact content version control
 
 As an organization deploying a bootc system, I may want to ensure
 the base image version carries a set of packages at
@@ -673,6 +733,7 @@ manage snapshots of yum (rpm-md) repositories.
 There are currently issues where it won't quite work to e.g.
 `dnf -y upgrade selinux-policy-targeted`.
 
+=== Building up from minimal
 
 Today there is just one default image produced by the project,
 which is now known as "standard". It is roughly a headless
@@ -684,6 +745,7 @@ This project also has a "minimal" content set definition which
 is not currently shipped as a distinct container, but can
 be *built* from the standard image.
 
+== Considerations
 
 Like layered bootc images that use the default base image, from scratch base
 images are still derived from the base container. They will not automatically
@@ -699,6 +761,7 @@ If you come from the CoreOS world, this is a key difference when interacting
 with the base OS image.  Read about the https://docs.fedoraproject.org/en-US/fedora-coreos/faq/#_how_does_fedora_coreos_relate_to_fedora_bootc[differences between
 Fedora CoreOS and Fedora bootc here].
 
+=== Understanding the base image content
 
 Most, but not all content from the base image comes from RPMs.
 There is some additional non-RPM content, as well as postprocessing
@@ -706,6 +769,7 @@ that operates on the filesystem root. At the current time the
 implementation of the base image build uses `rpm-ostree`,
 but this is considered an implementation detail subject to change.
 
+=== Using bootc-base-imagectl build-rootfs
 
 The core operation is `bootc-base-imagectl build-rootfs`.
 
@@ -737,16 +801,19 @@ inherit those changes by default.
 
 A "source root" can also be provided to enable "cross builds". More on this below.
 
+==== Listing available manifests/content sets
 
 `bootc-base-imagectl list` will enumerate available configurations that
 can be selected by passing `--manifest` to `build-rootfs`.
 
+==== Implementation
 
 The current implementation uses `rpm-ostree` on a manifest (treefile)
 embedded in the container image itself.  To emphasize: the implementation of
 this command (especially the configuration files that it reads) are subject to change
 in the future.
 
+=== Build privileges required
 
 We're generating a new root filesystem, not modifying the existing container.
 This is most easily done by using container features (mount namespacing
@@ -766,6 +833,7 @@ Note however ultimately the goal here is to deploy this container image as a
 base operating system on a physical or virtualized environment, where
 inherently more trust is required regardless.
 
+=== Example: Generating a from scratch base image with exact version control
 
 [source,dockerfile,subs="attributes"]
 ----
@@ -806,6 +874,7 @@ STOPSIGNAL SIGRTMIN+3
 CMD ["/sbin/init"]
 ----
 
+=== Example: Generating a custom minimal base image
 
 [source,dockerfile,subs="attributes"]
 ----
@@ -847,6 +916,7 @@ STOPSIGNAL SIGRTMIN+3
 CMD ["/sbin/init"]
 ----
 
+=== Optimizing container images
 
 IMPORTANT: This `rechunk` subcommand is not supported in rootless podman.
 
@@ -869,6 +939,7 @@ recommended to use the `bootc-base-imagectl rechunk` command and not
 `rpm-ostree` directly, since the implementation details may change in
 the future.
 
+==== Example:
 
 Currently, `bootc-base-imagectl` is shipped as part of the
 centos-stream bootc images.  It is convenient to use these
@@ -889,6 +960,7 @@ quay.io/exampleos/fedora-bootc:single \
 quay.io/exampleos/fedora-bootc:chunked
 ----
 
+==== Custom layer assignment with user.component
 
 The rechunker automatically groups files into layers based on RPM
 package ownership. However, you can override this behavior using the
@@ -929,11 +1001,13 @@ EORUN
 
 NOTE: Layers created via `user.component` are given priority over the
 automatic package-based layers during rechunking.
+= Embedding Containers
 
 There are a number of ways to embed containerized workloads into a bootc image. Let's go through all of them and elaborate on the various use cases that fit the different ways of embedding containers followed by examples that may serve as a template.
 
 Embedding container workloads into a bootc image implies declaring the containers in some shape or form. Most mechanisms we present below build upon declaring such workloads in the form of so-called Quadlets. So let's first explore {podman-docs}/podman-systemd.unit.5.html[Quadlets].
 
+== Quadlet: Containerized workloads in systemd
 
 Running containerized workloads in systemd is a simple yet powerful means for reliable and rock-solid deployments. Podman has an excellent integration with systemd in the form of Quadlet. Quadlet is a tool for running Podman containers in systemd in an optimal and declarative way. Workloads can be declared in the form of systemd-unit-like files extended with Podman-specific functionality.
 
@@ -966,6 +1040,7 @@ As mentioned, Quadlet extends systemd-units with Podman-specific features. Quadl
 
 You can think of Quadlet like Docker Compose, but for running containers in systemd. The declarative nature of Quadlet makes it a perfect candidate for installing and embedding workloads on a bootc system. Quadlet also supports running Pods and Kubernetes-compliant YAML definitions, can manage volumes, networks and images and further supports building images. For detailed documentation on Quadlet and more examples, please refer to the {podman-docs}/podman-systemd.unit.5.html[upstream documentation].
 
+=== Embedding Quadlets into a bootc image
 Quadlets are managed as files, which allows for a smooth and easy integration into the bootc workflow. The center of gravity for working with bootc is the Containerfile. Hence, Quadlets can live next to a Containerfile in the same Git tree and be copied onto the image during the container build to make the workloads available at runtime.
 
 Let's use the `test.container` example mentioned above and integrate it into a `fedora-bootc` based bootc image:
@@ -980,9 +1055,11 @@ COPY test.container /etc/containers/systemd
 
 The Quadlet service will be started on boot and there is nothing else to be done. This allows for a great hands-off experience when managing Linux hosts as the entire workload can be declared at once. Traditional config management and provisioning can shift left into the build process.
 
+== Pulling images
 
 Running containers via Quadlets requires container images to be present on the bootc system. The various options presented below can be used in combination, depending on the use-case requirements and user needs.
 
+=== Default: on-demand pulls
 
 Container images can be pulled on-demand whenever a Quadlet is started and the referenced image is not yet present in the local containers storage.
 
@@ -990,6 +1067,7 @@ The big advantage of this model is the ease-of-use as we just need to install an
 
 A major disadvantage of on-demand pulls is that it delays starting the workloads until the individual images have been pulled down. This may even impact boot time when Quadlets are started at boot. Moreover, disconnected environments cannot make use of on-demand pulls at all due to the lack of network connectivity.
 
+=== Logically-bound images: pre-pulls
 
 Logically-bound images are an improvement over on-demand pulls as they allow images to be pre-pulled at install time and on updates. This way, logically-bound images must not be pulled when a Quadlet starts as those images are already present on the system.
 
@@ -1013,6 +1091,7 @@ To access logically-bound images, `.container` Quadlets need to add the followin
 
 This setting allows Podman to access the so-called https://www.redhat.com/en/blog/image-stores-podman[additional image store] of bootc.  Please note that the presented solution of using `GlobalArgs` is preferable over a system-wide configuration in `storage.conf` -- unless all containers run in Quadlets.  For more details on logically-bound images, please refer to the {bootc-upstream}[upstream documentation of bootc] and the https://gitlab.com/fedora/bootc/examples/-/tree/main/logically-bound-images[Fedora examples].
 
+=== Physically-bound images: ship it with the bootc image
 
 Some use cases require the entire boot image to be fully self contained. That means that everything needed to execute the workloads is shipped with the bootc image, including container images of the application containers and Quadlets. Such images are also referred to as “physically-bound images”.
 
@@ -1047,9 +1126,11 @@ PULL
 
 To copy the images into Podman's mutable store at runtime, just run `/usr/bin/copy_embedded_images.sh`. Note that the images must be copied over before any container or service (e.g., Quadlet) depending on such an image is started. It could be moved into a systemd unit that starts before any Quadlet, for instance. For more information, please see the upstream https://gitlab.com/fedora/bootc/examples/-/tree/main/physically-bound-images[upstream Fedora bootc examples]. In the meantime, we are working on improving the user experience when using physically-embedded images.
 
+== Tagging, versioning and referencing images
 
 An important aspect of embedding images is the way they are referenced. Images can be referenced by tag, by digest, or a mix of both. While digests always point to exactly one image, a tag may be updated on a registry. Choosing the right way of referencing an image can impact the quality and robustness of workloads, so we should be intentional about it. If you are interested in this topic, please see an https://developers.redhat.com/articles/2025/01/28/how-name-version-and-reference-container-images[article on how to name, version, and reference container images].
 * Provisioning machines
+= Installing {projname} on Bare Metal
 
 This guide provides instructions to install {projname} to bare metal.
 Three main options are available:
@@ -1058,15 +1139,18 @@ Three main options are available:
 * Installing from a bootc-image-builder generated ISO
 * Installing from the container directly with `bootc install`
 
+== Prerequisites
 
 Before installing {projname}, it's recommended that you have created a customized derived container image;
 but this is not a hard requirement, as it is possible to enable basic system access via
 e.g. injecting SSH keys with kickstart or with `bootc install` and the `-root-ssh-authorized-keys`
 argument.
 
+=== Using Anaconda
 
 {projname} can be installed using https://anaconda-installer.readthedocs.io/en/latest/[Anaconda].
 
+==== Installing from the network
 
 The `ostreecontainer` kickstart verb can be used to provision your custom container image.
 
@@ -1098,6 +1182,7 @@ sshkey --username root "<your key here>"
 reboot
 ----
 
+===== Accessing registries
 
 See the {bootc-upstream}/registries-and-offline.html[bootc documentation] on
 registries, as well as the xref:container-pull-secrets.adoc[Container pull secrets] section.
@@ -1149,6 +1234,7 @@ and via running `update-ca-trust`.
 Finally, insecure registries can be configured in a similar way by
 modifying the `/etc/containers` directory as documented above.
 
+==== Generating a custom installer ISO with bootc-image-builder
 
 See the https://github.com/osbuild/bootc-image-builder?tab=readme-ov-file#-image-types[bootc-image-builder documentation];
 the key is usage of the `anaconda-iso` type.
@@ -1161,6 +1247,7 @@ during installation.
 For example, you can copy the ISO to a USB stick, and take it into
 an air-gapped/disconnected environment and perform a bare metal installation.
 
+=== Using `bootc install`
 
 A key goal of the `bootc` project is having the container image be
 the "source of truth" as much as possible. A "basic" installer
@@ -1189,6 +1276,7 @@ $ podman run \
 bootc install to-disk /path/to/disk
 ----
 
+==== More advanced installation with `bootc install to-filesystem`
 
 In this model, you can configure a target block device and root filesystem
 using whatever tools you want (e.g. LVM) and then run the same command above,
@@ -1207,6 +1295,7 @@ $ podman run \
 bootc install to-filesystem /path/to/mounted/fs
 ----
 
+= Provisioning {projname} locally with podman-bootc-cli
 
 The https://github.com/containers/podman-bootc-cli[podman-bootc-cli] tool streamlines
 a local virtualization experience.
@@ -1247,6 +1336,7 @@ $ podman-bootc run quay.io/exampleuser/mycustom-image:latest
 See xref:building-containers.adoc[Building derived container images].
 
 
+== Understanding authentication
 
 The `podman-bootc-cli` tool streamlines logging into the generated
 disk images by injecting a default SSH key for the `root` user
@@ -1266,6 +1356,7 @@ SSH keys in your container image or disk image generation phases,
 but the `podman-bootc` CLI helps inject a key for local
 development/testing scenarios.
 
+= Provisioning with qemu and libvirt
 
 First, use the https://github.com/osbuild/bootc-image-builder[bootc-image-builder]
 project to make a `.raw` or `.qcow2` disk image from your container
@@ -1277,6 +1368,7 @@ the below command, you will not be able to log into the virtual machine.
 See xref:authentication.adoc[Authentication] as well as xref:building-containers.adoc[Building containers]
 for more information.
 
+== Example bootc-image-builder invocation
 
 NOTE: Particularly when using container images that require a pull secret,
 you will need to ensure the image is pulled into your container storage
@@ -1322,6 +1414,7 @@ For supported filesystem types in the base images, see xref:storage.adoc[Storage
 (Note that there are more options, such as including a `config.json` which
 can inject users and SSH keys)
 
+== libvirt
 
 The https://libvirt.org/[libvirt] project is supported on
 several platforms but is very common on Linux environments.
@@ -1342,10 +1435,12 @@ sudo virt-install \
 More information about `virt-install` is available in its man page,
 as well as other places such as https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_virtualization/assembly_creating-virtual-machines_configuring-and-managing-virtualization#creating-virtual-machines-using-the-command-line-interface_assembly_creating-virtual-machines[Red Hat Enterprise Linux documentation].
 
+== qemu
 
 Using "raw" qemu in some cases gives more control than higher level tools
 such as `libvirt`, but introduces architecture and platform specifics.
 
+=== qemu-system-x86_64 (Linux)
 
 ```
 qemu-system-x86_64 \
@@ -1358,6 +1453,7 @@ qemu-system-x86_64 \
 -snapshot output/qcow2/disk.qcow2
 ```
 
+=== qemu (macOS, ARM/aarch64)
 
 ```
 qemu-system-aarch64 \
@@ -1370,9 +1466,11 @@ qemu-system-aarch64 \
 -machine virt \
 -snapshot output/qcow2/disk.qcow2
 ```
+= Provisioning {projname} on Amazon Web Services
 
 This guide shows how to provision new {projname} instances on the Amazon Web Services (AWS) cloud platform.
 
+== Prerequisites
 
 It is possible to directly run the base images, without creating a customized one. This can be
 useful for experimentation. However, an important use case here for {projname}
@@ -1381,12 +1479,15 @@ is to create custom derived container images, and then instantiate them.
 In this example, you must have access to an AWS account.
 The examples below use the https://aws.amazon.com/cli/[aws] command-line tool, which must be separately installed and configured beforehand.
 
+== No cloud-init or hypervisor-specific metadata tools included by default
 
 
+== No separate pre-generated AMIs
 
 At the current time, the {projname} project does not produce pre-built AMIs
 for the base images. There are two primary paths to running in AWS:
 
+=== Understanding bootc install to-existing-root
 
 A very useful and low-cost mechanism for provisioning a container image *without*
 generating a disk image is to use the `bootc install to-existing-root`
@@ -1397,11 +1498,14 @@ As a convenience, system-reinstall-bootc can be used in place of `bootc install 
 See {bootc-upstream}/bootc-install.html#using-system-reinstall-bootc[the system-reinstall-bootc docs]
 for details.
 
+=== Understanding bootc-image-builder
 
 The https://github.com/osbuild/bootc-image-builder/[bootc-image-builder] tool can
 generate a disk image (such as an AMI) from a given container image.
 
+== Provisioning
 
+=== With `bootc install to-existing-root`
 
 The fundamental architecture here is:
 
@@ -1460,6 +1564,7 @@ ${SSHKEY:+--key-name $SSHKEY}         \
 ----
 
 
+=== Creating an AMI with bootc-image-builder
 
 The canonical documentation is in the https://github.com/osbuild/bootc-image-builder/?tab=readme-ov-file#amazon-machine-images-amis[bootc-image-builder]
 upstream site. Conceptually, the tool takes as input a bootc container image, and can create disk
@@ -1475,13 +1580,17 @@ Hence, you do not need to produce a new AMI for every container image change.
 A generally useful pattern is to only produce new AMIs periodically, when you
 want to ensure that newly provisioned instances boot directly into the latest
 container image state.
+= Provisioning {projname} on vSphere
 
+== Prerequisites
 
 - You will need the https://github.com/vmware/govmomi/tree/main/govc[govc] tool.
 - A Linux host with kernel 6.x or newer
 
+== No cloud-init or hypervisor-specific metadata tools included by default
 
 
+== Generating a container image that includes agents
 
 This example container build injects both `open-vm-tools` and `cloud-init`,
 so that SSH credentials can be injected per virtual machine instantiation.
@@ -1496,6 +1605,7 @@ systemctl enable vmtoolsd.service
 Include the additional software or tooling you want in your image as well; see
 xref:building-containers.adoc[Building containers].
 
+== Generating a VMDK with bootc-image-builder
 
 This uses https://github.com/osbuild/bootc-image-builder[bootc-image-builder]:
 
@@ -1507,6 +1617,7 @@ $ podman run --rm -it --privileged -v /var/lib/containers/storage:/var/lib/conta
 
 The generated VMDK file will be present in `vmdk/disk.vmdk`.
 
+== Uploading the VMDK
 
 [source]
 ----
@@ -1518,6 +1629,7 @@ vmdk/disk.vmdk \
 ${DESTINATION_FOLDER}
 ----
 
+== Creating a new virtual machine from the VMDK
 
 [source]
 ----
@@ -1535,6 +1647,7 @@ govc vm.create \
 "${VM_NAME}"
 ----
 
+== Attach the VMDK to the VM
 
 [source]
 ----
@@ -1545,10 +1658,12 @@ govc vm.disk.attach \
 -link=false \
 -disk="${DESTINATION_FOLDER}/disk.vmdk"
 ----
+= Provisioning {projname} on GCP
 
 This guide shows how to provision new Fedora/CentOS bootc instances on the
 https://cloud.google.com/products/compute[Google Compute Engine] platform.
 
+== Prerequisites
 
 You'll need a Google Compute Engine account, and if following this full example, also https://opentofu.org/[OpenTofu].
 To be clear, the OpenTofu usage is just an example, you can provision instances
@@ -1556,21 +1671,25 @@ however you like, including the https://cloud.google.com/sdk/gcloud[gcloud CLI]
 interactively in the console GUI, or in a Kubernetes environment
 using https://cluster-api.sigs.k8s.io/[Cluster API], etc.
 
+== No cloud-init or hypervisor-specific metadata tools included by default
 
 
 In particular for Google Compute Engine, this means that the base image
 does *not* integrate with https://cloud.google.com/compute/docs/oslogin[OSLogin] by
 default.
 
+== No separate pre-generated disk images
 
 At the current time, the {projname} project does not produce pre-built disk images
 for the base images.
 
+=== bootc-image-builder: Does not support GCP yet
 
 The https://github.com/osbuild/bootc-image-builder/[bootc-image-builder] tool does
 not yet support generating GCP disk images (however, this would be relatively
 easy to fix).
 
+== system-reinstall-bootc
 
 The default SSH key used by GCP when deploying a VM has a short lifetime. By default,
 system-reinstall-bootc will prompt to use the short lived SSH key to access the bootc system.
@@ -1579,6 +1698,7 @@ Be sure to use a permanent SSH key instead or you may lose access to the system.
 For details on using system-reinstall-bootc to provision a GCP system, see the
 {bootc-upstream}/bootc-install.html#using-system-reinstall-bootc[system-reinstall-bootc docs.]
 
+== Example provisioning with OpenTofu and `bootc install to-existing-root`
 
 This is effectively a variant of the xref:provisioning-aws[AWS example]
 that uses the `aws` CLI in concert with `bootc install to-existing-root`,
@@ -1666,17 +1786,20 @@ TIP: OpenTofu is a good tool to manage cloud-level infrastructure. However,
 once you want to make changes to the operating system itself, you can
 use a fully container-native workflow - just push changes to the registry
 and the instances will update in place.
+= Installing on generic infrastructure
 
 Not every deployment platform is explicitly covered by
 this project. However, the aim of this project
 is to support deployment anywhere that runs Linux
 as a general rule.
 
+== Using Anaconda for generic installations
 
 Many virtualized environments can be configured to boot via an ISO (or PXE);
 then the xref:bare-metal.adoc[Installing on bare metal] path can
 be used to install.
 
+== Using bootc-image-builder and raw files
 
 The {bootc-image-builder}[bootc-image-builder] tool can generate e.g. `raw`
 disk images from the container image, which can often be transformed
@@ -1685,6 +1808,7 @@ virtualization platform.
 
 For more, see xref:qemu-and-libvirt.adoc[qemu and libvirt].
 
+== Using `bootc install to-existing-root`
 
 The {bootc-upstream}/bootc-install.html#using-bootc-install-to-existing-root[`bootc install to-existing-root`]
 path supports installing "inside" an existing running Linux system, effectively
@@ -1696,6 +1820,7 @@ As a convenience, system-reinstall-bootc can be used in place of `bootc install 
 See {bootc-upstream}/bootc-install.html#using-system-reinstall-bootc[the system-reinstall-bootc docs]
 for details.
 
+== Requirement to provide filesystem type
 
 Fedora base images from this project do not specify a default root filesystem.
 CentOS Stream defaults to `xfs`.
@@ -1707,6 +1832,7 @@ explicit configuration.
 You can configure the default root filesystem at build time
 via {bootc-upstream}man/bootc-install-config.5.html[bootc install-config],
 or at deployment time via bootc-image-builder's `--rootfs`.
+= Understanding cloud agents
 
 The base image does not contain any special hypervisor-specific agents.
 The following specifically are not included for example:
@@ -1720,25 +1846,31 @@ The following specifically are not included for example:
 
 etc.
 
+== Unnecessary on bare metal
 
 For deployment to bare metal using e.g. Anaconda or `bootc install`, none of these are necessary.
 
+== Can be installed as desired for cloud deployments
 
 The goal of this project is to provide a generic base image; it is fully supported to install any desired cloud specific agents.
 See
 
 - xref:provisioning-aws.adoc[Provisioning AWS] for a cloud-init case
 
+== Unnecessary for "immutable infrastructure" on hypervisors
 
 A model we aim to emphasize is having the container image define the "source of truth" for system state.
 This conflicts with using e.g. `cloud-init` and having it fetch instance metadata and raises questions around changes to the instance metadata and when they apply.
 
 Related to this, `vmware-guest-agent` includes a full "backdoor" mechanism to log into the OS.
 
+== Goal: containerized agents
 
 A high level goal is also to aim for containerizing agents.
 
+=== Specific agents
 
+==== Ignition
 
 Ignition as shipped by CoreOS Container Linux derivatives such as https://fedoraproject.org/en/coreos/[Fedora CoreOS] has a lot of advantages in providing a model that works smoothly across both bare metal and virtualized scenarios.
 
@@ -1747,6 +1879,7 @@ It also has some compelling advantages over cloud-init at a technical level.
 But just like cloud-init, there is also significant overlap between a container-focused model of the world and an Ignition-focused model.
 
 Nevertheless, they don't actively conflict, and it is very likely that e.g. Fedora CoreOS will "rebase" on top of this project.
+= Running as a container
 
 You can run any of the containers via any OCI-compliant runtime, such as `podman`, `docker`, etc.
 Be sure to consult documentation for your runtime, e.g. https://podman.io/docs[Podman documentation].
@@ -1777,6 +1910,7 @@ to specify `bash` above, you will likely be at a login prompt which is usually n
 desired. Use the default `Ctrl-p Ctrl-q` detach sequence to disconnect the terminal,
 and from there you can e.g. `podman rm -f` the container.
 
+== Running without any additional privileges
 
 At the current time, not all services are expected to run when executed without
 any additional privileges, i.e. the defaults for `podman/docker run`.
@@ -1786,12 +1920,14 @@ https://gitlab.com/fedora/bootc/tracker/-/issues/43[this tracking issue].
 These services will run when the system is "deployed" to a virtual or physical machine,
 or when the container is run safely with a few additional privileges and namespacing.
 
+== Testing with additional privileges
 
 It makes a lot of sense to "test" your operating system container *as a container*
 before handing it off to more expensive CI/CD pipelines to provision virtual
 or physical machines or upgrade in place. However, before you do this you
 should carefully consider all of the below.
 
+=== --privileged, user namespaces and /sys
 
 Never use a "bare" `--privileged`. At a minimum, you should use `--privileged -v /sys:/sys:ro`.
 This is documented in the systemd https://systemd.io/CONTAINER_INTERFACE/[container interface];
@@ -1802,12 +1938,14 @@ When using an unprivileged runtime (e.g. podman as non-root) this is the default
 When running podman as root, use `--userns=auto`. For more information
 see e.g. https://github.com/containers/podman/discussions/13728[this discussion].
 
+=== Networking
 
 You should never use `--net=host` with `default.target`. This will spawn e.g. `sshd` which will attempt to listen
 on port 22 and such. When user namespacing is in use, this will just fail; if
 you forget to set up a user namespace, this combination could cause the container
 to try to interfere with the host services.
 
+=== Volumes and storage
 
 It's a good idea to use `--volume /var` when running as a container; this will
 help enable scenarios like nested containerization (avoiding overlay-on-overlay
@@ -1816,6 +1954,7 @@ for a nested `/var/lib/containers`) etc.
 It also helps decouple the OS container image from persistent state, for
 the same reasons as application containers.
 
+=== Block devices
 
 Some tooling may want to create block devices (e.g. LVM). This will
 be properly denied when the container is spawned in a user namespace.
@@ -1823,28 +1962,34 @@ In general you should not attempt to do this, but focus such testing
 on virtual or physical machines.
 
 * System Configuration
+= Authentication, Users and Groups
 
+== Default Users and credentials
 
 There are no default interactive users other than `root` in the base image.
 
 In the default `full` base image, OpenSSH is running; but there are no
 hardcoded credentials (passwords or SSH keys).
 
+== Creating a New User
 
 There are multiple mechanisms for users, groups and SSH keys, depending
 on the chosen installation path.
 
+=== Machine local interactive users at install time
 
 The two paths to generate disk images support users, groups and SSH keys:
 
 - Anaconda: xref:bare-metal.adoc[Installing on bare metal]
 - https://github.com/osbuild/bootc-image-builder/[bootc-image-builder] supports a `config.json`
 
+=== Machine local users via cloud agents
 
 Tools such as `cloud-init` (which can be added as part of a derived
 build), (or in general anything that ultimately invokes `useradd` at runtime on the target system, these users become
 "local mutable state", with entries in `/etc/passwd` and `/var/home/$user`.
 
+==== Anaconda
 
 This kickstart fragment will inject a SSH key for the root user:
 
@@ -1857,6 +2002,7 @@ sshkey --username root "<your key here>"
 NOTE: The need for the `rootpw` is a bug/misdesign in Anaconda that will be fixed in the future. The default
 root password defaults to being locked already.
 
+==== bootc-image-builder
 
 Similar to kickstart authentication, the bootc-image-builder project for generating
 disk images supports a `config.json`. For more information, see https://github.com/osbuild/bootc-image-builder?tab=readme-ov-file#-build-config[the bootc-image-builder docs].
@@ -1882,11 +2028,13 @@ Inline example:
 }
 ----
 
+=== Local system users
 
 The https://www.freedesktop.org/software/systemd/man/latest/systemd-sysusers.html[systemd-sysusers]
 process also runs on each boot, adding local mutable users starting
 from the definitions in the image.
 
+=== Embedded system users
 
 The base images use https://github.com/aperezdc/nss-altfiles[nss-altfiles], with some statically-allocated users
 in `/usr/lib/passwd` and `/usr/lib/group` that are part of the immutable
@@ -1894,14 +2042,18 @@ base. It is possible to extend this in derived builds; however,
 using either systemd `DynamicUser=yes` or
 https://systemd.io/USER_RECORD/[JSON user records] for users is preferred.
 
+== Upstream bootc user/group recommendations
 
 For more, see {bootc-upstream}building/users-and-groups.html[bootc generic user/group guidance].
 
+=== The osbuild-cfg project
 
 TIP: The https://github.com/cgwalters/osbuild-cfg[osbuild-cfg] project is aiming
 to create a fully declarative interface for a subset of operating
 system configuration tasks, and includes support for SSH keys for root.
+= Home directories
 
+== /root
 
 The default root home directory `/root` on bootc images is a
 symbolic link to `/var/roothome`, defaulting to machine-local
@@ -1926,10 +2078,12 @@ rm -rf /var/roothome
 which will help keep the image clean, avoiding leaking build-time
 code into the final image.
 
+== /home
 
 Similarly, the `/home` directory is a symbolic link to `/var/home`
 and does not exist by default. For more on non-root users and
 groups, see xref:authentication[Authentication, Users and Groups].
+= Dynamic reconfiguration
 
 The bootc model emphasises building a custom container image,
 binding together a base operating system with configuration
@@ -1944,6 +2098,7 @@ etc. by invoking the command directly, or scripting
 it across multiple machines via tooling such as
 https://www.ansible.com[Ansible].
 
+== Best practice: transient runtime reconfiguration
 
 Using firewalling as an example, the default for the
 https://firewalld.org/documentation/man-pages/firewall-cmd.html[firewall-cmd]
@@ -1964,12 +2119,15 @@ to existing systems, but just in memory.
 NOTE: It is also possible to configure the `/etc` directory
 to be transient as well.  For more, see xref:filesystem.adoc[Filesystem].
 
+== The `/run` directory
 
 The `/run` directory is an https://www.freedesktop.org/wiki/Software/systemd/APIFileSystems/[API filesystem]
 that is defined to be deleted when the system is restarted.  It is a best
 practice to use this directory for transient files.
 
+== Dynamic reconfiguration models
 
+=== Pull
 
 A common pattern is to contact a remote network server
 for dynamic configuration state. This is effectively how https://kubernetes.io/[Kubernetes]
@@ -1980,18 +2138,22 @@ In this model, you may either include code directly embedded in your base
 image or a privileged container that contacts the remote network server for configuration,
 and itself spawns further container images (for example, via the https://docs.podman.io/en/latest/_static/api.html[podman API]).
 
+== Push
 
 Instead of a "pull" based model, at least some workloads may
 best match a "push" model, as implemented by tooling such as
 https://www.ansible.com/[Ansible].
 
+== Example subsystems and tools
 
+=== systemd
 
 For systemd units, there is full support for dynamic transient reconfiguration
 or launching new services by writing to the `/run/systemd` directory.  For
 example, `systemctl edit --runtime foo.service` will allow dynamically changing
 the configuration of the `foo.service` unit, without persisting the changes.
 
+=== NetworkManager
 
 There is a `/run/NetworkManager/conf.d` directory for applying temporary
 network configuration.
@@ -1999,12 +2161,14 @@ network configuration.
 The `nmcli connection modify` command by default writes persistent changes;
 there is a `--temporary` flag that can be used to make changes only in memory.
 
+=== podman
 
 The default for `podman run` is to create a container that will persist
 across system reboots.  The `--rm` flag can be used for transient containers.
 For more on this, see xref:running-containers.adoc[Running containers] as well
 as the https://podman.io/[Podman documentation].
 
+== Injecting code dynamically
 
 In many cases of dynamic reconfiguration, a tool may want to execute code
 on the host filesystem, perhaps copying it over SSH - for example, Ansible
@@ -2026,9 +2190,11 @@ executing `/tmp/myfile`).
 
 Specifically placing it in e.g. `/root` may cause it to persist
 across reboots, which is commonly not desired.
+= Using dnf
 
 The {projname} default container image includes https://github.com/rpm-software-management/dnf[dnf].
 
+== Using `dnf` as part of a container build
 
 A key toplevel goal of this project is to support and encourage creating
 custom derived container images, using every tool and technique that applies
@@ -2038,6 +2204,7 @@ Many examples use `RUN dnf install`.  There is nothing special about the use
 of `dnf` in a bootc-derived container versus an application container; it
 is exactly the same code.
 
+== Using `dnf` at runtime
 
 The system is mounted read-only when "deployed" as a physical or virtual machine.
 
@@ -2048,15 +2215,18 @@ example may appear to start working, but will error out with e.g.
 
 This is a known bug; see e.g. https://github.com/rpm-software-management/dnf/pull/2053/[this PR].
 
+=== Enabling "transient" package installations
 
 Using the `bootc usroverlay` command, a transient writable overlay filesystem
 is created for `/usr`, and `dnf install` will write to that overlay.  This is
 a useful pattern for installing debugging tools but changes will be lost on reboot.
 
+== rpm-ostree
 
 At the current time, `rpm-ostree` is also included in the base image, though
 this may change in a future version. For more, see xref:rpm-ostree.adoc[rpm-ostree].
 
+== Deploying `dnf` based images
 
 Conceptually, it would be possible to extend the tooling that surrounds
 `fedora-bootc` to also enable a model where this would work:
@@ -2086,6 +2256,7 @@ a raw tarball, and if someone was interested in working
 on it, it could be added to the overall Fedora/CentOS
 container-related project scope.
 
+= Configuring Storage
 
 {projname} is a container image that can be "materialized" into a disk image in 3 different ways:
 
@@ -2094,6 +2265,7 @@ container-related project scope.
 - `bootc install`
 
 
+== Included storage technologies
 
 The `full` images include support for:
 
@@ -2104,16 +2276,19 @@ The `full` images include support for:
 
 But you can of course add other storage packages directly to the host system.
 
+=== Storage with Anaconda
 
 You can use https://docs.fedoraproject.org/en-US/fedora/f36/install-guide/advanced/Kickstart_Installations/[Kickstart]
 to configure storage with Anaconda.
 
+=== Storage with bootc-image-builder
 
 You can use the https://github.com/osbuild/bootc-image-builder[bootc-image-builder] tool to create a disk image.
 The available configuration for partitioning and layout is fairly fixed.
 
 Note that the default filesystem type does come from the container image's `bootc install` configuration.
 
+==== Virtualization and dynamic disk sizing
 
 There is a default systemd unit included `bootc-generic-growpart.service` which will
 run on each boot, and attempt to expand the partition and filesystem backing
@@ -2121,6 +2296,7 @@ the root device.
 For more information, see xref:storage-bootc-generic-growpart.adoc[bootc-generic-growpart.service].
 
 
+=== Storage with `bootc install`
 
 See {bootc-upstream}/bootc-install.html[bootc install] for more information.
 The `bootc install to-disk` can be used to directly write a "simple" flat storage configuration.
@@ -2131,11 +2307,13 @@ you can set up the target block storage and filesystem however
 you desire via external tools, then have your custom container
 image "self-install" to it.
 
+== Mounted Filesystems
 
 {projname} uses the bootc upstream project which currently uses ostree as a backend.
 
 For more on the filesystem layout, see {bootc-upstream}/filesystem.html[bootc filesystem].
 
+=== Differences from other OSTree-based systems
 
 The {projname} project enables `composefs` for storage by default. The
 `/opt` and `/usr/local` paths are plain directories, and *not*
@@ -2143,10 +2321,14 @@ symbolic links into `/var`. This means it is easier to install
 3rd-party content in derived container images that write into `/opt`
 for example.
 
+=== Version selection and bootup
 
 {projname} uses GRUB by default (except on s390x). A menu entry is created for each version of {projname} currently available on a system. This menu entry references an `ostree` deployment which consists of a Linux kernel, an initramfs and a hash linking to an `ostree` commit (passed via the `ostree=` kernel argument). During bootup, `ostree` will read this kernel argument to determine which deployment to use as the root filesystem. Each update or change to the system (package installation, addition of kernel arguments) creates a new deployment. This enables rolling back to a previous deployment if the update causes problems.
+= Host Network Configuration
 
+== Host Network Configuration Options
 
+=== Background
 
 The default "full" images include `NetworkManager`.
 Unless otherwise configured, {projname} will attempt DHCP on every interface with a cable plugged in.
@@ -2156,16 +2338,19 @@ Regardless of the way you choose to configure networking it all ends up as confi
 More information on the keyfile format can be found https://networkmanager.dev/docs/api/latest/nm-settings-keyfile.html[here].
 More information on the subsection options for keyfiles can be found https://networkmanager.dev/docs/api/latest/ref-settings.html[here].
 
+=== Configuration Options
 
 Complex networking configuration often also requires *per-machine* state.
 It is of course possible to generate machine-specific container images that have e.g. static IP addressing included.
 Another pattern is to include code to *generate* network configuration from inside the image by inspecting the host's MAC address.
 
+==== Via Anaconda
 
 It is supported to use Anaconda https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html#network[kickstart support to configure networking] (Wi-Fi including) for bare metal installations.
 
 Note that these will generally be stored in `/etc/NetworkManager/system-connections/`, and be inherently per-machine state.
 
+==== Via Kernel Arguments
 
 On the first boot of a machine a user can provide kernel arguments that define networking configuration.
 These kernel arguments are mostly defined in the https://man7.org/linux/man-pages/man7/dracut.cmdline.7.html[dracut.cmdline man page].
@@ -2173,6 +2358,7 @@ There are a few different ways to apply these kernel arguments on first boot.
 
 When using `bootc install`, it is also possible to set per-machine kernel arguments via `--karg`.
 
+=== Generating NetworkManager keyfiles using `nmcli`
 
 `nmcli`, the NetworkManager command line tool, provides an "offline" mode that doesn't talk with the NetworkManager daemon and just writes the keyfile content to standard output. Run the tool for each connection profile you want to create:
 
@@ -2204,6 +2390,7 @@ method=disabled
 
 See the https://networkmanager.dev/docs/api/latest/nm-settings-nmcli.html[settings man page] for a list of the properties that can be specified via `nmcli`. Bash autocompletion is available.
 
+=== Generating NetworkManager Keyfiles using `nm-initrd-generator`
 
 NetworkManager ships a tool, https://networkmanager.dev/docs/api/latest/nm-initrd-generator.html[nm-initrd-generator], that can generate keyfiles from dracut kernel argument syntax.
 This might be a good way to either convert from kernel arguments to keyfiles or to just quickly generate some keyfiles giving a small amount of input and then tweak some more detailed settings.
@@ -2279,7 +2466,9 @@ This run generates three keyfiles.
 One for `bond0`, one for `ens3`, and one for `ens2`.
 You can take the generated output, add more settings or tweak existing settings, and then commit the files into a container image.
 
+=== Configuring a Static IP
 
+==== Dracut Kernel Arguments
 
 .Template
 [source, bash]
@@ -2293,6 +2482,7 @@ ip=${ip}::${gateway}:${netmask}:${hostname}:${interface}:none:${nameserver}
 ip=10.10.10.10::10.10.10.1:255.255.255.0:myhostname:ens2:none:8.8.8.8
 ----
 
+=== Writing Configuration
 
 It's recommended to store NetworkManager configuration embedded in container images in `/usr/lib/NetworkManager/system-connections/` because this forms part of the immutable image state.
 
@@ -2300,6 +2490,7 @@ You can also write configuration to `/etc/NetworkManager/system-connections/` as
 
 The keyfiles must have root-only access permissions (`600`), otherwise NetworkManager will ignore them.
 
+=== Disabling Automatic Configuration of Ethernet Devices
 
 By default, NetworkManager will attempt to autoconfigure (DHCP/SLAAC) on every interface with a cable plugged in.
 In some network environments this may not be desirable.
@@ -2313,7 +2504,9 @@ It's possible to change this behavior of NetworkManager with a configuration fil
 # with no other matching connections.
 no-auto-default=*
 ----
+= Running Containers
 
+== Introduction
 
 {projname} ships with https://podman.io[podman] installed to run application containers.
 
@@ -2321,6 +2514,7 @@ Per the {bootc-upstream}/building/guidance.html#configuration[configuration guid
 prefer using `/usr/share/containers/systemd` for including "static" container images that are launched
 dynamically.
 
+== Example configuration (caddy)
 
 The following configures the systemd `caddy.service` to run https://www.busybox.net[busybox].
 
@@ -2347,6 +2541,7 @@ AutoUpdate=registry
 WantedBy=default.target
 ----
 
+== Lifecycling and updating containers (separate)
 
 Note that that the example above uses an implicit floating `:latest`
 tag. When configured this way, by default the specified image will be pulled
@@ -2355,6 +2550,7 @@ desirable; however, the choice of how to update the application
 containers is one that needs to be designed to match the specific
 workload.
 
+=== Note: Images are still separate
 
 In all models described below, the "application" containers
 are pushed and managed separately from the base bootc image.
@@ -2365,6 +2561,7 @@ See xref:embedding-containers.adoc[Embedding containers] for
 a model where the application workloads are physically embedded
 in the base bootc image.
 
+=== Lifecycle binding containers by default via tags or digests
 
 Instead of referencing a container by a generic floating tag
 such as `:latest`, instead you can include dedicated versioned
@@ -2384,6 +2581,7 @@ the host system.
 The state of the system (including these workload containers) is then describeable via the single
 base bootc container image.
 
+=== Enabling asynchronous automatic updates for container images
 
 In many cases however, you will want the ability to have at least some
 application containers "float" versions distinct from the host system.
@@ -2392,9 +2590,11 @@ The {podman-docs}/podman-auto-update.1.html[podman-auto-update.timer]
 unit can be enabled to automatically upgrade workload container images that
 are explicitly configured to opt-in to automatic updates.
 
+== Dynamic containers
 
 Updating container images dynamically, distinct from the base OS image is
 one case of xref:dynamic-reconfiguration.adoc[Dynamic reconfiguration].
+= Configuring container pull secrets
 
 A common scenario is needing to configure the host system with a
 "pull secret" necessary to fetch container images - which includes
@@ -2408,6 +2608,7 @@ The following content applies to the *built image*. When using an external
 installer such as Anaconda (xref:bare-metal.adoc[Bare metal]) or https://github.com/osbuild/bootc-image-builder[bootc-image-builder], those systems will each need
 to be configured with any applicable pull secrets.
 
+== Credential location for bootc
 
 See https://github.com/ostreedev/ostree-rs-ext/blob/9a4743a657ffe0435018d9720c6df80a486ca0f1/man/ostree-container-auth.md[ostree-container-auth.md].
 
@@ -2415,9 +2616,11 @@ The recommendation for host `bootc` updates is to write configuration to `/etc/o
 (which is shared with `rpm-ostree`). As of relatively recently, `/usr/lib/ostree/auth.json`
 is also supported.
 
+== Credential location for podman
 
 See https://github.com/containers/image/blob/main/docs/containers-auth.json.5.md[containers-auth.json].
 
+=== Lack of "system wide" podman credentials
 
 A general conceptual problem with all of the available containers-auth locations
 that are accepted by `podman` today is that the two locations are underneath:
@@ -2428,6 +2631,7 @@ that are accepted by `podman` today is that the two locations are underneath:
 There is discussion about adding a system-wide location for the container stack,
 but this has not yet happened. More in https://github.com/containers/image/pull/1746[this pull request].
 
+== Unifying bootc and podman credentials
 
 A common pattern will be using a single default global pull secret
 for both bootc and podman.
@@ -2457,7 +2661,9 @@ ln -sr /usr/lib/container-auth.json /etc/ostree/auth.json
 d /run/containers/0 0755 root root -
 L /run/user/0/containers/auth.json - - - - ../../../../usr/lib/container-auth.json
 ----
+= Security and hardening tasks
 
+== Enabling FIPS mode
 
 https://en.wikipedia.org/wiki/Federal_Information_Processing_Standards[FIPS] includes
 standards for cryptographic operations and can be configured as required.
@@ -2467,6 +2673,7 @@ First, you must add the configuration from {git-examples}/fips[fips] to your con
 If you are using bootc-image-builder or `bootc install to-disk`, there are currently no
 further steps required for system installation; however, see below.
 
+=== Usage with Anaconda
 
 When performing an xref:bare-metal.adoc[Anaconda installation] you must
 *additionally* set `fips=1` on the kernel commandline for the installation
@@ -2475,6 +2682,7 @@ environment.
 This is necessary because the Anaconda installer may itself perform
 cryptographic operations such as setting up LUKS encrypted volumes.
 
+=== crypto-policies and ca-trust configuration
 
 Bootc systems gather their initial state from the Container it was deployed from, any configuration
 under `/etc` will be automatically updated, deleted or replaced by any deployment done using bootc.
@@ -2532,17 +2740,20 @@ in `/etc` to an expected state. This could be done with systemd drop-in or manua
 We understand this behavior might not be optimal if you need to apply an update without a deployment and rebooting,
 we are exploring alternatives for future bootc version on this https://github.com/bootc-dev/bootc/issues/1251[Github issue].
 
+= Setting a Hostname
 
 To set a custom hostname for your system, write to the `/etc/hostname`
 file, which acts as machine-specific state. This can be done
 via Anaconda, or with a privileged container.
 
 Once booted, you can also verify that the desired hostname has been set using `hostnamectl`.
+= Proxied Internet Access
 
 If you are deploying to an environment requiring internet access via a proxy, you will want to configure services so that they can access resources as intended.
 
 This is best done by defining a single file with required environment variables in your configuration, and to reference this via systemd drop-in unit files for all such services.
 
+== Defining common proxy environment variables
 
 This common file has to be subsequently referenced explicitly by each service that requires internet access.
 
@@ -2557,6 +2768,7 @@ HTTPS_PROXY="http://example.com:8080"
 no_proxy="*.example.com,127.0.0.1,0.0.0.0,localhost"
 ----
 
+== Defining drop-in units for core services
 
 The `bootc` and `podman` tools will commonly need proxy configuration. At the
 current time, `bootc` does not always run as a systemd unit.
@@ -2568,15 +2780,18 @@ current time, `bootc` does not always run as a systemd unit.
 EnvironmentFile=/etc/example-proxy.env
 ----
 
+== Defining proxy use for podman systemd units
 
 Using the
 {podman-docs}/podman-systemd.unit.5.html[Podman systemd] configuration,
 similarly add `EnvironmentFile=/etc/example-proxy.env`.
 
 You may also consider setting the https://github.com/containers/common/blob/main/docs/containers.conf.5.md[containers.conf] configuration for proxy and environment settings of podman and containers.
+= Modifying Kernel Arguments
 
 There are multiple ways to configure kernel arguments.
 
+== Via `/usr/lib/bootc/kargs.d`
 
 In most cases you should use `/usr/lib/bootc/kargs.d/` method of configuring
 kernel arguments.
@@ -2593,6 +2808,7 @@ or to be embedded in a disk image.
 Kernel arguments defined below are carried forward across `bootc upgrade`,
 but are otherwise unmanaged state - bootc will not change them.
 
+== Install time kernel arguments with Anaconda
 
 The Anaconda https://pykickstart.readthedocs.io/en/latest/kickstart-docs.html#bootloader[bootloader kickstart verb] can be used to configure kernel arguments.
 
@@ -2600,6 +2816,7 @@ Note that like everything else written via Anaconda,
 once set these arguments become "unmanaged" machine-specific
 state.
 
+== Install time kernel arguments with bootc-image-builder
 
 The `bootc-image-builder` configuration file supports
 `customizations.kernel.append`. See
@@ -2609,6 +2826,7 @@ Note that like everything else set via the bootc-image-builder
 install config, once set these arguments become "unmanaged" machine-specific
 state.
 
+== Modifying Kernel Arguments via direct bootc install
 
 When invoking `bootc install` directly, there is also support for passing
 `--karg`. These kernel arguments also become unmanaged state.
@@ -2618,10 +2836,12 @@ However, this logic predates the "day 2 updatable" kernel argument support in
 `/usr/lib/bootc/kargs.d` and the use cases for install-time only kernel arguments
 defined in the container image are rare.
 
+== Embedding kernel arguments in custom kernels
 
 If you are using a custom kernel, you can embed custom arguments into the kernel
 binary.
 
+== Modifying Kernel Arguments on Existing Systems
 
 The canonical kernel arguments are maintained in `/boot/loader/entries`. While
 the `/boot` filesystem is expected to be mounted read-only by default, it is
@@ -2638,6 +2858,7 @@ Note that doing so will currently change the *existing* bootloader entry.
 The current base images do include `rpm-ostree` which has
 `rpm-ostree kargs`; however, it is likely that `rpm-ostree`
 will be dropped from the default base image.
+= The initial RAM disk
 
 This image uses https://github.com/dracutdevs/dracut[dracut]
 to build an https://docs.kernel.org/admin-guide/initrd.html[initial RAM disk]
@@ -2647,7 +2868,9 @@ It is important to understand that the initrd is generated
 at *build time* and included in the container image in
 `/usr/lib/modules/$kver/initramfs.img`
 
+== Modifying and regenerating the initrd
 
+=== Writing drop-in configuration
 
 Dracut supports "drop-in" config files; per the configuration
 guidance prefer using the location in `/usr`, which is
@@ -2661,6 +2884,7 @@ placed into e.g. `/usr/lib/dracut/dracut.conf.d/50-custom-added-modules.conf`:
 add_dracutmodules+=" somemodule "
 ----
 
+=== Regenerating the initrd
 
 An invocation similar to the following will regenerate the initrd as part of a container
 build:
@@ -2673,6 +2897,7 @@ RUN set -xe; kver=$(ls /usr/lib/modules); env DRACUT_NO_XATTR=1 dracut -vf /usr/
 Note that we must explicitly pass dracut the kernel version
 to target; the default will attempt to pull the *running*
 kernel version which is almost always the incorrect thing to do.
+= Kernel tunables (sysctl)
 
 The Linux kernel offers a plethora of knobs under `/proc/sys` to control the availability of different features and tune performance parameters.
 
@@ -2689,6 +2914,7 @@ kernel.sysrq = 0
 ----
 
 Further details can be found in the systemd man pages https://www.freedesktop.org/software/systemd/man/sysctl.d.html[sysctl.d(5)] and https://www.freedesktop.org/software/systemd/man/systemd-sysctl.service.html[systemd-sysctl.service(8)].
+= Setting Keyboard Layout
 
 To set your system keyboard layout (keymap), write to `/etc/vconsole.conf`:
 
@@ -2699,6 +2925,7 @@ KEYMAP=de
 ----
 
 Once booted, you can also verify that the desired keymap has been set using `localectl`.
+= Node counting
 
 .NOTE: This content is specific to Fedora and does not currently apply to CentOS.
 
@@ -2706,6 +2933,7 @@ Fedora nodes are counted by the Fedora infrastructure via the Count Me feature. 
 
 CentOS bootc does not include Count Me infrastructure.
 
+== More information on Count Me
 
 This system is explicitly designed to make sure that no personally identifiable information is sent from counted systems. It also ensures that the Fedora infrastructure does not collect any personal data. The nickname for this counting mechanism is "Count Me", from the option name. Implementation details of this feature are available in https://fedoraproject.org/wiki/Changes/DNF_Better_Counting[DNF Better Counting change request for Fedora 32]. In short, the Count Me mechanism works by telling Fedora servers how old your system is (with a very large approximation).
 
@@ -2715,22 +2943,27 @@ On {projname} in the `full` image, note that 3 different tools are included:
 - `bootc`
 - `rpm-ostree` (currently)
 
+=== At container build time
 
 If you use `dnf` as part of a container build, it will inherently run through the `countme` process unless you set `countme=0` in `/etc/yum.repos.d/fedora/*.repo`.
 
+=== At machine runtime
 
 Because the base image includes `rpm-ostree`, it will run by default https://coreos.github.io/rpm-ostree/countme/[rpm-ostree as a stand-alone method]. The new implementation has the same privacy preserving properties as the original DNF implementation.
 
 Additionally, if you invoke `dnf` at runtime on an installed system, it will also be counted unless
 disabled in the `/etc/yum.repos.d` files.
 
+=== Intersection with `dnf-makecache.timer`
 
 The `dnf-makecache.timer` systemd unit would also by default invoke counting, except it is disabled
 by default if `/run/ostree` is present, which suppresses the cache invocation by default.
 
+=== Intersection with `bootc`
 
 At the current time there is no default interaction between the Count Me infrastructure and `bootc`.
 
+== Opting out of counting
 
 You can disable the `countme` repo flags and the unit timer as part of a container build:
 
@@ -2740,11 +2973,13 @@ RUN sed -i -e s,countme=1,countme=0, /etc/yum.repos.d/*.repo && systemctl mask -
 ----
 
 * System Architecture
+= Understanding the {projname} filesystem layout
 
 This section briefly re-summarizes some of the content that is in the
 upstream {bootc-upstream}/filesystem.html[bootc filesystem documentation].
 Please consult that for more.
 
+== composefs
 
 A first important difference between {projname} and other ostree-using
 variants in Fedora derivatives is that {projname} enables the use of https://github.com/containers/composefs/[composefs]
@@ -2754,6 +2989,7 @@ However, this use of composefs is in an "unsigned" mode; when targeting
 a filesystem with fs-verity enabled, then fs-verity will be turned on.
 However, no signature verification is enforced for default installations.
 
+== Writable at build time, readonly at runtime
 
 With just the two exceptions below, all directories are writable
 as part of a container build; but once deployed (onto a physical
@@ -2763,6 +2999,7 @@ as read-only.
 This is similar to a semantic similar to that accessible
 with `podman run --read-only` for application container images.
 
+== Filesystem bind mount: /etc
 
 The `/etc` directory is persistent, mutable machine local state by default.
 While it appears as a mount point, it is always part of the machine's
@@ -2778,6 +3015,7 @@ NOTE: It is not supported to attempt to make `/etc` a distinct
 physical partition.  However, it can be made explicitly "transient";
 for more see {git-examples}/transient-etc[transient-etc example].
 
+=== Semantics of `/etc` with container images
 
 When you change the contents of `/etc` in a derived container images, any
 added or removed files will be applied on upgrades.  For example,
@@ -2788,6 +3026,7 @@ However, according to the 3-way merge logic, any machine-local modified files wi
 by default.  This can be a common issue with modifications to `/etc/passwd`
 in derived containers.  For more on users and groups, see {bootc-upstream}/building/users-and-groups.html[bootc users and groups].
 
+== Filesystem bind mount: /var
 
 The `/var` mount point is also persistent and mutable machine local state,
 but there is only one physical copy of it.  This is the
@@ -2799,6 +3038,7 @@ storage location for the following state:
 - User and root home directories (`/var/home` and `/var/roothome` respectively)
 - General host-bound application state such as the default `/var/lib/postgresql` database path
 
+=== Semantics of `/var` and container images
 
 It is supported to make the toplevel `/var` a mount point; however it's
 more generally recommended to make sub-paths of `/var` such as
@@ -2817,11 +3057,13 @@ as a way to ensure that newly added state "reconciles" across upgrades
 as desired.
 ====
 
+== Dynamic mountpoints with transient-ro
 
 The `transient-ro` option allows privileged users to create dynamic top-level mountpoints
 at runtime while keeping the filesystem read-only by default. This is particularly useful for
 applications that need to bind mount host paths that may be platform-specific or dynamic.
 
+=== Use cases
 
 This feature addresses scenarios where:
 
@@ -2830,6 +3072,7 @@ This feature addresses scenarios where:
 - Dynamic mountpoints need to be created after deployment but before application startup
 - The filesystem should remain read-only for regular processes
 
+=== Configuration
 
 To enable this feature, add the following to `/usr/lib/ostree/prepare-root.conf`:
 
@@ -2853,6 +3096,7 @@ For a complete end-to-end example demonstrating this feature, see the
 {git-examples}/transient-root-ro[transient-root-ro example] in the examples repository.
 ====
 
+=== How it works
 
 When `transient-ro=true` is set:
 
@@ -2861,6 +3105,7 @@ When `transient-ro=true` is set:
 3. These mountpoints persist for the current boot but do not survive reboots or upgrades
 4. Regular processes continue to see a read-only filesystem
 
+=== Example: Podman machine integration
 
 A common use case is with `podman machine` on macOS, where the VM needs to bind mount
 host paths like `/Users/username` into the VM. With `transient-ro`, the system can:
@@ -2869,6 +3114,7 @@ host paths like `/Users/username` into the VM. With `transient-ro`, the system c
 2. Bind mount the host's `/Users` directory to the VM's `/Users`
 3. Keep the rest of the filesystem read-only for security
 
+=== Security considerations
 
 - Only privileged users (root) can create these mountpoints
 - The mountpoints are transient and don't persist across reboots
@@ -2877,6 +3123,7 @@ host paths like `/Users/username` into the VM. With `transient-ro`, the system c
 
 For more information about this feature, see the upstream ostree documentation and the
 related discussion in the bootc project.
+= Machine and image customization: generic vs building
 
 A fundamental goal of this project is to make it easy
 to create custom bootable Linux systems by building
@@ -2909,6 +3156,7 @@ for a use case such as:
 
 etc.
 
+== "Final" images
 
 Our sister project https://docs.fedoraproject.org/en-US/fedora-coreos/[Fedora CoreOS]
 is an excellent example of a "final generic image". It
@@ -2921,6 +3169,7 @@ It focuses on Ignition as a generic customization mechanism
 that writes to `/etc` and `/usr/local` and other directories
 which act as machine-local mutable state.
 
+== Customizing base images without deriving
 
 The `/etc` directory is intended for configuration, and
 many operations that one might include in a container build
@@ -2945,7 +3194,9 @@ to produce "generic" images, and will continue to be
 into the future. However, the primary focus is on providing
 tools to build custom derived images.
 * OS updates
+= Auto-Updates and Manual Rollbacks
 
+== bootc
 
 {projname} provides atomic updates and rollbacks via {bootc-upstream}[bootc] deployments
 for the host system.
@@ -2955,6 +3206,7 @@ By default, the OS performs continual auto-updates via a stock copy of the upstr
 
 For more, see <{bootc-upstream}man/bootc-fetch-apply-updates.service.5.html>
 
+== podman
 
 Additionally for referenced application containers, the
 {podman-docs}/podman-auto-update.1.html[podman-auto-update.timer]
@@ -2963,17 +3215,21 @@ are explicitly configured to opt-in to automatic updates. The containers can
 also be rolled back when properly configured. Please refer to the following
 https://www.redhat.com/sysadmin/podman-auto-updates-rollbacks[article] for details.
 
+= Understanding bootc and rpm-ostree
 
+== bootc
 
 The main focus of {projname} is on {bootc-upstream}[bootc]. However,
 the "full" base image currently includes https://github.com/coreos/rpm-ostree/[rpm-ostree]
 which shares a lot of the same underlying code from the https://github.com/ostreedev/ostree-rs-ext/[ostree]
 project.
 
+=== Using rpm-ostree
 
 It is supported to install and use rpm-ostree on a {projname} system,
 because the bootc and rpm-ostree projects share significant underlying code.
 
+==== Using in container builds
 
 At the current time, operations such as `RUN rpm-ostree install foo` when
 executed as part of a container build are not substantially different
@@ -2983,7 +3239,9 @@ ultimately share a lot via https://github.com/rpm-software-management/libdnf[lib
 There's not generally a strong reason to use `rpm-ostree` inside a container
 build.
 
+==== Client side operations
 
+===== rpm-ostree upgrade/rollback
 
 The `rpm-ostree upgrade`, `rebase`, `deploy` verbs etc. will all gracefully
 interact with a `bootc` system - at the current time they operate on shared state.
@@ -2991,6 +3249,7 @@ interact with a `bootc` system - at the current time they operate on shared stat
 You can interchange `rpm-ostree upgrade` with `bootc upgrade`, etc; they
 currently perform the same operations in general.
 
+===== rpm-ostree install/override replace
 
 However, any local state mutations such as package layering, removals, or
 enabling e.g. `rpm-ostree initramfs --enable` will cause `bootc upgrade`
@@ -3006,6 +3265,7 @@ https://gitlab.com/fedora/bootc/tracker/-/issues/4[client side layering tracker]
 This would build on more generic support for {bootc-upstream}/booting-local-builds.html[booting local builds]
 for persistent layering.
 
+= Air-gapped and disconnected updates
 
 For environments without a direct connection to a centralized container
 registry, we encourage mirroring an on-premise registry if possible or manually
@@ -3044,7 +3304,9 @@ using the same location each time to simplfy this.
 Finally `bootc upgrade` will check for updates and reboot the system (when `--apply` is used).
 
 `bootc upgrade --apply`
+= Updating the bootloader
 
+== bootupd
 
 IMPORTANT: Updating the bootloader is not currently automatic.
 The https://github.com/coreos/bootupd/[bootupd] project is included in {projname} and may be used for manual updates.
@@ -3082,6 +3344,7 @@ Enable `bootloader-update.service` to automate bootupd updates
 # systemctl enable bootloader-update.service
 ----
 
+=== Future versions may default to automatic updates
 
 It is possible that future {projname} versions may default
 to automating bootloader updates similar to the above.
@@ -3118,13 +3381,16 @@ Flight Control will roll out the target configuration to devices where a device 
 apply them and report progress and health status back up.
 
 * Troubleshooting
+= Manual Rollbacks
 
 When an update is complete, the previous OS deployment remains on disk. If an update causes issues, you can use it as a fallback.
 By default, this is a manual operation, but you can automate it.
 
+== Temporary rollback (interactive)
 
 To temporarily boot the previous OS deployment, hold down `Shift` during the OS boot process. When the bootloader menu appears, select the relevant OS entry in the menu.
 
+== Reverting via CLI/script
 
 To cause the previous OS deployment to be the next boot:
 
@@ -3148,6 +3414,7 @@ systemctl disable --now bootc-fetch-apply-updates.timer
 systemctl enable --now bootc-fetch-apply-updates.timer
 ----
 
+== Note on Rollbacks and the /etc Directory
 When you perform a rollback (e.g., with bootc rollback), any changes made to files in the `/etc` directory won’t carry over to the rolled-back deployment.
 The /etc files will revert to their state from that previous deployment instead.
 
@@ -3161,6 +3428,7 @@ Going back to the original state from either through a temporary rollback or ano
 
 Another option if one is sure the situation you are rolling back for is not the config files i.e content in /etc/ and you want to go to an older deployment you can `bootc switch`
 to that older image, this will perform the /etc merge and deploy the previous version of the software.
+= Access Recovery
 
 If you've lost the private key of an SSH key pair used to log into a Fedora system, and do not have any password logins set up to use at the console, you can gain access back to the machine with the following steps:
 
@@ -3178,6 +3446,7 @@ Execute the following commands:
 Or alternatively, you can manually attempt to update e.g. `~/.ssh/authorized_keys`.
 
 Note that Fedora by default does not allow SSH login via password authentication.
+= Debugging with Toolbx
 
 The {projname} image does include some classic systems inspection
 tools such as `lsof`, but the recommended approach is to leverage
@@ -3187,6 +3456,7 @@ included in the image.
 NOTE: Due to an oversight, `toolbox` may not yet be in all images,
 but it should be soon.
 
+== What is Toolbx?
 
 Toolbx is a utility that allows you to create privileged containers meant to
 debug and troubleshoot your instance. It is a wrapper around podman which
@@ -3196,6 +3466,7 @@ debugging the host system.
 These containers can then be used to install tools that you may need for
 troubleshooting, keeping things distinct from the host root filesystem.
 
+== Using Toolbx
 
 You can create a new toolbox by running the command below.
 
@@ -3236,6 +3507,7 @@ from the host using `toolbox rm` if desired.
 
 
 * Related projects
+= Linux desktops and {projname}
 
 This project is generally datacenter/server/edge focused.
 However, there exist other projects which are using
@@ -3244,6 +3516,7 @@ similar technologies and are focused on Linux desktops.
 In the future, it is likely that some of these projects
 will "rebase" on {projname} as a common basis technology.
 
+== Fedora Atomic Desktops
 
 See https://fedoraproject.org/wiki/SIGs/AtomicDesktops[Fedora Atomic Desktops].
 
@@ -3253,6 +3526,7 @@ Notable differences/overlaps:
 - Fedora Atomic Desktops do not currently default to using containers for updates, but the legacy OSTree model
 - Fedora Atomic Desktops do not use `composefs`, and do not use `bootupd`, and have a slightly different filesystem layout
 
+== Universal Blue
 
 The https://universal-blue.org/[Universal Blue] project is heavily focused on container-native
 Linux desktops.
@@ -3260,6 +3534,7 @@ Linux desktops.
 There is a lot of similarity to the Atomic Desktops, except that the default update
 mechanism is containers, not OSTree.
 
+= {projname} relationship with Fedora CoreOS
 
 By far the biggest difference between the
 two is that {projname} emphasizes users *deriving*
@@ -3281,10 +3556,12 @@ If you find the need to make such changes
 to the host, then you may find {projname}
 a better target.
 
+== Common components
 
 - Fedora derivatives
 - systemd, containers, ostree
 
+== Differences
 
 [cols="1,1"]
 |===

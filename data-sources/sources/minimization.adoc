@@ -1,5 +1,6 @@
 
 * **Objective**
+= Fedora Minimization Objective
 
 While Fedora is well suited for traditional physical/virtual workstations and servers, it is often overlooked for use cases beyond traditional installs.
 
@@ -9,12 +10,15 @@ A specific example is Systemd — while being very useful (everybody loves Syste
 
 Besides that, basically all types of deployments benefit from a reduced size, as there is a direct relationship between the installation footprint and attacks surface & relevant CVEs.
 
+=== Vision
 
 Thousands of individual and corporate contributors collaborate in the Fedora community to explore new problems and to build a fast-moving modern OS with a rich ecosystem allowing them to experiment on modernising their infrastructure.
 
+=== Mission
 
 Helping open source developers, sysadmins, and Linux distribution maintainers to focus on what's relevant for them.
 
+=== Outcomes
 
 Fedora is a popular platform because its ecosystem is both cutting-edge and well optimized for modern deployments such as IoT and containers. That makes many people use Fedora rather than to build and assemble their own artifacts directly from upstream projects. And that relieves the pressure on open source developers caused by users who would otherwise ask for their specific security and other issues to be fixed quickly.
 
@@ -24,6 +28,7 @@ So:
 * Sysadmins can easily consume pre-built bits that also get regular updates
 * Fedora contributors (vendors and individuals) can collaborate within the Fedora community on exploring and developing open source solutions to problems of the future
 
+=== Outputs
 
 Specific use cases are defined in Fedora. The community then focuses on those use cases with development and maintenance, optimisation (like minimisation), and testing (like CI and gating). These use cases can be transparently prioritized for infrastructure resources based on community interests.
 
@@ -31,6 +36,7 @@ Feedback Pipeline actively monitors each use case and records the size and the d
 
 An active focus on minimization means that our maintainers produce size-optimised content with the same or lower amount of effort. Tooling, services, and data help them to make the right decision about dependencies easily, and to keep things smaller over time.
 
+=== Actions
 
 **Identify relevant use cases** and allow the community (meaning not just the Minimization Team) to define their own. We think of a use case as a set of packages installed in a specific context, having a specific purpouse — such as __Apache HTTP Server Container__. Define use cases at least for:
 
@@ -77,6 +83,7 @@ Being able to see what's going on is a prerequisite of implementing any changes.
 
 **Provide guidance** for the Fedora community in form of blog posts, videos, and conference talks. Even though we might have guidelines and policies in place, spreading the word is always important.
 
+=== Resources and Inputs
 
 Cloud resources to prototype services. We are not going to change the existing Fedora infrastructure in any way before whatever we develop proves useful and worth the hustle of stabilization and changing production.
 
@@ -84,42 +91,53 @@ No existing Fedora Infra or Release Engineering resources are needed at the mome
 
 Active support from our maintainers, the FPC, and other community members is definitely needed. This is obviously not something we can "request", but it's still a necessary input.
 
+=== Guiding Principles
 
 **Usefulness over size**: There is a balance between the usefulness and size. We take that in mind and will not implement drastic changes that would prevent our users from using Fedora. However, nothing prevents us from producing additional very specific and mininal artifacts.
 
 **Using RPM**: We're doing this with RPM. We're not achieving minimization by deleting files after installation. This might be obvious, but still worth mentioning.
 
 * **Community**
+= Contributing to Minimization
 
 Are you interested in minimizing the installation footprint various Fedora bits and pieces? Are you interested in contributing? Or perhaps already working on something and want to make it more visible? Then you're at the right place!
 
+== What to contribute
 
 The main areas of contribution include:
 
+=== Collecting use cases and problems
 
 Help us make sure we work on stuff that's relevant to people. Both Fedora users and others who might become Fedora users. Talk to people at events, online forums, or anywhere, really. Ask them on how they run stuff, what pain points they experience, or what would they like to see.
 
+=== Optimizing Fedora packaging
 
 Look at the use cases and problems we've collected and see if there are ways to minimize them by optimizing the packaging. That might include cutting off unnecessary dependencies, switching common dependencies to a single implementation, or even proposing policy changes about packaging.
 
+=== Working with upstream communities
 
 Many changes go beyond Fedora. Are there any potential code changes that could help us? Or anything that requires coordination upstream? Reach out to upstream communities, offer help, build connections with the members, and help make bigger changes.
 
+=== Developing tools and services
 
 Ask our maintainers and developers if there's anything in their minimization-related workflows that could use some automation or a tool, and help develop that. That goes for both making things smaller, as well as keeping them small over time.
 
+=== Looking at alternative approaches
 
 Look at other Linux distributions, repositories, container images, and other solutions, and compare them with Fedora. Anything they do differently? Maybe even better? What could we experiment with and learn about?
 
+=== Promoting Minimization and Fedora
 
 Being visible helps us get more feedback, more contributors, and to do a better overall progress. Write blog posts about cool things that are happening, about interesting problems we're solving, or about examples of using Fedora in various use cases. Submit talks at events, write on social media, make videos, etc.
 
 
+== How to join
 
 If you want to be a listed member of this group, please https://pagure.io/minimization/new_issue[open an issue], introduce yourself, and tell us how you want to help.
 
 But you don't need to be a formal team member to contribute. We also welcome ocasional contributions from the whole Fedora community. Just reach out through one of the xref:communication.adoc[communication channels].
 
+== Current members
 
 Adam Samalik (asamalik) — objective lead
 
@@ -140,6 +158,7 @@ Troy Dawson (tdawson)
 Igor Gnatenko (ignatenkobrain)
 
 Jun Aruga (jaruga)
+= Discussing & Tracking Minimization
 
 **Instant messaging**::
 IRC #fedora-devel at FreeNode is the default channel to discuss things live.
@@ -156,6 +175,7 @@ https://bugzilla.redhat.com/show_bug.cgi?id=1734342[Tracker bug 1734342] in Bugz
 Minimization is not completely centralized effort — work is happening (and is discussed and tracked) at many different places such as upstream issue trackers, mailing lists, forums, meetings, etc. Many of those referenced in in our Minimization issue tracker.
 
 * **Progress**
+= Action Plan for Minimization
 
 This is a short-term action plan for the Minimization effort. The objective is in an early stage and doesn’t have a proper tracker, yet. At this time, everything is tracked at and reported back to this space in Fedora Docs.
 
@@ -173,6 +193,7 @@ There are four main focus areas at this moment:
 4. **Content strategy**
 ** Defining an effective way to let the world know about the cool things we do!
 
+== Prototyping tools
 
 https://pagure.io/minimization/issues?status=Open&tags=Focus+Area%3A+Prototyping+Tools&close_status=[**Issue tracker: Prototyping Tools**]
 
@@ -184,6 +205,7 @@ Two main classes:
 * **Monitoring and feedback** — Monitoring the sizes of relevant use cases over time as new versions of packages are built, reporting potential size increases. Also monitoring for specific dependencies that have been removed in the past but could come back, and reporting those.
 
 
+== Ecosystems exploration
 
 https://pagure.io/minimization/issues?status=Open&tags=Focus+Area%3A+Ecosystems+Exploration&close_status=[**Issue Tracker: Ecosystems Exploration**]
 
@@ -194,6 +216,7 @@ Talking to other groups in Fedora such as https://docs.fedoraproject.org/en-US/i
 There are also many different ecosystems other than Fedora — other linux distributions, various container images, etc. We’ll look at those to compare what sizes and features are available in the universe. This will help us get a better idea about where we stand, and what our goal should be.
 
 
+== Use case analysis
 
 https://pagure.io/minimization/issues?status=Open&tags=Focus+Area%3A+Use+Case+Analysis&close_status=[**Issue Tracker: Use Case Analysis**]
 
@@ -201,18 +224,22 @@ Digging into dependency trees of specific use cases (specific package installati
 
 Important part of this will be working closely together with the maintainers as they are the subject matter experts.
 
+== Content strategy
 
 https://pagure.io/minimization/issues?status=Open&tags=Focus+Area%3A+Content+Strategy&close_status=[**Issue Tracker: Content Strategy**]
 
 Keeping the world up-to-date about our efforts is an essential part of this objective. We need to have a simple content strategy to make sure that there is information flowing consistently.
 
 We need to consider readers with various amouts of time and levels of interest.
+= Tools & Services for Minimization
 
+== Feedback Pipeline service
 
 Reporting and notifications regarding dependencies and sizes of defined RPM installations.
 
 https://minimization.github.io/reports/[**minimization.github.io/reports**]
 
+== rpm-showme tool
 
 Dependency visualisation of an RPM-based installation (a system, an image, etc.)
 
@@ -222,10 +249,13 @@ The script takes a file path or a container image name as an input, and generate
 
 
 
+= Discoveries
 
 This page contains random discoveries that we make. We'll bring some structure to this page as we go.
 
+== Techniques
 
+=== dnf
 
 * --nodocs or --setopt=tsflags=nodocs
 ** Average shrink is 5 to 10M
@@ -236,9 +266,11 @@ This page contains random discoveries that we make. We'll bring some structure t
 ** Average shrink is 200M
 ** Can remove some language based functionality
 
+== Packages
 
 These headings can/should be changed.  They are what they currently are just for placeholders.
 
+=== Investigating Minimization
 
 * httpd
 ** Remove systemd from main package
@@ -267,6 +299,7 @@ These headings can/should be changed.  They are what they currently are just for
 * perl
 ** It's rather large, can it be removed from some package dependencies ?
 
+=== Finished Investigation
 
 * dnf [changed]
 ** removed systemd as a dependency.  Dropped container size by 30M.
@@ -275,12 +308,15 @@ These headings can/should be changed.  They are what they currently are just for
 ** https://src.fedoraproject.org/rpms/anaconda/pull-request/5
 *** No, it needs to be where it is.
 
+== External Articles
 
 * Building tiny container images: https://opensource.com/article/18/7/building-container-images
 * Creating small containers with Buildah: https://opensource.com/article/18/5/containers-buildah
 * Buildah images not so small?: https://github.com/containers/buildah/issues/532
+= Minimization Objective Status
 
 
+== Updates on the Devel list
 
 Regular updates are posted to the https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/[Fedora Devel mailing list]:
 
@@ -295,6 +331,7 @@ Regular updates are posted to the https://lists.fedoraproject.org/archives/list/
 * https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/message/2QB42MDK354LWI44BRCQHRXUB6B6QCNX/[Wednesday, 21 August 2019]
 * https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/message/QIX5LJJF4X6HKZXOQMKEIORRTK7ZIAN7/[Friday, 2 August 2019]
 
+== First Phase Accomplishments
 
 See the https://docs.fedoraproject.org/en-US/minimization/status/[status page] for detailed info and historic weekly updates. Summary below.
 

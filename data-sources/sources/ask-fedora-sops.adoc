@@ -1,8 +1,10 @@
+= User Guide
 :experimental:
 :toc:
 
 Welcome to Ask Fedora! This is a community supported Discourse instance for Fedora users to get help with any issues they may have with their Fedora, As a new user, we hope you will find this site intuitive and clearly structured, but here is some guidance to get you started:
 
+== Basic Terms Used by Discourse (Nomenclature)
 
 Here are some very basic terms that will be helpful to keep in mind as you use the Site:
 
@@ -15,6 +17,7 @@ Here are some very basic terms that will be helpful to keep in mind as you use t
 * Category (Level-1): The Language that we can support. it's there for organization only. Topic requires Moderation. (Parent Category)
 * Sub-Categiory (Level-2) : The place Where the Magic Occurs. (Child Category)
 
+== First Setup
 
 Before you start your Journey in the forum, you should set some config in your Preference :
 
@@ -33,6 +36,7 @@ You are also able to change the Theme althought the default language in the Site
 
 IMPORTANT: You can mute as many as you like.
 
+== How is Organized the Site?
 
 Where're Running a Multi-lingual Site and We Sructuture it as follow :
 
@@ -45,10 +49,13 @@ Next, sub-categories Level-2, that are identical for all supported languages.
 
 NOTE: Select the proper Sub-Category Will Help us to Help you better and Kept the site Clean and On-Topic.
 
+== What is a Badged?
 
 Badges in Discourse reinforce positive user behaviour and facilitates “learning by doing”.
 
+== Browsing the Forum
 
+=== Topic lists
 
 By default, the Discourse homepage will show all Latest conversations in the community but you can filter this list in a number of ways:
 
@@ -62,6 +69,7 @@ By what’s ‘New’ to you: by default, new topics are those created in the la
 
 By what topics are “Unread”: by default, unread topics are those that you have previously opened and read for at least 4 minutes, and that have new posts (replies) submitted to them. Unread topics show a number in a blue circle indicating how many new posts are in the topic.
 
+=== See who is participating
 
 There are several ways to see who is involved in topics.
 
@@ -76,21 +84,26 @@ The box at the bottom of the OP tells you; who created the post and when, gives 
 
 image::participating.png[]
 
+== Navigation Tools
 
 For Search, the Menu, or your User page, use the icon buttons at the upper right .
 
 image::navigation-tool.png[]
 
+== Reading Topics
 
 A healthy community needs members to be posting new content, but this activity is not everything. Readers are the true indicators of how healthy the community is. What’s the point of posts that no-one reads? Discourse encourages and tracks reading habits so community managers can keep a healthy balance.
 
+=== Keep scrolling
 
 Click a topic title and read down the list of replies in chronological order, following links or previewing replies and quotes as you go. Use your mouse to scroll the screen, or use the timeline scroll bar on the right which also shows you how far through the conversation you’ve read. On smaller screens, select the bottom progress bar to expand it.
 
+=== Jump back in
 
 * Selecting a topic title will take you to your last read post in the topic. To enter at the top ↑ or bottom ↓ instead, click the reply count or last reply date.
 * Topics above the light red line on a list are new or updated since your last visit. If you have read all the way to the end of a topic, the title will be light grey instead of black.
 
+=== Related topics
 
 Sometimes conversations are clearer if topics are split, where posts are moved to a more appropriate topic, or two related topics are merged. If a post is moved, a link will appear that will allow readers to jump to that comment wherever it has been moved to, and the person who posted it will also be notified.
 
@@ -98,7 +111,9 @@ At the end of the OP you will also see lists of related topics that link to the 
 
 image::summarize.png[]
 
+== Taking Part in Conversations
 
+=== Replying
 
 Press any image Reply button to open the editor panel at the bottom of your browser. You can continue reading (and even search or navigate to different topics) while you compose your reply.
 
@@ -113,15 +128,19 @@ To reply to a specific post in a topic, clicking the grey Reply button at the en
 ** Your post will include a new link in its header with an image to show what this is ‘in reply to’ - clicking this link displays that previous post for context next to your reply
 ** The original post includes a count of replies at the bottom - clicking this link displays the content of the
 
+=== Drafts
 
 Drafts will automatically be saved as you write. If you minimise the editor or navigate to a different topic, the editor might disappear. To open a draft, return to the topic you were replying to or click the highlighted bar at the bottom of your browser, and the editor will reappear with your draft.
 
+=== Quoting
 
 To insert a quote, select the text you wish to quote, then press the Quote button that pops up. There is no need to quote the a whole message, it helps to be specific. Repeat this for multiple quotes even from different posts and different users. The quoted text will point to their original source.
 
+=== Mentioning
 
 To notify someone about your reply, mention their name. Type @ to begin selecting a username. This search will also search the name fields in case you don’t know a particular username.
 
+=== Emoji
 
 To use standard Emoji 8, just type : to match by name, or traditional smileys ;)
 
@@ -129,6 +148,7 @@ image::emoji.png[]
 
 Alternatively, click on more to see a complete list of emoji to select from.
 
+=== Oneboxes (Link Previews)
 
 What do we mean by “Onebox”?
 
@@ -147,6 +167,7 @@ To generate a summary for a link, paste it on a line by itself. To start a topic
 
 image::onebox.png[]
 
+=== Formatting
 
 Your reply can be formatted using simple HTML, BBCode, or Markdown 18:
 
@@ -158,6 +179,7 @@ This is **bold**.
 
 For more formatting tips, http://commonmark.org/help/tutorial/[Try This Tutorial].
 
+== Actions and Reactions
 
 There are action buttons at the bottom of each post:
 
@@ -168,6 +190,7 @@ image::action.png[]
 * Use the … button to reveal more actions. Flag to privately let the author, or the site staff, know about a problem. Bookmark to find this post later on your profile page.
 * Mark a TOPIC as SOLVED.
 
+== Notifications
 
 When someone is talking directly to you — by replying to you, quoting your post, mentioning your @username , or even linking to your post, a blue number will immediately appear over your profile picture at the top right.
 
@@ -183,17 +206,20 @@ Don’t worry about missing a reply – you’ll be emailed any notifications th
 
 If you want, you can get notified about other things happening on the site as well, either at the category or topic level.
 
+=== Topic notifications
 
 You can change your notification level for any individual topic via the notification control at the bottom, and right hand side, of each topic.
 
 image::topic.png[]
 
+=== Category notifications
 
 Notification level can also be set per category. To change any of these defaults, see your user preferences, or visit the category page, and use the notification control above the topic list, on the right side.
 
 image::category.png[]
 
 IMPORTANT: Based and Adapted from the Guide -> https://meta.discourse.org/t/discourse-new-user-guide/96331[Discourse New User Guide], if you don't feel confortable/agree with this content feel free to adap it and updating.
+= Standard Operation Procedure for Moderator
 :experimental:
 :toc:
 
@@ -212,6 +238,7 @@ It’s your role to help oversee the forum, ensuring that users and content are 
 
 Some common scenarios you can see and how each ones can be handled:
 
+== Basic Terms Used by Discourse (Nomenclature)
 
 Here are some very basic terms that will be helpful :
 
@@ -220,12 +247,15 @@ Here are some very basic terms that will be helpful :
 * Original Post (or OP): The first post in any topic.
 * User: Registered Users.
 
+== Welcoming New Users
 
 When you notice a new user on the site (evidenced by a light-grey username instead of dark-grey, which shows that a user is Trust Level 0), say hi and welcome them to the site.
 
 Every User should Read the Start Here! first before Begin their Journey...
 
+== Manage Banned and Delete Account(s)
 
+===  What to do
 
 * Verify that the user does not belong to any fedora team and is a real Spammer with
 any of the scripts that the fedora team provides -> https://pagure.io/fedora-join/Fedora-Join/blob/master/f/scripts
@@ -247,49 +277,59 @@ Could you Please delete/Block the Respective Account/s in -> FAS (Fedora Account
 
 * Add this information in askfedora.fp.o -> https://ask.fedoraproject.org/t/banned-and-deleted-accounts/3009
 
+== Helpful Users
 
 Some users, will go above and beyond what is expected. It is to your advantage to recognize these users and encourage them to keep doing what they do. Active helpful users may reach TL3, which allows them to help edit titles and change topic categories. Users can also be manually promoted to TL4, which grants them global edit privileges on any topic or post they can see.
 
 - https://blog.discourse.org/2018/06/understanding-discourse-trust-levels/[Understanding User Truts Level]
 
+== Getting User Information
 
 The System maintains information on all users who register and interact with the site.
 
+=== Public profile
 
 You can get an overview of a user from their public profile. To access a profile click the user's avatar or username in a topic, their avatar in the topic list, or search for them. Above their profile is a count of official warnings, suspensions, flags received, and helpful flags given by the user. Just below are details on the user's account: when they last visited, posted, and registered.
 You can review all public activity by the user, as well as review the notifications they received.
 
 You can also view and modify the user’s preferences. This can be very helpful if a user is reporting an issue with their account that you suspect may be related to a preference change.
 
+=== User admin page
 
 From a user's public profile you can access the user's Admin page.
 The Admin page can also be accessed from the hamburger menu, and then by clicking on Users. There you can search for users by username, email, or full name. Once opened, you can review additional details about the user, including non-public information like their registration and last-used IP address. IP information can be helpful if a user appears suspicious or acts too similar to another user. IP lookups are completed locally, no data is sent outside the server. As mentioned in “The Difficult User” section, this is also where users can be silenced, and their trust level adjusted.
 
 image::User-Panel.png[]
 
+== Complicated Topics
 
 Discussion takes place inside of topics. Each topic has a title and category, and it is important that the discussion within relates to the title/category.
 
+=== Poor title/incorrect category
 
 If Topic has poor title or select the wrong category, you can edit the topic to update one or both. Scroll to the top of the topic and click the pencil next to the title.
 
 image::Complicated-Topics.png[]
 
+=== Duplicate topic
 
 If the posts in the duplicate topic add to the discussion, they can be moved to the existing one. Moving all posts in a topic will automatically close the topic Just Select all and you can Delete/Move.
 
 image::Off-Topic.png[]
 
+=== Heated, difficult, non-productive discussion
 
 If discussion in a topic is no longer productive/focused, moderators should step in, Make a staff post. Many times, a simple reminder is enough to solve the issue. You can create a post reminding users to be polite, warn them they’re talking in circles, etc, and then use the post admin wrench to mark the post a staff post. This indicates to users that the post is the official position of the site.
 
 image::Heated.png[]
 
+=== Set a topic timer.
 
 If the staff post doesn’t help, or discussion seems so heated that a reminder won’t help, you can “pause” the topic. Use the topic admin wrench to set a topic timer for auto-open. This will immediately close the topic, preventing new posts, and display a notice when the topic will reopen.
 
 image::Topic-Timer.png[]
 
+== Moderator Communication
 
 Moderator's is not alone, are parts of a larger team. This team includes other moderators, as well as site admins/owners, and in many cases TL3/TL4 users. Regular and open communication between all should be encouraged.
 
@@ -297,9 +337,11 @@ Moderator's is not alone, are parts of a larger team. This team includes other m
 - **The staff category:** Is default category on installs restricted to site staff: moderators and admins. The staff category is a great place for moderators to discuss what they’re seeing and doing within the site, as well as to document internal policies and procedures.
 - **Whispers:** When enabled in site settings, moderators can take advantage of whispers. Whispers allow staff to create private replies within an existing topic or PM. This allows moderators to discuss issues within the topic, so no context is lost. Whispers can also be used to mention other staff if assistance is required, but a public reply would be inappropriate, and an invite wouldn’t provide the necessary context.
 
+== Inappropriate Content
 
 Please keep the site clean, appropriate, and on-topic via the Flag system. When a topic or post is seen that does not belong, users and moderators can flag it for review.
 
+=== Flags
 
 Flags can be your best friend. When a user doesn’t like a post, they can choose to flag it for moderators. The flag dialog has 5 options:
 
@@ -383,6 +425,7 @@ The goal here is for the community to be able to protect itself from the worst u
 
 Or you could disable it altogether, and go back to a world where every raised flag must be manually handled by an official mod, if that’s how you roll. But this is on by default.
 
+=== What we do:
 
 * If a post is **clearly spam**, we flag it as spam. In this way the post will be hidden.
 * If the user that created the post is crearly a fake user (i.e. there are no other legit
@@ -399,18 +442,22 @@ infra team in order to block the FAS account.
 If the moderators and admins have doubts and they would like to discuss posts or actions
 to take, they can use the Staff category on AskFedora.
 
+== The Difficult User
 
 NOTE: On most forums difficult users are rare.
 
 However, you may encounter a user that just doesn’t want to follow the rules, is rude, posts inappropriate material, etc. How can you handle them?. There may be instances where one of the steps doesn’t make sense or the action was so egregious that a step (or steps) are skipped.
 
+=== Don't make assumptions
 
 First, try to avoid assuming that the user has a negative intent. They may simply be ignorant of the rules, may not speak your forums language well, may be young, or have another reason for the way they act.
 
+=== Reach out directly
 
 Try to contact the user privately via PM to let them know what is wrong with their behavior. Remember to talk about the negative behaviors - don't attack the user themselves. When possible, link to existing rules, guidelines, FAQs.
 In most cases, this contact will be enough. However, if it is not…
 
+=== Send an official warning
 
 You can make the message an "official warning". This PM will automatically gain staff color, and a notice that the user has received an official warning will appear on the user profile for other moderators to see.
 In the official warning, be sure to explain the negative behavior you have seen, detail specifically what you’d like them to do instead, and the consequences of not changing their behavior.
@@ -421,6 +468,7 @@ image::Warning.png[]
 
 If the behavior continues, be sure to follow through with the listed consequences. You may choose to :
 
+=== Silence the user
 
 Silenced users are prevented from creating new topics, posts, flags, or PMs on the site. They are still able to complete other actions, like "liking" posts, reading topics, replying to PMs, etc. Additionally, they can communicate with moderators via PM, so you can continue to communicate with them to try and address the behavior.
 Silencing a user is done from the user’s Admin page. To access it:

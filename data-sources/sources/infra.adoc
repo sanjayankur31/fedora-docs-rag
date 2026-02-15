@@ -1,30 +1,38 @@
+= Overview of the Fedora Infrastructure
 
+== Architecture
 
 * xref:map_critical_services.adoc[Map of critical services]
 * xref:services.adoc[List of our services]
 
+== Tooling
 
 Most of the tooling we use in Fedora infrastructure is described in
 xref:developer_guide:index.adoc[Developer Guide]. Above that we also use Ansible
 to maintain our https://pagure.io/fedora-infra/ansible[ansible repository].
 
+== Good Practices
 
 See xref:developer_guide:index.adoc[Developer Guide] for good practices regarding development work
 for Fedora Infrastructure.
 
 And see xref:sysadmin_guide:index.adoc[Sysadmin Guide] for good practices regarding sysadmin work
 for Fedora Infrastructure.
+= Working with Fedora Infrastructure
 
 This document explains how to efficiently work with the Fedora Infrastructure team.
 Your close attention to this document will help both you and us
 do the work you are asking us to do.
 
+== Our Workflow
 
+=== Security related issues
 Is your issue/problem related to security of an application or service we
 run?
 
 * send an email to infra-security@fedoraproject.org
 
+=== Emergency/Authentication issues
 Is your issue/problem urgent? (An important service is down, you need
 a change asap) or is your issue/problem such that you cannot file a ticket
 (authentication, no account, ticketing system down)
@@ -37,6 +45,7 @@ say '!oncall' and explain the issue or problem to the oncall person.
 to admin@fedoraproject.org
 ** Otherwise: go to next step.
 
+=== Ticket tracking
 
 By default, the infrastructure team tracks its work in tickets at:
 link:https://forge.fedoraproject.org/infra/tickets/issues/[].
@@ -86,6 +95,7 @@ and indicate this.
 ** Go back to the previous step for additional work.
 
 
+== The "Oncall" Role in Our Team
 
 One team member is always designated “oncall”. The assigned person changes
 every week. You can find who the currently assigned person is on matrix by using
@@ -104,12 +114,14 @@ interrupt another team member.
 . Triages incoming tickets for urgent items that need work outside
 of normal triage process.
 
+== Initiatives
 
 All tasks involving new applications, major deployments, major development work
 or the like will be asked to follow the
 https://docs.fedoraproject.org/en-US/cpe/initiatives/[New Initiative Workflow].
 It will then be scoped and prioritized from there.
 
+== General Ticket Considerations
 
 Please provide as much information as you can in your ticket to avoid
 back and forth for information. If you know your issue is going to
@@ -139,12 +151,14 @@ our question/ping within two weeks, otherwise we reserve the right to close the
 ticket (knowing that you can always re-open it or open a new one if the issue
 persists or re-appeared).
 
+== Matrix
 
 Matrix is a great way to communicate, but please do not ping team members
 directly. Instead, update your ticket with any new information you have and
 when the team member(s) working on that issue have time/availability, they
 may contact you on matrix for more interactive debugging/testing.
 
+== Direct emails
 
 E-mail is also a great communication method, but if you mail work items or
 information to one person directly, they cannot easily hand off the issue,
@@ -152,6 +166,7 @@ you must wait for them to have time to address the issue (when others could
 perhaps have already solved it, etc). So, please avoid direct emails and
 instead update tickets with any information you want to add.
 
+== RFC 1149
 
 link:https://tools.ietf.org/html/rfc1149[Pigeons are too slow] for most work
 items, and require facilities (e.g. dovecots) that most team members do not
@@ -161,6 +176,7 @@ same problems as using matrix or email for the same purpose, which means tickets
 are still the correct way to report problems.
 
 In other words, please don't send us any birds.
+= Join the Fedora Infrastructure
 
 Fedora is known for creating and using new technologies. The Infrastructure
 team helps build many of these new technologies and uses many of them on a
@@ -172,7 +188,9 @@ for smart, dedicated system administrators and developers to help maintain
 our systems and write code. The Fedora Infrastructure team is a perfect way
 to give back to the community! So what are you waiting for? Take a look at
 our https://fedoraproject.org/wiki/Infrastructure/GettingStarted[Getting Started Page]!
+= Getting Started with Infrastructure
 
+== Help Wanted!
 
 We're always looking for dedicated and energetic people to join the fun
 times in the Fedora Infrastructure team. What fun stuff will you do to
@@ -208,10 +226,12 @@ It would be great if
 ** Our resources are limited, especially for testing!
 * Work in other areas of Fedora like packaging or documentation
 
+== Getting Started
 
 See below for a list of steps or head down to the xref:gettingstarted.adoc#_quickstart[Quick
 Start] section if you just want to submit a single change or fix.
 
+== First steps
 
 * First you will need to read through and understand
 link:https://docs.fedoraproject.org/en-US/fedora-join/contribute/successful-contributor/[how to be a successful contributor].
@@ -245,6 +265,7 @@ The message body should include:
 *** Watch link:http://fedoramagazine.org/?p=642[some videos] intended to introduce new contributors to
 the team.
 
+== What is next?
 
 After you've completed the steps outlined in the xref:gettingstarted.adoc#_first_steps[First steps
 section] you should:
@@ -264,6 +285,7 @@ If you don't have the time to be involved on a regular basis at this point, plea
 things and report bugs and RFEs as you see fit. Showing interest now is a great way to make it easier to
 join the team's activities later!
 
+== QuickStart
 
 * If you just want to make a single change or fix a single issue, then
 just jump right in at attach a patch for it to the existing issue, or
@@ -271,6 +293,7 @@ post a patch to the mailing list. Note that we still would like you to
 create an account and sign the FPCA so we can properly license your
 contributions.
 
+== How the team works
 
 The Fedora Infrastructure Group consists of volunteers and Red Hat employees. Our preferred
 method of communication is matrix though we also heavily use the Fedora Mailing
@@ -289,12 +312,14 @@ usually have the cycles to do full time mentoring of new contributors, so you wi
 and able to gather information on your own. We are happy to answer questions when you get stuck.
 :infra-matrix: https://matrix.to/#/#admin:fedoraproject.org
 
+= Infrastructure Apprentice
 
 The 'fi-apprentice' group in the Fedora Account System is one with a lot of read-only access to various
 Fedora infrastructure machines. This group is used for new folks to look around at the infrastructure setup,
 check machines and processes and see where they might like to contribute moving forward. This also allows
 apprentices to examine and gather info on problems, then propose solutions.
 
+== Access to many infrastructure machines
 
 Members of the fi-apprentice group have ssh/shell access to many machines, but no sudo rights or ability
 to commit to ansible (but they do have read-only access). Apprentice can, however, contribute to the
@@ -305,6 +330,7 @@ info. You can see a list of hosts that allow apprentice access by using:
 `./scripts/hosts_with_var_set -i inventory/ -o ipa_client_shell_groups=fi-apprentice`
 from an ansible repo checkout (see below).
 
+== Nagios alerts
 
 This group does NOT get Nagios alerts. If you would like to see them you can join the #fedora-noc channel, adjust your
 link:https://apps.fedoraproject.org/notifications[FMN notifications settings] or watch the Nagios web interface at:
@@ -313,11 +339,13 @@ link:https://admin.fedoraproject.org/nagios/[] and link:https://nagios-external.
 Nagios access is now controlled by kerberos, so you will need to do a command with “kinit your_fas_name@FEDORAPROJECT.ORG”.
 On the use of the kerberos, you can view the page link:https://fedoraproject.org/wiki/Infrastructure/Kerberos[]
 
+== Length of membership
 
 Members who have not logged into any machine and/or are not active will be removed. There's nothing personal
 in this, and you're welcome to re-join later when you have more time, we just want to make sure the group only
 has active members.
 
+== Longer term quests
 
 There's a few items we need help with ongoing and apprentices are encouraged to work on these items and provide patches
 and ask questions, etc. The current list:
@@ -335,6 +363,7 @@ to update documents to use the same templates as the rest.
 * Look over our logs on log01.rdu3.fedoraproject.org in /var/log/merged/ and track down issues and propose solutions to
 them. Be sure to discuss in meeting or in a issue whatever you find.
 
+== Working on a ticket workflow
 
 * Pick a ticket
 
@@ -349,6 +378,7 @@ there and close it or rework it as needed. You can add to the next meeting agend
 Most any task will require changes to ansible. You can check this out on batcave01.rdu3.fedoraproject.org
 (just "git clone /git/ansible" there) and make edits to your local copy. Then you can create a PR with your changes into link:https://pagure.io/fedora-infra/ansible[]
 
+== Matrix Tips
 
 The primary way the infrastructure team communicates is Matrix. Here's a few tips to best communicate with the rest of the team:
 
@@ -372,11 +402,13 @@ active in channel. Many people have a matrix 'trigger' that notifies them when s
 If so, please feel free to chime in in channel that you would be interested in helping out and ask how you could
 do so.
 
+== Further information
 
 For further information on this group, please ask in #fedora-admin on irc.libera.chat, the link:{infra-matrix}[Fedora Infrastructure Matrix room]
 and/or the fedora infrastructure xref:index.adoc#_mailing_list[mailing list].
 
 Ansible documentation is available at link:http://docs.ansible.com/[].
+= Map of critical services
 
 This document provides readers with a map of all critical services hosted by Fedora infra
 and their relationship with each other.
@@ -387,6 +419,7 @@ It also contains a description of each app and reason why it's considered critic
 [caption="Figure: "]
 image::fedora_infra_diagram.drawio.svg[link="../_images/fedora_infra_diagram.drawio.svg"]
 
+== Metadata providers
 [cols="1,1,1,1"]
 |===
 |Name |Description |Why it's critical? |Hostname
@@ -400,6 +433,7 @@ and will stop to work when the mdapi is not available.
 |Hosted in OpenShift
 |===
 
+== Monitoring
 [cols="1,1,1,1"]
 |===
 |Name |Description |Why it's critical? |Hostname
@@ -418,6 +452,7 @@ when any error happens.
 |Hosted in OpenShift
 |===
 
+== Infra tools
 [cols="1,1,1,1"]
 |===
 |Name |Description |Why it's critical? |Hostname
@@ -436,6 +471,7 @@ mirror_from_pagure is taking care of that.
 |`batcave01.rdu3.fedoraproject.org`
 |===
 
+== Authentication
 [cols="1,1,1,1"]
 |===
 |Name |Description |Why it's critical? |Hostname
@@ -470,6 +506,7 @@ this library could cause these applications to stop working.
 |Not a service
 |===
 
+== Packaging
 |===
 |Name |Description |Why it's critical? |Hostname
 
@@ -549,6 +586,7 @@ https://src.fedoraproject.org/[dist-git].
 |Not a service
 |===
 
+== Messaging bus
 [cols="1,1,1,1"]
 |===
 |Name |Description |Why it's critical? |Hostname
@@ -568,6 +606,7 @@ with fedora messages and affect whole Fedora infrastructure.
 |Not a service
 |===
 
+== Community facing
 |===
 |Name |Description |Why it's critical? |Hostname
 
@@ -594,6 +633,7 @@ message sends notifications to users in Fedora projects.
 |`notifs-web01.rdu3.fedoraproject.org` `notifs-backend01.rdu3.fedoraproject.org`
 |===
 
+== Fedora Release
 [cols="1,1,1,1"]
 |===
 |Name |Description |Why it's critical? |Hostname
@@ -610,10 +650,12 @@ packages are included in the compose and the compose is available after finishin
 be able to automatically provide the best mirror for users.
 |Hosted in OpenShift
 |===
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -635,6 +677,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -662,6 +705,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -681,6 +725,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -738,6 +783,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -749,6 +795,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -796,6 +843,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -838,6 +886,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -901,10 +950,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -926,6 +977,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -953,6 +1005,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -972,6 +1025,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -1029,6 +1083,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -1040,6 +1095,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -1087,6 +1143,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -1129,6 +1186,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -1192,10 +1250,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -1217,6 +1277,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -1244,6 +1305,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -1263,6 +1325,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -1320,6 +1383,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -1331,6 +1395,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -1378,6 +1443,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -1420,6 +1486,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -1483,10 +1550,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -1508,6 +1577,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -1535,6 +1605,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -1554,6 +1625,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -1611,6 +1683,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -1622,6 +1695,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -1669,6 +1743,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -1711,6 +1786,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -1774,10 +1850,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -1799,6 +1877,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -1826,6 +1905,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -1845,6 +1925,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -1902,6 +1983,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -1913,6 +1995,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -1960,6 +2043,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -2002,6 +2086,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -2065,10 +2150,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -2090,6 +2177,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -2117,6 +2205,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -2136,6 +2225,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -2193,6 +2283,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -2204,6 +2295,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -2251,6 +2343,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -2293,6 +2386,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -2356,10 +2450,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -2381,6 +2477,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -2408,6 +2505,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -2427,6 +2525,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -2484,6 +2583,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -2495,6 +2595,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -2542,6 +2643,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -2584,6 +2686,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -2647,10 +2750,12 @@ datacenter(s)). Sorry about that. You can use this website to check the
 status.
 +
 * https://github.com/fedora-infra/statusfpo[Sources]
+= Fedora services
 
 This document describes the services ran by the Fedora Infrastructure (note that
 they may be maintained by other people or team).
 
+== Accounts
 
 Services handling identity and providing personal space to our contributors.
 
@@ -2672,6 +2777,7 @@ Centrally managed preferences for Fedora notifications via email or matrix
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Community
 
 Social infrastructure built atop our community, including outreach tools.
 
@@ -2699,6 +2805,7 @@ their opinion to a broader audience.
 * https://github.com/fedora-infra/fmn[Sources]
 * https://fmn.readthedocs.io/en/stable/[Documentation]
 
+== Content & documentation
 
 Tools for wordsmiths -- the apps that store and archive the troves of content
 that Fedora authors produce.
@@ -2718,6 +2825,7 @@ Wiki https://fedoraproject.org/wiki[fp.o/wiki]::
 Any page that does not fit in the main docs website: user and team pages,
 change proposals or legacy documents.
 
+== Coordination
 
 Tools for people -- so we can talk to each other and share content and ideas.
 
@@ -2775,6 +2883,7 @@ https://apps.fedoraproject.org/packages/fpaste[fpaste].
 +
 * https://github.com/claudehohl/Stikked[Sources]
 
+== Localization
 
 Services used by the translation teams, bringing Fedora closer to local
 communities.
@@ -2786,6 +2895,7 @@ Weblate https://translate.stg.fedoraproject.org/[translate.stg.fp.o]::
 https://communityblog.fedoraproject.org/fedora-localization-platform-migrates-to-weblate/[Next-gen]
 translation platform for Fedora.
 
+== Packaging
 
 Tools for packagers -- where the pieces of the distribution get built.
 
@@ -2833,6 +2943,7 @@ of Fedora (and EPEL) are kept.. forever! A gold mine.
 * https://pagure.io/pagure-dist-git[Sources]
 * https://docs.pagure.org/pagure/usage/index.html[Documentation]
 
+== QA
 
 Tools for testers -- the people who tell us it's broken, so we can fix it.
 
@@ -2875,6 +2986,7 @@ on bugzilla.
 +
 * https://pagure.io/Fedora-Infra/review_stats[Sources]
 
+== Misc
 
 Services that do not fit in the above categories.
 
@@ -2940,12 +3052,14 @@ status.
 * https://github.com/fedora-infra/statusfpo[Sources]
 :experimental:
 :toc:
+= Service Level Expectations
 
 The infrastructure team does not have any formal agreement or contract regarding
 the availability of its different services. However, we do try our best to keep
 services running, and as a result, you can have some expectations as to what
 we will do to this extent.
 
+== Primary Business Hours
 
 Fedora Infrastructure is a community team, involving volunteers as well as
 people employed by Red Hat to work on Fedora.
@@ -2957,7 +3071,9 @@ and a 2 weeks end of year closure affecting staffing and response times.
 Services outside of primary business hours are done on call and depend on
 the availability of staff.
 
+== Roles and Responsibilities
 
+=== Fedora Infrastructure to Community
 
 * To have staff present and available in appropriate communication channels to answer
 questions during primary hours.
@@ -2969,6 +3085,7 @@ incidents, problems, or feature requests.
 * Move items which can not be resolved within a reasonable time to future
 feature requests or close out.
 
+=== Community Members to Fedora Infrastructure
 
 * Provide full and detailed reports of the problem or requested service.
 * Provide clear and complete contact information and times when available.
@@ -2976,6 +3093,7 @@ feature requests or close out.
 or other emergencies.
 * When contacted by Fedora IT, respond back within 5 business days.
 
+=== Fedora Infrastructure to Fedora Infrastructure
 
 * Have a clear schedule of reachable hours.
 * Set and take regular vacation time to be rested.
@@ -2985,6 +3103,7 @@ help debug problems.
 * Follow procedures and checklists when adding or updating services.
 * Help with regular audits of the documentation
 
+== Definition of Service Priorities
 
 The general design of service priorities is that of concentric circles, where
 items rely on services in their own circle or a circle below them.
@@ -3017,6 +3136,7 @@ mission, the upstream software is dead, or the original reasons for the
 service no longer exists. Problems with these services will be looked at
 during primary business hours. Responses may be mostly "Will Not Fix".
 
+== Limitations on Support
 
 * Some services that are associated with Fedora are provided by third
 parties. Changes and outages which affect them are outside the control
@@ -3029,6 +3149,7 @@ will be prioritized to fit within those.
 States of America. This means that certain requests, changes and problems
 are outside the ability of members to deal with.
 
+== Glossary
 
 * **Planned outage**: A planned outage is one that is announced sufficiently
 ahead of time to allow most users to plan around it.
@@ -3073,6 +3194,7 @@ and when the help desk will begin to work on that problem.
 
 * **Resolution Update**: The frequency of updates to tickets
 
+== Estimated Time of Resolution:
 By priority Levels:
 
 * **Emergency**: Problems which are site wide, and affect the core functions
@@ -3092,10 +3214,12 @@ immediate impact on services. Those problems are lowest priority.
 Estimated time of resolution is within a month.
 :experimental:
 :toc:
+= Services SLE
 
 Here is the list of our services per SLE level. For memory these levels are
 presented in our xref:sle.adoc[SLE Documentation].
 
+== Critical
 
 * Authentication/authorization (Ipsilon) https://id.fedoraproject.org
 * Backups
@@ -3108,6 +3232,7 @@ presented in our xref:sle.adoc[SLE Documentation].
 * Source control (git)
 
 
+== Important
 
 * Authentication/Authorization (FAS) https://accounts.fedoraproject.org
 * Autosign
@@ -3140,6 +3265,7 @@ presented in our xref:sle.adoc[SLE Documentation].
 * Toddlers
 
 
+== Normal
 
 * CertGetter
 * Datagrepper https://apps.fedoraproject.org/datagrepper/
@@ -3162,6 +3288,7 @@ presented in our xref:sle.adoc[SLE Documentation].
 * Wiki https://fedoraproject.org/wiki/Fedora_Project_Wiki
 
 
+== Low
 
 * Asknot http://whatcanidoforfedora.org/
 * Badges https://badges.fedoraproject.org/
@@ -3183,6 +3310,7 @@ presented in our xref:sle.adoc[SLE Documentation].
 * Websites building
 
 
+== Third Party
 
 Outside of Fedora Infrastructure to fix.
 
@@ -3209,11 +3337,13 @@ Outside of Fedora Infrastructure to fix.
 * TestDays https://testdays.fedoraproject.org/
 * TranStats https://transtats.fedoraproject.org/
 * Zezere
+=  User guide Communishift
 
 The Communishift is a community
 link:https://www.redhat.com/en/technologies/cloud-computing/openshift[OpenShift] instance hosted
 by Fedora. It is meant to host PoC or test deployments for Fedora related projects.
 
+== Request new namespace
 
 To request a new namespace in Communishift go to
 link:https://forge.fedoraproject.org/infra/tickets/issues[Fedora Infrastructure ticket tracker], open a
@@ -3234,23 +3364,27 @@ Default resources were taken from communishift
 link:https://pagure.io/fedora-infra/ansible/blob/main/f/roles/communishift/tasks/create-resource-quota.yml[ansible playbook].
 ====
 
+== Accessing and using OpenShift
 
 Once your ticket for a new communishift namespace has been approved, you will be added to a FAS group for your new namespace. This will grant your FAS account the ability to sign into the https://console-openshift-console.apps.fedora.cj14.p1.openshiftapps.com/[OpenShift Portal] to access your new namespace.
 
 https://docs.openshift.com/dedicated/web_console/web-console.html[OpenShift web console documentation] is available if you are new to using the openshift web console and would like to read more about the platform.
 
+== Removal of the projects
 
 All the projects on Communishift will be deleted every Fedora Linux release (6 months). If you need
 more than 6 months for your project, please open a ticket on
 link:https://forge.fedoraproject.org/infra/tickets/issues[Fedora Infrastructure ticket tracker] and explain
 why your project should not be deleted.
 
+== Request for additional resources
 
 There is a quota set per project. In case you need additional resources for your project please
 open a ticket on
 link:https://forge.fedoraproject.org/infra/tickets/issues[Fedora Infrastructure ticket tracker] with
 information about how much resources you need and why you need them.
 
+== Service usage requirements
 
 Following is the list of requirements you need to meet with your project to be allowed to have it
 on Communishift. If the project violates any of those requirements it will rejected and in case it's already

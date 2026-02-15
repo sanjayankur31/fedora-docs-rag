@@ -1,4 +1,5 @@
 
+= Team Organisation and procedures
 
 [abstract]
 ____
@@ -12,16 +13,21 @@ ____
 ====
 
 * How we work
+= Documentation Team Charter
 
+== Mission
 
 The Fedora Documentation Team coordinates the content and tooling of the documentation at docs.fedoraproject.org with contributions from the broader community.
 
+== Governance
 
+=== Membership
 
 Membership in the Docs team consists of three levels: board member, member, and contributor.
 All membership levels require signing the Fedora Project Contributor Agreement.
 In addition to the revocation process specified, membership may be removed or modified as a result of Code of Conduct enforcement.
 
+==== Board member
 
 Board membership is granted by a vote of existing board members.
 A Fedora contributor requesting board membership must submit a ticket in the team's issue tracker. Existing board members vote within a week of ticket submission.
@@ -39,6 +45,7 @@ Board members are expected to have a recent history of regular, excellent conten
 
 As peer-recognized leaders of the team, board members will generally be ones to chair meetings and represent the team to other Fedora bodies (e.g. the Fedora Mindshare Committee).
 
+==== Member
 
 Membership is granted by a vote of existing members and board members.
 A Fedora contributor requesting membership must submit a ticket in the team's issue tracker.
@@ -54,11 +61,13 @@ Members are in the *docs* group in Fedora Accounts. This grants *developer*-leve
 
 Members are expected to have a recent history of content and/or tooling contributions and participation in meetings and team discussions.
 
+==== Contributor
 
 Contributor status is granted to all Fedora contributors.
 A contributor may make content or tooling changes by submitting merge requests or patches.
 Contributors are encouraged to participate in team meetings and discussions and to provide feedback and review of other content submissions.
 
+=== Making decisions
 
 The team generally operates by consensus.
 Formal votes are not required except when sustained disagreement exists or as otherwise required in this charter.
@@ -71,6 +80,7 @@ Votes will be open for at least one week in order to allow time for eligible vot
 A minimum of three votes is required.
 If fewer than three votes are cast after one week, a single additional vote is sufficient to meet the quorum.
 
+=== Meetings
 
 The team xref:./meetings.adoc[meets regularly] to discuss and coordinate ongoing work.
 Meeting chairs are selected on a volunteer basis.
@@ -78,6 +88,7 @@ Meeting chairs are selected on a volunteer basis.
 Meetings are primarily for discussion.
 Decision-making is left for asynchronous communication in order to be inclusive of members who cannot regularly attend meetings.
 However, decisions that have been discussed in accordance with the section above may be finalized in meetings.
+= Communication and Meetings
 
 Fedora Docs currently holds weekly meetings on IRC/Telegram/Matrix.
 See the link:++https://calendar.fedoraproject.org//docs/++[docs calendar] for current meeting times,
@@ -85,6 +96,7 @@ and xref:index.adoc#find-docs[the main page] for information about joining.
 
 This page describes the structure in the meetings.
 
+== Pre-meeting
 
 Items to be discussed in meetings should be tagged with the link:++https://gitlab.com/groups/fedora/docs/-/issues?label_name=Meeting++[Meeting] tag.
 While preparing the agenda, review the https://gitlab.com/groups/fedora/docs/-/boards[issue board] for items that should be tagged for the meeting.
@@ -92,6 +104,7 @@ At least a day or two prior to the meeting, the chair should post a thread with 
 on the link:++https://discussion.fedoraproject.org/tag/docs-team++[forums].
 Team members may suggest additional topics in these threads.
 
+== Meeting
 
 Follow this general script for the meeting.
 
@@ -165,10 +178,12 @@ When time is up or there are no more topics to discuss, end the meeting.
 #endmeeting
 ```
 
+== Post-meeting
 
 Paste the links to the minutes and logs in the Discussion thread you used for the agenda.
 Note any important outcomes.
 Update tickets or discussion threads with actions, agreements, etc.
+= The Docs Workflow organization
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 
 [abstract]
@@ -181,6 +196,7 @@ https://gitlab.com/groups/fedora/docs/-/boards[GitLab dashboard]
 https://gitlab.com/groups/fedora/docs/-/merge_requests[GitLab Open Merge Requests]
 
 
+== Issue board and labels
 
 There are four labels that classify the state of an issue ticket.
 
@@ -212,6 +228,7 @@ Beyond a state label and a type label, issue tickets and merge requests can be a
 
 Furthermore, there is an additional label for Merge Requests that could possibly affect more than one branch, which would mean that they require follow-up Merge Requests or cherry-picks. The *multiple MR likely* label ensures that all affected branches are identified and updated, and that Merge Requests are not merged without the MR review.
 
+== How issue tickets and Merge Requests are created
 
 There are two ways issue tickets and Merge Requests can be created: externally and internally.
 
@@ -220,6 +237,8 @@ There are two ways issue tickets and Merge Requests can be created: externally a
 
 On the dashboard, issue tickets can be moved along the lists with drag and drop. The state labels change acoordingly. If a ticket is moved from "Triage" to "In progress" by drag and drop, the state label is changed from "Triage" to "In progress". Therefore, only the persistent type labels have to be set manually once when the ticket is new. This does not apply to Merge Requests on the Open Merge Request page. When creating an issue ticket on the dashboard, you will be asked where to create the issue ticket. If you are unsure where to create an issue ticket, create it in Fedora / Fedora Docs / Docs Website / Fedora Docs pages. You will see this in the "Projects" list ("Select a project") which is shown when you click to create an issue ticket. Later, this will be shown as "fedora/docs/docs-website/pages".
 
+== The workflow
+=== Minor change
 
 If conducted by Docs members, and if it is clearly a "Minor change", a change can be done by a direct commit, without a Merge Request or issue ticket. If externals make a Merge Request as "Minor change", Docs members merge it immediately after they assigned themselves and reviewed the Merge Request. But always check if a change applies to multiple branches.
 
@@ -244,6 +263,7 @@ The workflow for a *Minor change* is as follows:
 .. Alternatively, the assignee needs support, or additional opinions: the ticket/MR is just moved to "Support needed" to identify supporter(s) (who can, but do not have to, be assigned as additional assignee(s) if that makes sense) and once sufficient supporter(s) have been identified, move/put it back to "In progress". Use "Support needed" to encourage a discussion in the ticket/MR and to get additional opinions. Once all work is finished, the ticket/MR can be moved/put to "Closed". If multiple branches are to be changed and if the case is handled within an MR, all branches have to be changed at once. Members are free to reassign the issue (Example: if someone else has more experience with the task, or can invest more time).
 .. If the assignee can no longer support the issue, the assignee either relabels the issue to "Support needed" and finds a new assignee, or makes a comment for the work completed and remaining work, removes the assignee and changes the state to "Triage".
 
+=== Major change
 
 "Multiple MR likely" can be transferred to "Major changes", which need an issue ticket or a Merge Request.
 
@@ -263,9 +283,11 @@ If multiple branches are affected, add the "multiple MR likely" label. If this l
 
 IMPORTANT: Do not use the "stg" branch for content. Work in dedicated forks and branches for the specific issue you are working on.
 
+=== Internal task
 
 Internal tasks are flexible. They start in "Open" or "Triage", and move through "Triage", "In progress", "Support needed" until "Closed".
 
+== The role of the weekly meeting
 
 The weekly Docs meeting helps identify and tackle issues and tasks that are not ordinary or that do not occur regularly. On the other hand, the workflow organization is set to manage the standardized day-to-day operations of Fedora Docs.
 
@@ -277,6 +299,7 @@ The current issue tickets and Merge Requests of the workflow organization can be
 
 * Use *Meeting* label for issues or MR to be discussed in the Docs meeting.
 
+= Contribute to Improve and Expand Docs Articles
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 
 :page-aliases: contributing
@@ -292,20 +315,24 @@ Please check us out. If you come across a documentation page that contains an er
 
 Local authoring tools are designed to provide a powerful working environment for accomplished authors. They enable efficient work even on large complex interrelated text collections. These tools are aimed at experienced authors.
 
+== How it works
 
 Fedora documentation uses Antora to build and manage the Web site. Documentation is fairly static content, with occasional updates from time to time. This is exactly what Antora specializes in. It gathers static text documents and transforms them into a complete Web site, including navigation, links, formatting, positioning, adaptation to different output devices, etc. For more general information about the Antora publishing system, see the https://antora.org/[Antora website] and https://docs.antora.org/antora/latest/page/[Antora documentation].
 
 As a writer, you concentrate on the content and write away.
 
+=== The general procedure
 
 The 4-eyes principle applies to the Fedora documentation. A different author reviews each contribution. When you complete your text or text modification, the system creates a "Pull Request" or "Merge Request" to integrate your text into the documentation body. This triggers other authors, board members or members committed to the part of the documentation body in question, to start a review and either initiates an inclusion or starts a discussion. Allow 2 to 3 days for an answer to a request.
 
+=== Some technical background
 
 Fedora uses _AsciiDoc_ to format text in a simple and efficient way. It closely follows natural writing styles in everyday notes for structuring and highlighting. In this way, you can use any editor, including almost any word processor that can edit and save AsciiDoc Text.  More about this below.
 
 The AsciiDoc text document is stored in a series of Git repositories. This is a system especially popular among software developers, but also very capable for managing text documents. Git encourages and facilitates the use of the 4-eyes principle by a "Pull (or Merge) Request Workflow". You only need to worry about the details of this workflow if you want to set up a local work environment intended for professional and frequent contributions. All other tools take care of the necessary steps in the background.
 
 
+== Prerequisites
 
 The only requirements for contributing documentation to Fedora Docs are:
 
@@ -315,32 +342,39 @@ The only requirements for contributing documentation to Fedora Docs are:
 * Basic knowledge of *AsciiDoc* markup language (see xref:contributing-docs/asciidoc-markup.adoc[AsciiDoc for Fedora])
 
 
+== The tools
 
+=== Quick way: 'Edit' button
 
 - Make changes to a single file for minor fixes directly from web UI of Git forge.
 - Write access to upstream repo required.
 - Use it as an exception (without review process), rather than a recommended option.
 
+=== Easy way: Web IDE of Git forge
 
 - Make changes to multiple files directly from web UI of Git forge.
 - No need to install anything in local computer or run Git commands in terminal.
 - Pull Requests for review process (Merge Requests in GitLab)
 - You do not need special permissions or write access to the original project.
 
+=== Flexible and advanced way: Create a local writing environment
 
 - Work with multiple files and repos offline at your pace using your choice of text editor and terminal.
 - You can build and render the pages locally to test your changes using Podman container.
 
+== Typical ways to contribute
 
 One can distinguish several typical types of contribution to Fedora documentation, for which the available tools are suitable in different ways.
 
 There are many ways for various types of contribution. For example, typo fixes, adding short information or a link, update an article, write a new article.
 
+=== Update an existing documentation page
 
 This task involves minor changes. For example, typo fixes, adding short information or a link, or a correction to the text. This type is especially necessary whenever the documentation needs to be updated for a new software version.
 
 The _File Edit button_ are convenient for this purpose.
 
+=== Extend an existing documentation domain
 
 This task involves adding one or more new chapter(s) or section(s) with several chapters. For example, adding another container technique to the documentation of containerization.
 
@@ -348,6 +382,7 @@ The _Web IDE_ is a convenient tool for this purpose. A local writing environment
 
 It is highly recommended to present the plan on one of the Docs communication channels before starting. You may get suggestions and tips on content, but also on editing. For example, file structure and naming conventions.
 
+=== Introduce a new documentation area
 
 This task involves a new extensive subject area, such as new software or a new administration tool. For example, inclusion of several sections and chapters and the creation of a new, separate repository.
 
@@ -356,6 +391,7 @@ For this type, setting up a local writing environment is useful and worthwhile.
 In any case, a prior discussion with the Docs team is necessary, if only to create the technical prerequisites.
 
 ** Contributing to existing documentation
+= Contributing to existing documentation
 
 This section describes how to contribute to existing documentation - that is, documentation that already has been published on the website.
 Before you start following this procedure, make sure that you fulfill all the requirements listed in xref:index.adoc[Prerequisites].
@@ -367,6 +403,7 @@ Each Fedora Docs page includes an "Edit this Page" link at the top.
 For simple updates, changes can be submitted directly from the Pagure web interface.
 For larger or more complex edits, you should prepare and test your changes offline before submitting.
 
+== Editing online in Pagure
 
 . Click the "Edit this Page" link to load the documentation source.
 You will be taken to the appropriate content repository in Pagure.
@@ -410,6 +447,7 @@ see link:++https://commit.style++[commit.style] by Tim Pope (author of [applicat
 You will have the opportunity to explain or discuss your changes when you submit your PR.
 ====
 
+== Offline editing
 
 . Click the "Edit this Page" link to load the documentation source.
 You will be taken to the appropriate content repository in Pagure.
@@ -435,6 +473,7 @@ See xref:contributing-docs/tools-localenv-preview.adoc[Building a local preview]
 
 . Use Pagure to make a pull request from your fork to the main repository's master branch.
 
+== Managing your pull request
 
 Someone will see your pull request and either merge it, or provide feedback if there is something you should change.
 Work with the people commenting to make sure your contributions are up to standards.
@@ -448,6 +487,7 @@ Your changes will appear online sometime after the pull request is merged.
 The site is being updated daily.
 If your changes do not appear online within 60 hours of your PR being merged, ping `asamalik` (Adam Šamalík) on the IRC channel and ask him about it.
 
+= Create a new documentation module
 Francois Andrieu, Fedora Documentation Team
 2023-04-28
 
@@ -459,6 +499,7 @@ ____
 Before you start following this procedure, review all the requirements listed in xref:contributing-docs/index.adoc#_prerequisites[Prerequisites].
 
 
+== Documentation repository configuration
 
 NOTE: While you can create a new repository, or use an existing one, we recommend starting from the provided template repository if you are not familiar with Antora.
 
@@ -494,6 +535,7 @@ The only directives you need to edit in this file are the `title` and `start_pag
 
 At this point, the initial configuration is complete. You can push these changes to the newly created repository (or make a pull request if you do not have the required rights) and start working on writing the actual documentation.
 
+== Writing documentation
 
 Some useful documentation links:
 
@@ -504,6 +546,7 @@ If your documentation is made of several pages, you can list them in the `nav.ad
 
 While you're writing, you can use the xref:contributing-docs/tools-localenv-preview.adoc[local preview] to check the resulting document.
 
+== Publish a new documentation module
 
 Once the repository is set up, and initial content added, it is ready to be published.
 
@@ -530,15 +573,18 @@ You can either create a Merge Request with these changes, or if you do not feel 
 ====
 If you do not get any update to your Merge Request or ticket after 5 days, xref:ROOT:index.adoc#find-docs[get in touch with the Docs Team].
 ====
+= Contributing to Quick Docs
 Hanku Lee; Peter Boy; Fedora Documentation Team
 :page-aliases: contributing-docs/contributions-quick-repo.adoc
 
 [abstract]
 Quick Docs is a collection of shorter how-to guide and more extensive tutorials for users of the Fedora Linux. We provide some tips and hints on contributing to Quick Docs.
 
+== Types of content
 
 Fedora Quick Docs consists of two types of articles.
 
+=== How-to guides
 Its characteristics are
 
 - Intended to be useful when working with Fedora
@@ -546,6 +592,7 @@ Its characteristics are
 - It is usually a relatively short text no longer than 60,000 characters
 - Comes usually as a step-by-step instruction to resolve a small, specific problem or task, without extensive explanation
 
+=== Tutorials
 Its characteristics are
 
 - Intended to be useful when studying a software or a set thereof for a specific purpose in Fedora
@@ -556,6 +603,7 @@ Its characteristics are
 If your post does not fit into either category, consider an article under Administration Tools or on the Home page. The best place to ask is discussion.fedoraproject.org #docs.
 
 
+== Who can contribute
 
 **Everyone** can contribute and everyone is welcome! There are some minor and easy to meet requirements, though. The most important is a Fedora account having signed the https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement[Fedora Project Contributor Agreement]. This is essential to protect Fedora from any potential licensing issues. Of course, some knowledge of the AsciiDOC markup language is helpful, but you can get along very well without it. This is especially true when correcting and revising existing articles. One can easily get into the existing flow.
 
@@ -570,9 +618,11 @@ The range of feasible and needed contributions is wide. Everyone can contribute 
 - QuickDoc organization
 - revision of the articles
 
+== How to find tasks
 
 Whether it is broken link, outdated screenshots of graphical user interface, technical and grammatical error, every little contribution, no matter how small, helps Fedora Linux users.
 
+=== While reading an article
 
 The greatest opportunity to contribute comes from reading an article itself. Whenever you come across an error, an omission or unclear wording, you can contribute an improvement in passing. In the header of each article are links to 2 of the 3 tools for contributions.
 
@@ -595,6 +645,7 @@ image::contrib-quickdocs/report-issue.png[]
 
 The next steps are explained in detail in the article xref:contributing-docs/tools-file-edit-pagure.adoc[How to edit files on the Pagure Web UI].
 
+=== Self-assign issues
 
 You can find and contribute to needed changes by following the https://pagure.io/fedora-docs/quick-docs/issues[Quick Docs Issue Board], where users share blunders in the documentation or suggestions for enhancing it.
 
@@ -603,9 +654,11 @@ If you find issue that matches your interest and expertise, on assignee on top r
 .Assign issues
 image::contrib-quickdocs/assign-issues.png[]
 
+== How to contribute
 
 Quick Docs uses the same CMS as all other Fedora Docs, so the tools are the same. You find detailed guides in the section Contribution Tools.
 
+=== Pull Requests and review
 
 In either case, the workflow follows the "pull request" or "merge request" model. Changes are not made in the existing, published text but in a side version. When the work is complete, a "merge request" is triggered. Members of the community will look at the changes and either start a discussion or accept the changes. They will then be merged into the published version. We thus follow the 4-eyes principle.
 
@@ -613,6 +666,7 @@ Pull Requests promote collaborative work flow between writers and reviewers wher
 
 The individual steps are largely automatic. Details are described in the respective tools.
 
+=== Notification after PR
 
 You probably want to track the further progress after the PR. That's what the Watch function is for.
 
@@ -634,15 +688,19 @@ image::contrib-quickdocs/watch-notification.png[]
 If you do not hear from reviewers after your PR longer than a week, leave a comment in PR to follow up.
 
 
+== What to pay attention to
 
+=== Readability
 
 - Write short sentences, structured into short paragraphs. Avoid the wall of text when creating content.
 
 - Use clear structure and minimal formatting for better reading flow
 
+=== Adherence to style guide
 
 Instead of nitpicking consistency of tone and grammatical errors, reviewers encourage writers to read xref:contributing-docs/style-guide.adoc#prerequisites[The docs style guide]. If you want automated test, run vale linter locally xref:contributing-docs/tools-vale-linter.adoc#prerequisites[Check Your Documentation Using Vale].
 
+=== Rule sets
 
 Beyond style guide, here are a few rule sets contributors need to observe.
 
@@ -659,9 +717,11 @@ xref:contributing-docs/tools-vale-linter.adoc#prerequisites[How to check documen
 
 
 
+== Article template
 
 [source,asciidoc]
 ----
+= ARTICLE_TITLE
 AUTHOR_1; AUTHOR_2; AUTHOR_3
 //:page-aliases: OPTIONAL
 
@@ -691,6 +751,7 @@ abstract:: 1-3 sentences describing content and goal. Avoid any redundancy, e.g.
 You can also xref:attachment$qd-template.adoc[download the template] to make it easier.
 
 
+== List of categories to choose from
 
 You can select only __one category__!
 
@@ -704,6 +765,7 @@ You can select only __one category__!
 List is far from complete! TBD: Extend list of categories
 ====
 
+== List of tags to choose from
 
 You can select __multipe tags__!
 
@@ -730,9 +792,11 @@ You can select __multipe tags__!
 
 You are free to choose additional 3rd level tag(s) if none fits your contribution.
 
+== Docs team needs your help
 
 Help us with the issues, PRs, onboarding new contributors or keeping our stock of articles as a whole up to date. Thank you!
 
+= Contributing to Release Notes
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs>
 v0.0.1, 2022-09-26
 
@@ -750,6 +814,7 @@ This means that some parts of the procedure below, such as the git branch used o
 Before you start writing release notes, see the link:https://discussion.fedoraproject.org/tag/docs[`#docs` tag on Fedora Discussion], speficically the sidebar on the right.
 You will find current information there.
 
+== How to contribute to Fedora Release Notes
 
 . Check the sidebar on link:https://discussion.fedoraproject.org/tag/docs[Fedora Discussion], and note the provided information: Release, schedule, branch, and link to the list of relevant issues.
 
@@ -786,6 +851,7 @@ Repeat the above for as many issues as you want.
 // If you have any questions, xref:ROOT:index.adoc#find-docs[contact Docs on IRC, Matrix, or the forums].
 
 ** Contribution Tools
+= How to make casual contributions
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 :page-pagination:
 
@@ -798,7 +864,9 @@ To make changes in Docs page hosted on GitLab, you have a built-in web editor th
 
 - This guide is for GitLab-hosted repo.
 
+== How to edit document with Web IDE
 
+=== Step 1. Select a page to edit
 
 - Find a Docs page you want to edit.
 - Navigate to the top right and locate three buttons.
@@ -827,6 +895,7 @@ a|image::2-GitLabSignin.png[align="center",width=940,role=black-border]
 
 NOTE: This contributor guide walks through the new Web IDE, introduced in GitLab 15.7 release. The guide also reflects a recent change about *how to update fork*.
 
+=== Step 2. Create your project (copy)
 
 Click the *Open in Web IDE* button. Alternatively, press . (dot) in keyboard to launch Web IDE.
 
@@ -834,6 +903,7 @@ Click the *Open in Web IDE* button. Alternatively, press . (dot) in keyboard to 
 a|image::3-EditPage.png[align="center",width=940,role=black-border]
 |===
 
+==== Fork a project first time
 
 Click the *Fork* button.
 
@@ -845,6 +915,7 @@ A fork is a personal copy of the repository, which you create in your namespace.
 a|image::4-EditFork.png[align="center",width=940,role=black-border]
 |===
 
+==== If you have forked a project before
 
 If you have a forked project before, you will be forwarded automatically to the next step without the *Fork* button.
 
@@ -867,6 +938,7 @@ image::gitlab-ui/update-fork-yes.png[]
 - The fork will display *Up to date with the upstream repository*
 - *Update fork* button disappears after fork is updated
 
+=== Step 3. Create a new branch (version)
 
 On your forked project, create a new branch and switch to it following the steps below.
 
@@ -880,6 +952,7 @@ On your forked project, create a new branch and switch to it following the steps
 Are you sure you want to checkout <branch-name>? Any unsaved changes will be lost.
 ----
 
+=== Step 4. Edit and save changes
 
 Now, make the necessary changes in Web IDE. To write with consistency, refer to xref:contributing-docs/style-guide.adoc#prerequisites[The docs style guide]
 
@@ -890,6 +963,7 @@ Once you've finished, select the source control button and click the file undern
 
 Type a commit message and click *Commit & Push*. Click No to commit to existing branch.
 
+=== Step 5. Create Merge Request (MR)
 
 In the lower-right corner, you will find three options - *create MR*, *Go to project*, *Continue working*.
 
@@ -911,6 +985,7 @@ If merge request is successful, you will see the following result in the lower-m
 Ready to merge by members who can write to the target branch.
 ----
 
+=== Step 6. Review
 
 Your request will be reviewed by Docs team. You will expect one of the following actions.
 
@@ -925,11 +1000,13 @@ Whatever the case it is, MR comments facilitate collaboration between contributo
 Once your MR is approved, the process is complete.
 
 Thanks for your contribution!
+= How to use GitLab UI for more involved document maintenance
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 
 [abstract]
 Documentation needs maintainance as the content grows. Writers and reviewers can contribute to Docs easily and efficiently inside GitLab Web User Interface. From Web IDE, CI pipeline to collaborative review of rendered web content and approval of pages, you can work on good content and document maintenance, uninterrupted by installation and configuration. The article assumes you are already familiar with Git and continuous integration (CI).
 
+== Document maintenance
 
 Maintenance of documentation takes many forms.
 
@@ -942,15 +1019,18 @@ Maintenance of documentation takes many forms.
 
 The following sections step through how to maintain and continually improve quality of Fedora Docs repos using built-in tools in GitLab.
 
+== GitLab Web IDE
 
 Launched as part of the GitLab 15.7 release in December 2022, the new Web IDE provides a file explorer, a text editor and source control in one place.
 
+=== Explorer
 
 The explorer on the left pane helps to discover the repository structure and file list in Fedora Docs. Whichever repos, standard repository structure allows contributors to navigate files and cross-reference multiple pages quickly.
 
 .Explorer
 image::gitlab-ui/explorer-intro.png[]
 
+=== Text editor
 
 After making changes, go to the Source Control icon in the Activity Bar and click *Changes* under the *Commit & Push* button to view a list of files you changed in side-by-side view. If you made multiple commits, *Changes* indicate an overview of changes you have.
 
@@ -962,6 +1042,7 @@ If you click *Create MR*, you will be forwarded to your fork to create merge req
 .Write, commit, create MR
 image::gitlab-ui/commit.png[]
 
+== CI pipeline
 
 Automated test for Docs triggers syntax validation, stylistic errors, and helps fix them before MR is merged. The goals are project-wide consistency of documentation and adherence to the style guides. Docs team introduced a syntax-aware documentation linter for a few repos where you can find vale configuration files. Some contributors write articles without a knowledge of style guides and readability. Refer to the vale linter configuration for CI in the relevant repos:
 
@@ -978,6 +1059,7 @@ Documentation linter carries out more than 20 tests:
 
 Please be aware linter helps you write better, but it does not auto correct errors.
 
+=== Visual reviews
 
 With review apps, a live preview of rendered page is displayed if you click the *view app* icon or *view deployment* in preview MR_number.
 
@@ -993,6 +1075,7 @@ Previewing changes during MR review facilitates close collaboration to catch err
 
 The *View app* button disappears after MR is merged.
 
+=== Code quality report
 
 To view result of CI linting, go to Pipelines on the left pane and click *code quality*.
 
@@ -1002,6 +1085,7 @@ image::gitlab-ui/pipeline.png[]
 Docs team will evaluate options to reflect changes systematically based on code quality report.
 
 Thanks for your contributions.
+= How to edit files on the Pagure Web UI
 Hanku Lee
 
 This section describes how to contribute to existing documentation - that is, documentation that already has been published on the website.
@@ -1014,6 +1098,7 @@ Each Fedora Docs page includes an "Edit this Page" link at the top.
 For simple updates, changes can be submitted directly from the Pagure web interface.
 For larger or more complex edits, you should prepare and test your changes offline before submitting.
 
+== Editing online in Pagure
 
 . Click the "Edit this Page" link to load the documentation source.
 You will be taken to the appropriate content repository in Pagure.
@@ -1057,6 +1142,7 @@ see link:++https://commit.style++[commit.style] by Tim Pope (author of [applicat
 You will have the opportunity to explain or discuss your changes when you submit your PR.
 ====
 
+== Offline editing
 
 . Click the "Edit this Page" link to load the documentation source.
 You will be taken to the appropriate content repository in Pagure.
@@ -1082,6 +1168,7 @@ See xref:contributing-docs/tools-localenv-preview.adoc[Building a local preview]
 
 . Use Pagure to make a pull request from your fork to the main repository's master branch.
 
+== Managing your pull request
 
 Someone will see your pull request and either merge it, or provide feedback if there is something you should change.
 Work with the people commenting to make sure your contributions are up to standards.
@@ -1094,18 +1181,22 @@ If nobody reacts to your pull request in several days, try bringing it up on one
 Your changes will appear online sometime after the pull request is merged.
 The site is being updated every hour.
 If your changes do not appear online within 24 hours of your PR being merged, ping `asamalik` (Adam Šamalík) on the IRC channel and ask him about it.
+= How to Create and Use a Local Fedora Documentation Workflow
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 :page-pagination:
 
 [abstract]
 In a local environment, you can create or edit your documents offline. You use a local git repository that contains a complete set of documents and tools to edit. After editing is complete, preview them in a local build of Docs pages. It is by far the most flexible way of working with Docs repositories, enabled by the extensive adaptation to individual work routines and work equipment. A local writing environment allows full access to all the resources you routinely use on your workstation and is therefore perfectly adaptable to your style of working. It is particularly suitable for the creation of a completely new set of documentation on a topic or for revision of an existing set of documentation. This article takes an example of the Fedora project repositories in GitLab, but the overall process can be translated for Pagure and GitHub projects.
 
+== Prerequisites
 
 1. You need to fulfill the basic requirements as specified in xref:contributing-docs/index.adoc#prerequisites[Write contributions to Docs].
 
 2. The workflow uses command line tools in most steps of the process. Having some experience working in the Linux Terminal is therefore necessary or must be learned in parallel.
 
+== Setting up an authoring environment
 
+=== Preparations
 
 1. Use SSH keys to authenticate to the GitLab remote server.
 
@@ -1123,6 +1214,7 @@ Create the main directory with mkdir DirectoryName
 $ mkdir ~/FedoraDocs
 ----
 
+=== Set up the repository
 
 *Fork a project*
 
@@ -1166,9 +1258,11 @@ To create a branch and switch to it,
 $ git checkout -b <new-branch>
 ----
 
+== Working on content
 
 Open the file(s) with your choice of text editor, edit, and save.
 
+=== Sync your fork with the upstream repository
 
 ----
 $ git remote -v
@@ -1206,6 +1300,7 @@ $ git push origin main
 
 This command pushes your local commits to the main branch of the origin remote.
 
+=== Run the scripts to preview locally
 
 Go to the the directory where cloned repo is, and run the build scripts in terminal.
 
@@ -1215,6 +1310,7 @@ $ ./docsbuilder.sh
 
 Preview in your browser using the address localhost:8080
 
+=== Save your work
 
 To see what has been going on with git add and git commit commands.
 
@@ -1252,6 +1348,7 @@ Push changes to your branch in your fork.
 $ git push origin <branch-name>
 ----
 
+=== Create merge requests
 
 Go to your fork of the repository in GitLab.
 
@@ -1264,11 +1361,13 @@ In the Target branch dropdown list, select the branch from the upstream reposito
 Click Compare branches and continue.
 
 Select Create merge request.
+= Building a local preview
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 
 [abstract]
 A local preview is a valuable tool to test your changes when working on your local authoring environment. Run the docsbuilder script available in Fedora content repository. You can build and run the fully rendered site on your machine to preview your changes before making a pull request to the Fedora content repositories.
 
+== When you need a local preview
 
 When working with local authoring environment, a local preview provides versatile workflow to test how the changes will be rendered and function in your browser locally. When you make changes such as, but not limited to;
 
@@ -1286,11 +1385,13 @@ When working with local authoring environment, a local preview provides versatil
 
 you need build scripts to render the changes predictably and test them before you make a pull request.
 
+== What the scripts do
 
 A unified docs builder script, docsbuilder.sh, builds a local version of the site, which means the subset of the full site that resides in your local repository. In turn, the script starts a webserver and serves the site at link:http://localhost:8080/[]. Opening this link in any web browser will show you the preview, which will be available until you kill the process (kbd:[Ctrl+C] in the terminal).
 
 Check README.md on the landing page of projects to run the script suggested to use.
 
+=== How to test changes
 
 Go to the the directory where cloned repo is, build, watch and preview the site by running the build scripts in terminal.
 
@@ -1310,6 +1411,7 @@ $ ./builder.sh
 To use the scripts you need [application]`Podman` installed if using Fedora Linux or [application]`Docker CE` if using macOS.
 ====
 
+== Previewing multiple repositories
 If your work spans content in multiple repositories,
 e.g. because you xref:contributing-docs/asciidoc-markup.adoc#external-antora-link[link to another repository],
 you can extend the preview by adding more repositories to `site.yml` as follows:
@@ -1326,6 +1428,7 @@ branches: main
 Correct entries to use can be found from
 https://pagure.io/fedora-docs/docs-fp-o/blob/prod/f/site.yml[docs-fp-o site.yml].
 
+== Using the regular Antora scripts
 If you want to use the regular Antora build and preview workflow - follow the instructions on https://docs.antora.org/[Antora Documentation page].
 
 Once you have ``Antora CLI`` and ``Antora Site Generator`` you can build and preview the pages without the container scripts.
@@ -1354,12 +1457,14 @@ python -m SimpleHTTPServer
 It opens a local preview at port 8000.
 
 If you have cargo (Rust package manager), you could also install and use ``miniserve`` or any other simple server of your choice for that matter.
+= Check Your Documentation Using Vale
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 v1.1, 2024-08-30
 
 [abstract]
 Vale is a command-line tool that allows you to check your writing for grammar and stylistic errors against a set of style rules. Vale codifies your style guides into a collection of Vale-compatible YAML files and it is highly customizable. Fedora documentation uses the https://stylepedia.net/style/5.1/[Red Hat] style guide. Before creating a merge request for any documentation or documentation updates, you will need to run https://vale.sh[Vale] on your text.
 
+==  Install Vale on your computer
 
 You can install Vale on your computer, or use a containerized version with Podman.
 
@@ -1388,6 +1493,7 @@ The Red Hat style guide and the required Vale configuration files are already in
 
 You can verify this by checking for a `.vale.ini` file in the file list of your fork in your GitLab account. You do not need to download or install any additional style files.
 
+== Use Vale to check files or directories
 
 To use Vale, do the following:
 
@@ -1398,6 +1504,7 @@ To use Vale, do the following:
 
 When your file passes, you can commit your work and push to your fork on GitLab, and open a merge request.
 
+=== Vale commands and output
 
 To run Vale on a single file:
 
@@ -1461,6 +1568,7 @@ For example, to only shows results flagged with error in the file, use:
 $ vale --no-wrap --minAlertLevel error filename
 ----
 
+== How to interpret Vale results
 
 Vale shows the results by line number and position (sometimes called a column). It also shows the style guideline that flagged the content.
 
@@ -1481,6 +1589,7 @@ Vale will usually tell you exactly what you need to do to fix the line, which in
 
 Rerun Vale to verify that the error is now resolved. Continue running Vale to clear all errors, warnings, and suggestions.
 
+=== How to find guidance for correcting Vale results
 
 Every result returned by Vale shows the Red Hat style reference that flagged the word or phrase. This is at the end of the each result, in the format of `RedHat.style_name`.
 
@@ -1494,6 +1603,7 @@ If you want to see the contents of a specific style file, you can examine the ht
 
 If you still have questions or need help deciding what changes to make, post a question in the Fedora Documentation room on https://chat.fedoraproject.org/#/room/#docs:fedoraproject.org[Fedora Chat].
 
+== More information
 
 Vale documentation: https://vale.sh/docs/
 
@@ -1505,6 +1615,7 @@ Fedora Docs Style Guide: https://docs.fedoraproject.org/en-US/fedora-docs/contri
 
 This guide shows how to use Vale from the command line, but https://docs.gitlab.com/ee/development/documentation/testing.html#configure-editors[plugins or packages] are available for several common text editors.
 
+= Fedora Documentation Style Guide
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 2023-04-21
 :page-pagination:
@@ -1512,6 +1623,7 @@ Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 [abstract]
 This guide provides style guidelines and preferred term usage for the Fedora Linux Documentation. Docs team created this guide to strive for correctness and consistency in documentation.
 
+== Writing style guide
 
 Write clearly and use shorter sentences:: The longer a user documentation is, the more difficult it is to understand. Writing with brevity (to the point) is good. Clarity is better.
 
@@ -1539,6 +1651,7 @@ Have a smooth flow from general information to specific instructions:: Structure
 
 Avoid long texts:: Verbose writing is daunting to read. Instead, organize the text using paragraphs, bullets, and numbered steps. This helps the user to quickly grasp the text and, above all, does not seem daunting. Provide a short abstract at the beginning of a longer collection of paragraphs:: Especially after second and third order headings ("h2" and "h3", "==" and "===" in AsciiDoc), a short sentence or paragraph should follow, briefly describing the goal and/or subject of the subsequent paragraphs, bringing the message to the reader's attention and aligning the reader's expectation.
 
+== Typographic style guide
 
 Use capital case for title (h1) and just title:: Capitalize the article title only.
 +
@@ -1565,6 +1678,7 @@ output line2
 
 Use of admonitions:: Tips, hints, and warnings, when used in abundance, interrupt the flow of writing and reading. Use admonitions when absolutely necessary.
 
+== Content tips
 
 These tips are about things to do — and avoid — in what you tell users to do. Remember that thousands of readers trust Fedora Documentation to tell them how to carry out tasks. Be responsible and helpful, test your examples carefully, advocate best practices, and respect the user’s security and choice.
 
@@ -1590,6 +1704,7 @@ Use the correct style for third parties:: Names of companies, projects, and tech
 * ThinkPad instead of Thinkpad
 
 
+== Images and screenshots
 
 Use a fresh, standard Fedora system:: Do not use your personal system or setup. It is best to make a virtual machine with a fresh Fedora variant install, and do the steps there.
 
@@ -1597,6 +1712,7 @@ Set screen resolution at a reasonable but not too high:: Desktop environment spe
 
 If you are only showing an application, pop-up, or specific areas, use an option in the software to crop it for you:: If the shot requires an entire browser window, app in full size, or whole screen, choose a medium size thumbnail. Use descriptions of images prior to block image macro to explain what actions the image display. Check the next page for AsciiDoc markup.
 
+=== Use of directory and file naming conventions
 
 To observe naming conventions consistently, retain the original title of article, use it on a subdirectory name and title of images.
 
@@ -1606,10 +1722,12 @@ Directory path for images in Fedora repos follows ~/modules/ROOT/assets/images/<
 [example]
 If the title on H1 heading is Finding and installing Linux applications, the file name is finding-installing-linux-apps.adoc. Create a subdirectory and place images in following paths in your cloned local repo: ~/modules/ROOT/assets/images/finding-installing-linux-apps/.png
 
+== Processing tips
 
 Check spelling and grammar:: Check your work before creating a Pull Request.
 
 Check the Red Hat style guide:: Use xref:contributing-docs/tools-vale-linter.adoc[Vale] to check your work to make sure it conforms to the Red Hat Style Guide.
+= AsciiDoc for Fedora Documentation Writers
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 v0.0.1, 2022-09-26
 
@@ -1618,6 +1736,7 @@ The purpose of this section is not to duplicate what already exists, but to poin
 The idea is for you to spend less time remembering AsciiDoc or Antora nitpicks, and more time writing good docs!
 
 _Use the navigation bar in the side to navigate this section._
+= AsciiDoc markup
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 v1.0, 2022-12-10
 :page-toclevels: 3
@@ -1626,6 +1745,7 @@ v1.0, 2022-12-10
 This page shares general information about writing in AsciiDoc as well as Fedora/Antora-specific syntax that comes up often in Fedora Documentation.
 
 [[basics]]
+== AsciiDoc basics
 
 [quote,asciidoctor.org]
 ____
@@ -1642,12 +1762,14 @@ Most importantly, note that https://asciidoctor.org/docs/asciidoc-recommended-pr
 
 
 [[snippets]]
+== Fedora Documentation snippets
 
 When you write Fedora Documentation, some things come up frequently.
 They may not be documented in general AsciiDoc documentation, like on `asciidoctor.org`. +
 This section contains handy references for Fedora Documentation writers to copy and paste in their own AsciiDoc documents.
 
 [[internal-link]]
+=== Internal links
 
 In this section, we will use the following repository structure as an example:
 
@@ -1667,6 +1789,7 @@ In this section, we will use the following repository structure as an example:
 ----
 <.> Defines the documentation component as _test-module_ (attribute `name`)
 
+==== Same repository
 
 Use the local path relative to the `pages` directory in the same module.
 
@@ -1683,6 +1806,7 @@ xref:sub-dir/rules.adoc
 ----
 
 [[module-link]]
+==== Same repository, different module
 
 Like an internal link, but use a colon (`:`) to separate the module name.
 If you are not sure if you need this, you likely don't!
@@ -1695,6 +1819,7 @@ xref:council:guiding-policy.adoc
 ----
 
 [[external-antora-link]]
+==== Different repository
 
 Link to another Fedora Documentation page that exists in another repository.
 Note that you *must* use the `name` field specified in the `antora.yml` file in the other repository or it will not work.
@@ -1713,6 +1838,7 @@ xref:test-module:ROOT:another-page.adoc
 xref:test-module:council:guiding-policy.adoc
 ----
 
+=== URL redirects
 
 You can create a redirect from an old page to a new one by using the https://docs.antora.org/antora/latest/page/page-aliases/[`page-aliases`] attribute.
 The syntax is the same as for xref:#internal-link[xref links].
@@ -1720,6 +1846,7 @@ The syntax is the same as for xref:#internal-link[xref links].
 .Example 1. In new-page.adoc
 [,adoc]
 ----
+= Page Title
 :page-aliases: old-page.adoc
 ----
 
@@ -1728,9 +1855,11 @@ You can also create a redirect from another module or component.
 .Example 2. In new-page.adoc
 [,adoc]
 ----
+= Page Title
 :page-aliases: test-module:council:removed-page.adoc
 ----
 
+=== Syntax highlighting
 
 You can add syntax highlighting to any source block by setting the source language attribute.
 
@@ -1758,6 +1887,7 @@ destinations:
 
 The list of supported languages can be found in the https://gitlab.com/fedora/docs/docs-website/ui-bundle/-/blob/main/src/js/vendor/highlight.bundle.js[highlight.bundle.js in the Fedora Docs UI].
 
+=== Datatables
 
 You can convert a regular table to a https://datatables.net/[DataTables] using the `datatable` role attribute.
 DataTables provides filtering and ordering capabilities.
@@ -1811,6 +1941,7 @@ You can also alter the styling with the help of https://datatables.net/manual/st
 
 DataTables real usage can be seen on the xref:legal::not-allowed-licenses.adoc[Legal documentation].
 
+=== Tabs block
 
 You can create a set of tabs to organize documentation content in a block.
 
@@ -1855,6 +1986,7 @@ Contains more than one block.
 
 For more information about tabs, refer to the Asciidoctor Tabs extension at https://github.com/asciidoctor/asciidoctor-tabs.
 
+=== Table of content
 A table of content is automatically generated on the right of each pages.
 
 IMPORTANT: There is no need to add the `:toc:` attribute as it will then add a duplicate table of content to the document.
@@ -1864,9 +1996,11 @@ You can change this setting with the `page-toclevels` attribute.
 
 [,asciidoc]
 ----
+= Page Title
 :page-toclevels: 3
 ----
 
+=== Pagination
 If you have several pages that follow the same topic, you might be interested in enabling the pagination. +
 Pagination allows the reader to easily navigate to next and previous pages from the navigation tree by adding navigation links at the bottom of the page.
 
@@ -1874,11 +2008,13 @@ This option is enabled by the `page-pagination` attribute.
 
 [,asciidoc]
 ----
+= Page Title
 :page-pagination:
 ----
 
 You can see a live example on this page.
 
+=== Button and Menu UI macro
 To keep consistency in presenting a button, keyboard bindings, or a menu item (path), Button and Menu UI Macros communicate to the reader what actions they need to take.
 
 IMPORTANT: Although this attribute is named experimental, the UI macros are considered a stable feature of the AsciiDoc and used in latest Quick Docs edited.
@@ -1887,6 +2023,7 @@ This option is enabled by the experimental attribute.
 
 [,asciidoc]
 ----
+= Page Title
 :experimental:
 ----
 
@@ -1910,12 +2047,15 @@ To save the file, select menu:File[Save].
 Select menu:View[Zoom > Reset] to reset the zoom level to the default setting.
 ----
 
+== Best practices
 
 A few recommendation when writing a new pages, or editing an existing one.
 
+=== Document header
 All pages **must** start with a level 1 title.
 [,asciidoc]
 ----
+= Page Title
 ----
 
 Optionally, you can add https://docs.asciidoctor.org/asciidoc/latest/document/author-line/[authors] and https://docs.asciidoctor.org/asciidoc/latest/document/revision-line/[review] metadata.
@@ -1923,6 +2063,7 @@ Optionally, you can add https://docs.asciidoctor.org/asciidoc/latest/document/au
 .Example 1 - Authors and revision information
 [,asciidoc]
 ----
+= Page Title
 Ben Cotton; Peter Boy; Petr Bokoc
 2.0, 2022-11-26: fix for F37
 ----
@@ -1932,6 +2073,7 @@ You can decide to omit the version number, if you don't need that information.
 .Example 2 - Revision information without version
 [,asciidoc]
 ----
+= Page Title
 Francois Andrieu
 2022-12-10: Added revision metadata example
 ----
@@ -1941,9 +2083,11 @@ While these metadata are optional, try to keep at least the revision date so rea
 .Example 3 - Revision date only
 [,asciidoc]
 ----
+= Page Title
 Fedora Documentation Team
 2022-12-10
 ----
+= Reusable attributes
 Fedora Documentation Team <https://discussion.fedoraproject.org/tag/docs-team>
 v0.0.1, 2024-06-25
 // :toc:
@@ -1952,6 +2096,7 @@ This page explains how to use reusable metadata, or attributes, across multiple 
 
 
 [[why]]
+== Why reusable attributes?
 
 Sometimes you may want to use the same data across many AsciiDoc documents.
 Some examples are below:
@@ -1963,6 +2108,7 @@ Some examples are below:
 For these and more use cases, *attributes* allow you to define some metadata in a single place, and reuse it in multiple places.
 
 
+== Overview
 
 There are two requirements for your Fedora Documentation project to use attributes.
 
@@ -1971,6 +2117,7 @@ There are two requirements for your Fedora Documentation project to use attribut
 
 
 [[attributes-file]]
+== Create attributes file
 
 First, initialize an `attributes.adoc` file for any module.
 The example below shows a globally reusable attributes file in the `ROOT` module:
@@ -2014,6 +2161,7 @@ This is an example `attributes.adoc` from the xref:dei::index.adoc[Fedora DEI Te
 
 
 [[import]]
+== Import attributes
 
 Next, import the attributes file into your AsciiDoc document.
 Placing this macro on the top line will do the rest:
@@ -2025,6 +2173,7 @@ Placing this macro on the top line will do the rest:
 
 
 [[use-attributes]]
+== Use attributes in documentation
 
 After creating an attributes file *AND* import attributes, reference the attributes in AsciiDoc documents with the following syntax:
 
@@ -2041,11 +2190,13 @@ See this example from the Fedora DEI Team:
 existing team policies, and tickets requiring
 https://budget.fedoraproject.org/budget/FY23/d-i.html[D&I budget].
 ----
+= Working with translations
 Fedora Documentation Team
 
 [abstract]
 The goal of the Fedora Localization (L10N) Project is to bring everything around Fedora (the Software, Documentation, Websites, and culture) closer to local communities (countries, languages and in general cultural groups). Here is an overview of the Fedora Localization Project.
 
+== New translators
 
 If you are interested how to join L10N, please refer to the link below.
 
@@ -2057,6 +2208,7 @@ Fedora Localization Guide for Weblate platform: https://docs.fedoraproject.org/e
 
 //* Contribute to keeping Docs up and running
 
+= Contribute to keeping Docs up and running
 
 [abstract]
 ____
@@ -2073,6 +2225,7 @@ Workflow maintenance::
 The processes for creating the web pages are automated. Members with experience in CI can contribute to maintain and improve these processes.
 
 The relevant sections provide further information.
+= Design & UX contributions
 
 [abstract]
 _____
@@ -2093,6 +2246,7 @@ https://docs.antora.org/antora-ui-default/build-preview-ui/[*Build a UI Project 
 Official `antora.org` documentation on how to build a preview site using a custom U.I.
 
 
+= Archive
 
 [abstract]
 ____

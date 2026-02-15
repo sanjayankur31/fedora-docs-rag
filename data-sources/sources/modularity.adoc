@@ -1,4 +1,5 @@
 * **What is Modularity**
+= Introduction
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -16,6 +17,7 @@ Modularity removes this limitation of a RPM repository with the addition of Modu
 
 toc::[]
 
+== Modular Repository
 
 In the picture below you can see a classic example of official RPM repositories in the Fedora linux distribution. Fedora Linux is providing one major version of RPM packages for each Fedora release. This is simple view of a “classic” or a non-modular repository.
 
@@ -31,6 +33,7 @@ So in short, Modularity can expand a RPM repository with following features:
 * Module streams can have different life cycles. For example a package in a distribution can have a different life cycle than the life cycle of the distribution.
 * Module streams can have different installation profiles of its components i. e. you can define one or several module stream profiles which will contain groups of RPMs which should be installed together.
 
+== When should you use Modularity?
 
 Any RPM repository can be converted into a modular RPM repository with the inclusion of modular metadata and corresponding binary RPMs. The following points will help you to decide if Modularity can be useful to you.
 
@@ -40,10 +43,12 @@ Any RPM repository can be converted into a modular RPM repository with the inclu
 * You are building Flatpaks. RPM package dependencies installed into Flatpak sandoxes are module streams.
 * In general Modularity is a good fit for providing alternative RPM packages for sandbox environments which use RPM based distributions. (Flatpak, linux containers etc.)
 
+=== Examples
 
 **Scenario 1**: Some users install packages coming from a different Fedora release in order to consume a specific version of a database that is compatible with their application. But thanks to Modularity they might not need to do that anymore, because multiple versions of the database can be available in each Fedora release. All they need to do is to consume the specific stream of that database right from the Fedora repositories for their system.
 
 **Scenario 2:** There were cases when users couldn't upgrade their system to a new Fedora release because their application wouldn't function with the new version of a language runtime coming with the upgrade. Modularity can fix this problem by providing the same language versions in both Fedora releases. With that, the user can consume a specific stream of the language and keep it even when they upgrade their system. And when the application is ready for the new language version, it can be upgraded later, independently from the OS, by switching to a different stream.
+= Community
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -54,6 +59,7 @@ This page lists the communication channels of members of the Modularity Working 
 
 toc::[]
 
+== Channels
 
 There are two main communication channels the Modularity WG uses:
 
@@ -71,6 +77,7 @@ https://lists.fedoraproject.org/archives/list/server@lists.fedoraproject.org/[se
 The https://fedoraproject.org/wiki/Server[Server SIG^] also discusses Modularity at times as the Server Edition is a primary stakeholder in the goals of the https://fedoraproject.org/wiki/Objectives#Current[Modularity Objective^].
 
 
+== Working Groups and Teams
 
 Modularity is driven by the Modularity and DNF team.
 
@@ -85,6 +92,7 @@ However, Modularity couldn’t happen without other working groups contributing 
 * https://docs.pagure.org/releng/[Fedora Release Engineering^]
 * https://fedoraproject.org/wiki/Infrastructure[Fedora Infrastructure^]
 
+== Reporting Issues
 
 General issues such as bugs or feature requests for the Modularity project can be created by anyone in the https://pagure.io/modularity/issues[General Modularity issue tracker][[gerneral_tracker]]. This issue tracker is then processed by the team and new issues or even issues against other projects may be created as a result.
 
@@ -93,12 +101,14 @@ General issues such as bugs or feature requests for the Modularity project can b
 * https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora%20Modules[Fedora Modules product in Bugzilla] — Bugs in concrete Fedora modules.
 * https://pagure.io/releng/fedora-module-defaults/issues[fedora-module-defaults issue tracker] — Setting default profiles, default streams, stream end of lives, obsoleted and replacing streams.
 
+=== Tools Related to Modularity:
 
 * https://pagure.io/fedora-infrastructure/[Fedora Infrastructure issue tracker^] — Issues related to https://mbs.fedoraproject.org/module-build-service/2/module-builds/[Module Build Service (MBS)] and particular MBS module builds (started with `fedpkg module-build`). Use this tracker, for instance, if your build hangs without finishing or failing.
 * https://pagure.io/fm-orchestrator/issues[Module Build Service issue tracker^] — Issues regarding MBS source code. If your want to propose changing a syntax or semantics of the MBS input (modulemd documents) or the MBS output (RPM packages built in a module or resulting modular metadata), it does belong to the <<general_tracker, general tracker>>.
 * https://github.com/fedora-modularity/libmodulemd/issues[libmodulemd issue tracker^] — Issues regarding the modulemd specification, libmodulemd library, and modulemd-validator tool.
 * https://github.com/rpm-software-management/modulemd-tools/issues[modulemd-tools issue tracker] — A collection of tools for module maintainers.
 * https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora&short_desc=%5Bmodularity%5D&component=dnf[DNF component in Bugzilla^] — Issues regarding the `dnf module` command.
+= Glossary
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -108,34 +118,44 @@ Modularity introduces a lot of new keywords to the established packaging ecosyst
 
 toc::[]
 
+== Modularity Project
 * Modularity project is an extension to the RPM ecosystem that allows to distribute and consume <<Modular Repository,Modular Repositories>> with alternative content.
 
+== Modular Repository
 * Modular repository is an RPM repository extended with <<Module Metadata (modulemd),Module Metadata>>. It allows users to query and fetch information about the available Module Streams as well as RPM packages from them.
 
+== Module Stream
 * Module Stream is a collection of RPM packages as defined by the <<Module Metadata (modulemd),Module Metadata>>.
 * Usually, a Module Stream represents a certain major version or a specific build configuration of RPM packages grouped together by purpose. More specific example would be postgres:12: a Module Stream of the postgres Module with PostgreSQL version 12 and PostgreSQL-12-related packages.
 
+== Module
 * Collection of Module Streams with the same name.
 * For example: postgresql module consists of postgresql:10 and postgresql:12 <<Module Strea,Module Streams>>.
 “Module” is also frequently used as an informal reference to <<Module Artifact>>.
 For example: Hey buddy, I’ve just built the postgresql:12:20200101:aabbccdd:x86_64 module, go check it out!
 
+== Default Module Stream
 * Default Module Stream is a <<Module Stream>> pre-selected by the software distributor (such as Fedora or RHEL authorities) to be implicitly considered for package installation and dependency resolution and automatically enabled when packages from the stream are needed. One Module can only have zero or one Default Module Stream.
 * Example: The nodejs:14 <<Module Stream>> is the Default Module Stream of the nodejs <<Module>> and the stream contains a libuv package. When the user installs libuv (directly or indirectly), the nodejs:14 <<Module Stream>> is automatically enabled without an explicit user action. Installation of the libuv package from any other <<Module Stream>> or from a non-module repository requires explicit action (such as disabling the nodejs:14 stream).
 
+== Module Artifact
 * <<Module Metadata (modulemd),Module Metadata>> + built RPMs identified by <<NSVCA,N:S:V:C:A>>.
 
+== Module Build
 * Module Build is a collection of <<Module Artifact,Module Artifacts>> with the same <<NSVCA,NSVC>>
 
+== Module Metadata (modulemd)
 * Module Metadata is a modulemd yaml document that contains information about a <<Module Artifact,Module Artifact>>. Module Metadata can be found in modules.yaml in the repodata.
 * For more information see xref:building-modules/fedora/defining-modules.adoc[this topic].
 * The standard for yaml modulemd files is defined https://github.com/fedora-modularity/libmodulemd/tree/main/yaml_specs[here^].
 
+== NSVCA
 * This abbreviation describes the new naming conventions for <<Module,modules>> i. e. Name:Stream:Version:Context:Architecture.
 * For more information see xref:core-concepts/nsvca.adoc[this section].
 
 
 * **Consuming Modules**
+= Using modules in Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -151,10 +171,13 @@ toc::[]
 
 :listing-caption: Example
 
+== Module stream installation and discovery
 
+=== Listing packages
 
 Packages available to the system can be discovered by the usual commands such as `dnf search NAME`, `dnf list NAME`, or by using the `dnf repoquery QUERY` command for more complex queries. However, it is important to note that those commands will, apart from traditional packages, only list modular packages coming from already _enabled_ module stream.
 
+=== Listing modules
 
 To list modules available to your system, and to see what streams are _default_ or have been _enabled_, use the following command:
 
@@ -163,11 +186,13 @@ To list modules available to your system, and to see what streams are _default_ 
 $ dnf module list
 ----
 
+=== Installing packages
 
 Packages can be installed the usual way by running the `dnf install NAME` command. Any traditional package, or a modular package coming from an _enabled_ module can be installed this way.
 
 Packages from other module streams can be consumed by either _enabling a module_ stream and then installing individual packages, or by _installing a module_ directly.
 
+=== Enabling modules
 
 To **enable a module stream** and make its packages available for installation, run the following command:
 
@@ -185,6 +210,7 @@ $ dnf module enable nodejs:8
 
 Packages from enabled module streams can be then installed by the `dnf install NAME` command.
 
+=== Installing modules
 
 To install a module, use one of the following commands.
 Not specifying a _stream_ or a _profile_ causes DNF to choose the _default_.
@@ -207,6 +233,7 @@ $ dnf module install nodejs:8
 $ dnf module install mongodb/client
 ----
 
+=== Switching module streams
 
 NOTE: Switching streams is a risky operation that might not be always supported in packages, especially downgrades.
 
@@ -247,9 +274,11 @@ $ dnf install nodejs
 
 NOTE: The `dnf module info NAME:STREAM` command is helpful to check RPMs in a module stream.
 
+== Updating the system
 
 Updating a system by running the `dnf update` command causes all packages to be upgraded to their latest version provided by their module stream.
 
+== Removing modules
 
 In general, to remove a module installed on your system, use the following command:
 
@@ -258,6 +287,7 @@ In general, to remove a module installed on your system, use the following comma
 $ dnf module remove MODULE:STREAM/PROFILE
 ----
 
+== Advanced
 
 There is a situation when a specific package has been installed first, and then a module has been installed after that. Example:
 
@@ -285,9 +315,11 @@ That is because DNF remembers a reason why a package has been installed. There a
 
 Because modules use the __group__ reason, which is weaker than __user__ used by the `dnf install` command, the package stays on the system after running the `dnf module remove` command. "Downgrading" it to __group__, however, makes the `dnf module remove` remove it as well.
 
+== Modular filtering and conflicts
 
 When consuming module streams a lot of operations are being executed. A module stream contains alternative modular RPM packages which can have the same name as already existing non-modular RPM packages, a lot of conflicts can arise. In the next few examples we will show you some of the conflicts.
 
+=== Switching a module stream without removing the RPM packages from the old module stream
 
 .broken dependencies when switching module streams without removing the installed content
 [source,console,subs="verbatim,quotes"]
@@ -336,6 +368,7 @@ This conflict is correct and is not a bug. As you are trying to update installed
 If you are switching streams and not sure about the manual process, please use the `switch-to` argument as this is the recommended way.
 
 
+=== Installing a RPM package from a wrong module stream.
 
 .of a RPM package requested to be installed from the wrong module stream
 [source,console,subs="verbatim,quotes"]
@@ -376,6 +409,7 @@ The example describes a situation when you try to install a RPM package which is
 To fix this conflict you have to enable the correct module stream. In our case it is the `perl:5.32` module stream.
 
 
+=== Installing a RPM package without enabling the module stream which provides it.
 
 
 .of a installation conflict when installing a package without enabling the correct module stream
@@ -426,12 +460,14 @@ In this example we are trying to install the `perl-DBI` package. On our system w
 WARNING: Non-modular RPM packages can not depend on modular content. If your non-modular package needs a modular dependency please modularize your content.
 
 To fix this we need to enable the `perl-DBI:1.643` module stream. When enabling the `perl-DBI:1.643` we are satisfying the modular dependency for the `perl` module. The non-modular `perl-DBI` RPM package is now filtered by modular filtering and it is not considered in dependency resolution and content set creation.
+= Building Modules
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 1. **xref::building-modules/fedora/index.adoc[Fedora]**
 2. **xref::building-modules/copr/building-modules-in-copr.adoc[COPR]**
 3. **xref::building-modules/local/building-modules-locally.adoc[Localhost]**
+= Building Modules for Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -440,6 +476,7 @@ If you wish to maintain an additional version of an application, language stack,
 The xref:building-modules/fedora/adding-new-modules.adoc[Adding New Modules] covers the whole process of adding a new module to Fedora.
 
 The xref:building-modules/fedora/module-obsoletes.adoc[Module Obsoletes] covers the process of a module stream EOLing/obsoleting.
+= Adding new modules to Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -450,12 +487,15 @@ This page will guide you through the whole process of adding a new module to Fed
 3. **<<Module Build>>** — Module is built as a unit. No individual package builds are done.
 4. **<<Publishing the Module>>** — Submitting a Bodhi update.
 
+== RPM Sources
 
 For each package in your module, you need to have a Fedora Distribution Git (dist-git) **repository** under `dist-git/rpms` with an appropriate **stream branch**. New packages need to go through a **package review**.
 
+=== Repositories and Stream Branches — New packages
 
 The https://docs.fedoraproject.org/en-US/package-maintainers/Package_Review_Process/#_contributor[Fedora Package Review Process] covers all the steps you need to take, except for stream branches. For that, please continue below to Existing packages.
 
+=== Repositories and Stream Branches — Existing packages
 Requesting new stream branches for existing packages is done with `fedpkg`, and it doesn't require a package review.
 
 To create a new branch for a package that shares a name with the module (e.g. "postgresql"), run the following command which will create the package stream branch as well as the module and its stream branch together:
@@ -476,13 +516,16 @@ $ fedpkg request-branch --repo=NAME BRANCH --no-auto-module --sl SERVICE_LEVEL:Y
 
 Creation of the module and its stream branches separately will be covered later.
 
+=== Importing the RPM sources into dist-git
 
 The last thing to do is to import the RPM sources into dist-git. Please refer to the https://docs.fedoraproject.org/en-US/package-maintainers/New_Package_Process_for_Existing_Contributors/[New package process for existing contributors
 ] for the complete steps.
 
+== Module Definition
 
 For your module definition, you also need to have a dist-git **repository**, this time under `dist-git/modules`, with an appropriate **stream branch**. New modules also need to go through a https://bugzilla.redhat.com/buglist.cgi?component=Module%20Review&product=Fedora%20Modules[module review in Bugzilla] adhering to xref:policies/packaging-guidelines.adoc[Fedora Packagining Guidelines for Modules].
 
+=== Repositories and Stream Branches — New modules
 
 To request a new module repository in dist-git run:
 
@@ -496,6 +539,7 @@ $ fedpkg request-branch --namespace modules --repo NAME BRANCH --sl SERVICE_LEVE
 * `BRANCH` — name of the stream branch of the module
 * `SERVICE_LEVEL:YYYY-MM-DD` — expected end of life. See <<SLA,above>> for more details. Stream end of lives are available in https://pdc.fedoraproject.org/rest_api/v1/component-branch-slas/?branch_type=module[Product Definition Center].
 
+=== Repositories and Stream Branches — Existing modules
 
 to request a new stream branch, run:
 
@@ -507,6 +551,7 @@ $ fedpkg request-branch --namespace modules --repo NAME BRANCH --sl SERVICE_LEVE
 * `BRANCH` — name of the stream branch of the module
 * `SERVICE_LEVEL:YYYY-MM-DD` — expected end of life. See <<SLA,above>> for more details.
 
+=== Write and push the modulemd
 
 Writing a modulemd is covered in detail in the xref:building-modules/fedora/defining-modules.adoc[Defining Modules in modulemd] section.
 
@@ -525,15 +570,19 @@ $ git push
 * `NAME` — name of the module
 * `BRANCH` — name of the stream branch of the module
 
+== Module Build
 
 NOTE: NOTE: With Modularity, you no longer build individual packages. Instead, you need to submit a module build.
 
 Submitting module builds is done using `fedpkg` and is covered in the xref:building-modules/fedora/building-modules.adoc[Building modules] section.
 
+== Publishing the Module
 
 
+== Module Stream EOLing/Obsoleting
 
 When a stream should not be used any longer, a user can be instructed to migrate by adding a xref:building-modules/fedora/module-obsoletes.adoc[Module obsoletes] document.
+= Updating modules in Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -544,6 +593,7 @@ This page will guide you through the process of updating an existing module.
 3. **<<Module Build>>** — Module is built as a unit. No individual package builds are done.
 4. **<<Publishing the Module>>** — Submitting a Bodhi update.
 
+== Updating RPM Packages
 
 Update your RPM packages the same way you would do traditionally, except submitting individual package builds.
 
@@ -552,9 +602,11 @@ Useful resources:
 * https://docs.fedoraproject.org/en-US/packaging-guidelines/[Fedora Packaging Guidelines]
 * https://docs.fedoraproject.org/en-US/package-maintainers/Package_Maintenance_Guide/[Fedora Package Maintenance Guide]
 
+== Updating the Module
 
 Here are the common changes you might want to apply to your modules.
 
+=== Migrating from modulemd to modulemd-packager format
 
 In the past there was https://raw.githubusercontent.com/fedora-modularity/libmodulemd/main/yaml_specs/modulemd_stream_v2.yaml[modulemd, version 2,] format used for building modules.
 That format featured stream expansion and dynamic contexts.
@@ -694,6 +746,7 @@ Modules built from this format can be recognized by `static_context: true` field
 For a real example of the migration look at any perl* module.
 For instance, this https://src.fedoraproject.org/modules/perl-DBI/c/2200d21f0fab5295226d915c24e49063d226e777?branch=1.643[commit].
 
+=== Migrating from a dynamic context to a static context
 
 If you do not want to migrate to modulemd-packager format now and you plan to build only for one platform (e.g. only for EPEL 9), but if you still need a static context for better handling in DNF, you should set the context statically by adding into `data` section:
 
@@ -708,6 +761,7 @@ Static-context modules are supported since Fedora 34 and RHEL 9.
 
 Static-context modules can be recognized by `static_context: true` field in their output YAML document.
 
+=== Updating a module for a new Fedora release
 
 Modules in modulemd-packager format statically define a context for each supported Fedora release:
 
@@ -748,6 +802,7 @@ platform: f32
 +        platform: f33
 ----
 
+=== Rebuilding a module for updated RPM packages
 
 Even when you don't need to make any changes to the modulemd, you still need to push a new commit to build a new version.
 
@@ -762,17 +817,21 @@ $ git push
 * `NAME` — name of the module
 * `BRANCH` — name of the stream branch of the module
 
+== Module Build
 
 NOTE: NOTE: With Modularity, you no longer build individual packages. Instead, you need to submit a module build.
 
 Submitting module builds is done using `fedpkg` and is covered in the xref:building-modules/fedora/building-modules.adoc[Building modules] section.
 
+== Publishing the Module
 
+= Defining modules in modulemd
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 Simply put, **modulemd is a file that defines which packages get built for which releases**. It includes a summary and a description, a list of source RPM packages, build information i.e. build order and macros, and usage information i.e. installation profiles and licenses.
 
+== A typical modulemd example
 
 A typical modulemd file looks similar to the following examples. Read on for more details about each part of the modulemd file.
 
@@ -921,9 +980,11 @@ ref: latest # <- Branch name in dist-git
 rationale: Web UI for the first-package.
 ----
 
+== Common modulemd definitions
 
 These are the common parts of a modulemd file, used in the example above. Advanced definitions, including a complex example of Module Stream Expansion (MSE), are towards the end of this page.
 
+=== Document header
 
 Every modulemd starts with these three lines:
 
@@ -937,6 +998,7 @@ data:
 
 <1> All the following definitions go here, under _data_.
 
+=== Information about this module
 
 Tell users what this module represents by writing a summary and a description.
 
@@ -951,6 +1013,7 @@ it can span multiple lines.
 <1> The `>-` means new line in YAML. Useful for longer blocks of text, such as the description!
 
 
+=== License of this modulemd file
 
 This is a license of this very modulemd file and it doesn't need to be modified.
 The build system adds licenses of all packages to this list automatically.
@@ -963,6 +1026,7 @@ license:
 
 <1> A license for this modulemd file. Fedora content, such as SPEC files or patches not included upstream, uses the MIT license by default, unless the component packager declares otherwise.
 
+=== [[context]]Module context configurations
 
 Each context configuration describes how a module stream and its components should be build and run. A single-context example:
 
@@ -1016,6 +1080,7 @@ appframework: [v2]
 
 This example will produce one module build for Fedora 32 and two builds for Fedora 33. The Fedora 32 module will depend on `appframework:v1` and `frameworkext:v3`, while Fedora 33 module will support both `appframework:v1` and `appframework:v2` streams. The context `CTX3` does not depenend on `frameworkext:v3` because it was merged into `appframework:v2`.
 
+=== Installation profiles (optional, but encouraged)
 
 To help users install your module, define installation profiles. These profiles represent a specific use case of your module. Most modules have at least a default profile. But you can specify more. For example, a database module can have a server and a client profile.
 
@@ -1039,6 +1104,7 @@ rpms:
 <3> Binary packages to be installed with this profile.
 <4> List as many profiles as you need.
 
+=== Module API (optional, but encouraged)
 
 List all binary RPM packages in your module that you consider to be the main stable feature of the module. Other (unlisted) packages should be considered unsupported, or an implementation detail.
 
@@ -1053,6 +1119,7 @@ rpms:
 - package-two
 ----
 
+=== Packages in this module
 
 List all source SRPM packages this module should include, referenced them by their dist-git repo name + branch name.
 
@@ -1073,7 +1140,9 @@ ref: latest
 <3> DistGit branch, tag, or a commit — so the right version of the package gets included.
 <4> List as many packages as you need.
 
+== Advanced definitions
 
+=== References to the upstream (optional)
 
 You can also provide references to the upstream community, documentation, or to an issue tracker.
 
@@ -1088,6 +1157,7 @@ tracker: http://www.example.com/  <3>
 <2> Upstream documentation, if it exists.
 <3> Upstream bug tracker, if it exists.
 
+=== Building in a specific order (optional)
 
 Packages are built in batches. By default, all packages are part of a single group, and therefore built concurrently.
 
@@ -1112,6 +1182,7 @@ buildorder: 10  <1>
 
 For even more complex scenarios, please study the https://github.com/fedora-modularity/libmodulemd/blob/main/yaml_specs/modulemd_packager_v3.yaml[modulemd-packager specification].
 
+=== RPM macros (optional)
 
 RPM packages while being built as part of a module have the following RPM macros available:
 
@@ -1147,6 +1218,7 @@ macros: |
 This section belongs into an item of `configurations` list in case of v3 modulemd format.
 In case of v2 format it belongs directly into `data` section.
 
+=== Filtered Packages (optional, defaults to no filters)
 
 The build process of a RPM packages can result in a subpackages which complement the build of the package (docs, additional build requires etc.). One source RPM package might produce multiple binary
 RPM packages. Those subpackages are not always desired to be shipped with the Module. Modules enable you to filter out those undesirable packages with the `filter` build option. After the build is finished the filtered packages will be not included in the `artifacts` property in the result modulemd
@@ -1163,6 +1235,7 @@ rpms:
 - second-package-nope
 ----
 
+=== [[demodularized]]Demodularized packages (optional, defaults to none)
 
 If you decide to remove a binary package from your module stream, you will probably stop building it, or you will filter it out with a `filter` option.
 But that's not enough if you want to move the package back to nonmodular packages:
@@ -1185,6 +1258,7 @@ rpms:
 With this explicit mechanism, called demodularization, a package can be demoted from a module.
 If you ever revert your decision and make the package modular again, the only thing necessary is remove it from the demodularized list.
 
+=== Creating build-only components (optional)
 
 In addition to filtering subpackages, it's possible to filter out all of the artifacts produced by a component in a module.
 This is useful in cases where your module's primary packages have a build-time dependency that you do not want to ship.
@@ -1210,7 +1284,9 @@ In this example, `customdocgen` would be built first and made available in the b
 Once the module build is finished and it is composed into a DNF repository, only the unfiltered artifacts from `myapp` will be available.
 All of the `customdocgen` artifacts will be automatically added to the `data.filters.rpms` section of the module metadata.
 
+== A minimal modulemd
 
+=== An absolute minimum
 
 This module includes two source RPM packages built for the Fedora 35 releases.
 
@@ -1237,6 +1313,7 @@ rationale: Web UI for the first-package.
 ref: latest
 ----
 
+=== Including profiles and API (recommended)
 
 This module includes two source RPM packages built for the Fedora 35 releas. It makes clear which packages are considered the API, and helps users with installation thanks to the profiles.
 
@@ -1280,6 +1357,7 @@ second-package:
 rationale: Web UI for the first-package.
 ref: latest
 ----
+= Submitting module builds in Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -1299,6 +1377,7 @@ $ fedpkg module-build
 
 NOTE: Please note the module build ID. You will need it to verify the build state and to publish the module later.
 
+== Submitting module builds from a system without a web browser
 
 `fedpkg module-build` requires an authorization to MBS.
 https://fedoraproject.org/wiki/Infrastructure/Authentication[Fedora infrastructure uses OpenID Connect (OIDC)] for authorizing to web applications.
@@ -1364,6 +1443,7 @@ You can also watch the build(s) on Fedora Module build service:
 
 https://release-engineering.github.io/mbs-ui/modules
 
+== Module build results
 
 All the packages built in the module are tagged in Koji tag named as ``module-$name-$stream-$version-$context``. The link to this tag is also available in Fedora Module build service UI mentioned earlier.
 
@@ -1380,6 +1460,7 @@ Both Koji module builds contains various metadata files:
 - ``modulemd.txt`` - The expanded modulemd metadata which was used by Module Build Service to build this particular module. This for example contains the right build requirements based on the Module Stream Expansion.
 - ``modulemd.$arch.txt`` - The per-architecture modulemd metadata listing the RPMs which will end up in a compose and therefore be visible to end user. This for example respects filters or multilib modulemd options.
 
+== Rebuild strategies
 
 In case you want to control which packages get rebuilt and which get reused, you can enforce a specific rebuild strategy while submitting a build.
 
@@ -1400,6 +1481,7 @@ $ fedpkg module-build --optional rebuild_strategy=STRATEGY
 
 * `STRATEGY` — name of a specific build strategy (listed above)
 
+= Managing module defaults in Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -1412,6 +1494,7 @@ Setting or changing a default stream or a default installation profile of a modu
 3. Changes of the default stream of a module are not permitted within a released Fedora without the approval of FESCo.
 4. Introducing a new default stream not replacing any existing default stream or a traditional package is not considered a change. That means it can be done.
 
+== Setting or changing a default
 
 Submit an issue to the Fedora Engineering Steering Committee in https://pagure.io/fesco/issues[pagure.io/fesco]. This ticket must provide the following information:
 
@@ -1425,6 +1508,7 @@ When requesting a change of default stream, strongly consider https://fedoraproj
 To check the current defaults, have a look at the https://pagure.io/releng/fedora-module-defaults[fedora module defaults repository].
 
 Please note that if the module stream masks part of the Traditional RPM repos (e.g it replaces an existing RPM or it introduces a non-trivial set of conflicts) it may not be made a default stream without the express permission of FESCo. Release Engineering will be responsible for escalating any PR that is questionable on this point to FESCo for a final decision.
+= Module Obsoletes
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -1437,12 +1521,15 @@ The feature has been introduced in https://github.com/fedora-modularity/libmodul
 
 toc::[]
 
+== Module Obsoletes in the Pipeline (Quick Start)
 
 . Add obsoletes in the https://pagure.io/releng/fedora-module-defaults[module-defaults] repository.
 . Configure pungi to use the obsoletes and create a modular compose using pungi.
 . The obsoletes metadata will appear in the `modules.yaml` file of the resulting repodata.
 
+== Individual Steps
 
+=== Prepare module obsoletes metadata
 
 Follow the https://github.com/fedora-modularity/libmodulemd/blob/main/yaml_specs/[module obsoletes specification] for an up-to-date format.
 As of the time of writing this article (January 2022), there's been v1 specification available and supported in the pipeline.
@@ -1488,6 +1575,7 @@ Theses are perhaps the most common scanarios, but check the specification for ot
 - Resetting a previously EOLed/obsoleted stream.
 - Obsoleting/EOLing a specific module stream context.
 
+=== Add the metadata into `fedora-module-defaults.git` repository
 
 . Clone the repository and *add the module obsoletes metadata* into the `obsoletes/` directory.
 +
@@ -1505,6 +1593,7 @@ module obsoletes. Then the actual metadata in the `obsoletes/` directory are val
 for the module obsolete to be included in the repository. Use branch _main_ for including module
 obsoletes into Fedora Rawhide. Check fedora-module-defaults repository for all the branches.
 
+=== Configure pungi for module obsoletes and create a modular compose
 
 . Add the following snippet to pungi configuration.
 +
@@ -1527,6 +1616,7 @@ NOTE: Check https://pagure.io/pungi-fedora[pungi-fedora] for all the branches.
 TIP: Check the https://docs.pagure.org/pungi/gathering.html#modular-compose[gathering phase of a modular compose]
 and the corresponding configuration reference.
 
+=== Final repodata contain module obsoletes
 
 There are several paths how module obsoletes can appear in the compose metadata:
 
@@ -1543,11 +1633,13 @@ to handle the information regarding obsoletes and react accordingly.
 
 NOTE: If in doubt, check https://github.com/rpm-software-management/ci-dnf-stack/blob/master/dnf-behave-tests/dnf/module/obsoletes.feature
 for what's the expected behavior.
+= Inspecting module build failures in Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 Have you submitted a build which failed? This page will point you to the right places to get all the information about build failures.
 
+== Inspecting build failures
 
 Run the following command using the BUILD_ID from the previous step:
 
@@ -1558,9 +1650,11 @@ $ fedpkg module-build-info BUILD_ID
 ----
 
 which shows you "State Reason" — a short summary of the build failure regarding the whole module, as well as a list of individual packages in the module. Find the ones that failed and go to the "Koji Task" URL. There, click on the "Build" link which gets you to the module build page. On this page, inspect the `root.log`, `build.log`, and other files to get the build error.
+= Building modules in Copr
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
+== Introduction
 
 Copr ("Community projects") is a service that builds your open-source projects and creates your own
 RPM repositories. Read the https://docs.pagure.org/copr.copr/user_documentation.html[documentation]
@@ -1580,6 +1674,7 @@ yaml file, <<Modules in Copr as dependencies,depending on modules from Copr>>, a
 <<Override module packages,overriding module packages by regular ones>>.
 
 
+== Disclaimer
 
 Copr is a third-party service with its own implementation of the module build process. It does not
 rely on the https://pagure.io/fm-orchestrator[Module Build Service^] and it is not governed by xref:community.adoc[Fedora Modularity team].
@@ -1595,6 +1690,7 @@ Version 2 is not supported yet (with an exception of version 2 files that are co
 the older format).
 
 
+== Submit an existing modulemd yaml
 
 Currently, there is no web UI for submitting a module build from an existing modulemd yaml file.
 The only way is to use `copr-cli` package. Make sure it is installed.
@@ -1626,6 +1722,7 @@ copr-cli build-module --yaml /some/path/testmodule.yaml @mygroup/testmodule
 For more information, see `copr-cli build-module --help` or `man copr-cli`.
 
 
+== Generate modulemd from a Copr project
 
 This method aims to provide modularity features with the lowest entry barrier possible. It doesn't
 demand a user to know either how to write modulemd yaml file nor using the command line. The only
@@ -1641,6 +1738,7 @@ https://pagure.io/modulemd/blob/ade28f3f3b39fcddcb626ca915df1a6ce35c14fd/f/spec.
 or its https://pagure.io/modulemd/blob/ade28f3f3b39fcddcb626ca915df1a6ce35c14fd/f/spec.yaml#_90[profiles].
 
 
+== Modules with Copr packages
 
 It is trivial to achieve when generating modulemd from Copr project. This section
 describes a special case of how to add a Copr package into an existing custom modulemd yaml file.
@@ -1678,6 +1776,7 @@ repository: http://copr-dist-git.fedorainfracloud.org/git/frostyx/hello/hello.gi
 ----
 
 
+== Modules in Copr as dependencies
 
 At this moment, Copr doesn't properly parse module dependencies from modulemd yaml file. They need
 to be explicitly enabled in the project settings - more precisely chroot settings within a project.
@@ -1691,6 +1790,7 @@ section to learn how to find a repofile for a module (in this case the module th
 as a dependency). Use it's `baseurl` as the value for `Repos` field.
 
 
+== Installing modules from Copr
 
 Currently `dnf copr` plugin does not support enabling module repositories and therefore it needs to
 be done manually. Navigate to a Copr project in a web browser, see the `Modules` page, and open
@@ -1701,6 +1801,7 @@ instructions. After that, standard DNF commands for manipulation with modules ca
 See https://docs.fedoraproject.org/en-US/modularity/installing-modules/
 
 
+== Override module packages
 
 The package version resolution was straightforward in the pre-modularity era. If multiple
 repositories provided the same package, the one with the highest version was preferred.
@@ -1725,6 +1826,7 @@ copr-cli modify frostyx/foo --module-hotfixes on
 ----
 
 
+== Examples
 
 Build a module from a modulemd yaml file hosted online:
 
@@ -1744,17 +1846,20 @@ copr-cli build-module testproject2 --yaml httpd.yaml
 ----
 
 
+== External resources
 
 - http://frostyx.cz/posts/how-to-build-modules-in-copr
 - http://frostyx.cz/posts/modules-with-copr-packages
 - http://frostyx.cz/posts/copr-loves-modularity
 - http://frostyx.cz/posts/module-hotfixes-in-copr
 - http://frostyx.cz/posts/copr-modularity-in-retrospect
+= Building modules locally
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 This page walks you through building modules locally on your machine.
 
+== Prerequisites
 
 Before you can start building modules locally, you have to install the dependencies below:
 
@@ -1769,6 +1874,7 @@ $ sudo usermod -a -G mock USERNAME
 $ newgrp
 ----
 
+== Build your module from distgit
 
 Local builds are started using `fedpkg` from within your dist-git repository.
 
@@ -1791,6 +1897,7 @@ When the build finishes, you'll be able to find the results in:
 
 where MODULE is "module-NAME-STREAM-VERSION", so for example "module-testmodule-master-20180612122805".
 
+== Build your module with other SCM
 
 WARNING: This feature is experimental use it at own risk. If you can use distgit for building your packages.
 
@@ -1798,6 +1905,7 @@ Building modules from other SCM (github, gitlab etc.) is more complicated then d
 
 When all the prerequisities where installed we need to configure MBS and.
 
+=== MBS configuration
 
 We need to set a configuration option in main MBS configuration file so it will accept other SCM urls not only disgit. In the file `/etc/module-build-service/config.py` we add the `DISTGITS` property to the `BaseConfiguration` class.
 
@@ -1831,6 +1939,7 @@ DISTGITS = {"https://github.com/user/package": ("git clone {repo_path}", None)}
 
 The `\{repo_path}` will be replaced during runtime with url you provided in your modulemd yaml file when defining packages, but only for the first element of the tuple. The second element is set to `None` as it won't be downloading package sources through MBS but through rpmbuild. Although this needs to be enabled in your spec files. If you don't want to modify your spec files, then you have to define a bash command which will download your package sources.
 
+=== Spec file configuration (Optional)
 
 To enable downloading package sources through rpmbuild, you have to modify the spec file of your RPM packages. By default rpmbuild does not download your sources from `Source0`. To enable this feature you need to define the `_disable_source_fetch` property to 0 somewhere before the `Source0` directive:
 
@@ -1839,6 +1948,7 @@ To enable downloading package sources through rpmbuild, you have to modify the s
 Source0:        <url_to_your_source>
 ----
 
+=== MBS Mock configuration
 
 MBS has its own configuration file for Mock. The file can be found in `/etc/module-build-service/mock.cfg`. To be able to download package sources from the buildroot chroot environment we need to enable networking for mock. Just add this into the `/etc/module-build-service/mock.cfg`:
 
@@ -1846,6 +1956,7 @@ MBS has its own configuration file for Mock. The file can be found in `/etc/modu
 config_opts['rpmbuild_networking'] = True
 ----
 
+=== Building the module
 
 When the initial setup has been done you can build the module stream with the following command:
 
@@ -1863,6 +1974,7 @@ Where `MODULE` is "module-NAME-STREAM-VERSION", so for example "module-testmodul
 
 The `MODULE` directory holds the MBS main log. Further in the `results/` directory you will find logs for each package buildroot and the build artifacts.
 
+== Testing your module
 
 WARNING: This requires Fedora 28 or higher.
 
@@ -1884,22 +1996,27 @@ Now, when you list the available modules on your system, you should be able to s
 $ dnf module list
 $ dnf module install testmodule:master
 ----
+= Policies Regarding Modules in Fedora, Fedora ELN and EPEL
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
+== Modularity was retired from Fedora 39+ and EPEL
 
 There are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer].
 There are https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[no modules in EPEL].
 The rest of this page serves as a policy for older Fedora releases only (Fedora 37 and 38).
 
+== Requirements for All Module Streams
 * The module maintainer *MUST* have explicit commit privileges to all packages included in the module stream. The provenpackager privilege in Fedora is not sufficient.footnote:[This ensures that the package in the module is being maintained by someone responsible for it.]
 * Components built into a module *MUST* be associated with a reachable commit in Fedora dist-git.footnote:[There are legal and licensing requirements for reproducibility of builds.]
 * If a stream of a module has build-time-only components, all such components *MUST* be marked as `buildonly: True` in the module metadata to avoid shipping them to users and polluting their repository.
 
+== Requirements for Modules in Fedora
 * Modular-only packages *MUST NOT* exist in Fedora. Modular versions *MAY* exist as alternatives to non-modular packages only. There is an exception to this rule: if the package does not function in non-modular Fedora (with a reasonable amount of work), it is permitted to have it in module only.footnote:[As an example if non-modular Fedora has dnf 4, and there is module with dnf 5, a package that only works with dnf 5 can remain modular only, until dnf 5 is included in non-modular Fedora.] For the time being, such exceptions can be granted by FESCo.
 * Default streams *MUST NOT* be used in Fedora.footnote:[This rule may be revised in the future, especially if the functionality of default streams is improved.]
 * Packagers *SHOULD* prefer compatibility packages rather than modules wherever reasonable (e.g., libraries, language interpreters, …, and anything that can benefit from parallel installability).
 
+== Requirements for Default Streams in Fedora ELN
 * *Default streams are not permitted in Fedora or EPEL 8.* Fedora ELN permits defaults streams that adhere to the policy below.
 * All RPMs in default module streams are required to conform to the same https://docs.fedoraproject.org/en-US/packaging-guidelines/Conflicts/[requirements around Conflicts] as non-modular RPMs.
 * Packages provided at runtime by the default stream of a module *MUST* depend only on packages provided by packages from default module streams or the non-modular package set. By extension, default streams of a module *MUST NOT* have a dependency on any non-default stream.footnote:[It is highly recommended that default streams have no module dependencies besides the platform to avoid potential future conflicts during upgrades.]
@@ -1913,11 +2030,13 @@ The rest of this page serves as a policy for older Fedora releases only (Fedora 
 * Multiple default streams *MUST NOT* provide the same binary package names at runtime.footnote:[They *MAY* provide other well-known names in the same manner as permitted for non-modular content. For example, two different default streams *MAY* provide content to be used with the `alternatives` system or virtual `Provides` for capabilities.]
 * Default streams *MUST NOT* provide a package that overrides a package of the same name in the non-modular content except in approved cases of migration between modular and non-modular delivery.
 * Default streams *MUST NOT* use the `data.buildopts.rpm.macros` metadata section without approval by FESCo.footnote:[This feature allows for overriding the standard macros for building packages in Fedora and should be avoided entirely for default streams so they are built just like non-modular packages.]
+= Fedora Packaging Guidelines for Modules
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 These guidelines specify restrictions and guidance for xref:building-modules/fedora/defining-modules.adoc[defining modules in modulemd].
 
+== Short Overview
 
 * Packager **MUST** specify `summary`
 * Packager **MUST** specify `description`
@@ -1938,7 +2057,9 @@ These guidelines specify restrictions and guidance for xref:building-modules/fed
 * Packager **MUST NOT** specify `license/content` license(s), they are picked up from components which are built
 * Packager **MUST NOT** specify `artifacts`
 
+== Long Overview
 
+=== Document header and the data block
 
 Every modulemd file **MUST** contain a modulemd document header which consists of the document type tag and the document format version, and a data block holding the module data.
 
@@ -1951,6 +2072,7 @@ data:
 
 The version is an integer and denotes the version of the metadata format the rest of the document is written in. Packagers **SHOULD** use latest available version of specification.
 
+=== Summary and description
 
 Every module **MUST** include human-readable short summary and description. Both should be written in US English.
 
@@ -1965,6 +2087,7 @@ The summary is a one sentence concise description of the module and **SHOULD NOT
 
 The description expands on this and **SHOULD** end in a period. Description **SHOULD NOT** contain installation instructions or configuration manuals.
 
+=== Licensing
 
 Every module **MUST** contain a license block and declare a list of the module's licenses. Note these aren't the module's components' licenses.
 
@@ -1976,6 +2099,7 @@ module:
 
 Fedora content, such as SPEC files or patches not included upstream, uses the MIT license by default, unless the component packager declares otherwise. Therefore MIT might be a reasonable default for most module authors as well.
 
+=== Dependencies
 
 Modules **MAY** depend on other modules. These module relationships are listed in the dependencies block. However, none of modules are buildable without `platform` module hence packagers are required to specify it.
 
@@ -1991,6 +2115,7 @@ platform: []
 
 Note the stream name expansion is only supported by the second version of the format. Unlike in the first version, the `dependencies` block is a list of dictionaries.
 
+=== Extensible module metadata block
 
 Modules **MAY** also contain an extensible metadata block, a list of vendor-defined key-value pairs.
 
@@ -2002,6 +2127,7 @@ another-user-defined-key:
 - the second value of the list
 ----
 
+=== References
 
 Modules **MAY** define links referencing various upstream resources, such as community website, project documentation or upstream bug tracker.
 
@@ -2012,6 +2138,7 @@ documentation: http://www.example.com/docs/1.23/
 tracker: http://www.example.com/bugs/
 ----
 
+=== Profiles
 
 The module author **MAY** define lists of packages that would be installed when the module is enabled and the particular profile is selected. Whether the packages actually get installed depends on the user's configuration. It is possible to define a profile that doesn't install any packages.
 
@@ -2021,11 +2148,13 @@ If the module includes one or more profile definition, xref:building-modules/fed
 
 In the case of RPM content, the profile package lists reference binary RPM package names.
 
+=== API
 
 Module API are components, symbols, files or abstract features the module explicitly declares to be its supported interface. Everything else is considered an internal detail and shouldn't be relied on by any other module.
 
 Every module **SHOULD** define its public API.
 
+=== Filters
 
 Module filters define lists of components or other content that should not be part of the resulting, composed module deliverable. They can be used to only ship a limited subset of generated RPM packages, for instance.
 
@@ -2036,6 +2165,7 @@ rpms:
 ----
 
 Currently the only supported type of filter are binary RPM packages.
+= Modularity Naming Guidelines
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -2045,21 +2175,26 @@ Each module has a **name**, and one or more **streams** that usually represent a
 
 **Example 2:** Another one, PostgreSQL, could be named as "postgresql", its two streams could be "9.6" and "10", because that's where the upstream compatibility is, and its profiles could include "client" and "server". Both streams could be built out of two packages. One named "postgresql", having branches "9.6" and "10", which would be the main package; and another one named "python-pgsql", having a single branch "latest", which would always bind to the right version of the database during build, and would provide Python bindings.
 
+== Module name
 A module usually represents an application, a language stack, or any other logical collection of packages. Module name should represent the name of the software it ships. Using lowercase, hyphen-separated names is preferable. Some examples could include "nodejs", "golang", "golang-ecosystem", or "cri-o".
 
 A module name maps to its repository name in DistGit.
 
+== Module stream name
 
 The module stream name is assigned by creating a branch of that name in DistGit and building from it. The Module Build Service will automatically set the stream name of the resulting module to match.
 
+=== Option 1: Major version
 
 A stream usually represents a major version of the software, and should follow the versioning of the major upstream component included in the module. Consideration should be given to the upstream community’s adherence to API (or even ABI) stability on the versions of their software. In other words, some communities will maintain stability on the X branch, many the Y branch, and some even the Z branch. As a result, the branch names should reflect that stability. For example, most communities are stable on the Y branch so the branch name should be "X.Y". (e.g. mariadb:10.2) included in the module.
 
 Compatibility on non-technical factors should be also considered. For example, a package that maintains exactly the same API but has a significant visual and UX overhaul probably belongs in a new stream. Or to put it another way, human interaction is an interface too.
 
+=== Option 2: CalVer
 
 If your module is a "collection of items" with no primary piece of software (e.g. container-tools), the versioning scheme should use the CalVer (http://calver.org/) scheme with YYYY.MINOR where the YYYY is the year of the release and MINOR version is an integer starting at 0. In other words, if I released a system-tools module in November of 2017 we would expect to see 2017.0. My next release, in May of 2018, which does not break ABI/API, is also 2017.0. However, in October of 2018 we want to introduce a new stream so we name it 2018.0. The month is omitted as ideally these modules won’t be breaking API/ABI more than once a year.
 
+=== Option 3: Rolling and unstable streams
 
 For streams that don't guarantee an API/ABI stability over time and just roll forward, we suggest packagers use one of the following stream names.
 
@@ -2070,11 +2205,13 @@ We mandate a good use of the description and/or summary field to clearly state w
 
 This policy doesn't enforce changes in existing branch names, however, packagers are welcome to do so in order to bring more consistency to the distribution.
 
+=== Option 4: Upstream conventions
 
 In case there are well-established upstream conventions, using them is also a good option.
 
 Again, especially in this case, we mandate a good use of the description and/or summary field to clearly state what this particular stream represents.
 
+== Module profile name and description
 
 Profiles make installation easier by giving the user some predefined package groups that represent a common installation for a specific use case. Profiles have name and a description — using both is mandatory.
 
@@ -2082,6 +2219,7 @@ Profile name should be a one word that best represent the use case. Some example
 
 Descriptions should be a short summary describing the profile. Including it is important especially for potential translations, as profile names won't be translated.
 
+=== Unified profile names
 
 In some cases, there are many suitable alternatives for for one meaning i.e. "dev", "devel", and "development". We believe that choosing one that would be consistently used across all modules that need such profile would lead to a better user experience. The ones identified are listed below:
 
@@ -2090,9 +2228,11 @@ In some cases, there are many suitable alternatives for for one meaning i.e. "de
 * "client" only the client component of a piece of software (e.g. database client)
 * "server" only the server component of a piece of software (e.g. database server)
 
+== Package name
 
 No changes for package names with Modularity. Please refer to the official https://docs.fedoraproject.org/en-US/packaging-guidelines/Naming/[Guidelines for Naming Fedora Packages].
 
+== Package branch name
 
 Packages included in modules should be branched in a similar manner as modules. So instead of having one branch for release (such as "f27", "f28, etc.), using upstream major versions as branches is recommended. Please read the Module stream name section above for guidance.
 
@@ -2102,6 +2242,7 @@ For "rolling release" projects that don’t change their API/ABI (e.g. Python’
 
 
 
+= Frequently Asked Questions (FAQ)
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -2148,11 +2289,13 @@ Same as with containers, it helps users to get the right version for their syste
 
 
 * **Advanced**
+= Hosting modules for Fedora
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 Since modules are technically collections of RPM packages with metadata, they are hosted the same way as traditional RPM packages are — in a repository. Apart from the packages, such repository must also contain the modular metadata (modulemd) that come with the modules.
 
+== Creating a modular repository
 
 Modular repositories are created in two steps:
 
@@ -2177,6 +2320,7 @@ $ modifyrepo_c --mdtype=modules modules.yaml REPO
 
 * `modules.yaml` — YAML multidocument containing all modulemds — the final form of modulemd produced by the build system
 * `REPO` — path to the repository — the directory from the previous step
+= NSVCA vs NEVRA
 +
 +
 
@@ -2184,16 +2328,20 @@ WARNING: **The Modularity project has been retired** and there are https://fedor
 
 toc::[]
 
+== Naming and identifying modules in Fedora
 
 With the introduction of Modularity to the packager ecosystem it also introduced several challenges. First was that the NEVRA (name-epoch-version-release-architecture) package naming convention used in Fedora was insufficient. Modules are uniquely identified by the NSVCA naming convention, which stands for _name_, _stream_, _version_, _context_, and _architecture_. This page describes both the source-level ID (NSV) and the binary-level ID (NSVCA).
 
+== Source-level module ID (NSV)
 
 At the source level, modules are only identified by the first three: _name_, _stream_, and _version_. Name is defined as a name of the module’s repository in https://src.fedoraproject.org/[DistGit], stream is a name of the branch in https://src.fedoraproject.org/[DistGit], and version is the timestamp of a commit.
 
+=== Name
 
 Name of the module corresponds to the name of the application or the language stack it represents.
 An example of a name could be postgresql for a PostgreSQL database module, or nodejs for a Node.js runtime.
 
+=== Stream
 
 Streams are variants of a module with a certain promise.
 
@@ -2207,18 +2355,22 @@ Another different example could be a stream that provides the software compiled 
 
 Anyway, you get the idea. Streams are a very flexible and powerful tool. Use them wisely.
 
+=== Version
 
 Versions are just updates of a given stream. Technically, version is a number generated by the build system. Higher number always wins. This means that version does not identify a major/minor version of the software but the update/commit to a particular stream.
 
 
+== Binary-level ID (NSVCA)
 
 Building a module from one source can result in multiple different binaries. Different binaries are typically produced for different architectures (i.e. x86_64, armv7hl, etc.) and different Fedora releases (i.e. Fedora 28, Fedora 29, EPEL 7, etc.).
 
 Module binaries use the full NSVCA — so in addition to the name, stream, and version fields described above, there are two more for binaries: architecture and context.
 
+=== Architecture
 
 Fedora is built for many different architectures. The architecture field simply distinguishes architecture-specific binaries from each other. The value is typically the same as with RPM packages, i.e. x86_64, armv7hl, etc.
 
+=== Context
 
 Context is used to distinguish binaries built for different Fedora releases. Thanks to stream expansion, modules can also be built against multiple streams of other modules, i.e. different versions of a language runtime etc.
 
@@ -2226,6 +2378,7 @@ The value is generated by the build system and is usually hidden from the user a
 
 One way of representing the context could be listing the Fedora releases for which a certain module has been built.
 
+== NSVCA Definition
 
 This defines naming policy for modulemd metadata of final (built) modules.
 This policy does **NOT** apply on sources such as modulemd yaml in dist-git.
@@ -2233,6 +2386,7 @@ This policy does **NOT** apply on sources such as modulemd yaml in dist-git.
 The goal is to provide unique identifiers for modules
 that are both human readable and also suitable for machine processing.
 
+== Fields
 
 * **N** - Name
 * **S** - Stream
@@ -2242,11 +2396,13 @@ that are both human readable and also suitable for machine processing.
 * **P** - Profile
 
 
+== Separators
 
 Fields are separated with ':' (colon): N:S:V:C:A.
 
 If P is specified, it's separated from N:S:V:C:A with '/' (forward slash): N:S:V:C:A/P.
 
+=== Examples
 
 ----
 # N:S:V:C:A
@@ -2255,9 +2411,11 @@ mariadb:3.6:1:0123abcd:x86_64
 mariadb:3.6:1:0123abcd:x86_64/server
 ----
 
+== Forms
 
 A form is a sequence of fields that fully or partially identifies a module.
 
+=== Full Forms
 
 N:S:V:C:A::
 Unique identifier of a module.
@@ -2265,6 +2423,7 @@ N:S:V:C:A/P::
 Unique identifier of a module profile.
 
 
+=== Partial Forms
 
 Supported partial forms are: `N [ : S [ :V [ :C ] ] ] [ :A ] [ /P ]`
 
@@ -2294,6 +2453,7 @@ Profile::
 defaults to the system default or 'default' profile
 
 
+=== Allowed Characters
 
 
 **N** - Name::
@@ -2313,6 +2473,7 @@ All fields **MUST** start and end with an alphanumeric character:
 a-z A-Z 0-9
 
 
+=== Forbidden Characters
 
 This paragraph serves as a design decision for future changes.
 
@@ -2327,6 +2488,7 @@ Following characters **MUST NOT** be part of any field:
 * ` ` (space) - common separator
 
 * **Other**
+= References
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -2346,9 +2508,11 @@ Pagure is the default place for most of our git repositories.
 https://github.com/fedora-modularity/[Modularity on GitHub]::
 GitHub is an alternative place for some of our repositories.
 
+== Other teams and working groups
 
 https://fedoraproject.org/wiki/SELinuxModularity[Modularity and SELinux]::
 Documents related to SELinux support in Modularity
+= Modularity: History and Background
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
@@ -2363,6 +2527,7 @@ It is important to note these are goals. There are numerous places
 where the implementation of Modularity at the time of this writing is
 not yet fully adherent to them.
 
+== It’s all about the apps!
 
 Very few people install a Linux distribution for its own
 sake. Ultimately, the goal is to “scratch a particular itch” that the
@@ -2396,6 +2561,7 @@ resort to alternative means to get up and running. This may be as simple
 as bundling a dependency or as drastic as selecting an entirely
 different distribution that better fits their specific need.
 
+== A little background
 
 One of the precursors to Fedora Modularity was
 https://www.softwarecollections.org/[Software Collections] (SCLs). This
@@ -2445,6 +2611,7 @@ this requirement, it became possible to create a solution that allowed
 the different versions to be swapped in and take over the standard
 locations on the disk.
 
+== Meanwhile in Fedora
 
 Of course, it’s not just Red Hat — people in Fedora are also concerned
 with solving this Too Fast / Too Slow problem for our users. Efforts
@@ -2460,20 +2627,24 @@ Prototype Fedora Objective] and its follow-up
 link:https://fedoraproject.org/wiki/Objectives/Fedora_Modularization_%E2%80%94_The_Release[Modularity
 Release Fedora Objective].
 
+== Requirements and use cases
 
 For more information on requirements and use cases, read on to the
 xref:requirements.adoc[Modularity requirements and use cases] page.
+= Modularity: Requirements and use cases
 
 WARNING: **The Modularity project has been retired** and there are https://fedoraproject.org/wiki/Changes/RetireModularity[no modules in Fedora 39 or newer] or https://lists.fedoraproject.org/archives/list/epel-announce@lists.fedoraproject.org/thread/KA3JQUZW63A4V7OQ7ZVDFCM32EQUSOXH/[in EPEL]. This page is only retained for historical reference.
 
 If you haven't already read it, you should check out the first part of this essay on the xref:history.adoc[history and background of modularity].
 
+== Critical use cases for consumers
 
 First and foremost, our primary driving goal is to make it easy for our
 users to understand and interact with alternative software versions. In
 any instance where choosing between the packager experience and the user
 experience is in conflict, we elect to improve things for the user.
 
+=== Standard Locations
 
 In order to make deployment of users’ applications simpler, we need to
 make sure that software can be installed into the common, expected
@@ -2492,6 +2663,7 @@ socket paths.
 _Requirement_: Installation must occur in the same locations as
 traditional RPM software delivery.
 
+=== Trust your containers
 
 As Linux containers grow more popular, the number of disreputable
 images on container registries has also been rising. Delivering
@@ -2504,6 +2676,7 @@ _Requirement_: It must be possible for users to construct container
 images based on Fedora content matching the software version they need
 for their applications.
 
+=== Don’t break the app!
 
 It is very common for Fedora to update to the latest major version of
 packages at each new semiannual release. This ensures that Fedora
@@ -2528,6 +2701,7 @@ dependencies must continue to receive updates.
 _Requirement_: There must be appropriate and helpful UX for dealing with
 when those dependencies go EOL.
 
+=== Support the developers
 
 Developers often want to build their applications using the
 latest-and-greatest version of their dependencies. However, that may not
@@ -2547,6 +2721,7 @@ verified and validated for security.
 _Requirement_: Provide a mechanism for building *trusted* container base
 and application images with content alternatives.
 
+=== Keep it updated
 
 It’s not enough that other versions of software are available to
 install. They also need to be kept up to date with bug fixes and
@@ -2557,6 +2732,7 @@ it.
 _Requirement_: Alternative software must receive be able to recieve and
 apply updates.
 
+=== Make it discoverable
 
 Having alternative versions available is important but not sufficient.
 It is also necessary for users to be able to locate these alternatives.
@@ -2569,6 +2745,7 @@ versions are available with tools that are shipped with the OS by
 default. Ideally, these should be the same tools that they are already
 comfortable with.
 
+=== Don’t break existing package management workflows
 
 Users are slow to adapt to changes in the way they need to behave.
 Requiring them to learn a new set of commands to interact with their
@@ -2583,7 +2760,9 @@ not break the previous workflow.
 _Requirement_: Existing automation tools such as anaconda’s kickstart
 and Ansible must continue to work.
 
+== Critical use-cases for packagers
 
+=== Dependencies
 
 Because very little software today is wholly self-contained, it must be
 possible for Modules to depend on each other.
@@ -2592,6 +2771,7 @@ _Requirement_: There must be a mechanism for packagers to explicitly
 list dependencies on other software, including alternative versions.
 This mechanism must support both build-time and run-time dependencies.
 
+=== Alternative dependencies
 
 Some software is very restrictive about which dependencies it can work
 with. Other software may work with several different major releases of a
@@ -2619,6 +2799,7 @@ small set.
 _Requirement_: Packaging guidelines need to provide advice on when to
 use multiple alternative dependencies or to select a single one.
 
+=== Managing private dependencies
 
 When a person decides that they want Fedora to carry a particular
 package and decides to do the work to accomplish this, it is not
@@ -2630,6 +2811,7 @@ other purposes. This can sometimes be a significant investment in time
 and energy, all to support a package they don’t necessarily care about
 except for how it supports the primary package.
 
+==== Build-time Dependencies
 
 Sometimes, a package is needed only to build the software and is not
 required at run-time. In such cases, Modularity should offer the ability
@@ -2644,6 +2826,7 @@ _Requirement_: All sources used for generating alternative versions,
 regardless of final visibility, must be available to the community for
 purposes of modification and reproducibility.
 
+==== Defining the public API
 
 Similarly, there are times when an application the packager cares about
 depends on another package that is required at runtime, but sufficiently
@@ -2663,6 +2846,7 @@ effectively private to the alternative version. Packagers must also have
 a way of finding this information out so they understand what they can
 and cannot rely on as a dependency.
 
+=== Use-case-based installation
 
 Since the earliest days of Linux, the “package” has been the fundamental
 unit of installable software. If you want to have some functionality on
@@ -2681,6 +2865,7 @@ _Recommendation_: Installation groups should be named based on the
 use-case they are intended to solve. This will provide a better user
 experience.
 
+=== Lifecycle isolation
 
 Another of the major issues faced by Fedora is maintaining a release
 schedule when all of the components within it follow vastly differing
@@ -2711,6 +2896,7 @@ through at least part of the next Fedora release, it must be possible to
 upgrade from one release to the next and remain with the
 fully-compatible version.
 
+=== Third-party additions
 
 Some third-party add-on repositories (particularly EPEL) have been
 limited in the past by relying on the system copies of packages in the
@@ -2728,6 +2914,7 @@ _Requirement_: It must be possible for third party repositories to
 create alternative versions of software that exist in the base
 distribution.
 
+=== Reduce duplication in packaging work
 
 There is plenty of software out in the wild that maintains compatibility
 over time and is therefore useful to carry in multiple releases of
@@ -2746,7 +2933,9 @@ in parallel).
 _Requirement_: It must be possible to be build for all supported
 platforms using the same specification and with a single build command.
 
+== Non-Goals
 
+=== Parallel installability
 
 As mentioned in the Background section, the goals of Modularity are
 specifically to *not* implement parallel-installability. We recommend
@@ -2755,6 +2944,7 @@ virtualization or containerization to accomplish this. If
 parallel-installation is unavoidable, then Modularity is not the correct
 tool for this job.
 
+=== Arbitrary stream switching
 
 Module streams are intended to be compatible update streams. That means
 they must follow the same rules regarding RPM package-level updates

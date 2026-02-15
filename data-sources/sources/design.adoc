@@ -1,5 +1,7 @@
 
+= How do I get involved?
 
+== Getting Started
 
 1. Join the Element Fedora Design https://matrix.to/#/#design:fedoraproject.org[group chat].
 2. Introduce yourself to the group; talk about your art/design experience and interests so we'll know what kinds of design tasks you might be interested in helping out with.
@@ -15,11 +17,13 @@ Note: We definitely recommend for folks starting out with our team to look for t
 
 After you have completed these steps, you can begin contributing to a project as a full member of the design team. Questions and suggestions may be asked within the ticket as well as the Fedora Design group chat on Element.
 
+== Join our meetings!
 
 Video meetings will be held every *Monday at 14:30 UTC* on https://meet.jit.si/FedoraDesign[*Jitsi*]. Please note that audio and video is not required to join the meeting - you can always use the chat for input if that is more comfortable for you.
 
 Check the https://calendar.fedoraproject.org/design[Design Calendar] for updated meeting times. Meeting logs can be found at https://meetbot.fedoraproject.org/[meetbot.fedoraproject.org].
 
+== Chat with us!
 
 Design team members are present on the https://matrix.to/#/#design:fedoraproject.org[*#design:fedoraproject.org* Matrix room] on https://chat.fedoraproject.org/[chat.fedoraproject.org].
 Feel free to reach us here!
@@ -27,17 +31,21 @@ Feel free to reach us here!
 
 
 
+= Resources
 
 Dedicated page to help you find assets, tutorials, and recommended software to support your work and contributions.
 
+== Assets
 
 * https://docs.fedoraproject.org/en-US/project/brand/#_the_fedora_logo[*Fedora Logo*] - Fedora logo information, including usage guidelines
 * https://docs.fedoraproject.org/en-US/project/_attachments/brand-book-revised-2024.pdf[*Fedora Brand Book*] - Brand guidelines booklet in PDF format
 * https://gitlab.com/fedora/design/team/event-kit/[*Event Kit*] - Design assets related to Fedora events (banners, tablecloth, etc.)
 * https://gitlab.com/fedora/design/team/event-kit/-/tree/main/Stickers[*Stickers*] - Print ready sticker files
 
+== Tutorials
 * https://gitlab.com/fedora/design/team/tutorials/inkscape-automation[*Inkscape Automation*] - Tutorial for how to use Inkscape to automate the production of SVG, PNG, EPS, PS, or PDF graphics using a template file and CSV data input.
 
+== Open-Source Design Software
 
 * https://penpot.app/[*Penpot*] - web-based design and prototyping platform.
 
@@ -56,12 +64,15 @@ Dedicated page to help you find assets, tutorials, and recommended software to s
 * https://kdenlive.org/en/[*Kdenlive*] - video editor
 ** https://opensource.com/sites/default/files/gated-content/osdc_cheatsheet-kdenlive-2021.12.3.pdf[Kdenlive cheat sheet]
 
+= Need Design Help?
 
+== Filing an issue
 You can file an https://gitlab.com/fedora/design/team/requests/-/issues/[issue] to:
 
 * Request new design work
 * Tell us if something's wrong with an existing design
 * Make a suggestion for a future design
 
+== Now what?
 
 Because this is mainly a volunteer-staffed team, we don't guarantee to handle all tickets. If you think a ticket needs attention and would like to work on it, but someone else took ownership of the ticket: try to contact the owner and see if they are working on it. If you don't hear from them within a week you can probably take the ticket over. If you have a filed a ticket and have not heard from anyone, please feel free to https://matrix.to/#/#design:fedoraproject.org[join our chat] for attention / guidance / support.

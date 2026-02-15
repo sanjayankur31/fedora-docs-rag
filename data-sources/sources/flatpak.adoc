@@ -1,6 +1,8 @@
 
 
+= Installation
 
+== Setup on Fedora Linux
 
 Just install the `flatpak` package, if not already installed:
 
@@ -17,6 +19,7 @@ $ flatpak remote-modify --enable fedora-testing
 ....
 ========
 
+== Setup on Other Systems
 
 First, install the `flatpak` package through your system's native package manager.
 
@@ -28,6 +31,7 @@ Optionally, add the Fedora testing flatpak remote:
 
 $ flatpak remote-add --title "Fedora Flatpaks (testing)" fedora-testing oci+https://registry.fedoraproject.org#testing
 
+== Usage
 
 If installation succeeded, you can now install runtimes, SDKs, or applications:
 
@@ -35,7 +39,9 @@ $ flatpak install fedora APP_ID
 
 Graphical package managers (such as GNOME Software or KDE Plasma Discover) also allow for installation of applications by selecting the "Fedora Flatpaks" software source.
 
+= Flatpak Concepts
 
+== Application ID
 Every application needs a unique application ID, based on a reversed domain name. For example `org.gnome.Maps`.
 All resources exported by the application must be prefixed by this identifier. This includes the
 https://standards.freedesktop.org/desktop-entry-spec/latest/[desktop file], the appdata file for the
@@ -43,14 +49,17 @@ application, and any icons referenced by the desktop file.
 
 See xref:in-depth.adoc#_picking_an_application_id[Picking an application ID].
 
+== Appdata
 The appdata file for a Flatpak is used for displaying information about the application prior to
 installation. See https://fedoraproject.org/wiki/Packaging:AppData[Fedora Packaging Guidelines for AppData Files].
 
+== Runtimes and bundled libraries
 When a Flatpak is executed, the files that the application see come from two places:
 
 * The Flatpak _runtime_, mounted at `/usr`. This contains libraries and data files shared by all Fedora Flatpaks. There are runtimes for each Fedora release.
 * The Flatpak _application_, mounted at `/app`. This contains the application code itself, but also contains any libraries that are bundled with the application. The application and libraries must be rebuilt with this prefix - this is done by rebuilding them for flatpaks.
 
+== RPM builds
 Packaging flatpaks in Fedora makes use of RPM builds. The application and bundled libraries are rebuilt in Fedora's build system (Koji) with a special build target - this gives a couple of advantages:
 
 * The same RPM spec file used to create the regular RPM build is also used to create the Flatpak RPM build.
@@ -58,14 +67,17 @@ Packaging flatpaks in Fedora makes use of RPM builds. The application and bundle
 
 Note that Flatpak RPM builds will not work outside the Flatpak context, since they are rebuilt with a prefix of `/app` with the same name as system libraries - you cannot use `dnf install` to install them.
 
+== OCI Images
 For Fedora, Flatpak runtimes and applications are built as https://github.com/opencontainers/image-spec/blob/master/spec.md[OCI Images] and distributed via https://registry.fedoraproject.org. This allows Flatpaks to be handled in a very similar way to server side containers. (Flatpaks are also commonly distributed via https://ostree.readthedocs.io/en/latest/[ostree].)
 
 
+= Packaging Tutorial
 
 Creating a Flatpak of an application that is already packaged in Fedora involves two steps. First you need to rebuild the application RPMs along with any dependencies which are not included in the runtime. Then you need to create a container out of the application. In the Fedora context, flatpaks are just another form of container, and are handled very similar to the Docker containers used for server applications.
 
 Just as for packages, the instructions for building flatpak RPMs and containers are stored in git on https://src.fedoraproject.org and builds are coordinated by https://koji.fedoraproject.org. The flatpak for a an application can be found on https://src.fedoraproject.org in the repository `flatpaks/<application>`; this git repository contains a `container.yaml` file, which defines how the package is turned into a Flatpak container.
 
+== Setup
 
 Install the necessary tools:
 
@@ -97,6 +109,7 @@ $ flatpak install fedora-testing org.fedoraproject.Platform/x86_64/f{MAJOROSVER}
 ....
 ========
 
+== Creating `container.yaml`
 $ mkdir lagrange && cd lagrange
 $ flatpak-module init --flathub=lagrange lagrange
 
@@ -140,11 +153,13 @@ xref:in-depth.adoc#_picking_an_application_id[pick an application ID] and
 xref:in-depth.adoc#_container_yaml[edit `container.yaml`].
 
 
+== Doing a local build
 $ flatpak-module build-rpms-local --auto
 $ flatpak-module build-container-local --install
 
 If building the RPMs succeeds but building the container fails, and you need to change `container.yaml` and try again, you can repeat just the last step.
 
+== Testing
 
 If installation succeeded, you can now do:
 
@@ -152,10 +167,12 @@ $ flatpak run fi.skyjake.Lagrange
 
 To try it out.
 
+== src.fedoraproject.org request
 Please request a new Git repository as follows:
 
 $ fedpkg request-repo --namespace=flatpaks <application>
 
+== Importing your flatpak content
 Once the repository has been created:
 
 $ mv <application> <application>.old
@@ -166,6 +183,7 @@ $ git add container.yaml
 $ git commit -m "Initial import"
 $ git push origin stable
 
+== Building in Koji
 
 First build the packages:
 
@@ -175,15 +193,19 @@ If that completes successfully, you can then do:
 
 $ flatpak-module build-container
 
+== Testing the build
 To install the latest successful build from Koji, run:
 
 $ flatpak-module install --koji <application>-flatpak
 
+== Creating an update
 Find the NVR of your Flatpak build - if you don’t have it in your terminal scrollback go to https://koji.fedoraproject.org/ and search in "Packages" for the `<application>-flatpak` name.
 
 Go to https://bodhi.fedoraproject.org/updates/new and enter the flatpak NVR under Candidate Builds (ignore “Packages”). Enter text under “Update notes” like “Initial Flatpak of <application>”, and hit <Submit>.
 
+= Packaging In Depth
 
+== Is your application suitable?
 
 Most graphical applications can be made into a Flatpak without modification, though creating a sandboxed Flatpak that prevents the application from doing arbitrary things to the user’s account is more likely to require code changes.
 
@@ -192,6 +214,7 @@ Some things that could make an application not work well as a Flatpak:
 * If it installs system services or changes system configuration files
 * If it needs access to binaries or other files in `/usr` that can’t be bundled with the application
 
+== Picking an application ID
 To select an appropriate an xref:concepts.adoc#application_id[application ID]:
 
 * If the application already has a desktop file of this form, that is the application ID.
@@ -201,6 +224,7 @@ To select an appropriate an xref:concepts.adoc#application_id[application ID]:
 
 Applications can only export resources under their application ID, so the desktop file and icon for the application need the appropriate name. The best place to implement this is upstream. The second best place is in the Fedora application package. But if this isn’t possible, you can do this in your container.yaml. See the <<Renames>> section below.
 
+== Versioning
 Flatpaks in Fedora are different from packages in that there isn’t a separate application version for F{PREVIOUSOSVER}, F{MAJOROSVER}, rawhide, etc. Instead there is a single version that is the latest stable version for all versions of Fedora.
 
 A flatpak targets a particular runtime. Your stable version should ideally target the runtime corresponding to the latest released version of Fedora. If the application cannot yet be built for the latest released version of Fedora, then it’s acceptable to temporarily use the previous version of the Fedora runtime, but this should be an unusual case.
@@ -212,7 +236,9 @@ In general, previous versions of the runtime are supported only as long as Fedor
 
 The container version for your stable release should be in the stable branch of your git repository.
 
+== container.yaml
 
+=== finish-args
 The flatpak/finish-args: section of your container.yaml determines what permissions the application will have.
 
 .Non-sandboxed application, application requires X, and accesses the network
@@ -252,6 +278,7 @@ finish-args: |-
 
 See https://docs.flatpak.org/en/latest/sandbox-permissions.html[Sandbox Permissions] documentation and the https://docs.flatpak.org/en/latest/flatpak-command-reference.html#flatpak-build[flatpak-build(1)] manual page.
 
+=== Renames
 Many existing applications in Fedora do not have an application in standard form. You can add keys to your
 container.yaml to rename exported resources to match the application ID.
 
@@ -267,6 +294,7 @@ The preferred way, however, is to fix the application ID in the RPM packaging, o
 The reason this is better is that the system can understand the relationship between the two applications,
 and won't show duplicate entries in GNOME Software or the installed application list.
 
+=== Other keys
 The complete list of supported keys from the Flatpak builder manifest file that you can add to the `flatpak:` section of `container.yaml` is:
 
 * `add-extensions`
@@ -284,6 +312,7 @@ The complete list of supported keys from the Flatpak builder manifest file that 
 * `rename-mime-icons`
 
 See the https://docs.flatpak.org/en/latest/flatpak-builder-command-reference.html#flatpak-manifest[flatpak-manifest(5)] manual page for documentation.
+= Packaging Runtimes
 
 As we've seen, each Flatpak targets a particular runtime, which provides
 shared binaries, libraries, and data files, and is mounted at `/usr` when the
@@ -338,8 +367,11 @@ for flatpak-runtime and flatpak-sdk, or the
 https://src.fedoraproject.org/flatpaks/flatpak-kde6-runtime/[README.md]
 for the KDE runtime and SDK.
 
+= Troubleshooting
 
+== Package build problems
 
+=== Rebuilding a flatpak against a local component
 If you find a build problem with a package in your flatpak, you'll want to build
 the flatpak using a local git checkout for the package, so you can put fixes in there:
 
@@ -350,6 +382,7 @@ the flatpak using a local git checkout for the package, so you can put fixes in 
 * As needed, build any further packages with `flatpak-module build-rpms-local --auto`
 * Once successful, install locally with `flatpak-module build-container-local --install`
 
+=== Quickly debugging prefix=/app builds
 If you hit a problem where a package fails to build with `prefix=/app` and you need to debug in detail,
 
 * Build locally with `flatpak-module build-rpms-local --auto` (or specify the failing package by SRPM name)
@@ -369,6 +402,7 @@ chroot: /var/lib/mock/flatpak-module-f{MAJOROSVER}-x86_64-0/root/
 Enter chroot: mock -r x86_64/work/rpms/mock.cfg --uniqueext 0 --shell
 ----
 
+=== Files outside of `/app`
 
 The most common reason for a packaging failing to build is that some file in the
 package is installed with a hard-coded path of `/usr` rather than respecting the
@@ -376,7 +410,9 @@ macros such as `+%{_prefix}+`, `+%{_libdir}+`, etc. This might require adjustmen
 of the spec file, passing additional variables into the make command, or in rare
 cases, patching the Makefiles.
 
+== Container build problems
 
+=== Package installation failures
 During installation of packages to build a Flatpak container, the set of packages is
 restricted to packages in the runtime and packages rebuilt for flatpaks. Other packages
 in Fedora will be ignored. If you see a message about missing dependencies that

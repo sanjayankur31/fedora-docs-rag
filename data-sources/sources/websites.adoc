@@ -1,12 +1,16 @@
 
+= Fedora Websites & Apps Engineering Team
 
 Welcome to the official documentation for the Fedora Websites & Apps Engineering Team.
 
+== Points of contact
 - https://fedoraproject.org/wiki/User:darknao[Francois Andrieu]
 - https://fedoraproject.org/wiki/User:thunderbirdtr[Onuralp Sezer]
 
+== Purpose
 The team takes care maintenance and development of websites and applications while constantly keeping up with UI/UX reviews, mentoring contributors and organizing meetings.
 
+== Function
 1. Multiple contributors from Design team, Fedora Infra, Red Hat's Open Source Program Office and Community Platform Engineering team etc. have been participating in discussions over at the chatroom.
 2. Websites have been maintained in their current state and operations on translations/content/verification are continually performed while keeping up with the relevant release cycle of Fedora Linux.
 3. Contributor onboarding and retention, active communication with the outer community on Discussion fp.o. regarding planning topics and retrospective feedback on tasks have been actively performed.
@@ -14,21 +18,26 @@ The team takes care maintenance and development of websites and applications whi
 5. Members, Michael Scherer and Onuralp Sezer have been instrumental in mentoring an intern, Ojong Enow to assist with maintaining a certain set of websites and rebooting the websites/apps index.
 6. With active representation in the events like Nest With Fedora and Fedora Linux Release Parties, the team had been reaching out to garner more feedback on the work done so far and acquire contributors for assistance.
 
+= Meetings
 
 The team members collaborate periodically over synchronous and asynchronous meetings.
 
 [[video-conference]]
+== Video conference meetings
 
 The Websites & Apps Engineering Team meets weekly as long as there are at least four active participants available. Should that not be the case - updates, plans and blockers are conveyed asynchronously in the Fedora Chat channel by the members.
 
 [[conference-details]]
+== Details
 * Location - link:{COMMS-VIDEO}[*{COMMS-VIDEO-NAME} room*]
 * Day - *{MEETING-DAY}s*
 * Time - *{MEETING-TIME}*
 
 [[agenda]]
+== Agenda
 A video conference meeting is a fleeting affair and hence, it is important to use every moment of the meeting wisely to discuss important topics.
 
+=== Flow of discussion
 * [_5m_] Roll call / greetings / welcomes
 * [_5m_] Any announcements to share with group?
 * [_5m_] Follow-ups on past actions, if any
@@ -41,6 +50,7 @@ A video conference meeting is a fleeting affair and hence, it is important to us
 * Pick a chair for next time!
 * [_5m before end_] Wrap-up and open floor discussion
 
+=== Example
 The following is a Markdown-styled example agenda to extend from.
 [source]
 ----
@@ -60,6 +70,7 @@ The following is a Markdown-styled example agenda to extend from.
 - ADD ITEMS HERE
 ----
 
+== How to chair team meetings?
 Anyone can be a chair for the Websites and Apps Engineering Team, and we encourage everyone to try chairing our weekly team meetings at least once to get an experience. The team is supportive of newcomers and experienced folks alike who are trying to chair a meeting for the first time so one needs not worry about anything going wrong midway.
 
 The chair should
@@ -81,6 +92,7 @@ The chair should
 * Use an accessible and simple vocabulary to convey their statements for maximum participation, and wait enough after each point for attendees to reflect
 
 [[guidelines]]
+== Participation guidelines
 * Please focus on listening, and on appreciating what others are trying to say, not only on what you are hearing.
 * Wherever possible, please refrain from multitasking on email or social media and strive to remain fully present and tuned in to what others are saying and feeling.
 * Please assume best intent in everyone's comments and strive to keep a constructive tone in your own.
@@ -90,125 +102,159 @@ The chair should
 * Help us be mindful of the schedule and stay on time; we anticipate many people will have much they want to say, but please support us in moving the dialog forward.
 
 [[self-aware]]
+== Please be a self-aware participant!
 * Please indicate you want to speak by raising your hand on video or with the button in Jitsi Meet; if you are not able to use or raise your hand, feel free to speak up but please try not to interrupt others.
 * Please stay muted when you are not speaking.
 * Please be mindful of background noise and join the call from a quiet location. Construction sites, windy gardens and non-quarantined internet cafes do not qualify as quiet locations.
 * All parents and caregivers shall enjoy an irrevocable "background/foreground kid and dependent noise" exception at all times, but muting etiquette still applies.
 
+= Per-project Tech Stack for Websites
 
 This document elaborates upon the tech stacks that we use to develop and maintain the websites under our remit.
 
 [[infographic]]
+== Infographic
 image:websites.png[]
 
 [[remit]]
+== Our remit
 
 Following is a list of websites that we help develop and maintain.
 
 [[get]]
+=== GetFedora
 * Hosted at https://getfedora.org/
 * Maintained at https://pagure.io/fedora-web/websites/
 
 [[spins]]
+=== Fedora Spins
 * Hosted at https://spins.fedoraproject.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/spins.fedoraproject.org
 
 [[labs]]
+=== Fedora Labs
 * Hosted at https://labs.fedoraproject.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/spins.fedoraproject.org
 
 [[arm]]
+=== Fedora ARM
 * Hosted at https://arm.fedoraproject.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/arm.fedoraproject.org
 
 [[alt]]
+=== Fedora Alternative Downloads
 * Hosted at https://alt.fedoraproject.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/alt.fedoraproject.org
 
 [[community]]
+=== Fedora Community
 * Hosted at https://fedoracommunity.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/fedoracommunity.org/
 
 [[start]]
+=== Fedora Start
 * Hosted at https://start.fedoraproject.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/start.fedoraproject.org
 
 [[flock]]
+=== Flock to Fedora
 * Hosted at https://flocktofedora.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/flocktofedora.org
 
 [[docs]]
+=== Fedora Docs
 * Hosted at https://docs.fedoraproject.org/en-US/docs/
 * Maintained at https://docs.fedoraproject.org/en-US/docs/
 
 [[tools]]
+== Our tools
 
 Following is a list of tools that we make use of.
 
 [[genshi]]
+=== Genshi
 Genshi is a template engine for XML-based vocabularies written in Python. Genshi is used to easily insert generated output into XML-based languages, usually HTML, and reuse elements between documents. Genshi's syntax is based on Kid, but its architecture is different.
 
 [[lxml]]
+=== LXML
 The lxml XML toolkit is a Pythonic binding for the C libraries libxml2 and libxslt. It is unique in that it combines the speed and XML feature completeness of these libraries with the simplicity of a native Python API, mostly compatible but superior to the well-known ElementTree API.
 
 [[jinja]]
+=== Jinja
 Jinja is a web template engine for the Python programming language. It was created by Armin Ronacher and is licensed under a BSD License. Jinja is similar to the Django template engine but provides Python-like expressions while ensuring that the templates are evaluated in a sandbox.
 
 [[frozen]]
+=== Frozen Flask
 Frozen-Flask freezes a Flask application into a set of static files. The result can be hosted without any server-side software other than a traditional web server. Frozen-Flask is only about deployment: you can use Frozen-Flask to only have static HTML files on your server.
 
 [[rss]]
+=== Python RSS
 RSS (Rich Site Summary) is a format for delivering regularly changing web content. Many news-related sites, weblogs and other online publishers syndicate their content as an RSS Feed to whoever wants it. Feedparser and similar libraries are made use of while using Python 3.
 
 [[flask]]
+=== Flask
 Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.
 
 [[scss]]
+=== SCSS/CSS
 SCSS stands for the Sassy Cascading Style Sheets. The more advanced variant of CSS is SCSS. It was created by Chris Eppstein and Natalie Weizenbaum and designed by Hampton Catlin. It is also referred to as Sassy CSS due to its advanced features.
 
 [[python]]
+=== Python 3
 Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.
 
 [[antora]]
+=== Antora
 Antora is a modular, multi-repository site generator designed for creating documentation sites from content composed in AsciiDoc® and processed with Asciidoctor. Antora’s toolchain and workflow help documentation and engineering teams manage documentation sites.
 
 [[asciidoctor]]
+=== AsciiDoctor
 Asciidoctor is a fast, open source, Ruby-based text processor for parsing AsciiDoc® into a document model and converting it to output formats such as HTML 5, DocBook 5, manual pages, PDF, EPUB 3, and other formats. Docs of the said format are fed into Antora for being parsed.
 
 [[make]]
+=== Make
 In software development, Make is a build automation tool that automatically builds executable programs and libraries from source code by reading files called Makefiles which specify how to derive the target program. It remains widely used amidst the more prevalent IDE build features.
 
 [[podman]]
+=== Podman
 Podman is an open-source project that is available on most Linux platforms and resides on GitHub. Podman is a daemonless container engine for developing, managing, and running Open Container Initiative (OCI) containers and container images on your Linux System.
 
 [[ansible]]
+=== Ansible
 Ansible is an open-source software provisioning, configuration management, and application-deployment tool enabling infrastructure as code. It runs on many Unix-like systems, and can configure both Unix-like systems as well as Microsoft Windows.
 
 [[html]]
+=== HTML
 The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript for enhancing the design or adding interactivity.
 
 [[javascript]]
+=== JavaScript
 JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.
 
+= Per-project Tech Stack for Apps
 
 This document elaborates upon the tech stacks that we use to develop and maintain the applications under our remit.
 
 [[infographic]]
+== Infographic
 image:applications-A.png[]
 image:applications-B.png[]
 
 [[remit]]
+== Our remit and tools
 
 Following is a list of applications that we help develop and maintain.
 
 '''
 
+=== Badges
 * Hosted at https://badges.fedoraproject.org/
 * Maintained at
 - https://github.com/fedora-infra/fedbadges
 - https://github.com/fedora-infra/tahrir
 - https://github.com/fedora-infra/tahrir-api
 
+==== Requires
 - Pyramid
 - Tahrir API
 - Requests
@@ -216,18 +262,22 @@ Following is a list of applications that we help develop and maintain.
 
 '''
 
+=== AskNot-NG
 * Hosted at http://whatcanidoforfedora.org/
 * Maintained at https://github.com/fedora-infra/asknot-ng
 
+==== Requires
 - JavaScript
 - Mako
 - PyYAML
 
 '''
 
+=== Elections
 * Hosted at https://elections.fedoraproject.org/
 * Maintained at https://github.com/fedora-infra/elections
 
+==== Requires
 - Flask
 - Fedora Messaging
 - Python Fedora
@@ -235,9 +285,11 @@ Following is a list of applications that we help develop and maintain.
 
 '''
 
+=== Nuancier
 * Hosted at https://apps.fedoraproject.org/nuancier/
 * Maintained at https://github.com/fedora-infra/nuancier
 
+==== Requires
 - Flask
 - JavaScript
 - SQLAlchemy
@@ -245,9 +297,11 @@ Following is a list of applications that we help develop and maintain.
 
 '''
 
+=== Fedocal
 * Hosted at https://calendar.fedoraproject.org/
 * Maintained at https://github.com/fedora-infra/fedocal
 
+==== Requires
 - Flask
 - Fedora Messaging
 - SQLAlchemy
@@ -255,25 +309,31 @@ Following is a list of applications that we help develop and maintain.
 
 '''
 
+=== Mote
 * Hosted at https://meetbot.fedoraproject.org/
 * Maintained at https://github.com/fedora-infra/mote
 
+==== Requires
 - Flask
 - Fedora Messaging
 - Bootstrap 5
 
 '''
 
+=== Commblog
 * Hosted at https://communityblog.fedoraproject.org/
 
+==== Requires
 - Wordpress
 - PHP
 
 '''
 
+=== Easyfix
 * Hosted at https://fedoraproject.org/easyfix/
 * Maintained at https://pagure.io/fedora-gather-easyfix
 
+==== Requires
 - Jinja
 - Urllib3
 - Bugzilla
@@ -281,21 +341,27 @@ Following is a list of applications that we help develop and maintain.
 
 '''
 
+=== Magazine
 * Hosted at https://fedoramagazine.org/
 
+==== Requires
 - Wordpress
 - PHP
 
 '''
 
+=== Ambassador
 * Hosted at https://fedoracommunity.org/
 * Maintained at https://pagure.io/fedora-websites/blob/main/f/fedoracommunity.org
 
+==== Requires
 - TBD
 
 '''
 
+= How to add the Fedora Annual Survey Banner
 
+== Add into start.fedoraproject.org
 
 * https://pagure.io/fedora-websites[fedora-websites] repo, https://start.fedoraproject.org[*Start Fedora Project*]:
 * data/templates/docs-header.html
@@ -306,13 +372,16 @@ Following is a list of applications that we help develop and maintain.
 * NOTE: for future modifications, check how the text renders when the browser window is smaller or on mobile.
 * could be partially fixed by clamping font sizes
 
+== How to remove the Fedora Annual Survey Banner
 
+=== Removing From start.fedoraproject.org
 
 * In https://pagure.io/fedora-websites[fedora-websites] repo, go to https://start.fedoraproject.org[*Start Fedora Project*]:
 * edit data/templates/docs-header.html
 * remove div and containing elements for the survey
 * make sure to change the class to `<div class="col-xs-12 col-sm-4 bluebox border">`
 
+=== Second method
 
 NOTE: MIGHT NOT WORK, CURRENTLY TESTING THIS WITH NEST BANNER
 
@@ -322,7 +391,9 @@ NOTE: MIGHT NOT WORK, CURRENTLY TESTING THIS WITH NEST BANNER
 
 
 
+= Websites Release (Legacy)
 
+== Preparing the website for a new release cycle
 
 * Obsolete GPG key
 +
@@ -398,6 +469,7 @@ NOTE: The tool will give you an outdated output, adapt it to the new
 websites and bootstrap layout!
 ====
 
+=== Update website for Alpha release
 
 * Create the fXX-alpha branch from master
 +
@@ -465,6 +537,7 @@ $ git push --tags
 ....
 ** If needed follow link:#fire-in-the-hole[Fire in the Hole]
 
+=== Update website for Beta release
 
 * Create the fXX-alpha branch from master
 +
@@ -530,6 +603,7 @@ $ git push --tags
 ....
 ** If needed follow link:#fire-in-the-hole[Fire in the Hole]
 
+=== Update website for GA
 
 * Create the fXX branch from master
 +
@@ -601,6 +675,7 @@ $ git push --tags
 ....
 ** If needed follow link:#fire-in-the-hole[Fire in the Hole]
 
+=== Fire in the hole
 
 We now use ansible for everything, and normally use a regular build to
 make the websites live. If something is not happening as expected, you
@@ -615,6 +690,7 @@ now our staging websites are on sundries01.stg and the production on
 sundries01. Change your scripts accordingly and as sysadmin-web you
 should have access to those servers as before.
 
+=== Tips
 
 * Merging branches
 +
@@ -629,7 +705,9 @@ $ git checkout --theirs f23-beta [list of conflicting po files]
 $ git commit
 ....
 
+= Fedora Release (Modern)
 
+== Introduction
 
 [NOTE]
 ====
@@ -646,6 +724,7 @@ Make sure your changes are made on the `develop` branch.
 Staging & prod environment can then be updated with standard Merge Request.
 ====
 
+== Releases information
 
 First, you need to edit the link:https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0/-/blob/develop/content/release.yml[release.yml] file either directly from git, or using the link:https://fedora.gitlab.io/websites-apps/fedora-websites/fedora-websites-3.0/admin/#/collections/release/entries/releaseData[CMS] (recommended).
 If you are updating for a *beta* release, then make sure to flip the "Display Beta Download" toggle in the CMS, or set the `beta.enabled` flag in the `release.yml` file to `true`.
@@ -658,6 +737,7 @@ necessary.
 
 For GA release, you'll need to update the Release Date and the Fedora Magazine announcement post as well.
 
+== Cloud AMI list
 
 You'll need to update the Fedora Cloud AMI list using link:https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0/-/blob/develop/.build/fetch_amis.py[the `fetch_amis.py` script]:
 
@@ -669,6 +749,7 @@ You'll need to update the Fedora Cloud AMI list using link:https://gitlab.com/fe
 The AMI list will be updated in `/content/editions/cloud/ami_list.yml` by using the information from the `release.yml` file edited in the previous step.
 Add that file to your commit.
 
+== Fedora Media Writer
 
 The next step is to produce the `releases.json` static file used by Fedora Media Writer to produce its list of possible downloads.
 
@@ -682,11 +763,13 @@ Use the link:https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-webs
 Check that the `releases.json` file looks sane and contains the newest release.
 Add that file to your commit.
 
+== GPG Keys
 
 Lastly, you'll want to add the latest GPG key information to `gpg_keys` in
 link:https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0/-/blob/develop/content/security.yml[`security.yml`] or with the link:https://fedora.gitlab.io/websites-apps/fedora-websites/fedora-websites-3.0/admin/#/collections/release/entries/securityData[CMS]. Follow the pattern that is already there, and move any now-EOL releases into the `obsolete` subsection.
 
 
+== Release day
 
 On release day (or the day before), you can check that all download links are good with the link:https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0/-/blob/develop/.build/check_link.py[check_link.py script]. This uses the release information from the `release.yaml` file.
 
@@ -706,6 +789,7 @@ All Good!
 
 If any artifact is flagged as missing, contact releng/infra team.
 
+== Conclusion
 
 That should be all. The old sites (namely spins, labs, alt, arm) which haven't
 been ported to the new system need to be updated separately and are beyond the
@@ -713,6 +797,7 @@ scope of this document.
 
 Commit your changes on the `develop` branch, make sure everything looks good on the GitLab pages, then use Merge Request to deploy to staging & prod.
 
+= Set up your environment (old way)
 :page-aliases: websites::setup.adoc
 
 [NOTE]
@@ -722,11 +807,13 @@ We and trying that method before using the method outlined on this page.
 See xref:setup-modern.adoc[this tutorial].
 ====
 
+== Preliminary Notes
 
 There are some open tickets (https://pagure.io/fedora-web/websites/issue/31[31], https://pagure.io/fedora-web/websites/issue/11[11]) about getting the websites repository building on Fedora with Python 3.
 
 However, it should be able to be built on Fedora 30, using Python 2 packages, for now.
 
+=== Fedora 29 Alternative
 
 Note, the dependencies below may not currently resolve due to package renaming in Fedora 30.
 If the dependencies do not resolve in Fedora 30, running Flask from a Fedora 29 container is an alternative.
@@ -739,6 +826,7 @@ podman run --expose 5000 --net=host --privileged -v /path/to/websites/repo:/path
 ----
 
 
+== Dependencies
 
 That said, assuming Fedora 30, install the following dependencies.
 Note this list comes directly from the Fedora Infrastructure OpenShift build for Websites found link:https://infrastructure.fedoraproject.org/cgit/ansible.git/tree/roles/openshift-apps/websites/templates/buildconfig.yml[here]:
@@ -766,6 +854,7 @@ python-zanata-client
 ----
 
 
+== Pull Strings
 
 Now we need to pull the current translations.
 After installing the dependencies above, you can `cd` into `sites/getfedora.org/` and run:
@@ -774,6 +863,7 @@ After installing the dependencies above, you can `cd` into `sites/getfedora.org/
 Once the dependencies are installed and translations are pulled, you can do one of two things:
 
 
+== Use the Development Server
 
 One option is to use the Flask built-in development server.
 This is handy because it prevents you from needing to build the websites every time you change something.
@@ -789,6 +879,7 @@ flask run --reload
 
 Now you many visit http://localhost:5000/ to get to the site.
 
+== Use Apache
 
 Alternatively, you may simply run `python main.py`.
 You'll get a statically built site in the `./build/` directory.
@@ -802,9 +893,11 @@ You can, however, set up an Apache on your system, and point it to the `./build/
 We should probably add an example Apache config here at some point.
 ====
 
+= Set up your environment (using containers)
 :page-aliases: websites::setup-docker.adoc
 
 
+== Preliminary Notes
 
 It is now easier to get started on developing the Fedora Websites with the use of Docker (or Podman).
 
@@ -816,6 +909,7 @@ The documentation here refers to `docker`, but our fairly simple use of it means
 ====
 
 
+== Building the container image
 
 First clone the repository:
 
@@ -836,6 +930,7 @@ sudo docker build -t fedora-websites .
 This will generate a container image for you to use.
 
 
+== Pulling translations
 
 We have a script for pulling translations.
 Let's call it from within the container:
@@ -849,6 +944,7 @@ Notice here that we are mounting a volume (`-v`) in Docker which points to our c
 We're referring to the `fedora-websites` image created above, and calling the `./scripts/pull-translations.sh` script from within it.
 
 
+== Running the development server
 
 Now we are ready to run the development server:
 
@@ -864,6 +960,7 @@ You may now go to `http://localhost:5000/` in your browser of choice.
 
 Now you are ready to go and any changes you make in the repository should be reflected immediately upon refreshing the page in your browser.
 
+= Creating New Content
 :page-aliases: websites::newcontent.adoc
 
 Content can be broken into several different components, although some of the
@@ -873,19 +970,23 @@ All new sites are being built with the Python link:http://flask.pocoo.org/[Flask
 framework and the link:https://pythonhosted.org/Frozen-Flask/[Frozen-Flask] library
 for generating static pages.
 
+== New Editions
 
 New editions of Fedora should be added to the getfedora.org website. We are
 trying to get away from having a bunch of `*.fedoraproject.org` sites for each
 of the various editions (currently we have link:https://coreos.fedoraproject.org[],
 link:https://iot.fedoraproject.org[], etc.).
 
+== New Websites
 
 There are cases, however, where the content being added is *not* a new edition,
 and is deserving of having its own distinct website, separate from
 getfedora.org. These cases should probably be somewhat rare.
 
+= New Edition
 :page-aliases: websites::newcontent-edition.adoc
 
+== Introduction
 
 Fedora editions are "versions" of Fedora that users can install. These include
 "official" editions (Workstation and Server at time of writing), but the
@@ -914,6 +1015,7 @@ Now then, all work in this document takes place in the repository in which
 link:https://pagure.io/fedora-web/websites/[getfedora.org] lives, and particularly
 in the `sites/getfedora.org/` directory.
 
+== Edition-specific Release Variables
 
 The first step is to edit `release.yaml`, and add the relevant sections under
 `ga` and `beta` for your new edition. Use `workstation` and `server` as
@@ -921,6 +1023,7 @@ templates. You might not need all variables that these existing sections have,
 or you might need to add new ones, depending on your templates, but these blocks
 should get you started.
 
+== Exporting the Edition Routes
 
 Now, open `main.py` and go to near the bottom, where you'll note a number of
 `export_route(...)` calls. This method is a custom method defined earlier in the
@@ -931,6 +1034,7 @@ argument is a path to the directory that contains the templates you'll make, but
 with a preceding and trailing `/`. Follow the example of the other, currently
 existing pages and add the appropriate `export_route` calls at the end.
 
+== Hacking the Templates
 
 The templates themselves live in the `sites` directory (under
 `sites/getfedora.org/` still). There are already templates started (but not
@@ -949,6 +1053,7 @@ block should instead be `{% trans trimmed %}` (the closing block is still just
 You can copy the templates from the existing editions, if you need inspiration
 or help.
 
+== Letting the Translators Do Their Thing
 
 Once the above is done, the next step is get all the strings in the hands of the
 Fedora Translations team. If you have an account on Fedora's Zanata instance,
@@ -959,6 +1064,7 @@ either need to be added to the appropriate team or have someone do this for you:
 Run `./scripts/translations-source.sh`. At the end of its output, it will give
 you the Zanata command to push the strings up: `zanata push getfedora.org.pot`
 
+== Concluding
 
 Largely, that is it. You've added variables that are easy to update each release
 (in `release.yaml`), you've exported the pages, written your templates in a
@@ -966,6 +1072,7 @@ translatable way, and pushed those strings to the Translations team. Now you can
 sit back and relax while the translators do their thing. Their translations will
 go live immediately (well, within an hour) and automatically.
 
+= Creating A New Site
 :page-aliases: websites::newcontent-site.adoc
 
 In rare cases, you might need to create an entirely new site, rather than an
@@ -980,10 +1087,13 @@ But familiarizing yourself with link:https://flask.palletsprojects.com/[Flask]
 and link:https://pythonhosted.org/Frozen-Flask/[Frozen-Flask] is a good starting
 point, as we plan for all of our websites to build using this toolset.
 
+= Translation flow (for Fedora websites)
 
+== General
 
 Fedora websites can be viewed in many languages. This page gives some details on how this happens.
 
+=== Tagging text
 
 System needs to be told what strings needs to be translated.
 Generally every text inside web page should be surrounded with tags:
@@ -993,6 +1103,7 @@ Generally every text inside web page should be surrounded with tags:
 {% trans trimmed %}Translate this text.{% endtrans %}
 ----
 
+== Generating pot file
 First we need to pull all translatable strings into a file called getfedora.org.pot
 
 This file is generated by running:
@@ -1006,9 +1117,11 @@ This file needs to be sent to link:++https://pagure.io/fedora-web/translations++
 
 If you don't have access to the translations repository push it to fedora-websites and create a pull request and once approved it should be automatically sent to translations repository with 24 hours.
 
+== Weblate process (How strings get translated)
 
 Once getfedora.org.pot file is in the translations repository it will be pulled by Weblate system and merged into translatable strings.  It can then be translated by translators.
 
+== Manual testing
 [NOTE]
 ====
 Any translations made here will not get propagated to the weblate of final versions of the page.
@@ -1048,23 +1161,29 @@ You can now change your browser setting to desired language and see how the tran
 
 ---
 
+=== Description of translation scripts inside sites/getfedora.org/scripts
 
 [NOTE]
 ====
 Technically scripts can be run without using podman, but will then require proper setup in the local machine. The instructions given above are safer for generic users.
 ====
 
+= Contact us
 
 Have questions or want to know more?
 
+== Connect with us
 
 Get in touch with our team in the following places:
 
+=== Asynchronous
 ** link:{COMMS-DISCOURSE}[Fedora Discussion]
 ** link:{COMMS-LISTSERV}[Mailing list]
 
+=== Synchronous
 ** link:{COMMS-FEDORA-CHAT}[Fedora Chat]
 
+== Membership
 
 In order to become a member of the Fedora Website & Apps Team, the applicant must be registered at link:++https://accounts.fedoraproject.org++[Fedora Accounts] and set up an account with the link:++https://pagure.io++[Pagure] VCS forge.
 
@@ -1073,10 +1192,12 @@ By becoming a Fedora Contributor, you accept these terms.
 * link:++https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement++[Fedora Project Contributor Agrement (FPCA)]
 * link:++https://docs.fedoraproject.org/en-US/project/code-of-conduct/++[Code of Conduct]
 
+= Fedora Websites & Apps Team
 
 Welcome to the official documentation for the Fedora Websites & Apps Team. The team was rebooted in 2021 as a part of the https://fedoraproject.org/wiki/Objectives/Websites_%26_Apps_Community_Revamp[Websites & Apps Community Revamp Objective]. With the onset of this council objective, the team has been growing ever since with developers, designers and project managers having a wide range of skills and interests all members of the team and contributing to the Fedora Websites and Apps. It now organizes around https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0[Websites Gitlab] and https://chat.fedoraproject.org/#/room/#websites:fedoraproject.org[Matrix Websites chat].
 
 [[about]]
+== About the team
 
 Our websites are of top priority and importance, being our web-based representation to the wider community of users and contributors.  The team works on designing, developing and maintaining user-friendly interfaces. The community-led team consists of voluntary contributors from around the world that are involved in activities such as the following:
 
@@ -1089,56 +1210,79 @@ Our websites are of top priority and importance, being our web-based representat
 * Help maintain content that doesn't fall under any particular subproject: much of the content that the team maintains is generic in nature, like documentation, community wiki, event banners which do not fit in a certain subteam or SIG.
 
 [[related-teams]]
+== Related teams
 
 In addition to the Websites and Apps Team, we have two other teams we're working closely with. These teams have a specific objective and once that objective has been met, the teams will disband and their work adopted by the main Websites and Apps Team.
 
+=== Fedora Websites Revamp Stakeholders Team
 The subteam consists of folks from the design team and various other subprojects, SIGs and workgroups where they come up with mockups for the offerings websites, review them and improve upon them continually.
 
+=== Fedora Websites Engineering Team
 The subteam looks into the technical side of things - helping with developing and maintaining the websites in the state that they are in for now, assisting with the issue tickets and onboarding/mentoring contributors.
 
+=== Fedora Websites and Apps Objective Co-leads Team
 This team looks into the cohesion of the websites and apps community - introspecting the current state of the teams, attempting to attract new contributors and ensuring existing contributors feel rewarded and that the objective outcomes are met.  More information is available on the next page, see our https://docs.fedoraproject.org/en-US/websites/objective/[Council Objective] page.
 
 [[collaborators]]
+== Our collaborators
 In order to work in a community with as many diverse projects and stakeholders as the Fedora Project, the team aims to communicate and collaborate regularly with different community members from various subprojects, SIGs and workgroups within Fedora. The activities on specific websites and applications are coordinated by the relevant points of contact.
 
 [[list-of-collaborators]]
+=== List of collaborators
 
+==== https://fedoraproject.org/wiki/Design[*Design Team*]
 The subproject has been actively helping with creating mockups and wireframes, evaluating user interfaces and providing visual content.
 
+==== https://fedoraproject.org/wiki/Infrastructure[*Fedora Infrastructure*]
 The subproject assists the development and maintenance efforts by providing support on backend technologies and hosting.
 
+==== https://fedoraproject.org/wiki/L10N[*Localization Team*]
 The subproject supports with translating content strings across various Fedora Websites and Applications into different languages/dialects.
 
+==== https://docs.fedoraproject.org/en-US/mindshare-committee/[*Mindshare Committee*]
 There is a representative for the team in the Fedora Mindshare committee for outreach leadership and unifying/sharing working progress.
 
+==== https://docs.fedoraproject.org/en-US/program_management/[Program Management Team]
 The subproject helps plan, schedule, track and coordinate tasks that help achieve the outcomes of the council objective and of the team.
 
 [[collaborations-friends]]
+=== Friends of Fedora
 
+==== https://docs.fedoraproject.org/en-US/cpe/[*Red Hat Community Platform Engineering team*]
 A Red Hat team dedicated to the Fedora and CentOS projects where they contribute to the infrastructure and release engineering.
 
+==== https://www.redhat.com/en/blog/channel/red-hat-open-source-program-office[*Red Hat Open Source Program Office engineers*]
 A Red Hat team that supports various Open Source technology initiatives across the Red Hat technology ecosystem.
 
+= Council Objective
 
 We started off some months ago with a successful objective proposal to put the time and effort into revamping not just the websites and applications that we maintain, but the way the community around it is organized.
 
+== People involved
 
+=== Co-leads
 * https://fedoraproject.org/wiki/User:T0xic0der[Akashdeep Dhar]
 * https://fedoraproject.org/wiki/User:Grahamwhiteuk[Graham White]
 
+=== Support
 * https://fedoraproject.org/wiki/User:Jflory7[Justin W. Flory]
 * https://fedoraproject.org/wiki/User:Riecatnor[Marie Nordin]
 * https://fedoraproject.org/wiki/User:Siddharthvipul1[Vipul Siddharth]
 
+=== Other teams
 * https://docs.fedoraproject.org/en-US/cpe/[Red Hat Community Platform Engineering]
 * https://www.redhat.com/en/blog/channel/red-hat-open-source-program-office[Red Hat Open Source Program Office]
 
+== Mission
 To reboot the websites team to include webapps in the scope of work and set up the team so that they can grow capacity in the future to build new exciting apps to meet community needs.
 
+=== Logic Model
 image::logic-model.png[]
 
+== Vision
 Fedora has an active, engaged team that takes care of our main websites and all of our various community webapps. New folks who show up with an interest in code contributions find this an easy place to jump in. Members of the team are empowered to do the work they’re interested in and are connected to the other parts of the project related to getting those things done.
 
+== Outcomes
 1. The team is happy, excited, recognized, and rewarded.
 2. The team has experience and ability with updating legacy Fedora webapps and sites.
 3. The Fedora websites are reliably updated when new Fedora Linux releases come out.
@@ -1149,6 +1293,7 @@ Fedora has an active, engaged team that takes care of our main websites and all 
 8. Mentorship is available, both for interested new members and for all members needing to get things done in Fedora infrastructure.
 9. Websites team is participating in the Mindshare Committee.
 
+=== Outputs
 1. Badges! Team swag!
 2. At least one webapp (møte) is modernized, as well as one web site (spins/labs).
 3. A documented plan for updating websites on new Fedora Linux releases, with understood team roles and responsibilities.
@@ -1159,6 +1304,7 @@ Fedora has an active, engaged team that takes care of our main websites and all 
 8. "Websites Apprentices" program in place, and connections with Fedora Infrastructure team established.
 9. Fedora Mindshare Committee has an active, engaged representative to represent Fedora's Websites & Apps community.
 
+=== Activities
 1. Create team badges https://badges.fedoraproject.org/badge/rock-the-web%21 Request team swag.
 2. Develop new version of møte. Update https://spins.fedoraproject.org[spins website] to new framework. [Link to tasks]
 3. Document new release procedures and roles. Document specific team member responsibilities for release days and other critical needs.
@@ -1169,6 +1315,7 @@ Fedora has an active, engaged team that takes care of our main websites and all 
 8. Define Website Apprentice & mentorship role.
 9. Create updated process for Web & Apps Team Rep to Mindshare and implement.
 
+== Resources
 1. Badges team to create badges. FCAIC and Design team for team swag. #action riecat
 2. Developers working on møte. Infra team or CPE for updating where it runs. Rick to mentor in porting Spins website?
 3. Program management team to help with documented processes. (#action bcotton). Docs skills to update team docs.fp.o website (#action relrod+jwf).
@@ -1179,37 +1326,51 @@ Fedora has an active, engaged team that takes care of our main websites and all 
 8. Interested team members. Mentorship training provided by Council.
 9. Mindshare team to help onboarding. Someone to update docs in project docs.
 
+= Our tasks
 
 The team designs, develops and maintains the Fedora's websites and applications.
 
 These involve a variety of tasks suitable for both newcomers and experienced contributors.
 
 [[division]]
+== Something for everyone
 Web technologies, being a very widespread technological stack and an avid point of interest for those involved in marketing, product design, project management etc., the team is in constant need of community contributors who are willing to work on these.
 
+=== Are you a newcomer to web development?
 It is highly recommended for newcomers to web development to join us in our periodic meetings and introduce themselves to start with. According to the level of experience, the team members would help curate issue tickets suitable for them and provide mentorship/guidance wherever necessary in technological stacks like HTML, CSS, JavaScript and Python. This documentation should also consist enough information to help them get started with contributing.
 
+=== Are you an experienced in web development?
 The team often has an array of tickets that demand more advanced knowledge and experience in our technological stack and management operations, and they could always use all the help that we can get. They are always interested to work with developers that bring something new to the table and actively assist in maintaining the status quo of the team. The contributors are requested to participate in the periodic meetings and reach out to the team.
 
 [[tasks]]
+== Example tasks
 
+=== Adding temporary content to websites
 Temporary elements such as beta release indicators on the Fedora Linux offering websites, and banners for surveys and events are to be placed periodically.
 
+=== Developing approved design mockups
 After the design mockups have gone through a review process and ready for implementation, they need to be developed into a final interactive project.
 
+=== Participating in the periodic meetings
 The team connects periodically on a meeting to discuss updates, blockers and plans on activities, either synchronously on call or asynchronously on chat.
 
+=== Updating server-side code
 Websites and applications need to be hosted on a relevant environment (development. staging or deployment), depending on the phase and maturity of the project.
 
+=== Improving language and accessibility support
 This involves working alongside the localization teams for translating the available content to various languages and provide accessibility options.
 
+=== Revamping websites to improve user experience
 In order to keep up with the current internet standards, older websites need to be rebooted using newer design methodologies and tech stacks.
 
+=== Writing documentation for contributors
 Establishing processes and ensuring reproducibility of the activities is better supported by documentation to guide contributors through them.
 
+=== Creating issue tickets and triaging them
 To note the tasks involved in making the aforementioned activities happen and to prioritize them, the team uses certain issue trackers and task boards.
 
 [[bug]]
+== Report a bug
 
 Did you find a bug on one of our websites?
 
@@ -1217,14 +1378,19 @@ Please see these https://fedoraproject.org/wiki/How_to_fix_bugs_on_the_Fedora_Pr
 
 Otherwise, please report them on our https://pagure.io/fedora-websites[repository].
 
+= Representatives
 
 The responsibilities of the representative involves representing the team to the Mindshare committee and collaborate with other groups/teams/SIGs that work with them. Being a conduit between the two teams, the representative is expected to invest a fair amount of time and have good communication skills.
 
+== Representatives
 
+=== Current representative
 * link:++https://fedoraproject.org/wiki/User:Thunderbirdtr++[Onuralp Sezer]
 
+=== Previous representatives
 * link:++https://fedoraproject.org/wiki/User:Codeblock++[Rick Elrod]
 
+== Responsibilities
 
 Representatives are critical in keeping communication between the team and Mindshare flowing. As a Mindshare representative, you will be involved in the following activities:
 
@@ -1237,29 +1403,36 @@ Representatives are critical in keeping communication between the team and Minds
 - Ascertain that the Fedora budget is managed efficiently across all locations
 - Listen to the Fedora community's needs, problems, and hopes and transmit them to the Mindshare Committee
 
+== Duration of service
 The service will last for two Fedora release cycles, or a year. However, depending on the personal circumstances of those serving as Representatives, terms may be shorter or longer. In the odd case that the representative(s), Mindshare Committee, or the Websites and Apps Team choose to change representation, they must show appropriate justification. The Websites and Apps Team will then choose a new representative based on the SOP.
 
+== Selection
 This section outlines the process of nominating and selecting representatives. The selection procedure outlined below begins when a current representative, the Mindshare committee, or the Fedora Council requests a rotation of representatives.
 
+=== Nomination
 Potential delegates will have a two-week period to nominate themselves. Nominees can be self-nominated or nominated with the approval of other members of the Websites and Apps Team. Nominees must be members of the said team, have a basic understanding of various Fedora sub-projects, and have enough time to complete the essential obligations.
 
 If no nominees are found, the Websites and Apps Team will collaborate with the Mindshare Committee to extend the search message and request more time. If no nominees are discovered after that, the role will be rotated among current Websites and Apps Team members until a new representative is found.
 
+== Teams you will be closely working with
 - Fedora Mindshare
 - Websites and Apps Team and Subteams
 - Various other Outreach teams as required
 
+= Resources
 
 The Websites & Apps Team is made up of people who collaborate on all levels of design, operations and technology. They value perspectives, opinions and experiences from a various points of views. Please check out these resources for your own local setup.
 
 We are continually working to expand our established processes, instructional materials and documentation.
 
+== Documentation
 * link:++https://fedoraproject.org/w/uploads/1/19/Websitesandappsrevamp_logicmodel.png++[Fedora Websites Revamp Logic Model]
 * link:++https://developer.fedoraproject.org/tech/languages/python/python-installation.html++[Python - Fedora Developer]
 * link:++https://developer.fedoraproject.org/tech/languages/python/flask-installation.html++[Flask - Fedora Developer]
 * For those interested in PHP and working with the link:++https://communityblog.fedoraproject.org++[Fedora Community Blog]
 * link:++https://fedoramagazine.org/howto-install-wordpress-fedora/++[Wordpress Local Setup Instructions]
 
+== Code Repositories
 * link:++https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0[Fedora Websites]
 * link:++https://pagure.io/fedora-websites++[Fedora Websites (Legacy)]
 * link:++https://pagure.io/fedora-web/websites/++[Fedora Main Website (Legacy)]
@@ -1267,17 +1440,22 @@ We are continually working to expand our established processes, instructional ma
 * link:++https://github.com/fedora-infra/noggin++[Fedora Account System(FAS)]
 * link:++https://pagure.io/fedora-docs/docs-fp-o++[Fedora Docs]
 
+= Contact us
 
 Have questions or want to know more?
 
+== Connect with us
 
 Get in touch with our team in the following places:
 
+=== Asynchronous
 ** link:{COMMS-DISCOURSE}[Fedora Discussion]
 ** link:{COMMS-LISTSERV}[Mailing list]
 
+=== Synchronous
 ** link:{COMMS-FEDORA-CHAT}[Fedora Chat]
 
+== Membership
 
 In order to become a member of the Fedora Website & Apps Team, the applicant must be registered at link:++https://accounts.fedoraproject.org++[Fedora Accounts] and set up an account with the link:++https://pagure.io++[Pagure] VCS forge.
 
@@ -1286,14 +1464,18 @@ By becoming a Fedora Contributor, you accept these terms.
 * link:++https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement++[Fedora Project Contributor Agrement (FPCA)]
 * link:++https://docs.fedoraproject.org/en-US/project/code-of-conduct/++[Code of Conduct]
 
+= Fedora Websites Revamp Stakeholders Team
 
 Welcome to the official documentation for the Fedora Websites Revamp Stakeholders Team.
 
+== Points of contact
 - https://accounts.fedoraproject.org/user/pawelzelawski/[Pawel Zelawski]
 - https://fedoraproject.org/wiki/User:Siosm[Timothee Ravier]
 
+== Purpose
 The team looks into designing aesthetics, making the style guide, planning the website strategy and deciding the tech stack for delivering Fedora Linux offerings website.
 
+== Function
 1. Multiple contributors from Design team, Server WG, Workstation WG, Kinoite subteam, Fedora Infra subteam, NeuroFedora SIG etc. have been participating in discussions over at the chatroom.
 2. Members from the design team have been continually instrumental in coming up with various mockups and improving upon them by getting reviews from within the team and the outer community (Discussion fp.o)
 3. Design team representative, Mairin Duffy had been mentoring a set of interns, Emma Kidney and Jess Chitas as well with her endeavours of creating mockups for the Fedora Linux websites.
@@ -1301,14 +1483,18 @@ The team looks into designing aesthetics, making the style guide, planning the w
 5. Meetings have been organized by Pawel Zelawski and attended by the members periodically to catch up on the progress, perform stakeholders reviews and plan on the next tasks.
 6. With active representation in the events like Nest With Fedora and Fedora Linux Release Parties, the team had been reaching out to garner more feedback on the work done so far and acquire contributors for assistance.
 
+= Meetings
 
 The team members collaborate periodically over synchronous and asynchronous meetings.
 
+== Video conference meetings
 
 The Websites Revamp Stakeholders Team meets weekly as long as there are at least four active participants available. Should that not be the case - updates, plans and blockers are conveyed asynchronously in the Fedora Chat channel by the members.
 
+== Agenda
 A video conference meeting is a fleeting affair and hence, it is important to use every moment of the meeting wisely to discuss important topics.
 
+=== Example
 The following is a Markdown-styled example agenda to extend from.
 [source]
 ----
@@ -1328,6 +1514,7 @@ The following is a Markdown-styled example agenda to extend from.
 - ADD ITEMS HERE
 ----
 
+== How to chair team meetings?
 Anyone can be a chair for the Websites Revamp Stakeholders Team, and we encourage everyone to try chairing our weekly team meetings at least once to get an experience. The team is supportive of newcomers and experienced folks alike who are trying to chair a meeting for the first time so one need not worry about anything going wrong midway.
 
 The chair should
@@ -1348,6 +1535,7 @@ The chair should
 * Ensure that they are attending the meeting from a noise-free and disturbance-free environment and are not distracted by any other work or social media
 * Use an accessible and simple vocabulary to convey their statements for maximum participation, and wait enough after each point for attendees to reflect
 
+== Participation guidelines
 * Please focus on listening, and on appreciating what others are trying to say, not only on what you are hearing.
 * Wherever possible, please refrain from multitasking on email or social media and strive to remain fully present and tuned in to what others are saying and feeling.
 * Please assume best intent in everyone's comments and strive to keep a constructive tone in your own.
@@ -1356,22 +1544,28 @@ The chair should
 * Please speak for yourself when making comments, using "I". Please don't speak for the assembled group by speaking as "we".
 * Help us be mindful of the schedule and stay on time; we anticipate many people will have much they want to say, but please support us in moving the dialog forward.
 
+== Please be a self-aware participant!
 * Please indicate you want to speak by raising your hand on video or with the button in Jitsi Meet; if you are not able to use or raise your hand, feel free to speak up but please try not to interrupt others.
 * Please stay muted when you are not speaking.
 * Please be mindful of background noise and join the call from a quiet location. Construction sites, windy gardens and non-quarantined internet cafes do not qualify as quiet locations.
 * All parents and caregivers shall enjoy an irrevocable "background/foreground kid and dependent noise" exception at all times, but muting etiquette still applies.
 
+= Contact us
 
 Have questions or want to know more?
 
+== Connect with us
 
 Get in touch with our team in the following places:
 
+=== Asynchronous
 ** link:{COMMS-DISCOURSE}[Fedora Discussion]
 ** link:{COMMS-LISTSERV}[Mailing list]
 
+=== Synchronous
 ** link:{COMMS-FEDORA-CHAT}[Fedora Chat]
 
+== Membership
 
 In order to become a member of the Fedora Websites Revamp Stakeholders Team, the applicant must be registered at link:++https://accounts.fedoraproject.org++[Fedora Accounts] and set up an account with the link:++https://pagure.io++[Pagure] VCS forge.
 

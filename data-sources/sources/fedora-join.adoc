@@ -1,5 +1,6 @@
 * Welcome!
 
+= Welcome to Fedora!
 
 image::https://pagure.io/fedora-join/WelcomeToFedora/raw/main/f/Artwork/Welcome-to-Fedora-banner-Feb2022.png[alt="fedora-banner", width=100%]
 
@@ -13,6 +14,7 @@ If you support the link:https://docs.fedoraproject.org/en-US/project/code-of-con
 
 Fedora is not strictly speaking a software development centre. One of our core principles is link:https://docs.fedoraproject.org/en-US/project/upstream-first/[Upstream First]. This is so we can give back to the broader Linux community.
 
+== What we do:
 Fedora is divided into a number of working areas.  You can see our link:https://docs.fedoraproject.org/en-US/project/orgchart/[organization chart].
 We do everything from running servers and writing code to design and event management.
 
@@ -21,6 +23,7 @@ If you would like to be part of our community, you do not need to know everythin
 You do not need to sign up to do this yourself.  Feel free to join in on our link:https://chat.fedoraproject.org/[Matrix Channel] or our link:https://discussion.fedoraproject.org/[discussion forums].
 It is a good idea to read the link:https://docs.fedoraproject.org/en-US/docs/[docs] (plus other places!) and have a good look around before contacting us.
 
+== Getting Started:
 As a newcomer to Fedora, all your access starts with an account. link:https://accounts.fedoraproject.org[Sign up here]. You will be asked for your name and a username.  The name and username you put in may be public, but you can put in whatever you like.  You can change your name later, but you cannot easily change your username.
 
 It really helps us if you introduce yourself on Matrix or on the forums.  We want to know who you are so we can work together better.
@@ -30,6 +33,7 @@ Feel free to approach people in your areas of interest.  We want to double the n
 
 You will be 'Fedora' when you have found and made your first contribution to a project or group.
 
+== Onboarding:
 Once you have decided you would like to stick around, or would like a hand getting introduced, we can 'onboard' you.  This means we will give you a little bit more access to systems and can introduce you to teams.  The 'behind the scenes' process is detailed below, it's up to you if you want to know how we do it.
 
 To begin the onboarding, we need to know your username.  All you have to do is
@@ -44,6 +48,7 @@ Remember, there is no minimum commitment.  Take the time to look around.
 > *We would of course recommend you to use Fedora :)*
 
 
+== Onboarding New Joiners (workflow for the Join SIG team)
 
 When a new person joins the Fedora community, they may not know what they want to do.
 The Join SIG aims to help people to explore the community and find their area of interest.
@@ -93,6 +98,7 @@ If $USER decide to exit the Fedora community we will close the ticket with the t
 
 * Resources
 
+= Get started with badges!
 
 Fedora Badges are a fun way to earn virtual badges for doing helpful things in the Fedora community.
 There are hundreds of badges to earn for all types of activities---technical and non-technical tasks.
@@ -105,6 +111,7 @@ So there's usually a lag between an activity and badges being awarded.
 Please inform the Fedora Badges team on link:https://discussion.fedoraproject.org/tag/badges-team[their space on Fedora Discussion] if you do not receive your badge in a few days.
 
 [[involvement]]
+== Involvement
 
 link:https://badges.fedoraproject.org/badge/involvement[Involvement] is awarded when you sign the link:https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement[Fedora Project Contributor Agreement] (FPCA).
 You can sign the FPCA in your profile in the link:https://accounts.fedoraproject.org/[Fedora Account System] (FAS).
@@ -113,6 +120,7 @@ image::https://badges.fedoraproject.org/pngs/involvement.png[Involvement - Fedor
 
 
 [[white-rabbit]]
+== White Rabbit
 
 link:https://badges.fedoraproject.org/badge/white-rabbit[White Rabbit] is awarded when you set your time zone in your Fedora Account System (FAS) account.
 Some tools in Fedora will display your time zone or what your current local time is.
@@ -132,6 +140,7 @@ image::https://badges.fedoraproject.org/pngs/fas-white-rabbit.png[White Rabbit -
 
 
 [[crypto-badger]]
+== Crypto Badger
 
 link:https://badges.fedoraproject.org/badge/crypto-badger[Crypto Badger] is awarded when you add an SSH key to your Fedora Account System (FAS) account.
 If you have a SSH key pair already, you can add your SSH key system to your FAS account with the steps below.
@@ -158,6 +167,7 @@ image::https://badges.fedoraproject.org/pngs/fas-crypto-badger.png[Crypto Badger
 
 
 [[crypto-panda]]
+== Crypto Panda
 
 link:https://badges.fedoraproject.org/badge/crypto-panda[Crypto Panda] is awarded when you add a GPG public key to your Fedora Account System (FAS) account.
 You may or may not have a GPG key already.
@@ -177,6 +187,7 @@ If you have a GPG public key, you can set it it FAS with these steps:
 image::https://badges.fedoraproject.org/pngs/fas-crypto-panda.png[Crypto Panda - Fedora Badges]
 
 [[baby-badger]]
+== Baby Badger
 
 link:https://badges.fedoraproject.org/badge/baby-badger[Baby Badger] is awarded when you log into the Fedora Badges website for the first time.
 link:https://badges.fedoraproject.org/[Log in] to the Badges application to earn this badge now!
@@ -184,6 +195,7 @@ link:https://badges.fedoraproject.org/[Log in] to the Badges application to earn
 image::https://badges.fedoraproject.org/pngs/baby-badger.png[Baby Badger - Fedora Badges]
 
 
+== Other badges
 
 The badges listed here are also good badges to earn.
 They aren't explained yet, but they will be soon.
@@ -197,38 +209,46 @@ If you want to help with this, come say hello in link:https://libera.chat/#fedor
 
 * Classroom
 
+= Fedora Classroom
 :experimental:
 
 The Fedora Classroom is a project to help people spread knowledge to others. We host a plethora of sessions on different subjects.
 
+== Links
 
 * Recordings of sessions are made available on the {YOUTUBE}[Fedora Youtube channel].
 * Follow up questions on the sessions can be asked on {DISCOURSE_CLASSROOM}[Discourse under the classroom sub-category].
 * Suggestions for new sessions should be made on {PAGURE}/issues[our Pagure project].
 
+== Sessions
 
 We are moving away from a live streaming to a {FWIKI}/Classroom/OfflineSessionsProposal[recording based deliverly model].
 This helps us get the sessions to more people, and it helps us focus on the quality of the material instead of the technology involved.
 
 Therefore, we are no longer bound by {FWIKI}/Classroom/Release_schedule[release cycle based calendar].
 
+=== Recording sessions
 
 Please refer to {FWIKI}/ScreenCasting for information on tools that can be used to record sessions.
 
+== Badges for instructors
 
 Community members that instruct sessions earn https://pagure.io/Fedora-Badges/issue/523[badges]!
 These are awarded automatically for sessions that are held in https://web.libera.chat/?channels=#fedora-classroom[#fedora-classroom] IRC channel.
 For sessions that are held on other platforms, a https://pagure.io/fedora-badges/issue/645[ticket must be filed to award the badge manually].
 
+== Communicating with us
 
 We are available via our https://admin.fedoraproject.org/mailman/listinfo/classroom[mailing list].
 
 We are also on the IRC at https://web.libera.chat/?channels=#fedora-classroom[#fedora-classroom]. We use the
 {PAGURE}/new_issue[Pagure project] to manage our tickets.
 
+== Help wanted
 
 If you would like to help out the Fedora Classroom effort, we are currently xref:classroom/help-wanted[looking for assistance] in several areas.
 
+== Classroom etiquette
 The purpose of the classroom is to provide instruction on a specific topic. As such, it is beneficial for
 classroom sessions to adhere to a certain standard. Please try to adhere to the following during sessions:
 
@@ -239,6 +259,7 @@ classroom sessions to adhere to a certain standard. Please try to adhere to the 
 
 The point is to help maintain a classroom environment that promotes learning while avoiding extraneous content.
 
+== Teaching a class
 
 If you would like to teach a class on any Fedora related topic, please mail an introduction of yourself
 and outline of your proposed class to the classroom mailing list. Some things to keep in mind:
@@ -252,9 +273,11 @@ and outline of your proposed class to the classroom mailing list. Some things to
 (Note: Check out http://www.timeanddate.com/worldclock/meeting.html?year=2008&month=12&day=6&p1=195&p2=179&p3=1038&p4=47[The World Clock Meeting Planner]
 for time zone syncing.)
 
+== Fedora Magazine Post
 
 In order to write a magazine post announcing the fedora classroom, please follow the guidelines here: {FWIKI}/Classroom/magazine_template[Magazine Template].
 
+= Fedora Classroom: help wanted
 :experimental:
 
 The Fedora Classroom is always looking for interested people to help out.
@@ -264,6 +287,7 @@ The work can be classified into the following roles.
 
 *Note*: anyone interested in filling the positions listed below should contact xref:index.adoc#_communication[Fedora Join SIG].
 
+== Wranglers
 
 Keep things rolling week in, week out:
 
@@ -276,6 +300,7 @@ Keep things rolling week in, week out:
 * summarise session, analyse information collected from survey
 * write summary report every release
 
+== Instructor
 
 Know something about Fedora Project? Whether it be big or small, we want
 you to come and share your knowledge. Instructors are always needed to
@@ -284,6 +309,7 @@ or very in-depth. Even if you don't feel like your topic is very advanced,
 many folks love to hear about new and amazing things.  Please come and take
 the time to present!
 
+== Instructor Recruiters
 
 This position would have you look around for people who use Fedora or are
 associated with Fedora and are interested/willing/able to teach
@@ -292,12 +318,14 @@ setup their class schedules and so forth. This position could also look
 for people who have interesting blog posts or mailing list postings or
 are active on IRC and ask them to teach some classes.
 
+== Advertising/Marketing
 
 Working with the Fedora Marketing team, this position would have you mail
 out class schedules, make blog posts, and any other ways you can think of
 to get out the message about classes and how to attend them. It would help
 to be subscribed to various fedora lists and/or be active at fedoraforum.org.
 
+== Emcee
 
 For this position, you would need to be well versed in IRC setup and usage
 and be able to be available at various times when classes are held.
@@ -309,6 +337,7 @@ to the wiki.
 
 * Policies
 
+== Inactive Members
 
 IMPORTANT: The removal from a member from the FAS group is merely an act of acknowledging that someone is no longer active.
 
@@ -348,6 +377,7 @@ If a response indicating inactivity is received (or no response is received at a
 The scripts that is used to check for activity can be found here: https://pagure.io/fedora-commops/FedoraCommunityStats[Fedora Community Stats].
 
 
+= How to be a successful contributor
 Ankur Sinha
 2023-10-30: Updated content, rewritten various sections.
 
@@ -367,6 +397,7 @@ Just hanging out in the channels and participating in discussion is also contrib
 TIP: Take a look at the Fedora organization chart xref:project::orgchart.adoc[here].
 It'll give you an idea of the vastness of the community.
 
+== Things to think about before you join
 
 So you think that you would enjoy being a Fedora community member?
 Great!!
@@ -376,6 +407,7 @@ Everyone that joins a Free/Open source software project does so with the best in
 However, the realities of life mean that volunteering requires us to take time out of our lives, time that could be spent elsewhere: on jobs to earn a salary, life and family and friends, or other hobbies and projects.
 The biggest difference between those that are able to stay and remain long term contributors and those that are not is "commitment and time".
 
+=== Rewards from volunteering
 
 An important question is: what does one get out of volunteering?
 
@@ -394,6 +426,7 @@ While the community does sponsor community members to organize and attend commun
 So, managing time to ensure that work and other aspects of life do not suffer is paramount.
 More about that in the next section.
 
+=== Managing work and life
 
 TIP: Make sure you look after your personal and professional commitments before making time to volunteer.
 
@@ -409,6 +442,7 @@ However, this may not always be the case.
 
 Volunteering needs to be beneficial to all affected parties, so being clear about the requirements and benefits of volunteering is important.
 
+=== Managing time commitment
 
 [TIP]
 =====
@@ -433,6 +467,7 @@ Just because you are able to do a certain amount of hours now does not mean you 
 
 TIP: Read link:https://www.redhat.com/en/blog/dont-lick-cookie[this very useful post on "cookie-licking"].
 
+== Joining
 
 TIP: Get to know the community members, teams, and how they work before jumping into "doing tasks".
 
@@ -466,6 +501,7 @@ The link:https://pagure.io/fedora-join/Welcome-to-Fedora[Welcome to Fedora] proc
 We don't want you to jump into tasks.
 We want you to get to know the people first, and then gradually start working on tasks.
 
+=== Observation
 
 TIP: Monitor and participate in meetings and general team communication to learn what/how/where/who/what/when they do things.
 
@@ -490,6 +526,7 @@ A good way of providing feedback is to use "plussing".
 The fundamental idea is to not just provide a critique or feedback for an idea, but to also offer suggestions or alternative solutions with that feedback.
 
 
+=== Pick what you want to work on
 
 TIP: In Fedora, you must decide what you want to work on yourself.
 
@@ -505,6 +542,7 @@ There's always something to be done.
 If you see something not quite right, something that can be improved, do your research and present a proposal to the team.
 Seek work out, take the initiative, keep yourself busy and help others.
 
+=== Don't jump into the deep end
 
 TIP: Start small. The key is slow, steady, sustainable growth.
 
@@ -515,6 +553,7 @@ Start small, picking at most one or two things, and grow from there.
 The key is slow, steady, and sustainable growth.
 Don't join with the immediate goal of becoming the next leader of the project :).
 
+=== Default to open
 
 TIP: Use public communication channels unless it is absolutely necessary to use private communication.
 
@@ -536,6 +575,7 @@ So, for example:
 * Default to filing a ticket when you wish something done instead of sending private email.
 * Default to replying on a Bugzilla bug instead of sending private emails.
 
+=== We are all mentors
 
 TIP: Knowledge is maintained by the whole community, not individuals.
 
@@ -556,6 +596,7 @@ So, a good habit is to ask people for documentation and references so you can le
 Reading documentation (and so maintaining up to date documentation) is an important skill.
 Of course, if you have queries, ask and people will answer.
 
+== Take breaks, step back if you need to
 
 TIP: It's OK to say that you cannot do something you had taken up.
 

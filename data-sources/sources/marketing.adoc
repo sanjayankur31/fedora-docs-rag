@@ -1,4 +1,5 @@
 
+= How do I get involved?
 Want to be part of the {team_name}? Here's how!
 
 * Are you willing to enhance Fedora Project marketing initiatives?
@@ -13,6 +14,7 @@ Our team always looks forward to working with folks from diverse backgrounds.
 ---
 
 [[contribute]]
+== How you can contribute
 
 Here are some examples of what constitutes a contribution to the {team_name}:
 
@@ -32,6 +34,7 @@ A good recommendation for beginners is to familiarize yourself with the xref:res
 
 
 [[meetings]]
+== Join our meetings
 
 * Meetings will be held once every two weeks.
 Check the link:{team_meetings}[*Marketing Calendar*] for updated meeting times.
@@ -45,6 +48,7 @@ Check the link:{team_meetings}[*Marketing Calendar*] for updated meeting times.
 
 
 [[social-media]]
+== Have ideas for social media posts?
 
 * *link:{team_issue_tracker}/-/issues/new[Open a ticket on our Gitlab]:*
 ** Issue name must include Month/Day then title of Social Media post
@@ -58,10 +62,12 @@ Feedback from official {team_name} members must be provided before accepted to p
 
 
 [[videos]]
+== Want to help with videos?
 
 * Check xref:sops/stream-uploads.adoc[our standard procedure to process livestreams] to know how you can easily take livestreams from our events and turn them into talks to upload to our social media profiles;
 * Check the https://gitlab.com/fedora/podcast/-/issues[Podcast team GitLab repo] if you'd like to help with the Fedora Podcast, as they have a tight relation to our team;
 
+= Fedora social media accounts
 Overview of all known social media accounts for the Fedora Project.
 2023-11-19
 
@@ -71,6 +77,7 @@ All known accounts are documented below, curated by a best-effort volunteering c
 
 
 [[official]]
+== Official accounts
 
 Maintained by Marketing and/or https://accounts.fedoraproject.org/group/fedora-socialmedia/[Social Media] Teams.
 Anyone with access to Official Accounts should be members of the https://accounts.fedoraproject.org/group/fedora-socialmedia/[fedora-socialmedia] FAS group.
@@ -82,6 +89,7 @@ Official accounts are designated official due to their connection to the Fedora 
 ====
 
 [[official-mastodon]]
+=== Mastodon
 
 * *Page name*:
 Fedora Project
@@ -96,6 +104,7 @@ Fedora Project
 open source decentralized servers, web-based, clients available on mobile (Android, iOS)
 
 [[official-facebook]]
+=== Facebook
 
 * *Page name*:
 The Fedora Project
@@ -120,6 +129,7 @@ The Fedora Project
 proprietary server, web-based, messaging supported in `bitlbee`, `pidgin`
 
 [[official-twitter]]
+=== X/Twitter
 
 * *Page name*:
 @fedora
@@ -141,6 +151,7 @@ proprietary server, web-based, messaging supported in `bitlbee`, `pidgin`
 proprietary server, web-based, clients available (`cawbird`)
 
 [[official-youtube]]
+=== YouTube
 
 * *Page name*:
 Fedora Project
@@ -172,6 +183,7 @@ _Fedora Project (social media mgmt.)_ (special Google account managed by the xre
 proprietary server, web-based, supported in `video-downloader`
 
 [[official-instagram]]
+=== Instagram
 
 * Page name:
 @thefedoraproject
@@ -188,6 +200,7 @@ proprietary server, web-based, supported in `video-downloader`
 ** proprietary server, has web version
 
 [[official-matrix]]
+=== Matrix/Element
 
 * *Page name*:
 `#fedora-space:fedoraproject.org`
@@ -202,11 +215,13 @@ open source server, has web version, open source client available as flatpak in 
 
 
 [[secondary]]
+== Secondary accounts
 
 Secondary accounts are accounts created officially within the project, but they are not the primary method for distributing news or information.
 Often, these accounts post automatically or pull from other feeds to relay content.
 
 [[secondary-twitter]]
+=== Twitter (@fedoracommunity)
 
 link:{FWIKI}/User:Ryanlerch[Ryan Lerch] has/had a script to automatically tweet links for new https://docs.fedoraproject.org/en-US/commops/community-blog/[Community Blog] articles.
 
@@ -224,6 +239,7 @@ link:{FWIKI}/User:Ryanlerch[Ryan Lerch] has/had a script to automatically tweet 
 ** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
 
 [[secondary-reddit]]
+=== Reddit (/r/Fedora)
 
 * *Page name*:
 /r/Fedora
@@ -237,6 +253,7 @@ link:{FWIKI}/User:Ryanlerch[Ryan Lerch] has/had a script to automatically tweet 
 proprietary server, web-based
 
 [[secondary-discord]]
+=== Discord
 
 * *Page name*:
 Fedora Linux
@@ -256,6 +273,7 @@ Fedora Linux
 proprietary server, has web version, open source clients are forbidden by license terms
 
 [[secondary-telegram]]
+=== Telegram
 
 * *Page name*: @fedoranews
 * *Links*:
@@ -274,6 +292,7 @@ proprietary server, has web version, open source client available in RPMFusion
 
 
 [[community]]
+== Community-managed accounts
 
 Fedora Community-Managed Accounts are related to the Fedora Project, but not officially maintained by the Fedora Marketing Team or Social Media administrators.
 Often, these accounts are specific to a region or country.
@@ -282,6 +301,7 @@ However, these accounts are *not* officially endorsed by the Fedora Project or R
 They are listed here to promote easier discoverability of places where Fedora contributors and users gather online.
 
 [[community-facebook]]
+=== Facebook
 
 [cols=",,",options="header",]
 |===
@@ -314,6 +334,7 @@ They are listed here to promote easier discoverability of places where Fedora co
 |===
 
 [[community-twitter]]
+=== Twitter
 
 [cols=",,",options="header",]
 |===
@@ -399,6 +420,7 @@ See the https://pagure.io/neuro-sig/NeuroFedora/blob/master/f/Outreach/Template-
 |===
 
 [[community-other]]
+=== Other accounts
 
 [cols=",,,",options="header",]
 |===
@@ -423,6 +445,7 @@ See the https://pagure.io/neuro-sig/NeuroFedora/blob/master/f/Outreach/Template-
 
 
 [[retired]]
+== Retired accounts
 
 These accounts, for one reason or another, are retired, deleted, or no longer maintained.
 
@@ -453,6 +476,7 @@ These accounts, for one reason or another, are retired, deleted, or no longer ma
 |===
 
 [[retired-googleplus]]
+=== Google+
 
 The Google+ service shut down https://support.google.com/plus/answer/9217723[on 2019 April 2].
 
@@ -486,6 +510,7 @@ The Google+ service shut down https://support.google.com/plus/answer/9217723[on 
 
 
 [[security]]
+== Account security
 
 Most official social media accounts are managed by each administrator's personal account on that network, like for Facebook or Google+.
 In cases like LinkedIn, access is granted to individual accounts.
@@ -495,12 +520,14 @@ As of October 2016, User:Puiterwijk[Patrick Uiterwijk] manages password storage 
 
 
 [[historical]]
+== Historical context
 
 * Social media was briefly discussed at the link:{FWIKI}/Marketing_FAD_2010[Marketing FAD 2010].
 http://meetbot.fedoraproject.org/fedora-fad/2010-03-15/fedora-fad.2010-03-15-13.15.log.html[complete logs are available (start at 14:10:39)].
 For a shorter recap, see this http://www.youtube.com/watch?v=oh9Yi_2jI_g[video of Neville Cross; Ryan Rix; and Paul Frields explaining the discussion] and http://www.flickr.com/photos/wonderer/4462227596/[a diagram of the whiteboard (photo by Henrik Heigl)].
 * link:{FWIKI}/Status_and_microblogging_SOP[Status and microblogging SOP]
 
+= Fedora Social Media Contribution Model
 Learn more about the Fedora Marketing Team social media model and discover how you can contribute.
 
 The Fedora Marketing Team operates a three-tiered model for social media contributions:
@@ -516,11 +543,13 @@ Read on for details of each role, types of contributions made within them and ho
 
 
 [[social-media-manager]]
+== Social Media Manager
 
 Social Media Managers are granted direct access to our social media accounts and are categorized into two specific functions: xref:#account-lead[*Account Lead*] and xref:#account-contributor[*Account Contributor*].
 These functions have varying levels of contribution and responsibility.
 
 [[account-lead]]
+=== Account Lead
 
 An Account Lead acts as a bridge, independently cross-posting content from one Fedora account to another.
 This involves following Fedora on other platforms, staying up-to-date on their activities, and copying content to your assigned account.
@@ -531,6 +560,7 @@ Curators take full ownership of a social media account, independently sourcing c
 This demands a higher level of responsibility, proactive engagement, and a deep understanding of Fedora, its "products," stakeholders, and community dynamics.
 
 [[account-contributor]]
+=== Account Contributor
 
 As an Account Contributor, your main responsibility is to post social media content provided by others.
 For instance, you will get a ping by someone with what to post.
@@ -538,6 +568,7 @@ You do not need to come up with content on your own, but focus on executing the 
 A key aspect of this role is being readily available to receive content submissions from others.
 
 [[ways]]
+=== Ways to Contribute
 
 * Social media management
 * Engaging with our users on social media
@@ -546,6 +577,7 @@ A key aspect of this role is being readily available to receive content submissi
 * Working with individuals in the other roles to schedule and post content
 
 [[social-media-team]]
+=== Our Social Media Management Team
 
 [cols="1,1"]
 |===
@@ -563,6 +595,7 @@ image::stream-uploads/social-media-contribution-model.png[A visual aid titled "S
 
 
 [[content-contributor]]
+== Content Contributor
 
 Content Contributors actively contribute content ideas for social media posts.
 They assist with issues on GitLab that the marketing team needs help with.
@@ -571,6 +604,7 @@ They help in managing social media campaigns, promoting Fedora’s initiatives a
 These contributors curate content for use by the Social Media Managers.
 
 [[ways-to]]
+=== Ways to Contribute
 
 * Come up with interesting ideas to post about.
 Write a post on that topic, then follow the submission process below.
@@ -581,6 +615,7 @@ Make sure the content is engaging and aligns with Fedora’s messaging and voice
 Follow the steps below to submit your content idea to our Social Media Managers.
 
 [[sumbit-post]]
+=== How to submit your post to the Social Media Managers
 
 * Open an issue on GitLab for your idea/content in the Fedora https://gitlab.com/fedora/marketing/marketing-planning/-/issues[Marketing Planning] repo.
 * Choose ***social-media-template*** and follow the prompt to submit your idea.
@@ -588,11 +623,13 @@ Follow the steps below to submit your content idea to our Social Media Managers.
 
 
 [[community-contributor]]
+== Community Contributor
 
 Community Contributors are people whose primary role at Fedora is not marketing, communications, or promotion.
 They come to the Marketing Team for assistance on promoting their content on social media, such as: social media coverage for specific events, articles, or announcements.
 
 [[ways-to-contribute]]
+=== Ways to Contribute
 
 * Reach out to the Marketing Team with topics, ideas, or requests for social media coverage.
 The easiest way is to join our https://matrix.to/#/#marketing:fedoraproject.org[Matrix room] and simply mention what assistance you need.
@@ -603,6 +640,7 @@ But before then, the team prefers that you ask for help first, and if the reques
 
 
 [[changelog]]
+== Changelog
 
 For added transparency about when changes are made to this document, a changelog is maintained below.
 
@@ -616,10 +654,12 @@ For added transparency about when changes are made to this document, a changelog
 Copyediting led by Bassey.
 |===
 
+= Marketing Resources
 These resources will help you take Fedora to the people.
 
 
 [[contact]]
+== Where to find the Fedora Marketing Team
 
 * link:{team_synch_communication}[Our room on Matrix]
 * link:{team_asynch_communication}[Our tag on Fedora Discussion]
@@ -629,6 +669,7 @@ The best way to find and contact the Marketing team is on Matrix/Element or by o
 
 
 [[social-media]]
+== The social media profiles we currently manage
 
 * https://fosstodon.org/@fedora[Mastodon]
 * https://www.instagram.com/thefedoraproject/[Instagram]
@@ -641,6 +682,7 @@ Don't see your favorite social media platform here?
 
 
 [[tools]]
+== The tools we use in our work
 
 * We use https://hackmd.io/[HackMD] for working in collaboration in our notes;
 * We use both https://design.penpot.app[Penpot] and https://inkscape.org/[Inkscape] for our graphic design work.
@@ -663,6 +705,7 @@ They are the same tools the Fedora Design Team uses, so you can also help the De
 // * [[Videos]]
 // * For the more PR-oriented, a [[Ambassadors/NA/Draft/NewsMedia_HowTo|News Media Howto]] and the [[Fedora_news_distribution_network_%28NDN%29|Fedora News Distribution Network]].
 
+= Introducing Fedora Ready
 Fedora Ready is a program by the Fedora Project to support vendors who ship or support Fedora Linux on their hardware.
 // Article content last reviewed and verified by a human on…
 2024-07-31
@@ -679,6 +722,7 @@ Our xref:ready/list.adoc[central hub] lists all Fedora Ready devices so people c
 
 
 [[fedora-ready-is-not]]
+== What Fedora Ready is not
 
 * Fedora Ready is NOT a certification or endorsement program.
 * Fedora Ready is not a formal partnership program nor are we in legal partnership with vendors listed on our compatibility list.
@@ -686,6 +730,7 @@ Vendors oversee the lifecycle of their devices and offer what makes a good exper
 
 
 [[criteria]]
+== Criteria for Vendor Listing
 
 Vendors are listed under Fedora Ready if:
 
@@ -711,6 +756,7 @@ We expect to iterate and refine these criteria based on how vendors support Fedo
 
 
 [[delisting]]
+== Criteria for Delisting Vendor
 
 Fedora Ready vendors are hardware companies that meet our criteria in their support of Fedora Linux on their hardware.
 To keep our program running smoothly, we occasionally re-evaluate vendor offerings for compliance.
@@ -718,6 +764,7 @@ If a vendor's support of Fedora Linux on their device no longer align with our c
 This helps us maintain the program's value.
 
 [[delisting-criteria]]
+=== A Vendor will be delisted from the program if:
 
 * A vendor decides to stop supporting Fedora Linux on their devices after confirmation.
 * A vendor ships a modified Fedora  Linux when using the Fedora trademark or in a manner that differs from what we offer directly to our users.
@@ -726,6 +773,7 @@ This helps us maintain the program's value.
 In such cases, we reserve the right to take necessary actions, including removing the vendor and /or product from the program, to protect the integrity of the program and our trademark.
 
 [[delisting-process]]
+=== Delisting Process
 
 *Initial Communication*:
 If a vendor does not meet our criteria, we will notify the vendor about the possibility of being delisted.
@@ -748,11 +796,13 @@ We will update the xref:ready/list.adoc[Fedora Ready compatibility list] accordi
 
 
 [[limitations]]
+== Understanding our Limitations
 
 Our program is run by a dedicated team of volunteers, who are not full-time employees.
 This means that we do not have full-time availability or dedicated company resources, but our commitment to supporting vendors remains unwavering.
 
 [[vendors]]
+=== What This Means for Vendors
 
 - *Availability:*
 Our team members volunteer their time alongside their personal and professional commitments.
@@ -764,6 +814,7 @@ However, we are here to provide feedback and guidance in various forms.
 Ultimately, it is up to the vendors to implement and support Fedora Linux on their devices.
 
 [[past]]
+=== How We've Supported Vendors in the Past
 
 Despite these constraints, we have successfully provided support to vendors in various ways.
 Here are a few examples of what we have helped vendors with in the past:
@@ -775,6 +826,7 @@ Here are a few examples of what we have helped vendors with in the past:
 
 
 [[support]]
+== How We Support Vendors
 
 Fedora Ready support vendors by offering:
 
@@ -785,6 +837,7 @@ Fedora Ready support vendors by offering:
 
 
 [[devices]]
+== Vendor and Device Categories
 
 * *Fedora preinstalled:*
 Computers that come with Fedora Linux officially preinstalled by the vendor.
@@ -798,17 +851,20 @@ The Lenovo Linux team has informally said that Fedora Linux has a decent chance 
 
 
 [[list]]
+== Where Can You Find Fedora Ready Vendors and Devices?
 
 You can find Vendors and Fedora Ready approved devices on our xref:ready/list.adoc#fedora-ready-approved-devices[compatibility list].
 
 
 [[contact]]
+== How to Contact Us
 
 Vendors interested joining the Fedora Ready program can email us at fedora-ready-team [at] fedoraproject [dot] org.
 Then, we will discuss how to get you onboard.
 
 
 [[changelog]]
+== Changelog
 
 For added transparency about when changes are made to this document, a changelog is maintained below.
 
@@ -824,6 +880,7 @@ For added transparency about when changes are made to this document, a changelog
 Copyediting led by Bassey.
 |===
 
+= Fedora Ready Brand Guidelines
 Roseline Bassey <roseline-bassey@fedoraproject.org>; Justin W. Wheeler <jww@fedoraproject.org>; Fedora community contributors
 // Article content last reviewed and verified by a human on…
 2025-02-17
@@ -836,18 +893,21 @@ Therefore, the Fedora Trademark Guidelines take precedence over everything outli
 
 
 [[fedora-ready]]
+== What is Fedora Ready Program?
 
 Fedora Ready is a promotional program by the Fedora Project to support hardware vendors who preload Fedora Linux in their hardware or have tested their hardware to be compatible with Fedora Linux.
 The program aims to also simplify the process for our users to identify and purchase Fedora Ready approved devices.
 
 
 [[guideline-usage]]
+== When Should You Use our Guidelines?
 
 Use this guideline if you are working with our brand elements and want to be sure that you are following the guidelines.
 If you want to do something different with the logo, please email fedora-ready-team [AT] fedoraproject [DOT] org and we will be happy to help you.
 
 
 [[messaging]]
+== Brand Messaging
 
 Fedora Ready messaging is clear, friendly, and straightforward.
 As a means to promote Fedora Ready vendors and devices, we utilize various Fedora social channels.
@@ -857,6 +917,7 @@ Vendors do not need to imitate our messaging style since they are free to create
 
 
 [[logo]]
+== Permitted Logo Variants
 
 The Fedora Ready logo represents the Fedora Ready program and all that it does.
 We aim for a simple and modern design that makes our brand stand out and is easily identifiable.
@@ -893,6 +954,7 @@ Tritone variant 4
 
 
 [[obtaining-logo]]
+== Obtaining Fedora Ready Logo
 
 For formal approval on the use of Fedora Ready brand elements, please follow this process:
 
@@ -901,12 +963,14 @@ For formal approval on the use of Fedora Ready brand elements, please follow thi
 
 
 [[logo-usage]]
+== Using our Logo and Name
 
 The "Fedora Ready" name and logo are trademarks of Red Hat, Inc.
 Please follow the following guidelines for the proper usage of our name and logo.
 
 
 [[usage-guidelines]]
+== Usage Guidelines
 
 * “Fedora Ready” name and logo should not be used in any context that implies Fedora officially endorses a vendor, hardware, product, or service or in a way that implies an affiliation with Fedora and/or Fedora Ready brand.
 * *The Fedora Ready Logo:*
@@ -920,10 +984,12 @@ This ensures other elements do not crowd the logo.
 * Provide specifics on where and how the logo will be used and displayed to ensure proper evaluation.
 
 [[logo-size]]
+=== Minimum Size
 
 To ensure legibility, the logo should not be smaller than 70 pixels in digital or 20mm in print.
 
 [[incorrect-usage]]
+=== Incorrect Usage
 
 [cols="1a,1a",frame=none,grid=none,nostriping]
 |===
@@ -944,6 +1010,7 @@ Do not rotate or flip the logo. Keep the logo's orientation as it is.
 
 
 [[typography]]
+== Typography
 
 To maintain consistency across all materials we recommend using the following fonts.
 They are both openly licensed and freely shareable:
@@ -955,10 +1022,12 @@ For titles and headlines.
 
 
 [[imagery]]
+== Imagery and Graphics
 
 * Use only the product photos provided by the vendor or on the vendor's product page.
 * Use high-quality, high-resolution product photos or graphics that reflect the professionalism of Fedora Ready.
 
+= Fedora Ready Compatibility List
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
 2024-07-24
@@ -969,12 +1038,14 @@ We keep this list updated to assist our users in making well-informed decisions 
 
 
 [[criteria]]
+== Criteria for Vendor Listing
 
 To get your device listed, hardware vendors can check out our xref:ready/index.adoc#criteria[Criteria for Vendor Listing].
 Once you have reviewed it, feel free to xref:ready/index.adoc#contact[contact us] to discuss about adding your device(s) to the list.
 
 
 [[categories]]
+== Device Categories
 
 Vendors and devices are categorized into three main groups:
 
@@ -986,6 +1057,7 @@ Computers tested and verified to run Fedora Linux successfully.
 Computers that may run Fedora Linux successfully based on informal assurances from the vendor.
 
 [[fedora-ready-vendors]]
+== Fedora Ready Vendors
 Please find Fedora Ready hardware and vendor specific page below:
 
 * xref:ready/lenovo.adoc[Lenovo]
@@ -993,6 +1065,7 @@ Please find Fedora Ready hardware and vendor specific page below:
 * xref:ready/slimbook.adoc[Slimbook]
 * xref:ready/novacustom.adoc[NovaCustom]
 
+= Framework
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
 2024-07-24
@@ -1005,6 +1078,7 @@ Details on Framework Linux laptops are available at https://frame.work/linux
 
 
 [[fedora-supported-by-vendor]]
+== xref:ready/list.adoc#categories[Fedora Supported by Vendor]
 
 
 [cols="1,1,1,1,1"]
@@ -1023,6 +1097,7 @@ Details on Framework Linux laptops are available at https://frame.work/linux
 
 
 
+= Lenovo
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
 2025-11-10
@@ -1049,6 +1124,7 @@ https://www.lenovo.com/ca/en/laptops/results/?visibleDatas=1068%3ALinux[Canada]
 Hoping this comes to other geo's soon. In Europe and India look for the "Build Your PC" option on certified laptops and it should have Fedora available if the platform has a Fedora preload.
 
 [[fedora-preinstalled]]
+== xref:ready/list.adoc#categories[Fedora Preinstalled]
 
 [cols="1,1,1,1"]
 |===
@@ -1080,6 +1156,7 @@ Hoping this comes to other geo's soon. In Europe and India look for the "Build Y
 
 
 [[fedora-supported-by-vendor]]
+== xref:ready/list.adoc#categories[Fedora Supported by Vendor]
 
 [cols="1,1,1,1,1"]
 |===
@@ -1141,6 +1218,7 @@ Hoping this comes to other geo's soon. In Europe and India look for the "Build Y
 
 
 [[fedora-may-run]]
+== xref:ready/list.adoc#categories[Fedora May Run]
 
 [cols="1,1,1"]
 |===
@@ -1321,6 +1399,7 @@ Hoping this comes to other geo's soon. In Europe and India look for the "Build Y
 |Fedora may run	                |ThinkPad Yoga 370	                 |Redhat RHEL 7.3 - 7.x
 |===
 
+= NovaCustom
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
 2025-05-22
@@ -1334,6 +1413,7 @@ Learn more at https://novacustom.com/.
 
 
 [[fedora-preinstalled]]
+== xref:ready/list.adoc#categories[Fedora Preinstalled]
 
 [cols="1,1,1,1"]
 |===
@@ -1344,6 +1424,7 @@ Learn more at https://novacustom.com/.
 
 |===
 
+= Slimbook
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
 2024-07-31
@@ -1353,6 +1434,7 @@ Additionally, it engages with the community through local projects, partnerships
 Details on Slimbook Fedora laptops are available at https://fedora.slimbook.com/
 
 [[fedora-preinstalled]]
+== xref:ready/list.adoc#categories[Fedora Preinstalled]
 
 
 [cols="1,1,1,1,1"]
@@ -1375,6 +1457,7 @@ Details on Slimbook Fedora laptops are available at https://fedora.slimbook.com/
 |Fedora preinstalled               |HERO S intel i7 11800 H                    |Fedora 39        |link:https://slimbook.com/en/shop/category/laptops-hero-9[Slimbook HERO]| No longer on sale; compatible with Fedora 39
 |Fedora preinstalled               |Excalibur 16 AMD Ryzen 7 7840HS            |Fedora 39        |link:https://slimbook.com/en/shop/product/excalibur-16-amd-ryzen-7-7840hs-1267?category=60[Slimbook Excalibur]| No longer on sale; compatible with Fedora 39
 
+= Standard Operating Procedures (SOPs)
 Our formal processes for getting things done.
 
 * link:{team_issue_tracker}/-/issues/13[Defining who is officially part of the Marketing team]
@@ -1384,6 +1467,7 @@ Our formal processes for getting things done.
 ** https://gitlab.com/fedora/marketing/marketing-planning/-/issues/13[Marketing Team Membership ^[🡵\]^]
 ** https://gitlab.com/fedora/mindshare/home/-/issues/26[Social Media Access ^[🡵\]^]
 
+= Processing Livestreams: A Standardized Workflow
 Adrian Edwards <moralcode@fedoraproject.org>; Justin W. Wheeler <jww@fedoraproject.org>; Fedora community contributors
 
 This guide outlines a streamlined procedure for processing Fedora livestreams (e.g., Flock, release parties, Fedora Week of Diversity), making it easier to edit and share recordings of these events.
@@ -1401,11 +1485,13 @@ This workflow assumes you have basic familiarity with command-line tools and vid
 ====
 
 [[preparing-metadata]]
+== Step 1: Prepare Talk Metadata
 
 This process relies on a CSV file (comma-separated values) containing information about each talk (title, speakers, identifier).
 This data is used for automation and consistency.
 
 [[automatic-metadata]]
+=== 1.1 Automatic Metadata from Pretalx
 
 If your event uses Pretalx, you can automatically generate the CSV file using a Python script:
 
@@ -1424,6 +1510,7 @@ Ensure the Pretalx schedule accurately reflects the livestream order.
 The script can also generate YouTube descriptions based on a template file (`description.template.txt`).
 
 [[manual-metadata]]
+=== 1.2 Manual Metadata Preparation
 
 If you're not using Pretalx, create a CSV file with these columns:
 
@@ -1438,6 +1525,7 @@ Populate the CSV with information for each talk.
 
 
 [[tagging-segments]]
+== Step 2: Tag Chapters and Breaks
 
 Use Sponsorblock to tag intermissions and chapters in the YouTube video.
 This helps automate splitting the video later.
@@ -1449,6 +1537,7 @@ This helps automate splitting the video later.
 
 
 [[generating-timestamps]]
+== Step 3: Generate Chapter Timestamps
 
 YouTube uses a specific format for chapters.
 You can automate this formatting using a Python script:
@@ -1465,6 +1554,7 @@ Alternatively, you can manually edit the timestamps from Sponsorblock to match t
 
 
 [[splitting-video]]
+== Step 4: Download and Split the Video
 
 Use `yt-dlp` to download the video:
 
@@ -1485,6 +1575,7 @@ Then, use LosslessCut to split the video based on the Sponsorblock tags:
 
 
 [[creating-thumbnails]]
+== Step 5: Create Thumbnails
 
 Use Inkscape with the Next Generator extension to create thumbnails for each talk:
 
@@ -1498,6 +1589,7 @@ Use Inkscape with the Next Generator extension to create thumbnails for each tal
 
 
 [[adding-intros]]
+== Step 6: (Optional) Add Thumbnail Intros
 
 You can add a short intro with the thumbnail at the beginning of each talk using a Python script:
 
@@ -1509,6 +1601,7 @@ You can add a short intro with the thumbnail at the beginning of each talk using
 
 
 [[further-automation]]
+== Areas for Further Automation
 
 While this workflow incorporates significant automation, some areas can be further improved:
 
@@ -1527,6 +1620,7 @@ Automate the addition of end cards to videos.
 
 These improvements would further enhance the efficiency and robustness of the livestream processing pipeline.
 
+= Does your team need marketing help?
 Do you work on a Fedora-related project but can't get people to know it exists?
 
 * *link:{team_issue_tracker}/-/issues/new[Open a ticket in our GitLab]!*

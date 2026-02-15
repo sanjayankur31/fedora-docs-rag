@@ -1,11 +1,14 @@
 
+= Joining the Package Maintainers
 
 So, you have decided to become a package maintainer in the Fedora Project?
 This guide will lead you through your first package submission.
 It can be a completely new package,
 or update to an existing package.
 
+== Preparation
 
+=== Understand the Sponsorship Model
 
 Admission to the `packager` group,
 which is a prerequisite for many packaging tasks,
@@ -15,6 +18,7 @@ so that in the likely case that you want to apply,
 you are prepared for it.
 
 [#read_the_guidelines]
+=== Read the Guidelines
 
 If you do not know how to create an RPM package,
 refer to xref:Packaging_Tutorial.adoc[Packaging Tutorial].
@@ -25,6 +29,7 @@ They govern all package submissions.
 If you have questions, ask on the Fedora List.
 
 [#create_a_bugzilla_account]
+=== Create a Bugzilla Account
 
 Make sure you have an account in https://bugzilla.redhat.com/[Red Hat Bugzilla].
 
@@ -32,6 +37,7 @@ The email address that you use for your Bugzilla account
 should be the same email address as you use in the xref:create_a_fedora_account[Fedora Account System] for all things related to Fedora Packaging.
 
 [#create_a_fedora_account]
+=== Create a Fedora Account
 
 Create an account in the xref:fedora-accounts::user.adoc[Fedora Account System].
 (This is _not_ the same as the Bugzilla account.)
@@ -58,11 +64,13 @@ Keep in mind that uploading new public SSH key to all servers can take some time
 You can read more about this https://fedoraproject.org/wiki/Cryptography[here].
 
 [#join_the_important_mailing_lists]
+=== Join the important Mailing Lists
 
 Consider joining the following mailing lists:
 
 
 [#introduce_yourself]
+=== Introduce yourself
 
 Next, you should introduce yourself to the community on the https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel mailing] list.
 The primary purpose of this is
@@ -96,6 +104,7 @@ that goes on in any of the lists.
 Community discussion and feedback is always encouraged.
 
 [#understand_your_responsibilities]
+=== Understand your responsibilities
 
 Software components included in Fedora need to be maintained actively,
 and bugs — especially security issues —
@@ -112,6 +121,7 @@ via the development mailing list
 whenever needed.
 
 [#read_other_submissions]
+=== Read Other Submissions
 
 Read some other package submissions
 to learn about packaging
@@ -124,6 +134,7 @@ All comments on Fedora package reviews are sent to this
 list.
 
 [#configure_your_git]
+=== Configure Your Git
 
 The first thing to do when you set up Fedora packaging
 is to configure your username and email address for Git.
@@ -135,15 +146,18 @@ git config --global user.email johndoe@example.com
 ....
 
 [#install_the_developer_client_tools]
+=== Install Packager Tools
 
 Follow xref:Installing_Packager_Tools.adoc[Installing Packager Tools].
 
 [#find_software]
+== Finding software you wish to maintain for Fedora
 
 Being a Fedora packager means doing package maintenance.
 To get started, you need to find some packages to maintain.
 
 [#find_software_existing]
+=== Existing software
 
 Even packages that already exist in Fedora
 need regular maintenance.
@@ -170,11 +184,13 @@ has all commits to all package repositories.
 has all stable updates.
 
 [#find_software_new]
+=== New software
 
 If you intend to add a new package to Fedora,
 follow xref:New_Package_Process_for_New_Contributors.adoc[New Package Process for New Contributors].
 
 [#getting_help]
+== Getting Help
 
 We know that this process can be as clear as mud sometimes,
 and we're always trying to make it better.
@@ -184,11 +200,14 @@ please ask on the https://lists.fedoraproject.org/archives/list/devel@lists.fedo
 or on https://libera.chat/[Libera].
 
 [#one_off_contributions]
+== One-off contributions
 
 Changes to https://src.fedoraproject.org/browse/projects/[existing packages]
 can be suggested as explained in xref:Pull_Request_Guide.adoc[Pull Request Guide].
+= Installing Packager Tools
 
 [#installing]
+== Installing
 
 The `fedora-packager` package provides tools to help you setup and work with Fedora.
 It will bring in everything necessary for general packaging work.
@@ -198,7 +217,9 @@ Run the following:
 $ sudo dnf install fedora-packager
 ----
 
+== Configuration
 
+=== SSH key
 
 You also must have an ssh key configured in the
 https://accounts.fedoraproject.org/[Fedora Accounts System]
@@ -208,6 +229,7 @@ See wiki page https://fedoraproject.org/wiki/Cryptography#OpenSSH[Cryptography: 
 for more information.
 
 [#mock]
+=== Mock
 
 To be able to test the build procedure in a clean chroot with
 https://rpm-software-management.github.io/mock/[Mock],
@@ -218,6 +240,7 @@ $ sudo usermod -a -G mock <your_local_username>
 ----
 
 [#kerberos_ticket]
+== Acquiring a Kerberos ticket
 
 A https://fedoraproject.org/wiki/Infrastructure/Kerberos[Kerberos] ticket is necessary for accessing many Fedora services,
 such as xref:Using_the_Koji_Build_System.adoc[Koji]
@@ -249,6 +272,7 @@ You are using the hub at https://koji.fedoraproject.org/kojihub
 Authenticated via GSSAPI
 ----
 
+== Git Index Version
 
 Some tools, such as `fedpkg mockbuild`, only work with git repositories with
 index version ≤ 2.
@@ -270,14 +294,17 @@ If you are comfortable with using Git index version 2 by default for future Git 
 ----
 $ git config --global index.version 2
 ----
+= How to Get Sponsored into the Packager Group
 
 xref:fesco::Packager_sponsor_policy.adoc[Packager sponsor policy]
 governs sponsorship for the _packager_ group.
 This page contains some additional tips that are not part of the policy.
 
 [#discovering]
+== Discovering packages that need maintenance
 
 [#adopting]
+=== Orphaned packages
 
 You can find orphaned packages in need of maintenance in notifications sent to the
 https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/[devel] mailing list.
@@ -299,6 +326,7 @@ possibly with an invitation to contribute in its maintenance
 perhaps from the previous maintainer or a potential sponsor.
 
 [#commenting]
+=== Review requests
 
 If you plan to comment on review requests to demonstrate your level of understanding,
 you can search the https://fedoraproject.org/PackageReviewStatus/in_progress.html[list of reviews in progress]
@@ -306,14 +334,17 @@ and the https://fedoraproject.org/PackageReviewStatus/reviewable.html[list of un
 for review requests to comment on.
 
 [#how_to_find_a_sponsor]
+== How to find a sponsor
 
 If you have not yet been sponsored, request sponsorship by https://pagure.io/packager-sponsors/issues[raising an issue at packager-sponsors].
 You may contact sponsors directly through https://docs.pagure.org/fedora-sponsors/[Sponsors page].
 It will help you find the right sponsor for you
 based on programming language preference, domains of interest, native language, and other criteria.
 
+= How to Sponsor a New Contributor
 
 [#becoming_a_fedora_package_collection_sponsor]
+== Becoming a Fedora Package Collection Sponsor
 
 The Fedora Package Collection has been setup so
 to encourage "learning by doing"
@@ -363,6 +394,7 @@ for the new permissions to propagate through the system,
 you will be able to sponsor new packagers.
 
 [#sponsoring_someone_for_fedora_package_collection]
+== Sponsoring Someone for Fedora Package Collection
 
 Sponsoring someone
 for access to Fedora Package Collection
@@ -421,6 +453,7 @@ if you get a really hard question.
 xref:fesco::Packager_sponsor_policy.adoc[Sponsor responsibilities are detailed here].
 
 [#sponsoring_someone_for_provenpackagers]
+== Sponsoring Someone for provenpackagers
 
 xref:fesco::Provenpackager_policy.adoc[Provenpackagers] have access to most packages.
 FESCo members should forward requests for provenpackagers
@@ -447,6 +480,7 @@ the decision will be made by FESCo at their next meeting.
 See the xref:fesco::Provenpackager_policy.adoc[provenpackager description] for more information.
 
 [#welcome_note]
+== Welcome Note
 
 Once you have sponsored someone,
 we request that you send a note to Fedora devel mailing list
@@ -459,10 +493,12 @@ It would also help establish Fedora as a community of people and friends
 rather than merely a technical body of work.
 
 * Bugzilla
+= Bug Status Workflow
 
 This document describes best practices for setting Bugzilla status for bugs and feature requests.
 For Change proposal trackers, use the Bugzilla status described in the xref:program_management::changes_policy.adoc#_bugzilla_trackers[Changes policy].
 
+== Statuses
 
 The image below presents a general flow chart for bugs in the typical case.
 The flow is bi-directional: a bug can revert to a previous status if, for example, a proposed fix is incomplete.
@@ -473,11 +509,14 @@ The table below summarizes the statuses.
 More details, including additional keywords, flags, and resolutions are given in the following sections.
 
 
+== Resolutions
 
 The table below describes the resolutions that can apply to the _CLOSED_ status.
 
 
+== Priority and Severity
 
+=== Severity
 
 The _Severity_ field is used to indicate the bug's importance.
 The values for the severity field should be assigned with reference to the following guidance:
@@ -495,6 +534,7 @@ These are not hard and fast rules.
 Use your best judgement in setting the severity field appropriately.
 There are obvious cases which require the exercise of judgement—for instance, a bug which affects more than just the program in which it occurs, but less than the 'whole system'.
 
+=== Priority
 
 The _Priority_ field may be used, at their choice, by maintainers to keep track of the order in which they wish to address bugs in their package(s).
 This may be done with relation to the severity setting, or by any other method the maintainer chooses, at the maintainer's sole discretion.
@@ -503,6 +543,7 @@ No-one other than the maintainer or team responsible for a particular bug should
 
 
 * New Package Process
+= New Package Process for Existing Contributors
 
 This is a short version of the New Package Process,
 streamlined to show how existing contributors can make new packages.
@@ -643,16 +684,19 @@ please ask on the https://lists.fedoraproject.org/archives/list/devel@lists.fedo
 
 xref:Package_Maintenance_Guide.adoc[Package Maintenance Guide] may also be of use.
 
+= New Package Process for New Contributors
 
 This is a long version of the New Package Process,
 containing more details so new contributors can follow it more easily.
 Also the mandatory xref:How_to_Get_Sponsored_into_the_Packager_Group.adoc[sponsoring] step is included.
 
 [#install_tools]
+== Install Packager Tools
 
 Follow xref:Installing_Packager_Tools.adoc[Installing Packager Tools].
 
 [#check]
+== Check if the package already exists
 
 If some useful software is not included in Fedora already,
 you can submit it as a new package.
@@ -672,6 +716,7 @@ for packages under review.
 * Be aware of https://fedoraproject.org/wiki/Forbidden_items[forbidden items].
 
 [#make_a_package]
+== Make a Package
 
 * If you don't know how to create an RPM package,
 see the xref:Packaging_Tutorial.adoc[Packaging Tutorial].
@@ -686,6 +731,7 @@ This is surprisingly important
 because a significant number of submissions don't.
 
 [#upload_your_package]
+== Upload Your Package
 
 Upload your SRPM and SPEC files onto the Internet somewhere
 so that others can retrieve them.
@@ -736,6 +782,7 @@ Here look in to the */srpm-build/your_build_id/* folder
 and copy the *src.rpm* file URL for your review submission.
 
 [#create_your_review_request]
+== Create Your Review Request
 
 Fill out https://bugzilla.redhat.com/bugzilla/enter_bug.cgi?product=Fedora&format=fedora-review[Bugzilla Fedora review form].
 
@@ -767,6 +814,7 @@ so that everyone knows you did all of your homework.
 The review process is described in detail on the xref:Package_Review_Process.adoc[Package Review Process] page.
 
 [#inform_upstream]
+== Inform Upstream
 
 The Fedora Project prefers xref:Staying_Close_to_Upstream_Projects.adoc[Staying Close to Upstream Projects].
 Inform the developers that you are packaging the software.
@@ -781,12 +829,14 @@ future roadmaps
 etc.
 
 [#watch_for_feedback]
+== Watch for Feedback
 
 Watch the Bugzilla report for your first package.
 You should get notifications of changes by email.
 Fix any blockers that the reviewer(s) point out.
 
 [#get_sponsored]
+== Get Sponsored
 
 When the package is APPROVED by the reviewer,
 you must separately obtain member sponsorship
@@ -805,6 +855,7 @@ Your sponsor can add you to the packager group.
 You should receive an email confirmation of your sponsorship.
 
 [#add_package_to_source_code_management_scm_system_and_set_owner]
+== Add Package to Source Code Management (SCM) system and Set Owner
 
 Before proceeding, please sync your account by login on https://src.fedoraproject.org/[Fedora Package Sources]
 using your FAS credentials.
@@ -835,6 +886,7 @@ To request branches for other Fedora releases,
 see xref:Package_Maintenance_Guide.adoc#requesting_branches[Requesting branches].
 
 [#check_out_the_distgit_repository]
+== [[check_out_the_module]] Check out the distgit repository
 
 You _could_ check out your distgit repository now,
 but before doing that,
@@ -850,6 +902,7 @@ fedpkg clone <your_package>
 ....
 
 [#test_your_package]
+== Test Your Package
 
 Refer to https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds[Using Mock to test package builds]
 and xref:Using_the_Koji_Build_System.adoc#scratch_builds[Koji Scratch Builds]
@@ -858,6 +911,7 @@ Mock uses your local system
 while Koji command line tool uses the Fedora build system server.
 
 [#import_commit_and_build_your_package]
+== Import, commit, and build your package
 
 Now that you've checked out your (empty) distgit repository with `fedpkg`,
 cd into the repository's main branch:
@@ -907,6 +961,7 @@ For more information on using the Fedora package maintenance system,
 see the xref:Package_Maintenance_Guide.adoc[Package maintenance guide].
 
 [#update_your_branches]
+== Update Your Branches (if desired)
 
 Branches are `f#`
 (formerly `F-#` and before that `FC-#`),
@@ -959,6 +1014,7 @@ bump the SPEC release number,
 and request a new build.
 
 [#submit_package_as_update_in_bodhi]
+=== Submit Package as Update in Bodhi
 
 The Fedora update system called https://bodhi.fedoraproject.org[Bodhi]
 is used for pushing updates,
@@ -992,6 +1048,7 @@ that are necessary for it to run correctly.
 Please see the xref:Package_Update_Guide.adoc[Package Update Guide] for more details.
 
 [#make_the_package_available_in_comps_files]
+== Make the package available in "comps" files
 
 If appropriate for the package,
 make it available in "comps" files
@@ -1000,6 +1057,7 @@ and included in dnf package group operations.
 See https://fedoraproject.org/wiki/How_to_use_and_edit_comps.xml_for_package_groups?rd=PackageMaintainers/CompsXml[How to use and edit comps.xml for package groups] for more info.
 
 [#watch_for_updates]
+=== Watch for updates
 
 Fedora has the infrastructure available
 for monitoring new upstream releases
@@ -1009,6 +1067,7 @@ for more details.
 
 
 
+= Packaging Tutorial
 :page-aliases: quick-docs::creating-rpm-packages.adoc
 
 Packaging tutorial demonstrates RPM packaging for Fedora.
@@ -1016,6 +1075,7 @@ Packaging tutorial demonstrates RPM packaging for Fedora.
 * xref:Packaging_Tutorial_1_banner.adoc[Packaging Tutorial 1: banner]
 * xref:Packaging_Tutorial_2_GNU_Hello.adoc[Packaging Tutorial 2: GNU Hello]
 
+= Packaging Tutorial 1: banner
 
 This tutorial demonstrates RPM packaging
 by packaging the https://github.com/pronovic/banner[banner] program.
@@ -1041,10 +1101,12 @@ so in case there is any unclarity how a particular change should be applied,
 you can peek there.
 
 [#dev_env]
+== Installing Packager Tools
 
 Follow xref:Installing_Packager_Tools.adoc[Installing Packager Tools].
 
 [#building]
+== Creating the package directory
 
 In Fedora, package build instructions are organized in so called _dist-git_ repositories.
 There is a separate repository for each package.
@@ -1059,6 +1121,7 @@ $ mkdir banner && cd banner
 ----
 
 [#inside_spec]
+== Inside a Spec File
 
 RPM packages are configured by `.spec` files.
 Tools such as `rpmdev-newspec` can be used to generate empty specfiles for different purposes.
@@ -1104,6 +1167,7 @@ Note that, confusingly, in addition to marking the section names,
 the percent sign `%` also marks RPM _macros_.
 Thus `%autosetup`, `%configure`, `%make_build`, `%make_install` and `%autochangelog` are not sections.
 
+=== Tags
 
 `Version` contains the version number of the packaged software.
 
@@ -1131,6 +1195,7 @@ Usually, as in this case, it is a url pointing to a tarball released by the upst
 but it can also be a local file.
 There can be multiple `Source` tags if needed.
 
+=== Sections
 
 `%description` can often be copied from upstream README.
 
@@ -1163,6 +1228,7 @@ Lines which are not needed can be commented out with the hash `#`.
 
 You can find more information in the RPM Reference Manual's section https://rpm-software-management.github.io/rpm/manual/spec.html[Spec file format].
 
+== Downloading source
 
 We need the source code defined by the `Source` tag, often referred to as the _upstream_ source.
 This is most easily achieved by using the `spectool` command:
@@ -1178,6 +1244,7 @@ $ ls *.tar.gz
 banner-1.3.6.tar.gz
 ----
 
+== Building the Package
 
 We are ready for the first run to build source, binary and debugging packages.
 This, and many other tasks, are done with the `fedpkg` tool.
@@ -1223,6 +1290,7 @@ BuildRequires:   make
 
 Run a mockbuild again.
 
+== Installing files
 
 The next thing rpm will complain about are unpackaged files,
 i.e. the files that would be installed in the system,
@@ -1234,6 +1302,7 @@ then declare the next missing file and so on.
 
 We will go through the file list one by one.
 
+=== Executable
 
 ----
 Installed (but unpackaged) file(s) found:
@@ -1252,6 +1321,7 @@ so the executable is listed in `%files` as follows:
 %{_bindir}/banner
 ----
 
+=== Man pages
 
 ----
 Installed (but unpackaged) file(s) found:
@@ -1270,6 +1340,7 @@ Following its instructions, manpages are list as follows:
 At this point, mockbuild completes successfully,
 but there are still more files that we should add to the package.
 
+=== License file
 
 Every package must install its license, tagged with `%license` directive.
 In banner's case, as well as for many other projects,
@@ -1298,6 +1369,7 @@ rather than from the buildroot:
 %doc AUTHORS ChangeLog NEWS README
 ----
 
+== Checking the result with rpmlint
 
 Next you should check for conformance with RPM design rules,
 by running `rpmlint` on specfile, source rpm and binary rpm.
@@ -1325,6 +1397,7 @@ Change the docs line to
 
 Run `fedpkg mockbuild` and `fedpkg lint` again and observe that the warning is fixed.
 
+== Complete specfile
 
 Here is the final version of `banner.spec`:
 
@@ -1369,6 +1442,7 @@ With this specfile,
 you should be able to successfully complete the build process,
 and create the source and binary RPM packages.
 
+== Checking the result
 
 Having a working specfile and rpms built from it,
 the result can be checked.
@@ -1376,6 +1450,7 @@ Before checking the result by installing the package,
 let us do some simple checks.
 The RPM Package Manager `rpm` can be used for this.
 
+=== Files
 
 List the files contained in the package:
 
@@ -1400,6 +1475,7 @@ Also, under `+/usr/lib/.build-id+`, there is an automatically generated file.
 It is actually a symlink,
 mapping a build id to the `banner` binary for debugging purposes.
 
+=== Requires
 
 List the package's runtime dependencies with the following command:
 
@@ -1436,6 +1512,7 @@ The `rpmlib` requires are special.
 These specify various rpm features used in the rpm package itself,
 constraining the version of `+rpm+` that can be used to install the package.
 
+=== Provides
 
 Conversely, to check what capabilities the package provides, you can do:
 
@@ -1450,6 +1527,7 @@ The provides of this package are very simple.
 It simply provides its own name,
 in plain and architecture specific forms.
 
+=== Installing
 
 As a final check, the package can be installed and ran:
 
@@ -1473,6 +1551,7 @@ To clean up your system, undo the installation:
 $ sudo dnf -C -y history undo last
 ----
 
+== Building in Fedora infrastructure
 
 Even though the package is not part of Fedora distribution yet,
 a xref:Using_the_Koji_Build_System.adoc#scratch_builds[scratch build] can be performed
@@ -1525,6 +1604,7 @@ Successful execution looks something like this:
 92465688 build (f{MAJOROSVER}-candidate, banner-1.3.6-1.fc{MAJOROSVER}.src.rpm) completed successfully
 ----
 
+== References
 
 * https://rpm-software-management.github.io/rpm/manual/[RPM Reference Manual]
 
@@ -1534,6 +1614,7 @@ Successful execution looks something like this:
 
 * https://www.redhat.com/sysadmin/create-rpm-package[How to create a Linux RPM package]
 
+= Packaging Tutorial 2: GNU Hello
 :page-aliases: Packaging_Tutorial_GNU_Hello.adoc
 
 This tutorial demonstrates RPM packaging
@@ -1552,10 +1633,12 @@ Each package's quirks are unique,
 so these are best viewed as examples of the kind of problems that may arise when packaging.
 
 [#dev_env]
+== Installing Packager Tools
 
 Follow xref:Installing_Packager_Tools.adoc[Installing Packager Tools].
 
 [#building]
+== Creating the package directory
 
 For GNU Hello, the package can simply be named `hello`.
 This is also the name of Fedora's https://packages.fedoraproject.org/pkgs/hello/hello/[official GNU Hello package].
@@ -1565,6 +1648,7 @@ $ mkdir hello && cd hello
 ----
 
 [#inside_spec]
+== Inside a Spec File
 
 Create a file called `hello.spec` and paste the following minimal specfile.
 This already has `BuildRequires` tags for `gcc` and `make`,
@@ -1615,6 +1699,7 @@ you run it.
 %autochangelog
 ----
 
+== Downloading source
 
 Download sources and check that you now have them:
 
@@ -1624,6 +1709,7 @@ $ ls *.tar.gz
 hello-2.10.tar.gz
 ----
 
+== Building the Package
 
 [subs="attributes+"]
 ----
@@ -1632,10 +1718,12 @@ $ fedpkg --release f{MAJOROSVER} mockbuild
 
 This command fails because of unpackaged files.
 
+== Installing files
 
 As in part 1, we will go through the file list one by one.
 Run `fedpkg --release f{MAJOROSVER} mockbuild` again after each change to see the progress.
 
+=== Texinfo pages
 
 ----
 Installed (but unpackaged) file(s) found:
@@ -1678,6 +1766,7 @@ To handle both cases, delete the file if it exists:
 test -f %{buildroot}/%{_infodir}/dir && rm %{buildroot}/%{_infodir}/dir
 ----
 
+=== Translations
 
 ----
 Installed (but unpackaged) file(s) found:
@@ -1698,6 +1787,7 @@ to declare them is:
 
 After these changes, build succeeds.
 
+== Running tests
 
 GNU Hello, like many other projects,
 includes an automated test suite in the sources.
@@ -1828,6 +1918,7 @@ Therefore modify `%configure` invocation in `%build` section like this:
 %configure --enable-nls --disable-rpath
 ----
 
+== Checking the result with rpmlint
 
 Check with `fedpkg lint` reveals a problem:
 
@@ -1853,6 +1944,7 @@ iconv --from-code=ISO-8859-1 --to-code=UTF-8 --output=THANKS THANKS.old
 
 Run `fedpkg lint` again and observe that the warning is fixed.
 
+== A Complete hello.spec File
 
 Here is the final version of `hello.spec`:
 
@@ -1913,9 +2005,11 @@ With this `.spec` file,
 you should be able to successfully complete the build process,
 and create the source and binary RPM packages.
 
+== Checking the result
 
 You can now check the result with `rpm`, like was done in part 1.
 
+=== Files
 
 List the files contained in the package:
 
@@ -1943,6 +2037,7 @@ You can see that all the files listed in the specfile `%files` section are inclu
 including the automatically processed locale files.
 Also the `.build-id` file is there, just like in part 1.
 
+=== Requires and Provides
 
 You can list list the package's runtime dependencies and the capabilities it provides
 with the following two commands.
@@ -1954,6 +2049,7 @@ $ rpm --query --package --requires results_hello/2.10/1.fc{MAJOROSVER}/hello-2.1
 $ rpm --query --package --provides results_hello/2.10/1.fc{MAJOROSVER}/hello-2.10-1.fc{MAJOROSVER}.x86_64.rpm
 ----
 
+=== Installing
 
 As a final check, the package can be installed and ran:
 
@@ -1971,18 +2067,21 @@ $ sudo dnf -C -y history undo last
 ----
 
 
+= Package Review Process
 
 In order for a new package to be added to Fedora,
 the package must first undertake a formal review.
 The process is governed by the FESCo approved xref:fesco::Package_review_policy.adoc[Package Review Policy].
 
 [#review_process]
+== Review Process
 
 There are two roles in the review process,
 that of the contributor and that of the reviewer.
 This document presents both perspectives.
 
 [#exemptions]
+=== Exemptions
 
 Certain packages are exempted from the review process
 as described in the xref:fesco::Package_review_policy.adoc#what[Applicability section of Package Review Policy].
@@ -1994,6 +2093,7 @@ instead of a bug number:
 fedpkg request-repo --exception <package_name>
 ....
 
+=== Contributor
 
 A Contributor is defined as someone who wants to submit
 (and maintain)
@@ -2135,6 +2235,7 @@ for subsequent package changes,
 and should not reference the review ticket in subsequent updates
 you create in Bodhi.
 
+=== Reviewer
 
 The Reviewer is the person who chooses to review a package.
 
@@ -2209,6 +2310,7 @@ and to ensure that the Contributor closes the ticket
 when the process is complete.
 
 [#definitions_for_fedora_review_flag_settings]
+== Definitions for fedora-review flag Settings
 
 [cols=",,",]
 |===
@@ -2219,6 +2321,7 @@ when the process is complete.
 |===
 
 [#special_blocker_tickets]
+== Special blocker tickets
 
 There are a few tickets which can be placed in the "Blocks" field
 to indicate specific ticket statuses:
@@ -2231,6 +2334,7 @@ to indicate specific ticket statuses:
 |===
 
 [#the_whiteboard]
+== The Whiteboard
 
 To save time for reviewers,
 the https://fedoraproject.org/PackageReviewStatus/reviewable.html[New, reviewable Fedora package review tickets] page
@@ -2279,11 +2383,13 @@ which should be easily approachable
 by someone doing their first package review.
 
 [#tracking_of_package_requests]
+== Tracking of Package Requests
 
 The https://fedoraproject.org/PackageReviewStatus/[Package Review Tracker] provides various review-related reports
 and a simple way to search for reviews
 by package name or reporter name or others.
 
+= Package Renaming Process
 
 For a variety of reasons it may become necessary to rename a package in Fedora.
 The goal of this page is to outline the process
@@ -2291,6 +2397,7 @@ that must be followed
 when such an event occurs.
 
 [#re_review_required]
+== Re-review required
 
 When you wish to rename a package,
 you *MUST* request a re-review of your package through the xref:Package_Review_Process.adoc[Package Review Process].
@@ -2304,6 +2411,7 @@ and check the package for the proper Obsoletes and Provides
 They *MUST* document in the review request that they have done so.
 
 [#after_the_review]
+== After the review
 
 After the review is completed, and is satisfactory
 (for the avoidance of doubt,
@@ -2316,11 +2424,13 @@ as you normally would for a new package.
 After the new package is imported into git,
 you can follow the xref:Package_Retirement_Process.adoc[Package Retirement Process] for the old package.
 
+= Package Orphaning Process
 
 This page contains instructions for working with orphan packages
 as specified in xref:fesco::Policy_for_orphan_and_retired_packages.adoc[Policy for Orphan and Retired Packages].
 
 [#orphaning_procedure]
+== Orphaning Procedure
 
 . (Optional) If the package has co-maintainers, contact them
 to ask whether one of them wants to take over ownership of the package.
@@ -2352,6 +2462,7 @@ If nobody takes over the orphan package in six weeks,
 it is automatically retired by https://docs.pagure.org/releng/[Release Engineering].
 
 [#claiming_ownership_of_an_orphaned_package]
+== Claiming Ownership of an Orphaned Package
 
 Ownership of an orphaned package can be claimed
 by any interested packager at any time.
@@ -2380,10 +2491,12 @@ but want to claim ownership of an orphaned package,
 you must xref:How_to_Get_Sponsored_into_the_Packager_Group.adoc[Get Sponsored into the Packager Group] first.
 
 [#lists_of_orphan_and_retired_packages]
+== Lists of Orphan and Retired Packages
 
 * https://packager-dashboard.fedoraproject.org/user/orphan[A list of currently orphaned and/or retired packages]
 
 
+= Package Retirement Process
 
 When a package reaches the end of its useful life,
 the Package Retirement Process lets other people
@@ -2409,14 +2522,17 @@ branches) - see
 xref:epel::epel-policy-retirement.adoc[EPEL
 Retirement Policy] for additional requirements
 
+== Procedure
 
 Please execute the following steps in the order indicated.
 
+=== RPM
 
 If the package is being replaced by some other package,
 ensure that the `Obsoletes`/`Provides` tags are properly set by the new package
 as specified in xref:packaging-guidelines::index.adoc#renaming-or-replacing-existing-packages[Renaming/Replacing Guidelines].
 
+=== Git
 
 Run `fedpkg retire DESCRIPTION` in Rawhide.
 `DESCRIPTION` should explain why the package was retired.
@@ -2436,6 +2552,7 @@ Packages must not be retired from stable releases.
 If the package is included in EPEL, consider also xref:epel::epel-policy-retirement.adoc[EPEL Retirement policy].
 
 [#obsoleting_packages]
+=== fedora-obsolete-packages
 
 Consider what will happen to systems which have the now-retired packages installed.
 Generally, such packages will simply remain on the system as it is updated,
@@ -2443,12 +2560,15 @@ becoming increasingly outdated.
 If this is not acceptable, such as if there are upgrade path issues or security concerns,
 add your package to https://src.fedoraproject.org/rpms/fedora-obsolete-packages/[fedora-obsolete-packages].
 
+=== Comps
 
 Remove the package from https://fedoraproject.org/wiki/How_to_use_and_edit_comps.xml_for_package_groups[comps] if it is listed.
 
+=== Spins
 
 Remove the package from any https://pagure.io/fedora-kickstarts[spin kickstart file].
 
+=== Koji
 
 To keep retired packages from being pushed to the mirrors,
 they need to be blocked in Koji.
@@ -2480,6 +2600,7 @@ and the branches where the packages need to be blocked.
 Use only one ticket for all the packages you retired at once,
 do not open one ticket for each package if you retired several packages.
 
+== EPEL
 
 The retirement process can be used for EPEL as well
 with one difference:
@@ -2496,6 +2617,7 @@ When you need to add package from EPEL to any RHEL release,
 only retire EPEL branch when package is released in that RHEL release.
 
 [#claiming]
+== Claiming Ownership of a Retired Package
 
 If you really want to maintain a retired package,
 you need to be aware that if upstream is dead,
@@ -2539,6 +2661,7 @@ clearly specify which branches should be unblocked.
 . Restore the contents in Git and prepare a new build and update (if necessary).
 
 [#complete_removal]
+== Completely Removing a Package
 
 In rare cases, such as when licensing issues are discovered,
 it may be necessary to completely remove a package from Fedora.
@@ -2557,6 +2680,7 @@ $ DESC="my description"; git rm -r . && echo "$DESC" > dead.package && git add d
 Finally, add the package to fedora-obsolete-packages.
 
 
+= Package Maintenance Guide
 
 This page provides some basic instructions for day-to-day usage
 of the https://git-scm.com/[git]-based package maintenance system for Fedora.
@@ -2574,16 +2698,19 @@ You may have been looking for, or also be interested in:
 * xref:packaging-guidelines::index.adoc[Packaging Guidelines]
 
 [#installing_fedpkg_and_doing_initial_setup]
+== Installing Packager Tools
 
 Follow xref:Installing_Packager_Tools.adoc[Installing Packager Tools].
 
 [#common_fedpkg_commands]
+== Common fedpkg commands
 
 This section lists typical fedpkg commands in a normal workflow,
 with short descriptions.
 In this workflow,
 we will be operating on the xref:releases::rawhide.adoc[Rawhide] branch of the package.
 
+=== Check out a package
 ....
 fedpkg co <source_package_name>
 cd <source_package_name>
@@ -2592,10 +2719,12 @@ cd <source_package_name>
 This retrieves a copy of the package sources from the server.
 It's known as your 'working copy'.
 
+=== Update your checked-out copy from the Fedora server
 ....
 fedpkg pull
 ....
 
+=== Retrieve package sources
 ....
 fedpkg sources
 ....
@@ -2605,11 +2734,13 @@ This pulls any sources stored in the "lookaside cache"
 Steps like `fedpkg prep` and `fedpkg srpm` will do this if necessary,
 but you may want a copy right away.
 
+=== Make your changes to the package
 
 This is not an RPM packaging guide,
 so we'll assume you know what you're doing here.
 New sources and patches go in the working copy directory for now.
 
+=== Run the prep stage
 Extract source, apply patches etc. within the checkout directory:
 ....
 fedpkg prep
@@ -2618,6 +2749,7 @@ fedpkg prep
 This is useful for making sure your patches apply cleanly,
 and inspecting the source tree if you need to do so.
 
+=== Do a local build of the current state
 ....
 fedpkg local
 ....
@@ -2626,6 +2758,7 @@ This is the simplest kind of test build,
 but it's usually cleaner and a better test
 to do a Mock or Koji scratch build (see below).
 
+=== Do a mock build of the current state
 ....
 fedpkg mockbuild
 ....
@@ -2633,6 +2766,7 @@ fedpkg mockbuild
 This fires off a https://rpm-software-management.github.io/mock/[Mock] build, if you have Mock configured correctly.
 https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds[Using Mock to Test Package Builds] can help there.
 
+=== Generate a .src.rpm from the current state
 ....
 fedpkg srpm
 ....
@@ -2642,9 +2776,11 @@ You can request a Koji _scratch build_
 of the generated .src.rpm
 with the `koji build --scratch` command (see `man koji`).
 
+=== Do a scratch build using Koji
 
 See xref:Using_the_Koji_Build_System#scratch_builds[Koji scratch builds].
 
+=== Check changes you have made
 ....
 fedpkg diff
 ....
@@ -2653,6 +2789,7 @@ This is handy for making sure you did not touch something by mistake,
 or forget to bump the release,
 or forget to include a changelog.
 
+=== Run some checks (rpmlint) on your package
 ....
 fedpkg lint
 ....
@@ -2662,6 +2799,7 @@ and prevent them from appearing,
 you can create an rpmlint config file named `<source_package_name>.rpmlintrc`
 and it will get applied.
 
+=== Stage any small patches or new source files for commit
 ....
 git add <file>...
 ....
@@ -2675,6 +2813,7 @@ When you `commit` and `push` later,
 this change is communicated to the server.
 
 [#upload_new_source_files]
+=== Upload new source files to the lookaside cache
 ....
 fedpkg new-sources <file>...
 ....
@@ -2697,6 +2836,7 @@ The sources and `.gitignore` files in the repository keep it in sync with the lo
 A valid xref:Installing_Packager_Tools.adoc#kerberos_ticket[Kerberos ticket] is required to upload source files.
 Any time you use upload new sources, remember to commit changes to `sources` file.
 
+=== Switch to a different release branch
 [subs="attributes+"]
 ....
 fedpkg switch-branch (f{MAJOROSVER} | el{MAJOREPELVER} | rawhide)
@@ -2706,6 +2846,7 @@ Each Fedora release has its own branch in each package repository
 so different builds can be sent to each release.
 See below for more details on working with branches.
 
+=== Generate git changelog from package changelog
 ....
 fedpkg clog
 ....
@@ -2715,6 +2856,7 @@ so you can use it as the git changelog if you like.
 Some maintainers draw a distinction between the two,
 some do not.
 
+=== Commit changes
 ....
 fedpkg commit [-F <clog>] [-p] [-c]
 ....
@@ -2740,6 +2882,7 @@ The `-F clog` parameter will use the `clog` file from the previous step as the c
 `-p` will push (see below) at the same time as committing.
 `-c` combines the clog and `commit -F clog` steps into one, if you like that.
 
+=== Push changes
 ....
 fedpkg push
 ....
@@ -2750,16 +2893,19 @@ now is a good time to `fedpkg co` another copy of the repository somewhere else,
 compare what you get to your working copy,
 and run a test build on it.
 
+=== Do an 'official' build of the latest pushed changes
 ....
 fedpkg build
 ....
 
+=== Do a Container Layered Image Build
 ....
 fedpkg container-build
 ....
 
 See https://fedoraproject.org/wiki/Changes/Layered_Docker_Image_Build_Service[Container Layered Image Build] for details.
 
+=== Submit a package update for the latest build
 ....
 fedpkg update
 ....
@@ -2782,6 +2928,7 @@ if you are making inter-dependent changes
 to more than one package.
 
 [#typical_fedpkg_session]
+== Typical fedpkg session
 
 A typical session may look like this:
 
@@ -2801,6 +2948,7 @@ fedpkg commit -p -c  # commit and push in one go
 ....
 
 [#working_with_branches]
+== Working with branches
 
 Each Fedora and xref:epel::index.adoc[EPEL] release
 has a corresponding branch in the git repository.
@@ -2823,6 +2971,7 @@ If you would like to build your package for existing releases of Fedora or EPEL,
 you will need to explictly request those branches.
 
 [#requesting_branches]
+=== Requesting branches
 
 [subs="attributes+"]
 ....
@@ -2855,6 +3004,7 @@ fedpkg request-branch epel{MAJOREPELVER}
 This command will request a git branch for EPEL {MAJOREPELVER}.
 
 [#epel-only_packages]
+=== Retirement of `rawhide` branch in EPEL-only packages
 
 Some packages are only needed for EPEL.
 For those packages, after the repo has been created, the `rawhide` branch *must* be retired.
@@ -2864,6 +3014,7 @@ fedpkg retire <epel_only_package>
 ....
 
 [#merging_between_branches]
+=== Merging between branches
 
 You can maintain each branch entirely separately, if you like,
 laboriously copying changes between them
@@ -2923,6 +3074,7 @@ in working on a package,
 and consider how your changes will affect others.
 
 [#resolving_merge_conflicts]
+=== Resolving merge conflicts
 
 This is a large topic and somewhat beyond the scope of this guide,
 but we can give basic pointers.
@@ -2941,6 +3093,7 @@ Git will know if you have resolved the conflict
 by checking that all the conflict markers have been removed.
 
 [#using_git_mergetool_to_resolve_conflicts]
+=== Using git mergetool to resolve conflicts
 
 Git provides a graphical diff program to help resolve conflicts.
 This can be handy for visualizing what changes have occurred
@@ -2960,6 +3113,7 @@ git commit
 ....
 
 [#requesting_special_dist_tags]
+== Multi-package updates
 
 When a change to a package affects a large number of dependencies
 (e.g. all perl, python, ruby or ghc packages),
@@ -2969,6 +3123,7 @@ so that there is less disruption in Rawhide.
 See xref:Package_Update_Guide.adoc#multiple_packages[Package Update Guide, section Multi-package updates] for details.
 
 [#using_fedpkg_anonymously]
+== Using fedpkg anonymously
 
 You can use fedpkg like this:
 
@@ -2986,8 +3141,10 @@ If the intention is to submit changes to a Fedora developer,
 see xref:Pull_Request_Guide.adoc#review[Pull Request Guide].
 
 [#tips_and_tricks]
+== Tips and tricks
 
 [#local_branch_names]
+=== Local branch names
 
 If you use git commands to branch and checkout directly,
 you can define whatever local branch names you want.
@@ -2995,6 +3152,7 @@ If you use `fedpkg switch-branch`,
 it will default to creating the names used in the examples above.
 
 [#current_branch_and_state_in_shell_prompt]
+=== Current branch and state in shell prompt
 
 It is often helpful to know what branch you are working on
 at a glance.
@@ -3002,6 +3160,7 @@ You can add this information to your bash prompt
 with the information https://fedoraproject.org/wiki/Git_quick_reference?rd=Git_Quickref#Display_current_branch_in_bash[here].
 
 [#importing_a_.src.rpm_to_update]
+=== Importing a .src.rpm to update
 
 The command usually used to initially populate a git package repository
 from a .src.rpm that has been through the xref:Package_Review_Process.adoc[Package Review Process]
@@ -3019,6 +3178,7 @@ and do not overwrite changes made to the package by others.
 For this reason, its use is not recommended.
 
 [#making_changes_on_an_older_branch_without_breaking_the_upgrade_path]
+=== Making changes on an older branch without breaking the upgrade path
 
 Here is the scenario:
 You have built your package successfully on the `f{MAJOROSVER}` branch,
@@ -3045,6 +3205,7 @@ Then tag and build as usual.
 This approach was initially discussed https://listman.redhat.com/archives/fedora-extras-list/2006-May/msg00083.html[in this mailing list thread].
 
 [#removing_a_package_build_pending_for_rawhide_or_branched]
+=== Removing a package build pending for Rawhide or Branched
 
 From time to time
 you may want to remove a package build you submitted to Rawhide or to Branched
@@ -3074,6 +3235,7 @@ where `foo-1.1.3-1.fc{NEXTOSVER}` is replaced with the name of your package buil
 See `koji help` or xref:Using_the_Koji_Build_System.adoc[Using the Koji Build System] for more information.
 
 [#ssh_fingerprint]
+=== ssh fingerprint
 
 The recommended option is to include `VerifyHostKeyDNS yes`
 in your `~/.ssh/config` file.
@@ -3087,6 +3249,7 @@ and then check that the correct string for src.fedoraproject.org
 ended up in your `~/.ssh/known_hosts` file.
 
 [#problems_connecting_to_the_repository]
+=== Problems connecting to the repository
 
 The `fedpkg` tool clones repositories using the ssh:// protocol,
 so this should not be a problem normally
@@ -3097,6 +3260,7 @@ to ensure the remote repository is being accessed via an ssh:// protocol,
 and not git://.
 
 [#problems_pushing_to_forked_repository]
+=== Problems pushing to forked repository using http
 
 Pushing to your forked repository using http might fail with an error like this:
 
@@ -3121,6 +3285,7 @@ oidc_scopes = openid,https://id.fedoraproject.org/scope/groups,https://src.fedor
 ```
 
 [#it_builds_here_why_doesnt_it_build_there]
+=== It builds here, why doesn't it build there?
 
 Is your package building locally
 — even with Mock, even as a scratch build!
@@ -3135,6 +3300,7 @@ are issues because of https://bugzilla.redhat.com/show_bug.cgi?id=1179139[build/
 and failures because of test suites that depend on operations finish on precise timing
 (and a busy build system may not be able to perform operations on time).
 
+== References
 
 * https://src.fedoraproject.org/
 * https://fedoraproject.org/wiki/Infrastructure/Kerberos[Infrastructure/Kerberos]
@@ -3143,6 +3309,7 @@ and failures because of test suites that depend on operations finish on precise 
 * https://fedoraproject.org/wiki/Infrastructure/VersionControl/dist-git[Infrastructure/VersionControl/dist-git]
 
 
+= Package Update Guide
 
 This document shows how to submit an update
 for a package you maintain in Fedora.
@@ -3154,6 +3321,7 @@ see xref:Package_Maintenance_Guide.adoc[Package Maintenance Guide] for that.
 at various stages of the xref:releases::lifecycle.adoc[Fedora Release Life Cycle],
 refer to the xref:fesco::Updates_Policy.adoc[Updates Policy].
 
+== Overview
 
 This page is intended for new and existing package maintainers.
 Testers and regular users may be interested in the https://fedoraproject.org/wiki/QA:Updates_Testing[updates-testing] repository
@@ -3176,6 +3344,7 @@ There is also a difference between single-package updates
 and multi-package updates.
 
 [#finding_dependents]
+== Finding dependents
 
 It is important to include all the needed packages in the update.
 Even if you initially just intend to update a single package,
@@ -3213,6 +3382,7 @@ and any further affected packages included in the update.
 
 [#rawhide_and_early_branched]
 [#single_packages]
+== Single-package updates before updates-testing activation
 
 Most packages can be updated alone,
 without needing to be grouped with other packages
@@ -3254,6 +3424,7 @@ before waiving a failure.
 
 
 [#later_branched_and_stable_releases]
+== Single-package updates after updates-testing activation
 
 At the https://docs.fedoraproject.org/en-US/fesco/Updates_Policy/#updates-testing-activation[updates-testing activation] point,
 the Bodhi update feedback system is enabled by https://docs.pagure.org/releng/[Release Engineering]
@@ -3292,6 +3463,7 @@ At the time you submit the update, you will be asked for several attributes.
 See section xref:update_attributes[Update attributes] for guidance.
 
 [#multiple_packages]
+== [[updating_inter_dependent_packages]] Multi-package updates
 
 Some updates require changes in multiple related packages.
 For example, if you maintain `bar` which depends on `libfoo`,
@@ -3300,6 +3472,7 @@ you should check that `bar` still works with the updated `libfoo`.
 If it does not, you must ensure the appropriate changes are made to `bar`,
 and include the updated `bar` in your update along with the updated `libfoo`.
 
+=== Side tags
 
 Fedora has the concept of using side tags for these situations,
 which means the builds are done "on the side"
@@ -3318,6 +3491,7 @@ or 14 days if they have not been used at all.
 Make sure and use your side tag before then.
 
 [#creating_a_side_tag]
+==== Creating a side tag
 
 The easiest way to create a side tag
 is to be in the checked out  branch (e.g. `rawhide`) of one of the packages
@@ -3362,6 +3536,7 @@ $ fedpkg mockbuild -- --addrepo='https://kojipkgs.fedoraproject.org/repos/<sidet
 ----
 
 [#bodhi_update_for_builds_in_a_side_tag]
+==== Bodhi update for builds in a side tag
 
 When you're done building all packages you want in a side tag,
 you have to submit them as an update to Bodhi
@@ -3415,6 +3590,7 @@ i.e. are available for the general public.
 The side tag will be automatically removed.
 
 [#adding_removing_builds_to_from_a_side_tag]
+==== Adding/Removing builds to/from a side tag
 As a packager, you can add or remove builds from your side tag using these commands:
 
 ----
@@ -3433,6 +3609,7 @@ Removing the last build in a side-tag will automatically remove/delete the side 
 
 =========
 
+==== Using macros in a side tag
 
 Koji allows macros to be set in a side tag.
 This is useful in certain scenarios,
@@ -3467,6 +3644,7 @@ and the list of currently supported macros is available in the
 xref:fesco::Policy_for_buildroot_macros.adoc[Policy for Buildroot Macros].
 
 [#removing_side_tag]
+==== Removing a side tag
 To conserve build system resources,
 side tags that are not needed anymore should be removed.
 This can be achieved with `fedpkg` as follows:
@@ -3478,6 +3656,7 @@ fedpkg remove-side-tag <side-tag>
 Bodhi automatically removes side tags used for updates pushed to stable,
 so removing them manually is usually not necessary.
 
+=== Bodhi multi-package updates
 
 You can also create an update with multiple packages directly in Bodhi,
 either with the https://bodhi.fedoraproject.org[Bodhi web application],
@@ -3502,6 +3681,7 @@ you should contact the https://docs.pagure.org/releng/[release engineering] team
 or a proven packager for help.
 
 [#buildroot_overrides]
+==== Buildroot overrides
 
 When trying to do a multi-package update without using side tags,
 you may need to use https://fedoraproject.org/wiki/Bodhi/BuildRootOverrides[buildroot overrides].
@@ -3514,6 +3694,7 @@ Unlike with side tags, buildroot overrides are not isolated
 and thus should be only used in special cases where side tags do not suffice.
 
 [#update_attributes]
+== Update attributes
 
 At the time you submit an update,
 you will be asked for several attributes.
@@ -3577,6 +3758,7 @@ or even 10
 may be appropriate.
 
 [#handling_feedback_from_automated_tests]
+== Handling feedback from automated tests
 
 Fedora's automated testing systems,
 including Fedora CI, openQA, and Fedora CoreOS CI,
@@ -3619,6 +3801,7 @@ and will usually resolve them or post a comment on the update
 explaining the problem and suggesting a resolution.
 
 [#waive_a_result]
+=== Waive a result
 
 Any failure of a gating test will prevent your update from being released.
 On the update's _Details_ page in the Bodhi web interface,
@@ -3646,6 +3829,7 @@ You can get it from the https://pagure.io/waiverdb[the waiverdb repository],
 which also has some instructions on usage.
 
 [#who_will_receive_your_update_when]
+== Who will receive your update, when?
 
 Before updates-testing activation,
 when an update goes _stable_ it is tagged for inclusion in the next compose.
@@ -3684,6 +3868,7 @@ this is an insignificant implementation detail.
 For more details, see xref:quick-docs::repositories.adoc[Repositories].
 
 [#branched_milestone_freezes]
+== Branched milestone freezes
 
 For a short period before each milestone release,
 the stable xref:quick-docs::repositories.adoc#the-fedora-repository-in-branched-releases[fedora] repository is frozen.
@@ -3705,6 +3890,7 @@ through the https://fedoraproject.org/wiki/QA:SOP_blocker_bug_process[blocker bu
 For more on the Fedora development process, see xref:releases::lifecycle.adoc[Fedora Release Life Cycle].
 
 [#security_updates]
+== Security updates
 
 For bugs identified as security issues,
 there is an additional process
@@ -3714,6 +3900,7 @@ that blocks a https://fedoraproject.org/wiki/Security_Tracking_Bugs[Security Tra
 you must follow that process in addition to this one.
 
 [#new_package_submissions]
+== New package submissions
 
 If you want to build a new package,
 but you aren't sure which releases to send it to:
@@ -3730,6 +3917,7 @@ and been given an SCM repository,
 is exactly the same as that for package updates.
 
 [#consider_creating_a_package_test_plan]
+== Consider creating a package test plan
 
 If you https://fedoraproject.org/wiki/QA:SOP_test_case_creation[create test cases] for your package,
 and https://fedoraproject.org/wiki/QA:SOP_package_test_plan_creation[categorize them appropriately],
@@ -3738,6 +3926,7 @@ so that testers will have some guidance
 for planned update testing.
 
 
+= Pull Request Guide
 
 Fedora dist-git repositories allow pull requests,
 which makes it possible for anybody to
@@ -3765,6 +3954,7 @@ Any other release, such as `f{MAJOROSVER}`, would mostly differ in branch name.
 This guide also assumes you are not a member of the _packager_ group,
 with separate notes in places where packagers should do something differently.
 
+== When to make a pull request?
 
 In general, the reasons for making pull requests to Fedora packages are similar to
 reasons for making pull requests to any open source repository.
@@ -3783,6 +3973,7 @@ that Fedora's version of a package is not the latest upstream release.
 Package may also miss optional dependencies or use sub-optimal build options,
 so that all features offered by upstream do not work on Fedora.
 
+== Prerequisites
 
 You need a https://accounts.fedoraproject.org[Fedora account].
 In xref:Installing_Packager_Tools.adoc[Installing Packager Tools],
@@ -3790,6 +3981,7 @@ you also need to follow sections
 xref:Installing_Packager_Tools.adoc#installing[Installing]
 and xref:Installing_Packager_Tools.adoc#mock[Configuration / Mock].
 
+== Cloning the repository
 
 Usually, package maintainers work directly in package's dist-git repository,
 to which only they have access to.
@@ -3818,6 +4010,7 @@ username  ssh://username@pkgs.fedoraproject.org/forks/username/rpms/some-package
 username  ssh://username@pkgs.fedoraproject.org/forks/username/rpms/some-package.git (push)
 ----
 
+== Branching
 
 Just as you would for any other pull request for any other project,
 create a Git branch for your changes:
@@ -3826,6 +4019,7 @@ create a Git branch for your changes:
 git switch -c my-changes
 ----
 
+== Make changes
 
 For pull requests, making local changes and testing the changes locally
 is just the same for maintainers.
@@ -3841,6 +4035,7 @@ fedpkg --release rawhide mockbuild
 # Install and test the package
 ----
 
+== Updating sources
 
 Only members of the _packager_ group can update sources to lookaside cache.
 If downloaded source needs to be changed,
@@ -3857,6 +4052,7 @@ In that case, make sure that the merge request uniquely points to the source arc
 Usually, that is done by using a URL in specfile's _Source_ tag,
 but if not, a specfile comment can be used.
 
+== Committing and pushing
 
 Create a commit from your changes,
 write a sensible commit message,
@@ -3871,6 +4067,7 @@ git push username HEAD
 Note that if the package uses https://fedora-infra.github.io/rpmautospec-docs/[rpmautospec],
 the commit message will be parsed to create the package changelog entry.
 
+== Creating pull request
 
 When you push your changes to your fork,
 you get a link for creating a pull request as output:
@@ -3890,6 +4087,7 @@ If you could not populate the lookaside cache in <<Updating sources>> step,
 include that info and ask for a maintainer to do that.
 
 [#ci]
+== Continuous integration
 
 Dist-git repositories are connected to CI by default.
 For all pull requests, a Koji scratch build and installability test is done.
@@ -3903,6 +4101,7 @@ a comment with `[citest]` will do so.
 Package maintainers may also enable more advanced
 https://fedoraproject.org/wiki/Zuul-based-ci#How_to_attach_a_Pagure_repository_on_Zuul[Zuul] CI.
 
+== Review
 
 Pull request review is just like for any other open source project.
 Hopefully, a maintainer quickly responds to your pull request
@@ -3916,6 +4115,7 @@ In case you feel that response takes too long,
 you can (and should) follow the steps in
 xref:fesco::Policy_for_nonresponsive_package_maintainers.adoc[Non-responsive maintainer policy].
 
+== After the merge
 
 The pull request is complete when a maintainer has merged it.
 Afterwards, the maintainer still needs to:
@@ -3931,6 +4131,7 @@ because they can start the build immediately after they merge.)
 * In case changes were done to branch other than _rawhide_,
 xref:Package_Update_Guide.adoc[submit a Bodhi update].
 
+= Reporting Issues
 
 When working with Fedora Packaging, you may run across issues
 in packages,
@@ -3941,6 +4142,7 @@ Here are some basic guidelines to assist you
 in reporting such issues to the right people.
 
 [#where]
+== Where to Report Issues
 
 Any issue that requires direct work on Fedora's infrastructure
 should be reported using the
@@ -3959,6 +4161,7 @@ If ever you are unsure about which system to use,
 feel free to report to whichever system seems best to you.
 Your report can be redirected as needed.
 
+= Staying Close to Upstream Projects
 
 The Fedora Project focuses,
 as much as possible,
@@ -3982,6 +4185,7 @@ to upstream (verb)::
 A short-hand way of saying "push changes to the upstream project".
 
 [#what_are_deviations_from_upstream]
+== What are deviations from upstream?
 
 * *Patches*: Patches are the most common and obvious type of change from upstream.
 Patches might be written by the package maintainer,
@@ -4036,6 +4240,7 @@ make sure you consider the impact of every change
 either in Fedora or by users themselves.
 
 [#why_push_changes_upstream]
+== Why push changes upstream?
 
 * *Common Benefit And Reduced Maintenance Burden*:
 When Fedora carries patches that are specific to Fedora or deviations from upstream projects,
@@ -4132,6 +4337,7 @@ leaving Fedora package maintainers to concentrate on good packaging
 instead of acting in between users and upstream issues.
 
 [#tips_on_upstreaming_patches]
+== Tips On Upstreaming Patches
 
 * Talk to upstream.
 Maintaining a regular flow of communication with the upstream project
@@ -4182,6 +4388,7 @@ we will have to carry some patches downstream to enforce our policies
 even if upstream does not agree with us at that point.
 
 [#some_examples_of_exceptions]
+== Some Examples Of Exceptions
 
 * *Severe Security Issues Or Major Bug Fixes*:
 For any major issues such as security holes or data loss problems,
@@ -4249,6 +4456,7 @@ and associated costs/benefits.
 Refer to the xref:packaging-guidelines::index.adoc#bundling[Bundling and Duplication of System Libraries] section of the Packaging Guidelines for details.
 Fixes related to bundling should of course be sent upstream if possible.
 
+== References
 
 * xref:project::initiatives.adoc[Current Initiatives]
 * xref:packaging-guidelines::index.adoc#_all_patches_should_have_an_upstream_bug_link_or_comment[All patches should have an upstream bug link or comment]
@@ -4256,8 +4464,10 @@ Fixes related to bundling should of course be sent upstream if possible.
 * https://fedoraproject.org/wiki/PackageMaintainers/TrackingDownstream
 
 
+= Using the Koji build system
 
 [#using_koji_in_fedora]
+== Using Koji in Fedora
 
 The https://fedoraproject.org/wiki/Koji[Koji Build System] is Fedora's RPM buildsystem.
 Packagers use the `koji` client to request package builds
@@ -4270,10 +4480,12 @@ a script that interacts with the RPM Packaging system and other subsystems,
 like `git` and `koji` itself.
 
 [#installing_koji]
+=== Installing Koji
 
 Follow xref:Installing_Packager_Tools.adoc[Installing Packager Tools].
 
 [#koji_config]
+=== Koji Config
 
 The global-local client configuration file for koji is `/etc/koji.conf`.
 You should not need to change this from the defaults
@@ -4282,6 +4494,7 @@ These allow you to use the primary build system
 as well as secondary arch build systems.
 
 [#building_with_fedpkg_targets]
+=== Building with fedpkg targets
 
 When building with `fedpkg` within a git repository,
 every push is automatically tagged via git.
@@ -4307,6 +4520,7 @@ fedpkg build --target 'f{NEXTOSVER}-python'
 ....
 
 [#chained_builds]
+==== Chained builds
 Sometimes you want to make sure
 that one build has succeeded before launching the next one,
 for example when you want to rebuild a package
@@ -4372,6 +4586,7 @@ and the tests will not encounter dependency issues
 if you rebuilt all the dependent packages correctly.
 
 [#scratch_builds]
+=== Scratch Builds
 
 Sometimes it is useful to be able to build a package against the buildroot
 without actually including it in the release.
@@ -4420,6 +4635,7 @@ fedpkg scratch-build --target <target>
 Run `fedpkg scratch-build --help` or `koji build --help` for more information.
 
 [#build_failures]
+=== Build Failures
 
 If your package fails to build, you get an error, for example:
 
@@ -4444,6 +4660,7 @@ to view the logs.
 See the help output for more details.
 
 [#advanced_use_of_koji]
+=== Advanced use of Koji
 
 We've tried to make Koji self-documenting wherever possible.
 The command line tool prints a list of valid commands,
@@ -4476,6 +4693,7 @@ options:
 ....
 
 [#using_koji_to_generate_a_mock_config_to_replicate_a_buildroot]
+==== Using koji to generate a mock config to replicate a buildroot
 
 koji can be used to replicate a build root for local debugging.
 
@@ -4511,6 +4729,7 @@ You must pass `--topurl=https://kojipkgs.fedoraproject.org/` to any mock-config 
 to get a working mock-config from Fedora's koji.
 
 [#using_koji_to_control_tasks]
+==== Using Koji to control tasks
 
 List tasks:
 
@@ -4531,6 +4750,7 @@ koji resubmit 3
 ....
 
 [#building_a_package_with_the_command_line_tool]
+==== Building a Package with the command-line tool
 
 Instead of using the `fedpkg` target,
 you can also directly use the command line tool, `koji`.
@@ -4557,7 +4777,9 @@ the git url MUST be based on pkgs.fedoraproject.org.
 Other arbitrary git repos cannot be used for builds.
 
 [#koji_tags_and_packages_organization]
+=== Koji tags and packages organization
 
+==== Terminology
 
 In Koji, it is sometimes necessary to distinguish
 between a package in general,
@@ -4580,6 +4802,7 @@ A specific arch and subpackage of a build.
 For example: kernel-2.6.9-34.EL.x86_64, kernel-devel-2.6.9-34.EL.s390, glibc-2.3.4-2.19.i686, glibc-common-2.3.4-2.19.ia64
 
 [#tags_and_targets]
+==== Tags and targets
 
 Koji organizes packages using tags.
 In Koji a tag is roughly a collection of packages:
@@ -4595,7 +4818,9 @@ This allows target names to remain fixed
 as tags change through releases.
 
 [#koji_commands_for_tags]
+==== Koji commands for tags
 
+===== Targets
 
 You can get a full list of build targets with the following command:
 
@@ -4621,6 +4846,7 @@ You probably do not want to build against rawhide.
 If Fedora N is the latest one out,
 to build to the next one, choose `f\{N+1}`.
 
+===== Tags
 
 You can get a list of tags with the following command:
 
@@ -4628,6 +4854,7 @@ You can get a list of tags with the following command:
 $ koji list-tags
 ....
 
+===== Packages
 
 As mentioned above,
 each tag has its own list of packages that may be placed in the tag.
@@ -4643,6 +4870,7 @@ the second tells you which tag the package entry has been inherited from,
 and the third tells you the owner of the package.
 
 [#latest_builds]
+===== Latest Builds
 
 To see the latest builds for a tag, use the `latest-pkg` command:
 
@@ -4655,8 +4883,10 @@ The output gives you not only the latest builds,
 but which tag they have been inherited from
 and who built them.
 
+= Upstream Release Monitoring
 
 [#tldr_get_packages_monitored]
+== TLDR; Get Packages Monitored
 
 Get bug reports for a project's releases in Fedora's Bugzilla with three steps:
 
@@ -4665,11 +4895,13 @@ Get bug reports for a project's releases in Fedora's Bugzilla with three steps:
 . Tweak the monitoring setting for your packages at https://src.fedoraproject.org[Fedora Package Sources].
 
 [#bugzilla_bugs_by_the_new_hotness]
+== Bugzilla bugs by the-new-hotness
 
 * https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&bug_status=ASSIGNED&bug_status=MODIFIED&bug_status=ON_DEV&bug_status=ON_QA&bug_status=VERIFIED&bug_status=RELEASE_PENDING&bug_status=POST&classification=Fedora&columnlist=product%2Ccomponent%2Cassigned_to%2Cbug_status%2Cresolution%2Cshort_desc%2Cchangeddate%2Copendate&email1=upstream-release-monitoring%40fedoraproject.org&emailreporter1=1&emailtype1=substring&list_id=1733771&order=changeddate%20DESC%2Cbug_id%20DESC&query_based_on=&query_format=advanced[OPEN bugs]
 
 * https://bugzilla.redhat.com/buglist.cgi?bug_status=CLOSED&classification=Fedora&email1=upstream-release-monitoring%40fedoraproject.org&emailreporter1=1&emailtype1=substring&order=changeddate%20DESC%2Cbug_id%20DESC&query_based_on=&query_format=advanced[CLOSED bugs]
 
+== Details
 
 One of the core foundation of Fedora is _First_
 which implies having the latest versions of software
@@ -4684,6 +4916,7 @@ This service is divided into three components:
 * monitoring settings at Fedora Package Sources
 * https://github.com/fedora-infra/the-new-hotness/[The-new-hotness]
 
+=== Anitya
 
 Available at https://release-monitoring.org[release-monitoring.org],
 Anitya provides a web service where anyone can register a project.
@@ -4698,12 +4931,14 @@ Edit entries there to your heart's content.
 Bugs, features request and patches should go to https://github.com/fedora-infra/anitya/issues[anitya/issues].
 
 [#monitoring_settings_at_src.fedoraproject.org]
+=== Monitoring settings at src.fedoraproject.org
 
 Fedora package maintainers can use the bottom left column
 at the package's page at https://src.fedoraproject.org/[src.fedoraproject.org]
 to have it monitored by the-new-hotness (see below).
 
 [#the_new_hotness]
+=== The-New-Hotness
 
 https://github.com/fedora-infra/the-new-hotness/[The-new-hotness] is an application that listens to the fedmsg bus
 and acts upon receiving messages from https://release-monitoring.org[release-monitoring.org].
@@ -4732,6 +4967,7 @@ Then the bugzilla ticket will be created upon finding a new version,
 but no scratch build will be made.
 
 [#related_projects]
+== Related Projects
 
 * https://github.com/tannewt/open-source-watershed[OSWatershed] - Monitors several distributions at once
 * https://ppisar.fedorapeople.org/cpandistributionsinfedora.xhtml[Perl package monitoring]
@@ -4742,17 +4978,21 @@ but no scratch build will be made.
 * https://fedorapeople.org/cgit/till/public_git/cnucnu.git/[cnucnu] — the tool previously used to provide this service for Fedora
 * https://repology.org/metapackages/outdated-in-repo/fedora_rawhide/[Repology] cross distro version comparison
 
+= Utilities for package maintainers
 
 A number of utilities are available to support package maintainers in maintaining their packages.
 This page attempts to list them, but is not a complete list.
 
+== Testing new builds with pull requests and CI
 
 See xref:Pull_Request_Guide.adoc#ci[Pull Request Guide].
 
+== Running fedora-review on review tickets using fedora-review service
 
 The link:https://github.com/FrostyX/fedora-review-service/[Fedora Review Service] automatically runs `fedora-review` on new package review tickets.
 One can add a comment with `[fedora-review-service-build]` to re-run the review service.
 
+== Automating package updates: Packit
 
 link:https://packit.dev/[Packit] is a service that enables automated pull request creation for new upstream releases.
 More information on configuring dist-git repositories to use Packit
@@ -4760,6 +5000,7 @@ can be found https://packit.dev/docs/fedora-releases-guide[in the documentation]
 
 Please remember to run impact checks before pushing updates.
 
+== fbrnch: an advanced packager tool
 
 If you maintain larger package sets or want additional features/checks over fedpkg and other tools (like fedora-review),
 you can install link:https://src.fedoraproject.org/rpms/fbrnch[fbrnch] (pronounced f-branch).
@@ -4772,6 +5013,7 @@ but some of the main highlights are:
 * requesting new package repos and importing directly from package reviews
 * updating sources and much more
 
+= Common Rpmlint issues
 
 This is a collection of information on dealing with rpmlint.
 Note that the first thing you should do is use the `-e` option to rpmlint so that it provides additional explanatory text.
@@ -4798,12 +5040,14 @@ For more information on rpmlint project look at
 link:https://github.com/rpm-software-management/rpmlint[Rpmlint GitHub Project].
 
 [[debuginfo_without_sources]]
+== debuginfo-without-sources
 
 `rpmlint -e debuginfo-without-sources` provides a good overall picture.
 See also xref:packaging-guidelines::index.adoc[Compiler Flags].
 To fix, make sure that debugging symbols are created and that they not are stripped so they are available for rpmbuild post-processing.
 
 [[file_not_utf8]]
+== file-not-utf8
 
 Indicates that the text encoding of the specified file, usually a documentation file, is not in UTF8.
 
@@ -4820,12 +5064,14 @@ packaging tips page and
 link:https://fedoraproject.org/wiki/Packaging_tricks#Convert_encoding_to_UTF-8[generic tricks] page.
 
 [[hardcoded_library_path]]
+== hardcoded-library-path
 
 * Don't hardcode path in SPEC.
 Use xref:packaging-guidelines::RPMMacros.adoc[macros] instead.
 
 
 [[incorrect_fsf_address]]
+== incorrect-fsf-address
 
 * In all cases, upstream should be informed about this.
 This is the only requirement with respect to this error.
@@ -4835,16 +5081,19 @@ Other files can be patched if deemed suitable.
 
 
 [[incoherent_version_in_changelog]]
+== incoherent-version-in-changelog
 
 * Check the changelog entries. See also: xref:packaging-guidelines::manual-changelog.adoc[manual changelog guidelines] in the Packaging Guidelines.
 
 [[invalid_license]]
+== invalid-license
 
 The value of the License tag was not recognized.
 
 * Check xref:packaging-guidelines::LicensingGuidelines.adoc[Licensing guidelines]
 
 [[invalid_soname]]
+== invalid-soname
 
 The handling of this error depends on ld.so's load path (the "linker
 path") and whether it refers to a private or public library.
@@ -4879,6 +5128,7 @@ See also:
 * https://lists.fedoraproject.org/pipermail/devel/2012-April/166104.html[thread on fedora-devel]
 
 [[no_binary]]
+== no-binary
 
 The package should be of the noarch architecture because it doesn't contain any binaries.
 
@@ -4886,6 +5136,7 @@ The package should be of the noarch architecture because it doesn't contain any 
 
 
 [[no_documentation]]
+== no-documentation
 
 Indicates that rpmlint could find no files marked as `%doc`. There are
 several instances where this is acceptable:
@@ -4899,6 +5150,7 @@ This would be rare as most packages should have some license text, a changelog o
 This often happens with the -devel subpackage, but you should at least double check to ensure that any of the package's documentation which is intended for developers is included in the -devel subpackage.
 
 [[no_soname]]
+== no-soname
 
 Indicates that the specified shared library does not have an soname (`DT_SONAME ELF` field).
 If an executable is linked with a shared object which has a DT_SONAME field, when the executable is run the dynamic linker will attempt to load the shared object specified by the `DT_SONAME` field rather than the using the file name given to the linker.
@@ -4911,6 +5163,7 @@ See also:
 * link:#invalid_soname[invalid-soname]
 
 [[private_shared_object_provides]]
+== private-shared-object-provides
 
 ----
 W: python-dulwich.x86_64: W: private-shared-object-provides /usr/lib64/python2.6/site-packages/dulwich/_objects.so _objects.so()(64bit)
@@ -4920,11 +5173,13 @@ W: python-dulwich.x86_64: W: private-shared-object-provides /usr/lib64/python2.6
 xref:packaging-guidelines::AutoProvidesAndRequiresFiltering.adoc[Auto Provides And Requires Filtering].
 
 [[script_without_shebang]]
+== script-without-shebang
 
 * You forgot to unset executable bits on files reported by this error.
 See also: link:https://fedoraproject.org/wiki/Packaging_tricks#Add_shebang[add shebang].
 
 [[spurious_executable_perm]]
+== spurious-executable-perm
 
 Indicates that a file has the executable bit set while it probably should not.
 
@@ -4932,6 +5187,7 @@ Indicates that a file has the executable bit set while it probably should not.
 the `%install` section of your spec file.
 
 [[standard_dir_owned_by_package]]
+== standard-dir-owned-by-package
 
 This package owns a directory that is part of the standard hierarchy,
 which can lead to default directory permissions or ownerships being
@@ -4940,10 +5196,12 @@ changed to something non-standard.
 * You should not make Systems standard directory's to belong to your package.
 
 [[unstripped_binary_or_object]]
+== unstripped-binary-or-object
 
 * Make sure binaries are executable.
 
 [[unused_direct_shlib_dependency]]
+== unused-direct-shlib-dependency
 
 A binary is linked against a library but doesn't actually call any of the functions in it.
 This often happens when linking against a library which uses pkgconfig; the pkgconfig file cannot know which specific functions your binary may need to call, so it tells you to link against all of the possibilities.
@@ -4965,6 +5223,7 @@ export CXXFLAGS="%{optflags} -Wl,--as-needed"
 ----
 
 [[wrong_file_end_of_line_encoding]]
+== wrong-file-end-of-line-encoding
 
 The file has incorrect end-of-line encoding, usually caused by creation or modification on a non-Unix system.
 It could prevent the file from being displayed correctly in certain circumstances.

@@ -1,5 +1,7 @@
+= Common Problems
 
 [changelog-source-date-epoch]
+== File timestamp differences because of a changelog entry in the future
 
 The problem manifests as file having a different timestamp in a rebuild.
 Example rpmdiff output:
@@ -54,6 +56,7 @@ As we can see from the commit timestamp, the time was Jan 27 00:04:43 +0100,
 which is Jan 26 23:04:43 UTC,
 and the timestamp in the `%changelog` section is off-by-one.
 
+=== Solutions
 
 The easiest solution is to switch to
 https://docs.pagure.org/fedora-infra.rpmautospec/[rpmautospec].
@@ -68,6 +71,7 @@ or to correct the timestamps by hand.
 
 Finally, consider **not** working so late at night.
 Open source maintainers need to think about their long-term health too.
+= Conference talks
 
 This page collects conference talks and other public presentations around Fedora Reproducible Builds.
 

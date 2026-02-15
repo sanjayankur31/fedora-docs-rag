@@ -7,13 +7,16 @@
 
 :nbsp:
 
+= The C Programming Language
 
 [[sect-Defensive_Coding-C-Language]]
+== The Core Language
 
 C provides no memory safety. Most recommendations in this section
 deal with this aspect of the language.
 
 [[sect-Defensive_Coding-C-Undefined]]
+=== Undefined Behavior
 
 Some C constructs are defined to be undefined by the C standard.
 This does not only mean that the standard does not describe
@@ -33,6 +36,7 @@ Common sources of undefined behavior are:
 * overflow in signed integer arithmetic
 
 [[sect-Defensive_Coding-C-Pointers]]
+=== Recommendations for Pointers and Array Handling
 
 Always keep track of the size of the array you are working with.
 Often, code is more obviously correct when you keep a pointer
@@ -77,6 +81,7 @@ because the expression on the left can overflow or wrap around
 no longer reflects the number of bytes to be processed.
 
 [[sect-Defensive_Coding-C-Arithmetic]]
+=== Recommendations for Integer Arithmetic
 
 Overflow in signed integer arithmetic is undefined. This means
 that it is not possible to check for overflow after it happened,
@@ -168,6 +173,7 @@ semantics for integer arithmetic, including defined behavior on
 integer overflow.
 
 [[sect-Defensive_Coding-C-Globals]]
+=== Global Variables
 
 Global variables should be avoided because they usually lead to
 thread safety hazards. In any case, they should be declared
@@ -213,6 +219,7 @@ recommended to allocate the object using
 the same reasons outlined in <<sect-Defensive_Coding-C-Allocators-alloca>>.
 
 [[sect-Defensive_Coding-C-Libc]]
+== The C Standard Library
 
 Parts of the C standard library (and the UNIX and GNU extensions)
 are difficult to use, so you should avoid them.
@@ -223,6 +230,7 @@ buffers using `malloc` which your code must
 deallocate explicitly using `free`.
 
 [[sect-Defensive_Coding-C-Absolutely-Banned]]
+=== Absolutely Banned Interfaces
 
 The functions listed below must not be used because they are
 almost always unsafe. Use the indicated replacements instead.
@@ -265,6 +273,7 @@ statvfs` (limit not actually enforced by the kernel,
 see `_PC_NAME_MAX` above)
 
 [[sect-Defensive_Coding-C-Avoid]]
+=== Functions to Avoid
 
 The following string manipulation functions can be used securely
 in principle, but their use should be avoided because they are
@@ -315,6 +324,7 @@ explicit `envp` argument in process creation
 (see xref:tasks/Tasks-Processes.adoc#sect-Defensive_Coding-Tasks-Processes-environ[Specifying the Process Environment])
 
 [[sect-Defensive_Coding-C-String-Functions-Length]]
+=== String Functions with Explicit Length Arguments
 
 The C run-time library provides string manipulation functions
 which not just look for NUL characters for string termination,
@@ -323,6 +333,7 @@ However, these functions evolved over a long period of time, and
 the lengths mean different things depending on the function.
 
 [[sect-Defensive_Coding-C-Libc-snprintf]]
+==== `snprintf`
 
 The `snprintf` function provides a way to
 construct a string in a statically-sized buffer. (If the buffer
@@ -378,6 +389,7 @@ Note that it is not permitted to use the same buffer both as
 the destination and as a source argument.
 
 [[sect-Defensive_Coding-C-Libc-vsnprintf]]
+==== `vsnprintf` and Format Strings
 
 If you use `vsnprintf` (or
 `vasprintf` or even
@@ -399,6 +411,7 @@ function (see <<ex-Defensive_Coding-C-String-Functions-format-Attribute>>).
 ====
 
 [[sect-Defensive_Coding-C-Libc-strncpy]]
+==== `strncpy`
 
 The `strncpy` function does not ensure that
 the target buffer is null-terminated. A common idiom for
@@ -418,6 +431,7 @@ function for this purpose:
 ----
 
 [[sect-Defensive_Coding-C-Libc-strncat]]
+==== `strncat`
 
 The length argument of the `strncat`
 function specifies the maximum number of characters copied
@@ -456,6 +470,7 @@ It is not possible to use format strings like
 you use separate buffers. `snprintf` does
 not support overlapping source and target strings.
 
+==== `strlcpy` and `strlcat`
 
 Some systems support `strlcpy` and
 `strlcat` functions which behave this way,
@@ -468,15 +483,19 @@ related to the `snprintf` return value.
 To emulate `strlcat`, use the approach
 described in <<sect-Defensive_Coding-C-Libc-strncat>>.
 
+==== ISO C11 Annex K *pass:attributes[{blank}]`_s` functions
 
 ISO C11 adds another set of length-checking functions, but GNU
 libc currently does not implement them.
 
+==== Other `strn*` and `stpn*` functions
 
 GNU libc contains additional functions with different variants
 of length checking. Consult the documentation before using
 them to find out what the length actually means.
 
+=== Using tricky syscalls or library functions
+==== `readlink`
 This is the hardest system call to use correctly because of everything you have to do
 
 * The buf should be of PATH_MAX length, that includes space for the terminating NUL character.
@@ -485,19 +504,24 @@ This is the hardest system call to use correctly because of everything you have 
 * It should be checked for < 0 for indication of errors.
 * The caller needs to '\0' -terminate the buffer using the returned value as an index.
 
+==== `chroot`
 * Target dir should be writable only by root (this implies owned by).
 * Must call `chdir` immediately after chroot or you are not really in the changed root.
 
+==== `stat`, `lstat`, `fstatat`
 * These functions have an inherent race in that you operate on the path name which could change in the mean time. Using fstat is recommended when stat is used.
 * If `S_ISLNK` macro is used, the stat buffer MUST come from lstat or from fstatat  with `AT_SYMLINK_NOFOLLOW`
 * If you are doing something really important, call fstat after opening and compare the before and after stat buffers before trusting them.
 
+==== `setgid`, `setuid`:
 * Call these in the right order: groups and then uid.
 * Always check the return code.
 * If `setgid` & `setuid` are used, supplemental groups are not reset. This must be done with setgroups or initgroups before the uid change.
 
 [[sect-Defensive_Coding-C-Allocators]]
+== Memory Allocators
 
+=== `malloc` and Related Functions
 
 The C library interfaces for memory allocation are provided by
 `malloc`, `free` and
@@ -519,6 +543,7 @@ free the old pointer. Therefore, the idiom `ptr =
 realloc(ptr, size);` is wrong because the memory
 pointed to by `ptr` leaks in case of an error.
 
+==== Memory leaks
 After a memory area has been allocated with functions like `malloc`,
 `calloc`, etc. and it is no longer necessary, it must be freed in
 order for the system to release the memory region and re-use it if
@@ -551,6 +576,7 @@ ptr = malloc(size);
 ----
 
 [[sect-Defensive_Coding-C-Use-After-Free]]
+==== Use-after-free errors
 
 After `free`, the pointer is invalid.
 Further pointer dereferences are not allowed (and are usually
@@ -580,6 +606,7 @@ free(ptr);
 }
 ----
 
+==== Handling Memory Allocation Errors
 
 Recovering from out-of-memory errors is often difficult or even
 impossible. In these cases, `malloc` and
@@ -596,6 +623,7 @@ xref:tasks/Tasks-Serialization.adoc#sect-Defensive_Coding-Tasks-Serialization-De
 for related memory allocation concerns.
 
 [[sect-Defensive_Coding-C-Allocators-alloca]]
+=== `alloca` and Other Forms of Stack-based Allocation
 
 Allocation on the stack is risky because stack overflow checking
 is implicit. There is a guard page at the end of the memory
@@ -649,6 +677,7 @@ of the block that defines them. Do not mix VLA and `alloca` though,
 otherwise this behaviour is not guaranteed for VLA either!
 
 [[sect-Defensive_Coding-C-Allocators-Arrays]]
+=== Array Allocation
 
 When allocating arrays, it is important to check for overflows.
 The `calloc` function performs such checks.
@@ -667,6 +696,7 @@ in OpenBSD and has been adopted in many other platforms, NetBSD
 exposes an incompatible behavior with the same interface.
 
 [[sect-Defensive_Coding-C-Allocators-Custom]]
+=== Custom Memory Allocators
 
 Custom memory allocates come in two forms: replacements for
 `malloc`, and completely different interfaces
@@ -693,6 +723,7 @@ fragmentation. But often, utilization of individual pools
 is poor, and external fragmentation increases the overall
 memory usage.
 
+=== Conservative Garbage Collection
 
 Garbage collection can be an alternative to explicit memory
 management using `malloc` and
@@ -713,8 +744,10 @@ program.
 
 
 [[sect-Defensive_Coding-C-Other]]
+== Other C-related Topics
 
 [[sect-Defensive_Coding-C-Wrapper-Functions]]
+=== Wrapper Functions
 
 Some libraries provide wrappers for standard library functions.
 Common cases include allocation functions such as
@@ -762,7 +795,9 @@ appropriate. Incorrectly applied attributes can result in
 undesired behavioral changes in the compiled code.
 
 [[sect-Defensive_Coding-C-Common-Mistakes]]
+=== Common mistakes
 
+==== Mistakes in macros
 A macro is a name given to a block of C statements as a pre-processor
 directive. Being a pre-processor the block of code is transformed by
 the compiler before being compiled.
@@ -845,12 +880,15 @@ overflowed.
 
 :nbsp:
 
+= The {cpp} Programming Language
 
 [[sect-Defensive_Coding-CXX-Language]]
+== The Core Language
 
 C++ includes a large subset of the C language. As far as the C
 subset is used, the recommendations in xref:programming-languages/C.adoc#chap-Defensive_Coding-C[Defensive Coding in C] apply.
 
+=== Array Allocation with `operator new[]`
 
 For very large values of `n`, an expression
 like `new T[n]` can return a pointer to a heap
@@ -885,6 +923,7 @@ untrusted data.
 See xref:tasks/programming-languages/C.adoc#sect-Defensive_Coding-C-Allocators-Arrays[Array Allocation]
 for array allocation advice for C-style memory allocation.
 
+=== Overloading
 
 Do not overload functions with versions that have different
 security characteristics. For instance, do not implement a
@@ -892,6 +931,7 @@ function `strcat` which works on
 `std::string` arguments. Similarly, do not name
 methods after such functions.
 
+=== ABI compatibility and preparing for security updates
 
 A stable binary interface (ABI) is vastly preferred for security
 updates. Without a stable ABI, all reverse dependencies need
@@ -921,6 +961,7 @@ Compatibility Issues With {cpp}]
 pointer-to-implementation idiom).
 
 [[sect-Defensive_Coding-CXX-Language-CXX11]]
+=== {cpp}0X and {cpp}11 Support
 
 GCC offers different language compatibility modes:
 
@@ -972,16 +1013,19 @@ with TR1 support, that is, with [option]`-std=c++03` or
 features, the Boost {cpp} library contains replacements.
 
 [[sect-Defensive_Coding-CXX-Std]]
+== The C++ Standard Library
 
 The C++ standard library includes most of its C counterpart
 by reference, see xref:programming-languages/C.adoc#chap-Defensive_Coding-C[Defensive Coding in C].
 
 [[sect-Defensive_Coding-CXX-Std-Functions]]
+=== Functions That Are Difficult to Use
 
 This section collects functions and function templates which are
 part of the standard library and are difficult to use.
 
 [[sect-Defensive_Coding-CXX-Std-Functions-Unpaired_Iterators]]
+==== Unpaired Iterators
 
 Functions which use output operators or iterators which do not
 come in pairs (denoting ranges) cannot perform iterator range
@@ -1036,6 +1080,7 @@ read beyond the end of the input range if the caller is not careful:
 * `std::mismatch`
 
 [[sect-Defensive_Coding-CXX-Std-String]]
+=== String Handling with `std::string`
 
 The `std::string` class provides a convenient
 way to handle strings. Unlike C strings,
@@ -1108,6 +1153,7 @@ does not depend on sharing of the internal character array
 object anymore.
 
 [[sect-Defensive_Coding-CXX-Std-Subscript]]
+=== Containers and `operator[]`
 
 Many sequence containers similar to `std::vector`
 provide both `operator[](size_type)` and a
@@ -1134,6 +1180,7 @@ defined; it returns an arbitrary pointer, but not necessarily
 the NULL pointer.
 
 [[sect-Defensive_Coding-CXX-Std-Iterators]]
+=== Iterators
 
 Iterators do not perform any bounds checking. Therefore, all
 functions that work on iterators should accept them in pairs,
@@ -1160,8 +1207,10 @@ difficult to use correctly, see <<sect-Defensive_Coding-CXX-Std-Functions-Unpair
 
 :nbsp:
 
+= The Java Programming Language
 
 [[sect-Defensive_Coding-Java-Language]]
+== The Core Language
 
 Implementations of the Java programming language provide strong
 memory safety, even in the presence of data races in concurrent
@@ -1170,6 +1219,7 @@ from occurring, unless certain low-level features are used; see
 <<sect-Defensive_Coding-Java-LowLevel>>.
 
 [[sect-Defensive_Coding-Java-Language-ReadArray]]
+=== Increasing Robustness when Reading Arrays
 
 External data formats often include arrays, and the data is
 stored as an integer indicating the number of array elements,
@@ -1199,6 +1249,7 @@ default constructor and do not specify a size hint. You can
 simply add the elements to the collection as you read them.
 
 [[sect-Defensive_Coding-Java-Language-Resources]]
+=== Resource Management
 
 Unlike C++, Java does not offer destructors which can deallocate
 resources in a predictable fashion. All resource management has
@@ -1263,6 +1314,7 @@ unchecked) exceptions, but this should not be a reason to ignore
 any actual error conditions.
 
 [[sect-Defensive_Coding-Java-Language-Finalizers]]
+=== Finalizers
 
 Finalizers can be used a last-resort approach to free resources
 which would otherwise leak. Finalization is unpredictable,
@@ -1310,6 +1362,7 @@ implemented by overriding the `finalize()`
 method, and to custom finalization using reference queues.
 
 [[sect-Defensive_Coding-Java-Language-Exceptions]]
+=== Recovering from Exceptions and Errors
 
 Java exceptions come in three kinds, all ultimately deriving
 from `java.lang.Throwable`:
@@ -1354,6 +1407,7 @@ to predict and can happen at any point and reflect that
 something went wrong beyond all expectations.
 
 [[sect-Defensive_Coding-Java-Language-Exceptions-Errors]]
+==== The Difficulty of Catching Errors
 
 Errors (that is, exceptions which do not (indirectly) derive
 from `java.lang.Exception`), have the
@@ -1403,8 +1457,10 @@ However, if possible, catching errors should be coupled with a
 way to signal the requirement of a virtual machine restart.
 
 [[sect-Defensive_Coding-Java-LowLevel]]
+== Low-level Features of the Virtual Machine
 
 [[sect-Defensive_Coding-Java-Reflection]]
+=== Reflection and Private Parts
 
 The `setAccessible(boolean)` method of the
 `java.lang.reflect.AccessibleObject` class
@@ -1423,6 +1479,7 @@ not happen because all the language-defined checks still apply.)
 This feature should be avoided if possible.
 
 [[sect-Defensive_Coding-Java-JNI]]
+=== Java Native Interface (JNI)
 
 The Java Native Interface allows calling from Java code
 functions specifically written for this purpose, usually in C or
@@ -1530,6 +1587,7 @@ is defined, but in C/C++ it is not (for the
 `jint` and `jlong` types).
 
 [[sect-Defensive_Coding-Java-MiscUnsafe]]
+=== `sun.misc.Unsafe`
 
 The `sun.misc.Unsafe` class is unportable and
 contains many functions explicitly designed to break Java memory
@@ -1538,6 +1596,7 @@ using this class.
 
 
 [[sect-Defensive_Coding-Java-SecurityManager]]
+== Interacting with the Security Manager
 
 The Java platform is largely implemented in the Java language
 itself. Therefore, within the same JVM, code runs which is part
@@ -1573,6 +1632,7 @@ default (including many classes which are part of the OpenJDK
 implementation).
 
 [[sect-Defensive_Coding-Java-SecurityManager-Compatible]]
+=== Security Manager Compatibility
 
 A lot of code can run without any additional permissions at all,
 with little changes. The following guidelines should help to
@@ -1595,6 +1655,7 @@ untrusted code (hopefully in a restricted and secure manner),
 see <<sect-Defensive_Coding-Java-SecurityManager-Privileged>>.
 
 [[sect-Defensive_Coding-Java-SecurityManager-Activate]]
+=== Activating the Security Manager
 
 The usual command to launch a Java application,
 [command]`java`, does not activate the security manager.
@@ -1632,6 +1693,7 @@ active, and explicit requests to drop privileges will be
 honored.
 
 [[sect-Defensive_Coding-Java-SecurityManager-Unprivileged]]
+=== Reducing Trust in Code
 
 The <<ex-Defensive_Coding-Java-SecurityManager-Unprivileged>> example
 shows how to run a piece code of with reduced privileges.
@@ -1689,6 +1751,7 @@ Unfortunately, this affects the virtual machine as a whole, so
 it is not possible to do this from a library.
 
 [[sect-Defensive_Coding-Java-SecurityManager-Privileged]]
+=== Re-gaining Privileges
 
 Ordinarily, when trusted code is called from untrusted code, it
 loses its privileges (because of the untrusted stack frames
@@ -1789,6 +1852,7 @@ invocation out of the privileged code section, of course.)
 
 :nbsp:
 
+= The Python Programming Language
 
 Python provides memory safety by default, so low-level security
 vulnerabilities are rare and typically needs fixing the Python
@@ -1805,12 +1869,14 @@ particular xref:tasks/Tasks-Serialization.adoc#sect-Defensive_Coding-Tasks-Seria
 
 * xref:tasks/Tasks-Cryptography.adoc#sect-Defensive_Coding-Tasks-Cryptography-Randomness[Randomness]
 
+== Dangerous Standard Library Features
 
 Some areas of the standard library, notably the
 `ctypes` module, do not provide memory safety
 guarantees comparable to the rest of Python. If such
 functionality is used, the advice in xref:programming-languages/C.adoc#chap-Defensive_Coding-C[Defensive Coding in C] should be followed.
 
+== Run-time Compilation and Code Generation
 
 The following Python functions and statements related to code
 execution should be avoided:
@@ -1828,6 +1894,7 @@ If you need to parse integers or floating point values, use the
 functions instead of `eval`. Sandboxing
 untrusted Python code does not work reliably.
 
+== Sandboxing
 
 The `rexec` Python module cannot safely sandbox
 untrusted code and should not be used. The standard CPython
@@ -1840,6 +1907,7 @@ implementation is not suitable for sandboxing.
 
 :nbsp:
 
+= Shell Programming and [application]*bash*
 
 
 
@@ -1852,6 +1920,7 @@ integer or array variables have been implemented there as well, with
 comparable syntax.
 
 [[sect-Defensive_Coding-Shell-Alternatives]]
+== Consider Alternatives
 
 Once a shell script is so complex that advice in this chapter
 applies, it is time to step back and consider the question: Is
@@ -1864,6 +1933,7 @@ offers richer data structures, with less arcane syntax and more
 consistent behavior.
 
 [[sect-Defensive_Coding-Shell-Language]]
+== Shell Language Features
 
 The following sections cover subtleties concerning the shell
 programming languages. They have been written with the
@@ -1876,6 +1946,7 @@ implementations, so they now have to be considered part of the shell
 programming language.
 
 [[sect-Defensive_Coding-Shell-Parameter_Expansion]]
+=== Parameter Expansion
 
 The mechanism by which named shell variables and parameters are
 expanded is called *parameter expansion*. The
@@ -1906,6 +1977,7 @@ trigger arithmetic evaluation, which can result in code execution.
 See <<sect-Defensive_Coding-Shell-Arithmetic>>.
 
 [[sect-Defensive_Coding-Shell-Double_Expansion]]
+=== Double Expansion
 
 *Double expansion* occurs when, during the
 expansion of a shell variable, not just the variable is expanded,
@@ -1931,6 +2003,7 @@ The following sections give examples of places where implicit
 double expansion occurs.
 
 [[sect-Defensive_Coding-Shell-Arithmetic]]
+==== Arithmetic Evaluation
 
 *Arithmetic evaluation* is a process by which
 the shell computes the integer value of an expression specified
@@ -2014,6 +2087,7 @@ If it is impossible to avoid shell arithmetic on untrusted
 inputs, refer to <<sect-Defensive_Coding-Shell-Input_Validation>>.
 
 [[sect-Defensive_Coding-Shell-Types]]
+==== Type declarations
 
 [application]*bash* supports explicit type
 declarations for shell variables:
@@ -2062,6 +2136,7 @@ Shell scripts which use integer or array variables should be
 rewritten in another, more suitable language. See <<sect-Defensive_Coding-Shell-Alternatives>>.
 
 [[sect-Defensive_Coding-Shell-Obscure]]
+=== Other Obscurities
 
 Obscure shell language features should not be used. Examples are:
 
@@ -2078,6 +2153,7 @@ with shell functions.
 tokenize strings.
 
 [[sect-Defensive_Coding-Shell-Invoke]]
+== Invoking External Commands
 
 When passing shell variables as single command line arguments,
 they should always be surrounded by double quotes. See
@@ -2133,6 +2209,7 @@ See xref:tasks/Tasks-Processes.adoc#sect-Defensive_Coding-Tasks-Processes-Creati
 for additional details on creating child processes.
 
 [[sect-Defensive_Coding-Shell-Temporary_Files]]
+== Temporary Files
 
 Temporary files should be created with the
 `mktemp` command, and temporary directories with
@@ -2164,6 +2241,7 @@ trap cleanup 0
 ====
 
 [[sect-Defensive_Coding-Shell-Input_Validation]]
+== Performing Input Validation
 
 In some cases, input validation cannot be avoided. For example,
 if arithmetic evaluation is absolutely required, it is imperative
@@ -2196,6 +2274,7 @@ results (e.g., if the value being checked contains operators
 itself) and should not be used.
 
 [[sect-Defensive_Coding-Shell-Edit_Guard]]
+== Guarding Shell Scripts Against Changes
 
 [application]*bash* only reads a shell script up to
 the point it is needed for executed the next command. This means
@@ -2230,10 +2309,12 @@ of opening the script file and trying to read more commands.
 
 :nbsp:
 
+= The Go Programming Language
 
 This chapter contains language-specific recommendations for Go.
 
 [[chap-Defensive_Coding-Go-Memory_Safety]]
+== Memory Safety
 
 Go provides memory safety, but only if the program is not executed
 in parallel (that is, `GOMAXPROCS` is not larger than
@@ -2254,6 +2335,7 @@ finalizers are executed concurrently, potentially interleaved with
 the rest of the program.
 
 [[chap-Defensive_Coding-Go-Error_Handling]]
+== Error Handling
 
 Only a few common operations (such as pointer dereference, integer
 division, array subscripting) trigger exceptions in Go, called
@@ -2303,6 +2385,7 @@ returning both data and an error at the same time.
 ====
 
 [[chap-Defensive_Coding-Go-Garbage_Collector]]
+== Garbage Collector
 
 Older Go releases (before Go 1.3) use a conservative garbage
 collector without blacklisting. This means that data blobs can
@@ -2314,6 +2397,7 @@ may be possible to trigger it deliberately—it is unlikely to occur
 spontaneously.
 
 [[chap-Defensive_Coding-Go-Marshaling]]
+== Marshaling and Unmarshaling
 
 Several packages in the `encoding` hierarchy
 provide support for serialization and deserialization. The usual
@@ -2331,20 +2415,24 @@ one. This is especially relevant when structs are deserialized.
 
 
 [[chap-Defensive_Coding-Go-Marshaling]]
+== Good Practices for Securing Go - High Level Overview
 
 Secure coding is the practice of writing programs that are resistant to attack by malicious or mischievous people or programs.
 
 Golang’s adoption has been increasing over the years. Projects within Red Hat like https://cloud.redhat.com/learn/topics/operators/[*Operators*] and https://www.terraform.io/[*Terraform*] have been completed in this programming language.
 
 
+=== 1. Use Go Modules
 Modules are how Go manages dependencies. https://go.dev/ref/mod/[*Go Modules*] allow for dependency version pinning, including transitive modules, and also provides assurance against unexpected module mutation via the go.sum checksum database.
 
 For an introduction to creating Go projects, see https://go.dev/doc/code/[*How to Write Go Code*]. For information on using modules, migrating projects to modules, and other topics, see the blog series starting with https://go.dev/blog/using-go-modules[*Using Go Modules*].
 
+=== 2. Validate input entries
 Helps avoid attackers who send us intrusive data that could damage the system.
 
 To validate user input, you can use native Go packages like strconv to handle string conversions to other data types. Go also has support for regular expressions with regexp for complex validations. Even though Go’s preference is to use native libraries, there are third-party packages like https://github.com/go-playground/validator/[*validator*]. With validator, you can include validations for structs or individual fields more easily.
 
+=== 3. Use HTML templates
 One critical and common vulnerability is cross-site scripting or XSS. This exploit consists basically of the attacker being able to inject malicious code into the app to modify the output.
 
 Go has the package https://pkg.go.dev/html/template[*html/template*] to encode what the app will return to the user. So, instead of the browser executing an input like <script>alert(‘You’ve Been Hacked!’);</script>, popping up an alert message; you could encode the input, and the app will treat the input as a typical HTML code printed in the browser.
@@ -2361,6 +2449,7 @@ err := template.ExecuteTemplate(w, name, data)
 
 ----
 
+=== 4. Protect yourself from SQL injections
 The first thing you need you to do is make sure a user that connects to the database has limited permissions. A good practice is to also sanitize the user’s input, as I described in a previous section, or to escape special characters and use https://pkg.go.dev/html/template#HTMLEscapeString/[*HTMLEscapeString*] function from the HTML template package.
 But, the most critical piece of code you’d need to include is the use of parameterized queries. In Go, you don’t prepare a statement in a connection; you prepare it on the DB. Here’s an example of how to use parameterized queries:
 
@@ -2373,8 +2462,10 @@ db.Exec("UPDATE creditcards SET name=? WHERE customerId=?", customerName, 233, 9
 ----
 If using the db.Query() function instead, ensure you sanitize the user’s input first, as above.
 
+=== 5. Encrypt sensitive information
 Go package that includes robust implementations to encrypt information like https://pkg.go.dev/golang.org/x/crypto/[*crypto*].
 
+=== 6. Enforce HTTPS communication
 To secure in-transit connection in the system isn’t only about the app listening in port 443. You also need to use proper certificates and enforce HTTPS to avoid attackers downgrading the protocol to HTTP.
 
 [source, go]
@@ -2396,6 +2487,7 @@ config := &tls.Config{ServerName: "yourSiteOrServiceName"}
 Of Note: It’s always a good practice to implement in-transit encryption even if your application is only for internal communication. Imagine if, for some reason, an attacker could sniff your internal traffic. Whenever you can, it’s  always best to raise the difficulty bar for possible future attackers.
 
 
+=== 7. Use caution with unsafe and cgo
 
 Package https://pkg.go.dev/unsafe[*unsafe*] provides an escape hatch from Go’s type system, enabling interactions with low-level and system call APIs, in a manner similar to C programs. However, unsafe has several rules which must be followed in order to perform these interactions in a sane way. It’s easy to make https://github.com/golang/sys/commit/b69606af412f43a225c1cf2044c90e317f41ae09/[*subtle mistakes when writing unsafe code*], but these mistakes can often be avoided.
 This blog post: https://blog.gopheracademy.com/advent-2019/safe-use-of-unsafe-pointer/[*Safe-use-of-unsafe-pointer*] will introduce some of the current and upcoming Go tooling that can verify safe usage of the unsafe. Pointer type in your Go programs. If you have not worked with unsafe before, Recommended reading previous https://blog.gopheracademy.com/advent-2017/unsafe-pointer-and-system-calls/[*Gopher Academy Advent series blog*] on the topic.
@@ -2410,6 +2502,7 @@ Here are some problems with using Cgo in your application:
 * Breaks cross-compiling almost always
 * Calls into Cgo are much slower than native Go calls
 
+=== 8. Be mindful with Errors and Logs
 Go doesn’t have exceptions. This means that you’d need to handle errors differently than with other languages. The standard looks like this:
 [source, go]
 ----
@@ -2441,6 +2534,7 @@ log.Print("Logging in Go!")
 Finally, make sure you apply all the previous rules like encryption and sanitization of the data you put into the logs.
 
 
+==== Libraries
 * https://github.com/o1egl/paseto[*paseto - Platform-Agnostic Security Tokens implementation in GO (Golang)*]
 * https://github.com/StalkR/hsts/[*hsts - Go HTTP Strict Transport Security library*]
 * https://github.com/dgrijalva/jwt-go/[*jwt-go - Golang implementation of JSON Web Tokens (JWT)*]
@@ -2448,6 +2542,7 @@ Finally, make sure you apply all the previous rules like encryption and sanitiza
 
 
 
+==== Further Reading
 
 
 * https://github.com/Binject/awesome-go-security
@@ -2476,6 +2571,7 @@ Finally, make sure you apply all the previous rules like encryption and sanitiza
 
 :nbsp:
 
+= The Vala Programming Language
 
 Vala is a programming language mainly targeted at GNOME developers.
 
@@ -2516,11 +2612,14 @@ while it is still being used (see xref:programming-languages/C.adoc#sect-Defensi
 
 :nbsp:
 
+= Library Design
 
 Through this section, the term *client code*
 refers to applications and other libraries using the library.
 
+== State Management
 
+=== Global State
 
 Global state should be avoided.
 
@@ -2546,6 +2645,7 @@ implemented as a system call and is fast.) If the value
 changes, you know that you have to re-create the state object.
 (This needs to be combined with locking, of course.)
 
+=== Handles
 
 Library state should be kept behind a curtain. Client code
 should receive only a handle. In C, the handle can be a
@@ -2571,6 +2671,7 @@ It is not always necessary to protect state behind a handle
 with a lock. This depends on the level of thread safety
 the library provides.
 
+== Object Orientation
 
 Classes should be either designed as base classes, or it should
 be impossible to use them as base classes (like
@@ -2585,6 +2686,7 @@ Virtual member functions can be used as callbacks. See
 for some of the challenges involved.
 
 [[sect-Defensive_Coding-Tasks-Library_Design-Callbacks]]
+== Callbacks
 
 Higher-order code is difficult to analyze for humans and
 computers alike, so it should be avoided. Often, an
@@ -2628,6 +2730,7 @@ definition, simple locking would immediately lead to deadlocks).
 It is also difficult to decide what to do when destruction of an
 object which is currently processing a callback is requested.
 
+== Process Attributes
 
 Several attributes are global and affect all code in the
 process, not just the library that manipulates them.
@@ -2664,6 +2767,7 @@ manipulated in a relatively isolated way.
 
 :nbsp:
 
+= File Descriptor Management
 
 File descriptors underlie all input/output mechanisms offered by
 the system. They are used to implementation the `FILE
@@ -2676,6 +2780,7 @@ File descriptors are small, non-negative integers in userspace,
 and are backed on the kernel side with complicated data structures
 which can sometimes grow very large.
 
+== Closing Descriptors
 
 If a descriptor is no longer used by a program and is not closed
 explicitly, its number cannot be reused (which is problematic in
@@ -2684,6 +2789,7 @@ the kernel resources are not freed. Therefore, it is important
 to close all descriptors at the earliest point in time
 possible, but not earlier.
 
+=== Error Handling during Descriptor Close
 
 The `close` system call is always
 successful in the sense that the passed file descriptor is
@@ -2698,6 +2804,7 @@ open files with `O_SYNC` or use
 may also have to `fsync` the directory
 containing the file.
 
+=== Closing Descriptors and Race Conditions
 
 Unlike process IDs, which are recycle only gradually, the
 kernel always allocates the lowest unused file descriptor when
@@ -2732,6 +2839,7 @@ Additional data structures are needed to determine when it is
 safe to really close the descriptor, and proper locking is
 required for that.
 
+=== Lingering State after Close
 
 By default, closing a stream socket returns immediately, and
 the kernel will try to send the data in the background. This
@@ -2760,6 +2868,7 @@ These problems are not related to the
 automatically expires such sockets if necessary.
 
 [[sect-Defensive_Coding-Tasks-Descriptors-Child_Processes]]
+== Preventing File Descriptor Leaks to Child Processes
 
 Child processes created with `fork` share
 the initial set of file descriptors with their parent
@@ -2816,6 +2925,7 @@ leakage implement the second approach. OpenJDK 6 and 7
 are among them.
 
 [[sect-Defensive_Coding-Tasks-Descriptors-Limit]]
+== Dealing with the `select` Limit
 
 By default, a user is allowed to open only 1024 files in a
 single process, but the system administrator can easily change
@@ -2877,6 +2987,7 @@ physical parallelism is required before this becomes a problem.
 
 :nbsp:
 
+= File System Manipulation
 
 In this chapter, we discuss general file system manipulation, with
 a focus on access files and directories to which an other,
@@ -2885,6 +2996,7 @@ potentially untrusted user has write access.
 Temporary files are covered in their own chapter, xref:tasks/Tasks-Temporary_Files.adoc#chap-Defensive_Coding-Tasks-Temporary_Files[Temporary Files].
 
 [[sect-Defensive_Coding-Tasks-File_System-Unowned]]
+== Working with Files and Directories Owned by Other Users
 
 Sometimes, it is necessary to operate on files and directories
 owned by other (potentially untrusted) users. For example, a
@@ -2992,6 +3104,7 @@ deletion only affects the name within the directory tree being
 processed.
 
 [[sect-Defensive_Coding-Tasks-File_System-Foreign]]
+== Accessing the File System as a Different User
 
 This section deals with access to the file system as a specific
 user. This is different from accessing files and directories owned by a
@@ -3019,6 +3132,7 @@ complex. It is also very difficult to avoid race conditions
 during path name resolution.
 
 [[sect-Defensive_Coding-Tasks-File_System-Limits]]
+== File System Limits
 
 For historical reasons, there are preprocessor constants such as
 `PATH_MAX`, `NAME_MAX`.
@@ -3043,6 +3157,7 @@ number of regular files in a directory, or the link count of an
 inode.
 
 [[sect-Defensive_Coding-Tasks-File_System-Features]]
+== File system features
 
 Not all file systems support all features. This makes it very
 difficult to write general-purpose tools for copying files. For
@@ -3118,6 +3233,7 @@ time*) is not exposed over the
 interface, even if stored by the file system.
 
 [[sect-Defensive_Coding-Tasks-File_System-Free_Space]]
+== Checking Free Space
 
 The `statvfs` and
 `fstatvfs` functions allow programs to
@@ -3138,6 +3254,7 @@ reasonably accurate, though.
 
 :nbsp:
 
+= Temporary Files
 
 In this chapter, we describe how to create temporary files and
 directories, how to remove them, and how to work with programs
@@ -3173,6 +3290,7 @@ any memory savings, and the related complexity can be avoided if
 the data is kept in process memory.
 
 [[chap-Defensive_Coding-Tasks-Temporary_Files-Location]]
+== Obtaining the Location of Temporary Directory
 
 Some functions below need the location of a directory which
 stores temporary files. For C/C++ programs, use the following
@@ -3197,6 +3315,7 @@ variable, and follow the two steps described above. (Java's
 default directory selection does not honor
 `TMPDIR`.)
 
+== Named Temporary Files
 
 The `mkostemp` function creates a named
 temporary file. You should specify the
@@ -3235,6 +3354,7 @@ hint cannot be removed from the system if you delete the
 temporary file prior to termination of the VM, causing a memory
 leak.
 
+== Temporary Files without Names
 
 The `tmpfile` function creates a temporary
 file and immediately deletes it, while keeping the file open.
@@ -3256,6 +3376,7 @@ a way to avoid creation of small temporary files.
 Java does not support unnamed temporary files.
 
 [[chap-Defensive_Coding-Tasks-Temporary_Directory]]
+== Temporary Directories
 
 The `mkdtemp` function can be used to create
 a temporary directory. (For determining the directory part of
@@ -3278,6 +3399,7 @@ complicated. Unless there are overriding performance concerns,
 the [application]*rm* program should be used, with
 the [option]`-rf` and [option]`--` options.
 
+== Compensating for Unsafe File Creation
 
 There are two ways to make a function or program which excepts a
 file name safe for use with temporary files. See
@@ -3317,13 +3439,16 @@ recommended.
 
 :nbsp:
 
+= Processes
 
 [[sect-Defensive_Coding-Tasks-Processes-Creation]]
+== Creating Safe Processes
 
 This section describes how to create new child processes in a
 safe manner. In addition to the concerns addressed below, there
 is the possibility of file descriptor leaks, see xref:tasks/Tasks-Descriptors.adoc#sect-Defensive_Coding-Tasks-Descriptors-Child_Processes[Preventing File Descriptor Leaks to Child Processes].
 
+=== Obtaining the Program Path and the Command-line Template
 
 The name and path to the program being invoked should be
 hard-coded or controlled by a static configuration file stored
@@ -3341,6 +3466,7 @@ If too much flexibility is provided here, it may allow
 invocation of arbitrary programs without proper authorization.
 
 [[sect-Defensive_Coding-Tasks-Processes-execve]]
+=== Bypassing the Shell
 
 Child processes should be created without involving the system
 shell.
@@ -3384,6 +3510,7 @@ example, standard input could be used, instead of the command
 line.
 
 [[sect-Defensive_Coding-Tasks-Processes-environ]]
+=== Specifying the Process Environment
 
 Child processes should be created with a minimal set of
 environment variables. This is absolutely essential if there
@@ -3441,6 +3568,7 @@ environment variables, for example for passing passwords.
 for new environment variables should not be accepted from
 untrusted sources.
 
+=== Robust Argument List Processing
 
 When invoking a program, it is sometimes necessary to include
 data from untrusted sources. Such data should be checked
@@ -3468,6 +3596,7 @@ the data will not be treated as an option even if it starts
 with a dash.
 
 [[sect-Defensive_Coding-Tasks-Processes-Command_Line_Visibility]]
+=== Passing Secrets to Subprocesses
 
 The command line (the name of the program and its argument) of
 a running process is traditionally available to all local
@@ -3498,6 +3627,7 @@ they might give digital forensics access to sensitive data
 (such as passphrases) because it is difficult to safely delete
 them in all cases.
 
+== Handling Child Process Termination
 
 When child processes terminate, the parent process is signalled.
 A stub of the terminated processes (a
@@ -3541,6 +3671,7 @@ termination of the child process using
 and hope that the status is not collected by an event loop
 first.
 
+== `SUID`pass:attributes[{blank}]/pass:attributes[{blank}]`SGID` processes
 
 Programs can be marked in the file system to indicate to the
 kernel that a trust transition should happen if the program is
@@ -3561,6 +3692,7 @@ not to rely on any untrusted information. These concerns also
 apply to libraries which can be linked into such processes.
 
 [[sect-Defensive_Coding-Tasks-secure_getenv]]
+=== Accessing Environment Variables
 
 The following steps are required so that a program does not
 accidentally pick up untrusted data from environment
@@ -3612,6 +3744,7 @@ Either the `secure_getenv` function or the
 ====
 
 [[sect-Defensive_Coding-Tasks-Processes-Daemons]]
+== Daemons
 
 Background processes providing system services
 (*daemons*) need to decouple themselves from
@@ -3652,6 +3785,7 @@ offer a command line option which disables forking and
 replacement of the standard output and standard error streams.
 Such an option is also useful for debugging.
 
+== Semantics of Command-line Arguments
 
 After process creation and option processing, it is up to the
 child process to interpret the arguments. Arguments can be
@@ -3669,6 +3803,7 @@ Consequently, careful analysis is required if it is safe to
 pass untrusted data to another program.
 
 [[sect-Defensive_Coding-Tasks-Processes-Fork-Parallel]]
+== `fork` as a Primitive for Parallelism
 
 A call to `fork` which is not immediately
 followed by a call to `execve` (perhaps after
@@ -3684,6 +3819,7 @@ should be replaced with proper child processes or threads.
 
 :nbsp:
 
+= Serialization and Deserialization
 
 Protocol decoders and file format parsers are often the
 most-exposed part of an application because they are exposed with
@@ -3692,6 +3828,7 @@ security checks are made. They are also difficult to write
 robustly in languages which are not memory-safe.
 
 [[sect-Defensive_Coding-Tasks-Serialization-Decoders]]
+== Recommendations for Manually-written Decoders
 
 For C and C++, the advice in xref:programming-languages/C.adoc#sect-Defensive_Coding-C-Pointers[Recommendations for Pointers and Array Handling] applies. In
 addition, avoid non-character pointers directly into input
@@ -3707,6 +3844,7 @@ results in enormous memory allocations during decoding.
 Alternatively, you can impose reasonable bounds on memory
 allocations, but some protocols do not permit this.
 
+== Protocol Design
 
 Binary formats with explicit length fields are more difficult to
 parse robustly than those where the length of dynamically-sized
@@ -3723,6 +3861,7 @@ smaller than 32 bits in size. Protocols should not permit
 fragments with overlapping contents.
 
 [[sect-Defensive_Coding-Tasks-Serialization-Fragmentation]]
+== Fragmentation
 
 Some serialization formats use frames or protocol data units
 (PDUs) on lower levels which are smaller than the PDUs on higher
@@ -3788,6 +3927,7 @@ lie after the end of the unfragmented PDU. Avoid integer
 overflows in these computations (see xref:programming-languages/C.adoc#sect-Defensive_Coding-C-Arithmetic[Recommendations for Integer Arithmetic]).
 
 [[sect-Defensive_Coding-Tasks-Serialization-Fragmentation-ID]]
+=== Fragment IDs
 
 If the underlying transport is datagram-oriented (so that PDUs
 can be reordered, duplicated or be lost, like with UDP),
@@ -3814,13 +3954,16 @@ fragment IDs, such as the 16 bit IDs used by the Internet
 Protocol.)
 
 [[sect-Defensive_Coding-Tasks-Serialization-Library]]
+== Library Support for Deserialization
 
 There are too many subtleties when dealing with Deserialization to be discussed here.
 A more detailed and updated guide is available as https://cheatsheetseries.owasp.org/cheatsheets/Deserialization_Cheat_Sheet.html[OWASP Deserialization Cheat Sheet].
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML]]
+== XML Serialization
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-External]]
+=== External References
 
 XML documents can contain external references. They can occur
 in various places.
@@ -3877,6 +4020,7 @@ processed not just when parsing XML, but also when generating
 it.
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-Entities]]
+=== Entity Expansion
 
 When external DTD processing is disabled, an internal DTD
 subset can still contain entity definitions. Entity
@@ -3896,6 +4040,7 @@ such restrictions, then application-specific limits are called
 for.
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-XInclude]]
+=== XInclude Processing
 
 XInclude processing can reference file and network resources
 and include them into the document, much like external entity
@@ -3908,6 +4053,7 @@ considerably increasing the amount of code required for XML
 processing.
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-Validation]]
+=== Algorithmic Complexity of XML Validation
 
 DTD-based XML validation uses regular expressions for content
 models. The XML specification requires that content models
@@ -3922,6 +4068,7 @@ prefix) directly support textual regular expressions which are
 not required to be deterministic.
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-Expat]]
+=== Using Expat for XML parsing
 
 By default, Expat does not try to resolve external IDs, so no
 steps are required to block them. However, internal entity
@@ -3962,6 +4109,7 @@ using a suitable
 installed with `XML_SetDoctypeDeclHandler`.
 
 [[sect-Defensive_Coding-Tasks-Serialization-Qt]]
+=== Using Qt for XML Parsing
 
 The XML component of Qt, QtXml, does not resolve external IDs
 by default, so it is not required to prevent such resolution.
@@ -4029,6 +4177,7 @@ return value and report any error.
 ====
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-OpenJDK_Parse]]
+=== Using OpenJDK for XML Parsing and Validation
 
 OpenJDK contains facilities for DOM-based, SAX-based, and
 StAX-based document parsing. Documents can be validated
@@ -4081,6 +4230,7 @@ shows the imports used by the examples.
 ====
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-OpenJDK_Parse-DOM]]
+==== DOM-based XML parsing and DTD validation in OpenJDK
 
 This approach produces a
 `org.w3c.dom.Document` object from an input
@@ -4111,6 +4261,7 @@ add the DTD reference to the document, and an entity
 resolver which whitelists this external reference.
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-OpenJDK_Parse-SAX]]
+==== XML Schema Validation in OpenJDK
 
 <<ex-Defensive_Coding-Tasks-Serialization-XML-OpenJDK_Parse-XMLSchema_SAX>>
 shows how to validate a document against an XML Schema,
@@ -4151,6 +4302,7 @@ to perform the schema-based validation on the
 ====
 
 [[sect-Defensive_Coding-Tasks-Serialization-XML-OpenJDK_Parse-Other]]
+==== Other XML Parsers in OpenJDK
 
 OpenJDK contains additional XML parsing and processing
 facilities. Some of them are insecure.
@@ -4162,6 +4314,7 @@ objects in this format from untrusted inputs, so its use is
 not recommended, as with the Java object serialization
 format itself. See <<sect-Defensive_Coding-Tasks-Serialization-Library>>.
 
+== Protocol Encoders
 
 For protocol encoders, you should write bytes to a buffer which
 grows as needed, using an exponential sizing policy. Explicit
@@ -4189,7 +4342,9 @@ padding bytes between fields or at the end of the
 
 :nbsp:
 
+= Cryptography
 
+== Primitives
 
 Choosing from the following cryptographic primitives is
 recommended:
@@ -4245,6 +4400,7 @@ correct construction of nonces is absolutely essential.
 
 ====
 
+== Randomness
 
 The following facilities can be used to generate unpredictable
 and non-repeating values. When these functions are used without
@@ -4316,6 +4472,7 @@ Generating randomness for cryptographic keys in long-term use
 may need different steps and is best left to cryptographic
 libraries.
 
+== Removing Sensitive information from memory
 
 Sensitive data such as password, cryptographic keys etc, should be removed
 from memory as soon as possible, once this information is no longer required.
@@ -4355,12 +4512,14 @@ than it would otherwise have been if no attempt had been made to erase the data.
 
 :nbsp:
 
+= RPM Packaging
 
 This chapter deals with security-related concerns around RPM
 packaging. It has to be read in conjunction with
 distribution-specific packaging guidelines.
 
 [[sect-Defensive_Coding-Tasks-Packaging-Certificates]]
+== Generating X.509 Self-signed Certificates during Installation
 
 Some applications need X.509 certificates for authentication
 purposes. For example, a single private/public key pair could
@@ -4493,6 +4652,7 @@ is needed for the [application]*su* or
 [application]*chmod* invocation.
 
 [[sect-Defensive_Coding-Tasks-Packaging-Certificates-Service]]
+== Generating X.509 Self-signed Certificates before Service Start
 
 An alternative way to automatically provide an X.509 key pair is
 to create it just before the service is started for the first
@@ -4536,8 +4696,10 @@ link:++https://fedoraproject.org/wiki/Packaging:Initial_Service_Setup#Generating
 
 :nbsp:
 
+= Authentication and Authorization
 
 [[sect-Defensive_Coding-Authentication-Server]]
+== Authenticating Servers
 
 When connecting to a server, a client has to make sure that it
 is actually talking to the server it expects. There are two
@@ -4579,6 +4741,7 @@ crashing the real server by exploiting a denial-of-service
 vulnerability.
 
 [[sect-Defensive_Coding-Authentication-Host_based]]
+== Host-based Authentication
 
 Host-based authentication uses access control lists (ACLs) to
 accept or deny requests from clients. This authentication
@@ -4623,6 +4786,7 @@ universally correct way to deal with this ambiguity. The
 behavior of the ACL implementation should be documented.
 
 [[sect-Defensive_Coding-Authentication-UNIX_Domain]]
+== UNIX Domain Socket Authentication
 
 UNIX domain sockets (with address family
 `AF_UNIX` or `AF_LOCAL`) are
@@ -4657,6 +4821,7 @@ information from `/proc/PID/status` is prone
 to race conditions and insecure.
 
 [[sect-Defensive_Coding-Authentication-Netlink]]
+== `AF_NETLINK` Authentication of Origin
 
 Netlink messages are used as a high-performance data transfer
 mechanism between the kernel and the user space. Traditionally,
@@ -4686,6 +4851,7 @@ domain sockets for this tasks.
 
 :nbsp:
 
+= Transport Layer Security (TLS)
 
 Transport Layer Security (TLS, formerly Secure Sockets
 Layer/SSL) is the recommended way to to protect integrity and
@@ -4706,6 +4872,7 @@ library' documentation.
 * link:++https://docs.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefGuide.html++[OpenJDK documentation]
 
 [[sect-Defensive_Coding-TLS-Pitfalls]]
+== Common Pitfalls
 
 TLS implementations are difficult to use, and most of them lack
 a clean API design. The following sections contain
@@ -4774,6 +4941,7 @@ cannot be used across `fork` function
 calls (see xref:tasks/Tasks-Processes.adoc#sect-Defensive_Coding-Tasks-Processes-Fork-Parallel[`fork` as a Primitive for Parallelism]).
 
 [[sect-Defensive_Coding-TLS-OpenSSL]]
+=== OpenSSL Pitfalls
 
 Some OpenSSL function use *tri-state return
 values*. Correct error checking is extremely
@@ -4871,12 +5039,14 @@ increase the part of the code base which has to undergo
 security certification.
 
 [[sect-Defensive_Coding-TLS-Pitfalls-GnuTLS]]
+=== GnuTLS Pitfalls
 
 Older versions of GnuTLS had several peculiarities described
 in previous versions of this guide; as of GnuTLS 3.3.10, these
 issues are no longer applicable.
 
 [[sect-Defensive_Coding-TLS-Pitfalls-OpenJDK]]
+=== OpenJDK Pitfalls
 
 The Java cryptographic framework is highly modular. As a
 result, when you request an object implementing some
@@ -4900,6 +5070,7 @@ can block, waiting for more bits to become available in
 `/dev/random`.
 
 [[sect-Defensive_Coding-TLS-Pitfalls-NSS]]
+=== NSS Pitfalls
 
 NSS was not designed to be used by other libraries which can
 be linked into applications without modifying them. There is
@@ -4917,6 +5088,7 @@ initialized. This behavior is required by the PKCS#11 API
 specification.
 
 [[sect-Defensive_Coding-TLS-Client]]
+== TLS Clients
 
 Secure use of TLS in a client generally involves all of the
 following steps. (Individual instructions for specific TLS
@@ -4969,6 +5141,7 @@ client. These aspects are not yet covered.
 
 ====
 
+=== Implementation TLS Clients With OpenSSL
 
 In the following code, the error handling is only exploratory.
 Proper error handling is required for production use,
@@ -5106,6 +5279,7 @@ because no further TLS connections will be established.
 ====
 
 [[sect-Defensive_Coding-TLS-Client-GnuTLS]]
+=== Implementation TLS Clients With GnuTLS
 
 This section describes how to implement a TLS client with full
 certificate validation (but without certificate revocation
@@ -5201,6 +5375,7 @@ Finally, the session object can be deallocated using
 ====
 
 [[sect-Defensive_Coding-TLS-Client-OpenJDK]]
+=== Implementing TLS Clients With OpenJDK
 
 The examples below use the following cryptographic-related
 classes:
@@ -5308,6 +5483,7 @@ The TLS socket can be used as a regular socket, as shown in
 
 ====
 
+==== Overriding server certificate validation with OpenJDK 6
 
 Overriding certificate validation requires a custom trust
 manager. With OpenJDK 6, the trust manager lacks
@@ -5366,6 +5542,7 @@ manager object can be used for multiple servers because the
 server address is available to the trust manager.
 
 [[sect-Defensive_Coding-TLS-Client-NSS]]
+=== Implementing TLS Clients With NSS
 
 The following code shows how to implement a simple TLS client
 using NSS. These instructions apply to NSS version 3.14 and
@@ -5486,6 +5663,7 @@ shows how to close the connection.
 ====
 
 [[sect-Defensive_Coding-TLS-Client-Python]]
+=== Implementing TLS Clients With Python
 
 The Python distribution provides a TLS implementation in the
 `ssl` module (actually a wrapper around
@@ -5584,6 +5762,7 @@ Closing the TLS socket is straightforward as well:
 :experimental:
 
 [[chap-Defensive_Coding-HSM]]
+= Hardware Security Modules and Smart Cards
 
 Hardware Security Modules (HSMs) are specialized hardware intended
 to protect private keys on server systems. They store internally
@@ -5642,6 +5821,7 @@ modules or smart cards. The wrapper PKCS#11 APIs provided by NSS, GnuTLS and
 engine_pkcs11 (OpenSSL) handle the reinitialization after fork requirement transparently.
 
 [[sect-Defensive_Coding-HSM-OpenSSL]]
+== OpenSSL HSM Support
 
 OpenSSL does not have native support for PKCS#11. It can
 provide PKCS#11 support through the OpenSC's project
@@ -5666,6 +5846,7 @@ and its usage to sign data.
 ====
 
 [[sect-Defensive_Coding-HSM-GNUTLS]]
+== GnuTLS HSM Support
 
 GnuTLS supports PKCS#11 natively. Most of the API functions
 accepting certificate files, can also accept PKCS#11 URLs, thus
@@ -5701,6 +5882,7 @@ An example PIN callback function is shown below.
 ====
 
 [[sect-Defensive_Coding-HSM-NSS]]
+== NSS HSM Support
 
 NSS supports PKCS#11 natively. In fact all NSS crypto operations,
 including built-in operations, go through PKCS #11 modules. NSS provides
@@ -5757,6 +5939,7 @@ $ NSS_Sign_Example "${token_name}:${cert_name}"
 
 :nbsp:
 
+= Revision History
 
 `1.8`:: Thu Jan 13 2021 Petr Bokoc (pbokoc@gmail.com)
 

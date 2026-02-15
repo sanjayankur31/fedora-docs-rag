@@ -1,4 +1,5 @@
 :experimental:
+= Fedora Rawhide Gating
 
 The following pages document the recently enabled gating mechanism in Fedora
 Rawhide.
@@ -10,6 +11,7 @@ and broken composes, and will ultimately lead to a more stable Rawhide. As an
 added benefit, this framework will also lessen the burden on the infrastructure
 and release engineering teams that ensure composes keep working.
 
+== Reasons for Gating
 
 The basic principle of this proposal is to provide an environment in which
 packages can be built and tested without affecting other packages.
@@ -50,6 +52,7 @@ However, these adjustments are minimal.
 to the community (and xref:fesco::index.adoc[FESCo]) to decide if any, and if
 yes, which rules should be enforced for all packages.
 
+== Additional Reading
 
 * xref:faq.adoc[Frequently Asked Questions] provides answers to frequently
 asked questions about Rawhide gating.
@@ -59,6 +62,7 @@ integration in Fedora.
 information about Fedora CI in one place.
 :experimental:
 
+= Rawhide Gating Workflows
 
 When considering how packages for Rawhide are gated, two situations can be
 distinguished: packages/builds which can be tested by themselves and
@@ -71,6 +75,7 @@ The diagrams below represent the flow between the different pieces of
 the infrastructure used to gate packages in Rawhide. (Click the images to
 view a larger version.)
 
+== Single Build Updates
 
 The following diagram represents the flow between the different pieces of
 the infrastructure used to gate single build updates in Rawhide.
@@ -99,6 +104,7 @@ update if something seems stuck:
 * link:https://apps.fedoraproject.org/datagrepper/raw?category=resultsdb&rows_per_page=5&delta=127800[ResultsDB messages in Datagrepper]
 * Greenwave reacts to ResultsDB, so you can check its link:https://apps.fedoraproject.org/datagrepper/raw?category=greenwave&rows_per_page=5&delta=127800[messages] as well.
 
+== Multi-build Updates
 
 The following diagram represents the flow between the different pieces of
 the infrastructure used to gate multi-builds updates in Rawhide.
@@ -127,12 +133,14 @@ update if something seems stuck:
 * link:https://apps.fedoraproject.org/datagrepper/raw?category=resultsdb&rows_per_page=5&delta=127800[ResultsDB messages in Datagrepper]
 * Greenwave reacts to ResultsDB, so you can check its link:https://apps.fedoraproject.org/datagrepper/raw?category=greenwave&rows_per_page=5&delta=127800[messages] as well.
 :experimental:
+= How to Opt in to Gating?
 
 There are two steps to do in order to opt in to Rawhide Gating:
 
 * Add tests to your package.
 * Configure gating, so that your package is gated on those tests.
 
+== Add Tests to Your Package
 
 You can add tests by following the
 xref:ci::tests.adoc#_writing[documentation on how to write tests].
@@ -156,6 +164,7 @@ in the update page under the test results tab.
 For these tests to have an effect, you need to configure the system to gate
 on them.
 
+== Configure Gating
 
 To configure the system to gate your package on tests, you need to add a file
 called `gating.yaml` to the git repository of the package(s) you want gated.
@@ -220,10 +229,12 @@ rules:
 You can find more about this file in Greenwave’s documentation about
 link:https://docs.pagure.org/greenwave/package-specific-policies.html[package specific policies].
 :experimental:
+= Single Build Updates
 
 The initial release of Rawhide Gating is exlusively for single build updates.
 This release is going live in July 2019.
 
+== What are Single Build Updates?
 
 Single build updates are updates containing one build which doesn’t tightly
 depend on other build(s) and therefore can be processed safely in isolation.
@@ -240,6 +251,7 @@ or updates.
 Packages of that style are candidates for single build updates. They can be built
 and tested by themselves.
 
+== How Does Gating Single Build Updates Work?
 
 Single build updates are easy to gate since they can be tested in isolation
 from the other builds.
@@ -280,10 +292,12 @@ it via dnf/yum. It means the build is available in the Rawhide buildroot. It
 will be pushed to the mirror once the next Rawhide compose succeeds.
 ====
 
+=== Simplified diagram of the single build updates workflow
 
 [link=../_images/Simplified_single_build_update.png]
 image::{imagesdir}/Simplified_single_build_update.png[]
 :experimental:
+= Multi-Build Updates
 
 We are working on this workflow and will update this page and send an
 announcement when it is ready or available for testing. This is a work in
@@ -298,6 +312,7 @@ link:https://fedoraproject.org/wiki/Changes/GatingRawhidePackages[]
 * Our project’s requirement document:
 link:https://fedoraproject.org/wiki/Infrastructure_2020/Rawhide_Gating[]
 
+== What Are Multi-build Updates?
 
 Multi-build updates contain multiple builds that are tightly coupled together.
 
@@ -316,6 +331,7 @@ as one unit.
 Packages of this style are candidates for the multi-build update workflow. They
 need to be built and tested together.
 
+== How Does Gating Multi-Builds Updates Work?
 
 To gate updates involving multiple builds, we need to build and test in
 isolation from the other builds.
@@ -379,17 +395,21 @@ list-side-tags --user=<username>``.
 ====
 
 
+=== Simplified diagram of the multi-builds updates workflow
 
 [link=../_images/Simplified_multi_builds_update.png]
 image::{imagesdir}/Simplified_multi_builds_update.png[]
 :experimental:
 :toc:
+= Frequently Asked Questions
 
+== What If I Don’t Want to Use Gating?
 
 While we believe CI and gating will ultimately help making a better Fedora,
 nothing gets enforced at this point. Gating is entirely optional and if you
 choose not to opt in yet, you can keep packaging as you do now!
 
+== How Do I Opt In?
 We're so glad you asked! :)
 
 There are two steps to allow you to opt in for gating:
@@ -399,6 +419,7 @@ There are two steps to allow you to opt in for gating:
 
 We go over both of them in our xref:rawhide-gating::optin.adoc[opting in] page.
 
+== Something Doesn’t Work!
 That’s not a question! Anyway, bugs will be bugs and we want to get your feedback
 on them to help make this the best possible experience. This is the first roll-out
 of this change, and we take a “release early and release often” approach, so many
@@ -417,6 +438,7 @@ link:https://pagure.io/fedora-ci/general/new_issue[Fedora CI ticket].
 
 Alternatively you can join us on IRC in `#fedora-ci` and chat about all things CI and Gating.
 
+== How Do I See the Test Running? Where Can I Monitor Them?
 
 Unfortunately we do not have a nice way to do this now. The current way it can
 be done is by simply monitoring the pipelines:
@@ -428,6 +450,7 @@ be done is by simply monitoring the pipelines:
 In the future, we want to have a comment on the updates with a link to the CI
 system when the tests start running.
 
+== How Do I Re-trigger a Test Run?
 
 Sometimes infra fails on us or we have a networking issue or some other gremlin
 messes with with your run and the tests that we rely on suddenly are no longer
@@ -440,6 +463,7 @@ see the ``bodhi updates trigger-tests`` command and its documentation via:
 We are actively working on bringing this functionality in bodhi's UI to
 provide a better user-experience.
 
+== How Do I Unblock an Update?
 
 You shouldn’t need to unblock an update, either the tests need to be fixed or
 the code being tested has an issue that needs addressing. This is theory,
@@ -456,12 +480,14 @@ To get started, try running:
 bodhi updates waive --help
 ----
 
+== What to do with a faulty update?
 
 When gating stops an update for legitimate reasons (the update is faulty and
 should have been gated), submit a fixed build.
 
 It is recommended to unpush the faulty update.
 
+== How Do I Opt Out After Opting in Previously?
 `:sad trombone:`
 
 We hope you reported all the issues you’ve found/faced and help us to resolve

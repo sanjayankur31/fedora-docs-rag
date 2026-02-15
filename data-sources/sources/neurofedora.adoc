@@ -1,3 +1,4 @@
+= NeuroFedora: Free software for Free neuroscience
 
 image::NeuroFedoraLogo01.png[NeuroFedora Logo]
 
@@ -14,6 +15,7 @@ Please use the links in the sidebar to learn more about NeuroFedora and the arte
 
 NeuroFedora in its current form link:https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/message/VXN4UBCNIL6BUCDRN55IGVK3IMO3HF6C/[was started on September 30, 2018].
 
+== Join us
 
 We are always looking for more volunteers to help us do more.
 The various contributor roles that we currently have set up can be found in the xref:contributing.adoc[contributor documentation].
@@ -21,14 +23,17 @@ You can even create a new role for yourself!
 Our volunteers generally work a few hours a week on NeuroFedora.
 
 
+== Free Software
 
 You can learn more about the Free Software movement link:https://www.fsf.org/blogs/community/user-liberation-watch-and-share-our-new-video/[on their website].
 You can learn more about the use of link:http://opensourceforneuroscience.org/[Open source for Neuroscience here].
 Other relevant neuroscience links are collected on a xref:related-links.adoc[separate page].
 
+= Installation Media
 
 The Fedora community produces a number of Fedora Linux based operating systems for different use-cases, including one for computational neuroscience.
 
+== Laptops, workstations, and desktop PCs
 
 For laptops and workstations, a number of Fedora Linux variants with different link:https://en.wikipedia.org/wiki/Desktop_environment[desktop environments] (user interfaces) are available.
 
@@ -64,10 +69,12 @@ For laptops and workstations, a number of Fedora Linux variants with different l
 
 The child friendly Fedora Linux platform with the link:https://spins.fedoraproject.org/en/soas/[Sugar on a stick] learning platform is also available.
 
+=== Other customised Fedora Linux OS platforms
 
 A number of other customised Fedora Linux OS platforms are also available from https://labs.fedoraproject.org/.
 These include operatings sytems for link:https://labs.fedoraproject.org/en/scientific[scientific computing], link:https://labs.fedoraproject.org/en/robotics[robotics], link:https://labs.fedoraproject.org/en/security[security], link:https://labs.fedoraproject.org/en/python-classroom[teaching Python], link:https://labs.fedoraproject.org/en/jam[music production], link:https://labs.fedoraproject.org/en/games[gaming], link:https://labs.fedoraproject.org/en/design-suite[design and multimedia], and link:https://labs.fedoraproject.org/en/astronomy[astronomy].
 
+=== Immutable container based desktop operating systems
 
 A number of Fedora Linux products with immutable operating systems are also available.
 In these variants, unlike traditional platforms where the operating system consists of multiple pieces of software that can all be modified independently, the operating system is a single unit where all components are updated together.
@@ -89,9 +96,11 @@ These platforms are excellent for containerized applications and container based
 |===
 
 
+== Servers
 
 A link:https://getfedora.org/en/server/[Fedora Linux for servers platform] is a short-lifecycle, community-supported server operating system that enables seasoned system administrators, experienced with any OS, to make use of the very latest technologies available in the open source community.
 
+== Containers
 
 These Fedora Linux platforms are primarily aimed at container based development and deployment:
 
@@ -107,6 +116,7 @@ These Fedora Linux platforms are primarily aimed at container based development 
 
 |===
 
+= Communicating and getting help
 
 For general troubleshooting help related to Fedora, please refer to link:https://fedoraproject.org/wiki/Communicating_and_getting_help[this page on the Fedora wiki].
 For anything NeuroFedora related, please use the following channels:
@@ -122,6 +132,7 @@ For anything NeuroFedora related, please use the following channels:
 * We also have a link:https://github.com/neurofedora[ticketing repository on Github].
 
 
+== Open Meetings
 
 The NeuroFedora team hosts regular, open, public meetings every two weeks on the link:https://webchat.freenode.net/?channels=#fedora-neuro[IRC] and bridged link:https://t.me/NeuroFedora[Telegram] and link:https://tinyurl.com/neurofedora-matrix[Element/Matrix channel] channels.
 Everyone is welcome to attend these meetings.
@@ -147,6 +158,7 @@ Please feel free to add to it when the meeting announcment is sent out to the ma
 - Open floor.
 -----------
 
+= Contributing
 
 NOTE: A link:https://accounts.fedoraproject.org/[Fedora account] is required to access the link:https://apps.fedoraproject.org/[applications] and link:https://fedoraproject.org/wiki/Infrastructure[infrastructure] used by the Fedora community. It only takes a minute to set up! You can learn more about the Fedora project link:https://docs.fedoraproject.org/en-US/project/[here].
 
@@ -155,9 +167,11 @@ Usually, this is about 5--10 hours a week on average, depending on our professio
 We are always looking for more hands to help with NeuroFedora, and we are more than happy to help people learn the technical skills required to contribute.
 Please xref:communicating.adoc[get in touch] if you would like to join the team!
 
+== Infrastructure overview
 
 NeuroFedora relies completely on the link:https://apps.fedoraproject.org[infrastructure maintained by the Fedora community]:
 
+=== Community organisation, governance, and dissemination
 
 * Access to all infrastructure is provided by a link:https://accounts.fedoraproject.org/[Fedora accounts system (FAS)] account.
 * Our link:https://pagure.io/neuro-sig/NeuroFedora[housekeeping ticket system] lives on link:https://pagure.io[Pagure.io].
@@ -172,11 +186,13 @@ NeuroFedora relies completely on the link:https://apps.fedoraproject.org[infrast
 * The http://fedoraplanet.org/[Fedora planet] aggregates blogs from the complete Fedora community.
 * Notifications are generated using http://fedmsg.com/[Fedmsg (Federated message bus)] and can be searched using link:https://apps.fedoraproject.org/datagrepper/[datagrepper].
 
+=== Troubleshooting
 * Text can be pasted and shared using the link:https://paste.fedoraproject.org/[Fedora pastebin (a modernpaste instance)].
 * link:https://pagure.io/fpaste[fpaste] provides a convenient command line tool to paste information to the Fedora pastebin.
 * link:https://ask.fedoraproject.org[Ask Fedora (a Discourse instance)] provides a forum for troubleshooting.
 
 
+=== Packages and software
 
 * The link:https://packager-dashboard.fedoraproject.org/dashboard?groups=neuro-sig[Fedora Packager Dashboard] provides an excellent overview of the state of packages.
 * The sources (link:https://docs.fedoraproject.org/en-US/quick-docs/creating-rpm-packages/index.html[rpm spec files]) for packages live on link:https://src.fedoraproject.org/dashboard/projects[Fedora package sources (a Pagure instance)].
@@ -192,10 +208,12 @@ NeuroFedora relies completely on the link:https://apps.fedoraproject.org[infrast
 * Docker images are distributed using the link:https://registry.fedoraproject.org/[Fedora docker registry].
 
 
+=== Documentation
 * The http://asciidoc.org/[asciidoc] sources for the documentation are kept in a link:https://pagure.io/neuro-sig/documentation[Pagure repository].
 * The documentation is generated using an link:https://antora.org/[Antora] system and hosted at the link:https://docs.fedoraproject.org[Fedora documentation site].
 
 
+== Contributor roles
 
 There are various roles in which you can contribute to NeuroFedora.
 For a complete description of contributor roles in the Fedora community, please refer to this link:https://fedoraproject.org/wiki/Join[wiki page].
@@ -206,16 +224,19 @@ Please get in touch with us using one of the communications channels!
 The Fedora Join SIG also helps newcomers start with contributing to Fedora.
 Take a look at link:https://docs.fedoraproject.org/en-US/project/join/#_not_sure_where_to_start_come_hang_out_with_us[their documentation].
 
+=== Suggest software for inclusion
 
 If there's more useful Free software out there that is not yet in NeuroFedora, you can bring it to our attention.
 You can do so using link:https://goo.gl/forms/j6AJ82yOh78MPxby1[our suggestion form].
 
+=== Package and maintain software
 
 Making packages available in the Fedora repositories requires the team to build them from source to produce RPMs.
 These RPMs are then made available in the Fedora repositories for all Fedora users to easily install on their systems using `dnf`.
 They can also be used to easily create xref:containers.adoc[container images] that users can run with Podman (or Docker).
 You can help the team by becoming a link:https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/[Fedora package maintainer].
 
+==== EPEL support
 
 Read more about Extra Packages for Enterprise Linux (EPEL) xref:epel::index.adoc[here].
 
@@ -224,10 +245,12 @@ If you need a certain package that is (co-)maintained by us in Enterprise Linux 
 
 If you are already a packager, we are happy to add you as a co-maintainer, so you can take care of porting to any or all EPEL branches.
 
+=== Test packaged software
 
 Packages that we provide must go through the link:https://fedoraproject.org/wiki/QA[Fedora Quality Assurance (QA)] process.
 You can simply enable the updates-testing repository and help by link:https://fedoraproject.org/wiki/QA:Updates_Testing[testing updates].
 
+=== File bugs and report general issues
 
 Any bugs with the software include in NeuroFedora should ideally be reported to the link:https://bugzilla.redhat.com/[Fedora Bugzilla instance].
 You will need a link:https://bugzilla.redhat.com/createaccount.cgi[bugzilla] or link:https://admin.fedoraproject.org/accounts/user/new[Fedora] account to do so.
@@ -235,6 +258,7 @@ link:https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/[This page
 
 Any other issues related to NeuroFedora link:https://pagure.io/neuro-sig/NeuroFedora/new_issue[should be filed at our Pagure project instance].
 
+=== Improve documentation
 
 User documentation is a most important resource.
 You can help by link:https://docs.fedoraproject.org/en-US/fedora-docs/contributing/[improving or contributing to our documentation].
@@ -243,10 +267,12 @@ The sources are kept link:https://pagure.io/neuro-sig/documentation[here].
 
 We are also always looking for people to write about NeuroFedora, the tools, community, and neuroscience on the link:https://neuroblog.fedoraproject.org/[NeuroFedora blog].
 
+=== Help other users
 
 We've set up xref:_communicating_and_getting_help[communication channels] to help users troubleshoot issues and get help.
 You can help by remaining present in the communication channels and answering users' questions.
 
+=== Spread the word
 
 Help us spread the word!
 Write about NeuroFedora, share your opinions on social media, help more people learn about the project and get involved!
@@ -255,6 +281,7 @@ Write about NeuroFedora, share your opinions on social media, help more people l
 * On Twitter, we are link:https://twitter.com/NeuroFedora[@NeuroFedora].
 * You can order NeuroFedora stikers off stickermule link:https://www.stickermule.com/uk/account/artworks/2036110[using the approved artwork].
 
+= Using software included in NeuroFedora
 
 NeuroFedora is a set of packages that can be installed on a Fedora system.
 So, one can setup a Fedora system and then install whatever tools they use.
@@ -267,6 +294,7 @@ Fedora provides a variety of installation media:
 
 Detailed information on installing Fedora can be found in the link:https://docs.fedoraproject.org/[Fedora documentation].
 
+== Software provided by NeuroFedora
 
 NOTE: More software is regularly being added to NeuroFedora. Please xref:communicating.adoc[get in touch with us] for specific requests.
 
@@ -280,18 +308,23 @@ The NeuroFedora special interest group (SIG), however, focusses on providing sof
 
 Please use the individual pages to learn more.
 
+=== Extra software (COPR)
 
 Free/Open source software that is harder to include in Fedora (usually because it is developed in a way that makes it difficult to package while implementing the Fedora packaging guidelines) is temporarily provided in an xref:copr.adoc[extra COPR repository].
 The NeuroFedora team will continue to work with upstreams to move it to official Fedora repositories.
 
+== Container images
 
 Use of containers is discussed on a xref:containers.adoc[separate page].
 
+= Software for computational neuroscience
 
+== Upstream packages
 
 The following tools are among the software currently tested in NeuroFedora and can be installed directly from upstream forges (e.g. PyPi).
 You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedora/package-status/latest/[here].
 
+=== Python packages
 
 
 [.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
@@ -301,6 +334,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 
 |===
 
+== System packages
 
 The following general purpose utilties are included in the repositories:
 
@@ -339,11 +373,14 @@ The following general purpose utilties are included in the repositories:
 
 
 |===
+= Software for data-analysis
 
+== Upstream packages
 
 The following tools are among the software currently tested in NeuroFedora and can be installed directly from upstream forges (e.g. PyPi).
 You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedora/package-status/latest/[here].
 
+=== Python packages
 
 // Please keep this list sorted alphabetically to make it easy to find tools
 [.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
@@ -353,6 +390,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 
 |===
 
+== System packages
 
 The following are included in the repositories:
 
@@ -484,11 +522,14 @@ The following are included in the repositories:
 |===
 
 Software that is in the queue for inclusion is listed link:https://pagure.io/neuro-sig/NeuroFedora/issues?tags=F%3A+Data+Analysis[here].
+= Software for neuro-imaging
 
+== Upstream packages
 
 The following tools are among the software currently tested in NeuroFedora and can be installed directly from upstream forges (e.g. PyPi).
 You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedora/package-status/latest/[here].
 
+=== Python packages
 
 // Please keep this list sorted alphabetically to make it easy to find tools
 [.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
@@ -498,6 +539,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 
 |===
 
+== System packages
 
 The following are included in the repositories:
 
@@ -565,6 +607,7 @@ The following are included in the repositories:
 |===
 
 Software that is in the queue for inclusion is listed link:https://pagure.io/neuro-sig/NeuroFedora/issues?tags=F%3A+Neuroimaging[here].
+= Extra software: COPR
 
 Free/Open source software that is harder to include in Fedora (usually because it is developed in a way that makes it difficult to package while implementing the Fedora packaging guidelines) is temporarily provided in an link:https://copr.fedorainfracloud.org/coprs/g/neurofedora/neurofedora-extra/[extra COPR repository].
 The NeuroFedora team will continue to work with upstreams to move this software to official Fedora repositories.
@@ -582,6 +625,7 @@ Software in COPR does not go through the usual Fedora QA channels.
 However, the NeuroFedora team will thoroughly test this software before making it available.
 The sources for building these packages can be found on link:https://pagure.io/projects/neuro-sig/%2A[Pagure].
 
+== Software list
 
 Software that is is currently provided in the COPR is listed below:
 
@@ -597,6 +641,7 @@ Software that is is currently provided in the COPR is listed below:
 | link:https://pagure.io/neuro-sig/neuroconstruct/issues[Pagure]
 
 |===
+= Excluded FOSS software
 
 Some Free/Open Source Software cannot be included in Fedora Linux because of various technical reasons.
 This page documents these tools and includes suggestions and alternatives for users.
@@ -623,6 +668,7 @@ This page documents these tools and includes suggestions and alternatives for us
 |===
 
 
+= Excluded non-FOSS software
 
 link:https://fedoraproject.org/wiki/Forbidden_items[Fedora does not include proprietary software and software with usage restrictions].
 This page documents these tools and suggests alternatives for users.
@@ -660,11 +706,14 @@ In line with the Fedora communities link:https://docs.fedoraproject.org/en-US/pr
 | The library is source-available, and is free of charge for “private, research, and institutional use”, so some users may be able to compile from source without obtaining a paid license.
 
 |===
+= Utilities
 
+== Upstream packages
 
 The following tools are among the software currently tested in NeuroFedora and can be installed directly from upstream forges (e.g. PyPi).
 You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedora/package-status/latest/[here].
 
+=== Python packages
 
 [.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
 |===
@@ -673,6 +722,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 
 |===
 
+=== Reference/bibliography managers
 
 Fedora does not currently include any of these tools.
 However, the developers provide pre-built binaries that are ready to use.
@@ -690,6 +740,7 @@ However, the developers provide pre-built binaries that are ready to use.
 |===
 
 
+== System packages
 
 The following general purpose utilties are included in the repositories:
 
@@ -880,6 +931,7 @@ The following general purpose utilties are included in the repositories:
 
 |===
 
+=== Python Science Stack
 
 The `python-science` package group includes commonly used scientific Python libraries.
 This can be installed using `dnf`:
@@ -945,11 +997,13 @@ The individual packages may also be installed independently:
 
 |===
 
+= LaTeX
 
 link:https://www.latex-project.org/[LaTeX] is a typesetting system that is Free software.
 It is the standard for the communication and publishing of scientific documents.
 link:https://www.overleaf.com/[Overleaf] provides a convenient interface for collaborative writing using link:https://www.latex-project.org/[LaTeX].
 
+== Installing LaTeX packages
 
 Fedora includes the most recent link:https://www.latex-project.org/[LaTeX] http://www.tug.org/texlive/[TeXLive] distribution.
 link:https://www.latex-project.org/[LaTeX] packages can be installed using link:https://dnf.readthedocs.io/en/latest/command_ref.html[DNF].
@@ -973,6 +1027,7 @@ sudo dnf install 'tex(hyperref.sty)' # <2>
 <1> Install the beamer class.
 <2> Install the hyperref package.
 
+== Utilities
 
 A number of utilities are also available to aid with LaTeX writing:
 
@@ -1001,6 +1056,7 @@ A number of utilities are also available to aid with LaTeX writing:
 
 |===
 
+== Getting help
 
 Apart from the link:https://fedoraproject.org/wiki/Communicating_and_getting_help[usual Fedora troubleshooting] channels, the http://tug.org/[TeX user group] provides various channels for troubleshooting, including a http://lists.tug.org/texhax[mailing list], a http://latex-community.org/forum/[web forum], a http://tex.stackexchange.com/[stackexchange] website.
 Joining TUG has a number of benefits---consider joining them!
@@ -1008,6 +1064,7 @@ Joining TUG has a number of benefits---consider joining them!
 The link:https://en.wikibooks.org/wiki/LaTeX[LaTeX wiki book] works as an excellent reference, while http://detexify.kirelabs.org/classify.html[Detexify] is a most handy tool for finding commands for various LaTeX symbols.
 
 * How do I
+= Citing NeuroFedora
 
 Please cite NeuroFedora if you rely on the work we do.
 This helps us get an idea of how NeuroFedora is being used:
@@ -1027,6 +1084,7 @@ year         = {2019},
 ```
 
 
+= Finding and installing software
 
 You can search the complete set of software available in Fedora using the link:https://packages.fedoraproject.org[Fedora packages application].
 Fedora platforms include the default package manager, link:https://dnf.readthedocs.io/en/latest/command_ref.html[DNF], which can also be used to search the packages provided in the Fedora repositories:
@@ -1048,9 +1106,11 @@ Detailed information on installing specific software where needed is documented 
 A complete list of software maintained by the NeuroFedora SIG can be found link:https://src.fedoraproject.org/group/neuro-sig[here].
 If you use Free/Open source software that is not included in Fedora, you can xref:overview.adoc#_suggest_software_for_inclusion[suggest more software for inclusion in NeuroFedora].
 
+== Flatpaks
 
 Users can also use sanboxed applications using link:https://flatpak.org/[Flatpaks] on Fedora.
 Please refer to link:https://flathub.org/home[Flathub] to see what software is available using Flatpaks.
+= Using containers (Docker/Podman)
 
 Since the NeuroFedora packages are available in the Fedora repositories, they can also be used in customised containers using the Fedora base containers.
 The Fedora community release container images for all Fedora releases which can be obtained from standard public container image registries like link:https://hub.docker.com/_/fedora[Docker Hub].
@@ -1077,6 +1137,7 @@ sudo dnf install toolbox
 
 You can learn more about it on the link:https://docs.fedoraproject.org/en-US/fedora-silverblue/toolbox/[Fedora Silverblue documentation page].
 
+== Using the Fedora release containers interactively
 
 Even though the CompNeuro container image includes a plethora of tools for computational neuroscience, any package from the Fedora repositories can be used in a container by using the base Fedora release containers.
 A simple example of using a Fedora container to use a NeuroFedora package is shown below.
@@ -1166,6 +1227,7 @@ In [3]:
 ----
 
 
+== Creating container images
 
 While working interactively is quite useful, it is even more useful to create container images with specific sets of packages that can then be used and re-used regularly.
 For reproducible research, for example, a container image that includes all the necessary software and sources for the model, its simulation, and the analysis of the generated data is most useful.
@@ -1263,6 +1325,7 @@ Type 'nest.help()' to find out more about NEST.
 
 In a similar way, any package from the Fedora repositories can be used in containers using `dnf` (not just NeuroFedora packages).
 Additionally, we can also include software using `pip` and other package managers, just as we would on a normal system.
+= Using MPI (Message Passing Interface) on Fedora
 
 Where supported, software in NeuroFedora is also built with link:https://www.mpi-forum.org/[MPI] support.
 Fedora includes link:http://www.mpich.org/[MPICH] and link:https://www.open-mpi.org/[OpenMPI] implementations of link:https://www.mpi-forum.org/[MPI].
@@ -1298,6 +1361,7 @@ nest_mpich
 nest_openmpi
 ----
 
+== MPI Environment modules
 
 To use an MPI build, the appropriate link:https://modules.readthedocs.io/en/latest/[environment module] must be loaded.
 These correctly setup paths, and environment variables.
@@ -1326,10 +1390,12 @@ It is generally easier to add these lines to the `~/.bashrc` file (for bash user
 
 Where required, use of software with link:https://www.mpi-forum.org/[MPI] is documented on a separate page.
 
+= Neuroscience resources
 
 This is an unordered list of various neuroscience resources.
 Please get in touch to add more entries to the list.
 
+== RSS Feeds
 
 [cols="20,80",frame="all"]
 |===
@@ -1341,6 +1407,7 @@ Please get in touch to add more entries to the list.
 |===
 
 
+== Computing resources
 
 [cols="20,80",frame="all"]
 |===
@@ -1356,6 +1423,7 @@ Please get in touch to add more entries to the list.
 
 |===
 
+== Mailing lists and forums
 
 [cols="20,80",frame="all"]
 |===
@@ -1380,6 +1448,7 @@ Please get in touch to add more entries to the list.
 
 |===
 
+== Organisations
 
 [cols="20,80",frame="all"]
 |===
@@ -1410,6 +1479,7 @@ Please get in touch to add more entries to the list.
 
 |===
 
+== Neuroscience databases
 
 [cols="20,80",frame="all"]
 |===
@@ -1491,6 +1561,7 @@ Please get in touch to add more entries to the list.
 
 |===
 
+== Other resources
 
 [cols="20,80",frame="all"]
 |===

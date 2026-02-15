@@ -1,3 +1,4 @@
+= Mindshare Teams in Fedora
 
 Mindshare Teams are focused on helping our community grow both the number of users and contributors.
 The teams in Mindshare are each focused on a different aspect of this goal.
@@ -9,7 +10,9 @@ The xref:mindshare.adoc[Mindshare Committee] fosters communication amongst the M
 * link:https://fedoraproject.org/wiki/Design[**Design**] — The Fedora Design Team is Fedora's in-house design agency. We provide artwork, user experience, usability, and general design services to the Fedora project.
 * link:https://fedoraproject.org/wiki/Websites[**Web Sites**] — The Fedora Websites initiative aims to improve Fedora's image and to create the best possible interface for users and contributors on the Internet.
 * xref:badges:ROOT:index.adoc[**Fedora Badges**] — The group behind Fedora Badges — a fun website built to recognize contributors to the Fedora Project, help new and existing Fedora contributors find different ways to get involved, and encourage the improvement of Fedora's infrastructure.
+= Advocate Program
 
+== What Is A Fedora Advocate?
 
 Advocates are passionate contributors who want to participate in community events, represent Fedora and help grow the user and contributor community.
 Advocates are people who love spreading knowledge about their area of interest in Fedora.
@@ -17,6 +20,7 @@ Many advocates also organize release parties where they share information about 
 Advocates also help new contributors join and hack on any of the subprojects at meetups and Fedora Activity Days (FADs).
 Advocates come from all parts of the project and represent contributors from all areas, technical and non-technical.
 
+== What Purpose Do They Solve?
 
 Organize Fedora participation at events
 
@@ -25,6 +29,7 @@ Organize Fedora participation at events
 * Hold calendar events like release parties
 * Promote Fedora technology at local user groups with talks etc.
 
+== What Makes A Great Fedora Advocate?
 
 Fedora Advocates tend to be people who are:
 
@@ -50,6 +55,7 @@ You should be eager and happy to work with Fedora Ambassadors to learn more abou
 You are expected to collaborate and work with people in your local area, including colleges, universities, professional groups or meetups, and other places where like-minded individuals tend to congregate.
 You are the face of Fedora in your area.
 
+== Joining
 
 Joining the Advocates is super-easy.
 **Just hold an event.**
@@ -74,6 +80,7 @@ The Mindshare committee, which approves event requests also posts their meeting 
 [NOTE]
 Once you’ve done your first event, we’ll add you to the list of advocates by putting you into the advocate's FAS group, and you will be awarded with the fabulous link:https://badges.fedoraproject.org/badge/fedora-advocate[Fedora Advocate Badge].
 
+== Getting Started
 
 Make your first projects small ones that are well-defined.
 Many advocates start out by:
@@ -97,6 +104,7 @@ Pick the one that makes the most sense to your and your community.
 For some people, focussing on the work of a specific subproject makes the most sense.
 If your community is focused on a specific language stack, etc., talk about that.
 
+== Holding An Event
 
 When you’re ready to hold an event, you need to do a few simple things:
 
@@ -121,6 +129,7 @@ Do it again and again and keep the momentum going.
 
 
 
+== Getting Swag or Financial Support
 
 The goal of an event is the spread knowledge and attract users and contributors to Fedora.
 We realize that sometimes you need swag (such as stickers, buttons and pins) or money to help make this possible.
@@ -171,6 +180,7 @@ Link your report to your ticket.
 . Submit a reimbursement request to the link:https://pagure.io/fedora-budget/issues[Fedora Budget Pagure] using the provided template.
 Reimbursements are typically paid within 2 weeks.
 
+== Writing Your Event Report
 
 The work of Advocates is often featured in the Mindshare newsletters and hence the event report holds a significant amount of importance.
 The report is a general summary of an event which gives the project an idea of what's going on and reports on successes as well as lessons learned.
@@ -188,6 +198,7 @@ To extend the reach of audience, Advocates may syndicate their blog to Fedora Pl
 For more information https://fedoraproject.org/wiki/Planet?rd=Planet_HowTo[check out this 'how to'.]
 
 Comment on your issue in the https://pagure.io/mindshare/issues[mindshare repo with a link to your event report.]
+= Contributor Recruitment
 
 Part of keeping Fedora a vibrant, healthy community is bringing new contributors on board.
 One way we can do this is to have our presence at events focus on recruiting contributors.
@@ -198,6 +209,7 @@ What we want is to create a "funnel" of potential contributors that the Join SIG
 
 In order to give people a focused area, we highlight a few teams that are a link:current_focus[current area of focus].
 
+== Events
 
 The primary goal of Fedora's presence at conferences and other large events should be contributor recruitment.
 This does not mean that we can't do general messaging, but that will not be the focus or how success is measured.
@@ -205,12 +217,14 @@ We should, of course, continue to speak to existing users about the shiny new te
 
 The "How to organize an event" page will soon be updated with specific guidance.
 
+== Online campaigns
 
 We encourage teams that are looking for new contributors to submit Fedora Magazine articles describing their current work, and areas they need help with.
 As an example, see Adam Šamalík's https://fedoramagazine.org/contribute-to-fedora-magazine-2/[Contribute to Fedora Magazine article].
 In addition we can use social media channels to promote these articles.
 Teams can work with the https://pagure.io/design[Fedora Design team] to create images that can be used to promote recruitment.
 * Committee Procedures
+= Creating and Ordering Swag
 
 To make the production and creating of swag more efficient, the Mindshare Committee has empowered the link:https://docs.fedoraproject.org/en-US/council/fcaic/[Fedora Community Action and Impact Coordinator (FCAIC)] to produce and create swag as needed to keep our inventory full.
 Swag items and use will be approved by Mindshare, in general, and then the FCAIC/others will fulfill needs for the various events based on their best judgement in concert with the event owner/coordinator.
@@ -229,6 +243,7 @@ As an example, this process looks like this for the Fedora Booklets in link:http
 . FCAIC/others arrange to have them printed and in-stock or on-demand for use
 . Event Owners suggest when they will be useful at their events
 . AMAZING EVENTS!
+= Meetbot script for meetings in #fedora-mindshare
 
 ----
 .members mindshare
@@ -253,6 +268,7 @@ Any suggested additions or modifications?
 
 Don't forget to email the minutes and any notes to mindshare-announce@lists.fedoraproject.org
 ----
+= Adding New Members
 
 The following typically need to be done to add a new member to the committee:
 
@@ -261,6 +277,7 @@ The following typically need to be done to add a new member to the committee:
 * Update the link:https://pagure.io/mindshare/tree/master[Mindshare Docs Page] that lists the members
 * Update the meeting script above
 * Add the person to the calendar invite
+= Fedora Mentored Project Representative
 
 Purpose:
 --------
@@ -286,10 +303,13 @@ Support the current representative
 ----------------------------------
 
 This is an *Selected* seat which means that people who are interested in working as mentored project rep can actually help the current represenative to learn "how to do things right"
+= Mindshare Committee Quarterly Report Doc
 
+== Overview
 
 The Mindshare Committee represents the outreach teams in Fedora and provides an umbrella for other non-coding teams. Mindshare has established a Quarterly Report to help round up announcements, information, and updates from these teams. This page holds documentation on our process to gather information, format, and publish the report.
 
+== Which teams are part of the report?
 
 All teams on the Mindshare "side" of the Fedora ecosystem are welcome to participate. Teams which have active representatives on the committee are strongly suggested to contribute to the report.
 
@@ -311,6 +331,7 @@ Current list of teams and how to contact them for info:
 * Translations (trans@lists.fedoraproject.org)
 * Websites & Apps (Discourse)
 
+== What's the process?
 
 A ticket is opened on the Mindshare pagure to track progress for each report (i.e. "Q1 Mindshare Report - January, February, March 2022") and is triaged with the tag "quarterly-report". The owner of the ticket is the Fedora Community Action and Impact Coordinator(FCAIC).
 
@@ -331,12 +352,14 @@ Once all the information from the various teams has been gathered, the FCAIC doe
 
 After the report is published to the CommBlog, a link should be added to the corresponding ticket. That ticket can then be closed as complete and a new ticket for the upcoming quarter should be opened immediately. The cycle starts again!
 
+= Fedora Council Mindshare representative
 
 As a major steering committee under the Fedora Council, Mindshare is responsible for selecting a representative that covers the community aspects of the Fedora Project.
 This person is responsible for representing Mindshare as a collective and not as a single voice.
 They will be required to work with all of the various groups that collaborate with Mindshare and act as a liaison between these groups and the Council.
 The role will require a fair amount of time investment and good communication skills.
 
+== Responsibilities
 
 The following responsibilities and duties are delegated to the Mindshare representative.
 
@@ -358,6 +381,7 @@ To the Mindshare Committee:
 
 * Listen to the needs, concerns, and hopes of the Fedora Community and relay them to the Mindshare Committee.
 
+== Duration of Service
 
 The representative will serve in this role for two release cycles.
 They may also step down before that time or the Council or Mindshare may wish to replace them.
@@ -366,6 +390,7 @@ In the event that the representative to Mindshare needs to step down, they shoul
 In the event that the Mindshare Committee or the Council wish to make a change in representative, a thorough explanation of why will be required, and each situation will be handled on a case by case basis.
 In the event that the Council wants to change the rep, Mindshare Committee will review and make a final decision, and vice versa.
 
+== Nomination
 
 This section explains how the representative is nominated and confirmed.
 The selection process documented below is initiated when a rotation of representatives is motioned by the existing representative, the Mindshare committee, or the Fedora Council.
@@ -377,6 +402,7 @@ Nominees are required to be members of the Mindshare Committee and should have a
 In the event that there are no nominees, the Mindshare committee will work with the Council to broaden the search message and request more time.
 Should no nominees be found after that, the role will rotate among existing Mindshare members until the next representative is identified.
 
+== Selection
 
 After the nomination period expires, Mindshare will discuss candidates in a public meeting.
 A meeting discussion provides an opportunity for the team to weigh in and share another context.
@@ -411,10 +437,12 @@ IMPORTANT: Please note that the Fedora Project LimeSurvey account is not free (l
 
 Please refer to https://manual.limesurvey.org/LimeSurvey_Manual[upstream documentation] for more information.
 * Infographics
+= 2019 Mindshare Team Achievements
 
 image::infographics/2019-achievements.png[2019 achievements,100%]
 * Fedora Events
 
+= In-person event guidance related to COVID-19
 :page-aliases: ROOT:covid19-guidance.adoc
 
 [NOTE]
@@ -432,11 +460,14 @@ Contact the {team_name} through chat in link:{team_synch_communication}[#mindsha
 To learn more about requesting funds for Fedora related events, take a look at the xref:mindshare-committee::index.adoc[{team_name} docs].
 
 
+== What you need to know
 
+=== What is an event?
 
 For the purpose of this page, an event is any internal (Fedora contributors), external (collaborations, partners, neighbor communities), or a mix of both internal/external gathering of people that takes place in person.
 This is for all Fedora related events regardless of size, location/region, audience (internal, external), or type (Fedora hosted events or third party events).
 
+=== How will Mindshare evaluate what events to fund?
 
 This is the part that is ever-changing.
 As we have witnessed, COVID-19 seems to spread, then we suppress it some, and then evolves and spreads again.
@@ -457,6 +488,7 @@ See below for details:
 . Will your travel to/from the event bring you across a Country border?
 . Local official COVID-19 guidance
 
+=== Safety requirements
 
 Every event is encouraged to follow the highest possible safety standards for the protection of all participants.
 For example:
@@ -474,6 +506,7 @@ For example:
 
 
 [[terms]]
+== Terms
 
 By receiving funding related to in-person events, you agree to the following:
 
@@ -482,6 +515,7 @@ By receiving funding related to in-person events, you agree to the following:
 . Neither Fedora, the event venue, the event organizer, or any of their respective parents, affiliates, sponsors, shareholders, employees, agents, officers, directors, successors, or assignees will be liable for any injury or illness, however caused, arising from, or in any way relate to COVID-19 in connection with the event.
 . You assume any and all risk, whatsoever, related to any Fedora or Fedora-related event, and release and discharge Fedora, their sponsors, and their agents from any liability to the fullest extent allowed by the law.
 
+= What is a Release Party?
 :page-aliases: ROOT:release-parties.adoc
 
 Release Parties are an informal gathering of community members hosted by Fedora to celebrate a new release.
@@ -491,6 +525,7 @@ Release parties can be casual events with a few people meeting in a coffee shop 
 
 
 [[what-to-do]]
+== What to do at Release Parties?
 
 There are many things you can do at a Release Party.
 A typical release party will have the following:
@@ -516,6 +551,7 @@ For example, if you are hosting a release party at work, have talks focused on t
 
 
 [[hosting]]
+== Hosting Release Parties
 
 _It is simple to host a Release Party_.
 
@@ -543,6 +579,7 @@ Ideas for what went well and what could be improved are welcome.
 
 
 [[assistance-swag]]
+== Financial Assistance and Swag
 
 Release Parties and should be planned at least 30-40 days in advance.
 In our experience, events planned with less lead time are generally less successful.
@@ -552,6 +589,7 @@ Follow the Getting Financial Assistance and Swag section xref:ROOT:advocate.adoc
 
 
 [[event-report]]
+== Writing Your Event Report
 
 * *Community Blog* (a.k.a. *CommBlog*):
 You can link:{COMMBLOG}/wp-login.php[sign into the Community Blog WordPress site] using your FAS account credentials.
@@ -566,6 +604,7 @@ For more information link:{FWIKI}/Planet[check out this 'how to'].
 
 Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
 
+= Swag-Only Requests
 :page-aliases: ROOT:swag-only-requests.adoc
 
 If you only need swag to help you hold an event, we have a fast-track policy to help you out.
@@ -609,6 +648,7 @@ For more information link:{FWIKI}/Planet[check out this 'how to'].
 
 Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
 
+= Holding or Attending a Small Event
 :page-aliases: ROOT:small-events.adoc
 
 Anyone can hold or attend a small Fedora-related event, you don't have to be an Ambassador.
@@ -659,6 +699,7 @@ Reimbursements are typically paid within 2 weeks.
 
 . Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
 
+= Holding or Attending a Medium Event
 :page-aliases: ROOT:medium-events.adoc
 
 While anyone can hold or attend a medium Fedora-related event, these events are typically done by experienced Fedora contributors and or existing Fedora Ambassadors.
@@ -715,6 +756,7 @@ Reimbursements are typically paid within 2 weeks.
 
 . Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
 
+= Holding or Attending a Large Event
 :page-aliases: ROOT:large-events.adoc
 
 While anyone can hold or attend a large Fedora-related event, these events are typically done by experienced Fedora contributors and or existing Fedora Ambassadors.
@@ -774,6 +816,7 @@ Reimbursements are typically paid within 2 weeks.
 . Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
 .Policies & Processes
 
+= Late Event Report Policy
 :page-aliases: ROOT:event-report-policy.adoc
 
 This page documents the Event Report Policy for any event funded by the Fedora Project.
@@ -782,6 +825,7 @@ This page documents expected outcomes and consequences when an event organizer d
 
 
 [[days-30]]
+== After 30 days
 
 Event reports more than 30 days (about a month) late result in the following:
 
@@ -790,6 +834,7 @@ Event reports more than 30 days (about a month) late result in the following:
 
 
 [[days-90]]
+== After 90 days
 
 Event reports more than 90 days (about 3 months) late result in the following:
 
@@ -799,6 +844,7 @@ Event reports more than 90 days (about 3 months) late result in the following:
 
 
 [[days-120]]
+== After 120 days
 
 After 120 days, the event report is no longer required as it probably has limited value.
 Event reports more than 120 days (about four months) late result in the following:
@@ -813,10 +859,12 @@ Event reports more than 120 days (about four months) late result in the followin
 
 
 [[reestablish-activity]]
+== Re-establishing project activity
 
 Re-establishing activity is a conversation, not an algorithm.
 It is generally met by being a helper at other people's events or otherwise showing the {team_name} they are actively involved in Fedora SIGs or other online events.
 The {team_name} strongly considers a person's history and unique circumstances.
+= Fedora Reimbursement Requests (FRRs)
 // Document metadata
 :page-keywords: fedora, reimbursement, expenses, red hat, contributor, funding, community
 // URL Attributes
@@ -846,6 +894,7 @@ Meals and local transport (e.g., metro, bus, taxi) are *NOT* eligible for reimbu
 
 
 [[prerequisites]]
+== Before You Begin: Essential Prerequisites
 
 Before starting the Fedora Reimbursement Request (FRR) process, please ensure you meet the following prerequisites:
 
@@ -860,10 +909,12 @@ Red Hat does not provide tax advice or handle individual tax liabilities.
 
 
 [[preapproval]]
+== Stage 1: Obtaining Pre-Approval for Your Expenses
 
 This first stage must be completed *before* you incur any expenses that you expect Red Hat to reimburse.
 
 [[community-approval]]
+=== Step 1.1: Secure Fedora Community Funding Approval
 
 Before Red Hat can consider an FRR, your activity and associated funding must be approved by an appropriate Fedora Project governance body.
 For event-related expenses, this is typically the xref:mindshare-committee:ROOT:index.adoc[Fedora Mindshare Committee].
@@ -880,6 +931,7 @@ These processes may be under review or restructuring, but they represent the pub
 *Keep this URL handy; you will need it later for your FRR.*
 
 [[bear]]
+=== Step 1.2: Obtain Red Hat BEAR Pre-Approval (If Sponsoring Travel or Accommodation)
 
 If your FRR includes funding for *travel* (such as flights, train, or bus tickets) or *accommodation* (like hotel stays), you _must_ also obtain pre-approval from Red Hat's internal Business Entertainment and Amenities Review (BEAR) team.
 
@@ -914,14 +966,17 @@ This is a strict requirement.
 
 
 [[attend]]
+== Stage 2: Attending Your Event & Crucial Expense Documentation
 
 This stage covers your participation in the approved activity and the critical task of correctly documenting your expenses for the FRR.
 
 [[participate]]
+=== Step 2.1: Participate in Your Approved Activity
 
 Attend your conference, deliver your talk, or participate in the Fedora activity as approved.
 
 [[receipts]]
+=== Step 2.2: Collect Itemized and Dated Receipts -- This is Critical!
 
 Proper receipts are the cornerstone of your reimbursement claim.
 Failure to collect the correct type of receipts will prevent reimbursement.
@@ -957,6 +1012,7 @@ It is a good practice to take clear digital photos or scans of them as soon as y
 ====
 
 [[report]]
+=== Step 2.3: Prepare Your Event Report
 
 For most Fedora-funded events, you are required to write an event report.
 This could be a blog post or a summary on Fedora Discussion.
@@ -973,10 +1029,12 @@ However, sharing your experiences is still highly encouraged!
 ====
 
 [[submit-request]]
+== Stage 3: Submitting Your Reimbursement Request via GitLab
 
 After your event is over, and you have gathered all your receipts and prepared your event report, you can submit your FRR.
 
 [[banking-info]]
+=== Step 3.1: Prepare Your Banking Information for USD Deposit
 
 Red Hat issues all reimbursements via direct bank deposit and *only in US Dollars (USD)*.
 
@@ -1007,6 +1065,7 @@ The reimbursement will cover the USD equivalent of your approved expenses.
 ====
 
 [[gitlab]]
+=== Step 3.2: Create a Reimbursement Request Issue in GitLab
 
 All FRRs are tracked as issues in the {url-ospo-sponsorship}[Red Hat OSPO Sponsorship GitLab repository].
 
@@ -1046,6 +1105,7 @@ It will automatically be assigned labels like `check1::needs triage`, `check2::n
 The Fedora Community Architect will manage these.
 
 [[expense-docs]]
+=== Step 3.3: Prepare and Submit Your Detailed Expense Documentation
 
 After you open the FRR, the Fedora Community Architect (FCA) will be notified and will guide you on the next steps for submitting your detailed documentation.
 The general process is as follows:
@@ -1082,6 +1142,7 @@ Email (if you do not have a Google Account)
 
 
 [[processing]]
+== Stage 4: Reimbursement Processing by Red Hat (Internal Steps)
 
 Once you have submitted all your documentation for your FRR, the Fedora Community Architect and internal Red Hat teams will handle the processing.
 This stage is mostly for your awareness of what happens next.
@@ -1099,6 +1160,7 @@ It also uses Red Hat internal details like GL Code (`721300`), Cost Center (`708
 The FCA's manager will then approve this Payment Exception Request directly within ServiceNow.
 
 [[receiving]]
+== Stage 5: Receiving Your Reimbursement
 
 This is the final stage where you receive your funds.
 
@@ -1130,6 +1192,7 @@ As stated at the beginning, you are personally responsible for any and all tax o
 
 
 [[questions]]
+== Questions or Need Help?
 
 * *Fedora Community Approval Process*:
 For questions related to the initial funding approval process within the Fedora Project, please consult the Fedora Mindshare Committee directly or the specific Fedora group handling the funding.
@@ -1147,6 +1210,7 @@ The aim is to provide a clear and consistent procedure aligned with current Red 
 
 
 [[appendix]]
+== Appendix: Glossary of Key Terms
 
 * *BEAR*:
 Business Entertainment and Amenities Review.

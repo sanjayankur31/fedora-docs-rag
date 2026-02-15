@@ -1,4 +1,5 @@
 * Goals
+= Product Requirements Document
 
 [NOTE]
 ====
@@ -7,9 +8,11 @@ Updated document as finalized at the *IRC Working Group Meeting* on https://meet
 
 This document provides an overview of what Fedora Server Edition is, the goals and objectives, and what it is designed for. It is written from a user’s point of view to allow people to understand what the Server Edition should do, what it is useful for, and what to expect from it in the future.
 
+== Fedora Server Vision
 
 Fedora Server is a real-world incarnation of the https://docs.fedoraproject.org/en-US/project/[Fedora Project's vision] for organizations, individual users, and developers to develop, deploy, and maintain applications and services – freely, autonomously, and under their own control.
 
+== Fedora Server Mission
 
 *As a user, you gain the opportunity to use the server of the future right now.*
 
@@ -19,6 +22,7 @@ Fedora Server provides a stable, flexible, and universally-adaptable base for th
 
 Fedora Server is also a platform for developers and system integrators, which provides an implementation of the latest server technology for exploring and evaluating.
 
+== Market Opportunity
 
 The server operating system market is mature and yet, constantly evolving. The technologies that are in the midst of changing computing, such as e.g. cloud or containers, depend, at the end of the day, on servers running on bare metal and capable of handling the requirements of those technologies‘.
 
@@ -26,6 +30,7 @@ Fedora Server, being a leading-edge Linux distribution, is the ideal place for d
 
 Fedora Server provides a stable foundation, with balanced resource utilization, yet delivering the latest technologies giving administrators every day exposure to the latest tooling as soon as it is usable.
 
+== Why use Fedora Server?
 
 Fedora Server has so many genuine advantages that it is hard to list them all. The nine most important ones are:
 
@@ -39,6 +44,7 @@ Fedora Server has so many genuine advantages that it is hard to list them all. T
 * Fedora Server ensures utmost freedom from restrictions imposed by commercial interests or corporate feature management and excellent backwards hardware compatibility.
 * Developers find an excellent development environment for the next generation server as well as application software with the latest software versions available.
 
+== Server Edition Objectives
 
 Fedora Server Edition offers a highly flexible and adoptable multi-purpose server platform, usable at every scale.
 
@@ -52,13 +58,16 @@ Fedora Server Edition offers a highly flexible and adoptable multi-purpose serve
 
 Fedora Server can be used as a standalone server that runs an application or service as well as a member of a cluster in a data center. As a result of strict adherence to open standards, it natively cooperates with different server technologies and implementations.
 
+=== Additional Overall Objectives
 
 Aside from the adoption and development of the Fedora Server platform, we have additional goals that are fundamental in any case:
 
 * Security-minded: secure by design - extending into TPM support, disk encryption enablement
 * Community-driven: Intense feedback about product direction and potential improvements. This is separate from “bug reports” in that we hope to engage the audience and receive detailed feedback about use cases, desired features, developing trends in cloud management, etc. We encourage more patches and contributions that will help improve the Server Edition, and Fedora in general.
 
+== Primary Use Cases, User Profiles, and most important Features
 
+=== Use Cases
 
 The Fedora Server will need to address the following use-cases:
 
@@ -68,46 +77,55 @@ The Fedora Server will need to address the following use-cases:
 * Personal home server, located ‘on premise’ in own flat / house and used as NAS, backup device, and for applications such as mail repository, contact database, calendar, ebook library, media server, etc.
 * Development box, providing developers with the latest software version and excellent developing tools
 
+=== User Profiles
 
 We will use a set of personas to describe our target users and their respective needs. We list the typical personas by brief title and a short list of key characteristics.
 
+==== System Administrator "Macgyver"
 
 * Administrator with limited hardware and personnel resources to work with
 * Requires simple automation to cope with repetitive tasks
 * Needs to be able to do “a lot with a little”
 
+==== DevOps Engineer/Administrator
 
 * Focus is on time-to-deploy and time-to-recover as opposed to uptime
 * Value is achieved by delivering the latest capabilities fastest
 * Needs to be able to deliver quickly to PaaS, SaaS and bare-metal servers
 
+==== Application Developer
 
 * Needs a platform with API and ABI stability guarantees
 * Focus will be on minimizing risk when making changes
 * Needs latest technology in virtualization and containerization
 * Likes a platform similar to the workstation
 
+==== Decision Maker
 
 * Makes purchasing decisions and directs technology choices
 * Interacts with upstream FOSS communities to identify potential value
 
+==== The Home Admin
 
 * I need a somewhat stable machine, with a graphical interface (Cockpit) and just want to start a couple of containers and/or virtual machines to have nextcloud running on it.
 * I need some gitea here, some gitlab there, some jenkins, some photoprism, minecraft, etc. Can I build a NAS easily?
 * I am ok with updates and reboots over night, but it should work. It would be awesome to have mDNS and a Web UI.
 
+==== The Hyperscaler
 
 * I treat my servers as “cattle, not pets”. Overall uptime is more important than individual server uptime
 * I want to have a reliable platform for virtualization, core services and container. It should be out of my way, so I can focus on scaling, monitoring, implementation
 * I want to automate server installation, and configurations for hostname, timeserver, hardening, etc. In addition I want to deploy typical services like mariadb, httpd, nginx, redis, nodejs, java, etc. in a reproducible way. To see what the machines are doing, I need a well documented way to manage, monitor and backup them.
 * My Security Team also wants me to disable unneeded services, disable legacy protocols, enable hardening on several levels.
 
+==== The Remixer / "Let’s build upon it"
 
 * I love how Fedora works and I want to create something upon it.
 * I need a very well documented build process and maybe tools to produce new install images
 * Removing the branding should be possible with some compiler flags or variables, so I don’t need to mess with the code itself.
 * I have a raspberry/intel nuc/etc. and playing a bit with new stuff.
 
+=== Most Important Features
 
 * The user can easily deploy and configure any supported Fedora Server application as well as rapidly re-deploy services in accordance with their DevOps practices. (Examples range from BIND DNS, DHCP, Database server, iSCSI target, File/Storage server, up to OpenStack Hypervisor Node, and the like)
 * The user can query, monitor, configure and manage a Fedora Server and the resources consumed by services remotely using stable and consistent public interfaces.
@@ -115,7 +133,9 @@ We will use a set of personas to describe our target users and their respective 
 * Users can create, manipulate and terminate large numbers of virtual machines and containers using a stable and consistent interface.
 * The user is enabled to install and manage Fedora Server in a headless mode, either directly on the command line or supported by Cockpit, a lightweight Web GUI.
 
+== Logistical Concerns
 
+=== Delivery Mechanisms
 
 Fedora Server Edition generates installation resources for different scenarios
 
@@ -133,9 +153,11 @@ Existing servers should be upgradable to new releases with minimal involvement b
 
 Users will be able to obtain these images from the Fedora Project website and mirror networks.
 
+=== Documentation
 
 Fedora Server Edition documentation will be made available in a dedicated section of the Fedora documentation project. For selected topics, we strive for integration into the generic Fedora documentation.
 
+== About this Document
 
 This document resulted from a broad discussion of the Fedora Server Edition working group. Contributors include:
 
@@ -153,6 +175,7 @@ This document resulted from a broad discussion of the Fedora Server Edition work
 * Langdon White
 * Adam Williamson
 
+= Fedora Server Technical Specification
 
 [NOTE]
 ====
@@ -164,9 +187,11 @@ Updated version as finalized at the *Server Working Group IRC Meeting* on https:
 This document aims to describe the technical characteristics and properties of the Fedora Server Edition in detail. This includes provided services, installed software, and the like. It also defines characteristics and features that are not yet or not fully implemented in the current Fedora Server Edition release.
 
 
+== Preamble
 
 Fedora Server provides a stable, flexible, and universally-adaptable base for the everyday provisioning of services and applications by organizations and individuals, based on the latest technology and available quickly after the upstream releases. It aims to empower users to deploy the services they need, whether using proven mature techniques or current technical developments, under their own control and adapted to their own needs. For this purpose, it provides a broad spectrum of available techniques from which users can choose completely independently and without predetermined valuations.
 
+== Overview
 
 The specification defines implementation details, implementation variants, and especially extensions. They constitute a detailing and technical elaboration of the goals and principles as stated in the https://docs.fedoraproject.org/en-US/server-working-group/docs/product-requirements-document/[Fedora Server Product Requirements Document].
 
@@ -187,8 +212,10 @@ describe various services which Fedora Server can validly and concurrently offer
 
 The features and properties specified here are the basis for the specification of Fedora Server release criteria and release blockers.
 
+== 1. Core Features
 This section describes the basic properties and features of the platform and their intended use.
 
+=== 1.1 Supported Architectures and Install Media
 
 Fedora Server will definitely run on and provide install media for x86_64 and aarch64 servers. The project may provide install media for additional architectures. But these are not part of standard quality management and may be available ephemerally.
 
@@ -199,6 +226,7 @@ Fedora Server will definitely run on and provide install media for x86_64 and aa
 * A *virtual machine disk image* for simplified installation of Fedora Server Edition in a KVM virtual environment. The image reproduces the Server Edition completely and without restrictions, as far as features are usable in a virtual environment.
 * A raw *aarch64 disk image* for installation on a Singe Board Computer (SBC).
 
+=== 1.2 File System and Storage Organization
 
 Fedora Server gives the highest priority to maximum reliability and security of data  with a maximum of possible performance.
 
@@ -217,9 +245,11 @@ The installer also provides a custom partitioning interface to accommodate use c
 
 Additionally, the installer shall provide an option to enable disk encryption.
 
+=== 1.3 Basic service and daemon management
 
 Systemd provides ways to control and monitor the activity and status of system services, resources they require, and the like. All system services must provide systemd units to be included in the Fedora Server standard installation.
 
+=== 1.4 SELinux
 
 SELinux will be enabled in enforcing mode, using the targeted policy. It must fully protect any installable system component and functional application.
 
@@ -227,11 +257,13 @@ Fedora Server Edition must include a user-friendly mechanism for identifying SEL
 
 Additionally, any Server Role we provide MUST also provide options to appropriately modify the system's SELinux configuration (adjusting booleans, for example).
 
+=== 1.5 Networking
 
 By default, NetworkManager controls and manages all network devices and connections. Any modifications or adjustments to the network configuration must use the NetworkManager configuration tools or the public NetworkManager D-BUS API.
 
 Installation or First Boot must create a permanent configuration file for each physical network device found, or at least a stub configuratin file. Primarily, DHCP is to be used and enabled if available. Both must allow the system administrator to customize the default configuration without restriction.
 
+=== 1.6 Firewall
 
 The default method in Fedora Server is _firewalld_. It is part of the basic initial installation and not deselectable.
 
@@ -243,14 +275,17 @@ Configuration of ssh allows root access only with key-based login, if at all.
 
 Additionally, any Server Role we provide MUST also provide options to appropriately display and modify firewalld's configuration options.
 
+=== 1.7 Account handling
 
 SSSD will provide the backing storage for identity management. The Fedora Server is expected to nearly always be configured for ‘centrally-managed’ user information; it must be possible to configure it to rely on a directory service for this information. Fedora Server will provide and support the realmd project for joining FreeIPA and Active Directory domains automatically. Interacting with other identity sources will remain a manual configuration effort.
 
+=== 1.8 Logging
 
 Fedora Server uses systemd-journald and rsyslog for system logging. It's recommended all applications submit logs to systemd-journald.
 
 It stores log files locally by default and also supports sending full log data to an external server to the maximum extent possible. It uses rsyslog for forwarding data to a central server.
 
+=== 1.9 Miscellaneous System Information
 
 System locale, timezone, hostname, etc. will be managed through the services provided by systemd for this purpose, specifically
 
@@ -258,6 +293,7 @@ System locale, timezone, hostname, etc. will be managed through the services pro
 * timedated: timedatectl
 * hostnamed: hostnamectl
 
+=== 1.10 System Installer
 
 The desired installation experience for the Fedora Server product is to limit the pre-installation user interaction to the minimum. The storage configuration UI does provide a single sensible default and an alternative, fully customizable configuration UI.
 
@@ -269,7 +305,9 @@ Fedora Server supports kickstart as implemented by pyKickstart and Anaconda as t
 
 
 
+== 2. System Administration
 
+=== 2.1 Appearance
 
 The primary system management tool is CLI using bash on a system console. Locally, the default Fedora Server boots to a text terminal login screen. It expects the system administrator to type the required commands or using bash scripts or to use Ansible roles and plays.
 
@@ -279,15 +317,19 @@ For remote installation, ssh and sftp are installed and activated by default. Ad
 
 The Fedora Server does _not provide a local graphical environment_. If the administrator elects to install a desktop, they should choose and install a display manager themselves.
 
+=== 2.2 Input Methods
 
 The input method support for the Fedora Server console access is the LOCALE support in the command shell.
 
+=== 2.3 Accessibility
 
 Accessibility support on the Fedora Server will be limited to devices supporting the vision-impaired on the console.
 
+=== 2.4 Software updates
 
 Software updates on the Fedora Server must be possible to perform either locally using command-line tools (dnf), remote using _ssh_ or _Cockpit_, or centrally by common management systems (e.g. _Satellite_, _Ansible_).
 
+=== 2.5 Problem reporting
 
 Problems and error conditions (e.g. kernel oopses, Selinux AVCs, application crashes, OOM, disk errors) should all be reported in the systemd journal.
 Support for sending this information to a central place (like abrt does for crashes today) is mandatory.
@@ -295,29 +337,39 @@ Support for sending this information to a central place (like abrt does for cras
 
 
 
+== 3. Advanced Features
 
+=== 3.1 Virtualization
 
+==== 3.1.1 KVM / Libvirt
 
 libvirt-daemon will be used to manage virtualization capabilities.
 
+==== 3.1.2 XEN based Virtualization
 
 XEN based Virtualisation is available in Fedora and installable with Fedora Server. While it may work, Xen virtualization is not officially supported on Fedora Server.
 
+=== 3.2 Containerization
 
 Fedora Server Editions does support various different container technologies.
 
+==== 3.2.1 Podman Application Container
 Podman must be installable and usable right out of the box.
 
+==== 3.2.2 Systemd-nspawn System- and Application Container
 A systemd-nspawn container must be installable and usable right out of the box.
 
 
+==== 3.2.3 Libvirt LXC System Container
 A Libvirt LXC container must be installable and usable right out of the box.
 
+== 4. Server Roles
 
 Server Roles are a high level set of software services with additional administrative support to smoothness integrate into Fedora Server Edition and validated to operate concurrently and conflict-free in Fedora Server. An example is Mail Service, that includes various system services as postfix, dovecot and alike.
 
 Server Roles are supposed to get developed in the Fedora 37 – 40 time frame.
 
+=== 4.1 Server Roles Requirements
 
 Supported Server Services are supposed facilitate the following functions
 
@@ -335,37 +387,48 @@ Depending on practical experience, Server Roles may additionally need a query in
 * If the Server Service is designed to operate on the network, it should automatically open those ports (see Firewall) during deployment.
 * An interface to set processor affinity, memory limits, etc. where sensible.
 
+=== 4.2 Server Role Administration
 
 Ansible is the projected administration tool.
 
+=== 4.3 Projected Server Roles
 
+==== 4.3.1 Domain Controller
 
 The Fedora Server Domain Controller Service will be provided by the FreeIPA project.
 This Server Service is a blocker for the release of Fedora Server.
 
+==== 4.3.2 Database Management System (DBMS)
 
 The Fedora Server Database Management Systemn is provided by the PostgreSQL project.
 This Server Service is a blocker for the release of Fedora Server.
 
+==== 4.3.3 Local Network File Server service
 
 The Fedora Server Fileservice will be provided by the Samba project.
 
+==== 4.3.4 WEB Server service
 
 The Fedora Server Web Server will be provided by the Apache project.
 
+==== 4.3.5 Web Application Server service
 
 The Fedora Server Web Application Server service will be provided by the Wildfly project.
 
+==== 4.3.6 Mail Service
 
 The Fedora Server Mail Service will be provided by the Postfix project and supporting projects like Dovecot, Spamassassin, Dkim, etc.
 
+== 5. Appendix
 
+=== 5.1 Core Package list
 
 This list includes all packages the core media are shipping with the current release. It is the _mandatory minimal list of packages_ that needs to be installed on a system at all times for it to qualify as a _Fedora Server_ install. This package lists the priority focus for QA and bug fixing.
 To produce the list, issue the following command:
 
 _TBD_
 
+=== 5.2 Authors
 
 Contributors to this document include:
 
@@ -378,6 +441,7 @@ Contributors to this document include:
 * Adam Williamson (adamw)
 // ** Personas (target users)
 * Members and Governance
+= Members
 Stephen Daley, Peter Boy
 // :page-authors: {author}
 
@@ -399,15 +463,18 @@ Stephen Daley, Peter Boy
 * link:https://fedoraproject.org/wiki/User:Adamw[Adam Williamson] (**__adamw__**)
 * link:https://fedoraproject.org/wiki/User:Langdon[Langdon White] (**__langdon__**)
 
+== Meetings
 
 * The Server working group meets twice-monthly every 1st and 3rd Wednesday at 17:00 UTC in #fedora-meeting on irc.libera.chat.
 * ical: https://calendar.fedoraproject.org/server/ (prefer this source; the wiki sometimes gets out of date, but we keep that meeting correct to reserve the meeting channel).
 
+== Server Working Group Resources
 
 * Mailing list: server@lists.fedoraproject.org
 * IRC: #fedora-server on irc.libera.chat
 * Blog: http://fedoramagazine.org/
 * Tickets: pagure.io/fedora-server
+= Federa Server WG Governance Charter
 Stephen Daley; Peter Boy
 :page-authors: {author}, {author_2}
 
@@ -420,6 +487,7 @@ It was originally approved by the Server Working Group on November 5, 2013, and 
 
 This document describes the governing structure for the Fedora Server WG.
 
+== Membership
 
 The Fedora Server Working Group has a variable number of members. This group is primarily an organizational team; they exist solely to establish quorum during voting meetings.
 
@@ -427,12 +495,14 @@ Any WG member may voluntarily exit their chair at any time. New members may be a
 
 The current composition of the Server Working Group can usually be found at the Server landing page.
 
+== Making Decisions
 
 Because Fedora is a global project, members of the working group may be distributed across multiple timezones. It may be possible to have real-time IRC meetings or Google+ hangouts, but in general we will conduct business on the mailing list or announce either IRC meetings or Google+ hangout events in advance should they take place.
 
 The Server Working Group strives to work on consensus and only vote on things where it’s clear people aren’t going to be convinced to agree. Many of our decisions can be made through "lazy consensus." Under this model, an intended action is announced on the mailing list, discussed, and if there is no controversy or dissenting views with a few days, simply done.
 
 For bigger issues, they must be discussed and voted on in a public IRC meeting. Public IRC meetings are generally held most weeks on Tuesdays at 4:00pm Eastern US time in link:https://web.libera.chat/?channels=#fedora-meeting[#fedora-meeting] on Libera. For an IRC meeting to be held, at least three Working Group members must be present. Votes are accepted by all participants in the meeting (not just those of Working Group members), so the community is highly encouraged to join. In the case where an interested party can not make it to a meeting, they can pre-vote via the mailing list.
+= Communicating and Meeting
 Peter Boy, Stephen Daley
 :page-authors: {author}
 
@@ -448,6 +518,7 @@ The Fedora Server Edition Working Group uses various resources
 * Blog: http://fedoramagazine.org/
 * Tickets: https://pagure.io/fedora-server
 
+== Meetings
 * The Server working group meets twice-monthly *every 1st and 3rd Wednesday at 17:00 UTC* in #fedora-meeting on irc.libera.chat. Please, check your local time using e.g. `date -d '2021-11-17 17:00UTC'`
 * Each meeting is announced in the Fedora Project Calendar:  https://calendar.fedoraproject.org/server/
 * The agenda is announced on the server mailing list server@lists.fedoraproject.org and available from the ticket system at https://pagure.io/fedora-server/report/Meeting
@@ -456,6 +527,7 @@ The Fedora Server Edition Working Group uses various resources
 * In the case where a voting member can not make a meeting where a vote is scheduled to happen, they can either pre-vote via the mailing list or abstain-by-default.
 * After meetings, meeting minutes will be sent to the https://lists.fedoraproject.org/mailman/listinfo/server[server mailing list].
 
+= Meeting Minutes 2026
 Stephen Daley; Peter Boy
 :page-authors: {author}, {author_2}
 :page-aliases: wg-minutes-current.adoc
@@ -582,6 +654,7 @@ We finally agreed to create a home server/home lab spin-off. Other new projects 
 
 * https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2026-01-07/fedora-server.2026-01-07-18.00.html[Meeting summary]
 * https://meetbot.fedoraproject.org/meeting_matrix_fedoraproject-org/2026-01-07/fedora-server.2026-01-07-18.00.log.html[Full log]
+= Meeting Minutes 2025
 Stephen Daley; Peter Boy
 :page-authors: {author}, {author_2}
 
@@ -1413,6 +1486,7 @@ We postpone this until we have evidence of our server poll.
 . PENDING eseyman review John's playbooks
 . DONE Mowest will write a 1st draft of an article about our poll.
 
+= Meeting Minutes 2024
 Stephen Daley; Peter Boy
 :page-authors: {author}, {author_2}
 
@@ -2438,6 +2512,7 @@ We will continue discussion next meeting
 .  pboy will write a info about changing the timeout value and nirik will review – still work in progress
 . mowest will take care of discussed modifications of the Server download page. - still work in progress
 . eseyman will try to contact the maintainers and get information why the change was made.
+= Meeting Minutes 2023
 Stephen Daley; Peter Boy
 
 
@@ -3014,6 +3089,7 @@ _Actions_
 
 **Keep in mind**: We had moved the time of our meeting in UTC so that the same local time of day is maintained after the DST changeover, that means currently 18:00 UTC.
 
+= Meeting Minutes
 Stephen Daley, Peter Boy
 :page-authors: {author}
 
@@ -3659,6 +3735,7 @@ Details
 ** https://lists.fedoraproject.org/archives/list/server@lists.fedoraproject.org/thread/W3CVVA2JQFYFX7FI6EJ7YBTOLBZJHVSZ/[Detailed agenda]
 ** https://meetbot.fedoraproject.org/teams/fedora-server/fedora-server.2022-01-19-17.01.log.html[Full log]
 
+= Meeting Minutes from 2020-2021
 Stephen Daley, Peter Boy
 :page-authors: {author}
 
@@ -3979,6 +4056,7 @@ Details
 ** https://meetbot.fedoraproject.org/teams/serversig/serversig.2020-12-16-18.00.html[Meeting summary]
 ** https://meetbot.fedoraproject.org/teams/serversig/serversig.2020-12-16-18.00.log.html[Full log]
 
+= Meeting Minutes from 2013
 Stephen Daley, Peter Boy
 
 
@@ -4082,6 +4160,7 @@ Wednesday, October 30, 2013::
 * https://lists.fedoraproject.org/pipermail/server/2013-October/000313.html[Mailing list thread]
 * http://meetbot.fedoraproject.org/fedora-meeting-1/2013-10-30/fedoraserverwg.2013-10-30-17.00.log.html[Full log]
 
+= User Documentation Maintenance
 The Fedora Server Edition working group; Peter Boy (pboy); Stephen Daley (mowest)
 :page-authors: {author}, {author_2}, {author_3}
 // :revnumber: F42-F43
@@ -4090,6 +4169,7 @@ The Fedora Server Edition working group; Peter Boy (pboy); Stephen Daley (mowest
 Part of the Server Edition Working Group's tasks is to create and maintain user documentation. This is intended to enable or facilitate users to use the services offered in accordance with our technical specifications safely and correctly. Here we describe the basic structure of this work and thereby enable all users to contribute to the documentation.
 
 
+== Goals
 
 We want to and maintain a Fedora Server Edition user documentation and keep it up to date on an ongoing basis that
 
@@ -4098,6 +4178,7 @@ We want to and maintain a Fedora Server Edition user documentation and keep it u
 * contains copy-and-paste capable instructions that allow even less experienced administrators to operate safely and reliably
 * refers to the upstream documentation for general information, where available
 
+== Organization
 
 Fedora uses Antorra CMS to create its documentation website. To enable authors to contribute to web pages even without solid knowledge of web design, Antorra uses simpler texts written in AsciiDoc, which are automatically converted into complex HTML pages. These texts are stored in Git repositories.
 
@@ -4105,6 +4186,7 @@ The AsciiDoc source texts for the Fedora Server user documentation are located a
 
 The public user documentation is available at https://docs.fedoraproject.org/en-US/fedora-server/
 
+== Contributions
 
 Authors as well as users should be able to contribute to Fedora Server documentation with as little effort as possible and without technical hurdles. We provide several ways to contribute.
 
@@ -4115,18 +4197,23 @@ Authors as well as users should be able to contribute to Fedora Server documenta
 4. You may send us an email, e.g. while reading a document on our Web pages.
 
 
+=== Open a ticket (problem report)
 
 When reading a document, you see a "bug" button on the rightmost side below the blue top bar. Click it and you are forwarded to create an issue. Members of the Working Group are notified and will take care of it. However, you must have a Fedora account, so you can log in.
 
+=== Write in the Fedora Server Matrix room
 
 Open your Web Browser and visit the https://matrix.to/#/#server:fedoraproject.org[Fedora Server Matrix room]. You can either use the Web Interface or switch to the Element App. This is an asynchronous communication channel. It may take some time for someone to respond.
 
+=== Edit a page via a Web Editor
 
 Besides the aforementioned "bug" button there is a button that stylizes pen and note. It leads to a web-based editor that can be used to make changes to this very page. These are not applied directly, but members of the documentation team are notified for a review. For detailed information see chapter xref:usr-docs-maintenance/webui-page-editor.adoc[Working with the Web based page editor]
 
+=== Working in a local authoring environment
 
 For longer-term engagement, it makes sense to set up a complete authoring environment. It requires some preparations, but it provides the most powerful set of tools. The article xref:usr-docs-maintenance/local-authoring.adoc[Local Authoring] has some tips to get you started.
 
+=== Authenticating with Forgejo
 
 Git actions happen via HTTPS on forge.fedoraproject.org. Here is a quick way to get set up. Note: These instructions assume you already have git up and running, but you need to configure it to play nice with Forgejo.
 
@@ -4157,9 +4244,11 @@ helper = libsecret
 
 Git should now use your local secret store to retreive your access token as needed. No more prompts every time you want to push a commit!
 
+=== Sending an email
 
 If you can't use any of the above options because you don't have a FAS account, you can just write your suggestions or feedback in an email to the Fedora Server list, server@lists.fedoraproject.org, or post a message on our link:https://discussion.fedoraproject.org/tags/c/project/7/server-wg[discussion board]. You have to register, but it is less effort than creating a FAS account. It's best to use a form like "current version" - "proposed version". Suggestions will then be included in the text, or perhaps there will be follow-up questions.
 
+== Quality assurance
 
 Prior to publication, each article should be reviewed. Such articles are available in our link:https://docs.stg.fedoraproject.org/en-US/fedora-server/[staging area] and marked as "awaiting review" or similar.
 
@@ -4174,6 +4263,7 @@ The link:https://docs.stg.fedoraproject.org/en-US/fedora-server/[staging area] a
 Furthermore, the published pages are mirrored, giving a complete impression of the later documentation.
 
 
+== Guidelines
 
 The article link:https://opensource.com/article/20/4/documentation?utm_campaign=intrel[What is good documentation for software projects?] provides a good summary of what we want to achieve with documentation, although it is not entirely new.
 
@@ -4185,6 +4275,7 @@ Some pointers for articles:
 * Provide each step with a brief explanation/justification, if possible, a general instruction structure and a concrete example.
 
 
+= Working with the Web based Page Editor
 The Fedora Server Edition working group; Peter Boy (pboy); Stephen Daley (mowest)
 :page-authors: {author}, {author_2}, {author_3}
 // :revnumber: F37-F38
@@ -4204,7 +4295,9 @@ However, changes are not immediately visible to the public, but only after the p
 
 Non-members automatically save the changes in a fork and create a notification to integrate them (merge request).
 
+== How to access an article for editing
 
+=== The easy way
 
 As an example, you may want to modify the local interactive installation guide. Open that page in your browser.
 
@@ -4216,6 +4309,7 @@ At the top you see an editor button. It opens the web page editor with that arti
 .The Web editor opened
 image::docs-maintenance/webui-editor-0020.png[]
 
+=== The direct way
 
 Open the server user documentation on Fedora Forge in your browser.
 
@@ -4232,6 +4326,7 @@ A click on the file name opens the web editor the same way as with the easy way.
 .The file opend by the Web editor
 image::docs-maintenance/webui-editor-0020.png[]
 
+== How to modify an article by editing
 
 The first thing you have to do is to log in with your Fedora account. Use the button in the top right corner. Afterwards you get some more options in the menu bar.
 
@@ -4253,6 +4348,7 @@ The pagure Web Editor takes care of all the details "behind the scenes". You don
 
 More details to follow soon.
 
+= Setting up a local authoring environment
 The Fedora Server Edition working group; Peter Boy (pboy); Stephen Daley (mowest)
 :page-authors: {author}, {author_2}, {author_3}
 // :revnumber: F37-F38
@@ -4265,6 +4361,7 @@ This method involves creating a copy of the documentation source on the local wo
 This article is outdated and needs updating.
 ====
 
+== How it works
 
 As already described in the xref:usr-docs-maintenance/index.adoc[introduction], the documentation is written in AsciiDoc and converted into HTML pages by the CMS. The https://forge.fedoraproject.org/server/user-documentation[Fedora Server user documentation git repository] contains the documentation source text.
 
@@ -4278,11 +4375,13 @@ Everyone else can also copy the repository, but must save changes in their own s
 
 In the case of major changes, members of the working group should also first submit their proposals in a separate sub-section.
 
+== Writing tools
 
 You can use any ASCII editor to work on the documentation files.
 
 A particularly useful OSS Asciidoc editor is https://asciidocfx.com[AsciidocFX]. It is a Java program, very easy to install, and provides both an integrated directory access, a toolbar with the most common AsciiDoc formatting similar to a Word editor and an integrated instant preview.
 
+== Creating a new documentation article
 
 An xref:attachment$srv-template.adoc[annotated template] is available to make things easier. Download it and save it in the appropriate directory with a new name.
 
@@ -4303,6 +4402,7 @@ The titles should follow this pattern as far as possible and avoid redundant par
 All file names are in lower case.
 
 
+== Preparations
 
 1. *Create a local subdirectory* where the files of the documentation should be stored, and make it your default. We use fedora-server-docs in your home directory throughout this guide
 +
@@ -4350,6 +4450,7 @@ In your workflow you will update your local version to the latest versions of th
 +
 * You should see a local preview of the current Server documentation
 
+== Working on content
 
 1. Check if you are on the branch you intend to work on
 +
@@ -4378,6 +4479,7 @@ Preview in your browser using the address _'localhost:8080_
 6. Repeat step 4 & 5 as required.
 
 
+== Save Your Work
 
 Commit your work locally and then push it into your fork "_origin_".
 
@@ -4398,6 +4500,7 @@ Commit your work locally and then push it into your fork "_origin_".
 […]$ git push origin [main|stg]
 
 5. In your browser open https://pagure.io/fedora-server, login, switch to your fork and create a pull request.
+= A Git cheat sheet For Server Documentation Authors
 Peter Boy (pboy)
 // :page-authors: {author}, {author_2}, {author_3}
 // :revnumber: F37-F38
@@ -4410,6 +4513,7 @@ The sources for the Fedora Server documentation are stored and managed in a Git 
 This is work in progress
 ====
 
+== Prepare your local workspace
 // ============================
 
 Usually, you mirror the central _remote_ Server documentation sources on your _local_ workstation and work on the various documents locally. When done, you copy them back to the central _remote_ storage.
@@ -4465,6 +4569,7 @@ With __fetch__, you apply all changes in the central repository to your local wo
 With __push__, you incorporate your changes into the central remote repository. Only members of the Server WG can do that.
 
 
+== Prepare your remote storage space
 // #################################
 
 Upon completion of your work, you will want to copy the content back to the central remote repository. Due to QA processes, only members of the Server WG can write directly to the central remote repository. Everyone else must create their own area in which to store their changes.
@@ -4491,12 +4596,14 @@ As an example, if would use
 ----
 
 
+== Isolate work on new or updated items in a separate area
 // #######################################################
 
 Working on a new article or on an update of an existing one, it is advantageous to work in a temporary space, copied mostly from the main branch, independently from modifications on other documents in the repo and without disturbing the main repo. It is especially useful, if you work on it for a longer period of time. All changes you make here will be merged back into the source, usually main, after completion.
 
 In Git terminology this is a _branch_ inside the repository.
 
+=== Check the central Server documentation repository for branches
 
 
 When you clone the central repository as described above, Git installs just the main branch on your workspace. You have to check the central repositry for branches you are interested in and install them manually.
@@ -4552,6 +4659,7 @@ main    1fa76ff modules/ROOT/pages/index.adoc aktualisiert
 ----
 
 
+=== Create a new branch locally
 
 1. Ensure, that the source, usually main, is your currently active branch
 +
@@ -4592,6 +4700,7 @@ Alternatively you can also use
 ----
 
 
+=== Delete a Branch no longer needed completely locally and remotely
 // ================================================================
 
 1. Delete the remote branch
@@ -4608,6 +4717,7 @@ Alternatively you can also use
 ----
 
 
+== Working on content
 // ==================
 
 1. Check if you are on the branch you intend to work on
@@ -4650,8 +4760,10 @@ Preview in your browser using the address _'localhost:8080_
 6. Repeat step 4 & 5 as required.
 
 
+== Save Your Work
 // ==============
 
+=== Commit your work locally
 //  ==============
 
 While working on content all modifications happen in the volotile working directory. Every change takes effect immediately; everything is in flux. To permanently save a status, the working area is saved in the local git repository (in the ".git" subdirectory). In Git, this is known as a _commit._
@@ -4670,6 +4782,7 @@ While working on content all modifications happen in the volotile working direct
 
 
 
+=== Forgot a file in the last commit
 //  ================================
 
 Add a file to the last commit without modifying the commit log message
@@ -4705,8 +4818,10 @@ You can also add a files and replace the commit log message
 ----
 
 
+=== Save your work in the central remote repository
 //  ===============================================
 
+=== Transfer your work into the central remote repository
 
 Only members of Server WG can do this.
 
@@ -4717,6 +4832,7 @@ Only members of Server WG can do this.
 ----
 
 
+=== Save your work in your fork
 
 [source,]
 ----
@@ -4724,20 +4840,25 @@ Only members of Server WG can do this.
 ----
 
 
+== Invite to discuss your work
 // ===========================
 
+=== Create a Pull Request
 // =====================
 
 TBD
 
+=== Modify a Pull Request
 // =====================
 
 TBD
 
 
 
+== Finally publish your work
 // =========================
 
+=== Merge a branch into main
 //  ==============================
 
 1. If you are in your branch, commit all changes as described above.
@@ -4771,6 +4892,7 @@ git merge --no-commit --no-ff {YOUR_BRANCH_NAME}
 […]$ git push
 ----
 
+=== Merge a branch into stg
 //  ==============================
 
 1. If you are in your branch, commit all changes as described above.
@@ -4804,7 +4926,9 @@ git merge --no-commit --no-ff {YOUR_BRANCH_NAME}
 […]$ git push
 ----
 
+=== Resolve a merge conflict
 
+==== Merging into stg
 
 1. Check whether a merge is possible without any problems.
 +
@@ -4830,11 +4954,14 @@ modules/ROOT/pages/services/postgresql-setup.adoc                   | 179 ++++++
 create mode 100644 modules/ROOT/pages/services/fedsysadmins-cheatsheet-postgresql.adoc
 ----
 
+==== Merging into main
 TBD
 
 
+== Miscellaneous
 // #############
 
+=== Copy an article from one branch into another
 
 *Not recommended*
 
@@ -4859,6 +4986,7 @@ Your branch is up to date with 'origin/main'.
 […]$ git checkout gui-upd modules/ROOT/pages/usecase-gui-addon.adoc
 ----
 
+=== „Cherry-pick“ a commit from another branch into your current branch
 //  ===================================================================
 
 *The recommended alternative to copy*
@@ -4934,6 +5062,7 @@ The abbreviated hash (the first 7 digits instead of 40), that you see in the ove
 The parameter "-x" is optional. It enables you to provide a standard commit message, so it might easier in the future to see, what you did and why.
 
 
+=== „Cherry-pick“ a commit from a forked repo into your current branch
 //  ==================================================================
 
 1. Find the URL of the other fork or repo. In the Fedora forge Web interface click on the number right of the "Fork" button. You get a list of the currently existing forks. Select the one you want to cherry-pick and copy the URL into the clipboard.
@@ -4973,9 +5102,11 @@ As an example, if you want to add my fork
 […]$ git cherry-pick {COMMIT_HASH}
 ----
 
+=== Compare the same file in different branches
 
 TBD
 
+= Archive
 The Fedora Server Edition Working Group
 :page-authors: {author}
 // :revnumber: F37-F38
@@ -4984,17 +5115,22 @@ For reference and documentation of the Server Edition evolution process, we cont
 
 
 
+== Archived approved documents
 
 * xref:archive/product-requirements-document-2014.adoc["Product Requirements Document" (initial version 2014)]
 * xref:archive/product-requirements-document-2021.adoc["Product Requirements Document" (renwed version 2021)]
 * xref:archive/server-technical-specification-2014.adoc["Fedora Server Technical Specification" (initial version 2014)]
 
 
+== Server related documents
 
 
 
+== Research
 
 
+== Proposals
 
 
+== Working group work plannings
 * WG work project xref:archive/initial-docs-plan.adoc[Buildup of a renewed documentation on Fedora Server specific topics] planning

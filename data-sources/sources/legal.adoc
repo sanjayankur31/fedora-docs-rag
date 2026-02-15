@@ -1,5 +1,7 @@
 * Fedora Licensing Guidelines
+= License Approval
 
+== Overview
 
 In order to meet the goal of creating a complete, general purpose
 operating system exclusively from free and open source software, all
@@ -53,6 +55,7 @@ and committed to supporting Fedora's
 https://docs.fedoraproject.org/en-US/project/[mission and
 foundations].
 
+== Allowed Licenses
 
 A license is _allowed_ if Fedora determines that the license is a free
 software / open source license. At a high level, the inquiry involves
@@ -70,6 +73,7 @@ TIP: Fedora treats spec files as "code". Normally, spec files have no
 explicit license, and, to the extent they were authored by Fedora
 contributors and are copyrightable, they are available under the MIT license by virtue of the https://docs.fedoraproject.org/en-US/legal/fpca/[FPCA].
 
+== Licenses Allowed for Documentation
 
 Fedora will designate a license as allowed for documentation
 (_allowed-documentation_) if it meets the criteria for _allowed_
@@ -89,6 +93,7 @@ License and its predecessor versions
 * The GNU Free Documentation License version 2.1 and its predecessor
 versions
 
+== Licenses Allowed for Content
 
 For purposes of Fedora license classification, “content” means any
 material that is not clearly code, documentation, fonts or firmware.
@@ -133,6 +138,7 @@ terms. Fedora may be more likely to conclude that a given category of material
 is "content" if such material is (as a general matter) likely of doubtful or
 "thin" copyrightability.
 
+== Licenses Allowed for Fonts
 
 Fedora may designate a license as allowed for fonts
 (_allowed-fonts_) if it meets the criteria for _allowed_ licenses
@@ -170,12 +176,14 @@ license that had such a provision but we believed a 'Hello world'
 solution was not even arguably viable, we might not consider the
 license allowable for fonts.
 
+== Licenses Allowed for Firmware
 
 Some applications, drivers, and hardware require binary firmware
 images to boot Fedora Linux or function properly. Fedora permits
 inclusion of these files as long as they meet the following license
 and technical requirements:
 
+=== License requirements for firmware
 
 Fedora may designate a license as allowed for firmware
 (_allowed-firmware_) if it meets the criteria for _allowed_
@@ -198,6 +206,7 @@ firmware.
 conditions on users that are no more restrictive than those
 authorized by Fedora itself with respect to firmware licenses.
 
+=== Technical firmware requirements
 
 While these technical requirements for firmware have nothing to do
 with licensing, they are included here for convenience.
@@ -216,6 +225,7 @@ code being included in Fedora Linux or to enable Fedora Linux to
 boot on a specific device, where no other reliable and supported
 mechanisms exist
 
+== 'Not allowed' Licenses
 
 Any license that does not meet the criteria above for allowed licenses
 (including allowed for a specific category) will be classified as
@@ -230,6 +240,7 @@ which represents a license based on the Apache License 2.0 and named
 Apache Software Foundation, which has said that derivatives of the
 Apache License cannot have "Apache" in their name.
 
+=== `usage` exceptions
 
 For some _not-allowed_ licenses, or licenses allowed only for a
 specific category, an exception is recorded in the Fedora License Data
@@ -251,6 +262,7 @@ system provided no "options" are exercised. For administrative
 convenience we now classify it as _not-allowed_ with the `usage`
 exception noted above.
 
+== Changes in License Status
 
 Fedora aims for stability in its license classifications, but its
 treatment of a particular license or license type may change as
@@ -263,6 +275,7 @@ _allowed-content_. When this sort of reclassification is done, we
 will try to minimize disruption, including by defining appropriate
 `usage` exceptions.
 
+== Background to Fedora licensing policy
 
 Over several decades, norms concerning acceptable standards for
 software (and other content) licensing developed out of communities
@@ -296,10 +309,12 @@ an informal body of interpretation and policymaking regarding
 free/open licensing which has itself influenced the larger FOSS
 community outside of Fedora.
 
+= SPDX License Expressions
 
 This page provides an introduction to SPDX license expressions with a
 focus on how they are used in Fedora.
 
+== Overview
 
 https://spdx.dev[SPDX] (Software Package Data Exchange) is a standard
 format for communicating the component and metadata information
@@ -331,12 +346,15 @@ repository and the Fedora license lists that are generated from it.
 
 * To populate License tags in spec files.
 
+== Types of SPDX License Expressions
 
+=== SPDX License List Identifiers
 
 Commonly called "SPDX identifiers", these are the short form
 identifiers contained in the SPDX License List. Examples: `MIT`,
 `GPL-2.0-or-later`.
 
+=== Custom-defined License Identifiers (`LicenseRef-`)
 
 A custom-defined license identifier (i.e., not contained in the SPDX
 License List) may be formed using the `LicenseRef-` prefix). Currently
@@ -353,6 +371,7 @@ licenses. Examples include the umbrella identifiers
 `LicenseRef-Fedora-Public-Domain` and
 `LicenseRef-Fedora-UltraPermissive`.
 
+=== `WITH` Expressions
 
 A compound SPDX expression may be formed by following an SPDX
 identifier with the `WITH` operator, followed by an exception
@@ -373,6 +392,7 @@ permits custom-defined identifiers that can follow `WITH`. `WITH
 AdditionRef-` expressions may be used for additional terms of all
 types, not just permissive exceptions.
 
+=== `OR` Expressions
 
 A compound SPDX expression may be formed by joining two SPDX
 expressions with the `OR` operator. This is intended to signify a
@@ -382,12 +402,14 @@ to different concepts. Examples: `Apache-2.0 OR MIT` (a common
 form of licensing of Rust crates), `MPL-1.1 OR GPL-2.0-or-later OR
 LGPL-2.1-or-later` (historically known as the Mozilla tri-license).
 
+=== `AND` Expressions
 
 A compound SPDX expression may be formed by joining two SPDX
 expressions with the `AND` operator. This generally signifies that
 both sub-expressions apply to different parts of a file or
 package. Example: `LGPL-2.1-or-later AND GPL-2.0-or-later AND MIT`
 
+=== `+` Operator
 
 The postfix `+` operator applied to an SPDX identifier signifies
 permission to use later versions of the license. Example:
@@ -398,6 +420,7 @@ GPL family license identifiers has been deprecated by SPDX in favor of
 the use of `-only` and `-or-later` identifier variants (for example,
 `GPL-2.0-only` and `GPL-2.0-or-later`).
 
+== SPDX License Expressions in Fedora License Data
 
 Each item in Fedora's lists of allowed and not-allowed licenses is an
 SPDX license expression that is associated with a specific TOML file
@@ -429,6 +452,7 @@ representable by an `OR` expression that includes an allowed license
 and a license that is _not allowed_, only the allowed license should be
 included in a spec file License tag.
 
+== SPDX Matching Guidelines
 
 SPDX License List identifiers are templates (specified in XML files
 maintained in the
@@ -445,6 +469,7 @@ In using SPDX identifiers and `LicenseRef-` identifiers, Fedora aims
 to apply the SPDX matching guidelines to the extent they are
 meaningful or applicable to the Fedora context.
 
+== SPDX License Expressions in License Tags
 
 A xref:license-field.adoc[separate page] provides a detailed
 discussion of the use of SPDX expressions in spec file License tags.
@@ -454,6 +479,7 @@ discussion of the use of SPDX expressions in spec file License tags.
 
 
 
+= License Review Process
 
 If you find a license that covers part of a Fedora package, a proposed
 Fedora package, or some other Fedora Project artifact, that is not
@@ -486,6 +512,7 @@ Community software licenses that are apparently intended as jokes
 (https://github.com/ErikMcClure/bad-licenses[examples]) are generally analyzed
 as though they were serious.
 
+== Opening a Fedora License Data license review issue
 
 To request review of a license, you must be a Fedora contributor and
 become part of the Fedora Gitlab group.
@@ -538,6 +565,7 @@ xref:license-approval.adoc[license approval criteria], will be noted
 there. A decision may sometimes be noted solely by application of an
 appropriate scoped label referring to the license classification.
 
+=== How to determine if a license or exception is on the SPDX License List
 
 The SPDX License List has an established set of https://spdx.github.io/spdx-spec/v2.3/license-matching-guidelines-and-templates/[guidelines] that define what constitutes a match to a https://spdx.org/licenses[license] or https://spdx.org/licenses/exceptions-index.html[exception] on the SPDX License List. This is intended to ensure that SPDX license identifiers and expressions mean the same thing wherever they are used.
 
@@ -547,6 +575,7 @@ to licenses on the SPDX License List.
 You can also find information about various xref:license-audit-tools.adoc[license detection tools]
 in this documentation.
 
+== Opening an SPDX License List issue
 
 If the Fedora License Data maintainers conclude that the license is
 allowed, and they apply the `SPDX::submit issue` label, then the next
@@ -602,6 +631,7 @@ Fedora Project will provision a temporary license identifier with the syntax
 `AdditionRef-Fedora-Temporary-*` for exceptions. Once SPDX assigns the final ID,
 you have to change this temporary ID to the final one.
 
+== Opening a Fedora License Data merge request
 
 Once (1) Fedora has made a decision to allow or not allow the license,
 and (2) (if applicable) the SPDX License List process is also
@@ -685,6 +715,7 @@ NOTE: In any case where a `LicenseRef-` is used, it is necessary to
 copy the text of the license in the TOML file as the value of the
 `text` key.
 
+== Changes to licensing of Fedora Linux packages
 
 Fedora package maintainers are responsible for regularly monitoring
 the upstream source code of their packages for any changes or
@@ -738,6 +769,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Spec File License: Tags
 
 This page explains how to populate RPM spec file License: tags and is
 aimed mainly at Fedora Linux package maintainers. We assume that you
@@ -750,7 +782,9 @@ have already analyzed the licensing terms of the source code of the
 package and determined how those terms map to SPDX license expressions
 classified in the Fedora License Data repository.
 
+== Definitions used in this page
 
+=== "License"
 
 For convenience, except where context indicates otherwise, this page
 uses "license" narrowly to mean an SPDX license expression that
@@ -767,6 +801,7 @@ Here are some examples of "licenses" in this sense:
 // * `MPL-2.0+` (status: _allowed_; uncommon use of `+` operator)
 * `LicenseRef-sun-rpc` (status: _not-allowed_; Fedora-defined identifier)
 
+=== "Fedora-acceptable"
 
 We say that a license is "Fedora-acceptable" in the context of a
 specific package if it is:
@@ -775,6 +810,7 @@ specific package if it is:
 * allowed for a specific category of material (for example, _allowed-content_) and, in this package, it only covers that category, or
 * _not-allowed_, or not allowed for a specific category of material, but its use in this package falls within the `usage` exception defined in the Fedora License Data TOML file for that license.
 
+== Preliminary note
 
 The Fedora convention is that License: tags describe a relevant
 _subset_ of the licenses that apply to the source code of the
@@ -798,6 +834,7 @@ refers additionally to source code of other Fedora packages. This is
 discussed in the (as yet unwritten) section on <<bundling,Bundling, vendoring, static
 linking, and related topics>>.
 
+== Basic rule
 
 The License: tag in the spec file Preamble must be populated with an
 SPDX license expression that consists of a Fedora-acceptable license, or
@@ -813,6 +850,7 @@ cover material in the source code that is not copied into the binary
 RPM(s), either verbatim or transformed in some way (for example, by
 compilation).
 
+=== Simple example
 
 ====
 The source code of the package `wayland-utils` is entirely under
@@ -823,6 +861,7 @@ The source code of the package `wayland-utils` is entirely under
 This license expression is Fedora-acceptable, since `MIT` is _allowed_.
 ====
 
+=== More complex example
 
 ====
 The package `plasmatube` contains executable code
@@ -840,6 +879,7 @@ This license expression is Fedora-acceptable because: (1)
 files and SVG files are classified as "content".
 ====
 
+=== Source package files not included in binary RPM
 
 Licenses that cover files in the source code that are not copied into
 the binary RPM should be excluded from the License: tag. Consider the
@@ -877,6 +917,7 @@ source package-only licenses (along with whatever is in the `License:` tag) in t
 
 We don't recommend or encourage use of `SourceLicense:`.
 
+== No "effective license" analysis
 
 Except to the extent these guidelines state otherwise, you should not
 attempt to simplify or reduce the License: tag license expression (for
@@ -898,12 +939,14 @@ though it is unclear how you would pick one of the two licenses in a
 non-arbitrary way. Nevertheless, the License: tag should include both.
 ====
 
+== `usage` exceptions
 
 Some packages in Fedora may include a file covered by a _not-allowed_ license, or a license that is
 only allowed for a particular category of material which is different from the category of the material
 in the file. For this to be acceptable, the relevant license of the file must be covered by a "link:++https://gitlab.com/fedora/legal/fedora-license-data/-/blob/main/TEMPLATE.toml?ref_type=heads#L99++[`usage` exception]" indicating that the kind of use present in the file is tolerated by Fedora despite the fact that the license is normally not allowed. Where a package has a file covered by a normally disallowed license along with a `usage` exception, the License: tag rules apply as though the license
 were allowed.
 
+== Special rules for `OR` expressions
 
 A license should normally appear only once in the License: tag license
 expression. But if the license expression includes an `OR`
@@ -941,6 +984,7 @@ the License: tag.
 ====
 
 [[perl-rules]]
+== Special rules for Perl packages
 
 Perl 5 is released under a dual license that can be represented in
 SPDX as `GPL-1.0-or-later OR Artistic-1.0-Perl`. Many Perl modules say
@@ -981,6 +1025,7 @@ and this license expression is Fedora-acceptable, even though
 ====
 
 [[notcopyrightable]]
+== Use of `LicenseRef-Not-Copyrightable`
 
 The licenses encountered in upstream projects which are the subject of Fedora's license approval inquiry
 can be thought of primarily as copyright licenses, though they may (and often must, to meet Fedora
@@ -1017,7 +1062,9 @@ License: tag is:
 `License: LicenseRef-Not-Copyrightable`
 ====
 
+== SPDX license expressions from upstream projects
 
+=== Upstream use of SPDX identifiers
 
 Increasingly, upstream community projects are attempting to use SPDX
 identifiers (from the SPDX License List) in license metadata (most notably,
@@ -1031,6 +1078,7 @@ In general, you cannot assume that upstream use of SPDX license
 identifiers in metadata is correct or accurate, at least from Fedora's standpoint,
 and you should view them critically or skeptically.
 
+=== `LicenseRef-KDE-Accepted-`
 
 Much less commonly, a few upstream projects, most notably KDE, have adopted the use of SPDX
 license expressions in a comprehensive manner comparable to Fedora. Like
@@ -1051,8 +1099,10 @@ represented by `LGPL-2.1-only OR LGPL-3.0-only`.
 
 
 [[subpkg]]
+== Subpackage-specific License: tags
 
 [[bundling]]
+== Bundling, vendoring, static linking, and related topics
 ////
 In some cases, the source code of a Fedora package (in the sense of
 the contents of the package SRPM) will contain source code not only
@@ -1076,6 +1126,7 @@ The `rust2rpm` project provides a https://pagure.io/fedora-rust/rust2rpm/blob/ma
 ////
 
 [[lppl]]
+== LaTeX Project Public License
 
 Packages under the LaTeX Project Public License version 1.2 (`LPPL-1.2`) or any
 later version are allowed with the understanding that Fedora will
@@ -1087,6 +1138,7 @@ version 1.2, or to alter any notices referring to version
 situation should use `LPPL-1.3a+`, not `LPPL-1.2` (or `LPPL-1.2+`).
 
 
+== APSL-1.x Licenses
 
 Packages under the Apple Public Source License version 1.0, 1.1, or 1.2
 (`APSL-1.x`) are allowed with the understanding that Fedora will treat such
@@ -1103,6 +1155,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Callaway-to-SPDX migration for existing packages
 
 In July 2022 Fedora adopted the use of SPDX license expressions in place of the
 legacy Callaway system for purposes of license approval classifications and
@@ -1129,6 +1182,7 @@ Apart from replacement of `LicenseRef-Callaway-` License: tags, much ongoing
 work will be needed to improve the accuracy of existing SPDX-format License: tags,
 along with continuing review and classification of newly-encountered licenses.
 
+== Changelog entry
 
 Package maintainers whose packages still need to migrate License: tags to SPDX should
 add the following line to the spec file `%changelog` section:
@@ -1140,6 +1194,7 @@ add the following line to the spec file `%changelog` section:
 or something similar using "spdx" in the changelog entry. This will help the Fedora legal team audit
 packages.
 
+== Updating Callaway umbrella names
 
 The SPDX License List has an established set of https://spdx.github.io/spdx-spec/v2.3/license-matching-guidelines-and-templates/[matching guidelines] that define what constitutes a match to a license or exception on the SPDX License List. This ensures that SPDX license identifiers mean the same thing wherever they are used and takes a somewhat conservative approach as to what is substantively different. Each identifier for a license or an exception on the SPDX License List represents a single template text for that license or exception.
 
@@ -1151,12 +1206,14 @@ will, of course, be necessary to determine what SPDX
 identifier (or Fedora-recognized `LicenseRef-` expression) applies. In some cases, new licenses will need to undergo license review for inclusion in Fedora
 License Data.
 
+=== `LicenseRef-Callaway-MIT`
 
 In the Callaway system, "MIT" was used to refer to a large number of short permissive licenses having some loose textual similarity or tenuous historical connection to the SPDX `MIT` license (the license that, today, most people mean when they refer to "the MIT license"), and which did _not_ resemble licenses in the historical BSD family.
 
 The SPDX License List contains not only `MIT` but many other licenses that Callaway "MIT" covered, or was
 intended to cover.
 
+=== `LicenseRef-Callaway-BSD`
 
 In the Callaway system, "BSD" was used to refer to a large number of short
 permissive licenses bearing some textual similarity or historical connection to
@@ -1166,6 +1223,7 @@ Many of the licenses in the BSD family are included in the SPDX License List, in
 commonly encountered BSD-family licenses, `BSD-3-Clause` and `BSD-2-Clause`. Note that `BSD` itself is
 not an SPDX license identifier.
 
+=== `with-exceptions`
 
 In the Callaway system, the phrase "with exceptions" was sometimes affixed to
 GPL-family short names. This was normally meant to indicate that the relevant
@@ -1179,6 +1237,7 @@ traditionally used with GPL-family licenses. However, it is likely that new
 exceptions will need to be proposed to SPDX upon review of Fedora packages that
 historically used the "with exceptions" Callaway sub-label.
 
+=== `LicenseRef-Callaway-LGPLv2` and `LicenseRef-Callaway-LGPLv2+`
 
 The Callaway system deliberately did not distinguish between LGPLv2 and
 LGPLv2.1, using "LGPLv2" to represent both. SPDX has distinct identifiers for
@@ -1187,10 +1246,12 @@ or more of SPDX `LGPL-2.0-only` and `LGPL-2.1-only`, and
 `LicenseRef-Callaway-LGPLv2+` will likely correspond to one or more of
 `LGPL-2.0-or-later` and `LGPL-2.1-or-later`.
 
+=== `LicenseRef-Callaway-Public-domain`
 
 In the Callaway system, "Public domain" was used for a few distinct
 purposes.
 
+==== Bespoke public domain dedications
 
 Callaway "Public domain" most commonly signified the presence
 of a bespoke public domain dedication covering all or part of the
@@ -1211,6 +1272,7 @@ we recognize there might be a more satisfactory approach. At this time
 it does not seem likely that SPDX will itself adopt some sort of
 comparable umbrella identifier.
 
+==== Noncopyrightable material
 
 In some packages, Callaway "Public domain" reflected a conclusion that
 substantial parts of the package were not likely not copyrightable. This
@@ -1226,6 +1288,7 @@ otherwise the License: tag would be empty. That is to say, we only use
 `LicenseRef-Not-Copyrightable` if that label would accurately cover the
 entire contents of the binary RPM.
 
+==== Works of U.S. government employees
 
 Some uses of Callaway "Public domain" appear to have been based on the
 assumption that code or content in a package was created by employees of
@@ -1246,6 +1309,7 @@ appropriate license expression in these cases rather than
 the `public-domain-text.txt` file unless the package used some sort of
 public domain dedication text.
 
+=== `LicenseRef-Callaway-Copyright-only`
 
 In the Callaway system "Copyright only" was typically, but
 inconsistently, used for very brief bespoke or nonstandard legacy
@@ -1259,6 +1323,7 @@ it is expected that many more will be identified in Fedora license
 reviews. We currently do not think an umbrella identifier would be
 suitable to represent this category of licenses.
 
+=== `LicenseRef-Callaway-Freely-redistributable-without-restrictions`
 
 In the Callaway system, "Freely redistributable without restrictions"
 was apparently a relatively old name that was deprecated some years
@@ -1275,6 +1340,7 @@ corresponds to this category. We attempt to track specific permission
 statements qualifying for `LicenseRef-Fedora-UltraPermissive` in the
 file `UltraPermissive.txt` in the Fedora License Data repository.
 
+=== `LicenseRef-Callaway-Redistributable-no-modification-permitted`
 
 In the Callaway system, "Redistributable, no modification permitted" was
 mainly used to cover non-FOSS firmware licenses. Apparently there were
@@ -1291,6 +1357,7 @@ repository.
 Non-FOSS firmware licenses likely would not meet the SPDX License
 Inclusion Guidelines, so there is no point in submitting them to SPDX.
 
+==== `Public-Domain` or `Ultrapermissive`?
 
 Sometimes, it may be hard to decide if the license should be
 `LicenseRef-Fedora-Public-Domain` or `LicenseRef-Fedora-UltraPermissive`. E.g.,
@@ -1315,9 +1382,11 @@ we have been using `LicenseRef-Fedora-Public-Domain`. Although using
 submit a
 https://gitlab.com/fedora/legal/fedora-license-data/-/issues/new[review issue].
 
+=== `LicenseRef-KDE-Accepted-*`
 
 KDE project uses https://community.kde.org/Policies/Licensing_Policy#LicenseRef-KDE-Accepted-LGPL[LicenseRef-KDE-Accepted-*] licenses. This was discussed https://gitlab.com/fedora/legal/fedora-license-data/-/issues/350[here] and https://gitlab.com/fedora/legal/fedora-license-data/-/issues/351[here]. The consensus is that upstream license `LicenseRef-KDE-Accepted-GPL` should be replaced in Fedora by `GPL-2.0-only OR GPL-3.0-only`. And upstream license `LicenseRef-KDE-Accepted-LGPL` should be replaced by `LGPL-2.1-only OR LGPL-3.0-only`.
 
+=== `LicenseRef-KFQF-Accepted-*`
 
 KDE project uses
 https://invent.kde.org/frameworks/qqc2-desktop-style/-/blob/master/LICENSES/LicenseRef-KFQF-Accepted-GPL.txt[LicenseRef-KFQF-Accepted-*]
@@ -1327,6 +1396,7 @@ consensus is that upstream license `LicenseRef-KFQF-Accepted-GPL` should be
 replaced in Fedora by `GPL-2.0-only OR GPL-3.0-only`.
 
 
+=== Small category short names
 
 Several Callaway short names are known to correspond to two or more SPDX
 identifiers but it is possible that some of those identifiers are not
@@ -1357,28 +1427,33 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= License audit tooling for Fedora packages
 
 This page describes some of the tools that have been used to audit
 licensing of packages in Fedora Linux.
 
+== Packaging tools
 
 The following tools are specifically designed for use with Fedora Linux
 packages. They use the
 https://gitlab.com/fedora/legal/fedora-license-data[Fedora License
 Data] as a source of data on valid licenses.
 
+=== rpmlint
 
 https://github.com/rpm-software-management/rpmlint[rpmlint] is the standard tool used for evaluating Fedora Linux packages for well-known issues for packagers to fix.
 In the context of licensing, rpmlint evaluates the `License:` field in the spec file and ensures the values conform to xref:allowed-licenses.adoc[the known set of allowed licenses].
 
 This is packaged in Fedora Linux as `rpmlint`.
 
+=== rpminspect
 
 https://github.com/rpminspect/rpminspect[rpminspect] is the tool used to evaluate Fedora Linux packages for policy compliance, differences as compared to previous builds, and common packaging errors as they are built in the Fedora Build System.
 In the context of licensing, rpminspect evaluates the `License:` field in RPMs and ensures the values conform to xref:allowed-licenses.adoc[the known set of allowed licenses].
 
 This is packaged in Fedora Linux as `rpminspect`. To use it, you need both `rpminspect` and `rpminspect-data-fedora`.
 
+=== license-validate
 
 https://pagure.io/copr/license-validate/[license-validate] validates license strings. It can validate the Callaway format and SPDX expressions. Without the `-v` flag, the command does not print anything and will return a non-zero exit code when the license expression is invalid.
 
@@ -1391,6 +1466,7 @@ Approved license
 
 This is packaged in Fedora Linux as `license-validate`.
 
+== License matching to SPDX License List for a specific license text
 
 The SPDX project has guidance on various tools and methods to determine if a given license text matches a license already on the SPDX License List. See https://github.com/spdx/license-list-XML/blob/main/DOCS/license-match.md[license match]
 
@@ -1398,11 +1474,13 @@ If you identify a license or exception text as a match
 to an SPDX identifier, you can then use the SPDX identifier to search
 in the *allowed* and *not-allowed* license lists for Fedora.
 
+== License scanning tools for source code
 
 The following tools have been used by Fedora Project contributors to
 detect licenses in the source code of current and proposed Fedora Linux
 packages. All of these tools are distribution-agnostic.
 
+=== Licensecheck
 
 https://metacpan.org/dist/App-Licensecheck[Licensecheck] is a tool used to analyze the licensing of source files. This tool is principally used in the Fedora context for
 the initial package review for packages proposed for inclusion in Fedora Linux. Licensecheck is run automatically as part of https://pagure.io/FedoraReview[FedoraReview].
@@ -1411,6 +1489,7 @@ By default, licensecheck provides license reports with full license names, but c
 
 This is packaged in Fedora Linux as `licensecheck`.
 
+=== askalano
 
 https://github.com/jpeddicord/askalono[Askalono], packaged in Fedora
 as `askalono-cli`, is a simple license scanning tool written in
@@ -1431,6 +1510,7 @@ recognize the first of them), and (4) nonstandard/archaic/legacy
 licenses (which covers most of the licenses being reviewed in issues
 in fedora-license-data)
 
+=== FOSSology
 
 https://www.fossology.org/[FOSSology] is a license compliance software
 system and tooklit that includes license scanning. It can be run locally and
@@ -1457,6 +1537,7 @@ has some helpful information.
 
 FOSSology is not packaged in Fedora.
 
+=== ScanCode toolkit
 
 https://github.com/nexB/scancode-toolkit[ScanCode toolkit] is a
 command-line Python tool and library for detecting licenses,
@@ -1484,6 +1565,7 @@ It can be installed using pip or an app tarball.
 The recommended way of running ScanCode is:
 `scancode --license --html output.html --license-references -n$(nproc --all)`
 
+=== ScanCode.io
 https://github.com/nexB/scancode.io[ScanCode.io] is a web application
 to run ScanCode toolkit pipelines on multiple projects.
 A pipeline is a script to organize the code analysis of large
@@ -1496,12 +1578,14 @@ See http://scancode.io/[Documentation] to get started.
 ScanCode.io is not yet packaged in Fedora.
 It can be installed using containers and podman.
 
+=== Trivy
 
 https://github.com/aquasecurity/trivy[Trivy] is more robust than Askalono or Licensecheck but less verbose than ScanCode. Upstream provides static RPM packages.
 
 You can run the check with command: `trivy fs --scanners license --license-full .`
 
 More details about https://aquasecurity.github.io/trivy/latest/docs/scanner/license/[Trivy license scanning].
+= How to identify package licenses
 
 The information about what licenses apply to a project typically can
 be found in a few places:
@@ -1543,6 +1627,7 @@ even if it might seem to be contradicted by license information
 "further" from the code (for example, a license statement in a
 top-level README or on a project website).
 
+== Phantom licenses
 
 As a project evolves, it is not uncommon for license information in
 the project repository to become outdated. This is less likely to be
@@ -1574,6 +1659,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= License of Fedora Linux
 
 Fedora Linux is a https://www.law.cornell.edu/definitions/uscode.php?width=840&height=800&iframe=true&def_id=17-USC-2076770877-364936160&term_occur=999&term_src=title:17:chapter:1:section:101[compilation]
 of software packages, each under its own licensing terms. For some complicated
@@ -1586,6 +1672,7 @@ With respect to the notice inclusion provision of the MIT license, solely with r
 to the Fedora Linux compilation license grant, Fedora does not regard non-Fedora-branded
 downstream derivative distributions as being "copies or substantial portions of the Software."
 
+== MIT License
 Copyright Fedora Project Authors.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -1618,6 +1705,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Fedora Project Contributor Agreement
 
 The only purpose of the Fedora Project Contributor Agreement (FPCA) is to ensure that Fedora has default permission to use your contributions under a Fedora-allowed license (either MIT for software or CC BY-SA for content). You may contribute under any other allowed Fedora license; the FPCA simply sets a default if no license is specified.
 
@@ -1783,6 +1871,7 @@ Raleigh, NC 27601
 USA
 ----
 
+== Frequently Asked questions
 
 Q: What is the purpose of the FPCA? +
 A: The FPCA exists for one main reason: to ensure that contributions to Fedora have acceptable licensing terms.
@@ -1829,6 +1918,7 @@ A: Sure. You can consider the FPCA to be under the terms of the Creative Commons
 Q: Who wrote this amazing masterpiece of legal text? +
 A: Many people were involved in helping to craft this text. The primary author was Richard Fontana, with feedback from Tom Callaway, Pamela Chestek, Paul Frields, and Robert Tiller. Feel free to give them gifts (for example, drinks or tasty snacks) as thank yous, although, this is not a requirement (legal or otherwise). ;)
 
+== Historical FAQs
 
 Some of the following FAQs refer to the Fedora Individual Contributor License Agreement (ICLA), which preceded adoption of the FPCA in 2011 and which was no longer used after adoption of the FPCA.
 
@@ -1849,6 +1939,7 @@ A: The Fedora Council updated the default content license to the Creative Common
 
 Q: What changed between the 2021-05-04 Version and the 2021-10-25 edit? +
 A: The Fedora Council removed accidentally-overlooked clauses in the text which were made obsolete by the update to CC-BY-SA 4.0. The FAQ was also updated to refer to the 4.0 version of the license.
+= License Compatibility
 
 License compatibility is a FOSS legal folk doctrine that concerns the
 combinability of code covered by different licenses. It has no
@@ -1888,9 +1979,11 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Miscellaneous legal packaging topics
 
 This page provides information on various legal or licensing aspects of Fedora packaging, such as certain non-license criteria for approval of certain kinds of packages or files in Fedora Linux, and certain specific interpretations of licensing issues made by Fedora.
 
+== License of Fedora spec files
 
 All original Fedora contributions are governed by the
 xref:fpca.adoc[Fedora Project Contributor Agreement (FPCA)]. For all
@@ -1904,6 +1997,7 @@ there is no requirement to add one (that is to say, the "default" MIT
 license is equivalent to https://opensource.org/license/mit-0/[MIT No
 Attribution]).
 
+== Emulators
 
 Some emulators (applications which emulate another platform) are not permitted for inclusion in Fedora Linux. These rules will help you determine if an emulator is acceptable for Fedora.
 
@@ -1921,6 +2015,7 @@ but ship with no game ROMs are not covered by this rule.
 
 * All other Fedora licensing and packaging rules apply to emulators.
 
+== Licensing of RSA implementations of MD5
 
 It is common to encounter old RSA reference C implementations of the MD5 message-digest algorithm under a free software license containing an advertising requirement, similar to the better-known advertising clause in old versions of the BSD license. Such advertising clauses have generally been understood to be GPL-incompatible. The RSA license is included in the SPDX License List under the short identifier https://spdx.org/licenses/RSA-MD.html[`RSA-MD`]. The MD5 reference implementation also appears in https://datatracker.ietf.org/doc/html/rfc1321[RFC 1321], which states that distribution of the RFC document is "unlimited."
 
@@ -1939,6 +2034,7 @@ Under present-day policies for populating the spec file License: field, if you e
 
 However, unless you have guidance from Fedora Legal suggesting otherwise, you should retain the RSA copyright and license notice as found in the upstream source code.
 
+== Elliptic curve cryptography (ECC)
 
 The following ECC curves are currently permitted in Fedora:
 
@@ -1975,6 +2071,7 @@ ETF RFC 5639)
 
 
 * Fedora License Lists
+= *Allowed* Licenses
 
 This page lists the various category of *allowed* licenses in separate tables.
 That is: *allowed*, if it is allowed for any use and *allowed-fonts*,
@@ -1985,6 +2082,7 @@ from data maintained in the
 https://gitlab.com/fedora/legal/fedora-license-data[Fedora License Data]
 repository.
 
+= *Allowed* Licenses
 
 [.datatable.dt-search]
 |===
@@ -3084,6 +3182,7 @@ repository.
 |===
 
 
+= *Allowed* Content Licenses
 
 [.datatable.dt-search]
 |===
@@ -3157,6 +3256,7 @@ https://gitlab.com/fedora/legal/fedora-license-data/-/issues/158 .| link:++https
 |License Ouverte|Ouverte|&nbsp;
 |===
 
+= *Allowed* Documentation Licenses
 
 [.datatable.dt-search]
 |===
@@ -3216,6 +3316,7 @@ https://gitlab.com/fedora/legal/fedora-license-data/-/issues/158 .| link:++https
 |Verbatim License|Verbatim|&nbsp;
 |===
 
+= *Allowed* Font Licenses
 
 [.datatable.dt-search]
 |===
@@ -3290,6 +3391,7 @@ When you find OFL-1.1-no-RFN in your sources you can use OFL-1.1 id.
 |===
 
 
+= *Allowed* Firmware Licenses
 
 [.datatable.dt-search]
 |===
@@ -3298,6 +3400,7 @@ When you find OFL-1.1-no-RFN in your sources you can use OFL-1.1 id.
 | link:++https://gitlab.com/fedora/legal/fedora-license-data/-/blob/main/data/LicenseRef-Intel-firmware.toml++[LicenseRef-Intel-firmware] link:++https://docs.fedoraproject.org/en-US/legal/license-review-process/#_what_is_licenseref++[icon:info-circle[]]
 |&nbsp;|{nbsp}|&nbsp;
 |===
+= *Allowed* Licenses
 
 This page lists the all the licenses that are *allowed* for use in Fedora. If a
 license is marked as *allowed*, it is allowed for any use. If a license is
@@ -3309,6 +3412,7 @@ https://gitlab.com/fedora/legal/fedora-license-data[Fedora License Data]
 repository. xref:allowed-licenses.adoc contains the same information, but
 broken out to different tables for each category of *allowed*.
 
+= All licenses
 
 [.datatable.dt-search]
 |===
@@ -4339,6 +4443,7 @@ Nunit License,zlib/libpng License with Acknowledgement|&#10004;|&#10004;|&#10004
 |{nbsp}|&#10004;|&#10004;|&#10004;|&#10004;|{nbsp}| link:++https://spdx.org/licenses/OSSP.html++[OSSP]
 |{nbsp}|&#10004;|&#10004;|&#10004;|&#10004;|{nbsp}
 |===
+= *Not-Allowed* Licenses
 
 This page lists the licenses that are *not-allowed* for use in Fedora. The
 "Usage" field shows any notes related to specific usage for a particular
@@ -4902,19 +5007,23 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Privacy Statement for the Fedora Project
 
 
+== Scope of This Notice
 
 This Privacy Statement is intended to describe the Fedora Project's privacy practices and provide information
 about the choices you have regarding the ways in which information collected by the Fedora Project is used and
 disclosed. For convenience, the Fedora Project is referred to in this document as "Fedora".
 
+== Our Commitment to Privacy
 
 At Fedora, your privacy is important to us. To better protect your privacy, we have provided this Statement
 explaining our information practices and the choices you can make about the way your personal information is
 collected, used and disclosed. To make this Statement easy to find, we have made it available on our homepage
 and at every location where personally-identifiable information may be requested.
 
+== The Information We Collect
 
 This Privacy Statement applies to all information collected by or submitted to Fedora, including personal data.
 "Personal data" is data that can be used to identify an individual.
@@ -4946,6 +5055,7 @@ expositions. The types of personal data collected may include (but are not limit
 ** your geographic coordinates (longitude/latitude),
 ** your affiliation(s).
 
+== Publicly Available Personal Data
 
 In keeping with the open nature and spirit of Fedora, some personal data attached to Fedora accounts is made
 public by default. Specifically:
@@ -4967,6 +5077,7 @@ will still have access to this information, but it will not be displayed to othe
 Private. The only exception to this is for your email address, which may still be visible in some Fedora
 services such as Bugzilla.
 
+== Using (Processing) Your Personal Data
 
 Fedora uses the personal data you provide to:
 
@@ -4988,6 +5099,7 @@ legitimate business interests to provide you with the information, communication
 create a public record of the data and content produced by Fedora’s services; and to maintain the integrity of
 that data and content for historical, scientific, and research purposes.
 
+== Sharing Your Personal Data
 
 Unless you consent, Fedora will never process or share the personal data you provide to us except as described
 below.
@@ -5009,6 +5121,7 @@ fraud).
 * For research activities, including the production of statistical reports (such aggregated information is used
 to describe our services and is not used to contact the subjects of the report).
 
+== Receiving E-Mail
 
 Fedora may send you e-mail about your account, to inform you of important upcoming Fedora events (e.g.
 elections), or in response to your questions. For your protection, Fedora may contact you in the event that we
@@ -5016,6 +5129,7 @@ find an issue that requires your immediate attention. Fedora processes your pers
 fulfill and comply with its contractual obligations to you, to provide the services you have requested, and to
 ensure the security of your account.
 
+== Cookies and Other Browser Information
 
 Fedora's online services automatically capture IP addresses. We use IP addresses to help diagnose problems with
 our servers, to administer our website, and to help ensure the security of your interaction with our services.
@@ -5045,6 +5159,7 @@ performance and functionality of the site. Your browser documentation includes i
 enable, disable or delete cookies at the browser level (usually located in the “Help”, “Tools” or “Edit”
 facility).
 
+== Our Commitment to Data Security
 
 Fedora trains its administrators on our privacy policy guidelines and makes our privacy policy available to our
 partners. Our website uses Secure Socket Layer (SSL) technology, which encrypts your personal data when you
@@ -5052,6 +5167,7 @@ send your personal information on our website. In addition, Fedora and its partn
 agreements which require that care and precautions be taken to prevent loss, misuse, or disclosure of your
 personal data.
 
+== Public Forums Reminder
 
 Fedora often makes chat rooms, forums, mailing lists, message boards, and/or news groups available to its
 users. Please remember that any information that is disclosed in these areas becomes public information.
@@ -5063,6 +5179,7 @@ uses; to maintain the integrity of that data and content for historical, scienti
 to provide an environment for the free exchange of ideas relevant and constructive to the development and
 propagation of open source software.
 
+== Our Commitment to Children's Online Privacy
 
 Out of special concern for children's privacy, Fedora does not knowingly accept online personal information
 from children under the age of 13. Fedora does not knowingly allow children under the age of 13 to become
@@ -5076,9 +5193,11 @@ under 13. In addition, Fedora will provide an appropriate mechanism to obtain pa
 to subsequently make changes to or request removal of their children's personal information, and provide access
 to any other information as required by law.
 
+== About Links to Other Sites
 
 This site contains links to other sites. Fedora does not control the information collection of sites that can be reached through links from fedoraproject.org. If you have questions about the data collection procedures of linked sites, please contact those sites directly.
 
+== Your Rights and Choices in the EEA
 
 Where the EU General Data Protection Regulation 2016/679 (“GDPR”) applies to the processing of your personal
 data, especially when you access the website from a country in the European Economic Area (“EEA”), you have the
@@ -5103,6 +5222,7 @@ data. If you wish to withdraw consent that you have previously provided to Fedor
 https://pagure.io/fedora-pdr[Personal Data Request Form]. However, the withdrawal of consent will not affect
 the lawfulness of processing based on consent before its withdrawal.
 
+== How to Access, Modify or Update Your Information
 
 Fedora gives you the ability to access, modify or update your personal data at any time. You may
 https://accounts.fedoraproject.org/[log in] and make changes to your login information (change your
@@ -5115,6 +5235,7 @@ and request that we remove this information from the Fedora Account System. Othe
 used your personal data as an identifier (e.g. Bugzilla comments, list postings in the archives, wiki change
 history, and spec changelogs) will not be altered.
 
+== How to Contact Us
 
 If you have any questions about any of these practices or Fedora's use of your personal information, please feel free to contact us mailto:legal@fedoraproject.org[by email], or by mail at:
 
@@ -5125,6 +5246,7 @@ Raleigh, NC 27601
 
 Fedora will work with you to resolve any concerns you may have about this Statement.
 
+== Changes to this Privacy Statement
 
 Fedora reserves the right to change this policy from time to time. If we do make changes, the revised Privacy
 Statement will be posted on this site. A notice will be posted on our homepage for 30 days whenever this
@@ -5139,7 +5261,9 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Fedora trademark guidelines
 
+== Subject of the Guidelines
 
 The Fedora Trademark Guidelines (“Guidelines”) cover all registered and unregistered trademarks related to the Fedora Project, including Fedora®, the Fedora logo, Fedora Remix, and the Fedora Remix logo, Fedora Ready and the Fedora Ready logo, either separately or in combination, (the "Fedora Trademarks"). Red Hat retains and reserves all rights to the Fedora Trademarks and their use, including the right to modify these guidelines.
 
@@ -5147,11 +5271,14 @@ The overarching principle for these Guidelines is that you may not use the Fedor
 
 Nothing in these Guidelines is meant to limit your rights under the terms of a free and open source software license. Trademarks and copyright are different rights, so regardless of what rights or permissions you may or may not have to use the Fedora Trademarks, you always have all your rights under any applicable free and open source software licenses.
 
+== Use by Red Hat
 Red Hat protects the Fedora Trademarks on behalf of the entire Fedora community. The law obligates trademark owners to police their marks and prevent the use of confusingly similar names by third parties. As the trademark owner, Red Hat uses the Fedora Trademarks under the same guidelines as the rest of the community.
 
+== The Fedora Council
 
 Red Hat enlists the assistance of the Fedora Council ( "Council") to oversee the Guidelines to ensure compliance by the community. The Council may grant permission for uses as explained below. The Council serves as the first line of mediation when questions of use arise.
 
+== Usage That Requires Permission
 Without separate permission from the Council you cannot:
 
 * Use the Fedora Trademarks in a way that expresses or implies sponsorship or endorsement by, or affiliation or a relationship with the Fedora Project or Red Hat when one does not exist.
@@ -5161,6 +5288,7 @@ Without separate permission from the Council you cannot:
 * Use the Fedora Trademarks in a disparaging or inappropriate manner or in any manner that violates any federal, state, or international law or regulation.
 * Imitate or copy the Fedora Project’s distinctive trade dress.
 
+== Usage That Does Not Require Permission
 Below is some guidance on uses we are commonly asked about. In all cases, use is permitted only provided that:
 
 * the use is only in connection with promoting the Fedora Project or Fedora code, documentation, content, fonts, and firmware (“Fedora Materials”);
@@ -5170,6 +5298,7 @@ Below is some guidance on uses we are commonly asked about. In all cases, use is
 proper trademark symbols are used in connection with the Fedora Trademarks and the trademark attribution statement must appear as explained in Proper Trademark Use; and
 * the https://docs.fedoraproject.org/en-US/project/brand/[Fedora brand standards] are strictly observed.
 
+=== Community sites and accounts
 Fedora defines community sites and accounts as sites or accounts related to the Fedora Project, but not officially maintained by Marketing team members or Social Media administrators. They may be region or country specific and are usually run by an individual contributor or group of contributors. These sites are non-commercial in nature (they are not selling a product).
 
 Examples of these pages include (but are not limited to):
@@ -5189,6 +5318,7 @@ It is permissible to use the Fedora Trademarks on community sites and accounts t
 While these online community sites and accounts are not officially endorsed by the Fedora Project or Red Hat, because they are part of the Fedora Community (and use the Fedora trademarks to identify themselves), their site owners, moderators, administrators, and users are required to comply with the https://docs.fedoraproject.org/en-US/project/code-of-conduct/[Fedora Code of Conduct]. Community sites and accounts which are unable to meet this standard of conduct will be required to cease use of the Fedora Trademarks.
 
 [[business-websites]]
+=== Business websites
 It is permissible to use the Fedora Trademarks on business websites, provided that:
 
 * the website has non-Fedora primary branding;
@@ -5199,10 +5329,13 @@ It is permissible to use the Fedora Trademarks on business websites, provided th
 
 Provided these guidelines are observed, it is permissible to use the Fedora Trademarks to sell Fedora Materials, and to advertise services for Fedora-based systems (installation, configuration, troubleshooting, etc.).
 
+=== Business cards
 It is permissible to use the Fedora Trademarks without prior permission on business cards to accurately identify one's affiliation with the Fedora Project.
 
+=== Promotional events
 It is permissible to use the Fedora Trademarks without prior permission to promote free and open source software events where individuals of the Fedora Project appear as Fedora representatives, distribute Fedora Materials, or otherwise represent the Fedora Project, provided the Fedora Code of Conduct and  the general guidelines above are followed. If you would like to make some merchandise or swag to give away at the event and don't already have a license to do so, please contact the Fedora Council.
 
+=== Publications
 It is permissible to use the Fedora Trademarks in the title and content of a publication, provided that:
 
 * the use is clearly in reference to the Fedora Project or Fedora Materials;
@@ -5210,8 +5343,11 @@ It is permissible to use the Fedora Trademarks in the title and content of a pub
 * the use does not purport to represent Fedora Project contributors as a group without permission from the Council; and
 * proper trademark symbols are used in connection with the Fedora Trademarks and the trademark attribution statement must appear as explained in Proper Trademark Use below.
 
+=== Distributing Fedora Materials
+==== Copies of unmodified Fedora Materials
 It is permissible to use the Fedora Trademarks without prior permission to label unmodified Fedora Materials, provided proper trademark symbols are used in connection with the Fedora Trademarks and the trademark attribution statement appears as explained in Proper Trademark Use below.
 
+==== Distributing combinations of Fedora Materials with non-Fedora or modified Fedora Materials
 Community members may use the Fedora Remix Trademarks on and in conjunction with software that commingles unmodified Fedora Materials with other software or content that is not provided officially by the Fedora Project, or that provides modified Fedora Materials, provided that:
 
 * the fedora-logos, fedora-release, and fedora-release-notes RPM packages are removed, although you may replace these with packages of your own devising not containing the Fedora Trademarks; and
@@ -5219,6 +5355,7 @@ Community members may use the Fedora Remix Trademarks on and in conjunction with
 ** the software provided is not provided or supported by the Fedora Project; and
 ** official Fedora Materials are available through the Fedora Project website, and linking to the Fedora Project website at https://fedoraproject.org/.
 
+==== OEM pre-loads of unmodified Fedora Materials
 It is permissible to use the Fedora Trademarks without prior permission in connection with the provision and sale of computer systems pre-loaded with Fedora Materials, provided that:
 
 * any website advertising such systems follows the guidelines herein pertaining to <<business-websites>>;
@@ -5229,6 +5366,7 @@ It is permissible to use the Fedora Trademarks without prior permission in conne
 * proper trademark symbols are used in connection with the Fedora Trademarks and the trademark attribution statement must appear as explained in Proper Trademark Use below; and
 * the https://docs.fedoraproject.org/en-US/project/brand/[Fedora brand standards] are strictly observed.
 
+==== Virtual images or appliances with unmodified Fedora Materials
 It is permissible to use the Fedora Trademarks without prior permission in connection with the provision and sale of virtual images or appliance distributions pre-loaded with Fedora Materials, provided that:
 
 * any website advertising such systems follows the guidelines herein pertaining to <<business-websites>>;
@@ -5239,7 +5377,9 @@ It is permissible to use the Fedora Trademarks without prior permission in conne
 * proper trademark symbols are used in connection with the Fedora Trademarks and the trademark attribution statement must appear as explained in Proper Trademark Use below; and
 the https://docs.fedoraproject.org/en-US/project/brand/[Fedora brand standards] are strictly observed.
 
+== Secondary Marks
 
+=== Fedora Remix
 Downstream distributors may use the Fedora Remix word mark and the Fedora Remix logo (“Fedora Remix Trademarks”) to indicate their work includes or is derived from Fedora Materials, and thereby drive more interest in the Fedora Project itself, so long as:
 
 * a statement is included in a prominent location stating that end users are receiving modified Fedora Materials, and informing them where they can get unmodified Fedora Materials;
@@ -5249,6 +5389,7 @@ use does not express or imply sponsorship or endorsement by, or affiliation or a
 
 Other uses that do not properly indicate the work contains modified Fedora Material or non-Fedora material are not permitted. Other uses of any Fedora Trademarks to refer to work that includes or is derived from Fedora Materials are not permitted.
 
+=== Fedora Ready
 Fedora Ready word mark and the Fedora Ready logo (“Fedora Ready Trademarks”) allow  approved, current members of the https://docs.fedoraproject.org/en-US/marketing/ready/[Fedora Ready program] to promote and advertise their participation in the program.
 
 Approved, current members of the Fedora Ready program may use the Fedora Ready Trademarks in marketing, websites and social media so long as:
@@ -5261,6 +5402,7 @@ Approved, current members of the Fedora Ready program may use the Fedora Ready T
 Permanently affixing the Fedora Ready trademark to hardware or using the Fedora Ready trademarks on merchandise or other promotional items requires permission from the Council.
 
 
+== Proper Trademark Use
 * Always use a trademark as an adjective modifying a noun. Don't use a trademark as a verb. Don't use "a" or "the" to refer to an instance of the trademark.
 * Always use trademarks in their exact form with the correct spelling and never abbreviate, hyphenate, or combine trademarks with any other words or designs.
 * Always distinguish trademarks from the surrounding text, either by capitalizing, bolding, italicizing, or underlining the trademark.
@@ -5270,8 +5412,10 @@ Permanently affixing the Fedora Ready trademark to hardware or using the Fedora 
 * Put the following notice in the footer of the page where you have used a Fedora Trademark Mark (or, if in a book, on the credits page), on any packaging or labeling, and on advertising or marketing materials: "[List of marks] is/are [a] trademark[s] or registered trademark[s] of Red Hat, Inc., or its subsidiaries in the United States and other countries."
 * In the case of a registered trademark, the first or most prominent mention of the Fedora Trademark on a web page, document, packaging, or documentation must be accompanied by a symbol indicating the Fedora Trademark is registered ("®").
 
+=== Logo Usage Guidelines
 For more information about the requirements for logo size, appearance, placement, and other considerations, refer to the https://docs.fedoraproject.org/en-US/project/brand/[Fedora brand standards].
 
+== Questions?
 If you have any questions about these Guidelines or you would like to speak to someone about the use of the Fedora Trademarks in ways not described in these Guidelines, please https://docs.fedoraproject.org/en-US/council/contact/[contact the Fedora Council].
 
 
@@ -5288,6 +5432,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Fedora Export Control Policy
 Red Hat Export Compliance Team
 2026-02-10
 
@@ -5310,6 +5455,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Notice and Procedure for Making Claims of Copyright Infringement
 
 To file a notice of infringement with us, please provide the following information to the Red Hat-designated copyright agent listed below:
 
@@ -5345,6 +5491,7 @@ SPDX-License-Identifier: CC-BY-SA-4.0
 
 ////
 
+= Fedora Chat Acceptable Use Policy
 :page-authors: {author}
 Fedora Project Authors;
 // Article content last reviewed and verified by a human on…
@@ -5353,10 +5500,12 @@ Fedora Project Authors;
 This Acceptable Use Policy (AUP) outlines the guidelines and expectations for users of Fedora Chat, a hosted Matrix chat service.
 By using this service, you agree to adhere to the principles set forth in this document.
 
+== Purpose
 
 Fedora Chat is provided to facilitate communication, collaboration, and community building within the Fedora Project.
 It is intended for activities related to the Fedora Project, including but not limited to discussions, technical support, project coordination, and community events.
 
+== Acceptable Use
 
 Users are expected to use Fedora Chat in a manner that is respectful, constructive, and aligned with the values of the Fedora Project.
 Acceptable use includes:
@@ -5368,6 +5517,7 @@ Acceptable use includes:
 * Participating in community events and discussions.
 * Foster community and provide a space for Fedora users and contributors to connect and socialize.
 
+== Prohibited Conduct
 
 The following activities are strictly prohibited on Fedora Chat:
 
@@ -5383,11 +5533,13 @@ Users should be aware of the xref:legal::privacy.adoc[Fedora Privacy Policy].
 * *Impersonation:* Impersonating another person or entity.
 * *Creation of Multiple Accounts for Abuse:* Creating multiple accounts with the intent to evade moderation, bypass bans, or engage in disruptive behavior.
 
+== Data Privacy
 
 The Fedora Project is committed to protecting the privacy of its users.
 All data collected and processed in Fedora Chat will be handled in accordance with the xref:legal::privacy.adoc[Fedora Privacy Policy].
 Users are encouraged to review this policy to understand how their data is collected, used, and protected.
 
+== Moderation and Enforcement
 
 The Fedora Project reserves the right to moderate content and user behavior in Fedora Chat to ensure compliance with this AUP and the xref:project:code-of-conduct:index.adoc[Fedora Code of Conduct].
 Actions that may be taken in response to violations include, but are not limited to:
@@ -5397,13 +5549,16 @@ Actions that may be taken in response to violations include, but are not limited
 * Permanent ban from the service.
 * Reporting illegal activities to relevant authorities.
 
+== Reporting Violations
 
 If you encounter any content or behavior in Fedora Chat rooms that you believe violates this AUP or the xref:project:code-of-conduct:index.adoc[Fedora Code of Conduct], please report using the report feature in your Matrix client interface or follow the documented xref:project:code-of-conduct:index.adoc#_reporting_and_enforcement[Fedora Project CoC violation reporting procedure].
 
+== Changes to this Policy
 
 This AUP may be updated from time to time to reflect changes in technology, community needs, or legal requirements.
 Continued use of Fedora Chat after such modifications constitutes acceptance of the updated policy.
 
+== Contact Information
 
 For questions or concerns regarding this Acceptable Use Policy, please contact the Fedora Project  mailto:legal@fedoraproject.org[by email], or by mail at:
 

@@ -1,8 +1,10 @@
 [automated-build-system-for-remixes-without-koji]]
+= Automated Build System For Remixes Without Koji
 
 This document outlines the process of creating an automated RPM and ISO building infrastructure for smaller https://fedoraproject.org/wiki/Remix[Fedora Remix] projects that do not make use of Fedora's Koji ecosystem.
 
 [[basic-setup]]
+== Basic Setup
 
 It is best practice to keep the web server and builder separate.
 
@@ -17,6 +19,7 @@ The builder is a Jenkins CI server which rebuilds RPMs when changes are made in 
 The automation should be configured in Jenkins to trigger on a push to `master` for each repo housing package sources.
 
 [[RPMs]]
+== RPMs
 
 The series of commands shown below illustrates the process of building RPM packages with Jenkins.
 
@@ -40,12 +43,14 @@ A tool such as `rsync` should then be used to push the new packages to the mirro
 on the mirror in order to update the proper RPM repository.
 
 [[ISOs]]
+== ISOs
 
 ISOs should be built as needed. In order to build an ISO, you need two prerequisites:
 
 . A kickstart file to be used by the https://fedoraproject.org/wiki/Anaconda[Anaconda Installer]
 . The `lorax-lmc-novirt` and `pykickstart` Fedora packages
 
+=== Initial ISO Building
 
 . Clone the Fedora Kickstarts repository: `git clone https://pagure.io/fedora-kickstarts.git`
 . Enter the directory: `cd fedora-kickstarts/`
@@ -63,6 +68,7 @@ sudo livemedia-creator --ks /path/to/flat/kickstart/file --no-virt \
 . The resulting ISO will be in `/var/lib/lmc`.
 . Finally, set `SELinux` back to enforcing: `sudo setenforce 1`
 
+=== General ISO Building
 
 After an initial ISO build, a new ISO may be created by running:
 

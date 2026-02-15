@@ -1,4 +1,5 @@
 :experimental:
+= Working with Community Linux Engineering
 
 This document explains how the CLE team works.
 
@@ -54,6 +55,7 @@ which you can find in:
 - xref:day_to_day_fedora.adoc[Day to day for Fedora]
 
 - xref:day_to_day_centos.adoc[Day to day for CentOS]
+= Working with Community Linux Engineering in Fedora
 
 CLE members work in Fedora as community members, just like everyone else.
 We're part of
@@ -65,11 +67,13 @@ https://docs.fedoraproject.org/en-US/qa-docs/[Quality],
 the https://docs.fedoraproject.org/en-US/council/[Council],
 and more!
 :experimental:
+= Working with Community Linux Engineering in CentOS
 
 This document explains how to efficiently work with the CLE team.
 Your close attention to this document will help both you and us
 do the work you are asking us to do.
 
+== Our Workflow
 
 . Is your issue/problem related to security of an application or service we
 run?
@@ -120,6 +124,7 @@ and indicate this.
 * Go back to the previous step for additional work.
 
 
+== General Ticket Considerations
 
 Please provide as much information as you can in your ticket to avoid
 back and forth for information.
@@ -140,12 +145,14 @@ of the team has and how important we think it is. If your ticket
 is blocking you, make sure you note that in the ticket, but keep in
 mind that we may already be working on tickets that are blocking more people.
 
+== IRC
 
 IRC is a great way to communicate, but please do not ping team members
 directly. Instead, update your ticket with any new information you have and
 when the team member(s) working on that issue have time/availability, they
 may contact you on IRC for more interactive debugging/testing.
 
+== Direct emails
 
 E-mail is also a great communication method, but if you mail work items or
 information to one person directly, they cannot easily hand off the issue,
@@ -154,10 +161,12 @@ perhaps have already solved it, etc). So, please avoid direct emails and
 instead update tickets with any information you want to add.
 :experimental:
 :toc:
+= New Initiative Workflow
 
 This document documents a proposed workflow to get new initiatives onto the
 CLE backlog.
 
+== The Process
 
 The process to submit a new initiative to the CLE team to be potentially worked on is outlined below:
 
@@ -198,6 +207,7 @@ requestor(s) to sync with them on the progress of the initiatives.
 [caption="Figure 1: "]
 image::CLE_new_initiatives_flow.png[The initiative flow,750,750, link="../_images/CLE_new_initiatives_flow.png"]
 
+=== Proposing a New Initiative
 
 To propose a new initiative, open a new ticket at
 https://pagure.io/cpe/initiatives-proposal/new_issue and fill in the template
@@ -216,6 +226,7 @@ other work/initiatives, etc...).
 nice-to-have or really-nice-to-have you would like to see/have.
 * Area and community concerned/impacted
 
+=== First Decision Point: Is This Initiative for the CLE Team?
 
 Based on the information provided in the ticket, the CLE team will consider
 whether the initiative is in scope of the xref:index.adoc[Mission Statement],
@@ -231,6 +242,7 @@ At this point, it will be decided if your initiative is accepted, or not, and if
 necessary, appoint someone to work with you on refining this proposal.
 
 
+== Final Notes
 
 This new workflow is a change from how the CLE team has worked until now.
 The core idea is to maximize the output of the team to the community. We are
@@ -240,6 +252,7 @@ to work on more initiatives and bring more beneficial changes to our
 communities.
 :experimental:
 :toc:
+= Time Tables
 
 This document aims at recording the different deadlines that the CLE team
 tries to aim for its planning.
@@ -252,6 +265,7 @@ or decline due to unavailability of time/people, etc.
 All accepted initiatives will be added to our
 link:https://tree.taiga.io/project/amoloney1-cpe-team-projects/kanban?epic=null[backlog]
 
+== Current
 
 * 2020
 
@@ -290,6 +304,7 @@ more time a proposal has, the more time it gives us to understand and
 scope it.
 
 
+== Past
 * 2020
 
 ** Q1: January to March
@@ -303,9 +318,11 @@ scope it.
 *** Q3 planning session: June 18th
 *** Q3 starting date: July 5th
 :experimental:
+= Glossary
 
 This document explains some of the terminology used by the team.
 
+== Pain vs Gain
 
 When evaluating tickets during the stand ups, the team evaluates the pain vs
 gain of the task asked. These estimates can then be used to prioritize work (
@@ -350,6 +367,7 @@ number of people.
 High gain:: is a supported use-case, impacts a lot of people, there is no
 work around available.
 
+== Dev vs Ops
 
 When evaluating tickets during the stand ups, the team also evalutes if the
 ticket requires a developper to be involved or not. The result of this
@@ -365,6 +383,7 @@ change a behaviour or requires a little debugging to figure what is going on
 before it can be assessed as requiring a code fix or a config fix.
 
 
+== Priorities
 
 We are actually mis-using the priority field to reflect the status of the ticket.
 
@@ -389,6 +408,7 @@ Waiting on External:: This marks tickets that are blocked waiting on
 something or someone outside of the team.
 
 
+== Application categories
 
 The Fedora Infrastructure runs a fairly larged number of applications. CLE runs
 most of them and maintain (as in maintain the code base, writing code and patches)
@@ -403,6 +423,7 @@ Each appliction can then be categorized using these, for example:
 - waiverdb is: CLE run and don't maintain (type b) - Critical path
 - simple-koji-ci is: CLE run and don't maintain (type b) - Not critical path
 
+=== Maintenance status
 
 CLE run and maintain:: these are the applications that we run and for which the
 team is responsible for the code base. We lead the project upstream and run it
@@ -419,6 +440,7 @@ in other words, providing power and network. If something goes wrong, we will
 try to restart the service and if the service doesn't recove, we will contact
 the maintainers of the application.
 
+=== Maintenance level
 
 Critical path:: these are applications that are needed to build or ship one
 of our deliverables to our users.
@@ -429,12 +451,14 @@ artifacts.
 :experimental:
 :toc:
 //TODO: this file keeps talking about Fedora Infra. We should either change it to CLE, or have a separate SLE doc for CentOS if there's a difference in SLEs.
+= Service Level Expectations
 
 The CLE team does not have any formal agreement or contract regarding the
 availability of its different services. However, we do try our best to keep
 services running, and as a result, you can have some expectations as to what
 we will do to this extent.
 
+== Primary Business Hours
 
 Fedora Infrastructure's primary business hours are aligned with the work
 schedule of Red Hat Inc. Normal hours should be seen as during Monday
@@ -444,7 +468,9 @@ end of year closure affecting staffing and response times.
 Services outside of primary business hours are done on call and depend on
 the availability of staff.
 
+== Roles and Responsibilities
 
+=== Fedora Infrastructure to Community
 
 * To have staff present and available in appropriate IRC channels to answer
 questions during primary hours.
@@ -458,6 +484,7 @@ incidents, problems, or feature requests.
 * Move items which can not be resolved within a reasonable time to future
 feature requests or close out.
 
+=== Community Members to Fedora Infrastructure
 
 * Provide full and detailed reports of the problem or requested service.
 * Provide clear and complete contact information and times when available.
@@ -466,6 +493,7 @@ feature requests or close out.
 or other emergencies.
 * When contacted by Fedora IT, respond back within 5 business days.
 
+=== Fedora Infrastructure to Fedora Infrastructure
 
 * Have a clear schedule of reachable hours.
 * Set and take regular vacation time to be rested.
@@ -475,6 +503,7 @@ help debug problems.
 * Follow procedures and checklists when adding or updating services.
 * Help with regular audits of the documentation
 
+== Definition of Service Priorities
 
 The general design of service priorities is that of concentric circles, where
 items rely on services in their own circle or a circle below them.
@@ -506,6 +535,7 @@ mission, the upstream software is dead, or the original reasons for the
 product are available. Problems with these services will be looked at
 during primary business hours. Responses may be mostly "Will Not Fix".
 
+== Limitations on Support
 
 * Some services that are associated with Fedora are provided by third
 parties. Changes and outages which affect them are outside the control
@@ -518,6 +548,7 @@ will be prioritized to fit within those.
 States of America. This means that certain requests, changes and problems
 are outside the ability of members to deal with.
 
+== Glossary
 
 * **Planned outage**: A planned outage is one that is announced sufficiently
 ahead of time to allow most users to plan around it.
@@ -562,6 +593,7 @@ and when the help desk will begin to work on that problem.
 
 * **Resolution Update**: The frequency of updates to tickets
 
+== Estimated Time of Resolution:
 //TODO: this is missing the actual times
 By priority Levels:
 
@@ -578,6 +610,7 @@ duties.
 immediate impact on services.
 :experimental:
 :toc:
+= Services SLE
 
 Here is the list of our services per SLE level. For memory these levels are
 presented in our xref:sle.adoc[SLE Documentation].
@@ -589,6 +622,7 @@ there are at their appropriate level for Fedora but not all of them are under
 the responsabilities of the CLE team which is currently not represented here.
 ====
 
+== Critical
 
 * DNS
 * Bastion ssh
@@ -601,6 +635,7 @@ the responsabilities of the CLE team which is currently not represented here.
 * IPA
 
 
+== Important
 
 * Koji https://koji.fedoraproject.org
 * Bodhi https://bodhi.fedoraproject.org
@@ -630,6 +665,7 @@ the responsabilities of the CLE team which is currently not represented here.
 * odcs
 
 
+== Normal
 
 * Pagure https://pagure.io
 * CI https://ci.centos.org
@@ -646,6 +682,7 @@ the responsabilities of the CLE team which is currently not represented here.
 * Data Analysis
 
 
+== Low
 
 * Ambassadors https://fedoraproject.org/membership-map/ambassadors.html
 * Asknot http://whatcanidoforfedora.org/
@@ -686,6 +723,7 @@ the responsabilities of the CLE team which is currently not represented here.
 * websites
 
 
+== Websites
 
 * fedora-web
 * fedora-budget
@@ -697,6 +735,7 @@ the responsabilities of the CLE team which is currently not represented here.
 * review-stats
 * fedora_owner_change
 
+== Third Party
 
 Outside of Fedora Infrastructure to fix.
 
@@ -712,6 +751,7 @@ Outside of Fedora Infrastructure to fix.
 * Openqa
 * Taiga https://teams.fedoraproject.org/
 
+== Deprecated
 
 * Torrents https://torrent.fedoraproject.org
 * Darkserver https://darkserver.fedoraproject.org/
@@ -722,10 +762,12 @@ Outside of Fedora Infrastructure to fix.
 * Taiga https://taiga.fedorainfracloud.org/
 :experimental:
 
+= Processes
 
 This section will contain all processes defined in CLE Team.
 :experimental:
 
+= Process for unmaintained apps
 
 This document describes the process of handling apps CLE team doesn't maintain anymore.
 The reason why CLE is not maintaining some apps is simple. We want to focus on the
@@ -733,6 +775,7 @@ problems that are directly related to our xref:index.adoc[Mission Statement] and
 maintain large amount of applications that are not related to it. Because of this we
 want to shrink the amount of applications we own, but don't have capacity to maintain.
 
+== Step by step process
 
 . *Make it visible that the application is looking for maintainer*
 +
