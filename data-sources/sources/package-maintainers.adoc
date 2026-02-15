@@ -964,7 +964,8 @@ see the xref:Package_Maintenance_Guide.adoc[Package maintenance guide].
 == Update Your Branches (if desired)
 
 Branches are `f#`
-(formerly `F-#` and before that `FC-#`),
+(formerly F-#
+and before that `FC-#`),
 `main`,
 etc.
 So `f` is the branch for Fedora.

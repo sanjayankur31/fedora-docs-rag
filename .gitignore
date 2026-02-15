@@ -69,3 +69,4 @@ data-sources/repos/pagure*
 data-sources/repos/github*
 
 data-sources/sources/*.xml
+data-sources/vector-stores/*db
