@@ -732,7 +732,7 @@ Follow these steps to clone a repository using HTTPS:
 === 1. Locate the Repository's HTTPS URL
 
 . Navigate to the repository you wish to clone on the Fedora Forge instance
-(e.g., `https://forge.fedoraproject.org/<org>/<repo_name>`).
+(e.g., https://forge.fedoraproject.org/org/repo_name).
 
 . On the repository's main page, locate the blue *"HTTPS"* button (or similar
 clone button).
@@ -2079,7 +2079,7 @@ permissions.
 You can usually do this by clicking on your profile picture/icon in the top
 right, then selecting "Your Organizations," and then clicking on the desired
 organization. Alternatively, you can directly access it via its URL (e.g.,
-`https://forge.fedoraproject.org/org/<organization_name>`).
+`https://forge.fedoraproject.org/org/organization_name`).
 
 === Access Organization Teams Settings
 
