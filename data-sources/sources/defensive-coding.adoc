@@ -2021,13 +2021,17 @@ potentially harmful.
 Arithmetic evaluation is triggered by the follow constructs:
 
 * The *expression* in
-“pass:attributes[{blank}]`$((`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`))`pass:attributes[{blank}]”
+----
+$((`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`))
+----
+
 is evaluated. This construct is called *arithmetic
 expansion*.
 
 * {blank}
-+
-“pass:attributes[{blank}]`$[`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`]`pass:attributes[{blank}]”
+----
+$[`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`]
+----
 is a deprecated syntax with the same effect.
 
 * The arguments to the `let` shell built-in
@@ -2035,11 +2039,16 @@ are evaluated.
 
 * {blank}
 +
-“pass:attributes[{blank}]`((`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`))`pass:attributes[{blank}]”
+----
+((`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`))
+----
 is an alternative syntax for “pass:attributes[{blank}]`let` *expression*pass:attributes[{blank}]”.
 
 * Conditional expressions surrounded by
-“pass:attributes[{blank}]`[[`pass:attributes[{blank}]…pass:attributes[{blank}]`]]`pass:attributes[{blank}]” can trigger
+----
+[[`pass:attributes[{blank}]…pass:attributes[{blank}]`]]
+----
+can trigger
 arithmetic evaluation if certain operators such as
 `-eq` are used. (The
 `test` built-in does not perform arithmetic
@@ -2047,16 +2056,25 @@ evaluation, even with integer operators such as
 `-eq`.)
 +
 The conditional expression
-“pass:attributes[{blank}]`[[ $`pass:attributes[{blank}]pass:attributes[{blank}]*variable* `=~` *regexp* `]]`pass:attributes[{blank}]”
+
+----
+
+[[ $`pass:attributes[{blank}]pass:attributes[{blank}]*variable* `=~` *regexp* `]]
+----
+
 can be used for input validation, assuming that
 *regexp* is a constant regular
 expression.
 See <<sect-Defensive_Coding-Shell-Input_Validation>>.
 
 * Certain parameter expansions, for example
-“pass:attributes[{blank}]`${`pass:attributes[{blank}]pass:attributes[{blank}]*variable*pass:attributes[{blank}]pass:attributes[{blank}]`[`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`]}`pass:attributes[{blank}]”
+----
+${`pass:attributes[{blank}]pass:attributes[{blank}]*variable*pass:attributes[{blank}]pass:attributes[{blank}]`[`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`]}
+----
 (array indexing) or
-“pass:attributes[{blank}]`${`pass:attributes[{blank}]pass:attributes[{blank}]*variable*pass:attributes[{blank}]pass:attributes[{blank}]`:`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`}`pass:attributes[{blank}]”
+----
+${`pass:attributes[{blank}]pass:attributes[{blank}]*variable*pass:attributes[{blank}]pass:attributes[{blank}]`:`pass:attributes[{blank}]pass:attributes[{blank}]*expression*pass:attributes[{blank}]pass:attributes[{blank}]`}
+----
 (string slicing), trigger arithmetic evaluation of
 *expression*.
 
@@ -2067,7 +2085,9 @@ not *expression*.
 
 * The expressions in the arithmetic `for`
 command,
-“pass:attributes[{blank}]`for ((`pass:attributes[{blank}]pass:attributes[{blank}]*expression1*pass:attributes[{blank}]pass:attributes[{blank}]`;` *expression2*pass:attributes[{blank}]pass:attributes[{blank}]`;` *expression3*pass:attributes[{blank}]pass:attributes[{blank}]`)); do` *commands*pass:attributes[{blank}]pass:attributes[{blank}]`; done`pass:attributes[{blank}]”
+----
+for ((`pass:attributes[{blank}]pass:attributes[{blank}]*expression1*pass:attributes[{blank}]pass:attributes[{blank}]`;` *expression2*pass:attributes[{blank}]pass:attributes[{blank}]`;` *expression3*pass:attributes[{blank}]pass:attributes[{blank}]`)); do` *commands*pass:attributes[{blank}]pass:attributes[{blank}]`; done
+----
 are evaluated. This does not apply to the regular
 for command,
 “pass:attributes[{blank}]`for` *variable* `in` *list*pass:attributes[{blank}]pass:attributes[{blank}]`; do` *commands*pass:attributes[{blank}]pass:attributes[{blank}]`; done`pass:attributes[{blank}]”.
