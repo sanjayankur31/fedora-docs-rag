@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Script to generate NeuroML vector stores from provided data
+Script to generate Fedora docs vector stores from provided data
 
-File: nml.py
+File: docs2vs.py
 
-Copyright 2025 Ankur Sinha
+Copyright 2026 Ankur Sinha
 Author: Ankur Sinha <sanjay DOT ankur AT gmail DOT com>
 """
 
@@ -26,7 +26,7 @@ from neuroml_ai_utils.llm import setup_embedding
 logging.basicConfig(level=logging.WARNING)
 
 
-class NML(object):
+class FedoraDocs(object):
     # limit to two header levels
     md_headers_to_split_on = [
         ("#", "Header 1"),
@@ -35,7 +35,7 @@ class NML(object):
         # ("####", "Header 4"),
     ]
 
-    """NeuroML vector store generator"""
+    """Fedora docs vector store generator"""
 
     def __init__(self, embedding_model: str, logging_level: int = logging.DEBUG):
         """TODO: to be defined."""
@@ -46,7 +46,7 @@ class NML(object):
         my_path = Path(__file__).parent
         self.stores_sources_path = f"{my_path}/sources"
 
-        self.logger = logging.getLogger("NeuroML-doc-embeddings")
+        self.logger = logging.getLogger("Fedora-vs-generator")
         self.logger.setLevel(logging_level)
         self.logger.propagate = True
 
@@ -200,6 +200,6 @@ class NML(object):
 
 
 if __name__ == "__main__":
-    converter = NML(embedding_model="ollama:bge-m3:latest")
+    converter = FedoraDocs(embedding_model="ollama:bge-m3:latest")
     converter.setup()
     converter.create()

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a single page markdown from Jupyter book sources
+Generate a single page asciidoc from multifile sources
 
 File: data/scripts/jupyterbook2singlemd.py
 
