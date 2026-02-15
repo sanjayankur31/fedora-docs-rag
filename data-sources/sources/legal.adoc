@@ -627,8 +627,8 @@ are valid with the SPDX Specification.
 The submission and approval process for inclusion on the SPDX License List can
 be lengthy. As a temporary measure to mitigate delays in the workflow, the
 Fedora Project will provision a temporary license identifier with the syntax
-`LicenseRef-Fedora-Temporary-*` that you may use. Or
-`AdditionRef-Fedora-Temporary-*` for exceptions. Once SPDX assigns the final ID,
+`LicenseRef-Fedora-Temporary-` that you may use. Or
+`AdditionRef-Fedora-Temporary-` for exceptions. Once SPDX assigns the final ID,
 you have to change this temporary ID to the final one.
 
 == Opening a Fedora License Data merge request
