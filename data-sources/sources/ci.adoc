@@ -124,7 +124,9 @@ git push
 
 * Clone your git repo using
 
+----
 git clone https://...
+----
 +
 and push using
 
