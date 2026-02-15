@@ -1958,7 +1958,7 @@ EPEL is run and maintained by many volunteers.  A person's life, job,
 and priorities change over time.  It is natural that a time might come that you no
 longer have the time or desire to maintain a package.
 
-. Check if there are other maintainers of the package. link:++https://src.fedoraproject.org/rpms/nedit++[https://src.fedoraproject.org/rpms/<package>]
+. Check if there are other maintainers of the package. link:++https://src.fedoraproject.org/rpms/nedit++[https://src.fedoraproject.org/rpms/package]
 If there are, ask them if they would like to maintain the epel branches.
 . If none of the other maintainers want to maintain the epel branches, send an e-mail to
 link:++https://lists.fedoraproject.org/archives/list/epel-devel@lists.fedoraproject.org/++[epel-devel]. Let us
