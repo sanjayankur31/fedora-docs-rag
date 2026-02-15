@@ -14,7 +14,7 @@ Source Software projects.
 This community worked to bring awareness to contributions by women and
 non-binary contributors in Fedora.
 
-Although the Fedora Women team is no longer active, many of its goals have evolved into broader efforts, such as the xref:dei::fedora-week-of-diversity.adoc[*Fedora Week of Diversity (FWD)*].
+Although the Fedora Women team is no longer active, many of its goals have evolved into broader efforts, such as the xref:dei::fedora-week-of-diversity.adoc[Fedora Week of Diversity (FWD)].
 
 [[demographic-survey]]
 == Demographic Survey (2015/2016)
@@ -521,7 +521,7 @@ Don't forget to say hi when you join!
 [[attend-meeting]]
 == Attend a meeting
 
-link:{team_meetings}[**Find our next meeting on our calendar!**]
+link:{team_meetings}[*Find our next meeting on our calendar!*]
 
 The {team_name} usually holds a fortnightly meeting over Jitsi Meet to review ongoing work and plan new work.
 It is a good opportunity to say hello and meet other team members in real-time while seeing how we work.
@@ -1907,7 +1907,7 @@ Each year, Fedora contributors come together to share experiences, spotlight com
 
 == How to participate
 
-Fedora Week of Diversity is designed to be flexible and the focus for each year may change - past themes have included https://cfp.fedoraproject.org/fwd-2024/cfp[*Empowering Diversity, Enriching Communities* (2024)]. Because of this, how you participate can vary; for example, you might share a personal story or blog post, record an interview or podcast, or thank contributors publicly.
+Fedora Week of Diversity is designed to be flexible and the focus for each year may change - past themes have included https://cfp.fedoraproject.org/fwd-2024/cfp[Empowering Diversity, Enriching Communities* (2024)]. Because of this, how you participate can vary; for example, you might share a personal story or blog post, record an interview or podcast, or thank contributors publicly.
 
 Note: Organizers will share themes and details each year. Watch the Fedora https://communityblog.fedoraproject.org/[Community Blog], https://discussion.fedoraproject.org/[Discourse], or https://matrix.to/#/#dei:fedoraproject.org[DEI team Matrix channel] to stay updated.
 
@@ -2014,9 +2014,9 @@ The Fedora Diversity, Equity & Inclusion (DEI) Team has supported and organized 
 === 2025
 In-person, part of the FLock to Fedora conference in Prague, Czech Republic
 
-* https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YE9P8R/[*Mentored Projects Learnings & Demo – Talk*]
+* https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YE9P8R/[Mentored Projects Learnings & Demo – Talk]
 ** https://www.youtube.com/live/YhoFPG7Ack0?si=puMwM-0YlhyuXADx[Watch Video]
-* https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/JS9BHV/[*Open Source Mentorship: Crafting Communities, Creating Leaders – Talk*]
+* https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/JS9BHV/[Open Source Mentorship: Crafting Communities, Creating Leaders – Talk]
 ** https://www.youtube.com/live/YhoFPG7Ack0?si=BTU8j_5wqpMrcy6L&t=13263[Watch Video]
 * *Mentor-Mentee Lunch Matching* – https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YWCEJ9/[Schedule]
 * *Sticker Match Social Networking* - https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/9YGBQS/[Schedule]
@@ -2331,19 +2331,19 @@ These Objectives are listed as follows:
 
 == Fedora <3 Python
 
-https://fedoralovespython.org/[*fedoralovespython.org*]::
+https://fedoralovespython.org/[fedoralovespython.org]::
 Collection of resources on using Python on Fedora.
-https://developer.fedoraproject.org/tech/languages/python/python-installation.html[*Python - Fedora Developer Portal*]::
+https://developer.fedoraproject.org/tech/languages/python/python-installation.html[Python - Fedora Developer Portal]::
 Steps and guides on how to install, use, and develop with Python on Fedora (including Django, Flask, https://developer.fedoraproject.org/tech/languages/python/scipy.html[SciPy] and more).
-http://fedora.portingdb.xyz/[*Python 3 porting database*]::
+http://fedora.portingdb.xyz/[Python 3 porting database]::
 Fedora's Python 3 porting database.
 Shows progress towards fully migrating Fedora Python packages to Python 3.
-https://labs.fedoraproject.org/python-classroom/[*Python Classroom Lab*]::
+https://labs.fedoraproject.org/python-classroom/[Python Classroom Lab]::
 Fedora Lab intended for teachers and instructors teaching students Python.
 It includes several Python development tools and libraries not normally installed by default (also is available as GNOME desktop, a Vagrant VM, or a Docker container).
-https://whatcanidoforfedora.org/en/#coding#python[*Contributing to Python in Fedora*]::
+https://whatcanidoforfedora.org/en/#coding#python[Contributing to Python in Fedora]::
 Helpful resources to find ways to contribute to Python efforts in Fedora.
-https://fedoramagazine.org/tag/python/[*Python articles on Fedora Magazine*]::
+https://fedoramagazine.org/tag/python/[Python articles on Fedora Magazine]::
 All articles on the Fedora Magazine related to Python in Fedora.
 Two great examples are https://fedoramagazine.org/python-3-7-now-available-in-fedora/[_Python 3.7 now available in Fedora_] and https://fedoramagazine.org/install-pipenv-fedora/[_How to install Pipenv on Fedora_].
 
