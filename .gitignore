@@ -67,3 +67,5 @@ data-sources/repos/forge*
 data-sources/repos/gitlab*
 data-sources/repos/pagure*
 data-sources/repos/github*
+
+data-sources/sources/*.xml
