@@ -1,3 +1,4 @@
 langchain-chroma
 langchain-text-splitters
-git+https://github.com/neuroml/neuroml-ai/#subdirectory=utils_pkg
+ollama
+#git+https://github.com/neuroml/neuroml-ai/#subdirectory=utils_pkg
