@@ -1,0 +1,77 @@
+
+[changelog-source-date-epoch]
+
+The problem manifests as file having a different timestamp in a rebuild.
+Example rpmdiff output:
+
+----
+beesu-2.7-50.fc42.x86_64
+modified-..........T /etc/security/console.apps/beesu
+modified-..........T /usr/bin/beesu
+modified-..........T /usr/lib/.build-id
+modified-..........T /usr/lib/.build-id/d6
+modified-..........T /usr/lib/.build-id/d6/3e63edfaf02c640d1e308bf8e30288cf3b646a
+modified-..........T /usr/libexec/beesu
+modified-..........T /usr/share/doc/beesu
+modified-..........T /usr/share/licenses/beesu
+----
+
+The issue occurs because the changelog entry contains time "in the future",
+i.e. later than when the original build happened.
+A traditional changelog is used
+and the maintainer is working late at night.
+In the local time, it is after midnight, so the date has already changed,
+but the date in the UTC timezone hasn't changed yet.
+The `%changelog` entries do not specify the timezone
+— they are implicitly in the UTC timezone.
+The maintainer erronously inserts a `%changelog` entry with a timestamp that is one or more hours ahead,
+and quickly pushes the changes and starts a build.
+
+We use the timestamp of last changelog entry as the official "time when the build happens",
+i.e. as source for `$SOURCE_DATE_EPOCH`.
+During the build, `$SOURCE_DATE_EPOCH` is set, but it is set to the future,
+so clamping of mtimes of files generated during the build is ineffective.
+When we repeat the build, at least a few hours later,
+the changelog timestamp is in the past,
+so clamping of mtimes to `$SOURCE_DATE_EPOCH` becomes effective again.
+
+We end up with different timestamps on files that are generated during the build.
+
+From the spec file for `beesu`:
+....
+$ git show -U0 beesu.spec
+commit bb415496f28bf29c6a177be72cef5271c6e65af3
+...
+Date:   Mon Jan 27 00:04:43 2025 +0100
+...
+@@ -56,0 +59,3 @@ %changelog
++* Mon Jan 27 2025 Name <address@example.com> - 2.7-50
++- fix building of beesu in f42
++
+....
+
+As we can see from the commit timestamp, the time was Jan 27 00:04:43 +0100,
+which is Jan 26 23:04:43 UTC,
+and the timestamp in the `%changelog` section is off-by-one.
+
+
+The easiest solution is to switch to
+https://docs.pagure.org/fedora-infra.rpmautospec/[rpmautospec].
+Then the changelog timestamp is automatically generated
+from the commit timestamp,
+which in turn is set automatically by `git`,
+so the problem goes away.
+
+Some alternative solutions are to either
+configure the tool used to insert the changelog entry to use UTC,
+or to correct the timestamps by hand.
+
+Finally, consider **not** working so late at night.
+Open source maintainers need to think about their long-term health too.
+
+This page collects conference talks and other public presentations around Fedora Reproducible Builds.
+
+- "https://www.youtube.com/watch?v=nJHh-VJnGt8[Reproducible builds in Fedora]" (Zbigniew Jędrzejewski-Szmek, Davide Cavalca) at https://cfp.fedoraproject.org/flock-2024/talk/SKWEXP/[Flock to Fedora 2024]
+- "https://www.youtube.com/watch?v=5c4gfXVPAbU[Making Fedora Linux (more) reproducible]" (Davide Cavalca) at https://www.socallinuxexpo.org/scale/21x/presentations/making-fedora-linux-more-reproducible[SCALE 21x]
+- "Reproducible builds in Fedora" (Zbigniew Jędrzejewski-Szmek, not recorded) at https://jesien.org/2024/[Jesień Linuksowa 2024]
+- "https://fosdem.org/2025/schedule/event/fosdem-2025-4072-rewriting-pyc-files-for-fun-and-reproducibility/[Rewriting pyc files for fun and reproducibility] (Zbigniew Jędrzejewski-Szmek)" at https://fosdem.org/2025/[FOSDEM 2025]

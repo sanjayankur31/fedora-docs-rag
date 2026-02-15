@@ -1,0 +1,2183 @@
+* User Documentation
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+This guide demonstrates how to leverage the special `.profile` repository feature in https://forge.fedoraproject.org[Fedora Forge] to display a custom Markdown-based front page directly on your organization's main profile page. This allows for a richer and more informative landing experience for your organization.
+
+This guide applies to all Fedora Project contributors who are administrators or maintainers of an organization on Fedora Forge.
+
+
+* An existing organization on Fedora Forge.
+* Push access (e.g., maintainer, owner) to the organization on Fedora Forge.
+* Basic familiarity with Git and Markdown.
+
+
+
+
+* Log in to your Fedora Forge account.
+* Navigate to the specific organization for which you want to create a custom front page. You can do this by clicking your profile icon (top-right), selecting "Your Organizations," and then clicking on the desired organization.
+
+
+* Once on your organization's main page, locate and click the *"New Repository"* button (usually near the top right, or within the "Repositories" tab).
+* In the "New Repository" form:
+** *Owner:* Ensure your organization's name is selected.
+** *Repository Name:* *Crucially, name this repository exactly `.profile`* (with the leading dot). This specific name is recognized by Fedora Forge (Gitea/Forgejo) to display its README content as the organization's front page.
+** *Description:* Leave this field empty to avoid the repository appearing in the public repository listings by default (https://forge.fedoraproject.org/explore/repos).
+** *Visibility:* It is highly recommended to set this to *"Public"* if you want everyone to see your custom front page. If it's private, only organization members with access will see it.
+** *Initialize this repository with a README:* *Check this box.* This will create an initial `README.md` file, which you will customize.
+* Click the *"Create Repository"* button.
+
+
+Clone the `.profile` repository using the following command (replace `your-org` with your organization's name):
+
+[source,bash]
+----
+git clone https://forge.fedoraproject.org/your-org/.profile.git
+----
+
+Replace `your-org` with the actual name of your organization on Fedora Forge. For example, if your organization is named `fedora-docs`, the command would be:
+`git clone https://forge.fedoraproject.org/fedora-docs/.profile.git`
+
+
+
+*Example `README.md` content:*
+
+[,markdown]
+----
+# Welcome to the [Your Organization Name]!
+
+We are the official Fedora **[Your Organization Name]** organization on Fedora Forge.
+
+---
+
+## Our Mission
+[Briefly describe your organization's mission or purpose.]
+
+## Key Projects
+* [Project A](https://forge.fedoraproject.org/org/your-org/repo-a) - Description of Project A.
+* [Project B](https://forge.fedoraproject.org/org/your-org/repo-b) - Description of Project B.
+
+## Get Involved!
+* **Discussions:** Join our [Mailing List](https://lists.fedoraproject.org/archives/list/your-list@lists.fedoraproject.org/)
+* **Chat:** Find us on IRC/Matrix: `#your-channel`
+* **Website:** Visit our [Official Website](https://your-org-website.org)
+----
+
+
+Inside your local `.profile` repository directory, run the following commands to stage, commit, and push your `README.md` file:
+
+[source,bash]
+----
+# Add the file to the staging area
+git add README.md
+
+# Commit the changes
+git commit -m "Add custom organization profile"
+
+# Push the commit to the remote repository
+git push origin main
+----
+
+Once the push is complete, visit your organization's page on Fedora Forge. The content of your `README.md` will now be displayed as the main page.
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the standardized process for Fedora Project contributors
+to formally request the creation of a new organization within Fedora Forge, or
+the addition of new teams to an existing organization. By following this
+procedure, users can ensure their requests are complete, contain all necessary
+configuration details, and can be processed efficiently by the Fedora Forge
+team.
+
+
+This Standard Operating Procedure (SOP) applies to all Fedora Project
+contributors who require a new organization for their project, Special Interest
+Group (SIG), or working group, or who need to establish new teams within an
+existing Fedora Forge organization to manage permissions and user access.
+
+
+Before submitting a request, please ensure you have the following information
+ready:
+
+*   **Clear Justification:** A clear understanding of why a new organization or
+team is needed.
+*   **Existing Fedora Accounts Group(s):** Identify the specific
+Fedora Accounts group(s) whose members will be mapped to the `Owners` team of a new
+organization, and/or to any new teams you are requesting. Ensure these Fedora Accounts
+groups exist and contain the correct members.
+*   **All Required Details:** Gather all the specific information outlined in
+the "Procedure" section below for your request type (new organization, new
+team, or both).
+
+
+All requests for new organizations and/or teams in Fedora Forge must be
+submitted by filing a ticket in the https://forge.fedoraproject.org/forge/forge/issues[**Fedora Forge issue tracker**].
+
+When creating your ticket, provide all the relevant details as specified below.
+The more complete and accurate your request, the faster it can be processed.
+
+
+If you are requesting a *new organization*, include the following information in
+your ticket:
+
+This will be the short URL component for your organization (e.g., `forge.fedoraproject.org/infra`). It should be unique, lowercase, and typically hyphen-separated.
+
+====
+`infra`
+====
+
+This is the human-readable, full name of your organization that will appear in the UI.
+
+====
+`Fedora Infrastructure Team`
+====
+
+A brief description of your organization's purpose or mission.
+
+====
+`This organization will host repositories and manage collaboration
+for the Fedora Infrastructure Team, focusing on infrastructure
+automation and tooling.`
+====
+
+An optional URL to a website for your organization.
+
+====
+`https://fedoraproject.org/wiki/Infrastructure`
+====
+
+An optional link to an image file for your organization's avatar/logo. You can also state that you will provide one later.
+
+====
+`https://fedoraproject.org/wiki/Infrastructure/logo.png`
+====
+
+Specify the existing Fedora Accounts group whose members will automatically become the `Owners` of this new organization. The "Owners" team is a special, immutable team with full administrative control over the organization.
+
+====
+`forge-infra-owners`
+====
+
+[IMPORTANT]
+====
+This Fedora Accounts group must already exist.
+====
+
+
+If you are requesting *new teams* (either within a new organization you're
+requesting, or an existing one), include the following information for *each*
+team:
+
+*   **Target Organization Name:**
+
+====
+`infra` (if part of a new org request) or
+`existing-fedora-org` (if adding to an existing org).
+====
+
+*   **Team Name:**
+
+====
+`members`
+====
+
+*   **Description of Team's Purpose (Optional):**
+
+====
+`Team for core developers working on the main project
+repositories.`
+====
+
+*   **Desired Permission Level in Forgejo:**
+
+====
+Choose one of: `Read`, `Write`, `Admin`.
+====
+
+[NOTE]
+====
+`Owner` is reserved for the organization's primary owners team.
+====
+
+*   **Fedora Accounts Group to Map to Team:**
+
+====
+**This is critical.** Specify the existing Fedora Accounts group
+whose members will automatically be added to this new team in Forgejo.
+
+`forge-infra-members` (ensure this Fedora Accounts group already exists).
+====
+
+*   **Include all repositories? (Yes/No):**
+
+====
+Indicate if this team should have the specified permission level on *all*
+current and future repositories within the organization.
+====
+
+[WARNING]
+====
+If your organization contains **private repositories**, selecting
+"Yes" will grant the chosen permission level to **all private repositories**
+within the organization as well. Ensure this aligns with your security
+requirements.
+
+If "No," you will need to manually request repository assignments later (or
+specify them in the ticket if known).
+====
+
+
+You can copy and paste the following template into your `fedora-infra` ticket,
+filling in the bracketed information.
+
+[source,text]
+----
+Subject: [Forgejo] New Organization and Teams Request: Fedora Infrastructure Team
+----
+
+Body:
+[source,text]
+----
+Hello Fedora Infra Team,
+
+I would like to request the creation of a new organization and associated
+teams in Fedora Forge.
+
+1. New Organization Details:
+
+Desired Organization Name (Short Name): infra
+
+Full Name of Organization: Fedora Infrastructure Team
+
+Description of Organization's Purpose: This organization will host repositories
+and manage collaboration for the Fedora Infrastructure Team, focusing on
+infrastructure automation and tooling.
+
+Website URL (Optional): https://fedoraproject.org/wiki/Infrastructure
+
+Avatar/Logo (Optional): (Will provide a link to an image file later / No avatar
+at this time)
+
+Fedora Accounts Group for Organization Owners: forge-infra-owners
+
+2. New Team Details (within 'infra' organization):
+
+Team 1:
+
+Target Organization Name: infra
+
+Team Name: members
+
+Description of Team's Purpose: Core team responsible for code contributions and
+repository management.
+
+Desired Permission Level in Forgejo: Write
+
+Fedora Accounts Group to Map to Team: forge-infra-members
+
+Include all repositories?: Yes (This team should have write access to all
+current and future repositories in 'infra'.)
+
+Please let me know if any further information is required.
+
+Thank you,
+
+[Your Name/Fedora Account]
+----
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document establishes the standard naming conventions for Fedora Accounts groups, Fedora Forge organizations, and team names used in Fedora Forge. Consistent naming helps administrators create appropriately named groups and organizations, and helps contributors understand what access different groups provide.
+
+
+
+Fedora Forge organizations should use short, descriptive names without the "fedora-" prefix. Since Fedora Forge only contains Fedora-related projects, the "fedora-" prefix would be redundant. Similarly, avoid using suffixes like "-sig" in organization names - use the core descriptive name instead.
+
+**Examples**:
+
+* `docs` (not `fedora-docs`)
+* `releng` (not `fedora-releng`)
+* `websites` (not `fedora-websites`)
+* `rust` (not `rust-sig`)
+* `python` (not `python-sig`)
+
+
+**Primary Pattern**: `forge-<organization>-<team>`
+
+**Format**: `forge-<organization-name>-<team-name>`
+
+**Components**:
+
+* **Prefix**: `forge-` (required for all Fedora Forge-specific groups)
+* **Organization Name**: The name of the Fedora Forge organization (lowercase, hyphenated, without "fedora-" prefix)
+* **Team**: The team name within the organization. This suffix should typically match the team name as it appears in the Forgejo organization (in Forgejo vernacular, this is what defines the group's purpose and permissions)
+
+[NOTE]
+====
+For cases where the standard naming pattern may not apply, see <<Exception Cases>> below.
+====
+
+
+Teams within Forgejo organizations should use descriptive names that clearly indicate their purpose and scope. Team names should be lowercase and use hyphens for word separation.
+
+
+[cols="1,2,2"]
+|===
+|Team |Purpose |Forgejo Permissions
+
+|`owners`
+|Organization administrators (**required by Forgejo software**)
+|Full organization management, repository creation, team management
+|===
+
+
+While `owners` is the only mandatory team, organizations typically also create:
+
+[cols="1,2,2"]
+|===
+|Team |Purpose |Forgejo Permissions
+
+|`members`
+|Standard contributors
+|Repository access based on team assignments
+|===
+
+
+Organizations can create teams with descriptive names to match their workflow needs. Organization administrators can configure specific permissions and repository access for each team.
+
+**Examples of custom team names**:
+
+* Documentation teams: `quick-docs-writers`, `guide-writers`, `release-notes-writers`
+* Development teams: `maintainers`, `reviewers`, `testers`
+* Special purpose teams: `security-team`, `localization`, `packagers`
+
+[IMPORTANT]
+====
+Organization administrators have full control over team permissions in Forgejo, including:
+
+* Repository read/write access per team
+* Issue and pull request permissions
+* Wiki and other feature access
+* Custom permission combinations for specialized workflows
+====
+
+
+
+[cols="1,1,1"]
+|===
+|Fedora Accounts Group |Forgejo Organization |Team
+
+|`forge-council-owners`
+|`council`
+|`owners`
+
+|`council`
+|`council`
+|`members`
+|===
+
+[NOTE]
+====
+This is an exception case where the existing `council` Fedora Accounts group is reused for the Members team instead of following the standard `forge-<org-name>-members` pattern. See <<Exception Cases>> for details.
+====
+
+
+[cols="1,1,1"]
+|===
+|Fedora Accounts Group |Forgejo Organization |Team
+
+|`forge-releng-owners`
+|`releng`
+|`owners`
+
+|`forge-releng-members`
+|`releng`
+|`members`
+|===
+
+
+[cols="1,1,1"]
+|===
+|Fedora Accounts Group |Forgejo Organization |Team
+
+|`forge-docs-owners`
+|`docs`
+|`owners`
+
+|`forge-docs-members`
+|`docs`
+|`members`
+
+|`forge-docs-quick-docs-writers`
+|`docs`
+|`quick-docs-writers`
+
+|`forge-docs-guide-writers`
+|`docs`
+|`guide-writers`
+
+|`forge-docs-release-notes-writers`
+|`docs`
+|`release-notes-writers`
+|===
+
+
+
+. **Prefix**: All groups MUST start with `forge-`
+. **Organization Name**: Must match the Fedora Forge organization name exactly (lowercase, without "fedora-" prefix)
+. **Team Suffix**: Must include at minimum an `owners` team (Forgejo requirement). Additional teams can use any descriptive name that follows formatting guidelines and should typically match the team name as it appears in the Forgejo organization.
+
+
+. **Lowercase Only**: All group names must be lowercase
+. **Hyphen Separation**: Use hyphens (`-`) to separate components
+. **No Underscores**: Do not use underscores (`_`) in group names
+. **No Spaces**: Group names cannot contain spaces
+
+
+
+When requesting a new organization, the **owners** team is mandatory (Forgejo software requirement). This typically requires creating a corresponding Fedora Accounts group:
+
+* `forge-<org-name>-owners` (**required** Fedora Accounts group for organization administration)
+
+Additional recommended Fedora Accounts groups:
+
+* `forge-<org-name>-members` (recommended for general team membership)
+
+Optional custom Fedora Accounts groups based on organizational needs:
+
+* `forge-<org-name>-<descriptive-team-name>` (custom groups for teams with specific purposes)
+
+[NOTE]
+====
+Organization administrators can create additional teams after the organization is established and configure specific permissions for each team through the Forgejo interface.
+====
+
+
+* **Owners Group**: Must include organization administrators and project leads (corresponds to mandatory owners team)
+* **Members Group**: Should include all contributors who need basic repository access (common pattern)
+* **Custom Groups**: Should have clear purposes and appropriate members based on their specialized team function
+* **Nested Membership**: Consider having owners as members of broader groups when appropriate for workflow
+
+
+
+In some cases, existing Fedora Accounts groups may be reused instead of creating new forge-specific groups:
+
+**When to Reuse**:
+
+* The existing group perfectly matches the intended purpose
+* The group is already widely used by the team
+* Administrative overhead reduction is beneficial
+
+**Examples of Acceptable Reuse**:
+
+* `council` instead of `forge-council-members` (for Fedora Council)
+* `releng` instead of `forge-releng-members` (for existing Release Engineering team)
+
+
+
+* xref:creating_a_new_org.adoc[Creating a New Organization]
+* xref:creating_a_new_team.adoc[Creating a New Team]
+* xref:requesting_new_org_or_team.adoc[Requesting New Organizations/Teams]
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document explains the relationship between Organizations and Teams in Fedora Forge, and how they map to concepts from Pagure.io. Understanding this mapping is crucial for teams migrating from Pagure.io to Fedora Forge.
+
+
+
+**Organizations** are the top-level containers that group related repositories together - they represent the "namespace" or "group" concept from Pagure.io. Organizations themselves don't have permissions - they're just containers. Examples would be `rust`, `infrastructure`, or `council`.
+
+**Teams** are permission groups within an Organization that define who can do what. They control access to repositories within an Organization and have specific permission levels (Read, Write, Admin, Owner). Examples would be `owners`, `contributors`, or `members`.
+
+Think of it this way: **Organization** = The "SIG" or "team" or "subproject", and **Team** = The "roles" within that SIG/team/subproject.
+
+You need both because Organizations provide the namespace structure (like Pagure.io namespaces) while Teams provide the permission management (like Pagure.io group permissions).
+
+
+
+Based on a typical Rust organization migration, here's how the mapping would work:
+
+
+* FAS Group: `rust-sig`
+* Pagure Group: `fedora-rust`
+* Pagure Namespace: `fedora-rust/*`
+* Permissions: `fedora-rust` group has admin access to most projects
+
+
+* **Organization**: `rust`
+* **Team 1**: `owners` – maps to FAS group `forge-rust-owners` with Owner permissions
+* **Team 2**: `members` – maps to FAS group `forge-rust-members` with Write permissions
+* **Repositories**: All migrated `fedora-rust/*` projects under `rust` organization
+
+[NOTE]
+====
+The `forge-` convention is used for new FAS groups, but existing FAS groups can be reused when appropriate. See the <<Exception Cases>> section in xref:fas_group_naming_standards.adoc[FAS Group Naming Standards] for details.
+====
+
+
+For most Pagure.io migrations, the pattern follows:
+
+* FAS Group: `<team-name>`
+* Pagure Group: `fedora-<team-name>`
+* Pagure Namespace: `fedora-<team-name>/*`
+
+* **Organization**: `<team-name>` (without `fedora-` prefix)
+* **Team 1**: `owners` – maps to FAS group `forge-<team-name>-owners` with Owner permissions
+* **Team 2**: `members` – maps to FAS group `<team-name>` with Write permissions
+* **Repositories**: All migrated projects under `<team-name>` organization
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document explains how team membership is managed on Fedora Forge through Fedora Accounts (FAS) groups, and why we don't use Forgejo's built-in team management interface. Understanding this system is crucial for administrators and team members who need to manage team membership and access to repositories and organizations.
+
+
+
+Team membership on Fedora Forge is managed exclusively through Fedora Accounts groups. This means:
+
+* **No Direct UI Management**: You cannot add or remove team members directly through the Forgejo web interface
+* **FAS Group Control**: All team membership changes must be made in the corresponding Fedora Accounts group
+* **Automatic Synchronization**: Changes to FAS group membership are automatically reflected in Forgejo team permissions. Users may need to log out and log back into Fedora Forge to see the changes take effect.
+
+
+
+[IMPORTANT]
+====
+After making changes to FAS group membership, users may need to log out and log back into Fedora Forge to see the changes take effect. The synchronization happens automatically, but the user's session may need to be refreshed to reflect the new team membership.
+====
+
+
+To add someone to a team:
+
+. Log into `accounts.fedoraproject.org`
+. Navigate to the appropriate FAS group (e.g., `forge-rust-members`)
+. Add the user to the group
+. The user will automatically gain access to the corresponding Forgejo team
+
+
+To remove someone from a team:
+
+. Log into `accounts.fedoraproject.org`
+. Navigate to the appropriate FAS group
+. Remove the user from the group
+. The user will automatically lose access to the corresponding Forgejo team
+
+
+To change someone's team membership:
+
+. Remove them from their current FAS group
+. Add them to the FAS group corresponding to the new team
+. The change will be reflected automatically in Forgejo
+
+
+* xref:fas_group_naming_standards.adoc[FAS Group Naming Standards]
+* xref:organizations_and_teams_mapping.adoc[Organizations and Teams Mapping]
+* xref:creating_a_new_team.adoc[Creating a New Team]
+* xref:requesting_new_org_or_team.adoc[Requesting New Organizations/Teams]
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document provides a step-by-step guide on how to clone a repository from
+the Fedora Forge instance using HTTPS authentication. This method is
+recommended as SSH cloning is currently not supported. It will also cover how
+to use Access Tokens for authentication, which is the secure and recommended
+practice for automated or repeated access.
+
+
+This guide is intended for all Fedora Project contributors and users who need
+to clone repositories from Fedora Forge to their local machine for
+development, contribution, or viewing.
+
+
+Before you begin, ensure you have the following:
+
+* *Git Installed:* You must have Git installed on your local machine.
+
+* *Fedora Forge Account:* An active user account on the Fedora Forge instance.
+If you have note done so yet, log into Fedora Forge once, authenticating via
+OpenIDC on Fedora Accounts, to establish your user account on Fedora Forge.
+
+* *Access Token:* For secure and convenient authentication, it is highly
+recommended to generate and use an Access Token instead of relying on your
+Fedora Account credentials directly for Git operations. See the section
+below on "Generating an Access Token."
+
+
+Using an Access Token is the recommended way to authenticate with Git over
+HTTPS.
+
+CAUTION: Remember, you will use your Access Token for Git authentication, not
+your Fedora Account password.
+
+[TIP]
+====
+You can navigate directly to
+https://forge.fedoraproject.org/user/settings/applications and create an access
+token with `+repository+` read/write access instead of clicking through the Web UI.
+====
+
+. Go to `https://forge.fedoraproject.org/` and log in using your Fedora Account.
+
+. Click on your *profile picture/icon* in the top-right corner.
+. Select *"Settings"* from the dropdown menu.
+
+. In the left-hand navigation sidebar, click on *"Applications"*.
+
+. Under the "Access Tokens" section, click the *"Generate Token"* button.
+. *Token Name:* Give your token a descriptive name (e.g., `my-laptop-git`).
+. *Token Permissions:* Select the permissions you want to grant to this
+token. For general cloning and pushing, you will typically just need: Read
+and Write on Repository.
+. Click the *"Generate Token"* button.
+
+. Your new Access Token will be displayed. *Copy this token immediately and store it securely.* You will not be able to see it again once you leave this page. Treat it like a password.
+
+
+Follow these steps to clone a repository using HTTPS:
+
+
+. Navigate to the repository you wish to clone on the Fedora Forge instance
+(e.g., `https://forge.fedoraproject.org/<org>/<repo_name>`).
+
+. On the repository's main page, locate the blue *"HTTPS"* button (or similar
+clone button).
+
+. Copy the provided HTTPS URL to your clipboard. It will typically look
+something like: `https://forge.fedoraproject.org/<org>/<repo_name>.git`
+
+
+. Open your terminal or command prompt.
+
+. Navigate to the directory where you want to clone the repository.
+
+. Use the `git clone` command followed by the copied HTTPS URL:
++
+----
+git clone https://forge.fedoraproject.org/<org>/<repo_name>.git
+----
++
+*Replace `https://forge.fedoraproject.org/<org>/<repo_name>.git` with the
+actual URL you copied.*
+
+. When you try to push changes back to this repository, you will prompted for a
+username and password:
++
+* *Username:* Enter your Fedora Accounts username (the same one you use to log in
+to the web interface).
++
+* *Password:* Enter your Fedora Forge Access Token.
++
+CAUTION: This is not the same as your Fedora Account password (which is not used for
+Git authentication).
+
+----
+Username for 'https://forge.fedoraproject.org': your_username
+Password for 'https://your_username@forge.fedoraproject.org': <paste_your_access_token_here>
+----
+
+
+
+To avoid entering your Access Token every time you interact with the
+repository, you can use a Git credential helper:
+
+
+The simplest option stores your credentials in a plain-text file:
+
+----
+git config --global credential.helper store
+----
+
+The first time you clone or push, you'll be prompted for your username and
+Password (Access Token). Git will then store it in a plain-text file (`~/.git-credentials`).
+
+CAUTION: This method stores your Access Token in plain text on disk, which may
+be a security concern on shared or less secure systems.
+
+
+For a more secure approach, you can use `git-credential-libsecret`, which stores
+your credentials in your desktop environment's secure keyring (such as GNOME
+Keyring or KDE Wallet).
+
+First, install the credential helper:
+
+----
+sudo dnf install git-credential-libsecret
+----
+
+Then configure Git to use it:
+
+----
+git config --global credential.helper libsecret
+----
+
+During your next Git operation, a dialog will appear asking for your username
+and password. Enter your Fedora Accounts username and your Fedora Forge Access
+Token as the password.
+
+CAUTION: Do not use your Fedora Account (FAS) password. Use the Access Token
+you generated in Fedora Forge.
+
+libsecret will then securely store your credentials in the GNOME Keyring, KDE
+Wallet, or whichever secret storage system your desktop environment uses.
+
+[NOTE]
+====
+For more information about Git credential helpers and other available options,
+see the official Git documentation: https://git-scm.com/docs/gitcredentials
+====
+
+
+* *"Authentication failed" error:*
+** Double-check your username.
+** Ensure you are using the correct Access Token, not your Fedora Account
+password.
+** Verify the Access Token has the necessary `read:repository` and
+`write:repository` permissions.
+** If you've recently changed your Access Token, ensure your credential helper
+(if used) has been updated. You might need to clear cached credentials.
+
+* *"Repository not found" error:*
+** Verify the repository URL is correct and that you have access to the
+repository.
+
+* *SSH Not Supported:* Remember that Fedora Forge currently does *not* support
+cloning via SSH. Always use the HTTPS URL.
+
+* *Token Security:* Keep your Access Tokens secure. If you suspect a token has
+been compromised, revoke it immediately from your Fedora Forge
+"Applications" settings.
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document provides guidance on how to enable and configure email notifications in Fedora Forge. Email notifications help you stay informed about activities in repositories and organizations you're interested in.
+
+
+This guide is intended for all Fedora Project contributors and users who want to receive email notifications about repository activities, issues, pull requests, and other events on Fedora Forge.
+
+
+[IMPORTANT]
+====
+Email notifications are **disabled by default** for all users on Fedora Forge. You must explicitly enable them in your user settings if you wish to receive email notifications.
+====
+
+Even if you watch repositories or are a member of an organization, you will not receive any email notifications unless you first enable them in your account settings.
+
+
+To enable email notifications for your Fedora Forge account:
+
+. Log into link:https://forge.fedoraproject.org/[Fedora Forge] using your Fedora Account.
+
+. Click on your *profile picture/icon* in the top-right corner.
+
+. Select *"Settings"* from the dropdown menu.
+
+. In the left-hand navigation sidebar, click on *"Account"*.
+
+. Scroll down to the *"Manage email addresses"* section.
+
+. Next to the "Set Email Preference" Button, there is a dropdown. Choose your email preference, and save the changes with the "Set email preference" button. The options are:
+* Enable email notifications
+* And your own notifications
+* Only email on mention
+* Disable email notifications
+
+[NOTE]
+====
+After enabling email notifications, you will start receiving emails based on your watching preferences.
+====
+
+
+Once email notifications are enabled, Fedora Forge will send you emails based on what repositories and activities you're watching. There are several levels of watching:
+
+
+You can watch specific repositories to receive notifications about activities in those repositories:
+
+. Navigate to the repository you want to watch.
+
+. Click the *"Watch"* button in the upper right corner of the repository page.
+
+
+
+You can control when and how you receive email notifications:
+
+
+
+If you're receiving notifications for a specific issue or pull request that you no longer want to follow:
+
+. Navigate to the issue or pull request page
+
+. Click the *"Unsubscribe"* button in the sidebar (if you're currently subscribed)
+
+This will stop notifications for that specific thread without affecting your other watching preferences.
+
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document provides a comprehensive guide for setting up automated Matrix notifications for your Fedora Forge repository using the custom nonbot webhook. This allows you to receive real-time notifications about repository activities directly in your Matrix chat rooms.
+
+
+This guide is intended for Fedora Project contributors and repository owners who want to configure automated Matrix notifications for:
+
+* Issue creation, updates, and closures
+* Pull request events (opened, merged, closed, reviewed)
+* Push events and commits
+* Release notifications
+* Repository events (forks, stars)
+
+
+
+Before setting up Matrix notifications, you need:
+
+* *Repository Access:* You must have admin or owner permissions on the repository
+* *Matrix Room:* A Matrix room where you want to receive notifications
+* *Nonbot in your Matrix room* the nonbot user needs to be a member of your matrix room. File a ticket on link:https://pagure.io/fedora-infrastructure/issues[fedora infra] to get an admin to add nonbot to your room.
+* *Room ID:* The internal room ID for your Matrix room (see <<obtaining-room-id,Obtaining Your Room ID>>)
+
+[[obtaining-room-id]]
+
+To configure the webhook, you need your Matrix room's internal ID.
+
+. Open your Matrix room in link:https://app.element.io/[Element]
+. Click the room name at the top to open *Room Settings*
+. Navigate to *Settings* → *Advanced*
+. Look for *Internal room ID* (it will look like `!BZXFjVQIigxSjizirN:fedora.im`)
+. Copy the entire room ID including the `!` and `:fedora.im`
+
+
+
+
+. Log into link:https://forge.fedoraproject.org/[Fedora Forge] using your Fedora Account
+. Navigate to your repository
+. Click on *Settings* in the repository navigation menu
+. In the left sidebar, click on *Webhooks*
+. Click the *Add Webhook* button
+. Select *Nonbot* from the webhook type dropdown
+
+
+On the webhook configuration page, you'll need to provide:
+
+
+Enter your Matrix room ID in the *Target URL* field:
+
+[source]
+----
+!abc123xyz:fedora.im
+----
+
+
+Choose the Matrix message type for notifications:
+
+* *Notice (m.notice)*: Recommended for automated messages. These messages typically won't trigger notification sounds or badges in Matrix clients.
+* *Text (m.text)*: Regular text messages that will trigger normal notifications. Use this if you want notifications to be more prominent.
+
+
+Choose which repository events should trigger Matrix notifications.
+
+
+. Review your webhook configuration
+. Click *Add Webhook* to save the configuration
+. The webhook will appear in your webhooks list with a green checkmark if configured correctly
+
+
+To verify the webhook is working:
+
+. Click on the webhook in the webhooks list
+. Scroll to the *Recent Deliveries* section
+. Click *Test Delivery* button
+. Click *Test*
+. Check your Matrix room for a test notification
+
+[NOTE]
+====
+If the test delivery shows a green checkmark, your webhook is configured correctly. If you see a red X, check the delivery details for error information.
+====
+
+Issue and Pull Request templates help standardize the information contributors provide when creating issues or submitting pull requests. Templates guide users to include relevant details, making it easier for maintainers to understand and respond to contributions.
+
+
+Templates in Forgejo are markdown files that provide a structured format for:
+
+* **Issue templates** - Guide users to provide complete bug reports, feature requests, or other issue types
+* **Pull request templates** - Help contributors describe their changes and provide context for reviewers
+
+When users create a new issue or pull request, they can select from available templates or use a default template if one is configured.
+
+
+Issue templates are stored in your repository's `.forgejo/issue_template/` directory.
+
+
+Create a file like `.forgejo/issue_template/bug_report.md`:
+
+[source,markdown]
+----
+---
+name: Bug Report
+about: Report a bug or unexpected behavior
+title: "[BUG] "
+labels: ["bug"]
+assignees: []
+---
+
+## Bug Description
+A clear and concise description of what the bug is.
+
+## Steps to Reproduce
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+## Expected Behavior
+A clear and concise description of what you expected to happen.
+
+## Actual Behavior
+A clear and concise description of what actually happened.
+
+## Environment
+- OS: [e.g. Fedora 38]
+- Browser: [e.g. Firefox 115]
+- Version: [e.g. 1.0.0]
+
+## Additional Context
+Add any other context about the problem here, such as screenshots or logs.
+----
+
+
+The YAML front matter at the top of templates supports these fields:
+
+[cols="1,3"]
+|===
+|Field |Description
+
+|`name`
+|Display name for the template in the template selector
+
+|`about`
+|Brief description of when to use this template
+
+|`title`
+|Default title prefix for issues created with this template
+
+|`labels`
+|Array of labels to automatically apply to new issues
+
+|`assignees`
+|Array of usernames to automatically assign to new issues
+
+|`ref`
+|Default branch reference for the issue
+|===
+
+
+You can create multiple templates for different issue types:
+
+* `.forgejo/issue_template/bug_report.md` - For bug reports
+* `.forgejo/issue_template/feature_request.md` - For feature requests
+* `.forgejo/issue_template/question.md` - For questions or support requests
+
+
+[source,markdown]
+----
+---
+name: Feature Request
+about: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: []
+---
+
+## Feature Summary
+A clear and concise description of the feature you'd like to see.
+
+## Problem Statement
+What problem does this feature solve? What use case does it address?
+
+## Proposed Solution
+Describe your preferred solution or approach.
+
+## Alternatives Considered
+Describe any alternative solutions or features you've considered.
+
+## Additional Context
+Add any other context, mockups, or examples about the feature request.
+----
+
+
+Pull request templates work differently from issue templates. While you can create multiple issue templates with a chooser interface, pull request templates are simpler - you can only have one template per repository, and it automatically appears as the default content when creating any new pull request.
+
+Pull request templates are stored as a single file: `.forgejo/pull_request_template.md`.
+
+NOTE: Unlike issue templates, pull request templates do not support YAML front matter. Any YAML front matter will be displayed as plain text in the pull request body.
+
+
+[source,markdown]
+----
+## Description
+Brief description of the changes in this pull request.
+
+## Type of Change
+Please delete options that are not relevant:
+- [ ] Bug fix (non-breaking change which fixes an issue)
+- [ ] New feature (non-breaking change which adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+
+## Related Issues
+Fixes #(issue number)
+Relates to #(issue number)
+
+## Testing
+Describe the tests you ran to verify your changes:
+- [ ] Test A
+- [ ] Test B
+
+## Checklist
+- [ ] My code follows the project's style guidelines
+- [ ] I have performed a self-review of my own code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes generate no new warnings
+- [ ] I have added tests that prove my fix is effective or that my feature works
+- [ ] New and existing unit tests pass locally with my changes
+
+## Screenshots (if applicable)
+Add screenshots to help explain your changes.
+----
+
+
+
+You can create a `.forgejo/issue_template/config.yml` file to control the issue creation experience and provide alternative support channels.
+
+
+The issue config file supports two main settings:
+
+**`blank_issues_enabled`** (boolean, default: `true`)::
+Controls whether users can create issues without using a template.
+
+**`contact_links`** (array)::
+Provides alternative ways to get help instead of creating an issue.
+
+
+**When `blank_issues_enabled: true` (default):**
+* Users can create "blank" issues without using any template
+* The issue template chooser shows a "Get Started" button for blank issues
+* Users have the option to skip all templates
+
+**When `blank_issues_enabled: false`:**
+* Users **cannot** create blank issues
+* They **must** choose from available issue templates
+* Direct access to `/issues/new` redirects to `/issues/new/choose`
+* Forces structured issue creation
+
+[source,yaml]
+----
+blank_issues_enabled: false
+----
+
+
+Contact links appear on the issue template chooser page and provide alternative ways to get help:
+
+[source,yaml]
+----
+contact_links:
+- name: Community Support
+url: https://discussion.fedoraproject.org
+about: Ask questions and get help from the community
+- name: Security Issues
+url: mailto:security@fedoraproject.org
+about: Report security vulnerabilities privately
+- name: Documentation
+url: https://docs.fedoraproject.org/en-US/forge-documentation/
+about: Check the documentation for common questions
+----
+
+Each contact link creates a card on the issue chooser page with:
+
+* **Name** - Bold title for the contact option
+* **About** - Description of when to use this option
+* **External link button** - Opens the URL in a new tab/window
+
+
+[source,yaml]
+----
+# Disable blank issues to force template usage
+blank_issues_enabled: false
+
+# Provide alternative support channels
+contact_links:
+- name: User Support Forum
+url: https://discussion.fedoraproject.org
+about: Get help from the community instead of filing a bug
+- name: Security Team
+url: mailto:security@fedoraproject.org
+about: Report security vulnerabilities privately
+- name: Feature Discussions
+url: https://discussion.fedoraproject.org/tag/fedora-forge
+about: Discuss new features before creating requests
+----
+
+
+Place the config file at:
+
+`.forgejo/issue_template/config.yml`
+
+
+Forgejo also supports form-based issue templates using YAML syntax for more structured input. For complete documentation on form-based templates, see the https://forgejo.org/docs/latest/user/issue-pull-request-templates/#yaml-issue-templates[official Forgejo YAML templates documentation].
+
+
+
+* https://forgejo.org/docs/latest/user/issue-pull-request-templates/[Forgejo Issue and Pull Request Templates Documentation]
+* https://discussion.fedoraproject.org/tag/fedora-forge[Fedora Forge Discussion]
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document provides an overview of migrating repositories from Pagure to Fedora Forge, with links to specific migration procedures based on your repository's content and requirements.
+
+
+This overview applies to Fedora Project contributors who need to migrate repositories from the legacy Pagure service to the new Fedora Forge platform. This includes subprojects, Special Interest Groups (SIGs), and other official Fedora Project repositories.
+
+[WARNING]
+====
+As the Forgejo-based Fedora Forge houses only those repositories that are
+instrumental in the development, testing, maintenance and operating of the
+Fedora Project's offering of Fedora Linux, please use this for those
+repositories only -- and not for any other personal repositories.
+====
+
+[NOTE]
+====
+We recommend migrating your other personal repositories present on Pagure over
+to Codeberg, which is also based on Forgejo and supports native migration of
+repository contents, issue tickets and pull requests from Pagure using the
+instructions provided here -- with some minor changes here and there.
+====
+
+
+Choose the appropriate migration procedure based on your repository's content:
+
+
+Use this procedure for repositories that contain only public content (code, public issues, pull requests).
+
+* **When to use:** Repository has no private or restricted issue tickets
+* **Result:** Single public repository with all content migrated
+* **Documentation:** xref:migration/pagure_repository.adoc[How to Migrate Repository from Pagure]
+
+
+Use this procedure for repositories that contain private or restricted issue tickets that need to be kept confidential.
+
+* **When to use:** Repository contains private/restricted issue tickets
+* **Result:** Separate private repository containing only the private tickets
+* **Documentation:** xref:migration/pagure_private_tickets.adoc[How to Migrate Private Tickets from Pagure to a New Private Repository]
+
+[WARNING]
+====
+As Forgejo does not support the creation of privately restricted issue tickets
+within public repositories, repositories with private tickets require a separate
+private repository to maintain confidentiality.
+====
+
+
+Before starting any migration, ensure you have:
+
+* *Repository Access:* Access to the source repository on Pagure
+* *Organization Permissions:* Ability to create repositories in the target organization on Fedora Forge
+* *API Key:* (For private tickets only) A Pagure API key for accessing private content
+* *Private Repository Access:* (For private tickets) Permissions to create private repositories
+
+[IMPORTANT]
+====
+**API Key Usage:** API keys are only required for migrating private tickets. Do NOT use an API key for standard repository migration, as this will cause the migrator to import only private tickets instead of the full repository content. If you haven't set the repository to private, these private tickets will become publicly visible, potentially exposing confidential information.
+====
+
+
+1. **Identify your repository type:** Determine if your repository contains private tickets
+2. **Choose the appropriate procedure:** Follow the relevant migration guide above
+3. **Follow the step-by-step instructions:** Each guide provides detailed procedures
+4. **Verify the migration:** Ensure all content has been transferred correctly
+
+
+* xref:migration/github.adoc[How to Migrate Repository from GitHub]
+* xref:migration/gitlab.adoc[How to Migrate Repository from GitLab]
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:**
+This documentation is currently in draft form and may not be fully tested and correct.
+Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the steps required to migrate repositories from Pagure to Fedora Forge, ensuring proper transfer of repository contents, issue tickets, and pull requests to the new Forgejo-based platform.
+
+
+This procedure applies to Fedora Project contributors who need to migrate repositories from the legacy Pagure service to the new Fedora Forge platform.
+This includes subprojects, Special Interest Groups (SIGs), and other official Fedora Project repositories.
+
+
+* *Repository Access:*
+You must have access to the source repository on Pagure and the necessary privileges to create repositories in the target organization on Fedora Forge.
+* *Organization Permissions:*
+You must have the ability to create repositories under the target namespace in Fedora Forge.
+If you don't have these privileges, consult a member from the relevant subproject or SIG, or contact the Fedora Infrastructure team.
+
+[IMPORTANT]
+====
+**Do NOT create or use an API key for standard repository migration.**
+The API key is only needed for migrating private tickets.
+Using an API key in the standard migration will cause the migrator to import only private tickets instead of the full repository content.
+If you haven't set the repository to private, these private tickets will become publicly visible.
+====
+
+
+[NOTE]
+====
+We recommend migrating your other personal repositories present on Pagure over to Codeberg, which is also based on Forgejo and supports native migration of repository contents, issue tickets and pull requests from Pagure using the instructions provided here -- with some minor changes here and there.
+====
+
+
+The migration process involves two main steps: accessing the Fedora Forge migration tool and configuring the repository migration.
+
+
+. Log into Fedora Forge using your Fedora Account credentials and navigate to the destination organization where you want to create the migrated repository.
+. Click on the *New migration* button to begin the migration process.
+image:pagure_migration_new_migration_button.png[]
+. Click on the *Pagure* button at the bottom of the migration page.
+image:pagure_migration_select_pagure_source.png[]
+
+
+. Fill in the migration form with the information from your source repository:
+.. *Repository Name:* Enter the desired name for the migrated repository.
+.. *Clone URL:* Enter the Git clone URL from your Pagure repository.
+.. *Description:* Copy the repository description from Pagure (optional).
+.. *Visibility:* Set to public for publicly accessible content.
+.. **Leave the token field empty** - this is crucial for standard repository migration.
+image:pagure_migration_form_filled.png[]
++
+[WARNING]
+====
+**Do NOT enter an API key in the token field.**
+If you provide an API key here, the migrator will only import private tickets instead of the full repository content (code, public issues, pull requests, etc.).
+This will result in an incomplete migration.
+Additionally, if you haven't set the repository to private, these private tickets will become publicly visible, potentially exposing confidential information.
+====
+
+. Click on the *Migrate repository* button to start the migration.
+image:pagure_migration_start_migration_button.png[]
+. Wait for the migration to complete. This creates a repository with all publicly accessible data.
+image:pagure_migration_completion_success.png[]
+
+
+* Confirm that the migrated repository appears in the target organization on Fedora Forge.
+* Verify that all repository contents (code, branches, tags) have been successfully migrated.
+* Check that issue tickets and pull requests have been transferred correctly.
+* Test repository access permissions for team members.
+* Verify that the repository is accessible via Git clone operations.
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the steps required to migrate private/restricted issue tickets from a Pagure.io repository to a new private repository on Fedora Forge, ensuring the confidentiality of sensitive information while maintaining access control.
+
+
+This procedure applies to Fedora Project contributors who need to migrate repositories containing private or restricted issue tickets from Pagure.io to Fedora Forge. This is necessary because Forgejo does not support privately restricted issue tickets within public repositories.
+
+
+* *Repository Access:* You must have access to the source repository on Pagure.io
+and the necessary privileges to create repositories in the target organization
+on Fedora Forge.
+* *Organization Permissions:* You must have the ability to create repositories
+under the target namespace in Fedora Forge. If you don't have these
+privileges, consult a member from the relevant subproject or SIG, or contact
+the Fedora Infrastructure team.
+* *API Key:* You will need to create an API key in Pagure.io for the migration
+process.
+* *Private Repository Access:* You must have permissions to create private repositories in the target organization.
+
+
+[WARNING]
+====
+As Forgejo does not support the creation of privately restricted issue tickets
+at this time, migrating repositories having them requires creating a separate
+private repository to ensure the confidentiality of those issue tickets.
+====
+
+[NOTE]
+====
+This procedure assumes you have already migrated the main repository content
+using the standard migration process. This document focuses specifically on
+migrating private tickets to a separate private repository.
+====
+
+
+The private ticket migration process involves four main steps: creating a Pagure.io API key, accessing the Fedora Forge migration tool, configuring the private repository migration, and setting up proper access controls.
+
+
+. Log into Pagure.io and navigate to the source repository containing private tickets, taking note of the repository URL for later reference.
+. Click on your portrait in the top-right corner and navigate to user settings.
+image:migration_pagure_02.png[]
+. In the API Keys section, click on the *Create new API key* button.
+image:migration_pagure_04.png[]
+. Fill in the "Create a new token" form with the following information:
+.. *Description:* Enter a descriptive name for the API key (e.g., "Fedora Forge Migration")
+.. *Expiration Date:* Set an appropriate expiration date for security purposes
+.. *ACLs:* Select all necessary ACLs (Access Control Lists) for repository access
+.. Click the *Create* button to generate the API key.
+image:migration_pagure_05.png[]
+. Copy the generated API key and keep it safely stored for use in the migration process.
+image:migration_pagure_06.png[]
+
+
+. Log into Fedora Forge using your Fedora Account credentials and navigate to the destination organization where you want to create the migrated repository.
+. Click on the *New migration* button to begin the migration process.
+image:pagure_migration_new_migration_button.png[]
+. Click on the *Pagure* button at the bottom of the migration page.
+image:pagure_migration_select_pagure_source.png[]
+
+
+. Fill in the migration form with the information from your source repository:
+.. *Repository Name:* Enter a descriptive name for the private repository (e.g., `original-repo-private-tickets`)
+.. *Clone URL:* Enter the Git clone URL from your Pagure repository
+.. *Description:* Add a description indicating this contains private tickets (e.g., "Private tickets from [original-repo]")
+.. *Visibility:* Set to private for restricted content
+image:migration_pagure_13.png[]
+. Enter the API key you created earlier in the token field.
+. Click on the *Migrate repository* button to start the migration.
+. Wait for the migration to complete. This creates a private repository with all tickets, including private ones.
+image:migration_pagure_14.png[]
+
+
+. Navigate to the newly created private repository.
+. Go to the repository settings and configure access controls:
+.. Add only authorized team members who need access to private tickets
+.. Ensure proper permission levels are set (typically Read access for ticket viewing)
+.. Document who has access and why for audit purposes
+
+
+* Confirm that the private repository appears in the target organization on Fedora Forge.
+* Verify that private tickets are only visible to authorized users.
+* Check that all private tickets have been transferred correctly.
+* Test repository access permissions for team members.
+* Verify that unauthorized users cannot access the private repository.
+* Confirm that the private repository is accessible via Git clone operations for authorized users.
+
+
+* **Separate Repository:** This creates a completely separate repository containing only the private tickets, not the main codebase.
+* **Access Control:** Ensure only authorized personnel have access to the private repository.
+* **Documentation:** Document the relationship between the main repository and the private tickets repository.
+* **Maintenance:** Consider how to handle future private tickets - they may need to be created in the private repository going forward.
+
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document provides a comprehensive guide for using the `assign_and_depend.py` script to restore issue dependencies and assignments after migrating a project from Pagure.io to Fedora Forge. The built-in migrator does not handle this critical metadata, making this script an essential post-migration step.
+
+
+This guide applies to Fedora Project contributors who have migrated their projects from Pagure.io to Fedora Forge and need to restore:
+
+* Issue assignments (who is assigned to work on each issue)
+* Issue dependencies (which issues depend on other issues)
+
+[IMPORTANT]
+====
+When running this script with an access token from your user account, all issue assignment and dependency changes will be logged in the issue history as actions performed by your user.
+
+If you prefer these changes to be attributed to the system bot account instead, please file a ticket at link:https://forge.fedoraproject.org/forge/forge[forge/forge] and request that an admin run the script for you. The admin will execute the script using the link:https://forge.fedoraproject.org/forgebot[forgebot] user account, which will attribute all changes to the system bot.
+====
+
+
+* *Migrated Project:* Your project must already be migrated from Pagure.io to Fedora Forge
+* *Python Environment:* Python 3.6 or later with pip installed
+* *Required Dependencies:* The following Python packages must be installed:
+** `requests` - For making HTTP requests to Pagure API
+** `backoff` - For retry logic with exponential backoff
+** `click` - For command-line interface
+** `pyforgejo` - For interacting with Forgejo API
+* *API Access:*
+** Forgejo API key with write permissions to the target repository
+** Access to Pagure.io API (publicly accessible)
+
+
+
+It's recommended to use a Python virtual environment to avoid conflicts with system packages. Create and activate a virtual environment, then install the required packages:
+
+[source,bash]
+----
+python -m venv migration-env
+source migration-env/bin/activate
+pip install requests backoff click pyforgejo
+----
+
+When you're done with the migration, you can deactivate the virtual environment:
+
+[source,bash]
+----
+deactivate
+----
+
+
+The `assign_and_depend.py` script is available in the official Fedora Forge deployment repository. You can download it directly from:
+
+link:https://forge.fedoraproject.org/forge/forge/src/branch/main/scripts/assign_and_depend.py[assign_and_depend.py]
+
+To download the script:
+
+[source,bash]
+----
+curl -O https://forge.fedoraproject.org/forge/forge/raw/branch/main/scripts/assign_and_depend.py
+----
+
+
+
+To obtain a Forgejo API key:
+
+. Log in to your Fedora Forge account
+. Navigate to your user settings (click your avatar in the top-right corner)
+. In the Left Tab bar, Go to *Applications*
+. In the *Access tokens* section, under *Generate new Token* enter the name for your token under *Token Name* (e.g., "Migration Script")
+. Under Select Permissions, ensure that *issue* is set to *read and write*
+image:assign-script-permissions.png[]
+. Click *Generate Token*
+. Copy the generated token for use with the script.
+
+
+You'll need to identify:
+
+* *Pagure Project:* The original project name on Pagure.io (e.g., `fedora-infra/ansible`)
+* *Forgejo Project:* The migrated project name on Fedora Forge (e.g., `infrastructure/fedora-infrastructure`)
+
+
+
+The script uses the following command structure:
+
+[source,bash]
+----
+python assign_and_depend.py \
+--pagure-project "PAGURE_PROJECT_NAME" \
+--forgejo-api-key "YOUR_API_KEY" \
+--forgejo-project "FORGEJO_PROJECT_NAME"
+----
+
+
+* `--pagure-base-url`: Base URL for Pagure API (default: `https://pagure.io/api/0`)
+* `--pagure-project`: Pagure project name, including namespace if applicable (required)
+* `--forgejo-base-url`: Base URL for Forgejo API (default: `https://forge.fedoraproject.org/api/v1`)
+* `--forgejo-api-key`: Your Forgejo API key (required)
+* `--forgejo-project`: Forgejo project name in format `organization/project` (required)
+
+
+
+[source,bash]
+----
+python assign_and_depend.py \
+--pagure-project "fedora-infra/ansible" \
+--forgejo-api-key "gitea_abc123def456..." \
+--forgejo-project "infrastructure/fedora-infrastructure"
+----
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the steps required to migrate repositories from GitHub
+to Fedora Forge, ensuring proper transfer of repository contents, issue tickets,
+and pull requests to the new Forgejo-based platform.
+
+
+This procedure applies to Fedora Project contributors who need to migrate
+repositories from GitHub to the new Fedora Forge platform. This includes
+subprojects, Special Interest Groups (SIGs), and other official Fedora Project
+repositories.
+
+
+* *Repository Access:* You must have access to the source repository on GitHub
+and the necessary privileges to create repositories in the target organization
+on Fedora Forge.
+* *Organization Permissions:* You must have the ability to create repositories
+under the target namespace in Fedora Forge. If you don't have these
+privileges, consult a member from the relevant subproject or SIG, or contact
+the Fedora Infrastructure team.
+* *Personal Access Token:* You will need to create a personal access token in
+GitHub for the migration process.
+
+[WARNING]
+====
+As the Forgejo-based Fedora Forge houses only those repositories that are
+instrumental in the development, testing, maintenance and operating of the
+Fedora Project's offering of Fedora Linux, please use this for those
+repositories only -- and not for any other personal repositories.
+====
+
+[WARNING]
+====
+As Forgejo does not support the creation of privately restricted issue tickets
+at this time, please take extra care while migrating those away from the source
+namespace on GitHub to ensure that confidential information contained in those
+issue tickets are not accidentally released out in the process.
+====
+
+[NOTE]
+====
+We recommend migrating your other personal repositories present on GitHub over
+to Codeberg, which is also based on Forgejo and supports native migration of
+repository contents, issue tickets and pull requests from GitHub using the
+instructions provided here -- with some minor changes here and there.
+====
+
+
+The migration process involves three main steps: creating a GitHub personal access token, accessing the Fedora Forge migration tool, and configuring the repository migration.
+
+
+. Log into GitHub and navigate to the source repository you want to migrate.
+. Take note of the repository URL for later reference.
+image:migration_github_01.png[]
+. Click on your portrait in the top-right corner and navigate to user settings.
+image:migration_github_02.png[]
+. Head over to the *Developer settings* at the bottom of the sidebar.
+image:migration_github_03.png[]
+. Under the *Personal access tokens* section, select *Tokens (classic)*.
+image:migration_github_04.png[]
+. Under the *General new token* dropdown, click on the first option.
+image:migration_github_05.png[]
+. Provide your credentials to log into GitHub if required to do so.
+image:migration_github_06.png[]
+. Fill in the required details properly according to the request.
+image:migration_github_07.png[]
+. Select the sought repository from the *Repository access* section.
+image:migration_github_08.png[]
+. Choose your migration scope:
+.. If you want to migrate only the public repos, select the first option.
+image:migration_github_09.png[]
+.. If you want to migrate the entire namespace, select the second option.
+image:migration_github_10.png[]
+. Click on the *Generate token* button and confirm again when asked.
+image:migration_github_11.png[]
+. Copy the generated personal access token and keep it safely stored for use in the migration process.
+image:migration_github_12.png[]
+
+
+. Log into Fedora Forge using your Fedora Account credentials.
+. Navigate to the destination organization where you want to create the migrated repository.
+image:migration_github_13.png[]
+. Click on the *New migration* button to begin the migration process.
+image:migration_github_14.png[]
+. Click on the *GitHub* button at the top of the migration page.
+image:migration_github_15.png[]
+
+
+. Fill in the migration form with the information from your source repository:
+.. *Repository URL:* Enter the GitHub repository URL
+.. *Personal Access Token:* Enter the token you created earlier
+.. *Migration Items:* Select what to migrate (repositories, issues, pull requests, etc.)
+image:migration_github_16.png[]
+. Click on the *Migrate* button to start the migration.
+. Please be patient while the migration progresses gradually. Monitor the progress.
+image:migration_github_17.png[]
+. Wait for the migration to complete and verify successful migration.
+image:migration_github_18.png[]
+
+
+* Confirm that the migrated repository appears in the target organization on Fedora Forge.
+* Verify that all repository contents (code, branches, tags) have been successfully migrated.
+* Check that issue tickets and pull requests have been transferred correctly.
+* Test repository access permissions for team members.
+* Verify that the repository is accessible via Git clone operations.
+* Confirm that all GitHub-specific features have been properly converted to Forgejo equivalents.
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the steps required to migrate repositories from GitLab
+to Fedora Forge, ensuring proper transfer of repository contents, issue tickets,
+and pull requests to the new Forgejo-based platform.
+
+
+This procedure applies to Fedora Project contributors who need to migrate
+repositories from GitLab to the new Fedora Forge platform. This includes
+subprojects, Special Interest Groups (SIGs), and other official Fedora Project
+repositories.
+
+
+* *Repository Access:* You must have access to the source repository on GitLab
+and the necessary privileges to create repositories in the target organization
+on Fedora Forge.
+* *Organization Permissions:* You must have the ability to create repositories
+under the target namespace in Fedora Forge. If you don't have these
+privileges, consult a member from the relevant subproject or SIG, or contact
+the Fedora Infrastructure team.
+* *Personal Access Token:* You will need to create a personal access token in
+GitLab for the migration process.
+
+[WARNING]
+====
+As the Forgejo-based Fedora Forge houses only those repositories that are
+instrumental in the development, testing, maintenance and operating of the
+Fedora Project's offering of Fedora Linux, please use this for those
+repositories only -- and not for any other personal repositories.
+====
+
+[WARNING]
+====
+As Forgejo does not support the creation of privately restricted issue tickets
+at this time, please take extra care while migrating those away from the source
+namespace on GitLab to ensure that confidential information contained in those
+issue tickets are not accidentally released out in the process.
+====
+
+[NOTE]
+====
+We recommend migrating your other personal repositories present on GitLab over
+to Codeberg, which is also based on Forgejo and supports native migration of
+repository contents, issue tickets and pull requests from GitLab using the
+instructions provided here -- with some minor changes here and there.
+====
+
+
+The migration process involves three main steps: creating a GitLab personal access token, accessing the Fedora Forge migration tool, and configuring the repository migration.
+
+
+. Log into GitLab and navigate to the source repository you want to migrate.
+. Take note of the repository URL for later reference.
+image:migration_gitlab_01.png[]
+. Head over to the *Settings* > *Access tokens* page from the extended sidebar.
+image:migration_gitlab_02.png[]
+. Click on the *Add new token* button on the first section.
+image:migration_gitlab_03.png[]
+. Fill in the required information and select the necessary ACLs (Access Control Lists).
+image:migration_gitlab_04.png[]
+. Click the *Create* button to generate the personal access token.
+. Copy the generated personal access token and keep it safely stored for use in the migration process.
+image:migration_gitlab_05.png[]
+
+
+. Log into Fedora Forge using your Fedora Account credentials.
+. Navigate to the destination organization where you want to create the migrated repository.
+image:migration_gitlab_06.png[]
+. Click on the *New migration* button to begin the migration process.
+image:migration_gitlab_07.png[]
+. Click on the *GitLab* button at the top of the migration page.
+image:migration_gitlab_08.png[]
+
+
+. Fill in the migration form with the information from your source repository:
+.. *Repository URL:* Enter the GitLab repository URL
+.. *Personal Access Token:* Enter the token you created earlier
+.. *Repository Name:* Enter the desired name for the migrated repository
+.. *Description:* Copy the repository description from GitLab (optional)
+image:migration_gitlab_09.png[]
+. Click on the *Migrate repository* button to start the migration.
+image:migration_gitlab_10.png[]
+. Wait for the migration to complete. Monitor the progress and verify successful migration.
+image:migration_gitlab_11.png[]
+
+
+* Confirm that the migrated repository appears in the target organization on Fedora Forge.
+* Verify that all repository contents (code, branches, tags) have been successfully migrated.
+* Check that issue tickets and pull requests have been transferred correctly.
+* Test repository access permissions for team members.
+* Verify that the repository is accessible via Git clone operations.
+* Confirm that all GitLab-specific features have been properly converted to Forgejo equivalents.
+* Admin Documentation
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the steps required to create a new
+organization within the Fedora Forge, ensuring proper configuration for
+repository creation and team management.
+
+
+This SOP applies to Fedora Project contributors with administrator
+privileges on the Fedora Forge.
+
+
+* *Administrator Privileges:* The user must possess administrator privileges on
+the Fedora Forge. Membership in the `sysadmin-main` group automatically
+grants these privileges on Fedora Forge.
+* *Fedora Account Group:* Identify the specific Fedora Accounts group that will
+be designated as the "Owners" team for the new organization.
+
+
+The organization creation process involves six main steps: logging in as an administrator, initiating organization creation, completing the organization form, navigating to settings, configuring organization details, setting repository limits, and assigning Fedora Accounts groups as owners.
+
+
+. Navigate to the Fedora Forge login page.
+. Log in using a user account that possesses administrator privileges.
+. *Verification:* Upon successful login, observe the top-right corner of the
+Fedora Forge page. The presence of a *"+" icon* indicates that you have
+administrator privileges. If this icon is absent, you don't have the
+necessary permissions and can't proceed with this procedure.
+
+
+. Click on the *"+" icon* located in the top-right corner of the Fedora Forge
+page.
+. From the dropdown menu, select *"New Organization."*
+
+
+. The "New Organization" form will be displayed.
+. In the *"Organization Name"* field, enter the desired name for the new
+organization.
+. Click the *"Create Organization"* button.
+
+
+. Upon creating the organization, you'll be redirected to the organization's
+dashboard page.
+. To access the main organization page, click the *"View <organization_name>"*
+button located in the top-right corner of the dashboard.
+. On the main organization page, click the *"Settings"* tab.
+. *Alternative Navigation:* You can directly access the settings page using the
+following URL, replacing `<organization_name>` with the actual name of your
+organization: `https://forge.fedoraproject.org/org/<organization_name>/settings`
+
+
+. On the organization settings page, populate the following fields with the
+relevant information:
+.. *Full Name:* Enter the full, descriptive name of the organization.
+.. *Description:* Provide a brief overview or purpose of the organization.
+.. *Website:* (Optional) Enter the URL of the organization's official website.
+.. *Avatar:* (Optional) Upload an avatar or logo for the organization.
+
+
+. Locate the field labeled *"Maximum Number of Repositories."*
+. By default, this value is often set to `-1`. This effectively prevents any
+repositories from being created within the organization.
+. *Manually update this value from `-1` to a positive integer.* A value of
+`1000` is generally recommended to ensure sufficient capacity for Fedora
+organizations and Special Interest Groups (SIGs) without encountering
+limitations.
++
+[WARNING]
+====
+Failure to manually set this value will prevent anyone from creating
+repositories within this organization.
+====
+
+
+. This step requires access to the Fedora Ansible infrastructure repository and the ability to run Ansible playbooks.
+. *Update the configuration file:* Edit the `values.yml.j2` file in the Fedora Ansible repository at:
+`roles/openshift-apps/forgejo/templates/values.yml.j2`
+. *Locate the OIDC group mapping section* within the file and find the JSON configuration for mapping Fedora Accounts groups to organization teams.
+. *Identify the Fedora Accounts group* that will serve as the "Owners" team
+for the newly created organization. The "Owners" team is an immutable,
+automatically created team in Fedora Forge with specific permissions.
+. *Add or update the following key-value pair* within the JSON configuration:
++
+[source,json]
+----
+"<Fedora_Accounts_Group>":{
+"<Fedora Forge_Organization>": ["Owners"]
+}
+----
++
+.. Replace `<Fedora_Accounts_Group>` with the actual name of the Fedora
+Accounts group (e.g., `sysadmin-main`).
+.. Replace `<Fedora_Forge_Organization>` with the exact name of the Fedora
+Forge organization you just created (e.g., `Infrastructure`).
++
+*Example:* If the `sysadmin-main` group members are to be the `Owners` team
+of the `Packages` organization, the JSON snippet should include:
++
+[source,json]
+----
+"sysadmin-main": {
+"Packages": ["Owners"]
+}
+----
++
+. *Commit and push* your changes to the Ansible repository to ensure the configuration is preserved.
+. *Run the Forgejo playbook* to apply the configuration changes:
+`playbooks/openshift-apps/forgejo.yml`
+. *Verify deployment rollout:* The deployment should automatically begin a new rollout to apply the changes. If a new rollout does not start automatically, manually trigger one through the OpenShift console or CLI.
+
+
+* Confirm that the organization details are correctly displayed on the
+organization's main page.
+* Attempt to create a new repository within the organization to verify that the
+"Maximum Number of Repositories" setting is correctly applied.
+* Verify that members of the designated Fedora Accounts group have "Owner"
+permissions within the new organization by attempting to perform owner-level
+actions.
+
+[WARNING]
+====
+**DRAFT DOCUMENTATION:** This documentation is currently in draft form and may not be fully tested and correct. Please verify all procedures before use and report any issues or inaccuracies.
+====
+
+
+This document outlines the steps required to create a new team within
+an existing organization in the Fedora Forge instance, and how to assign
+appropriate permissions and map Fedora Accounts groups to it.
+
+
+This SOP applies to Fedora Project contributors with administrator
+privileges on the Fedora Forge instance, or those with sufficient permissions
+within a specific organization to manage teams.
+
+
+* *Access to Organization:* You must have the necessary permissions to manage
+teams within the target organization on Fedora Forge. This typically means
+being an administrator on Fedora Forge or an owner of the specific
+organization.
+* *Existing Organization:* The organization where the new team will be created
+must already exist.
+* *Fedora Account Group:* Identify the specific Fedora Accounts group whose
+members will be added to this new team.
+
+
+The team creation process involves five main steps: logging in and navigating to the organization, accessing team settings, initiating team creation, completing the team form, assigning Fedora Accounts groups, and optionally assigning repositories.
+
+
+. Log in to the Fedora Forge instance with an account that has the required
+permissions.
+. Navigate to the specific organization where you wish to create a new team.
+You can usually do this by clicking on your profile picture/icon in the top
+right, then selecting "Your Organizations," and then clicking on the desired
+organization. Alternatively, you can directly access it via its URL (e.g.,
+`https://forge.fedoraproject.org/org/<organization_name>`).
+
+
+. Once on the organization's main page, click on the *"Teams"* tab.
+
+
+. On the Teams page, click the *"New Team"* button.
+
+
+. The "New Team" form will be displayed.
+. *Team Name:* Enter a unique and descriptive name for the new team (e.g.,
+`Developers`, `Documentation`, `Triagers`).
+. *Description (Optional):* Provide a brief description of the team's purpose
+or responsibilities.
+. *Permission Level:* Select the appropriate permission level for the team.
+Common options include:
+.. *Read:* Members can only view repositories and issues.
+.. *Write:* Members can push to repositories, open/close issues, etc.
+.. *Admin:* Members have administrative control over repositories, including
+managing settings and collaborators.
+.. *Owner:* This level is generally reserved for the main "Owners" team of the
+organization and provides full administrative control over the organization
+itself. Choose this only if the team genuinely needs organizational
+ownership rights.
+. *Include all repositories:* Check this box if you want this team to have the
+selected permission level on *all* current and future repositories within
+this organization. If unchecked, you will need to manually add repositories
+to the team later.
+If your organization contains *private repositories*, exercising
+caution with "Include all repositories" is crucial. Selecting this option will
+grant the chosen permission level to *all private repositories* within the
+organization as well. Ensure this aligns with your security requirements
+before proceeding.
+
+. Click the *"Create Team"* button.
+
+
+. This step requires access to the Fedora Ansible infrastructure repository and the ability to run Ansible playbooks.
+. *Update the configuration file:* Edit the `values.yml.j2` file in the Fedora Ansible repository at:
+`roles/openshift-apps/forgejo/templates/values.yml.j2`
+. *Locate the OIDC group mapping section* within the file and find the JSON configuration for mapping Fedora Accounts groups to organization teams.
+. *Identify the Fedora Accounts group* whose members will be part of this new
+team.
+. *Add or update the following key-value pair* within the JSON configuration to map
+the Fedora Accounts group to the new team within the specific organization:
++
+[source,json]
+----
+"<Fedora_Accounts_Group>":{
+"<Forgejo_Organization>":["<Team_Name>"]
+}
+----
++
+.. Replace `<Fedora_Accounts_Group>` with the actual name of the Fedora
+Accounts group (e.g., `sig-cloud-devs`).
+.. Replace `<Forgejo_Organization>` with the exact name of the Fedora Forge
+organization (e.g., `Fedora-Cloud`).
+.. Replace `<Team_Name>` with the exact name of the team you just created
+(e.g., `Developers`).
++
+*Example:* If you want the `sig-cloud-devs` group members to be part of the
+`Developers` team within the `Fedora-Cloud` organization, the JSON snippet
+should include:
++
+[source,json]
+----
+"sig-cloud-devs": {
+"Fedora-Cloud": ["Developers"]
+}
+----
+If the Fedora Accounts group is already mapped to other teams or
+organizations, ensure you correctly update the existing entry without
+overwriting other mappings. For example, to add `TeamA` and `TeamB` to
+`OrgX` for `my-fas-group`, the entry would be: `"my-fas-group": {"OrgX":
+["TeamA", "TeamB"]}`.
+. *Commit and push* your changes to the Ansible repository to ensure the configuration is preserved.
+. *Run the Forgejo playbook* to apply the configuration changes:
+`playbooks/openshift-apps/forgejo.yml`
+. *Verify deployment rollout:* The deployment should automatically begin a new rollout to apply the changes. If a new rollout does not start automatically, manually trigger one through the OpenShift console or CLI.
+
+
+. If you did not check "Include all repositories" during team creation, you
+will need to manually assign repositories.
+. From the team's page, click the *"Repositories"* tab.
+. Click the *"Add Repository"* button.
+. Select the repositories you want to grant this team access to.
+. Click "Add" for each chosen repository.
+
+
+* Confirm the new team appears in the "Teams" list for the organization.
+* Verify that members of the designated Fedora Accounts group are now correctly
+associated with the newly created team within Fedora Forge.
+* Test the team's permissions by having a member of the mapped Fedora Accounts
+group attempt an action consistent with their assigned permission level (e.g.,
+if "Write" permission, try pushing to a repository assigned to the team).
+* If repositories were assigned manually, ensure that the team has access to
+only the intended repositories.
+
+This document describes the `update-forge-fas-emails.py` script used to fix placeholder email addresses created during pagure.io to Forge migrations.
+
+
+When users are migrated from pagure.io to Forge, the migrator creates placeholder `@fedoraproject.org` email addresses (like `username@fedoraproject.org`) because it doesn't have access to users' real email addresses. This script replaces those placeholder addresses with users' actual email addresses from Fedora Accounts.
+
+IMPORTANT: This script is **not** a general email synchronization tool. It only processes users who already have `@fedoraproject.org` email addresses that are migrator placeholders. Users with real email addresses from other domains are left untouched.
+
+**Script Location**: The script is located in the link:https://forge.fedoraproject.org/forge/forge/src/branch/main/scripts/update-forge-fas-emails.py[forge/forge repository] at `scripts/update-forge-fas-emails.py`
+
+
+The script handles three scenarios for users with `@fedoraproject.org` email addresses:
+
+1. **User exists in Fedora Accounts with email(s)** - Replaces placeholder with first Fedora Accounts email
+2. **User exists in Fedora Accounts but has no emails** - Logs as ERROR (this should never happen)
+3. **User not found in Fedora Accounts** - Sets to `username+fasnotfound@fedoraproject.org`
+
+
+
+Install the required Python packages on your system:
+
+[source,bash]
+----
+dnf install python3-click python3-requests python3-fasjson-client
+----
+
+
+You need an admin-level API token from your Forge instance:
+
+1. Log into your Forge instance (staging or production)
+2. Go to Settings → Applications → Generate New Token
+3. Give it a descriptive name like "Email Sync Script"
+4. Select the "admin" scope (required for user management)
+5. Copy the generated token
+
+
+The script uses Fedora Accounts which requires Kerberos authentication:
+
+For staging::
+[source,bash]
+----
+kinit your_username@STG.FEDORAPROJECT.ORG
+----
+
+For production::
+[source,bash]
+----
+kinit your_username@FEDORAPROJECT.ORG
+----
+
+
+
+Preview changes against staging (safe, no modifications)::
+[source,bash]
+----
+./update-forge-fas-emails.py --dry-run --token YOUR_API_TOKEN
+----
+
+Fix placeholder emails on staging::
+[source,bash]
+----
+./update-forge-fas-emails.py --token YOUR_API_TOKEN
+----
+
+Preview changes against production::
+[source,bash]
+----
+./update-forge-fas-emails.py --production --dry-run --token YOUR_API_TOKEN
+----
+
+Fix placeholder emails on production::
+[source,bash]
+----
+./update-forge-fas-emails.py --production --token YOUR_API_TOKEN
+----
+
+
+For automation or security, use an environment variable for the token:
+
+[source,bash]
+----
+export FORGE_TOKEN=your_api_token
+./update-forge-fas-emails.py --production
+----
+
+
+`--production`:: Run against production environment (default: staging)
+`--dry-run`:: Preview changes without making them
+`--token`:: Forge API token for authentication (can use `FORGE_TOKEN` environment variable)
+`--help`:: Show help message and examples
+
+
+The script provides detailed output showing:
+
+- Which environment it's running against
+- Authentication status with Fedora Accounts
+- Progress through all Forge users
+- Actions taken for each user
+- Summary statistics at the end
+
+
+[cols="1,3"]
+|===
+|Action |Description
+
+|SKIP
+|User doesn't have `@fedoraproject.org` email (not a migrator placeholder) - *silently skipped*
+
+|NO CHANGE
+|User's placeholder email already matches their Fedora Accounts email
+
+|UPDATED/WOULD UPDATE
+|Placeholder email was replaced with real Fedora Accounts email (or would be in dry-run mode)
+
+|FAILED
+|API call to update email failed
+
+|ERROR
+|Unexpected error occurred (usually Fedora Accounts connectivity issues or Fedora Accounts user with no emails)
+|===
+
+
+[source]
+----
+========================================================================================================================
+Forge Email Sync from Fedora Accounts
+Environment: STAGING
+Forge URL: https://forge.stg.fedoraproject.org
+Fedora Accounts URL: https://fasjson.stg.fedoraproject.org
+*** DRY RUN MODE - NO CHANGES WILL BE MADE ***
+========================================================================================================================
+
+Authenticated with Fedora Accounts as: adminuser
+
+Fetching users from Forge...
+Found 1247 total users on Forge
+
+------------------------------------------------------------------------------------------------------------------------
+Username                  Current Email                       Action          New Email
+------------------------------------------------------------------------------------------------------------------------
+dudemcpants               dudemcpants@fedoraproject.org       WOULD UPDATE    dudemcpants@example.com
+testermctesterson         testermctesterson@fedoraproject.org WOULD UPDATE    tester@example.org
+fergieforge               fergieforge@fedoraproject.org       WOULD UPDATE    fergieforge+fasnotfound@fedoraproject.org
+------------------------------------------------------------------------------------------------------------------------
+
+========================================================================================================================
+SUMMARY
+========================================================================================================================
+Total Forge users:                              1247
+
+Skipped (non-@fedoraproject.org email):         1200
+Skipped (already processed +fasnotfound):       40
+Skipped (Fedora Accounts error):                0
+
+No change needed:                               0
+Updated from Fedora Accounts:                   3
+Updated to +fasnotfound (not in Fedora Accounts): 4
+Update failed:                                  0
+
+Total @fedoraproject.org users processed:       7
+Total changes would be made:                    7
+
+*** DRY RUN MODE - Use --production flag without --dry-run to make actual changes ***
+========================================================================================================================
+----
+
+
+- **Dry-run mode** lets you preview changes before making them
+- **Only processes `@fedoraproject.org` placeholder email addresses**
+- **Leaves users with real email addresses untouched**
+- **Comprehensive logging** of all actions taken
+- **Staging environment** available for testing
+- **Skips already processed users** (those with `+fasnotfound@fedoraproject.org`)
+
+* Known Issues
+
+
+There is a known issue in Forgejo that affects the ability to add repository-level issues to organization-level projects. If the Projects unit is disabled at the repository level, any attempt to add an issue from that repository to an organization-level project will fail silently. The change will appear to not "stick" after you save it.
+
+
+* You try to add an issue from a repository to an organization-level project
+* The assignment appears to work initially
+* After saving or refreshing, the issue is no longer assigned to the project
+* No error message is displayed
+
+
+This occurs when the Projects unit is disabled in the repository settings where the issue is located. Even though you're trying to add the issue to an organization-level project (not a repository-level project), Forgejo still requires the Projects unit to be enabled at the repository level.
+
+
+To successfully add issues to an organization-level project:
+
+1. Navigate to the repository settings where the issue is located
+2. Go to the "Features" or "Units" section
+3. Enable the "Projects" unit for that repository
+4. Once enabled, you can then add issues from that repository to any organization-level project
+
+The Projects unit only needs to be enabled - you don't need to actually create any repository-level projects.
+
+
+This is a recognized upstream issue:
+
+* **Bug report**: https://codeberg.org/forgejo/forgejo/issues/5666[forgejo/forgejo#5666]
+* **Fix in progress**: https://codeberg.org/forgejo/forgejo/pulls/7999[forgejo/forgejo#7999]

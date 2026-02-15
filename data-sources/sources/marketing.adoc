@@ -1,0 +1,1541 @@
+
+Want to be part of the {team_name}? Here's how!
+
+* Are you willing to enhance Fedora Project marketing initiatives?
+* Have you tuned into any {team_name} meetings?
+* Do you know the basics of GitLab?
+
+If you said YES to one or more points above, you are at the right place!
+Our team always looks forward to working with folks from diverse backgrounds.
+
+*Ask us in our link:{team_synch_communication}[Matrix room] how to join the team!*
+
+---
+
+[[contribute]]
+
+Here are some examples of what constitutes a contribution to the {team_name}:
+
+* Managing talking points for one or more editions, or parts of Fedora (a Fedora Edition, a major feature, etc.).
+* Writing a release announcement or contributing a large section to a release announcement.
+** Fixing a comma splice is not really a significant contribution.
+Managing a section on the Workstation Edition is.
+* Working to create one or more flyers or information sheets for an edition, Fedora overall, etc.
+* Substantial work helping clean up the Marketing docs.
+* Creating materials for Fedora Ambassadors for an event, or talking points for an event or events.
+* Any observable significant and useful contribution that moves Fedora Marketing forward during a release cycle.
+* Mentor and bring in new contributors to marketing.
+
+We grant membership to anyone who invests in teaching other people the ropes, even if that means their impact is not as visible on the finished product as if they did the work themselves.
+
+A good recommendation for beginners is to familiarize yourself with the xref:resources.adoc[the tools we use] in order to help with a particular kind of work.
+
+
+[[meetings]]
+
+* Meetings will be held once every two weeks.
+Check the link:{team_meetings}[*Marketing Calendar*] for updated meeting times.
+** Video Meetings on Jitsi;
+** Recorded and posted on PeerTube
+** Audio and Video is not required to join the meeting
+(you can always use the chat for input)
+* Meeting Notes:
+** Will be held in the https://hackmd.io/team/fedoramarketing?nav=overviewFedora[Marketing HackMD]
+** Meeting leader will then post link:{team_asynch_communication}[on Discourse] for community to provide transparency to our community
+
+
+[[social-media]]
+
+* *link:{team_issue_tracker}/-/issues/new[Open a ticket on our Gitlab]:*
+** Issue name must include Month/Day then title of Social Media post
+*** *EX: 10/29 EPEL Campaign Post*
+** The ticket Description:
+*** *Purpose of ticket*
+*** *Any art ideas for the post*
+*** *Potential Caption idea*
+
+Feedback from official {team_name} members must be provided before accepted to post.
+
+
+[[videos]]
+
+* Check xref:sops/stream-uploads.adoc[our standard procedure to process livestreams] to know how you can easily take livestreams from our events and turn them into talks to upload to our social media profiles;
+* Check the https://gitlab.com/fedora/podcast/-/issues[Podcast team GitLab repo] if you'd like to help with the Fedora Podcast, as they have a tight relation to our team;
+
+Overview of all known social media accounts for the Fedora Project.
+2023-11-19
+
+Social media connects Fedora developers, users, friends, and enthusiasts around the world.
+This is also one strategy to share Fedora announcements, community news, and other updates.
+All known accounts are documented below, curated by a best-effort volunteering community.
+
+
+[[official]]
+
+Maintained by Marketing and/or https://accounts.fedoraproject.org/group/fedora-socialmedia/[Social Media] Teams.
+Anyone with access to Official Accounts should be members of the https://accounts.fedoraproject.org/group/fedora-socialmedia/[fedora-socialmedia] FAS group.
+If you believe you should be in the group, contact a https://accounts.fedoraproject.org/group/fedora-socialmedia/[group sponsor].
+
+[NOTE]
+====
+Official accounts are designated official due to their connection to the Fedora Trademark.
+====
+
+[[official-mastodon]]
+
+* *Page name*:
+Fedora Project
+* *Links*:
+** https://joinmastodon.org/[Mastodon]
+** https://fosstodon.org/@fedora[fosstodon.org/@fedora]
+* *Administrators*:
+** link:{FWIKI}/User:Joseph[Joseph Gayoso]
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+** link:{FWIKI}/User:Nb[Nick Bebout]
+* *Clients*:
+open source decentralized servers, web-based, clients available on mobile (Android, iOS)
+
+[[official-facebook]]
+
+* *Page name*:
+The Fedora Project
+* *Links*:
+** https://www.facebook.com[Facebook]
+** https://www.facebook.com/TheFedoraProject[facebook.com/TheFedoraProject]
+* *Administrators*:
+** *Administrators (full access)*:
+*** link:{FWIKI}/User:Bproffit[Brian Proffitt]
+*** link:{FWIKI}/User:Pfrields[Paul W. Frields]
+*** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
+*** link:{FWIKI}/User:Jzb[Joe Brockmeier]
+*** link:{FWIKI}/User:Cwickert[Christoph Wickert]
+*** link:{FWIKI}/User:Rbergero[Robyn Bergeron]
+*** link:{FWIKI}/User:Eischmann[Jiří Eischmann]
+*** link:{FWIKI}/User:Spot[Tom Callaway]
+*** link:{FWIKI}/User:Rsuehle[Ruth Suehle]
+** *Editors*:
+*** link:{FWIKI}/User:Decause[Remy DeCausemaker]
+*** link:{FWIKI}/User:Diaa[Diaa Radwan]
+* *Clients*:
+proprietary server, web-based, messaging supported in `bitlbee`, `pidgin`
+
+[[official-twitter]]
+
+* *Page name*:
+@fedora
+* *Links*:
+** https://twitter.com/[X/Twitter]
+** https://twitter.com/fedora[twitter.com/fedora]
+* *Administrators*:
+** link:{FWIKI}/User:Bproffit[Brian Proffitt]
+** link:{FWIKI}/User:Pfrields[Paul W. Frields]
+** link:{FWIKI}/User:Rsuehle[Ruth Suehle]
+** link:{FWIKI}/User:Jzb[Joe Brockmeier]
+** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
+** link:{FWIKI}/User:Mattdm[Matthew Miller]
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+** link:{FWIKI}/User:Jonatoni[ Jona Azizaj]
+** link:{FWIKI}/User:Riecatnor[Marie Nordin]
+** link:{FWIKI}/User:siddharthvipul1[Vipul Siddharth]
+* *Clients*:
+proprietary server, web-based, clients available (`cawbird`)
+
+[[official-youtube]]
+
+* *Page name*:
+Fedora Project
+* *Links*:
+** https://www.youtube.com[YouTube]
+** https://www.youtube.com/fedora[youtube.com/fedora]
+* *Administrators*:
+** *Primary owner*:
+_Fedora Project (social media mgmt.)_ (special Google account managed by the xref:council::fca.adoc[Fedora Community Architect] specifically for YouTube)
+** *Owners*:
+*** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+*** link:{FWIKI}/User:Bproffit[Brian Proffitt]
+** *Managers*:
+*** link:{FWIKI}/User:Moralcode[Adrian Edwards]
+*** link:{FWIKI}/User:T0xic0der[Akashdeep Dhar]
+*** link:{FWIKI}/User:Bt0dotninja[Alberto Rodríguez Sánchez]
+*** link:{FWIKI}/User:Bcotton[Ben Cotton]
+*** link:{FWIKI}/User:Steiner[Daimar Stein]
+*** link:{FWIKI}/User:X3mboy[Eduard Lucena]
+*** link:{FWIKI}/User:Itguyeric[Eric Hendricks]
+*** link:{FWIKI}/User:Eischmann[Jiří Eischmann]
+*** link:{FWIKI}/User:Kevin[Kevin Fenzi]
+*** link:{FWIKI}/User:Riecatnor[Marie Nordin]
+*** link:{FWIKI}/User:Markdude[Mark Terranova]
+*** link:{FWIKI}/User:Pfrields[Paul W. Frields]
+*** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
+*** link:{FWIKI}/User:Spot[Tom Callaway]
+* *Clients*:
+proprietary server, web-based, supported in `video-downloader`
+
+[[official-instagram]]
+
+* Page name:
+@thefedoraproject
+* *Links*:
+** https://www.instagram.com[Instagram]
+** https://www.instagram.com/thefedoraproject/[instagram.com/thefedoraproject]
+* *Administrators*:
+** link:{FWIKI}/User:Steiner[Daimar Stein]
+** link:{FWIKI}/User:Ekidney[Emma Kidney]
+** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
+** link:{FWIKI}/User:Jonatoni[Jona Azizaj]
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+* *Clients*:
+** proprietary server, has web version
+
+[[official-matrix]]
+
+* *Page name*:
+`#fedora-space:fedoraproject.org`
+* *Links*:
+** link:https://chat.fedoraproject.org/#/room/#fedora-space:fedoraproject.org[chat.fedoraproject.org/#/room/#fedora-space:fedoraproject.org]
+* *Administrators*:
+** link:{FWIKI}/User:Kevin[Kevin Fenzi]
+** link:{FWIKI}/User:Nb[Nick Bebout]
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+* *Clients*:
+open source server, has web version, open source client available as flatpak in https://flathub.org/apps/details/im.riot.Riot[flathub]
+
+
+[[secondary]]
+
+Secondary accounts are accounts created officially within the project, but they are not the primary method for distributing news or information.
+Often, these accounts post automatically or pull from other feeds to relay content.
+
+[[secondary-twitter]]
+
+link:{FWIKI}/User:Ryanlerch[Ryan Lerch] has/had a script to automatically tweet links for new https://docs.fedoraproject.org/en-US/commops/community-blog/[Community Blog] articles.
+
+* *Page name*:
+@fedoracommunity
+* *Links*:
+** https://twitter.com/[Twitter]
+** https://twitter.com/fedoracommunity[twitter.com/fedoracommunity]
+* *Administrators*:
+** link:{FWIKI}/User:Bex[Brian Exelbierd]
+** link:{FWIKI}/User:Jonatoni[Jona Azizaj]
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+** link:{FWIKI}/User:Riecatnor[Marie Nordin]
+** link:{FWIKI}/User:Pfrields[Paul W. Frields]
+** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
+
+[[secondary-reddit]]
+
+* *Page name*:
+/r/Fedora
+* *Links*:
+** https://www.reddit.com/[Reddit]
+** https://www.reddit.com/r/Fedora/[reddit.com/r/Fedora/]
+* *Administrators*:
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+** link:{FWIKI}/User:SpyTec[Eric Gustavsson]
+* *Clients*:
+proprietary server, web-based
+
+[[secondary-discord]]
+
+* *Page name*:
+Fedora Linux
+* *Links*:
+** https://discordapp.com[Discord]
+** https://discord.gg/fedora[discord.gg/fedora]
+* *Administrators*:
+** _Owner_: link:{FWIKI}/User:Rhea[Radka (Rhea) Gustavsson]
+** _Moderators_:
+*** link:{FWIKI}/User:Ffreiheit[Eric Eisenhart]
+*** DokaDoka
+*** dvs
+*** refi64
+*** Sebastiaan
+*** -Kass
+* *Clients*:
+proprietary server, has web version, open source clients are forbidden by license terms
+
+[[secondary-telegram]]
+
+* *Page name*: @fedoranews
+* *Links*:
+** https://telegram.org/[Telegram]
+** https://t.me/fedoranews[@fedoranews]
+* *Administrators*:
+** link:{FWIKI}/User:Jflory7[Justin W. Flory]
+** link:{FWIKI}/User:Eischmann[Jiří Eischmann]
+** link:{FWIKI}/User:Ryanlerch[Ryan Lerch]
+** link:{FWIKI}/User:Riecatnor[Marie Nordin]
+** link:{FWIKI}/User:Sumantrom[Sumantro Mukherjee]
+** link:{FWIKI}/User:x3mboy[Eduard Lucena]
+** link:{FWIKI}/User:siddharthvipul1[Vipul Siddharth]
+* *Clients*:
+proprietary server, has web version, open source client available in RPMFusion
+
+
+[[community]]
+
+Fedora Community-Managed Accounts are related to the Fedora Project, but not officially maintained by the Fedora Marketing Team or Social Media administrators.
+Often, these accounts are specific to a region or country.
+These pages are typically run by an individual contributor or a group of contributors.
+However, these accounts are *not* officially endorsed by the Fedora Project or Red Hat Inc.
+They are listed here to promote easier discoverability of places where Fedora contributors and users gather online.
+
+[[community-facebook]]
+
+[cols=",,",options="header",]
+|===
+|Page name |Links |Administrator(s)
+
+|Fedora Albania
+|https://www.facebook.com/fedorasq/[facebook.com/fedorasq]
+|link:{FWIKI}/User:jonatoni[Jona Azizaj] (via https://openlabs.cc/[Open Labs Albania])
+
+|Fedora Bangladesh (group)
+|https://www.facebook.com/groups/fedorabangladesh/[facebook.com/groups/fedorabangladesh]
+|???
+
+|Fedora Project - Local Community Myanmar
+|https://www.facebook.com/fedorammcommunity[facebook.com/fedorammcommunity]
+|link:{FWIKI}/User:Orcakrilozona[Yan Naing Myint]
+
+|Projeto Fedora Brasil
+|https://facebook.com/fedorabr[facebook.com/fedorabr]
+|link:{FWIKI}/User:Dbruno[Daniel Bruno], link:{FWIKI}/User:Wolnei[Wolnei]
+
+|Fedora Ni
+|https://www.facebook.com/FedoraNicaragua[facebook.com/FedoraNicaragua]
+|link:{FWIKI}/User:Williamjmorenor[William Moreno] (owner), link:{FWIKI}/User:Mayorgalinux[Eduardo Mayorga]
+
+|Fedora Pakistan
+|https://www.facebook.com/FedoraPakistan[facebook.com/FedoraPakistan]
+|link:{FWIKI}/User:Nasirhm[Nasir Hussain]
+
+|===
+
+[[community-twitter]]
+
+[cols=",,",options="header",]
+|===
+|Account name |Links |Administrator(s)
+
+|Fedora Albania
+|https://twitter.com/fedorasq[twitter.com/fedorasq]
+|link:{FWIKI}/User:jonatoni[Jona Azizaj] (via https://openlabs.cc/[Open Labs Albania])
+
+|RussianFedora
+|https://twitter.com/RussianFedora[twitter.com/RussianFedora]
+|link:{FWIKI}/User:Mamasun[Inna Kabanova]
+
+|Fedora in Greece
+|https://twitter.com/fedora_gr[twitter.com/fedora_gr]
+|???
+
+|Fedora™ Indonesia
+|https://twitter.com/FedoraIndonesia[twitter.com/FedoraIndonesia]
+|link:{FWIKI}/User:Mamasun[Jurankdankkal]
+
+|ProjetoFedora
+|https://twitter.com/projetofedora[twitter.com/projetofedora]
+|link:{FWIKI}/User:Dbruno[Daniel Bruno], link:{FWIKI}/User:Wolnei[Wolnei]
+
+|Fedora Nicaragua
+|https://twitter.com/FedoraNi[twitter.com/FedoraNi]
+|link:{FWIKI}/User:Williamjmorenor[William Moreno] (owner), link:{FWIKI}/User:Mayorgalinux[Eduardo Mayorga]
+
+|NeuroFedora
+|https://twitter.com/neurofedora[twitter.com/neurofedora]
+|link:{FWIKI}/User:Ankursinha[Ankur Sinha] and the link:{FWIKI}/SIGs/NeuroFedora[NeuroFedora SIG].
+See the https://pagure.io/neuro-sig/NeuroFedora/blob/master/f/Outreach/Template-tweets.rst[SOP].
+
+|Fedora Haskell
+|https://twitter.com/fedorahaskell[twitter.com/fedorahaskell]
+|link:{FWIKI}/User:Petersen[Jens Petersen] and the link:{FWIKI}/SIGs/Haskell[Haskell SIG]
+
+|Fedora i18n
+|https://twitter.com/FedoraI18n[twitter.com/FedoraI18n]
+|link:{FWIKI}/User:Petersen[Jens Petersen] and I18N
+
+|Fedora Czech
+|https://twitter.com/FedoraCZ[twitter.com/FedoraCZ]
+|???
+
+|Fedora CoreOS
+|https://twitter.com/FedoraCoreOS[twitter.com/FedoraCoreOS]
+|???
+
+|Fedora IoT
+|https://twitter.com/FedoraIoT[twitter.com/FedoraIoT]
+|???
+
+|Fedora Silverblue
+|https://twitter.com/teamsilverblue[twitter.com/teamsilverblue]
+|???
+
+|Fedora Türkiye
+|https://twitter.com/fedoraturkey[twitter.com/fedoraturkey]
+|???
+
+|Fedora Mexico
+|https://twitter.com/fedoramexico[twitter.com/fedoramexico]
+|???
+
+|Fedora India
+|https://twitter.com/fedoraindia[twitter.com/fedoraindia]
+|link:{FWIKI}/User:siddharthvipul1[Vipul Siddharth]
+
+|Fedora Bot
+|https://twitter.com/FedoraBot60_MPH[twitter.com/FedoraBot60_MPH]
+|???
+
+|Fedora Security Lab
+|https://twitter.com/FedoraSL[twitter.com/FedoraSL]
+|???
+
+|Fedora Community Space
+|https://twitter.com/i/communities/1511095357496868869[twitter.com/i/communities/1511095357496868869]
+|link:{FWIKI}/User:Jflory7[Justin W. Flory]
+
+|===
+
+[[community-other]]
+
+[cols=",,,",options="header",]
+|===
+|Network |Page name |Links |Administrator(s)
+
+|https://www.flickr.com[Flickr]
+|FEDORA GNU/linux
+|https://www.flickr.com/groups/fedora/[flickr.com/groups/fedora/]
+|???
+
+|http://www.fedoraonline.it/[Fedora-IT]
+|Fedora Italy
+|http://forum.fedoraonline.it/search.php?action=show_all[forum.fedoraonline.it]
+|link:{FWIKI}/User:Robyduck[robyduck]
+
+|http://vkontakte.ru[Vkontakte]
+|Russian Fedora
+|https://vk.com/club10679202[vk.com/club10679202]
+|link:{FWIKI}/User:Mamasun[Inna Kabanova]
+
+|===
+
+
+[[retired]]
+
+These accounts, for one reason or another, are retired, deleted, or no longer maintained.
+
+[cols=",,,",options="header",]
+|===
+|Network |Page name |Links |Administrator(s)
+
+|https://diasp.org/[diaspora*]
+|fedora@diasp.org
+|https://diasp.org/u/fedora[diasp.org/u/fedora]
+|link:{FWIKI}/User:Bproffit[Brian Proffitt]
+
+|http://identi.ca/[Identica]
+|Fedora Project
+|https://identi.ca/fedora[identi.ca/fedora]
+|link:{FWIKI}/User:Pfrields[Paul W. Frields] (owner), link:{FWIKI}/User:Rbergero[Robyn Bergeron], Matias Kreder, link:{FWIKI}/User:jnalley[Jonathan Nalley], link:{FWIKI}/User:Jsmith[Jared Smith]
+
+|https://www.linkedin.com[LinkedIn]
+|Fedora
+|https://www.linkedin.com/e/gis/49737/[linkedin.com/e/gis/49737/]
+|link:{FWIKI}/User:pcalarco[Pascal Calarco], link:{FWIKI}/FrancescoCrippa[Francesco Crippa], link:{FWIKI}/User:Jstanley[Jon Stanley]
+
+|https://twitter.com/[Twitter]
+|@fedora_planet
+|https://twitter.com/fedora_planet[twitter.com/fedora_planet]
+|Automatically tweets out new link:{FWIKI}/Planet[Fedora Planet] articles
+
+|===
+
+[[retired-googleplus]]
+
+The Google+ service shut down https://support.google.com/plus/answer/9217723[on 2019 April 2].
+
+[cols=",,",options="header",]
+|===
+|Account name |Links |Administrator(s)
+
+|Fedora Project
+|https://plus.google.com/+Fedora[plus.google.com/+Fedora]
+|*Owner*: link:{FWIKI}/User:Lorddrachenblut[Matthew Williams] +
+*Managers*: link:{FWIKI}/User:Bex[Brian Exelbierd], link:{FWIKI}/User:Bproffit[Brian Proffitt], Caius CHANCE, link:{FWIKI}/User:Cwickert[Christoph Wickert], Izhar Firdaus (KageSenshi), link:{FWIKI}/User:Eischmann[Jiří Eischmann], link:{FWIKI}/User:Jzb[Joe Brockmeier], link:{FWIKI}/User:Jflory7[Justin W. Flory], link:{FWIKI}/User:Kevin[Kevin Fenzi], link:{FWIKI}/User:Markdude[Mark Terranova], link:{FWIKI}/User:Pfrields[Paul W. Frields], link:{FWIKI}/User:Decause[Remy DeCausemaker], link:{FWIKI}/User:Rsuehle[Ruth Suehle], link:{FWIKI}/User:Ryanlerch[Ryan Lerch], link:{FWIKI}/User:Spot[Tom Callaway], link:{FWIKI}/User:Mattdm[Matthew Miller] +
+*Communications manager*: link:{FWIKI}/User:Cprofitt[Charles Profitt]
+
+|Fedora Albania
+|https://plus.google.com/communities/105327757478147133758[plus.google.com/communities/105327757478147133758]
+|link:{FWIKI}/User:G1m[g1m]
+
+|Proyecto Fedora
+|https://plus.google.com/communities/103027051591113621787[plus.google.com/communities/103027051591113621787]
+|link:{FWIKI}/User:Gomix[gomix]
+
+|Fedora Nicaragua
+|https://plus.google.com/+FedoraOrgNi[plus.google.com/+FedoraOrgNi]
+|link:{FWIKI}/User:Williamjmorenor[William Moreno] (owner), link:{FWIKI}/User:Mayorgalinux[Eduardo Mayorga]
+
+|Fedora Portugal
+|https://plus.google.com/communities/109959996284119569153[plus.google.com/communities/109959996284119569153]
+|link:{FWIKI}/User:Cifose[Pedro Andrade] (owner), link:{FWIKI}/User:Nunor5[Nuno Rodrigues]
+
+|===
+
+
+[[security]]
+
+Most official social media accounts are managed by each administrator's personal account on that network, like for Facebook or Google+.
+In cases like LinkedIn, access is granted to individual accounts.
+However, single passwords still exist for most of these accounts.
+The passwords are securely stored within Fedora's infrastructure, along with private assets used by the link:Infrastructure[Infrastructure team].
+As of October 2016, User:Puiterwijk[Patrick Uiterwijk] manages password storage and security.
+
+
+[[historical]]
+
+* Social media was briefly discussed at the link:{FWIKI}/Marketing_FAD_2010[Marketing FAD 2010].
+http://meetbot.fedoraproject.org/fedora-fad/2010-03-15/fedora-fad.2010-03-15-13.15.log.html[complete logs are available (start at 14:10:39)].
+For a shorter recap, see this http://www.youtube.com/watch?v=oh9Yi_2jI_g[video of Neville Cross; Ryan Rix; and Paul Frields explaining the discussion] and http://www.flickr.com/photos/wonderer/4462227596/[a diagram of the whiteboard (photo by Henrik Heigl)].
+* link:{FWIKI}/Status_and_microblogging_SOP[Status and microblogging SOP]
+
+Learn more about the Fedora Marketing Team social media model and discover how you can contribute.
+
+The Fedora Marketing Team operates a three-tiered model for social media contributions:
+
+. xref:#social-media-manager[*Social Media Manager*]
+. xref:#content-contributor[*Content Contributor*]
+. xref:#community-contributor[*Community Contributor*]
+
+Each role focuses on different types of contributions, such as posting content, introducing new ideas for our social media, and sharing updates about other parts of the Fedora Project to keep our users informed.
+Members of each role have different access levels to our social media accounts.
+For instance, Social Media Managers have higher level access to our social media account than those in the other roles.
+Read on for details of each role, types of contributions made within them and how you can get involved.
+
+
+[[social-media-manager]]
+
+Social Media Managers are granted direct access to our social media accounts and are categorized into two specific functions: xref:#account-lead[*Account Lead*] and xref:#account-contributor[*Account Contributor*].
+These functions have varying levels of contribution and responsibility.
+
+[[account-lead]]
+
+An Account Lead acts as a bridge, independently cross-posting content from one Fedora account to another.
+This involves following Fedora on other platforms, staying up-to-date on their activities, and copying content to your assigned account.
+You do not need to source or create new content to share; your focus is on sharing existing content.
+
+The Account Lead role has a more advanced and involved version known as the Curator.
+Curators take full ownership of a social media account, independently sourcing content, crafting posts, and actively engaging with the Fedora and Linux communities.
+This demands a higher level of responsibility, proactive engagement, and a deep understanding of Fedora, its "products," stakeholders, and community dynamics.
+
+[[account-contributor]]
+
+As an Account Contributor, your main responsibility is to post social media content provided by others.
+For instance, you will get a ping by someone with what to post.
+You do not need to come up with content on your own, but focus on executing the posting requests from others.
+A key aspect of this role is being readily available to receive content submissions from others.
+
+[[ways]]
+
+* Social media management
+* Engaging with our users on social media
+* Posting content on our social media accounts
+* Checking and responding to comments, tags, and direct messages
+* Working with individuals in the other roles to schedule and post content
+
+[[social-media-team]]
+
+[cols="1,1"]
+|===
+| Social account | Social Media Manager
+
+| Twitter        | @jwflory
+| LinkedIn       | @jwflory
+| Mastodon       | @josephgayoso
+| Instagram      | @ekidney
+| Youtube        | @ekidney
+|===
+
+.social media contribution model
+image::stream-uploads/social-media-contribution-model.png[A visual aid titled "Social Media Contribution Model". There are four rings of different sizes stacked on top of each other, forming four levels of a pyramid. The pyramid is labeled where the bottom level is the most inclusive and the top level is the most exclusive. The bottom and widest ring is titled, "Community Contributor". The next ring stacked upward is less wider and titled, "Content Contributor". The next ring stacked upward is also less wider and titled, "Account Contributor". The top ring is the most narrow ring and titled, "Account Lead / Curator". The top two rings on the stack are also labeled as "Social Media Managers".]
+
+
+[[content-contributor]]
+
+Content Contributors actively contribute content ideas for social media posts.
+They assist with issues on GitLab that the marketing team needs help with.
+They do not have direct access to our social media accounts but collaborate with social media managers to share content.
+They help in managing social media campaigns, promoting Fedora’s initiatives and events.
+These contributors curate content for use by the Social Media Managers.
+
+[[ways-to]]
+
+* Come up with interesting ideas to post about.
+Write a post on that topic, then follow the submission process below.
+Make sure the content is engaging and aligns with Fedora’s messaging and voice.
+* Work with the xref:need-help.adoc[Marketing Team] to coordinate and manage social media campaigns.
+* Curate content for use by the Lead.
+
+Follow the steps below to submit your content idea to our Social Media Managers.
+
+[[sumbit-post]]
+
+* Open an issue on GitLab for your idea/content in the Fedora https://gitlab.com/fedora/marketing/marketing-planning/-/issues[Marketing Planning] repo.
+* Choose ***social-media-template*** and follow the prompt to submit your idea.
+* A Social Media Manager will review your submission, provide feedback, and approve it for posting.
+
+
+[[community-contributor]]
+
+Community Contributors are people whose primary role at Fedora is not marketing, communications, or promotion.
+They come to the Marketing Team for assistance on promoting their content on social media, such as: social media coverage for specific events, articles, or announcements.
+
+[[ways-to-contribute]]
+
+* Reach out to the Marketing Team with topics, ideas, or requests for social media coverage.
+The easiest way is to join our https://matrix.to/#/#marketing:fedoraproject.org[Matrix room] and simply mention what assistance you need.
+Usually we can accommodate these requests without having to create a ticket on GitLab.
+However, for larger or more complex request, you can create a ticket on GitLab.
+But before then, the team prefers that you ask for help first, and if the request is large, the team will create a ticket if necessary.
+* Inform the marketing team about upcoming events where Fedora will have a presence, requesting promotional coverage.
+
+
+[[changelog]]
+
+For added transparency about when changes are made to this document, a changelog is maintained below.
+
+.Social Media Contribution Model changelog
+|===
+| Version # | Authors | Description
+
+| 1.0
+| Roseline Bassey; Joseph Gayoso; Justin W. Flory
+| Initial release.
+Copyediting led by Bassey.
+|===
+
+These resources will help you take Fedora to the people.
+
+
+[[contact]]
+
+* link:{team_synch_communication}[Our room on Matrix]
+* link:{team_asynch_communication}[Our tag on Fedora Discussion]
+* link:{team_issue_tracker}/-/issues[Our planning discussions on GitLab]
+
+The best way to find and contact the Marketing team is on Matrix/Element or by opening a ticket on GitLab.
+
+
+[[social-media]]
+
+* https://fosstodon.org/@fedora[Mastodon]
+* https://www.instagram.com/thefedoraproject/[Instagram]
+* https://twitter.com/fedora[Twitter]
+* https://www.linkedin.com/company/fedora-project/[LinkedIn]
+* https://www.youtube.com/@fedora/[YouTube]
+
+Don't see your favorite social media platform here?
+*Help us spread the word by joining as a social media manager or helping create content for it!*
+
+
+[[tools]]
+
+* We use https://hackmd.io/[HackMD] for working in collaboration in our notes;
+* We use both https://design.penpot.app[Penpot] and https://inkscape.org/[Inkscape] for our graphic design work.
+They are the same tools the Fedora Design Team uses, so you can also help the Design Team out by learning to use our tools.
+
+// * https://fedoraproject.org/wiki/Marketing/Talking_Points_Topics[Talking Points on Specific Topics]
+// * [[Fedora press material| Fedora press material]]
+// * [[Fedora press archive|  Fedora press archive]]
+// * [[F{{FedoraVersionNumber|current}}_screenshots_library|  Fedora F{{FedoraVersionNumber|current}} Screenshots]]
+// * [[Presentations|  Fedora presentations]]
+// * [[Marketing Fedora flyer|  Fedora flyers]]
+// * [[Design/SXSW_Materials#Brochures | Flyers/Brochures designed for SXSW]]
+// * [[Artwork/PromoBanners|  Fedora banners from the Design team]]
+// * [[Artwork/MarketingCollateral|  Fedora T-Shirts, stickers, userbars, buttons and posters designs from the Design team]]
+// * [[Marketing statistics poster|  Fedora statistics poster]]
+// * [[Marketing social networks|  Social Networks]]
+// * [[Link tracking| Link tracking]] for generating URLs that can be tracked non-invasively from logs
+// * [[/MarketingPlan]]
+// * [[Communication matrix]]
+// * [[Videos]]
+// * For the more PR-oriented, a [[Ambassadors/NA/Draft/NewsMedia_HowTo|News Media Howto]] and the [[Fedora_news_distribution_network_%28NDN%29|Fedora News Distribution Network]].
+
+Fedora Ready is a program by the Fedora Project to support vendors who ship or support Fedora Linux on their hardware.
+// Article content last reviewed and verified by a human on…
+2024-07-31
+
+[NOTE]
+====
+This article is draft content and is not yet finalized.
+This notice will be removed once the Fedora Ready program is officially launched.
+====
+
+The Fedora Ready program supports vendors who meet our criteria in their support of Fedora Linux on their devices.
+Also, we want to simplify the process for our users to find and purchase these supported devices.
+Our xref:ready/list.adoc[central hub] lists all Fedora Ready devices so people can easily locate where to buy them.
+
+
+[[fedora-ready-is-not]]
+
+* Fedora Ready is NOT a certification or endorsement program.
+* Fedora Ready is not a formal partnership program nor are we in legal partnership with vendors listed on our compatibility list.
+Vendors oversee the lifecycle of their devices and offer what makes a good experience for their customers.
+
+
+[[criteria]]
+
+Vendors are listed under Fedora Ready if:
+
+* A vendor is selling a computer with Fedora Linux available pre-installed:
+** We have reputable contact with decision-makers or points of contact within your team.
+** The computer is available for purchase online.
+** If the product is in the pipeline and not ready yet, then we should be in contact in the lead up to the product's launch to tie our promotional efforts to that moment.
+
+* A vendor is officially supporting Fedora Linux as an operating system for their computer:
+** We have reputable contact with decision-makers or points of contact within your team.
+** You need to publicly share which devices have the support for Fedora Linux online.
+** If the support is something that is planned, then we should be in contact with your team to tie promotion to the product's announcement.
+
+* A vendor offers official Fedora Linux support without preinstallation.
+
+* They agree to ship a Fedora Linux Edition (such as https://fedoraproject.org/kde/[Fedora KDE Plasma Desktop] or https://fedoraproject.org/workstation/[Fedora Workstation]) unmodified when using the Fedora trademark and are in compliance with all Fedora trademark guidelines.
+
+[NOTE]
+====
+The criteria outlined here are subject to change as the program evolves.
+We expect to iterate and refine these criteria based on how vendors support Fedora Linux and as the program develops over time.
+====
+
+
+[[delisting]]
+
+Fedora Ready vendors are hardware companies that meet our criteria in their support of Fedora Linux on their hardware.
+To keep our program running smoothly, we occasionally re-evaluate vendor offerings for compliance.
+If a vendor's support of Fedora Linux on their device no longer align with our criteria, we may need to remove them from the list.
+This helps us maintain the program's value.
+
+[[delisting-criteria]]
+
+* A vendor decides to stop supporting Fedora Linux on their devices after confirmation.
+* A vendor ships a modified Fedora  Linux when using the Fedora trademark or in a manner that differs from what we offer directly to our users.
+* A vendor is non-compliance with all Fedora trademark guidelines.
+* A vendor's actions conflict with our values or become detrimental to the program's integrity.
+In such cases, we reserve the right to take necessary actions, including removing the vendor and /or product from the program, to protect the integrity of the program and our trademark.
+
+[[delisting-process]]
+
+*Initial Communication*:
+If a vendor does not meet our criteria, we will notify the vendor about the possibility of being delisted.
+We will specify the issues observed and the criteria they have failed to meet.
+
+*Vendor Response Period*:
+The vendor will have a specified period (e.g., 30 days) to respond to the notification and implement the necessary corrective actions to comply with Fedora Ready standards.
+
+*Evaluation of Response*:
+After the response period, we will re-evaluate the vendor’s status.
+If the vendor has addressed the issues satisfactorily, we will continue their listing with a probationary review scheduled.
+If the vendor has failed to comply or the response is unsatisfactory, we will proceed to the next step.
+
+*Final Decision and Notification*:
+We will make a final decision on delisting the vendor.
+If delisting is decided, we will notify the vendor of the decision and the reasons for it.
+
+*Update Listing*:
+We will update the xref:ready/list.adoc[Fedora Ready compatibility list] accordingly.
+
+
+[[limitations]]
+
+Our program is run by a dedicated team of volunteers, who are not full-time employees.
+This means that we do not have full-time availability or dedicated company resources, but our commitment to supporting vendors remains unwavering.
+
+[[vendors]]
+
+- *Availability:*
+Our team members volunteer their time alongside their personal and professional commitments.
+Because of this, our response times may be a bit longer than what you might expect from a full-time corporate team.
+
+- *Resources:*
+We do not have specific resources allocated exclusively for this program.
+However, we are here to provide feedback and guidance in various forms.
+Ultimately, it is up to the vendors to implement and support Fedora Linux on their devices.
+
+[[past]]
+
+Despite these constraints, we have successfully provided support to vendors in various ways.
+Here are a few examples of what we have helped vendors with in the past:
+
+* Two product launches for Slimbook which has included social media campaigns, distribution to media outlets, co-writing of the product's announcement, and an episode on the https://fedoraproject.fireside.fm/31[Fedora Podcast]
+* Direct and confidential contact with the Fedora Quality Team for quick help with issues as they have arisen (not promised, case by case)
+* The Fedora Ready xref:ready/list.adoc[compatibility list]
+* Regular social media posts and boosts between accounts to support each other among our respective communities
+
+
+[[support]]
+
+Fedora Ready support vendors by offering:
+
+* Marketing support through Fedora's channels.
+* Technical support for integrating Fedora Linux with their hardware.
+* Liaison support to foster community connections.
+* Curating feedback from users.
+
+
+[[devices]]
+
+* *Fedora preinstalled:*
+Computers that come with Fedora Linux officially preinstalled by the vendor.
+* *Fedora supported by vendor:*
+Computers tested and verified to run Fedora Linux successfully.
+* *Fedora may run:*
+Computers that may run Fedora Linux successfully based on informal assurances from the vendor.
+
+For example, some Lenovo devices have not been tested for Fedora Linux, but they were tested for Ubuntu.
+The Lenovo Linux team has informally said that Fedora Linux has a decent chance of running on those devices.
+
+
+[[list]]
+
+You can find Vendors and Fedora Ready approved devices on our xref:ready/list.adoc#fedora-ready-approved-devices[compatibility list].
+
+
+[[contact]]
+
+Vendors interested joining the Fedora Ready program can email us at fedora-ready-team [at] fedoraproject [dot] org.
+Then, we will discuss how to get you onboard.
+
+
+[[changelog]]
+
+For added transparency about when changes are made to this document, a changelog is maintained below.
+
+.Social Media Contribution Model changelog
+|===
+| Version # | Authors | Description
+| 1.1
+| Neal Gompa
+| Clarify and genericize the requirement to allow any Fedora Edition.
+| 1.0
+| Roseline Bassey; Joseph Gayoso; Justin Wheeler
+| Initial release.
+Copyediting led by Bassey.
+|===
+
+Roseline Bassey <roseline-bassey@fedoraproject.org>; Justin W. Wheeler <jww@fedoraproject.org>; Fedora community contributors
+// Article content last reviewed and verified by a human on…
+2025-02-17
+
+*Official Fedora Ready Brand Elements Usage and Guidelines*
+
+This document outlines the proper use of the Fedora xref::ready/index.adoc[Fedora Ready] identity elements.
+It is important to note that the Fedora Ready brand guidelines are secondary to the xref:legal::trademarks.adoc[Fedora Trademark Guidelines].
+Therefore, the Fedora Trademark Guidelines take precedence over everything outlined in this document.
+
+
+[[fedora-ready]]
+
+Fedora Ready is a promotional program by the Fedora Project to support hardware vendors who preload Fedora Linux in their hardware or have tested their hardware to be compatible with Fedora Linux.
+The program aims to also simplify the process for our users to identify and purchase Fedora Ready approved devices.
+
+
+[[guideline-usage]]
+
+Use this guideline if you are working with our brand elements and want to be sure that you are following the guidelines.
+If you want to do something different with the logo, please email fedora-ready-team [AT] fedoraproject [DOT] org and we will be happy to help you.
+
+
+[[messaging]]
+
+Fedora Ready messaging is clear, friendly, and straightforward.
+As a means to promote Fedora Ready vendors and devices, we utilize various Fedora social channels.
+Our messaging or content is part of our brand asset, and it must remain unaltered.
+If you must use our marketing content you must provide us the credit.
+Vendors do not need to imitate our messaging style since they are free to create their own marketing messages tailored to their business.
+
+
+[[logo]]
+
+The Fedora Ready logo represents the Fedora Ready program and all that it does.
+We aim for a simple and modern design that makes our brand stand out and is easily identifiable.
+
+[NOTE]
+====
+*Do not use the Fedora Ready logos on this page without written permission*.
+The images on this page are Fedora trademarks and are not licensed for reuse.
+Please obtain permission for using the Fedora trademark and follow all applicable guidelines set out on this page and in the xref:legal/trademarks.adoc[official trademark guidelines].
+====
+
+[cols="1a,1a,1a",frame=none,grid=none,nostriping]
+|===
+
+|image::fedora-ready/fedora-ready.svg[static,300]
+Default logo (preferred)
+
+|image::fedora-ready/fedora-ready-monochrome-blue.svg[static,300]
+Blue
+
+|image::fedora-ready/fedora-ready-monochrome-white.svg[static,300]
+White
+
+|image::fedora-ready/fedora-ready-var2.svg[static,300]
+Tritone variant 2
+
+|image::fedora-ready/fedora-ready-var3.svg[static,300]
+Tritone variant 3
+
+|image::fedora-ready/fedora-ready-var4.svg[static,300]
+Tritone variant 4
+
+|===
+
+
+[[obtaining-logo]]
+
+For formal approval on the use of Fedora Ready brand elements, please follow this process:
+
+- Open a new ticket on https://pagure.io/Fedora-Council/tickets/new_issue[Fedora Council repository] to make your request.
+- If approved, read this part of the link:{url_wiki}/Logo/UsageGuidelines#Obtaining_the_Fedora_logo_to_your_specifications[Fedora logo guldeline] on how to obtain the logo.
+
+
+[[logo-usage]]
+
+The "Fedora Ready" name and logo are trademarks of Red Hat, Inc.
+Please follow the following guidelines for the proper usage of our name and logo.
+
+
+[[usage-guidelines]]
+
+* “Fedora Ready” name and logo should not be used in any context that implies Fedora officially endorses a vendor, hardware, product, or service or in a way that implies an affiliation with Fedora and/or Fedora Ready brand.
+* *The Fedora Ready Logo:*
+The Fedora Ready logo is our primary logo.
+It is made up of Fedora emblem, "READY" label, and a gimmick. It should only be used on white, black, or gray backgrounds.
+* Ensure sufficient contrast between the logo and the background.
+* Maintain a clear space around the logo equal to the height of the letter "X".
+This ensures other elements do not crowd the logo.
+* Our logo should be used in a manner that aligns with our brand values and identity.
+* To use our logo you need to request formal approval from the Fedora Ready team with details of the intended use.
+* Provide specifics on where and how the logo will be used and displayed to ensure proper evaluation.
+
+[[logo-size]]
+
+To ensure legibility, the logo should not be smaller than 70 pixels in digital or 20mm in print.
+
+[[incorrect-usage]]
+
+[cols="1a,1a",frame=none,grid=none,nostriping]
+|===
+
+|image::fedora-ready/stretched-logo.jpg[static,300, An image of the Fedora Ready logo that is stretched, indicating incorrect usage.]
+Do not distort, stretch, or compress the logo.
+
+|image::fedora-ready/color-logo.png[static,300, An image of the Fedora Ready logo with altered colors, indicating incorrect usage.]
+Do not change the colors of the logo.
+
+|image::fedora-ready/logo-with-effect.png[static,300, An image of the Fedora Ready logo with added effects, indicating incorrect usage.]
+Do not alter Fedora Ready logo, or add effects such as shadows, gradients, or any other effects.
+
+|image::fedora-ready/flipped-logo.png[static,300, An image of the Fedora Ready logo that is flipped, indicating incorrect usage.]
+Do not rotate or flip the logo. Keep the logo's orientation as it is.
+
+|===
+
+
+[[typography]]
+
+To maintain consistency across all materials we recommend using the following fonts.
+They are both openly licensed and freely shareable:
+
+* *Open Sans*:
+For body text and copy font.
+* *Montserrat*:
+For titles and headlines.
+
+
+[[imagery]]
+
+* Use only the product photos provided by the vendor or on the vendor's product page.
+* Use high-quality, high-resolution product photos or graphics that reflect the professionalism of Fedora Ready.
+
+Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
+// Article content last reviewed and verified by a human on…
+2024-07-24
+
+The Fedora Ready compatibility list includes hardware systems that have been confirmed to work well with the Fedora operating system.
+This list is a part of the xref:ready/index.adoc[Fedora Ready program], which is run by the Fedora Project to support vendors who ship or provide support for Fedora Linux on their devices.
+We keep this list updated to assist our users in making well-informed decisions when purchasing hardware intended for use with Fedora Linux.
+
+
+[[criteria]]
+
+To get your device listed, hardware vendors can check out our xref:ready/index.adoc#criteria[Criteria for Vendor Listing].
+Once you have reviewed it, feel free to xref:ready/index.adoc#contact[contact us] to discuss about adding your device(s) to the list.
+
+
+[[categories]]
+
+Vendors and devices are categorized into three main groups:
+
+* *Fedora preinstalled:*
+Computers that come with Fedora Linux officially preinstalled by the vendor.
+* *Fedora supported by vendor:*
+Computers tested and verified to run Fedora Linux successfully.
+* *Fedora may run:*
+Computers that may run Fedora Linux successfully based on informal assurances from the vendor.
+
+[[fedora-ready-vendors]]
+Please find Fedora Ready hardware and vendor specific page below:
+
+* xref:ready/lenovo.adoc[Lenovo]
+* xref:ready/framework.adoc[Framework]
+* xref:ready/slimbook.adoc[Slimbook]
+* xref:ready/novacustom.adoc[NovaCustom]
+
+Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
+// Article content last reviewed and verified by a human on…
+2024-07-24
+
+Framework Laptop is designed from the outset to be a great Linux laptop.
+The https://frame.work/products/laptop-diy-13-gen-amd[Framework Laptop DIY Edition] comes with no OS loaded to let you bring your favorite Linux distribution.
+
+We’re also working on enabling firmware updates through LVFS to complete the Linux experience.
+Details on Framework Linux laptops are available at https://frame.work/linux
+
+
+[[fedora-supported-by-vendor]]
+
+
+[cols="1,1,1,1,1"]
+|===
+|Level of Support                  |Device Name                                  |Tested Distro     |Where to Purchase           |Notes
+
+
+|Fedora supported by vendor         |Framework Laptop 13 (AMD Ryzen™ 7040 Series) |Fedora 40        |link:https://frame.work/products/laptop-diy-13-gen-amd/configuration/new[purchase page]|  link:https://frame.work/products/laptop-diy-13-gen-amd?tab=overview[product display page]
+|Fedora supported by vendor         |Framework Laptop 16 (AMD Ryzen™ 7040 Series) |Fedora 40        |link:https://frame.work/products/laptop16-diy-amd-7040[purchase page]|                    link:https://frame.work/products/laptop16-diy-amd-7040?tab=overview[product display page]
+
+|Fedora supported by vendor  	    |Framework Laptop 13 (13th Gen Intel® Core™)  |Fedora 40	    |link:https://frame.work/products/laptop-diy-13-gen-intel/configuration/new[purchase page]|link:https://frame.work/products/laptop-diy-13-gen-intel?tab=overview[product display page]
+|Fedora supported by vendor  	    |Framework Laptop 13 (12th Gen Intel® Core™)  |Fedora 40	    |link:https://frame.work/products/refurbished-laptop-diy-12-gen-intel?v=FRANDA0016R[purchase page]        |
+
+|Fedora supported by vendor         |Framework Laptop 13 (11th Gen Intel® Core™)  |Fedora 40	    |link:https://frame.work/products/factory-seconds-framework-laptop-13-diy-edition-11th-gen-intel-core?v=FRANBY0BNC[purchase page]|
+
+
+
+
+Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
+// Article content last reviewed and verified by a human on…
+2025-11-10
+
+Lenovo tests, certifies and supports Linux on several platforms, including the entire ThinkPad, ThinkStation, and ThinkCenter portfolios.
+These platforms provide globally available Linux preloaded systems that are supported by Lenovo.
+
+The goal of the program is to reduce complexity and offer a wider range of platforms in order to provide Linux users with a better user experience and confidence that their system will run well with Linux.
+Support for these platforms is upstream, with firmware updates available through LVFS.
+Lenovo aims to contribute directly to the community upstream projects and to continue improving the Linux experience.
+
+All Fedora preinstalled models have been through extensive testing with the Lenovo QA team and appropriate regulatory checks.
+All Fedora supported models have had Ubuntu certification enablement and Lenovo QA testing. We expect Fedora to run well on them as support is upstream. FW updates are available on LVFS
+
+Lenovo is proud to work closely with the Fedora community to provide open source friendly solutions.
+Details on Lenovo Linux platforms are available on www.lenovo.com/linux.
+
+New (for 2025): Linux discoverability on the US and Canada site is finally working:
+
+https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[USA]
+
+https://www.lenovo.com/ca/en/laptops/results/?visibleDatas=1068%3ALinux[Canada]
+
+Hoping this comes to other geo's soon. In Europe and India look for the "Build Your PC" option on certified laptops and it should have Fedora available if the platform has a Fedora preload.
+
+[[fedora-preinstalled]]
+
+[cols="1,1,1,1"]
+|===
+|Level of Support                     |Device Name                         |Tested Distro    |Where to Purchase
+
+|Fedora preinstalled                  |Thinkpad X1 Carbon 13th Gen (ARL)   |Fedora 42	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] - MIPI camera blocked
+|Fedora preinstalled                  |Thinkpad T16 4th Gen AMD            |Fedora 42 	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US]
+|Fedora preinstalled                  |Thinkpad T14 6th Gen AMD            |Fedora 42	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US]
+|Fedora preinstalled                  |Thinkpad T14 6th Gen Intel          |Fedora 42	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US]
+|Fedora preinstalled                  |Thinkpad P16s 4th Gen AMD           |Fedora 42	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US]
+|Fedora preinstalled                  |Thinkpad P14s 6th Gen AMD           |Fedora 42	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US]
+|Fedora preinstalled                  |Thinkpad X13 6th Gen AMD            |Fedora 42	     |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US]
+|Fedora preinstalled                  |Thinkpad X1 Carbon 12th Gen         |Fedora 39	      |https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083[USA] & link:https://www.lenovo.com/ca/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083[Canada]
+|Fedora preinstalled                  |Thinkpad X1 Carbon 11th Gen         |Fedora 38	      |https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21HMCTO1WWGB3[Europe] & link:https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%253A%252F%252Fdiscussion.fedoraproject.org%252F&bundleId=21HMCTO1WWUS6[North America]
+|Fedora preinstalled                  |Thinkpad T14s 6th Gen AMD             |Fedora 41	      |link:https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[USA] (also in Canada)
+|Fedora preinstalled                  |Thinkpad T14  5th Gen AMD             |Fedora 40	      |link:https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[USA] (also in Canada)
+|Fedora preinstalled                  |Thinkpad T14  5th Gen Intel           |Fedora 40	      |link:https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[USA] (also in Canada)
+|Fedora preinstalled                  |Thinkpad P14s 5th Gen AMD             |Fedora 40	      |link:https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[USA] (also in Canada)
+|Fedora preinstalled                  |Thinkpad P1 7th Gen AMD               |Fedora 40	      |link:https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[USA] (also in Canada)
+
+|Fedora preinstalled                  |Thinkpad X1 Carbon 12th Gen           |Fedora 39	      |link:https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083[USA] & link:https://www.lenovo.com/ca/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083[Canada]
+|Fedora preinstalled                  |Thinkpad X1 Carbon 11th Gen           |Fedora 38	      |link:https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21HMCTO1WWGB3[Europe] & link:https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%253A%252F%252Fdiscussion.fedoraproject.org%252F&bundleId=21HMCTO1WWUS6[North America]
+
+|Fedora preinstalled                  |ThinkPad Z16 1st Gen                  |Fedora 36        |Lenovo Europe - build your own PC (e.g. link:https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21D4CTO1WWGB1[Configure Your PC, Lenovo UK])
+|Fedora preinstalled         	      |ThinkPad Z13 1st Gen                  |Fedora 36        |Lenovo Europe - build your own PC (e.g. link:https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21D2CTO1WWGB1[Configure Your PC, Lenovo UK])
+|Fedora preinstalled         	      |ThinkPad P14s 3rd Gen AMD             |Fedora 37        |Lenovo Europe - build your own PC (e.g. link:https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21J5CTO1WWGB1[Configure Your PC, Lenovo UK])
+
+|===
+
+
+[[fedora-supported-by-vendor]]
+
+[cols="1,1,1,1,1"]
+|===
+|Level of Support                   |Device Name                         |Tested Distro    |Where to Purchase |Notes
+
+|Fedora supported by vendor         |Thinkpad X1 Carbon 13th Gen (LNL)   |Fedora 42+       |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |MIPI camera needs RPM Fusion and is not recommended
+|Fedora supported by vendor  	    |Thinkpad X1 2-in-1 10th Gen         |Fedora 42+       |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad T14s 6th Gen Intel         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad T14s 2-in-1 1st Gen Intel  |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad T16 4th Gen Intel  	 |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad X13 6th Gen Intel          |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad X9-14	 	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |MIPI camera needs RPM Fusion and is not recommended
+|Fedora supported by vendor  	    |Thinkpad X9-15		         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |MIPI camera need RPM Fusion and is not recommended
+|Fedora supported by vendor  	    |Thinkpad P16v 3rd Gen Intel	 |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |Nvidia driver recommended
+|Fedora supported by vendor  	    |Thinkpad P14s 6th Gen Intel         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad P16s 4th Gen Intel         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L13 6th Gen AMD	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L13 2-in-1 6th Gen AMD     |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L14 6th Gen AMD	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L16 2nd Gen AMD	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L13 6th Gen Intel	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L13 2-in-1 6th Gen Intel   |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L14 6th Gen Intel	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad L16 2nd Gen Intel	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad E14 7th Gen Intel	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |Thinkpad E16 3rd Gen Intel	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P2 Tower 2nd Gen       |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P3 Tiny 2nd Gen        |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P3 Ultra 2nd Gen       |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P3 Tower 2nd Gen       |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P8		         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P5		         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation P7		         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkStation PX		         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre Neo30s 5th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre Neo50q 5th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre Neo50s 5th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre Neo50t 5th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre M70a 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCenter M90a 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre M70q 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre M90q 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre M70t 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre M70s 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+|Fedora supported by vendor  	    |ThinkCentre M90s 6th Gen	         |Fedora 42+	   |https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux[e.g. US] |
+
+|Fedora supported by vendor  	    |ThinkPad P16s 1st Gen AMD	         |Fedora 37	   |Depends on supply |
+|Fedora supported by vendor  	    |ThinkPad P1 5th Gen	         |Fedora 37	   |                  |Nvidia driver from RPM Fusion recommended
+|Fedora supported by vendor         |ThinkPad P16 1st Gen	         |Fedora 37	   |                  |Nvidia driver from RPM Fusion recommended
+
+|Fedora supported by vendor  	    |ThinkPad P1 4th Gen	         |Fedora 35	   |                  |Nvidia driver from RPM Fusion recommended
+|Fedora supported by vendor  	    |ThinkPad X1 Carbon 10th Gen	 |Fedora 36	   |                                          |
+
+|Fedora supported by vendor  	    |ThinkPad X1 Carbon 9th Gen	         |Fedora 33	   |                                          |
+|Fedora supported by vendor  	    |ThinkPad P14s AMD 2nd Gen	         |Fedora 35	   |      |
+
+
+|===
+
+
+[[fedora-may-run]]
+
+[cols="1,1,1"]
+|===
+|Level of Support                   |Device Name                         |Tested Distro
+
+
+|Fedora may run              	    |ThinkPad T470	                     |RHEL 7.3
+|Fedora may run                   |ThinkStation P320	                 |RHEL 7.3 - 7.x
+
+
+|Fedora may run              	    |ThinkStation P320 Tiny	             |RHEL 7.3 - 7.x
+|Fedora may run              	    |ThinkStation P330	                 |RHEL 7.5 - 7.x
+|Fedora may run	             	    |ThinkStation P330 Tiny	             |RHEL 7.5 - 7.x, 8.2 - 8.x
+
+
+|Fedora may run	             	    |ThinkStation P330 2nd Gen	         |RHEL 8.0 - 8.x
+|Fedora may run	             	    |ThinkStation P340	                 |RHEL 8.6
+|Fedora may run	             	    |ThinkStation P340 Tiny   	         |RHEL 8.5
+
+
+|Fedora may run	             	    |ThinkStation P348	                 |RHEL 8.5
+|Fedora may run	             	    |ThinkStation P350 Tiny	             |RHEL 8.5
+|Fedora may run              	    |ThinkStation P350	                 |RHEL 8.6
+
+
+|Fedora may run	             	    |ThinkStation P358	                 |RHEL 8.6
+|Fedora may run              	    |ThinkStation P360 Tower	         |RHEL 8.6
+|Fedora may run	             	    |ThinkStation P360 Tiny	             |RHEL 8.6
+
+
+|Fedora may run	             	    |ThinkStation P360 Ultra	         |RHEL 8.6
+|Fedora may run	             	    |ThinkStation P5	                 |RHEL 8.7
+|Fedora may run              	    |ThinkStation P7	                 |RHEL 8.7
+
+
+|Fedora may run	             	    |ThinkStation P520	                 |RHEL 7.3 - 7.x, 8.6 - 8.x
+|Fedora may run              	    |ThinkStation P520c	                 |RHEL 7.3 - 7.x, 8.5 - 8.x
+|Fedora may run	             	    |ThinkStation P620	                 |RHEL 8.6
+
+
+|Fedora may run                     |ThinkStation P720	                 |RHEL 7.3 - 7.x, 8.5 - 8.x
+|Fedora may run	             	    |ThinkStation P920	                 |RHEL 7.3 - 7.x, 8.5 - 8.x
+|Fedora may run	             	    |ThinkPad Edge A485	                 |RHEL 7.5
+|Fedora may run	             	    |ThinkPad P1	                     |RHEL 7.5 - 7.x
+
+
+|Fedora may run              	    |ThinkPad P1 3rd Gen	             |RHEL 8.3
+|Fedora may run	             	    |ThinkPad P14s (Type: 20S4)	         |RHEL 8.2
+|Fedora may run	             	    |ThinkPad P14s AMD (Type: 20Y1)	     |RHEL 8.3
+
+
+|Fedora may run	             	    |ThinkPad P14s Gen 3	             |RHEL 8.7
+|Fedora may run	                 |ThinkPad P15 Gen 1   	                 |RHEL 8.3
+|Fedora may run              	    |ThinkPad P15 Gen 2	                 |RHEL 8.6
+
+
+|Fedora may run	             	    |ThinkPad P15s	                     |RHEL 8.2
+|Fedora may run	             	    |ThinkPad P15v	                     |RHEL 8.3
+|Fedora may run	             	    |ThinkPad P15v Gen 2	             |RHEL 8.6
+
+
+|Fedora may run              	    |ThinkPad P15v Gen 3	             |RHEL 9.1
+|Fedora may run	             	    |ThinkPad P15v Gen 3 AMD	         |RHEL 9.1
+|Fedora may run	             	    |ThinkPad P16s	                     |RHEL 9.1
+
+
+|Fedora may run	             	    |ThinkPad P17 Gen 1	                 |RHEL 8.3
+|Fedora may run	             	    |ThinkPad P17 Gen 2	                 |RHEL 8.6
+|Fedora may run	             	    |ThinkPad P51	                     |RHEL 7.3 - 7.x
+
+
+|Fedora may run	             	    |ThinkPad P51s	                     |RHEL 7.3 - 7.x
+|Fedora may run	             	    |ThinkPad P52	                     |RHEL 7.5 - 7.x
+|Fedora may run	             	    |ThinkPad P52s	                     |RHEL 7.4 - 7.x
+
+
+|Fedora may run	             	    |ThinkPad P43s	                     |RHEL 8.1
+|Fedora may run	             	    |ThinkPad P53	                     |RHEL 8.1
+
+
+|Fedora may run	             	    |ThinkPad P53s	                     |RHEL 8.0 - 8.x
+|Fedora may run	             	    |ThinkPad P71	                     |RHEL 7.3 - 7.x
+|Fedora may run              	    |ThinkPad P72	                     |RHEL 7.5 - 7.x
+|Fedora may run	             	    |ThinkPad T14	                     |RHEL 8.2 - 8.x
+
+
+|Fedora may run	                    |ThinkPad T14 AMD	                 |RHEL 8.5
+|Fedora may run	                    |ThinkPad T14 AMD Gen 2	             |RHEL 8.5
+|Fedora may run	             	    |ThinkPad T14 Gen 2	                 |RHEL 8.6
+
+
+|Fedora may run              	    |ThinkPad T14 Gen 3	                 |RHEL 9.1
+|Fedora may run	             	    |ThinkPad T14 Gen 3 AMD	             |RHEL 8.7
+|Fedora may run              	    |ThinkPad T14s	                     |RHEL 8.2 - 8.x
+
+
+|Fedora may run	             	    |ThinkPad T14s AMD	                 |RHEL 8.3
+|Fedora may run	            	    |ThinkPad T14s AMD Gen 2	         |RHEL 8.5
+|Fedora may run              	    |ThinkPad T14s Gen 2	             |RHEL 8.4
+
+
+|Fedora may run	            	    |ThinkPad T14s Gen 3	             |RHEL 8.6
+|Fedora may run	             	    |ThinkPad T14s Gen 3 AMD	         |RHEL 8.7
+|Fedora may run             	    |ThinkPad T14s Gen 4	             |RHEL 9.2
+
+
+|Fedora may run	                  |ThinkPad T15	                     |RHEL 8.2
+|Fedora may run	                  |ThinkPad T15p	                     |RHEL 8.3
+|Fedora may run                   |ThinkPad T15 Gen 2	                 |RHEL 8.5
+
+
+|Fedora may run	                 |ThinkPad T15p Gen 2	             |RHEL 8.5
+|Fedora may run	                 |ThinkPad T15p Gen 3	             |RHEL 9.1
+|Fedora may run	                 |ThinkPad T15g Gen 2	             |RHEL 8.6
+
+
+|Fedora may run	          	    |ThinkPad T16	                     |RHEL 9.1
+|Fedora may run	           	    |ThinkPad T16 AMD	                 |RHEL 8.7
+
+
+|Fedora may run	                |ThinkPad T470	                     |Redhat RHEL 7.3 - 7.x
+|Fedora may run	                |ThinkPad T470p	                     |Redhat RHEL 7.3 - 7.x
+|Fedora may run                 |ThinkPad T470s	                     |Redhat RHEL 7.3 - 7.x
+
+
+|Fedora may run	                |ThinkPad T480	                     |RHEL 7.4 - 7.x
+|Fedora may run	                |ThinkPad T480s	                     |RHEL 7.4 - 7.x
+|Fedora may run                 |ThinkPad T490	                     |RHEL 7.6 - 7.x
+
+
+|Fedora may run	                |ThinkPad T490s	                     |RHEL 8.0 - 8.x1
+|Fedora may run	                |ThinkPad T570	                     |Redhat RHEL 7.3 - 7.x
+
+
+|Fedora may run           	    |ThinkPad T580	                     |RHEL 7.4 - 7.x
+|Fedora may run	           	    |ThinkPad T590	                     |RHEL 7.6 - 7.x
+|Fedora may run            	    |ThinkPad X1 Extreme	               |RHEL 7.5 - 7.x
+
+
+|Fedora may run                 |ThinkPad X1 Extreme 3rd Gen	       |RHEL 8.3
+|Fedora may run	           	    |ThinkPad X1 Extreme 4th Gen	       |RHEL 8.5
+|Fedora may run           	    |ThinkPad X1 Carbon 5th Gen	         |Redhat RHEL 7.3 - 7.x
+|Fedora may run	           	    |ThinkPad X1 Carbon 6th Gen	         |RHEL 7.4 - 7.x
+
+
+|Fedora may run	                |ThinkPad X1 Carbon 8th Gen	         |RHEL 8.2
+|Fedora may run	                |ThinkPad X1 Carbon 9th Gen	         |RHEL 8.4
+|Fedora may run	                |ThinkPad X1 Carbon 10th Gen	     |RHEL 8.6
+
+
+|Fedora may run	                |ThinkPad X1 Carbon 11th Gen	     |RHEL 9.2
+|Fedora may run	                |ThinkPad X1 Nano	                 |RHEL 8.4
+|Fedora may run                 |ThinkPad X1 Yoga 3rd	             |RHEL 7.4 - 7.x
+
+
+|Fedora may run	                |ThinkPad X1 Yoga 5th Gen	         |RHEL 8.2
+|Fedora may run	                |ThinkPad X1 Yoga 6th Gen	         |RHEL 8.4
+|Fedora may run	           	    |ThinkPad X13	                     |RHEL 8.2
+
+
+|Fedora may run	                |ThinkPad X13 Gen 2	                 |RHEL 8.4
+|Fedora may run                 |ThinkPad X13 AMD	                  |RHEL 8.3
+|Fedora may run                 |ThinkPad X13 Gen 2 AMD	             |RHEL 8.4
+
+
+|Fedora may run                 |ThinkPad X13 Gen 3 AMD	             |RHEL 8.6
+|Fedora may run	                |ThinkPad X13 Yoga	                 |RHEL 8.2
+|Fedora may run            	    |ThinkPad X13 Yoga Gen 2	         |RHEL 8.4
+
+
+|Fedora may run	                |ThinkPad X270	Redhat               |RHEL 7.3 - 7.x
+|Fedora may run                 |ThinkPad X280	                     |RHEL 7.4 - 7.x
+|Fedora may run                 |ThinkPad X380 Yoga	                 |RHEL 7.4 - 7.x
+
+
+|Fedora may run	                |ThinkPad X390	                     |RHEL 7.6 - 7.x
+|Fedora may run	                |ThinkPad X390 Yoga	                 |RHEL 8.0 - 8.x
+|Fedora may run	                |ThinkPad Yoga 370	                 |Redhat RHEL 7.3 - 7.x
+|===
+
+Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
+// Article content last reviewed and verified by a human on…
+2025-05-22
+
+NovaCustom builds fully customizable laptops tailored to your exact needs.
+Select your CPU, GPU, RAM, storage and even a custom-engraved chassis.
+All systems ship with Dasharo coreboot open source firmware and include an Intel ME “Disabled (HAP-bit)” mode that stops the Management Engine at boot for maximum privacy.
+
+As a Fedora Ready vendor, NovaCustom ensures full upstream support and contributes back to https://www.coreboot.org/[coreboot] and other open source communities.
+Learn more at https://novacustom.com/.
+
+
+[[fedora-preinstalled]]
+
+[cols="1,1,1,1"]
+|===
+|Level of Support                     |Device Name        |Tested Distro      |Where to Purchase
+
+|Fedora preinstalled                  |V54 Series         |Fedora 42	      |link:https://novacustom.com/product/v54-series/[Worldwide]
+|Fedora preinstalled                  |V56 Series         |Fedora 42	      |link:https://novacustom.com/product/v56-series/[Worldwide]
+
+|===
+
+Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
+// Article content last reviewed and verified by a human on…
+2024-07-31
+
+SLIMBOOK has been manufacturing computers optimized for Linux since 2015, shipping them globally with exceptional technical support.
+Additionally, it engages with the community through local projects, partnerships with Linux desktops like Fedora, and offers free courses through its "Linux Center" academy.
+Details on Slimbook Fedora laptops are available at https://fedora.slimbook.com/
+
+[[fedora-preinstalled]]
+
+
+[cols="1,1,1,1,1"]
+|===
+|Level of Support                  |Device Name                                |Tested Distro    |Where to Purchase           |Notes
+
+|Fedora preinstalled               |Elemental 14 and 15 Intel i5 1235U         |Fedora 40        |link:https://slimbook.com/en/shop/category/laptops-elemental-6[Slimbook Elemental]|
+|Fedora preinstalled               |Elemental 14 and 15 Intel i7 1255U         |Fedora 40        |link:https://slimbook.com/en/shop/category/laptops-elemental-6[Slimbook Elemental]|
+
+
+|Fedora preinstalled               |Executive 14 and 16 intel i7 13700H        |Fedora 40        |link:https://slimbook.com/en/shop/category/laptops-executive-8[Slimbook Executive]|
+|Fedora preinstalled               |HERO intel i7 13629 H                      |Fedora 40        |link:https://slimbook.com/en/shop/category/laptops-hero-9[Slimbook HERO]|
+
+
+|Fedora preinstalled               |Slimbook FEDORA 14 and 16 Intel i7 12700H  |Fedora 39        |link:https://fedora.slimbook.com/[fedora.slimbook.com]| No longer on sale; compatible with Fedora 39
+|Fedora preinstalled               |ProX 14 and 15 AMD Ryzen 7 5700U           |Fedora 39        |link:https://slimbook.com/en/shop/category/laptops-prox-7[Slimbook ProX]| No longer on sale; compatible with Fedora 39
+
+
+|Fedora preinstalled               |ProX 15 AMD Ryzen 7 5700U WQHD             |Fedora 39        |link:https://slimbook.com/en/shop/category/laptops-prox-7[Slimbook ProX]| No longer on sale; compatible with Fedora 39
+|Fedora preinstalled               |HERO S intel i7 11800 H                    |Fedora 39        |link:https://slimbook.com/en/shop/category/laptops-hero-9[Slimbook HERO]| No longer on sale; compatible with Fedora 39
+|Fedora preinstalled               |Excalibur 16 AMD Ryzen 7 7840HS            |Fedora 39        |link:https://slimbook.com/en/shop/product/excalibur-16-amd-ryzen-7-7840hs-1267?category=60[Slimbook Excalibur]| No longer on sale; compatible with Fedora 39
+
+Our formal processes for getting things done.
+
+* link:{team_issue_tracker}/-/issues/13[Defining who is officially part of the Marketing team]
+* https://gitlab.com/fedora/mindshare/home/-/issues/26[Defining who gets access to our social media profiles]
+* xref:sops/stream-uploads.adoc[Processing event VODs (how we turn the livestreams into separate talks)]
+* xref:get-involved.adoc#meetings[Organizing and running team meetings]
+** https://gitlab.com/fedora/marketing/marketing-planning/-/issues/13[Marketing Team Membership ^[🡵\]^]
+** https://gitlab.com/fedora/mindshare/home/-/issues/26[Social Media Access ^[🡵\]^]
+
+Adrian Edwards <moralcode@fedoraproject.org>; Justin W. Wheeler <jww@fedoraproject.org>; Fedora community contributors
+
+This guide outlines a streamlined procedure for processing Fedora livestreams (e.g., Flock, release parties, Fedora Week of Diversity), making it easier to edit and share recordings of these events.
+This standardized workflow utilizes tools and automation to minimize manual effort and ensure consistency.
+
+.Tools You'll Need
+* https://www.mifi.no/losslesscut/[LosslessCut] (version 3.62.0 or later recommended)
+* https://sponsor.ajay.app/[Sponsorblock] (optional, but highly recommended)
+* https://inkscape.org/[Inkscape] with the https://gitlab.com/Moini/nextgenerator[Next Generator extension] (for creating thumbnails)
+* Python scripts (provided in the guide)
+
+[NOTE]
+====
+This workflow assumes you have basic familiarity with command-line tools and video editing concepts.
+====
+
+[[preparing-metadata]]
+
+This process relies on a CSV file (comma-separated values) containing information about each talk (title, speakers, identifier).
+This data is used for automation and consistency.
+
+[[automatic-metadata]]
+
+If your event uses Pretalx, you can automatically generate the CSV file using a Python script:
+
+. Clone the repository:
+`git clone https://gitlab.com/fedora/commops/home.git`
+. Navigate to the script:
+`cd commops/scripts/conference`
+. Run the script:
+`python main.py <Pretalx Schedule URL>`
+
+[NOTE]
+====
+Ensure the Pretalx schedule accurately reflects the livestream order.
+====
+
+The script can also generate YouTube descriptions based on a template file (`description.template.txt`).
+
+[[manual-metadata]]
+
+If you're not using Pretalx, create a CSV file with these columns:
+
+* `Title`:
+The title of the talk.
+* `Speakers`:
+The speaker(s) of the talk.
+* `Identifier`:
+A unique identifier for the talk (lowercase, no spaces or special characters).
+
+Populate the CSV with information for each talk.
+
+
+[[tagging-segments]]
+
+Use Sponsorblock to tag intermissions and chapters in the YouTube video.
+This helps automate splitting the video later.
+
+. Install the Sponsorblock extension for your browser.
+. Open the YouTube video.
+. Use the Sponsorblock controls to tag intermissions (usually "Intermission/Intro Animation") and optionally tag individual talks as "Chapter."
+. Submit your tags to the Sponsorblock database.
+
+
+[[generating-timestamps]]
+
+YouTube uses a specific format for chapters.
+You can automate this formatting using a Python script:
+
+. Navigate to the script:
+`cd commops/scripts/timestamps`
+. Run the script:
+`python main.py <YouTube video URL> [<stream CSV file>]`
+
+The script will generate the timestamps.
+If you provide the stream CSV, it will also fill in the talk titles.
+
+Alternatively, you can manually edit the timestamps from Sponsorblock to match the YouTube format.
+
+
+[[splitting-video]]
+
+Use `yt-dlp` to download the video:
+
+----
+yt-dlp <YouTube video URL>
+----
+
+Then, use LosslessCut to split the video based on the Sponsorblock tags:
+
+. Open LosslessCut and drag the downloaded video into it.
+. Import the `losslesscut.csv` file (if generated) to load the segments.
+. Verify the segments align with the talks.
+. Click the export button and configure the settings:
+* Output folder
+* Output file names: `++${SEG_LABEL}${EXT}++`
+* Enable "Smart cut (experimental)"
+. Click _Export_ to split the video.
+
+
+[[creating-thumbnails]]
+
+Use Inkscape with the Next Generator extension to create thumbnails for each talk:
+
+. Design your thumbnail template in Inkscape, using variables like `%VAR_TalkName%` and `%VAR_PresenterNames%` to represent data from your CSV.
+. Go to *Extensions > Export > NextGenerator*.
+. Configure the export settings:
+* CSV file path
+* File format
+* File name pattern (e.g., `%VAR_Identifier%`)
+. Click _Export_ to generate the thumbnails.
+
+
+[[adding-intros]]
+
+You can add a short intro with the thumbnail at the beginning of each talk using a Python script:
+
+. Navigate to the script:
+`cd commops/scripts/transcode`
+. Prepare a CSV file with talk data (if not already generated).
+. Configure the `config.ini` file with settings for intro duration, etc.
+. Run the script according to the instructions in the README.
+
+
+[[further-automation]]
+
+While this workflow incorporates significant automation, some areas can be further improved:
+
+* *Chapter Creation*:
+Streamline the process of creating YouTube chapters.
+* *Recombining Clips*:
+Automate the handling of interruptions and inconsistencies in the livestream.
+* *Video Reformatting*:
+Automatically convert videos to optimal formats for processing.
+* *Captions*:
+Explore automated captioning and translation solutions.
+* *Audio Processing*:
+Implement loudness normalization and dynamic range compression.
+* *End Cards*:
+Automate the addition of end cards to videos.
+
+These improvements would further enhance the efficiency and robustness of the livestream processing pipeline.
+
+Do you work on a Fedora-related project but can't get people to know it exists?
+
+* *link:{team_issue_tracker}/-/issues/new[Open a ticket in our GitLab]!*
+** *Title must include:* (Team Name) Marketing Ask
+** *Description:* Tell us what your team does and who your team leaders are.
+*** What is your team looking for?
+**** More Contributors?
+**** Capture more attention?
+** *Provide a point of contact:* Matrix ID or email
+
+The Marketing Team reviews tickets during our meetings.
+If your request is more urgent, let us know in our link:{team_synch_communication}[Matrix room] that you opened a ticket.

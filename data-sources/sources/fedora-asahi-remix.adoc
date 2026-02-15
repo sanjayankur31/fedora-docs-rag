@@ -1,0 +1,697 @@
+
+{variant-name} is installed from macOS. The minimum supported macOS versions are 13.5 and 14.2. Due to macOS issues outside of our control, you may be prompted to upgrade to 14.2 if you have an intermediate version.
+
+To install the latest release build, open up the terminal and run the following as a regular user:
+
+....
+$ curl https://fedora-asahi-remix.org/install | sh
+....
+
+Follow the prompts from the script and you'll have Fedora Asahi Remix installed in no time.
+
+If you want to install a nightly build and have more options available (e.g. beta and previous releases), use this command instead:
+
+....
+$ curl https://fedora-asahi-remix.org/builds | sh
+....
+
+If your Mac is having trouble booting, here are some steps you can take to identify the problem and resolve it.
+
+First, identify what happens when you power on the computer and jump to the appropriate section:
+
+- The computer boots into macOS: <<boot-picker>>
+- The boot process fails in the U-Boot console screen with an error message mentioning a kernel or initramfs: <<entering-grub>>
+- The boot process gets stuck in the U-Boot console: <<uboot-troubleshoot>>
+- The boot process gets stuck in the m1n1 console, ending with `Running proxy...`: <<stage2-troubleshoot>>
+- The computer shows the Apple logo and then goes blank (laptops, iMacs) or there is no display output (desktops) but it does not reboot: <<stage1-repair>>
+- The computer shows the Apple logo and a progress bar (laptops, iMacs) or no display output (desktops) and then reboots repeatedly, finally showing a recovery screen: <<stage1-repair>>
+- The computer shows an exclamation point icon and a support URL (laptops, iMacs) or the power LED blinks in an SOS pattern (desktops): <<machine-recovery>>
+
+
+You can select which OS boots, either temporarily or permanently, by using the system's built in Boot Picker. To do this, with the machine fully powered down:
+
+- Press and hold the power button
+- Keep holding until the screen reads "Entering startup options" (laptops, iMacs) or the power LED dims slightly (desktops), then release.
+
+This will display the Boot Picker, where you can select the next operating system to boot. By default, the selection will be temporary. To make your choice permanent for all subsequent boots, click on the desired boot option while holding down the Option key on the keyboard.
+
+You can also choose the rightmost "Options" icon to enter recoveryOS, which you can use to perform recovery operations. You may be prompted for your macOS login credentials, depending on the security state of your machine. Once at the main recoveryOS options screen, you can open a Terminal window by pressing Shift-Command-T.
+
+
+If there is a problem during a kernel package upgrade or some other issue that prevents the kernel from booting properly, you may need to enter the GRUB menu to select a different kernel or alter boot options.
+
+Server and Minimal installs should show the GRUB menu by default. For desktop installs, you have to press Escape at the right time to enter the GRUB menu. When the system boots, you will see the display cycle through m1n1 (Asahi Linux or Fedora logos) and U-Boot (text screen with U-Boot logo on the top right). The U-Boot screen will show a brief countdown. Press Escape immediately *after* the countdown reaches 0 to enter the GRUB boot menu.
+
+From there, you can choose an older kernel version (e.g. to recover from a failed kernel install), or change the boot options (e.g. to reset your password or recover from other system issues).
+
+
+U-Boot can have trouble with certain kinds of USB devices. If you are seeing strange behavior or logs from U-Boot, try disconnecting all USB devices (except a single keyboard, for desktop machines).
+
+If you are having trouble getting an external keyboard to work in the U-Boot or GRUB menus, you may want to try using another USB port (e.g. Type C with an adapter instead of Type A) or a different keyboard. As U-Boot can only support a single keyboard, make sure no other USB devices that emulate a keyboard are connected. This includes some USB mice as well as certain USB tokens, barcode readers, etc. (YubiKeys should already be excluded and ignored in U-Boot).
+
+
+If the m1n1 console is displayed and shows a `Running proxy...` message, this typically means that m1n1 stage 1 had trouble loading m1n1 stage 2.
+
+If this occurred after a system update, it is possible that the new updated stage 2 binary was not installed correctly. You can boot into macOS or recoveryOS (see the <<boot-picker>> section) and perform the following steps to revert to the previous version of m1n1 stage 2 and U-Boot.
+
+. Open a Terminal
+. Type `diskutil list | grep EFI` to see the available EFI partitions
+. The EFI partition will be named something similar to `EFI - FEDOR`. Make note of the identifier on the right, e.g. `disk0sX`.
+. Type `sudo diskutil mount disk0sX` with the identifier you obtained above to mount the partition.
+. Navigate to the mountpoint with `cd "/Volumes/EFI - FEDOR"` (replacing `EFI - FEDOR` with your volume name).
+. Navigate to the `m1n1` subdirectory: `cd m1n1`.
+. List the files with `ls`. There should be a `boot.bin` file and a `boot.bin.old` file.
+. Rename the current file to an inactive name: `mv boot.bin boot.bin.new`.
+. Rename the old file to the active name: `mv boot.bin.old boot.bin`.
+
+If you are running under macOS, you may also perform the file management steps with Finder. After mounting the partition with `diskutil`, it will appear in the Finder sidebar.
+
+After reverting `m1n1.bin`, boot back into {variant-name} to test the reverted version of m1n1 stage 2 and U-Boot.
+
+Note that reverting the m1n1 stage 2 binary to the previous version is not guaranteed to work correctly, as sometimes there are incompatible device tree changes that accompany kernel version updates. You may find that some hardware does not work properly after the reversion. After a successful boot into Linux, you should run `sudo update-m1n1` to update to the current version, and reboot again.
+
+
+Sometimes, the system's Boot Policy for {variant-name} might become corrupted. This sometimes occurs after macOS upgrades (due to bugs in Apple's upgrade process). If this happens, attempting to boot that operating system will instead immediately reboot. If that OS is the default boot OS, the computer will reboot repeatedly until it triggers an OS recovery screen. If this happens, you need to restore m1n1 stage 1 and the associated Boot Policy.
+
+It is also possible for a system firmware upgrade to trigger an incompatibility in m1n1 stage 1, requiring an update. This can happen if you update to macOS Sonoma 14.5 or later, with a m1n1 stage 1 older than 1.4.13 (released May 2024), due to a bug in those older m1n1 versions. To resolve this, update m1n1 stage 1.
+
+The process for both of the above situations is the same. First, follow the steps in <<boot-picker>> to boot into recoveryOS (preferred) or macOS, and open a Terminal. Ensure you are connected to the internet, and then run the {variant-name} installer again, using the instructions in the xref:installation.adoc[Installation] page (or the steps available on https://asahilinux.org[asahilinux.org]). Once the installer starts, one of the available options should be to `Repair an incomplete installation` (`p`) or `Upgrade m1n1 on an existing OS` (`m`). Choose the appropriate option and follow the instructions to upgrade or reinstall m1n1 stage 1.
+
+If you need to reinstall m1n1 stage 1 or otherwise reset the Boot Policy but the installer does not prompt with either of the above two options, you can run `bputil -f` and then select the UUID corresponding to the installation that you wish to repair (this will be displayed when you start up the installer, in the partition list). Follow the prompts to reset your Boot Policy, which will erase the m1n1 bootloader and place the installation into the "incomplete" state. Once this is complete, you may follow the steps above again to launch the installer and select the "Repair" option, which should now be available. We have heard some reports that this situation can occur after machines are sent to Apple for servicing.
+
+
+If your machine is stuck displaying an exclamation mark icon (laptops and iMacs) or SOS LED blink pattern (desktops), you may need to perform a DFU Revive or Restore. To determine if this is necessary, first try to boot using both the current paired recoveryOS and the System recoveryOS.
+
+To boot using the current recoveryOS:
+
+- Fully power down the machine
+- Press and hold the power button
+- Keep holding until the screen reads "Entering startup options" (laptops, iMacs) or the power LED dims slightly (desktops), then release.
+
+To boot using the System RecoveryOS:
+
+- Fully power down the machine
+- Quickly press, release, and then press and hold the power button (the whole action should take less than half a second)
+- Keep holding until the screen reads "Entering startup options" (laptops, iMacs) or the power LED dims slightly (desktops), then release.
+
+If either of those processes succeeds and shows the Boot Picker, you can choose an alternate OS to boot or select the "Options" icon to boot recoveryOS and troubleshoot the issue or reinstall another OS from that environment.
+
+
+If your machine fails to boot or enter Startup Options, you may have to perform a DFU Revive or Restore.
+
+A DFU Revive will restore and update System Firmware and Recovery (SFR), while leaving operating systems and data intact. This may be able to resolve some issues, but is not guaranteed to work (e.g. a DFU Revive cannot recover a missing System Recovery partition, but it *can* reinstall recoveryOS into an existing but blank System Recovery partition with the appropriate subvolume).
+
+A DFU Restore will completely wipe all data on the internal storage and restore the machine to factory condition. It is also the only way to downgrade System Firmware to a prior version. This process can recover from any kind of corruption or problem with the internal NVMe storage, and even corruption of the internal NOR Flash storage and several other firmware components. Note that if you perform a DFU Restore, you will lose all data stored on the machine, and it will be returned to its factory condition.
+
+To perform a DFU Revive or Restore, you will need either another Mac running macOS, or a Fedora Linux machine (any hardware) with an available USB port. You will also need an appropriate USB cable to connect both machines together.
+
+
+Follow https://support.apple.com/en-us/108900[Apple's documentation] to learn how to perform a restore using another Mac, using the macOS Finder or Apple Configurator.
+
+If you have trouble putting the machine into DFU mode, you may also wish to refer to the instructions below.
+
+
+You can also boot Fedora Linux on another machine (Intel compatible or Apple Silicon both work), and then use `idevicerestore` to perform the DFU Revive or Restore process.
+
+If you have a spare x86-64 (Intel/AMD) machine that does not currently have Fedora installed, you can follow the steps in the <<fedora-live-dfu,next section>> to temporarily live boot Fedora from a USB stick and set up the environment to be able to perform the DFU Revive/Restore. Once the system is up and running, return to this section to continue the process.
+
+You will need a compatible USB cable. If your host machine has Type A ports, use a Type A to Type C cable. If your host machine has Type C ports, use a Type C to Type C cable. You may also use a Type A to Type C cable together with a female Type A to male Type C adapter. Your cable must support data transfer (USB 2.0 480Mbps is sufficient, though USB 3 cables also work). Thunderboot 3 cables will not work, nor will charge-only cables.
+
+To perform a DFU Revive using a second Fedora machine, follow these steps:
+
+. Ensure you are connected to the Internet.
+- On Fedora Workstation, click on the top right menu bar icon to select a WiFi network (if not using wired Ethernet).
+
+. Open a Terminal.
+- On Fedora Workstation, click on the top left menu icon, type 'terminal' and hit Enter.
+
+. Ensure you have at least 40GB of available disk space in the current working directory. If not, change to another directory that does or add additional storage as needed.
+- If you have followed the below steps to perform a live boot and configure your environment, this is already the case.
+
+. Run the command `sudo dnf install -y idevicerestore usbmuxd` to install `idevicerestore`.
+- If the output indicates that `usbmuxd` was also installed as a dependency (and was not already installed), run `sudo udevadm control --reload` to reload the udev rules. Fedora Workstation live images should already have `usbmuxd` installed.
+
+. Run the command `sudo dmesg -w` to show the live kernel log.
+
+. Connect the USB cable between your host machine and the target machine to be restored. The cable must be connected to a specific USB port on the target machine:
+- For laptops, use the *leftmost* (rearmost) Type C port on the *left* side.
+- For iMacs, facing the rear of the machine, use the *rightmost* Type C port (closest to the power connector).
+- For Mac Mini machines, facing the rear of the machine, use the *leftmost* Type C port.
+- For Mac Studio machines, facing the rear of the machine, use the *rightmost* Type C port.
+- For Mac Pro desktop machines, facing the top of the machine, use the Type C port *farthest* from the power button.
+- For Mac Pro rackmount machines, facing the front of the machine, use the Type C port *closest* to the power button.
+
++
+If you are using a Type A to Type C cable, connect the Type C end to the target machine. The Type A end may be directly connected to the host machine, or to a Type C port via a Type A to Type C adapter. USB hubs may also be used on the host machine side (but not the target machine side).
+
+. Enter DFU mode. The process is different for desktops and laptops (you can pick one of two options for laptops; try both if you have trouble getting it to work).
+- For desktops:
+.. Start with the machine fully powered down.
+.. Unplug the machine from the mains power and wait 30 seconds.
+.. Press and hold down the power button.
+.. While holding down the power button, connect mains power to the machine.
+.. Continue holding down the power button and watch the kernel log. Look for a USB device log that mentions `Product: Apple Mobile Device (DFU Mode)`.
+.. Once you see the log, release the power button.
+- For laptops (method 1):
+.. Start with laptop fully powered down.
+.. Press and release the power button quickly.
+.. *Immediately* press and hold the following keys: Left control, left option, right shift, and the power button.
+.. Count down 10 seconds, then release everything except the power button.
+.. Continue holding down the power button and watch the kernel log. Look for a USB device log that mentions `Product: Apple Mobile Device (DFU Mode)`.
+.. Once you see the log, release the power button.
+- For laptops (method 2):
+.. Start with laptop powered *up* (make sure something is visible on the display).
+.. Press and hold the following keys: Left control, left option, right shift, and the power button.
+.. Wait until the screen turns off, then count down 5 additional seconds, then release everything except the power button.
+.. Continue holding down the power button and watch the kernel log. Look for a USB device log that mentions `Product: Apple Mobile Device (DFU Mode)`.
+.. Once you see the log, release the power button.
+
++
+If you don't see the DFU device in the log, or the Product mentions "Recovery Mode" instead, something went wrong. Retry the steps again.
+The display of the target machine will remain blank in DFU mode.
+
+. On your host machine, press Ctrl-C to stop the dmesg command.
+
+. Run the following command: `systemd-inhibit sudo -s TMPDIR=$PWD idevicerestore -l`.
+
+. When prompted, type '1' to select the latest available macOS/firmware version.
+
+During the Restore process, the target machine will display an Apple logo and a progress bar, while the host machine running `idevicerestore` will print out progress log information. Note that this process involves connecting to Apple's CDN and servers to download system firmware components and authenticate them for your specific machine.
+
+After the process completes successfully, the machine will reboot into the Recovery Assistant. Follow the prompts to select a macOS volume to recover, and enter your macOS authentication credentials. After this process succeeds, your machine will boot into the Boot Picker. From here, you can choose which OS to boot next.
+
+It is likely that any existing {variant-name} installations will become unbootable as a result of the Revive process. If attempting to boot a Linux install triggers a reboot or a Recovery screen, follow the steps in the <<stage1-repair>> section to reinstall m1n1 stage 1 and make the OS bootable again.
+
+If the DFU Revive fails, you will have to perform a DFU Restore. To do so, follow the above steps again, but add the `-e` option to the `idevicerestore` command:
+
+`systemd-inhibit sudo -s TMPDIR=$PWD idevicerestore -l -e`
+
+CAUTION: This will **irreversibly** wipe all data on the target machine.
+
+After a DFU Restore, your machine will be reset to its factory condition and boot into the macOS first-time setup wizard.
+
+
+You can use a USB disk to live-boot Fedora Workstation on any x86-64 machine and perform the DFU restore from that environment, without having to install to local disk. You will need a USB disk with at least **64GB** of capacity.
+
+NOTE: All existing data on the USB disk will be erased.
+
+To set up the USB disk, we recommend using xref:release-docs-home::preparing-boot-media.adoc#fedora_media_writer[Fedora Media Writer]. Follow the steps on that page to download it and write the image to your USB disk, and then boot it on your target machine.
+
+Once the system is booted, follow the following steps to open up a terminal:
+
+. On 'Welcome to Fedora' screen, click 'Not Now'.
+. Click on the top right menu bar icon and connect to a WiFi network (if not using wired Ethernet).
+. Click on the top left menu icon, type 'terminal' and hit enter.
+
+To perform the DFU Restore process, `idevicerestore` needs a large amount of temporary disk space. Since the live image runs from RAM, it does not have enough temporary space available. To create and use a temporary partition in the remaining free space on the USB disk, run the following commands one by one:
+
+```
+device=$(grep /run/initramfs/live /proc/mounts | awk '{ print $1 }' | sed 's/[0-9]*$//')
+echo "size=40G" | sudo sfdisk -a $device
+sudo partprobe $device
+part=$(ls ${device}[0-9] | tail -n 1)
+sudo mkfs.ext4 $part
+sudo mkdir -p /mnt/tmp
+sudo mount $part /mnt/tmp
+sudo chmod 777 /mnt/tmp
+cd /mnt/tmp
+```
+
+Next, continue with the steps in the <<dfu-fedora>> section (you have already performed steps 1-3 and do not need to do them again).
+
+This page documents where Fedora Asahi Remix deviates from Fedora Linux and the reasoning behind.
+
+We are using a https://fedoraproject.org/wiki/Remix[Remix] as opposed to delivering Apple Silicon support in Fedora Linux proper because this ecosystem is still very fast moving and we believe a Remix will offer the best user experience for the time being.
+
+Building a Remix allow us to integrate hardware support as it becomes available and bring it to users as quickly as possible. Nonetheless, as much of this work as possible is being conducted upstream, with most components being developed, maintained and packaged in Fedora Linux proper. Ultimately, we expect Apple Silicon support to be integrated in Fedora Workstation and Fedora Server in a future release, and are working towards this goal. This approach is in line with the overarching goal of the Asahi project itself to integrate support for these systems in the relevant upstream projects.
+
+
+We provide Fedora Asahi Remix in four editions, which map to the stock Fedora Linux deliverables as follows:
+
+- Fedora Linux with KDE Plasma -> Fedora KDE Plasma Desktop
+- Fedora Linux with GNOME -> Fedora Workstation
+- Fedora Server -> Fedora Server
+- Fedora Minimal -> Fedora Everything
+
+The flagship edition for Fedora Asahi Remix is Fedora Linux with KDE Plasma.
+
+
+
+Apple Silicon Macs have a bespoke https://asahilinux.org/docs/Introduction-to-Apple-Silicon[boot process] that requires special considerations to support https://asahilinux.org/docs/Open-OS-Ecosystem-on-Apple-Silicon-Macs[alternative operating systems]. Currently, Fedora Asahi Remix is installed from macOS via the https://github.com/AsahiLinux/asahi-installer[Asahi Installer], which takes care of preparing the system for the installation, downloading an image for Fedora Asahi Remix and laying it on disk.
+
+The Asahi Installer has also the ability to prepare the system and install the supporting components for a barebone UEFI-enabled system. This could potentially be used in the future to support Anaconda-based installation using regular Fedora Linux install media, but it is not currently supported. The work required is tracked in our issue tracker (https://pagure.io/fedora-asahi/project/issue/9[Anaconda], https://pagure.io/fedora-asahi/project/issue/10[disk management tools]).
+
+
+The Asahi Installer does not currently support installing systems using full disk encryption. There is no technical limitation preventing the use of encryption, but currently it is not a supported configuration, and the installer does not provide any facility to set it up. A number of approaches to resolve this (including https://github.com/AsahiLinux/asahi-installer/pull/240[implementing installer suppport]) are currently being discussed upstream in the Asahi Linux project.
+
+
+Fedora Asahi Remix installation images are built using https://osinside.github.io/kiwi/[Kiwi] from the published https://pagure.io/fedora-asahi/kiwi-descriptions[Kiwi descriptions].
+
+
+Because the installation images include additional components that are not part of stock Fedora Linux, they cannot currently be built or hosted on Fedora Infrastructure. We are instead leveraging AWS for this, and more details on the infrastructure deployment are available on our https://docs.fedoraproject.org/en-US/fedora-asahi-remix/how-its-made/#_installation_images[how it's made page].
+
+Since Fedora Linux 40 it is possible to https://fedoraproject.org/wiki/Changes/KiwiBuiltCloudImages[build Kiwi images in Koji]; this will enable the future efforts to build stock Fedora Linux images with Apple Silicon support.
+
+
+Fedora Asahi Remix comes out of the box with a 100% https://wayland.freedesktop.org/[Wayland] environment. Wayland is required to provide a good experience on this platform, and the legacy Xorg server is not supported. Existing X11 applications are fully supported out of the box thanks to XWayland.
+
+
+Fedora Asahi Remix includes a number of components that are not part of stock Fedora Linux; these are preinstalled and delivered via our https://copr.fedorainfracloud.org/groups/g/asahi/coprs/[copr repositories].
+
+These components include `mesa` (https://pagure.io/fedora-asahi/mesa/[source], https://copr.fedorainfracloud.org/coprs/g/asahi/mesa/[copr]), which is tightly coupled to the kernel AGX driver and in active development, and `u-boot` (https://pagure.io/fedora-asahi/uboot-tools[source], https://copr.fedorainfracloud.org/coprs/g/asahi/u-boot/[copr]), which requires patches in the process of being upstreamed.
+
+The kernel is also maintained downstream in a https://gitlab.com/fedora-asahi/kernel-asahi[fork] of the main https://gitlab.com/cki-project/kernel-ark[kernel-ark] repository. The kernel is in active development -- while platform enablement for Apple Silicon is https://asahilinux.org/docs/Feature-Support[in the process] of being upstreamed, currently a downstream kernel is required for the best experience.
+
+Finally, a number of packages specific to the Remix implementation are also maintained downstream; more details on these are available on our https://docs.fedoraproject.org/en-US/fedora-asahi-remix/how-its-made/#_remix_specific_plumbing[how it's made page].
+
+
+Apple Silicon hardware native page-size is 16K; consequently, this is also the Fedora Asahi Remix default, and we deploy the `kernel-16k` variant. While a 4K page-size kernel is available in the `kernel` package, this is completely unsupported and should not be used.
+
+
+We provide a custom Calamares-based first-boot setup wizard to simplify user onboarding. This is only available on the Fedora Linux with KDE Plasma edition and is used in place of `initial-setup`.
+
+
+Fedora Asahi Remix uses btrfs for all of the deliverables. This matches what Fedora Linux does since Fedora Linux 33, with the exception of Fedora Server, which still defaults to XFS. We use btrfs everywhere because we need the ability to online resize the filesystem, so that it can be expanded to fill the available space on the first boot after the installation, and so that users can shrink it as needed if they want to deploy custom layouts.
+
+
+Fedora Asahi Remix automatically installs openh264 on the first boot, enabling playback of H.264-encoded content out of the box. This is possible because of the two-step install process -- the Asahi Installer downloads the necessary packages from Cisco's server and makes them available to the deployed system to the perform the installation via a one-off systemd service.
+
+
+Fedora Asahi Remix provides AppStream metadata that is required to support updates between major releases via PackageKit via `fedora-asahi-remix-appstream-metadata` (https://pagure.io/fedora-asahi/fedora-asahi-remix-appstream-metadata[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-branding/[copr]). However, GNOME Software does not currently support reading this metadata, so it will not present major release updates for Fedora Asahi Remix with GNOME to the user. Instead, one needs to use the DNF https://docs.fedoraproject.org/en-US/quick-docs/upgrading-fedora-offline/[System Upgrade] plugin to perform the update. It is possible to support this properly in GNOME Software by implementing a https://gitlab.gnome.org/GNOME/gnome-software/-/tree/main/plugins[plugin] to consume the AppStream metadata, akin to what https://invent.kde.org/plasma/discover/-/tree/master/libdiscover/appstream[KDE Discover] does.
+
+This page attempts to document how Fedora Asahi Remix is put together. Useful prerequisites to read before this:
+
+- our xref:deviations.adoc[Deviations] page, documenting where the Remix deviates from Fedora Linux and why
+- https://asahilinux.org/docs/platform/introduction/[Introduction to Apple Silicon], which covers some of this platform peculiarities
+- https://asahilinux.org/docs/platform/open-os-interop/[Open OS Ecosystem on Apple Silicon Macs], which explains the boot process and how the OS is laid out
+
+Throughout this document, components hosted outside of Fedora infrastructure will be marked with a ⚠️.
+
+
+The https://fedoraproject.org/wiki/SIGs/Asahi[Fedora Asahi SIG] maintains a number of packages that are required for plaform enablement, integration and implementation. As many of these as possible are maintained in Fedora itself under the https://src.fedoraproject.org/group/asahi-sig[`asahi-sig`] FAS group. This isn't an option for https://docs.fedoraproject.org/en-US/fedora-asahi-remix/deviations/#_downstream_packages_required_for_platform_enablement_are_included[some packages] ⚠️, and those are maintained in https://copr.fedorainfracloud.org[copr] instead, under the https://copr.fedorainfracloud.org/groups/g/asahi/coprs/[`@asahi`] group.
+
+
+Fedora Asahi Remix is installed by the https://src.fedoraproject.org/rpms/asahi-installer[`asahi-installer`], which runs from macOS and guides the user through the installation process. The installation involves resizing partitions, installing a stripped-down standalone copy of macOS and laying the Remix image on disk; the system is then rebooted into recoveryOS, where the the installer second stage takes over and guides the user to adjusting the security settings for the standalone macOS and replacing its kernel with the bundled m1n1 (which comes from the `m1n1-stage1` package), which will later act as a first stage bootloader for the installed system.
+
+The installer is delivered in `asahi-installer-package`; its build process relies on two prebuilt macOS binary artifacts (Python and libffi), which have received a https://pagure.io/fesco/issue/3212[FESCo exception] to the https://docs.fedoraproject.org/en-US/packaging-guidelines/what-can-be-packaged/#prebuilt-binaries-or-libraries[prebuilt policy]. The https://src.fedoraproject.org/rpms/asahi-installer[`asahi-installer`] source package also provides `python3-asahi_firmware`, which is used by https://src.fedoraproject.org/rpms/asahi-scripts[`asahi-scripts`] for firmware management in userspace.
+
+
+After the installation the system boots into Linux by default. The boot flow starts with https://src.fedoraproject.org/rpms/m1n1[`m1n1`]; its stage 1, which was placed by the installer, is responsible for finding and executing the stage 2 from the EFI partition. The main difference between stage 1 and stage 2 is that the former is rarely updated (as the process requires running the installer again and going through recoveryOS), while the latter is distributed by Fedora in the `m1n1` binary package and updated together with the distro (via `update-m1n1` in https://src.fedoraproject.org/rpms/asahi-scripts[`asahi-scripts`]).
+
+Once it's done with platform initialization, `m1n1` will find https://pagure.io/fedora-asahi/uboot-tools[`u-boot`] ⚠️ and pass control to it. U-Boot acts as the third stage bootloader, performing some more platform initialization and providing a minimal preboot environment. In the default flow, U-Boot is setup to provide an emulated UEFI environment, which is used to load GRUB. From here on the boot flow is the standard Fedora Linux one.
+
+
+Apple Silicon machines rely on a large number of firmware blobs to work. Firmware collection is implemented in https://src.fedoraproject.org/rpms/asahi-installer[`asahi-installer`]. Firmware is then loaded as needed in the initramfs via `dracut-asahi`, which is part of https://src.fedoraproject.org/rpms/asahi-scripts[`asahi-scripts`]. An `asahi-fwupdate` package is also provided (also from https://src.fedoraproject.org/rpms/asahi-scripts[`asahi-scripts`]) to apply firmware updates on the Linux side in case new firmware becomes available.
+
+The Asahi Linux project has https://asahilinux.org/docs/Open-OS-Ecosystem-on-Apple-Silicon-Macs#firmware-provisioning[in-depth documentation] of the firmare provisioning process, which is meant to be standardized between distributions.
+
+
+The https://gitlab.com/fedora-asahi/kernel-asahi[kernel package] ⚠️ for Fedora Asahi Remix is maintained as a downstream fork of https://gitlab.com/cki-project/kernel-ark[kernel-ark], including patches from the upstream https://github.com/AsahiLinux/linux[Asahi Linux tree]. Asahi Linux also maintains a https://asahilinux.org/docs/Feature-Support[detailed tracker] of the upstreaming status for every component.
+
+The GPU driver also has a userspace counterpart in the https://docs.mesa3d.org/drivers/asahi.html[asahi driver] in https://pagure.io/fedora-asahi/mesa/[mesa] ⚠️. This is tightly coupled with the AGX driver in the kernel.
+
+
+Apple Silicon machines have a complex speaker setup that requires speaker protection to be safe and a dedicated DSP chain to sound good. This is implemented by https://src.fedoraproject.org/rpms/asahi-audio[`asahi-audio`], which leverages https://src.fedoraproject.org/rpms/rust-bankstown-lv2[`rust-bankstown-lv2`] for bass enhancement, https://src.fedoraproject.org/rpms/rust-speakersafetyd[`rust-speakersafetyd`] for speaker protection and https://src.fedoraproject.org/rpms/rust-triforce-lv2/[`rust-triforce-lv2`] for microphone support, plus https://src.fedoraproject.org/rpms/alsa-ucm-asahi[`alsa-ucm-asahi`] and https://src.fedoraproject.org/rpms/rust-alsa[`rust-alsa`]. PipeWire and WirePlumber have also been enhanced to create the correct virtual audio devices and present them to the user in an understandable way.
+
+
+Some Apple Silicon Macbooks have a https://developer.apple.com/design/human-interface-guidelines/touch-bar[Touch Bar] taking the place of the first row of the keyboard. On Linux this is presented as a regular (albeit odd-sized) display, and it can be driven as such. To make it useful https://src.fedoraproject.org/rpms/rust-tiny-dfr[`rust-tiny-dfr`] renders a set of function keys on it, mimicking what would be available on a physical keyboard.
+
+
+Fedora Asahi Remix ships with out of the box support for H.264-encoded content. This is implemented by having https://src.fedoraproject.org/rpms/asahi-installer[`asahi-installer`] download the RPMs and putting them onto the EFI partition; a systemd unit in https://pagure.io/fedora-asahi/fedora-asahi-remix-scripts[`fedora-asahi-remix-scripts`] then installs them on the first boot.
+
+We also provide https://src.fedoraproject.org/rpms/widevine-installer[`widevine-installer`] to automatically enable Widevine playback by downloading and extracting the necessary bits from a ChromeOS image.
+
+
+Apple Silicon systems store some low-level system configuration settings in NVram. We provide a set of packages to interact with this, but they are not installed by default as there is currently no safe way to enforce a single writer (concurrent writes can be racy and lead to corruption).
+
+The default boot entry can be changed using https://src.fedoraproject.org/rpms/rust-asahi-bless[`rust-asahi-bless`] (a CLI tool) or https://src.fedoraproject.org/rpms/rust-startup-disk[`rust-startup-disk`] (a GUI). Two experimental tools are also provided to sync Bluetooth (https://src.fedoraproject.org/rpms/rust-asahi-btsync[`rust-asahi-btsync`]) and Wi-Fi (https://src.fedoraproject.org/rpms/rust-asahi-wifisync[`rust-wifisync`]) settings between macOS and Linux. All of these tools are implemented on top of https://src.fedoraproject.org/rpms/rust-apple-nvram[`rust-apple-nvram`] and https://src.fedoraproject.org/rpms/rust-asahi-nvram[`rust-asahi-nvram`].
+
+
+We provide a full emulation stack which allows https://docs.fedoraproject.org/en-US/fedora-asahi-remix/x86-support/[running x86/x86-64 applications], including Steam. As of Fedora Linux 42, some of this has been https://fedoraproject.org/wiki/Changes/FEX[integrated] into Fedora Linux proper. As part of this work, we also include https://src.fedoraproject.org/rpms/rust-binfmt-dispatcher/[`rust-binfmt-dispatcher`], which provides a simple dispatcher for binfmt_misc that dynamically picks the best interpreter to use at runtime, and prompts the user to install any necessary dependencies if required.
+
+
+We maintain packages for the https://libimobiledevice.org/[libimobiledevice] stack, which implements protocols and tools to communicate with Apple devices. Among other things, this includes https://src.fedoraproject.org/rpms/idevicerestore[`idevicerestore`], which can be used to DFU an Apple Silicon laptop from another Linux system (instead of having to rely on another Mac with Apple Configurator 2). Other components of this stack are https://src.fedoraproject.org/rpms/libimobiledevice[`libimobiledevice`], https://src.fedoraproject.org/rpms/libimobiledevice-glue[`libimobiledevice-glue`], https://src.fedoraproject.org/rpms/libtatsu[`libtatsu`], https://src.fedoraproject.org/rpms/libplist[`libplist`], https://src.fedoraproject.org/rpms/libusbmuxd[`libusbmuxd`], and https://src.fedoraproject.org/rpms/usbmuxd[`usbmuxd`].
+
+We also maintain a handful of ecosystem-related tools: https://src.fedoraproject.org/rpms/apfs-fuse[`apfs-fuse`] is a work-in-progress read-only userspace driver for APFS filesystems, and https://src.fedoraproject.org/rpms/uxplay[`uxplay`] is an AirPlay2 implementation.
+
+
+We maintain a number of packages that are specific to the implementation of the Remix:
+
+- `asahi-platform-metapackage` (https://pagure.io/fedora-asahi/asahi-platform-metapackage[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-scripts/[copr]) provides a metapackage that declares all other Asahi platform package dependencies
+- `asahi-repos` (https://pagure.io/fedora-asahi/asahi-repos[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-branding/[copr]) provides Yum repository definitions for our copr-provided packages
+- `calamares-firstboot-configs` (https://pagure.io/fedora-asahi/calamares-firstboot-config[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-scripts/[copr]) provides the Calamares configuration used for the first-boot installer on the KDE edition
+- `fedora-asahi-remix-appstream-metadata` (https://pagure.io/fedora-asahi/fedora-asahi-remix-appstream-metadata[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-branding/[copr]) provides the Remix-specific AppStream metadata that is required to support updates between major releases via PackageKit
+- `fedora-asahi-remix-release` (https://pagure.io/fedora-asahi/fedora-asahi-remix-release[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-branding/[copr]) provides the distribution branding for the Remix; Fedora Asahi Remix has https://pagure.io/Fedora-Council/tickets/issue/432[trademark approval] from the Fedora Council to use its current name and branding (which includes the use of the Fedora logo)
+- `fedora-asahi-remix-scripts` (https://pagure.io/fedora-asahi/fedora-asahi-remix-scripts[source], https://copr.fedorainfracloud.org/coprs/g/asahi/fedora-remix-scripts/[copr]) provides various utility scripts and systemd services used in the Remix
+
+
+
+Fedora Asahi Remix installation images are built using https://osinside.github.io/kiwi/[Kiwi] from our https://pagure.io/fedora-asahi/kiwi-descriptions[Kiwi descriptions] and are outside of Fedora Infrastructure.
+
+We are using AWS EC2 instances to perform builds and upload them to AWS S3, triggered by an https://gitlab.com/fedora/sigs/asahi/overseer[AWS Lambda] (which runs daily). We use another https://gitlab.com/fedora/sigs/asahi/manifest-generator[Lambda] to generate the manifest for these https://fedora-asahi-remix.org/builds.html[daily builds] to be consumed by the Asahi Installer.
+
+We host our https://fedora-asahi-remix.org/[website] on AWS S3, fronted by AWS Cloudfront; we use https://gitlab.com/fedora/sigs/asahi/cdn-invalidation[another Lambda] to handle CDN invalidation. The website is automatically deployed from its https://gitlab.com/fedora/sigs/asahi/website[GitLab repository]; this is also where the manually-maintained https://gitlab.com/fedora/sigs/asahi/website/-/blob/main/installer_data_stable.json[installer manifest] for release images (as opposed to dailies) lives. The Lambdas are also automatically deployed via Gitlab Pipelines using AWS Chalice.
+
+
+Our https://docs.fedoraproject.org/en-US/fedora-asahi-remix/[documentation site] is generated with https://antora.org[Antora] from its https://pagure.io/fedora-asahi/docs-site[repository], and is https://gitlab.com/fedora/docs/docs-website/docs-fp-o/-/commit/afc54fdc8d8a94ba72ab35f1d65ea535055f7b87[integrated] into the Fedora Docs Website.
+
+
+We maintain a https://pagure.io/fedora-asahi/project[project planning tracker] and a https://pagure.io/fedora-asahi/remix-bugs[bugs tracker].
+
+There are lots of lots of legacy x86/x86-64 applications that users want to run on arm64 platforms, including Windows applications and games. To support this in {variant-name}, we have integrated a stack of existing and bespoke components to make it possible to transparently run x86/x86-64 apps directly on arm64 Linux.
+
+Since Apple platforms use a 16K page size natively and x86/x86-64 processors use a 4K page size, this is especially tricky, as x86/x86-64 applications generally do not work when presented with a host kernel that requires 16K page alignment. To bridge this gap, we are using a microVM to run an entirely separate guest Linux kernel in 4K page size mode. To keep it as seamless as possible, the guest environment is designed to be as close as possible to the host environment, and we use native context GPU passthrough to have high-performance graphics inside the guest.
+
+The stack consists of these components:
+
+- https://github.com/AsahiLinux/muvm[muvm] (package: `muvm`), our bespoke microVM runner based on https://github.com/containers/libkrun[libkrun]. This also includes components for X11 forwarding and HID input device proxying.
+- https://fex-emu.com[FEX-emu] (package: `fex-emu`), a fast userspace x86/x86-64 emulator focused on correctness.
+- The https://src.fedoraproject.org/rpms/fex-emu-rootfs-fedora[Fedora FEX RootFS] (package: `fex-emu-rootfs-fedora`), which provides common x86/x86-64 library dependencies to be used by emulated applications.
+- https://gitlab.freedesktop.org/asahi/mesa[mesa] (packages: `mesa-fex-emu-overlay-i386` and `mesa-fex-emu-overlay-x86-64`), built for the x86/x86-64 architectures and packaged as a FEX RootFS overlay. This provides the OpenGL/OpenCL/Vulkan support for Apple GPUs.
+
+We also have our own https://pagure.io/fedora-asahi/steam[Steam wrapper] that automates the process of installing and launching Steam inside the microVM stack. When running Windows games using Steam, these open-source components are used behind the scenes:
+
+- https://github.com/ValveSoftware/Proton[Proton], a Wine distribution aimed at gaming.
+- https://github.com/doitsujin/dxvk[dxvk], a translation layer that converts the Windows DirectX 8 - DirectX 11 APIs to Vulkan.
+- https://github.com/HansKristian-Work/vkd3d-proton[vkd3d-proton], a translation layer that converts the Windows DirectX 12 API to Vulkan.
+
+
+This technology stack is primarily aimed at running x86 and x86-64 games, but it can also be used to run non-game productivity applications. When possible, you should prefer native alternatives over emulation. Please read xref:faq.adoc#x86[this FAQ entry] for more information.
+
+The scope of this solution is limited to _portable x86 and x86-64 applications_ that are intended to be run from your home directory (or, at most, manually unpacked into `/opt` by the user), including AppImages. It is _not_ intended to run x86-64 applications that must be installed as system packages, which are built for a specific Linux distribution or require installation of complex system dependencies, or which require running dedicated installers as root.
+
+In particular, the x86-64 environment is _not_ a self-contained root filesystem, but rather a minimal, immutable overlay on top of your existing arm64 root filesystem. That means that you cannot make changes to it, install additional packages, etc. There is no root access available at all within the x86-64 environment.
+
+
+
+Just use `dnf install steam` to install our Steam wrapper, and then run Steam from your desktop's launcher (or the `steam` command) to download and install Steam. This will install all necessary dependencies automatically.
+
+
+To install the emulation stack by itself, use `dnf install fex-emu`. This will pull in the required dependencies automatically.
+
+You cannot run x86-64 applications directly from the host (yet), as they must be launched from the microVM. To do so, run `muvm +++--+++ /path/to/executable`. You must use an absolute path, as `muvm` does not currently preserve the current working directory. In this environment, the kernel's binfmt support is already configured to use FEX to run x86/x86-64 applications, so you should be able to just run them.
+
+If your application uses a launcher shell script instead of directly running its main binary, you should run it through `FEXBash`. For example, use `muvm +++--+++ FEXBash /path/to/launcher.sh`. Doing so ensures that the shell runs in the emulated environment and a few critical shell commands behave as they would for x86-64 applications, which makes it more likely that the shell script will work as intended.
+
+You can also use `muvm +++--+++ bash` to launch an arm64 shell within the 4K MicroVM, or `muvm +++--+++ FEXBash` to launch an x86-64 shell. The x86-64 shell will behave similarly to the arm64 shell and most commands will run as arm64 binaries, but a few (such as `ls`) will run under emulation, which lets you "see" the world as x86-64 apps do.
+
+
+`muvm` creates a virtual machine that shares as much with the host OS as possible. Within the VM, the root filesystem is _the same as the host root filesystem_, with the following exceptions:
+
+* `/dev`, `/sys`, and `/proc` are guest-private, except for `/dev/shm` which is shared with the host, allowing host apps and guest apps to coherently share memory.
+* `/run` is also private to the guest
+* The FEX-emu rootfs and overlay images are mounted under `/run/fex-emu/`, with the combined overlay rootfs available at `/run/fex-emu/rootfs`.
+* `/usr/share/fex-emu` and `/usr/local/share/fex-emu` are overmounted with a tmpfs to inject a FEX `Config.json` suitable for use within the VM
+* A tmpfs is also mounted on `/tmp/.X11-unix`, so X11 server sockets are private to the VM
+* The entire host filesystem view is available at `/run/muvm-host`, including any overlaid mounts. For example, you can access the host's `/run` at `/run/muvm-host/run`. (Note: `/run/muvm-host/dev` exists but will not do what you might hope it does. Host devices are not available in the guest.)
+
+This means that `/usr`, `/home`, `/etc`, `/opt`, `/var`, `/tmp`, and any other directories in your filesystem root are _shared between the guest and the host_. The aarch64 guest OS does not run its own root filesystem, but rather _runs exactly the same binaries as your host OS does_.
+
+Additionally, FEX itself uses the filesystem mounted at `/run/fex-emu/rootfs` as its virtual RootFS. This means that x86/x86-64 applications (and only those) will see the contents of that directory overlaid on top of the root filesystem. This is how we make x86/x86-64 libraries available to those applications, while still sharing most of the filesystem contents.
+
+When muvm starts, it registers FEX as a binfmt provider, so x86/x86-64 applications will be transparently run through it. On startup, FEX will detect that TSO support is available on the Apple Silicon platform (even within the VM), and automatically enable it for faster accurate emulation.
+
+TIP: Mountpoints in the host are propagated to the guest _when they are first accessed_, automagically. This allows guest apps to distinguish different filesystems, which keeps device/inode semantics correct. If you have a partition mounted on the host at `/mnt/steam` and you run `mount` within the guest, you won't see it at first. If you run `ls /mnt/steam` and then run `mount` again, the mount will have magically been added to the mount list. This is normal and working as intended!
+
+
+
+As this project is still in its early stages, we aimed for correctness for the initial release. Performance optimization will happen over time. We're aware of several changes that should bring significant performance improvements, and we're actively working on it!
+
+For Windows DX8-DX11 games under Proton in particular, you might want to try WineD3D instead of DXVK. WineD3D uses OpenGL instead of Vulkan as its backend, and it _may_ have better performance thanks to optimizations in our OpenGL driver that are not available on Vulkan. To enable it, change the Steam launch options to `PROTON_USE_WINED3D=1 %command%`. Note that DXVK tends to have better compatibility, so this is a trade-off. Let us know what games work better using either backend!
+
+Older 32-bit games may run very slowly if they make heavy use of the 80-bit x87 floating-point unit, since these operations have to be emulated in software for full compatibility (the same issue exists in Rosetta on macOS). You can run these games with hardware-based 64-bit floating-point emulation, which is less accurate but much faster. To do so, change the Steam launch options to `FEX_X87REDUCEDPRECISION=1 %command%`. This mode can cause subtle issues in some games due to the reduced accuracy, but most games should run fine (and much faster).
+
+
+To allow guest apps to use a large amount of RAM (as some modern games require), by default `muvm` allows the guest to use up to 80% of the system RAM. This also means that some of that will be taken up by guest page cache, appearing to the host as if the VM is taking up most of system RAM. `muvm` has the ability to reduce guest page cache usage as host memory pressure increases, so if you increase host memory usage, the VM should reduce its usage accordingly (as long as it is able to discard unused cache RAM).
+
+On lower RAM size machines (16GB or lower), we recommend not running any heavy host applications while the VM is in use. We don't recommend running complex games on 8GB machines.
+
+To inspect VM memory usage while it is running, use `muvm -ti +++--+++ free`. You can also run `muvm -ti +++--+++ htop` (if you have `htop` installed) to get more detailed information, or substitute your system information tool of choice.
+
+If you wish to limit the maximum memory usage of the MicroVM, you can configure the guest RAM allocation with the `muvm --mem=SIZE` parameter.
+
+
+This does not work (not even via `/run/muvm-host/run/media`) due to missing POSIX ACL support in libkrun at this time. You must manually mount any disks that you wish to use within the VM, e.g. under `/mnt`.
+
+
+
+This is as close to Rosetta as we can get! The main difference is that Rosetta side-steps the page size issue by instead relying on the XNU kernel's multiple page size support for user processes, so it doesn't need a VM. While making Linux support mixed page sizes would not be completely impossible in theory, it would be an enormous project that would likely take years to complete, and it isn't at all clear whether such a change would be accepted upstream (Linux doesn't even have boot-time page size selection within a single kernel yet!).
+
+Other than the page size issue, FEX and Rosetta are comparable technologies (both are emulators, despite what Apple marketing might have you believe). Both FEX and Rosetta use the unique Apple Silicon CPU feature that is most important for x86/x86-64 emulation performance: TSO mode. Thanks to this feature, FEX can offer fast _and_ accurate x86/x86-64 emulation on Apple Silicon systems.
+
+
+While Apple Silicon systems support 4K CPU pages, the rest of the hardware (IOMMUs, GPU) runs with 16K pages only. The Linux kernel does not play nicely in this environment, as it generally assumes that the CPU page size is at least as large or larger than the IOMMU page size. In the past we had some kernel patches to make this partially work, but they were buggy and incomplete, so we abandoned the approach. Even if it did work well, running the whole system using 4K pages has a measurable performance impact, so we would never ship 4K kernels by default. Therefore, running x86/x86-64 apps would require that users manually change their kernel and reboot, which is quite cumbersome.
+
+
+box64 and FEX-Emu have different approaches to emulation, with FEX-Emu aiming for better correctness by default (but requiring a more complex setup) while box64 aims to cover more "out of the box" use cases (like running a subset of applications directly on a 16K kernel without a VM using some tricks). We have chosen FEX-Emu for our stack because we believe it will have higher compatibility with its approach, but both have their uses. box64 is https://src.fedoraproject.org/rpms/box64[packaged in Fedora], so we encourage users to try it (both natively and within muvm) and let us know how it compares!
+
+
+Our immutable RootFS contains a large set of common x86-64 and x86 libraries that are commonly used as dependencies, but we cannot ship every possible library. You can view the package list https://pagure.io/fedora-kiwi-descriptions/blob/rawhide/f/teams/asahi.xml[here].
+
+If the missing library is a relatively simple, common library with no or very simple dependencies, and which would not add much size to our RootFS images, please submit a PR to the repo linked above so we can include it in future releases of the RootFS. Make sure to note what application requires the library, and why you think we should include it.
+
+If your app requires a complicated framework (such as Qt) or an uncommon, niche library, then the application is not built as a "portable" application and not expected to work out-of-the-box on most systems. To work around the issue, you can manually download the missing libraries, extract them into your home directory, and use `LD_LIBRARY_PATH` to make your application find them. You can use the following command to download x86-64 RPMs from your arm64 Fedora installation:
+
+```
+dnf download --repo=fedora --repo=updates --forcearch=x86_64 --best [package1] [package2]...
+```
+
+You can then use `rpmdev-extract` to extract the contents of the RPM, and then configure `LD_LIBRARY_PATH` as appropriate.
+
+It is also possible to overlay RPMs into the existing RootFS, though this should be considered advanced functionality. Once you have an RPM, you can convert it to an erofs image using these commands:
+
+```
+rpm2archive -n mypackage.rpm
+mkfs.erofs --tar=f mypackage.rpm.erofs mypackage.rpm.tar
+```
+
+Then, you can manually launch `muvm` with the base erofs images and your custom erofs image on top, like this:
+
+```
+muvm \
+-f /usr/share/fex-emu/RootFS/default.erofs \
+-f /usr/share/fex-emu/overlays/mesa-x86_64.erofs \
+-f /usr/share/fex-emu/overlays/mesa-i386.erofs \
+-f mypackage.rpm.erofs \
+<your muvm arguments here>
+```
+
+This will overlay the add-on package onto the RootFS used for FEX. Please keep in mind that this may or may not work as intended, and it should not be considered a supported solution.
+
+
+Just let it restart, and it should work on the second try. Steam has a timeout for steamwebhelper, and when running under emulation, startup is slow enough that the timeout expires. This usually only happens on a cold startup.
+
+
+Ensure Steam Play is enabled for all games. It should be under Menu > Settings > Compatibility > Enable Steam Play for all other titles. Restart Steam once enabled.
+
+
+This is caused by the "Disable while typing" touchpad feature. You can turn it off in the touchpad/input settings for your desktop environment.
+
+
+At this point, we do not support running Windows apps outside of Steam as non-proton Wine not yet work on Fedora. We are working on resolving the underlying https://github.com/FEX-Emu/FEX/pull/4225[FEX issue], so we expect to support this relatively soon.
+
+In the meantime, you can use Steam's Proton to run non-Steam Windows applications directly from Steam.
+
+
+Native Linux games should generally work under muvm, as long as they are self-contained and do not depend on complex host system libraries (we ship a large selection of common dependencies, but not everything under the sun).
+
+
+Wayland is not supported inside the VM at this time. As most of the legacy x86/x86-64 applications people want to run are X11 applications, we are focusing on X11 support first. This means that you cannot run native Wayland apps inside the VM at this time. Of course, the host desktop is still a Wayland desktop, and X11 support is provided by XWayland.
+
+
+As the VM does not pass through any host hardware other than the GPU and the virtual filesystem, you will not be able to use applications that require direct hardware access. We use software passthrough for the following interfaces:
+
+- X11 protocol (display, keyboard, mouse)
+- Gamepads via hid/uinput passthrough
+- Sound I/O via the PulseAudio socket protocol footnote:[This works with PipeWire running on the host with pipewire-pulse, as installed by default. You do *not* need to and should not install PulseAudio proper, as that will break your speaker support!]
+
+We are researching the possibility of passing through PipeWire, which will allow webcams to be used within the VM.
+
+
+You can use the classic _xim_ input method system used in X11. muvm should already configure the environment variables appropriately to make this work for Qt and GTK applications (loading the "xim" plugin), as long as the input method framework you are using on your host system supports it. We have tested this with _fcitx5_ and Steam running on KDE Plasma.
+
+In the future, once Wayland passthrough is supported, the native Wayland input protocol mechanism should work with any host input method framework (through a plugin usually called "wayland"). There are no plans to support non-window-system-based input methods (such as the direct "ibus" and "fcitx" plugins), since they would require us to ship x86-64 shared libraries for all possible input methods in the immutable virtual x86-64 system, and would also require proxying of their bespoke protocols, which is infeasible.
+
+
+No, muvm does not work like a traditional whole-system VM. While it does also use KVM as a backend for efficient virtualization, the concept is very different to traditional VMs running entirely separate guest operating systems. The guest kernel is a https://github.com/containers/libkrunfw[special kernel] optimized to start up in a fraction of a second, and the VM monitor passes through the host filesystem mostly as-is. There is no low-level hardware passthrough (USB, etc.) and instead we focus on higher-level software protocol passthrough, like X11/Wayland. The VM does not run its own standalone init system, only some minimal startup code. This means that the environment within the VM should "feel" the same as the host OS from the point of view of applications, just with a 4K page size instead of a 16K page size.
+
+
+Yes, but they will run in X11 mode. However, there is one caveat: *browser instances within the guest cannot communicate with browser instances outside the guest, and it is dangerous to run the same browser profile in both the guest and the host*.
+
+To avoid these problems, muvm configures an environment variable to force Firefox to use a dedicated profile when launched within the VM. This means that applications that launch a browser (such as for login or documentation purposes) will work as intended, but Firefox will launch using a dedicated profile without access to your cookies, history, etc.
+
+CAUTION: If you launch the same browser profile in the guest and the host simultaneously, your profile data may become corrupted. If your default browser is not Firefox, and you are using emulated apps that might launch your default browser inadvertently, we strongly recommend closing all browser windows before using muvm or manually configuring separate profiles.
+
+
+Since the VM monitor runs as your own user identity, it cannot gain root privileges. "root" inside the VM still only has the privileges of your own user, so sudo doesn't make much sense (and in fact doesn't work). We recommend installing software that you want to use with muvm+FEX under your home directory. For software that is designed to be installed under /opt or similar, we recommend performing the installation steps manually on the host OS, and then just running the app under muvm.
+
+If you need access to a root shell within the VM for debugging purposes, you can run `muvm -tip 3335 +++--+++ bash`. Keep in mind that, despite being "root", you will not be able to modify most system files owned by root, and any files you create will actually be owned by your non-root user identity. A root shell is mainly useful to do things like `strace` other processes or change guest kernel or network configuration settings (but these changes will not persist across a VM restart).
+
+
+Communication is mostly limited to the host filesystem. The VM shares your home directory (and in fact most of the filesystem) with the host, so any files you create on one side will be visible on the other.
+
+Thanks to virtiofs-DAX, shared memory communication (`/dev/shm`) is also available between guest apps and host apps. This is used, for example, by the X11 forwarding code.
+
+It is also possible to share audio between host and guest apps by using the PulseAudio forwarding support. For example, you can record guest audio by using a recording app on the host and recording from the system "Monitor" device. You can also configure virtual sinks/sources in the host using the normal PipeWire mechanisms, and direct guest apps to use those for audio I/O to have custom audio routing and processing. Note that the native PipeWire protocol is not passed through, only the PulseAudio protocol which is more limited (but more commonly used by applications). ALSA applications are supported via the `pulse` plug-in.
+
+If you are using a host compositor that supports XWayland video bridging (such as KDE Plasma / KWin), you will be able to screen share / screen capture from the VM, including full host screens and Wayland windows. Make sure the app you are running supports "classic" XComposite window/screen capture. When you initiate screen sharing, you will be able to directly select X11 application windows, or choose the virtual "Xwayland Video Bridge" window. When you do so, KDE will automatically prompt you for the actual window or screen you wish to share.
+
+
+By default, `muvm` passes through as many CPUs as there are performance cores on your host machine, and pins those vCPUs to the physical performance cores. Since the host CPU scheduler has no visibility into the guest CPU scheduler, this ensures that performance is consistent. You can modify this behavior with the `muvm --cpu-list=CPU_LIST` option.
+
+
+Follow these steps to get an external drive set up for Steam:
+
+. Format your external drive using a Linux-native filesystem such as ext4.
++
+NOTE: FAT32, exFAT, and other filesystems without support for Linux permissions will not work.
+
+. Mount your drive manually under a directory accessible to muvm, such as `/mnt/steam`.
++
+NOTE: We recommend mounting the drive manually (e.g. `sudo mount /dev/sdX1 /mnt/steam`, where `sdX1` is your drive's device file). If you configure the drive to mount automatically using `/etc/fstab`, then your system will not boot if that drive is not connected.
++
+NOTE: The default mountpoint for drives mounted via the desktop environment (udisks) will not work at this time.
+
+. Ensure that the filesystem root is accessible to your regular user:
++
+`sudo chown $\{USER}: /mnt/steam`
+
+. Create an empty folder named `steamapps` at the root of the mount:
++
+`mkdir /mnt/steam/steamapps`
+
+. Start up Steam normally
+
+. Click on the Library tab, then click the gear (settings) icon
+
+. Select *Storage* on the left menu, click on the combo box at the top of the panel, and select *Add Drive*.
+
+. Browse to your drive mountmount (`/mnt/steam`), such that the only folder visible in the file picker list window is the empty `steamapps` folder within, then (without making any further selections) click on the *Select* button.
+
+You should now be able to select the new download location, make it the default, and download games to it.
+
+This page collects conference talks and other public presentations around the Fedora Asahi Remix, Asahi Linux and adjacent topics.
+
+
+- https://www.youtube.com/watch?v=PiPLDDgtEek[Fedora Asahi Remix: a year later] (Davide Cavalca, Neal Gompa) at https://cfp.fedoraproject.org/flock-2024/talk/FZEL8Q/[Flock to Fedora 2024]
+- https://www.youtube.com/watch?v=koyixgJZagU[Fedora Asahi Remix 40] (Davide Cavalca, Neal Gompa) at https://fedoraproject.org/wiki/Fedora_Linux_40_Release_Party_Schedule[Fedora Linux 40 Release Party]
+- Bringing Fedora Linux to Apple Silicon Macs with Asahi Linux (Davide Cavalca, Neal Gompa) at https://2024.texaslinuxfest.org/talks/bringing-fedora-linux-to-apple-silicon-macs-with-asahi-linux/[Texas Linux Festival 2024]
+- Bringing Fedora Linux to Apple Silicon Macs with Asahi Linux (Davide Cavalca, Neal Gompa) at https://www.socallinuxexpo.org/scale/21x/presentations/bringing-fedora-linux-apple-silicon-macs-asahi-linux[SCALE 21x]
+- https://www.youtube.com/watch?v=r0hd15MPMok[Bringing Fedora Linux to Apple Silicon Macs with Asahi Linux] (Davide Cavalca, Neal Gompa) at https://2023.linuxfestnorthwest.org/[LinuxFest Northwest 2023 Minifest]
+- https://www.youtube.com/watch?v=zuxIElSqC3Y[Fedora Asahi Remix: Bringing Fedora to Apple Silicon Macs] (Davide Cavalca, Neal Gompa) at https://flock2023.sched.com/event/1Or2q/fedora-asahi-remix-bringing-fedora-to-apple-silicon-macs[Flock to Fedora 2023]
+- https://www.youtube.com/watch?v=NbCbHGqUl1E[Fedora Asahi Remix] (Eric Curtin) at https://devconfcz2023.sched.com/event/1MYko/fedora-asahi-remix[DevConf.CZ 2023]
+- https://archive.fosdem.org/2023/schedule/event/fedora_asahi/[Fedora Asahi] (Eric Curtin) at https://archive.fosdem.org/2023[FOSDEM 2023]
+
+
+- https://softwareengineeringdaily.com/2024/10/15/linux-apple-silicon-alyssa-rosenzweig/[Linux on Apple Silicon with Alyssa Rosenzweig] on https://softwareengineeringdaily.com/category/all-episodes/exclusive-content/Podcast/[Software Engineering Daily]
+- https://www.youtube.com/watch?v=TtLP5sAXYKo[AAA!! She's a witch!] (Alyssa Rosenzweig) at https://indico.freedesktop.org/event/6/contributions/284/[XDC 2024]
+- https://media.libreplanet.org/u/libreplanet/m/escape-the-walled-garden-freeing-the-apple-gpu/[Escape the walled garden: Freeing the Apple GPU] (Alyssa Rosenzweig) at https://libreplanet.org/2024/speakers/#6922[LibrePlanet 2024]
+- https://www.youtube.com/watch?v=EJ8hdpXkkMI[From Asahi Linux to Ubuntu: Running Linux on Apple Silicon] (Hector Martin, Tobias Heider) at https://events.canonical.com/event/31/contributions/177/[Ubuntu Summit 2023]
+- https://www.youtube.com/watch?v=O36VFNdQHsE[Unleash the (graphics) magic] (Alyssa Rosenzweig, Lina Asahi) at https://indico.freedesktop.org/event/4/contributions/184/[XDC 2023]
+- https://www.youtube.com/watch?v=COlvP4hODpY[Asahi Linux - One chip, no docs, and lots of fun] (Hector Martin) at https://conf.kde.org/event/4/contributions/118/[Akademy 2023]
+- https://www.youtube.com/watch?v=SDJCzJ1ETsM[Tasting the Forbidden Apple] (Alyssa Rosenzweig, Lina Asahi) at https://indico.freedesktop.org/event/2/contributions/66/[XDC 2022]
+- https://www.youtube.com/watch?v=ObS6sdfus2w[The Occult and the Apple GPU] (Alyssa Rosenzweig) at https://indico.freedesktop.org/event/1/contributions/10/[XDC 2021]
+
+
+
+{variant-name} provides similar experiences to upstream Fedora Linux, just tailored to the Apple Silicon Mac hardware platform.
+
+
+The KDE Plasma variant receives the most testing and platform integration work and is the recommended option for users new to Fedora Linux and Linux on Apple Silicon platforms. The GNOME variant is also fully supported, for users who prefer that desktop environment. Advanced users who want an alternate desktop environment may choose the Minimal variant and manually configure their system to their liking, while those who want to set up an Apple Silicon-based Linux server may prefer the Server variant.
+
+
+The native Xorg server is available as a manual install, but its use is not recommended as it has several known bugs and deficencies when used on Apple Silicon platforms. As upstream Xorg development has slowed down, we only support Wayland-based desktop environments. Please do not file bugs related to usage of the Xorg server.
+
+XWayland is fully supported as a transition technology to use native X11 apps on a Wayland desktop.
+
+
+We are using a https://fedoraproject.org/wiki/Remix[Remix] as opposed to delivering Apple Silicon support in Fedora Linux proper because this ecosystem is still very fast moving and we believe a Remix will offer the best user experience for the time being. Also, the Remix allows us to integrate hardware support as it becomes available. Nonetheless, as much of this work as possible is being conducted upstream, with several key components being developed, maintained and packaged in Fedora Linux upstream. The Remix image build infrastructure and the installer are currently hosted outside of Fedora Infrastructure due to technical limitations. The infrastructure is entirely open source (see our https://gitlab.com/fedora/sigs/asahi[GitLab] and https://pagure.io/projects/fedora-asahi/%2A[Pagure] repos), and we will eventually migrate to Fedora Infrastucture once it becomes possible.
+
+Ultimately, we expect Apple Silicon support to be integrated in Fedora Linux in a future release, and are working towards this goal. This approach is in line with the overarching goal of the Asahi project itself to integrate support for these systems in the relevant upstream projects.
+
+
+Fedora Asahi Remix can be installed from https://fedora-asahi-remix.org or from https://asahilinux.org (which points to alx.sh). These are functionally equivalent, with the only differences being:
+
+- fedora-asahi-remix.org is maintained by the Fedora Asahi SIG, asahilinux.org and alx.sh are maintained by the Asahi Linux project
+- fedora-asahi-remix.org uses a Fedora-built version of the installer package, which includes a Fedora-built version of the m1n1 stage1 (with the Fedora logo and branding), while alx.sh uses the upstream builds (with the Asahi logo and branding)
+- fedora-asahi-remix.org and alx.sh are backed by different CDN providers; depending on where you are in the world, one may be a bit faster than the other
+- alx.sh can offer additional installation options that are not related to Fedora Asahi Remix
+
+Both endpoints serve the same installation images, so there is no difference in the resulting system if the same installation option is chosen.
+
+
+The Asahi Linux project website maintains a https://asahilinux.org/fedora/[landing page] with device support information, which is kept up to date as features and new devices are added. {variant-name} closely follows the upstream kernels and support packages, so you can expect support to be on par with that page.
+
+For more detailed information on specific driver and kernel support, see the https://asahilinux.org/docs/Feature-Support/[Feature Support] page on the Asahi Linux https://asahilinux.org/docs/[documentation website].
+
+
+We strive to make sure that our platform support packages and the installation process are completely safe and cannot cause any damage to your computer. In general, it is safe to install and use {variant-name} on any supported machine (the installer will refuse to work on unsupported machines). As with all Free Software, please be aware that {variant-name} is offered with no warranty.
+
+As a Linux distribution, {variant-name} gives users much more control over their computers than the stock macOS system does. This also means that there are fewer safeguards against dangerous operations. In general, Apple Silicon systems are very resilient against permanent hardware damage, so it is very unlikely that anything you do will cause any physical, unrecoverable harm to your machine. However, these machines are less resilient against becoming unbootable than typical x86 machines, and this can happen if important boot partitions on disk are corrupted or destroyed. You should be careful if you are using partitioning or disk formatting tools on the internal NVMe storage device:
+
+- Never change, move, or format the first partition on disk (`/dev/nvme0n1p1`, identified as type `Apple Silicon boot` and label `iBootSystemContainer`).
+- Never change, move, or format the last partition on disk (`/dev/nvme0n1pX` for the largest value of X, identified as type `Apple Silicon recovery` and label `RecoveryOSContainer`)
+- If you make partitioning changes, ensure that the partition table remains sorted by disk offset. This can be achieved by using `sudo sfdisk -r /dev/nvme0n1`.
+
+If you do end up with trouble booting your machine after making changes to the disk, please see the xref:troubleshooting.adoc[Troubleshooting] section for recovery and restore steps. Note that in the worst case this may involve a full factory reset and loss of all data (on both macOS and Linux partitions), so users are advised to have up-to-date backups before doing any disk management operations.
+
+In addition, you should avoid making any changes to the existing macOS container partition (usually `/dev/nvme0n1p2`, identified as type `Apple APFS` and typically label `Container` on stock systems). Changes to this partition may make macOS unbootable, which will make it difficult to perform system firmware upgrades or recover, upgrade, or reinstall any Linux installations. At this time, {variant-name} users are expected to have and maintain a working macOS installation, as the installation and bootloader upgrade process relies on the macOS admin user credentials to provision the bootloader. This requirement may be relaxed in the future, once we support system user management and firmware upgrades directly from Linux.
+
+
+We currently do not have a supported process to install to external storage. The Apple Silicon platform in general cannot boot from external storage at all, so some components must always be installed to internal storage. It is possible to manually move the root filesystem to external storage, but there are limitations (e.g. sleep mode is not currently supported as it causes external disks to re-enumerate) and therefore this is left as an exercise for the advanced user.
+
+In the future, we expect to have a supported process for external-storage installs that does not require re-partitioning the internal disk (taking advantage of the same mechanism used for macOS installs to external storage), but this is not ready yet. Note that such external installs will still be tied to the machine they were installed on (since some components would still be installed to the internal disk, as the platform requires this to boot).
+
+
+{variant-name} now includes support for emulating x86 and x86-64 software. For more details, please see xref:x86-support.adoc[Running x86/x86-64 applications on {variant-name}].
+
+For Free/Open Source Software, it is always preferable to make a build for aarch64 (ARM64) instead of trying to emulate an x86-64 build. If your favorite software package is not yet available for this architecture, please request it from its developers! Users comfortable with building software may want to try building it themselves. If you do so, consider xref:package-maintainers::Joining_the_Package_Maintainers.adoc[becoming a package maintainer] to help bring the software to all Fedora users.
+
+Sometimes there are options other than running x86-64 software, such as native third-party alternatives or web versions. See the <<download-software>> section for some examples.
+
+
+
+See xref:troubleshooting.adoc#entering-grub[Entering the GRUB boot menu].
+
+
+Run `sudo widevine-installer` and follow the prompts. Note that Widevine is third-party software not officially affiliated nor endorsed by the Fedora Project or Asahi Linux.
+
+Netflix will still complain though: "This title is not available to watch instantly", E100. You need to install a browser extension to override your User-Agent for specific sites (such as https://addons.mozilla.org/en-US/firefox/addon/uaswitcher[this one]), and set the user agent for Netflix to:
+
+Mozilla/5.0 (X11; CrOS aarch64 15329.44.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36
+
+In User-Agent Switcher head to 'Preferences' and add manually a new entry with the above String. You may also want to check the option "Override for Domain", to avoid having that User-Agent messing with other sites, such as Youtube, Slack, etc.
+
+
+See xref:quick-docs::rpmfusion-setup.adoc[Enabling the RPM Fusion repositories].
+
+
+A large amount of free and open source software is available in the Fedora repositories. Just install it directly from your desktop environment's software management tool or use `dnf`!
+
+Some free software is not packaged directly in Fedora, but aarch64 builds may be available officially or from third parties. Look for instructions for **Fedora** users and **aarch64** builds. **AppImage** or **Flatpak** versions may also work as long as they are built for aarch64.
+
+For example:
+
+* **Visual Studio Code**: Aarch64 builds are available by following the https://code.visualstudio.com/docs/setup/linux#_rhel-fedora-and-centos-based-distributions[instructions for Fedora users].
+* **Telegram Desktop**: Available in the xref:quick-docs::rpmfusion-setup.adoc[RPM Fusion Free repository].
+
+Third-party Fedora builds of software are also available in https://copr.fedorainfracloud.org/[Fedora Copr].
+
+Most proprietary software is only available for x86-64 (Intel/AMD) machines and will not run natively on {variant-name}, but often web versions or third-party clients are available that do work:
+
+* **Discord**: Use the web version, or try https://github.com/Legcord/Legcord/releases/latest[Legcord] (the aarch64 RPM, Flatpak, or AppImage should all work).
+* **Spotify**: Follow the instructions in the <<widevine>> section, and then use the web version.
+* **Zoom**: Use the https://app.zoom.us/wc[Progressive Web App].
+
+Note: Fedora does not endorse nor offer support for third-party software packages or COPR repositories. Make sure you trust the software and repository you install it from.
+
+
+
+Run the following command to resolve the issue:
+
+find $HOME/.config -name GPUCache -type d -exec /bin/rm -rf {} +
+
+This is caused by an https://bugs.chromium.org/p/chromium/issues/detail?id=1442633[upstream Chromium bug]. This step will be necessary after certain upgrades until the fix is released for the various Chromium-based frameworks and applications built on them.
+
+
+Please see our https://pagure.io/fedora-asahi/remix-bugs/issues[bug tracker] for a list of major known issues.

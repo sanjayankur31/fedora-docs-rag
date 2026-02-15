@@ -1,0 +1,186 @@
+
+https://www.kde.org/plasma-desktop/[KDE Plasma] provides a modern and
+customizable environment for running your favourite applications and
+accessing your information wherever it may be. It is available in Fedora
+as an https://fedoraproject.org/kde/[edition] and as an alternative to
+the Workstation desktop offering (GNOME) or other desktop environments and
+window managers.
+
+.Kde-plasma-screenshot.png
+image::Kde-plasma-screenshot.png[Kde-plasma-screenshot,title="Screenshot of the KDE Plasma Desktop on Fedora",width=800]
+
+
+* https://www.kde.org/ - Home of the KDE community
+* https://www.kde.org/plasma-desktop/ - The Plasma Desktop
+* https://userbase.kde.org/Tutorials - KDE-related tutorials
+* https://community.kde.org/Main_Page - KDE Community Wiki
+
+
+Category:KDE
+
+Get the KDE Plasma Desktop Edition
+https://fedoraproject.org/kde/[here]. Alternatively,
+https://fedoraproject.org/atomic-desktops/kinoite/[Fedora Kinoite] is
+also available as the atomic equivalent of Fedora KDE.
+
+
+[NOTE]
+
+====
+The KDE Edition and Kinoite are the only recommended ways to use KDE Plasma on Fedora.
+====
+
+Otherwise, if you have an existing installation of Fedora Workstation,
+any other Fedora spin, or a non-Kinoite variant of Fedora Atomic Desktop
+and wish to keep that installation, follow the instructions below.
+
+[[installing_kde_plasma_on_non_kde_variants_of_fedora]]
+
+[[on_regular_fedora]]
+
+To install Plasma using the command line with dnf, execute the following
+with `+sudo+` or as root:
+
+`+dnf install @kde-desktop-environment+`
+
+Or to install the full package set with the `+groupinstall+` command:
+
+`+dnf groupinstall "KDE Plasma Workspaces"+`
+
+[[on_fedora_atomic]]
+
+You can rebase any existing Fedora Atomic Desktop (Silverblue, Atomic
+Sway, etc) installation to Kinoite with rpm-ostree by simply running
+
+`+rpm-ostree rebase fedora:fedora/VersionNumber/x86_64/kinoite+`
+
+Replace VersionNumber with the number of the current Fedora release
+you're running. (For example, if you're on Fedora Silverblue 40, you
+would run `+rpm-ostree rebase fedora:fedora/40/x86_64/kinoite+`.)
+
+[NOTE]
+
+====
+Rebasing to Kinoite gives you a complete setup, with SDDM pre-configured and all. All you need to do is simply reboot after rebasing.
+====
+
+[[logging_into_kde_plasma]]
+
+After installing the packages, either log out or reboot back to your
+login screen.
+
+If you're using GDM (GNOME's Display Manager), click on the gear at the
+bottom right of the screen, and select the option listed as Plasma.
+
+If you're using LightDM (default on the Fedora Cinnamon, Budgie, XFCE,
+LXDE and MATE-Compiz spins), select the button next to your username and
+select Plasma.
+
+[[switching_the_display_manager_to_sddm]]
+
+You may want to switch your existing display manager (also known as a
+login manager) to SDDM, recommended by the Plasma team (but not
+developed by the KDE community). This has little impact on the end-user
+experience and isn't necessary in order to use Plasma.
+
+To enable SDDM / replace your existing display manager, run the
+`+systemctl enable --force sddm.service+` command.
+[[kde_plasma_mobile]]
+
+[NOTE]
+
+====
+THIS PAGE IS A PLACEHOLDER, SIMPLY LIFTED FROM https://fedoraproject.org/wiki/SIGs/KDE/Mobile AND PLASMA MOBILE BLOG
+====
+
+Fedora KDE Plasma Mobile is Fedora's implementation of
+https://plasma-mobile.org/[Plasma Mobile] Most of the
+https://plasma-mobile.org/apps/[Plasma Mobile Apps] are available in
+Fedora.
+
+.plasmamobileplacerholder.png
+image::plasmamobileplacerholder.png[plasmamobileplacerholder,title="Screenshot of KDE Plasma Mobile (taken from https://plasma-mobile.org/2024/03/01/plasma-6/, replace later please!)"]
+
+[NOTE]
+
+[[install_packages]]
+
+* dnf group install kde-mobile -y
+* (Optional: tablet) dnf group install kde-mobile-apps -y
+* (Optional: phone) dnf group install kde-mobile-apps --with-optional -y
+* (Optional) dnf install fedora-release-kde fedora-release-identity-kde
+--allowerasing -y
+
+[[enable_graphical_mode]]
+
+If the machine you started with did not boot into graphical mode, set it
+so it does
+
+* systemctl set-default graphical.target
+
+[[set_sddm_as_default]]
+
+* systemctl enable sddm -f
+
+
+* reboot
+
+In KDE Plasma desktop, Discover helps you explore, install and update applications and system extensions.
+
+You will find the Discover application in the System category of the start menu.
+
+
+image::discover_main.png[Homepage of Discover]
+
+The homepage is the place where you’ll land after opening Discover. From here you can start exploring apps.
+
+
+image::discover_search.png[Searching for apps with Discover]
+
+If you know the name of apps to install, type in the name of apps in the search window on the top left corner and press Enter. Discover will suggest a set of applications that matches your search.
+
+
+image::discover_categories.png[Explore apps by category]
+
+Discover groups apps into categories. If you are looking for an app for a certain purpose, such as office work, this is your place to start.
+
+
+image::discover_appinfo.png[The app details page for VLC in Discover]
+
+If you click on a desired app, Discover will show you more details about it. It displays information such as version, size and license, as well as screenshots, ratings and app permissions (only for Flatpaks). In the top right corner you can select the source/repository to download the app from (for example Fedora repository, Flathub, …).
+
+image::discover_appperm.png["Reviews, external links and permissions on the app page"]
+
+
+image::discover_updates.png[The updates page]
+
+This is your central place to install updates for applications and the system. You will get notified, whenever an update is available. Clicking on individual entries shows you what’s new. System updates require a restart by default. xref:offlineupdates.adoc[Read more about this and how to deactivate it.]
+
+
+image::discover_settings.png[Manage software sources/repositories]
+
+The settings page lets you manage available software sources/repositories to install apps from. This is the place where you can activate the RPM Fusion repositories and the Snap Store, if not already done.
+
+
+image::discover_installed.png[Manage all your installed apps]
+
+You can manage and uninstall all your installed applications from the Installed page in Discover.
+
+
+Some applications from the Fedora repositories, especially CLI applications and underlying libraries are not listed in Discover. They need to be installed elsewhere.
+
+
+The application link:appstream://org.mageia.dnfdragora.desktop[*dnfdragora*] provides a graphical interface to install packages from the Fedora repositories.
+
+
+see https://docs.fedoraproject.org/en-US/quick-docs/dnf/#sect-usage
+
+Offline updates are updates which are installed during a reboot or shutdown. On Fedora KDE, this is the default for system updates installed through Discover.
+
+
+Offline updates are the default on Fedora KDE, because they increase stability. During a system update, important components of apps can get replaced with newer versions. Installing system updates while Fedora is up and running may lead to those applications causing weird behavior or even crashing in worst cases. To avoid this, system updates require a reboot by default on Fedora KDE.
+
+
+To deactivate offline updates, open System Settings and go to System → Software Update and set Apply system updates to Immediately.
+
+image::settings_offlineupdates.png[]

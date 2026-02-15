@@ -62,3 +62,8 @@ target/
 .python-version
 
 .mypy_cache/
+
+data-sources/repos/forge*
+data-sources/repos/gitlab*
+data-sources/repos/pagure*
+data-sources/repos/github*

@@ -1,0 +1,67 @@
+
+
+
+1. Join the Element Fedora Design https://matrix.to/#/#design:fedoraproject.org[group chat].
+2. Introduce yourself to the group; talk about your art/design experience and interests so we'll know what kinds of design tasks you might be interested in helping out with.
+3. Sign up for a https://docs.fedoraproject.org/en-US/fedora-accounts/user[Fedora Account], you'll need it later!
+4. Complete the https://docs.fedoraproject.org/en-US/legal/fpca[Fedora Project Contributor Agreement] (FPCA) through the https://docs.fedoraproject.org/en-US/fedora-accounts/user[Account System]. This will ensure that the contributions you make are properly licensed!
+5. Complete a small task to join the team. To find something to work on, you can do any of the following:
+* Claim and complete a design ticket at the https://gitlab.com/fedora/design/team/requests/-/issues[Fedora Design Issue Request queue].
+* Look at the https://gitlab.com/groups/fedora/design/team/-/issues[Fedora Design issues], and see if any are flagged for newbies!
+* Ask the group in Element if there are any tickets that need attention.
+Note: We definitely recommend for folks starting out with our team to look for tasks that are not icon-related. Icon designs pose additional burdens and challenges that we don't want you to have to deal with just starting out! The same applies to logos.
+6. Once you've completed an initial draft of your design task, comment on the ticket, and pop the link or artwork in the https://matrix.to/#/#design:fedoraproject.org[Element design group chat] for feedback and approval.
+7. Once your design is approved, send a message to the design team in Element requesting an invite to the design-team group. Provide your Fedora Account username so we can add you in.
+
+After you have completed these steps, you can begin contributing to a project as a full member of the design team. Questions and suggestions may be asked within the ticket as well as the Fedora Design group chat on Element.
+
+
+Video meetings will be held every *Monday at 14:30 UTC* on https://meet.jit.si/FedoraDesign[*Jitsi*]. Please note that audio and video is not required to join the meeting - you can always use the chat for input if that is more comfortable for you.
+
+Check the https://calendar.fedoraproject.org/design[Design Calendar] for updated meeting times. Meeting logs can be found at https://meetbot.fedoraproject.org/[meetbot.fedoraproject.org].
+
+
+Design team members are present on the https://matrix.to/#/#design:fedoraproject.org[*#design:fedoraproject.org* Matrix room] on https://chat.fedoraproject.org/[chat.fedoraproject.org].
+Feel free to reach us here!
+
+
+
+
+
+Dedicated page to help you find assets, tutorials, and recommended software to support your work and contributions.
+
+
+* https://docs.fedoraproject.org/en-US/project/brand/#_the_fedora_logo[*Fedora Logo*] - Fedora logo information, including usage guidelines
+* https://docs.fedoraproject.org/en-US/project/_attachments/brand-book-revised-2024.pdf[*Fedora Brand Book*] - Brand guidelines booklet in PDF format
+* https://gitlab.com/fedora/design/team/event-kit/[*Event Kit*] - Design assets related to Fedora events (banners, tablecloth, etc.)
+* https://gitlab.com/fedora/design/team/event-kit/-/tree/main/Stickers[*Stickers*] - Print ready sticker files
+
+* https://gitlab.com/fedora/design/team/tutorials/inkscape-automation[*Inkscape Automation*] - Tutorial for how to use Inkscape to automate the production of SVG, PNG, EPS, PS, or PDF graphics using a template file and CSV data input.
+
+
+* https://penpot.app/[*Penpot*] - web-based design and prototyping platform.
+
+* https://inkscape.org/[*Inkscape*] - vector graphics editor
+** https://opensource.com/sites/default/files/gated-content/cheat_sheet_inkscape.pdf[Inkscape cheat sheet]
+
+* https://www.blender.org/[*Blender*] - 3D computer graphics software
+** https://opensource.com/sites/default/files/gated-content/cheat_sheet_blender_v2.pdf[Blender cheat sheet]
+
+* https://krita.org/en/[*Krita*] - digital painting application
+** https://opensource.com/article/21/12/krita-digital-paint[Open source digital painting with Krita]
+
+* https://www.gimp.org/[*GIMP*] - image editor
+** https://www.gimp.org/[GIMP cheat sheet]
+
+* https://kdenlive.org/en/[*Kdenlive*] - video editor
+** https://opensource.com/sites/default/files/gated-content/osdc_cheatsheet-kdenlive-2021.12.3.pdf[Kdenlive cheat sheet]
+
+
+You can file an https://gitlab.com/fedora/design/team/requests/-/issues/[issue] to:
+
+* Request new design work
+* Tell us if something's wrong with an existing design
+* Make a suggestion for a future design
+
+
+Because this is mainly a volunteer-staffed team, we don't guarantee to handle all tickets. If you think a ticket needs attention and would like to work on it, but someone else took ownership of the ticket: try to contact the owner and see if they are working on it. If you don't hear from them within a week you can probably take the ticket over. If you have a filed a ticket and have not heard from anyone, please feel free to https://matrix.to/#/#design:fedoraproject.org[join our chat] for attention / guidance / support.
