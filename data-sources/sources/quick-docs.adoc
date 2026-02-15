@@ -1700,12 +1700,11 @@ $ sudo dnf install -y arm-image-installer
 +
 . As the root user, write the Fedora ARM image to the microSD card:
 +
-[source,shell,subs="quotes,attributes"]
 ----
 $ sudo arm-image-installer \
---image=__&#60;/path/to/fedora_image&#62 \
---target=__&#60;RPi_Version&#62 \
---media=/dev/__&#60;sd_card_device&#62 \
+--image=/path/to/fedora_image \
+--target=RPi_Version \
+--media=/dev/sd_card_device \
 --resizefs
 ----
 +
