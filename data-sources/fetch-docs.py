@@ -164,11 +164,11 @@ class RepoToSingleAdoc(object):
                     full_text = full_text.replace("{" + key + "}", value)
 
             self.logger.debug(full_text)
-            with open(f"{self.output_path}/{repo}-{repo_name}.adoc", "w") as f:
+            with open(f"{self.output_path}/{repo_name}.adoc", "w") as f:
                 f.write(full_text)
 
             self.logger.debug(url_map)
-            with open(f"{self.output_path}/{repo}-{repo_name}.json", "w") as f:
+            with open(f"{self.output_path}/{repo_name}.json", "w") as f:
                 json.dump(url_map, f)
 
     def process_adoc(
