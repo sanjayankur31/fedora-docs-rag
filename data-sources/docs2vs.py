@@ -72,9 +72,10 @@ class FedoraDocs(object):
         self.logger.debug("Setting up/loading Chroma vector store")
 
         self.logger.debug(f"{self.stores_sources_path =}")
-        info_files = glob(f"{self.stores_sources_path}/*.md", recursive=True)
+        info_files = sorted(glob(f"{self.stores_sources_path}/*.md", recursive=True))
+        self.logger.debug(f"{info_files =}")
 
-        for src in info_files[:5]:
+        for src in info_files:
             src_path = Path(src)
             url_map_file = Path(str(src_path).replace(".md", ".json"))
 
@@ -135,8 +136,17 @@ class FedoraDocs(object):
 
         self.logger.debug(f"Adding markdown file to text vector store: {file_path}")
         with open(file, "r") as f:
+            meta_update = {
+                "file_hash": file_hash,
+                "file_name": file_path.name,
+                "file_path": str(file_path),
+            }
             md_doc = f.read()
             self.logger.debug(f"Length of loaded file: {len(md_doc.split())}")
+            if len(md_doc.split()) == 0:
+                self.logger.warning(f"Empty file found: {file}. Skipping")
+                return
+
             md_splitter = MarkdownHeaderTextSplitter(
                 self.md_headers_to_split_on, strip_headers=False
             )
@@ -150,23 +160,22 @@ class FedoraDocs(object):
                 # header 1
                 url = None
                 if "Header 1" in split.metadata.keys():
-                    url = url_map.get(split.metadata["Header 1"], None)
+                    h1 = split.metadata["Header 1"].split("{#")[0].strip()
+                    meta_update["Header 1"] = h1
+                    url = url_map.get(h1, None)
                 # try header 2: more specific
                 if "Header 2" in split.metadata.keys():
-                    url = url_map.get(split.metadata["Header 2"], None)
+                    h2 = split.metadata["Header 2"].split("{#")[0].strip()
+                    meta_update["Header 2"] = h2
+                    url = url_map.get(h2, None)
                 # fall back to default url
                 if not url:
-                    url = url_map.get("DEFAULT_URL")
+                    url = url_map.get("DEFAULT")
 
-                meta_update = {
-                    "file_hash": file_hash,
-                    "file_name": file_path.name,
-                    "file_path": str(file_path),
-                    "url": url,
-                }
-                self.logger.debug(f"{meta_update =}")
+                meta_update["url"] = url
 
                 split.metadata.update(meta_update)
+                self.logger.debug(f"{split.metadata =}")
 
             self.logger.debug(f"Length of split docs: {len(splits)}")
             _ = store.add_documents(documents=splits)
