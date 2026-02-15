@@ -1,4 +1,6 @@
 langchain-chroma
 langchain-text-splitters
 ollama
+fastapi[standard]
+streamlit
 #git+https://github.com/neuroml/neuroml-ai/#subdirectory=utils_pkg
