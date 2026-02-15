@@ -86,13 +86,13 @@ class RepoToSingleAdoc(object):
             self.logger.info(f"Processing {repo}")
             repo_path = f"./{self.repo_download_path}/{repo}"
 
-            repo_command = command + f" {url} {repo_path}"
-            res = subprocess.run(repo_command.split())
-            if res.returncode:
-                self.logger.error(f"Git checkout failed for {repo}. Skipping.")
-                continue
-            else:
-                self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
+            # repo_command = command + f" {url} {repo_path}"
+            # res = subprocess.run(repo_command.split())
+            # if res.returncode:
+            #     self.logger.error(f"Git checkout failed for {repo}. Skipping.")
+            #     continue
+            # else:
+            #     self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
 
             with chdir(repo_path):
                 self.logger.debug(f"Working in {repo_path}")
@@ -248,13 +248,17 @@ class RepoToSingleAdoc(object):
                     for key, value in variables.items():
                         header = header.replace("{" + key + "}", value)
 
-                    url_map[header] = (
+                    url = (
                         url_map["DEFAULT"]
                         + "/"
                         + module
                         + "/"
-                        + afile.name.replace(".adoc", "")
+                        + str(afile).replace("pages/", "").replace(".adoc", "")
                     )
+                    if afile.name == "index.adoc":
+                        url += ".html"
+                    url_map[header] = url.replace("//", "/")
+
                     text += f"{line}\n"
 
                 else:
