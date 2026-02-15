@@ -260,7 +260,7 @@ The Advanced Custom option also opens up this option, but you have to perform al
 The _Add a disk_ enables you to include external storages, e.g. a SAN (Storage Attached Network) or other network attached drives as part of your Fedora Server install in this same configuration screen. However, this configuration is not covered here in this installation guide.
 
 ==== Automatic default configuration
-If you are satisfied with the Fedora Server default hard disk partitioning as described in the xref:installation/index.adoc#_what_default_partitioning_does[Server installation] introduction, you can leave _Automatic_ checked under __Storage Configuration__.
+If you are satisfied with the Fedora Server default hard disk partitioning as described in the xref:installation/index.adoc[Server installation] introduction, you can leave _Automatic_ checked under __Storage Configuration__.
 
 [TIP]
 ====
