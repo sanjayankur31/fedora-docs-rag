@@ -5538,9 +5538,9 @@ _Summary of idea_: Tinykdump is a minimal daemon to capture kernel-based
 crash dumping (kdump) memory image to usb storage. Compared to the
 traditional kdump solution, it is,
 
-`* more reliable and scalable` +
-`* has smaller memory foot-print` +
-`* more friendly to kernel developers `
+* more reliable and scalable +
+* has smaller memory foot-print +
+* more friendly to kernel developers
 
 More information here: https://fedorahosted.org/tinykdump/
 
@@ -6943,9 +6943,9 @@ _Summary of idea:_ Tinykdump is a minimal daemon to capture kernel-based
 crash dumping (kdump) memory image to usb storage. Compared to the
 traditional kdump solution, it is,
 
-`* more reliable and scalable` +
-`* has smaller memory foot-print` +
-`* more friendly to kernel developers `
+* more reliable and scalable +
+* has smaller memory foot-print +
+* more friendly to kernel developers
 
 More information here: https://fedorahosted.org/tinykdump/
 
@@ -8068,9 +8068,9 @@ bugs should be filed in that instance against Bugspad.
 
 _Knowledge prerequisite:_
 
-` * Good idea on web applications and frontend design. ` +
-` * The person should know about API(s) in general and how to design them well. ` +
-` * Python, Javascript, HTML, CSS will be the primary languages to deal with.`
+* Good idea on web applications and frontend design. +
+* The person should know about API(s) in general and how to design them well. +
+* Python, Javascript, HTML, CSS will be the primary languages to deal with.
 
 _Skill level:_ Medium-High
 
@@ -8158,7 +8158,7 @@ Other such possibilities are:
 
 OR maybe, in a Dockerfile
 
-` CMD ["afterthought", "`http://thoughthacker.tld/rule-the-world#plan-TBD-but-this-image-ships-today[`http://thoughthacker.tld/rule-the-world#plan-TBD-but-this-image-ships-today`]`"]`
+` CMD ["afterthought", "`http://thoughthacker.tld/rule-the-world#plan-TBD-but-this-image-ships-today[http://thoughthacker.tld/rule-the-world#plan-TBD-but-this-image-ships-today]`"]`
 
 So, all in all - less RTFM, less maintenance (or chasing ghost of the
 past routines/scripts), more automation - wherever applies (hint:
@@ -8839,13 +8839,13 @@ Debnath]
 
 _Notes:_ Features that I am looking to target:
 
-`* User management/FAS integration` +
-`* Un-linerize the workflow.` +
-`* Default wallpaper/Hostname/user-password/root-password` +
-`* Custom repos/RPMs` +
-`* Home directory content` +
-`* Search Packages` +
-`* Image type: ISO, virt image, raw disk`
+* User management/FAS integration +
+* Un-linerize the workflow. +
+* Default wallpaper/Hostname/user-password/root-password +
+* Custom repos/RPMs +
+* Home directory content +
+* Search Packages +
+* Image type: ISO, virt image, raw disk
 
 Code at https://github.com/shreyankg/Dorrie, fork and send pull request,
 if you are interested to contribute.
@@ -10008,13 +10008,13 @@ Debnath]
 
 _Notes:_ Features that I am looking to target:
 
-`* User management/FAS integration` +
-`* Un-linerize the workflow.` +
-`* Default wallpaper/Hostname/user-password/root-password` +
-`* Custom repos/RPMs` +
-`* Home directory content` +
-`* Search Packages` +
-`* Image type: ISO, virt image, raw disk`
+* User management/FAS integration +
+* Un-linerize the workflow. +
+* Default wallpaper/Hostname/user-password/root-password +
+* Custom repos/RPMs +
+* Home directory content +
+* Search Packages +
+* Image type: ISO, virt image, raw disk
 
 Code at https://github.com/shreyankg/Dorrie, fork and send pull request,
 if you are interested to contribute.
@@ -11311,13 +11311,13 @@ Debnath]
 
 _Notes:_ Features that I am looking to target:
 
-`* User management/FAS integration` +
-`* Un-linerize the workflow.` +
-`* Default wallpaper/Hostname/user-password/root-password` +
-`* Custom repos/RPMs` +
-`* Home directory content` +
-`* Search Packages` +
-`* Image type: ISO, virt image, raw disk`
+* User management/FAS integration +
+* Un-linerize the workflow. +
+* Default wallpaper/Hostname/user-password/root-password +
+* Custom repos/RPMs +
+* Home directory content +
+* Search Packages +
+* Image type: ISO, virt image, raw disk
 
 Code at https://github.com/shreyankg/Dorrie, fork and send pull request,
 if you are interested to contribute.
@@ -12690,12 +12690,12 @@ Campus Ambassadors should then guide new contributors in helping them
 get set up with mentors and helping submit their Summer Coding proposal.
 [edit] Campus Ambassadors - what
 
-`   * Students can have a quality intern-like experience working with Fedora/JBoss.org.` +
-`         o Money! Code! Fame! Success! Community! ` +
-`   * Sub-projects in JBoss.org and Fedora are ready to work with students.` +
-`   * This is right in your pocket, you can run with Summer Coding participation and make your school very successful.` +
-`   * You can make more students successful by being an additional mentor for students through the process.` +
-`   * Do you know someone at the university/college who wants to talk about partnering with Fedora Summer Coding? `
+* Students can have a quality intern-like experience working with Fedora/JBoss.org.+
+o Money! Code! Fame! Success! Community! +
+* Sub-projects in JBoss.org and Fedora are ready to work with students. +
+* This is right in your pocket, you can run with Summer Coding participation and make your school very successful. +
+* You can make more students successful by being an additional mentor for students through the process. +
+* Do you know someone at the university/college who wants to talk about partnering with Fedora Summer Coding?
 
 [[timeline-for-campus-ambassadors]]
 === Timeline for Campus Ambassadors
