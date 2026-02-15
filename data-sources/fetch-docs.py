@@ -35,6 +35,7 @@ exclude_doc_urls = [
     "https://gitlab.com/fedora/docs/fedora-linux-documentation/release-docs-home.git",
     "https://gitlab.com/fedora/docs/fedora-linux-documentation/install-guide.git",
     "https://gitlab.com/fedora/docs/fedora-linux-documentation/fedora-linux-sysadmin-guide.git",
+    "https://pagure.io/fedora-docs/localization.git",
 ]
 repo_config_file = "antora.yml"
 docs_url_base = "https://docs.fedoraproject.org/en-US"
@@ -113,8 +114,10 @@ class RepoToSingleAdoc(object):
 
                 with open(repo_config_file, "r") as f:
                     repo_config = load(f, Loader=Loader)
-                    repo_name = repo_config["name"]
-                    web_url += f"/{repo_name}"
+                    self.logger.debug(f"{repo_config =}")
+                    repo_ref = repo_config["name"]
+                    self.logger.debug(f"{repo_ref = }")
+                    web_url += f"/{repo_ref}"
 
                     repo_branch = repo_config.get("version", "main")
                     # TODO: how can it be None here?
@@ -163,12 +166,16 @@ class RepoToSingleAdoc(object):
                 for key, value in variables.items():
                     full_text = full_text.replace("{" + key + "}", value)
 
-            self.logger.debug(full_text)
-            with open(f"{self.output_path}/{repo_name}.adoc", "w") as f:
+            self.logger.debug(
+                f"Writing to {self.output_path}/{repo_ref}.adoc: {full_text}"
+            )
+            with open(f"{self.output_path}/{repo_ref}.adoc", "w") as f:
                 f.write(full_text)
 
-            self.logger.debug(url_map)
-            with open(f"{self.output_path}/{repo_name}.json", "w") as f:
+            self.logger.debug(
+                f"Writing to {self.output_path}/{repo_ref}.json: {url_map}"
+            )
+            with open(f"{self.output_path}/{repo_ref}.json", "w") as f:
                 json.dump(url_map, f)
 
     def process_adoc(
