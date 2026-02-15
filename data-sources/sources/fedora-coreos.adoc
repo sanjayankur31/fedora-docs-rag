@@ -8462,8 +8462,7 @@ NOTE: This is only an example to show how to run a service on boot. Do not use t
 ----
 cat <<'EOF' > public-ipv4.sh
 #!/bin/bash
-echo "Detected Public IPv4: is $(curl https://ipv4.icanhazip.com)" > \
-/etc/issue.d/50_public-ipv4.issue
+echo "Detected Public IPv4: is $(curl ipv4.icanhazip.com)" >  /etc/issue.d/50_public-ipv4.issue
 EOF
 ----
 
