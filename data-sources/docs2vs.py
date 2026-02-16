@@ -183,7 +183,14 @@ class FedoraDocs(object):
                 self.logger.debug(f"{split.metadata =}")
 
             self.logger.debug(f"Length of split docs: {len(splits)}")
-            _ = store.add_documents(documents=splits)
+
+            # limit to 3000 per addition
+            # chromadb.errors.InternalError: ValueError: Batch size of 6596 is greater than max batch size of 5461
+            chunk_size = 3000
+            for i in range(0, len(splits), chunk_size):
+                splits_a = splits[i : i + chunk_size]
+                self.logger.debug(f"Adding {len(splits_a)}/{len(splits)}")
+                _ = store.add_documents(documents=splits_a)
 
         query = file.name.replace(".md", "").replace("-", " ")
         res = store.similarity_search_with_relevance_scores(query=query, k=2)
@@ -191,6 +198,6 @@ class FedoraDocs(object):
 
 
 if __name__ == "__main__":
-    converter = FedoraDocs(embedding_model="huggingface:BAAI/bge-m3:cheapest")
+    converter = FedoraDocs(embedding_model="ollama:bge-m3:latest")
     converter.setup()
     converter.create()
