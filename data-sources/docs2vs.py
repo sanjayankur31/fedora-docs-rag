@@ -29,7 +29,7 @@ class FedoraDocs(object):
     # limit to two header levels
     md_headers_to_split_on = [
         ("#", "Header 1"),
-        ("##", "Header 2"),
+        # ("##", "Header 2"),
         # ("###", "Header 3"),
         # ("####", "Header 4"),
     ]
@@ -38,8 +38,8 @@ class FedoraDocs(object):
 
     def __init__(self, embedding_model: str, logging_level: int = logging.DEBUG):
         """TODO: to be defined."""
-        self.chunk_size = 600
-        self.chunk_overlap = 60
+        self.chunk_size = 400
+        self.chunk_overlap = 200
         self.embedding_model = embedding_model
 
         my_path = Path(__file__).parent
@@ -63,7 +63,9 @@ class FedoraDocs(object):
             # strip prefix
             self.embedding_model = self.embedding_model.replace("ollama:", "")
 
-        self.embedding_model.replace(":cheapest", "").replace(":fastest", "")
+        self.embedding_model = self.embedding_model.replace(":cheapest", "").replace(
+            ":fastest", ""
+        )
 
     def create(self):
         """Create the vector store"""
@@ -89,8 +91,11 @@ class FedoraDocs(object):
                 persist_directory=vs_persist_dir,
                 anonymized_telemetry=False,
             )
+            collection_name = src_path.name.replace(".md", "")
+            if "fedora" not in collection_name:
+                collection_name = f"fedora-{collection_name}"
             store = Chroma(
-                collection_name=src_path.name,
+                collection_name=collection_name,
                 embedding_function=self.embeddings,
                 client_settings=chroma_client_settings_text,
             )
@@ -180,8 +185,12 @@ class FedoraDocs(object):
             self.logger.debug(f"Length of split docs: {len(splits)}")
             _ = store.add_documents(documents=splits)
 
+        query = file.name.replace(".md", "").replace("-", " ")
+        res = store.similarity_search_with_relevance_scores(query=query, k=2)
+        self.logger.debug(f"Similarity test for {file.name}: {res}")
+
 
 if __name__ == "__main__":
-    converter = FedoraDocs(embedding_model="ollama:bge-m3:latest")
+    converter = FedoraDocs(embedding_model="huggingface:BAAI/bge-m3:cheapest")
     converter.setup()
     converter.create()
