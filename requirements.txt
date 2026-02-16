@@ -1,5 +1,6 @@
 langchain-chroma
 langchain-text-splitters
+langchain-ollama
 ollama
 fastapi[standard]
 streamlit
