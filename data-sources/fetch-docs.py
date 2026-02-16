@@ -86,13 +86,13 @@ class RepoToSingleAdoc(object):
             self.logger.info(f"Processing {repo}")
             repo_path = f"./{self.repo_download_path}/{repo}"
 
-            # repo_command = command + f" {url} {repo_path}"
-            # res = subprocess.run(repo_command.split())
-            # if res.returncode:
-            #     self.logger.error(f"Git checkout failed for {repo}. Skipping.")
-            #     continue
-            # else:
-            #     self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
+            repo_command = command + f" {url} {repo_path}"
+            res = subprocess.run(repo_command.split())
+            if res.returncode:
+                self.logger.error(f"Git checkout failed for {repo}. Skipping.")
+                continue
+            else:
+                self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
 
             with chdir(repo_path):
                 self.logger.debug(f"Working in {repo_path}")
@@ -108,11 +108,17 @@ class RepoToSingleAdoc(object):
                 # get url:
                 # for the moment, use the top level repo url
                 # should be possible to map individual pages to web urls using the nav.adoc entries.
-                if not Path(repo_config_file).exists():
+                repo_config_file_path = list(cwd.rglob(repo_config_file))
+                if len(repo_config_file_path) == 0:
                     self.logger.critical(f"{repo_config_file} not found! Skipping")
                     continue
+                if len(repo_config_file_path) > 1:
+                    self.logger.warning(
+                        f"multiple {repo_config_file} files found! Using first one."
+                    )
+                config_file = repo_config_file_path[0]
 
-                with open(repo_config_file, "r") as f:
+                with open(config_file, "r") as f:
                     repo_config = load(f, Loader=Loader)
                     self.logger.debug(f"{repo_config =}")
                     repo_ref = repo_config["name"]
