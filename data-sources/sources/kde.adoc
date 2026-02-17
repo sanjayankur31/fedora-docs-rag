@@ -8,17 +8,19 @@ the Workstation desktop offering (GNOME) or other desktop environments and
 window managers.
 
 .Kde-plasma-screenshot.png
-image::Kde-plasma-screenshot.png[Kde-plasma-screenshot,title="Screenshot of the KDE Plasma Desktop on Fedora",width=800]
+image::Kde-plasma-screenshot.png[Kde-plasma-screenshot,title='Screenshot of the KDE Plasma Desktop on Fedora',width=800]
 
 == Links
 
-* https://www.kde.org/ - Home of the KDE community
-* https://www.kde.org/plasma-desktop/ - The Plasma Desktop
-* https://userbase.kde.org/Tutorials - KDE-related tutorials
-* https://community.kde.org/Main_Page - KDE Community Wiki
+\&#42; https://www.kde.org/ - Home of the KDE community
+\&#42; https://www.kde.org/plasma-desktop/ - The Plasma Desktop
+\&#42; https://userbase.kde.org/Tutorials - KDE-related tutorials
+\&#42; https://community.kde.org/Main_Page - KDE Community Wiki
 
 
 Category:KDE
+
+
 = Getting KDE on Fedora
 
 Get the KDE Plasma Desktop Edition
@@ -44,13 +46,13 @@ and wish to keep that installation, follow the instructions below.
 === On regular Fedora
 
 To install Plasma using the command line with dnf, execute the following
-with `+sudo+` or as root:
+with \&#96;+sudo+\&#96; or as root:
 
-`+dnf install @kde-desktop-environment+`
+\&#96;+dnf install @kde-desktop-environment+\&#96;
 
-Or to install the full package set with the `+groupinstall+` command:
+Or to install the full package set with the \&#96;+groupinstall+\&#96; command:
 
-`+dnf groupinstall "KDE Plasma Workspaces"+`
+\&#96;+dnf groupinstall 'KDE Plasma Workspaces'+\&#96;
 
 [[on_fedora_atomic]]
 === On Fedora Atomic
@@ -58,11 +60,11 @@ Or to install the full package set with the `+groupinstall+` command:
 You can rebase any existing Fedora Atomic Desktop (Silverblue, Atomic
 Sway, etc) installation to Kinoite with rpm-ostree by simply running
 
-`+rpm-ostree rebase fedora:fedora/VersionNumber/x86_64/kinoite+`
+\&#96;+rpm-ostree rebase fedora:fedora/VersionNumber/x86_64/kinoite+\&#96;
 
 Replace VersionNumber with the number of the current Fedora release
 you're running. (For example, if you're on Fedora Silverblue 40, you
-would run `+rpm-ostree rebase fedora:fedora/40/x86_64/kinoite+`.)
+would run \&#96;+rpm-ostree rebase fedora:fedora/40/x86_64/kinoite+\&#96;.)
 
 [NOTE]
 
@@ -92,7 +94,9 @@ developed by the KDE community). This has little impact on the end-user
 experience and isn't necessary in order to use Plasma.
 
 To enable SDDM / replace your existing display manager, run the
-`+systemctl enable --force sddm.service+` command.
+\&#96;+systemctl enable --force sddm.service+\&#96; command.
+
+
 [[kde_plasma_mobile]]
 = Fedora KDE Plasma Mobile
 
@@ -108,7 +112,9 @@ https://plasma-mobile.org/apps/[Plasma Mobile Apps] are available in
 Fedora.
 
 .plasmamobileplacerholder.png
-image::plasmamobileplacerholder.png[plasmamobileplacerholder,title="Screenshot of KDE Plasma Mobile (taken from https://plasma-mobile.org/2024/03/01/plasma-6/, replace later please!)"]
+image::plasmamobileplacerholder.png[plasmamobileplacerholder,title='Screenshot of KDE Plasma Mobile (taken from https://plasma-mobile.org/2024/03/01/plasma-6/, replace later please!)']
+
+
 = Installation
 
 [NOTE]
@@ -116,10 +122,10 @@ image::plasmamobileplacerholder.png[plasmamobileplacerholder,title="Screenshot o
 [[install_packages]]
 == Install Packages
 
-* dnf group install kde-mobile -y
-* (Optional: tablet) dnf group install kde-mobile-apps -y
-* (Optional: phone) dnf group install kde-mobile-apps --with-optional -y
-* (Optional) dnf install fedora-release-kde fedora-release-identity-kde
+\&#42; dnf group install kde-mobile -y
+\&#42; (Optional: tablet) dnf group install kde-mobile-apps -y
+\&#42; (Optional: phone) dnf group install kde-mobile-apps --with-optional -y
+\&#42; (Optional) dnf install fedora-release-kde fedora-release-identity-kde
 --allowerasing -y
 
 [[enable_graphical_mode]]
@@ -128,16 +134,18 @@ image::plasmamobileplacerholder.png[plasmamobileplacerholder,title="Screenshot o
 If the machine you started with did not boot into graphical mode, set it
 so it does
 
-* systemctl set-default graphical.target
+\&#42; systemctl set-default graphical.target
 
 [[set_sddm_as_default]]
 == Set sddm as default
 
-* systemctl enable sddm -f
+\&#42; systemctl enable sddm -f
 
 == Reboot
 
-* reboot
+\&#42; reboot
+
+
 = Installing Applications and Updates with Discover
 
 In KDE Plasma desktop, Discover helps you explore, install and update applications and system extensions.
@@ -168,7 +176,7 @@ image::discover_appinfo.png[The app details page for VLC in Discover]
 
 If you click on a desired app, Discover will show you more details about it. It displays information such as version, size and license, as well as screenshots, ratings and app permissions (only for Flatpaks). In the top right corner you can select the source/repository to download the app from (for example Fedora repository, Flathub, …).
 
-image::discover_appperm.png["Reviews, external links and permissions on the app page"]
+image::discover_appperm.png['Reviews, external links and permissions on the app page']
 
 == Updates
 
@@ -194,11 +202,13 @@ Some applications from the Fedora repositories, especially CLI applications and 
 
 == With a GUI
 
-The application link:appstream://org.mageia.dnfdragora.desktop[*dnfdragora*] provides a graphical interface to install packages from the Fedora repositories.
+The application link:appstream://org.mageia.dnfdragora.desktop[\&#42;dnfdragora\&#42;] provides a graphical interface to install packages from the Fedora repositories.
 
 == With the terminal
 
-see https://docs.fedoraproject.org/en-US/quick-docs/dnf/#sect-usage
+see https://docs.fedoraproject.org/en-US/quick-docs/dnf/\&#35;sect-usage
+
+
 = Offline Updates
 
 Offline updates are updates which are installed during a reboot or shutdown. On Fedora KDE, this is the default for system updates installed through Discover.
@@ -212,3 +222,5 @@ Offline updates are the default on Fedora KDE, because they increase stability. 
 To deactivate offline updates, open System Settings and go to System → Software Update and set Apply system updates to Immediately.
 
 image::settings_offlineupdates.png[]
+
+

@@ -12,7 +12,7 @@ a supplement or pointer to other existing content, when it exists.
 
 # What is community architecture (CommArch)? {#commarch}
 
-Community architecture, sometimes shortened as \"CommArch\", is a
+Community architecture, sometimes shortened as \'CommArch\', is a
 sub-discipline of [information
 architecture](https://en.wikipedia.org/wiki/Information_architecture).
 It is a term with historical relevance in Open Source communities, yet
@@ -58,13 +58,13 @@ define and share our unique community culture.
 
 Fedoran(s)
 
-:   Sometimes written \"Fedorian\". A Fedoran is a Fedora contributor
+:   Sometimes written \'Fedorian\'. A Fedoran is a Fedora contributor
     and community member. Fedorans are a group of Fedora contributors
     and community members.
 
 Four Foundations
 
-:   Also known as the \"Four F's\". Freedom, Friends, Features, First.
+:   Also known as the \'Four F's\'. Freedom, Friends, Features, First.
     These are the four values of the Fedora community.
 
 # Search Fedora Package Repositories Using Sourcegraph {#_search_fedora_package_repositories_using_sourcegraph}
@@ -103,22 +103,24 @@ code from a single interface. It supports search filtering by file type,
 repository, and language. This helps in refining search results.
 
 Sourcegraph provides both a [web
-app](https://sourcegraph.com/search?q=context:global+repo:%5Esrc.fedoraproject.org/&patternType=regexp)
+app](https://sourcegraph.com/search?q=context:global+repo:%5Esrc.fedoraproject.org/&amp;patternType=regexp)
 and [CLI](https://sourcegraph.com/docs/cli/quickstart) interface. When
 using the Sourcegraph web app, you will need to start each search with:
-`repo:^src.fedoraproject.org` before entering any search queries.
+&#96;repo:\^src.fedoraproject.org&#96; before entering any search
+queries.
 
 <figure>
 <img src="sourcegraph/code-search.png" alt="Sourcegraph interface" />
 <figcaption>Sourcegraph code search interface</figcaption>
 </figure>
 
-## Filter Search: Using `file` Keyword to Find Specfiles {#filter-file}
+## Filter Search: Using &#96;file&#96; Keyword to Find Specfiles {#filter-file}
 
-The `file` keyword returns results from files that match the specified
-file path. The following query searches all repositories for files
-ending in `.spec` that contain the term `dnf5`. The use of the `file`
-keyword simplifies the task of locating specfiles.
+The &#96;file&#96; keyword returns results from files that match the
+specified file path. The following query searches all repositories for
+files ending in &#96;.spec&#96; that contain the term &#96;dnf5&#96;.
+The use of the &#96;file&#96; keyword simplifies the task of locating
+specfiles.
 
     repo:^src\.fedoraproject\.org/ file:\.spec$ dnf5
 
@@ -128,14 +130,15 @@ alt="find specfiles using the files keyword" />
 <figcaption>Search for specfiles</figcaption>
 </figure>
 
-## Use the `lang` Filter to Find a Fedora Repository to Contribute to {#filter-lang}
+## Use the &#96;lang&#96; Filter to Find a Fedora Repository to Contribute to {#filter-lang}
 
-The `lang` keyword is used to filter search results by programming
-language.
+The &#96;lang&#96; keyword is used to filter search results by
+programming language.
 
 The following query searches our dist-git repositories for files written
-in Markdown with instances of the term `contributing`. This is great for
-people seeking to assist with projects in need of contributions.
+in Markdown with instances of the term &#96;contributing&#96;. This is
+great for people seeking to assist with projects in need of
+contributions.
 
     repo:^src\.fedoraproject\.org/ lang:markdown contributing
 
@@ -147,10 +150,10 @@ alt="find projects to contribute to using the lang keyword" />
 
 ## Search for Specfiles Disabling Debug Packages {#filter-disable-debug}
 
-By using the query `"%global debug_package %{nil}"`, you can search for
-specfiles that contain the line where the `debug_package` macro is set
-to `nil`. This line disables the creation of a debug package in the
-build process.
+By using the query &#96;\'%global debug_package %{nil}\'&#96;, you can
+search for specfiles that contain the line where the
+&#96;debug_package&#96; macro is set to &#96;nil&#96;. This line
+disables the creation of a debug package in the build process.
 
 <figure>
 <img src="sourcegraph/debug.png"
@@ -164,7 +167,7 @@ The following query will scan all the repositories for software that is
 compatible with the ["Open Source Definition"
 (OSD)](https://opensource.org/definition-annotated).
 
-    repo:^src.fedoraproject.org/ lang:"RPM Spec" License: ^.*apache|bsd|gpl|lgpl|mit|mpl|cddl|epl.*$
+    repo:^src.fedoraproject.org/ lang:'RPM Spec' License: ^.\&#42;apache|bsd|gpl|lgpl|mit|mpl|cddl|epl.\&#42;$
 
 <figure>
 <img src="sourcegraph/license.png" alt="search for License" />
@@ -186,7 +189,7 @@ vulnerabilities that can then be reported to project maintainers.
 ## Conclusion
 
 For more search queries, see [Sourcegraph official
-documentation](https://sourcegraph.com/docs/code-search/queries#search-query-syntax).
+documentation](https://sourcegraph.com/docs/code-search/queries&#35;search-query-syntax).
 
 Having Sourcegraph Code Search integrated into our dist-git repository
 is a great addition to our engineering productivity toolkit. With Code
@@ -206,13 +209,9 @@ contributions.
 
 You can understand the journey of participation in these key phases:
 
-- [Phase 0: Bootstrap](phase0-bootstrap.xml)
-
-- Phase 1: Introduce (*coming soon*)
-
-- Phase 2: Step in (*coming soon*)
-
-- Phase 3: Lead (*coming soon*)
+&#42; [Phase 0: Bootstrap](phase0-bootstrap.xml) &#42; Phase 1:
+Introduce (*coming soon*) &#42; Phase 2: Step in (*coming soon*) &#42;
+Phase 3: Lead (*coming soon*)
 
 See the page for each phase for more information. Each phase is meant to
 be followed sequentially.
@@ -223,14 +222,14 @@ There are specific tools, services, and applications we use to get work
 done in Fedora. Setting yourself up in these tools is an important step
 in setting yourself up for successful contributions. Before you can do
 meaningful work, you need to get through these initial steps to
-**bootstrap yourself** for successful participation.
+&#42;bootstrap yourself&#42; for successful participation.
 
 ## Fedora Account System (FAS) {#fas}
 
-**Register an account here: {url-accounts}**
+&#42;Register an account here: {url-accounts}&#42;
 
 Every Fedora contributor needs an account in the Fedora Account System,
-often shortened to \"FAS\". A FAS account is the pre-requisite for
+often shortened to \'FAS\'. A FAS account is the pre-requisite for
 accessing most services and tools that we use in Fedora. Generally, a
 FAS account is the only account you will need to participate in Fedora;
 several other services, tools, and apps we use will use a FAS account
@@ -238,10 +237,10 @@ instead of requiring you to make a new account.
 
 ### Sign the Fedora Project Contributor Agreement (FPCA) {#fas-fpca}
 
-**To sign the FPCA, go to your Settings page from [FAS]({url-accounts}),
-choose *Agreements*, and sign the agreement.**
+&#42;To sign the FPCA, go to your Settings page from
+[FAS]({url-accounts}), choose *Agreements*, and sign the agreement.&#42;
 
-After you create a FAS account, you need to \"sign\" the [Fedora Project
+After you create a FAS account, you need to \'sign\' the [Fedora Project
 Contributor Agreement](legal::fpca.xml), or FPCA. When you sign this
 agreement, you are agreeing that the contributions you make to Fedora
 are under Fedora's default Open Source licenses, if they are not already
@@ -265,28 +264,16 @@ See this summary from the [FPCA page](legal::fpca.xml):
 
 ### Configure your FAS account {#fas-configure}
 
-**Complete your FAS account profile from your Settings page in
-[FAS]({url-accounts}).**
+&#42;Complete your FAS account profile from your Settings page in
+[FAS]({url-accounts}).&#42;
 
 Next, after you sign the FPCA, set up your FAS account by filling out
 your profile. There are various fields to describe yourself in your FAS
 profile that help others in the community know you better:
 
-- Name
-
-- Profile picture or avatar
-
-- Pronouns
-
-- Preferred language
-
-- Time zone
-
-- Website or blog
-
-- IRC or Matrix usernames
-
-- Git forge usernames (e.g. GitHub, GitLab)
+&#42; Name &#42; Profile picture or avatar &#42; Pronouns &#42;
+Preferred language &#42; Time zone &#42; Website or blog &#42; IRC or
+Matrix usernames &#42; Git forge usernames (e.g. GitHub, GitLab)
 
 Some services, tools, and apps in Fedora use this information to make
 collaboration easier. For example, when you set your time zone, some
@@ -306,13 +293,13 @@ setting up your account for the first time.
 
 Like many Open Source communities, Fedora has key platforms to connect,
 collaborate, and work together with other Fedora contributors. We have
-two primary platforms: an **asynchronous** and a **synchronous**
-platform. Asynchronous means the communication does not happen in
-real-time and replies might be spaced out over time. This could look
-like an online forum, a mailing list, or a Q&A website. Synchronous
-means the communication is happening in real-time, like a conversation.
-This could look like an online chat room, a video conference meeting, or
-an in-person conversation.
+two primary platforms: an &#42;asynchronous&#42; and a
+&#42;synchronous&#42; platform. Asynchronous means the communication
+does not happen in real-time and replies might be spaced out over time.
+This could look like an online forum, a mailing list, or a Q&amp;A
+website. Synchronous means the communication is happening in real-time,
+like a conversation. This could look like an online chat room, a video
+conference meeting, or an in-person conversation.
 
 Fedora is a big community and there are multiple asynchronous and
 synchronous platforms to collaborate with others. However, there are two
@@ -321,7 +308,8 @@ to others: Fedora Discussion and Fedora Chat.
 
 ### Fedora Discussion (asynchronous) {#collab-discussion}
 
-**Sign into Fedora Discussion using your FAS account: {url-discussion}**
+&#42;Sign into Fedora Discussion using your FAS account:
+{url-discussion}&#42;
 
 Fedora uses an online web forum called *Discourse* for our asynchronous
 communications. *Fedora Discussion* is the name of our Discourse forum.
@@ -340,7 +328,7 @@ Once you sign in with your FAS account, there are two next steps:
 
 ### Fedora Chat (synchronous) {#collab-chat}
 
-**Sign into Fedora Chat using your FAS account: {url-chat}**
+&#42;Sign into Fedora Chat using your FAS account: {url-chat}&#42;
 
 Fedora uses a decentralized chat protocol called *Matrix* for our
 synchronous communications. *Fedora Chat* is the name of our hosted
@@ -355,8 +343,7 @@ automatically be a member of the Fedora Space without any extra steps.
 Once you get your Matrix account set up, you can introduce yourself in
 the introductions chat room:
 
-- From Fedora Chat:
-  [#intros:fedoraproject.org]({url-chat}/#/room/#intros:fedoraproject.org)
-
-- From any other Matrix client:
-  [#intros:fedoraproject.org](https://matrix.to/#/#intros:fedoraproject.org)
+&#42; From Fedora Chat:
+[&#35;intros:fedoraproject.org]({url-chat}/&#35;/room/&#35;intros:fedoraproject.org)
+&#42; From any other Matrix client:
+[&#35;intros:fedoraproject.org](https://matrix.to/&#35;/&#35;intros:fedoraproject.org)

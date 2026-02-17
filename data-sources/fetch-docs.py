@@ -40,6 +40,20 @@ exclude_doc_urls = [
 repo_config_file = "antora.yml"
 docs_url_base = "https://docs.fedoraproject.org/en-US"
 current_release = "f43"
+# order is important
+replacements = {
+    "&": "\\&amp;",
+    "#": "\\&#35;",
+    "<": "\\&lt;",
+    ">": "\\&gt;",
+    "*": "\\&#42;",
+    "...": "\\&#8230;",
+    # "[": "&#91;",
+    # "]": "&#93;",
+    # "_": "&#95;",
+    "`": "\\&#96;",
+    '"': "'",
+}
 
 
 class RepoToSingleAdoc(object):
@@ -172,6 +186,10 @@ class RepoToSingleAdoc(object):
                 for key, value in variables.items():
                     full_text = full_text.replace("{" + key + "}", value)
 
+            # more replacements
+            for a, b in replacements.items():
+                full_text = full_text.replace(a, b)
+
             self.logger.debug(
                 f"Writing to {self.output_path}/{repo_ref}.adoc: {full_text}"
             )
@@ -227,6 +245,7 @@ class RepoToSingleAdoc(object):
                         variables,
                         url_map,
                     )
+                    text += "\n\n"
                 # includes
                 elif line.startswith("include::"):
                     self.logger.debug(f"Processing include:: {line}")
@@ -247,6 +266,7 @@ class RepoToSingleAdoc(object):
                             variables,
                             url_map,
                         )
+                        text += "\n\n"
                 # a header: update map
                 elif line.startswith("=") and not line.endswith("="):
                     header = line.replace("=", "").strip()
@@ -265,6 +285,11 @@ class RepoToSingleAdoc(object):
                         url += ".html"
                     url_map[header] = url.replace("//", "/")
 
+                    text += f"{line}\n"
+
+                # some section links/references have spaces in them
+                elif line.startswith("[") and line.endswith("]"):
+                    line = line.replace(" ", "_")
                     text += f"{line}\n"
 
                 else:

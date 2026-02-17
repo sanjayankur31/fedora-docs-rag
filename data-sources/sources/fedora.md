@@ -26,10 +26,10 @@ Copyright 2024 Fedora Project Contributors.
 
 The text of and illustrations in this document are licensed by Red Hat
 under a Creative Commons Attribution-ShareAlike 3.0 Unported license
-(\"CC-BY-SA\"). An explanation of CC-BY-SA is available at
+(\'CC-BY-SA\'). An explanation of CC-BY-SA is available at
 <https://creativecommons.org/licenses/by-sa/3.0/>. The original authors
 of this document, and Red Hat, designate the Fedora Project as the
-\"Attribution Party\" for purposes of CC-BY-SA. In accordance with
+\'Attribution Party\' for purposes of CC-BY-SA. In accordance with
 CC-BY-SA, if you distribute this document or an adaptation of it, you
 must provide the URL for the original version.
 
@@ -44,16 +44,17 @@ Hat, Inc., registered in the United States and other countries.
 For guidelines on the permitted uses of the Fedora trademarks, refer to
 <https://fedoraproject.org/wiki/Legal:Trademark_guidelines>.
 
-**Linux** ® is the registered trademark of Linus Torvalds in the United
-States and other countries.
+&#42;Linux&#42; ® is the registered trademark of Linus Torvalds in the
+United States and other countries.
 
-**Java** ® is a registered trademark of Oracle and/or its affiliates.
+&#42;Java&#42; ® is a registered trademark of Oracle and/or its
+affiliates.
 
-**XFS** ® is a trademark of Silicon Graphics International Corp. or its
-subsidiaries in the United States and/or other countries.
+&#42;XFS&#42; ® is a trademark of Silicon Graphics International Corp.
+or its subsidiaries in the United States and/or other countries.
 
-**MySQL** ® is a registered trademark of MySQL AB in the United States,
-the European Union and other countries.
+&#42;MySQL&#42; ® is a registered trademark of MySQL AB in the United
+States, the European Union and other countries.
 
 All other trademarks are the property of their respective owners.
 
@@ -67,25 +68,25 @@ The Fedora Project's mission is to lead the advancement of free and open
 source software and content as a collaborative community. The three
 elements of this mission are clear:
 
-- The Fedora Project always strives to lead, not follow.
+&#42; The Fedora Project always strives to lead, not follow.
 
-- The Fedora Project consistently seeks to create, improve, and spread
-  free/libre code and content.
+&#42; The Fedora Project consistently seeks to create, improve, and
+spread free/libre code and content.
 
-- The Fedora Project succeeds through shared action on the part of many
-  people throughout our community.
+&#42; The Fedora Project succeeds through shared action on the part of
+many people throughout our community.
 
 To find out more general information about Fedora, refer to the
 following pages, on the Fedora Project Wiki:
 
-- [Fedora Overview](https://fedoraproject.org/wiki/Overview)
+&#42; [Fedora Overview](https://fedoraproject.org/wiki/Overview)
 
-- [Fedora FAQ](https://fedoraproject.org/wiki/FAQ)
+&#42; [Fedora FAQ](https://fedoraproject.org/wiki/FAQ)
 
-- [Help and Discussions](https://fedoraproject.org/wiki/Communicate)
+&#42; [Help and Discussions](https://fedoraproject.org/wiki/Communicate)
 
-- [Participate in the Fedora
-  Project](https://fedoraproject.org/wiki/Join)
+&#42; [Participate in the Fedora
+Project](https://fedoraproject.org/wiki/Join)
 
 ## Need Help? {#sect-need-help}
 
@@ -98,10 +99,10 @@ you don't find yours, you can simply post a new question. This has the
 advantage that anyone else with the same problem can find the answer,
 too.
 
-You may also find assistance on the `#fedora` channel on the IRC network
-`irc.libera.chat`. Keep in mind that the channel is populated by
-volunteers wanting to help, but folks knowledgeable about a specific
-topic might not always be available.
+You may also find assistance on the &#96;&#35;fedora&#96; channel on the
+IRC network &#96;irc.libera.chat&#96;. Keep in mind that the channel is
+populated by volunteers wanting to help, but folks knowledgeable about a
+specific topic might not always be available.
 
 ## Want to Contribute? {#sect-providing-help}
 
@@ -125,11 +126,11 @@ The figures below are a recommended minimum for the default
 installation. Your requirements may differ, and most applications will
 benefit from more than the minimum resources.
 
-- 2GHz dual core processor or faster
+&#42; 2GHz dual core processor or faster
 
-- 2GB System Memory
+&#42; 2GB System Memory
 
-- 15GB unallocated drive space
+&#42; 15GB unallocated drive space
 
 Users of system equipped with the minimum memory of 2GB may want to
 consider Fedora Spins with less resource intense Desktop Environments
@@ -156,11 +157,11 @@ The figures below are recommended for the default x86_64 Workstation
 installation featuring the Gnome desktop . Your requirements may differ,
 depending on Desktop Environment and use case.
 
-- 2GHz quad core processor
+&#42; 2GHz quad core processor
 
-- 4GB System Memory
+&#42; 4GB System Memory
 
-- 20GB unallocated drive space
+&#42; 20GB unallocated drive space
 
 :::: note
 ::: title
@@ -181,8 +182,8 @@ installation image.
 ## Display resolution {#hardware_overview-resolution}
 
 Graphical installation of Fedora requires a minimum screen resolution of
-**1024x768**. Owners of devices with lower resolution, such as some
-netbooks, should use text or VNC installation.
+&#42;&#42;1024x768&#42;&#42;. Owners of devices with lower resolution,
+such as some netbooks, should use text or VNC installation.
 
 Once installed, Fedora will support these lower resolution devices. The
 minimum resolution requirement applies only to graphical installation.
@@ -192,43 +193,44 @@ minimum resolution requirement applies only to graphical installation.
 ### Minimum Hardware for Accelerated Desktops {#hardware_overview-graphics-legacy_gpus}
 
 Fedora rawhide supports most display adapters. Modern, feature-rich
-desktop environments like **GNOME** and **KDE Plasma Workspaces** use
-video devices to provide 3D-accelerated desktops. Older graphics
-hardware may **not support** acceleration:
+desktop environments like &#42;GNOME&#42; and &#42;KDE Plasma
+Workspaces&#42; use video devices to provide 3D-accelerated desktops.
+Older graphics hardware may &#42;not support&#42; acceleration:
 
-- Intel prior to GMA9xx
+&#42; Intel prior to GMA9xx
 
-- NVIDIA prior to NV30 (GeForce FX5xxx series)
+&#42; NVIDIA prior to NV30 (GeForce FX5xxx series)
 
-- Radeon prior to R300 (Radeon 9500)
+&#42; Radeon prior to R300 (Radeon 9500)
 
 ### CPU Accelerated Graphics {#hardware_overview-graphics-cpu_acceleration}
 
 Systems with older or no graphics acceleration devices can have
-accelerated desktop environments using **LLVMpipe** technology, which
-uses the CPU to render graphics. **LLVMpipe** requires a processor with
-`SSE2` extensions. The extensions supported by your processor are listed
-in the `flags:` section of `/proc/cpuinfo`
+accelerated desktop environments using &#42;LLVMpipe&#42; technology,
+which uses the CPU to render graphics. &#42;LLVMpipe&#42; requires a
+processor with &#96;SSE2&#96; extensions. The extensions supported by
+your processor are listed in the &#96;flags:&#96; section of
+&#96;/proc/cpuinfo&#96;
 
 ### Choosing a Desktop Environment for your hardware {#hardware_overview-graphics-desktops}
 
-Fedora rawhide's default desktop environment, **GNOME**, functions best
-with hardware acceleration. Alternative desktops are recommended for
-users with older graphics hardware or those seeing insufficient
-performance with **LLVMpipe**.
+Fedora rawhide's default desktop environment, &#42;GNOME&#42;, functions
+best with hardware acceleration. Alternative desktops are recommended
+for users with older graphics hardware or those seeing insufficient
+performance with &#42;LLVMpipe&#42;.
 
 Desktop environments can be added to an existing installation and
 selected at login. To list the available desktops, use the
-`dnf environment list` command:
+\[command\]&#96;dnf environment list&#96; command:
 
-    # dnf environment list
+    \&#35; dnf environment list
 
 Install the desired environment using its ID as listed in the above
 command's output:
 
-    # dnf install @cinnamon-desktop-environment
+    \&#35; dnf install @cinnamon-desktop-environment
 
-For more information, see the `dnf5-environment` man page.
+For more information, see the &#96;dnf5-environment&#96; man page.
 
 # Feedback {#sect-Release_Notes-Feedback}
 
@@ -252,13 +254,13 @@ If you feel these release notes could be improved in any way, you can
 provide your feedback directly to the beat writers. There are several
 ways to provide feedback, in order of preference:
 
-- Open an issue at
-  <https://gitlab.com/fedora/docs/fedora-linux-documentation/release-notes/-/issues> -
-  **This link is ONLY for feedback on the release notes themselves.**
-  Refer to the admonition above for details.
+&#42; Open an issue at
+<https://gitlab.com/fedora/docs/fedora-linux-documentation/release-notes/-/issues> -
+&#42;This link is ONLY for feedback on the release notes
+themselves.&#42; Refer to the admonition above for details.
 
-- E-mail the Release-Note mailing list at <relnotes@fedoraproject.org>.
-  :experimental:
+&#42; E-mail the Release-Note mailing list at
+<relnotes@fedoraproject.org>.
 
 # Changes in Fedora rawhide For System Administrators {#_changes_in_fedora_rawhide_for_system_administrators}
 
@@ -266,5 +268,5 @@ ways to provide feedback, in order of preference:
 
 # Changes in Fedora rawhide For Developers {#_changes_in_fedora_rawhide_for_developers}
 
-- [Common
-  Bugs](https://discussion.fedoraproject.org/tags/c/ask/common-issues/82/all/f40)
+&#42;&#42; [Common
+Bugs](https://discussion.fedoraproject.org/tags/c/ask/common-issues/82/all/f40)

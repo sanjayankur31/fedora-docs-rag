@@ -29,6 +29,8 @@ You can learn more about the Free Software movement link:https://www.fsf.org/blo
 You can learn more about the use of link:http://opensourceforneuroscience.org/[Open source for Neuroscience here].
 Other relevant neuroscience links are collected on a xref:related-links.adoc[separate page].
 
+
+
 = Installation Media
 
 The Fedora community produces a number of Fedora Linux based operating systems for different use-cases, including one for computational neuroscience.
@@ -37,7 +39,7 @@ The Fedora community produces a number of Fedora Linux based operating systems f
 
 For laptops and workstations, a number of Fedora Linux variants with different link:https://en.wikipedia.org/wiki/Desktop_environment[desktop environments] (user interfaces) are available.
 
-[cols="35,65",frame="all"]
+[cols='35,65',frame='all']
 |===
 | Platform | Description
 
@@ -83,7 +85,7 @@ These features are intended to make the system more stable and reliable.
 
 These platforms are excellent for containerized applications and container based development workflows.
 
-[cols="35,65",frame="all"]
+[cols='35,65',frame='all']
 |===
 | Platform | Description
 
@@ -104,7 +106,7 @@ A link:https://getfedora.org/en/server/[Fedora Linux for servers platform] is a 
 
 These Fedora Linux platforms are primarily aimed at container based development and deployment:
 
-[cols="35,65",frame="all"]
+[cols='35,65',frame='all']
 |===
 | Platform | Description
 
@@ -116,31 +118,33 @@ These Fedora Linux platforms are primarily aimed at container based development 
 
 |===
 
+
+
 = Communicating and getting help
 
 For general troubleshooting help related to Fedora, please refer to link:https://fedoraproject.org/wiki/Communicating_and_getting_help[this page on the Fedora wiki].
 For anything NeuroFedora related, please use the following channels:
 
-* You can chat with us at link:https://matrix.to/#/#neuro:fedoraproject.org[Element/Matrix channel], or at link:https://t.me/NeuroFedora[@NeuroFedora on Telegram]. They are all bridged so one can use any of them.
-* You can e-mail us on the NeuroFedora mailing list at link:https://lists.fedoraproject.org/admin/lists/neurofedora@lists.fedoraproject.org/[neurofedora@lists.fedoraproject.org].
-* You can follow updates related to NeuroFedora on the link:https://neuroblog.fedoraproject.org/[NeuroFedora blog at neuroblog.fedoraproject.org].
-* On Mastodon, we use the link:https://fosstodon.org/tags/neurofedora[#NeuroFedora] hash tag.
-* On Twitter, we are link:https://twitter.com/neurofedora[@NeuroFedora].
-* On LinkedIn, join us in the link:https://www.linkedin.com/groups/8912503/[NeuroFedora SIG].
-* link:https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/[All bugs are filed] at the link:https://tinyurl.com/neurofedora-bugs[Fedora bugzilla tracker].
-* Other issues can be filed at link:https://pagure.io/neuro-sig/NeuroFedora[our ticketing repository on Pagure].
-* We also have a link:https://github.com/neurofedora[ticketing repository on Github].
+\&#42; You can chat with us at link:https://webchat.libera.chat/?channels=\&#35;fedora-neuro[\&#35;fedora-neuro on Libera.chat], or our link:https://matrix.to/\&#35;/\&#35;neuro:fedoraproject.org[Element/Matrix channel], or at link:https://t.me/NeuroFedora[@NeuroFedora on Telegram]. They are all bridged so one can use any of them.
+\&#42; You can e-mail us on the NeuroFedora mailing list at link:https://lists.fedoraproject.org/admin/lists/neurofedora@lists.fedoraproject.org/[neurofedora@lists.fedoraproject.org].
+\&#42; You can follow updates related to NeuroFedora on the link:https://neuroblog.fedoraproject.org/[NeuroFedora blog at neuroblog.fedoraproject.org].
+\&#42; On Mastodon, we use the link:https://fosstodon.org/tags/neurofedora[\&#35;NeuroFedora] hash tag.
+\&#42; On Twitter, we are link:https://twitter.com/neurofedora[@NeuroFedora].
+\&#42; On LinkedIn, join us in the link:https://www.linkedin.com/groups/8912503/[NeuroFedora SIG].
+\&#42; link:https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/[All bugs are filed] at the link:https://tinyurl.com/neurofedora-bugs[Fedora bugzilla tracker].
+\&#42; Other issues can be filed at link:https://pagure.io/neuro-sig/NeuroFedora[our ticketing repository on Pagure].
+\&#42; We also have a link:https://github.com/neurofedora[ticketing repository on Github].
 
 
 == Open Meetings
 
-The NeuroFedora team hosts regular, open, public meetings every two weeks on the link:https://webchat.freenode.net/?channels=#fedora-neuro[IRC] and bridged link:https://t.me/NeuroFedora[Telegram] and link:https://tinyurl.com/neurofedora-matrix[Element/Matrix channel] channels.
+The NeuroFedora team hosts regular, open, public meetings every two weeks on the link:https://webchat.freenode.net/?channels=\&#35;fedora-neuro[IRC] and bridged link:https://t.me/NeuroFedora[Telegram] and link:https://tinyurl.com/neurofedora-matrix[Element/Matrix channel] channels.
 Everyone is welcome to attend these meetings.
 
 Currently, these meetings are held on alternate Mondays at 1300 UTC, starting from September 07, 2020.
 Please subscribe to the link:https://lists.fedoraproject.org/admin/lists/neurofedora@lists.fedoraproject.org/[mailing list] or the link:https://neuroblog.fedoraproject.org[NeuroFedora blog] where agendas for the upcoming meetings are published.
 
-The logs from all meetings are archived on the link:https://meetbot.fedoraproject.org/sresults/?group_id=neurofedora&type=team[Fedora Mote] web application.
+The logs from all meetings are archived on the link:https://meetbot.fedoraproject.org/sresults/?group_id=neurofedora\&amp;type=team[Fedora Mote] web application.
 We use link:https://fedoraproject.org/wiki/Meeting:Guide[MeetBot] to manage and document our meetings.
 
 The usual agenda for the meetings is below.
@@ -148,8 +152,8 @@ Please feel free to add to it when the meeting announcment is sent out to the ma
 
 -----------
 - New introductions and roll call.
-- Tasks from last meeting: https://meetbot.fedoraproject.org/sresults/?group_id=neurofedora&type=team
-- Open Pagure tickets: https://pagure.io/neuro-sig/NeuroFedora/issues?status=Open&tags=S%3A+Next+meeting
+- Tasks from last meeting: https://meetbot.fedoraproject.org/sresults/?group_id=neurofedora\&amp;type=team
+- Open Pagure tickets: https://pagure.io/neuro-sig/NeuroFedora/issues?status=Open\&amp;tags=S%3A+Next+meeting
 - Python package installability: https://ankursinha.fedorapeople.org/neurofedora/package-status/latest/
 - Package health check: https://packager-dashboard.fedoraproject.org/user/neuro-sig
 - Open package reviews check: https://bugzilla.redhat.com/show_bug.cgi?id=fedora-neuro
@@ -157,6 +161,8 @@ Please feel free to add to it when the meeting announcment is sent out to the ma
 - Next meeting day, and chair.
 - Open floor.
 -----------
+
+
 
 = Contributing
 
@@ -173,44 +179,44 @@ NeuroFedora relies completely on the link:https://apps.fedoraproject.org[infrast
 
 === Community organisation, governance, and dissemination
 
-* Access to all infrastructure is provided by a link:https://accounts.fedoraproject.org/[Fedora accounts system (FAS)] account.
-* Our link:https://pagure.io/neuro-sig/NeuroFedora[housekeeping ticket system] lives on link:https://pagure.io[Pagure.io].
-* The public discussion mailing list is hosted on link:https://lists.fedoraproject.org/admin/lists/neurofedora@lists.fedoraproject.org/[Mailman, with a Hyperkitty powered web interface].
-* A private (because bugs may include private information) packager only mailing list for bugzilla notifications is also hosted on link:https://lists.fedoraproject.org/admin/lists/neuro-sig@lists.fedoraproject.org/[Mailman].
-* Our Matrix chat channel is hosted on link:https://matrix.to/%3C/mark%3E/#neuro:fedoraproject.org[Element/Matrix].
-* The logs from our IRC meetings are maintained at link:https://meetbot.fedoraproject.org/[meetbot (mote)].
-* Meetings are organised and announced using the link:https://apps.fedoraproject.org/calendar[Fedora calendar (fedocal)].
-* The link:https://fedoraproject.org/wiki/SIGs/NeuroFedora[Fedora project wiki] provides a place for temporary note taking.
-* The link:https://fedoramagazine.org[Fedora magazine] posts Fedora related information for end-users.
-* The link:https://communityblog.fedoraproject.org/[Community blog] posts Fedora related information for the community.
-* The http://fedoraplanet.org/[Fedora planet] aggregates blogs from the complete Fedora community.
-* Notifications are generated using http://fedmsg.com/[Fedmsg (Federated message bus)] and can be searched using link:https://apps.fedoraproject.org/datagrepper/[datagrepper].
+\&#42; Access to all infrastructure is provided by a link:https://accounts.fedoraproject.org/[Fedora accounts system (FAS)] account.
+\&#42; Our link:https://pagure.io/neuro-sig/NeuroFedora[housekeeping ticket system] lives on link:https://pagure.io[Pagure.io].
+\&#42; The public discussion mailing list is hosted on link:https://lists.fedoraproject.org/admin/lists/neurofedora@lists.fedoraproject.org/[Mailman, with a Hyperkitty powered web interface].
+\&#42; A private (because bugs may include private information) packager only mailing list for bugzilla notifications is also hosted on link:https://lists.fedoraproject.org/admin/lists/neuro-sig@lists.fedoraproject.org/[Mailman].
+\&#42; Our Matrix chat channel is hosted on link:https://matrix.to/%3C/mark%3E/\&#35;neuro:fedoraproject.org[Element/Matrix].
+\&#42; The logs from our IRC meetings are maintained at link:https://meetbot.fedoraproject.org/[meetbot (mote)].
+\&#42; Meetings are organised and announced using the link:https://apps.fedoraproject.org/calendar[Fedora calendar (fedocal)].
+\&#42; The link:https://fedoraproject.org/wiki/SIGs/NeuroFedora[Fedora project wiki] provides a place for temporary note taking.
+\&#42; The link:https://fedoramagazine.org[Fedora magazine] posts Fedora related information for end-users.
+\&#42; The link:https://communityblog.fedoraproject.org/[Community blog] posts Fedora related information for the community.
+\&#42; The http://fedoraplanet.org/[Fedora planet] aggregates blogs from the complete Fedora community.
+\&#42; Notifications are generated using http://fedmsg.com/[Fedmsg (Federated message bus)] and can be searched using link:https://apps.fedoraproject.org/datagrepper/[datagrepper].
 
 === Troubleshooting
-* Text can be pasted and shared using the link:https://paste.fedoraproject.org/[Fedora pastebin (a modernpaste instance)].
-* link:https://pagure.io/fpaste[fpaste] provides a convenient command line tool to paste information to the Fedora pastebin.
-* link:https://ask.fedoraproject.org[Ask Fedora (a Discourse instance)] provides a forum for troubleshooting.
+\&#42; Text can be pasted and shared using the link:https://paste.fedoraproject.org/[Fedora pastebin (a modernpaste instance)].
+\&#42; link:https://pagure.io/fpaste[fpaste] provides a convenient command line tool to paste information to the Fedora pastebin.
+\&#42; link:https://ask.fedoraproject.org[Ask Fedora (a Discourse instance)] provides a forum for troubleshooting.
 
 
 === Packages and software
 
-* The link:https://packager-dashboard.fedoraproject.org/dashboard?groups=neuro-sig[Fedora Packager Dashboard] provides an excellent overview of the state of packages.
-* The sources (link:https://docs.fedoraproject.org/en-US/quick-docs/creating-rpm-packages/index.html[rpm spec files]) for packages live on link:https://src.fedoraproject.org/dashboard/projects[Fedora package sources (a Pagure instance)].
-* Packages are built using the link:https://koji.fedoraproject.org/koji/[Fedora buildsystem (Koji)].
-* Packages go through the link:https://koschei.fedoraproject.org/groups/neuro-sig[Koschei Continuous Integration (CI) system] to ensure that their dependencies are all correct.
-* Packages are tested (Quality Assurance: QA) on the link:https://bodhi.fedoraproject.org/[Fedora updates system (Bodhi)].
-* Packages are distributed globally using the link:https://admin.fedoraproject.org/mirrormanager/[Fedora mirror manager].
-* Packages are monitored for updates using link:https://release-monitoring.org/[release-monitoring.org (Anitya)].
-* link:https://docs.fedoraproject.org/en-US/package-maintainers/Package_Review_Process/[Reviews], link:https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/[bugs, and feature requests] related to these packages are filed on link:https://bugzilla.redhat.com[Redhat Bugzilla instance].
-** The list of currently open bugs can be seen link:https://tinyurl.com/neurofedora-bugs[here].
-** Review tickets can be searched using the link:https://fedoraproject.org/PackageReviewStatus/[Fedora review tracker].
-* Extra packages are provided via link:https://copr.fedorainfracloud.org/[the COPR build system].
-* Docker images are distributed using the link:https://registry.fedoraproject.org/[Fedora docker registry].
+\&#42; The link:https://packager-dashboard.fedoraproject.org/dashboard?groups=neuro-sig[Fedora Packager Dashboard] provides an excellent overview of the state of packages.
+\&#42; The sources (link:https://docs.fedoraproject.org/en-US/quick-docs/creating-rpm-packages/index.html[rpm spec files]) for packages live on link:https://src.fedoraproject.org/dashboard/projects[Fedora package sources (a Pagure instance)].
+\&#42; Packages are built using the link:https://koji.fedoraproject.org/koji/[Fedora buildsystem (Koji)].
+\&#42; Packages go through the link:https://koschei.fedoraproject.org/groups/neuro-sig[Koschei Continuous Integration (CI) system] to ensure that their dependencies are all correct.
+\&#42; Packages are tested (Quality Assurance: QA) on the link:https://bodhi.fedoraproject.org/[Fedora updates system (Bodhi)].
+\&#42; Packages are distributed globally using the link:https://admin.fedoraproject.org/mirrormanager/[Fedora mirror manager].
+\&#42; Packages are monitored for updates using link:https://release-monitoring.org/[release-monitoring.org (Anitya)].
+\&#42; link:https://docs.fedoraproject.org/en-US/package-maintainers/Package_Review_Process/[Reviews], link:https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/[bugs, and feature requests] related to these packages are filed on link:https://bugzilla.redhat.com[Redhat Bugzilla instance].
+\&#42;\&#42; The list of currently open bugs can be seen link:https://tinyurl.com/neurofedora-bugs[here].
+\&#42;\&#42; Review tickets can be searched using the link:https://fedoraproject.org/PackageReviewStatus/[Fedora review tracker].
+\&#42; Extra packages are provided via link:https://copr.fedorainfracloud.org/[the COPR build system].
+\&#42; Docker images are distributed using the link:https://registry.fedoraproject.org/[Fedora docker registry].
 
 
 === Documentation
-* The http://asciidoc.org/[asciidoc] sources for the documentation are kept in a link:https://pagure.io/neuro-sig/documentation[Pagure repository].
-* The documentation is generated using an link:https://antora.org/[Antora] system and hosted at the link:https://docs.fedoraproject.org[Fedora documentation site].
+\&#42; The http://asciidoc.org/[asciidoc] sources for the documentation are kept in a link:https://pagure.io/neuro-sig/documentation[Pagure repository].
+\&#42; The documentation is generated using an link:https://antora.org/[Antora] system and hosted at the link:https://docs.fedoraproject.org[Fedora documentation site].
 
 
 == Contributor roles
@@ -222,7 +228,7 @@ The NeuroFedora team are happy to help new members join the Fedora community, an
 Please get in touch with us using one of the communications channels!
 
 The Fedora Join SIG also helps newcomers start with contributing to Fedora.
-Take a look at link:https://docs.fedoraproject.org/en-US/project/join/#_not_sure_where_to_start_come_hang_out_with_us[their documentation].
+Take a look at link:https://docs.fedoraproject.org/en-US/project/join/\&#35;_not_sure_where_to_start_come_hang_out_with_us[their documentation].
 
 === Suggest software for inclusion
 
@@ -232,7 +238,7 @@ You can do so using link:https://goo.gl/forms/j6AJ82yOh78MPxby1[our suggestion f
 === Package and maintain software
 
 Making packages available in the Fedora repositories requires the team to build them from source to produce RPMs.
-These RPMs are then made available in the Fedora repositories for all Fedora users to easily install on their systems using `dnf`.
+These RPMs are then made available in the Fedora repositories for all Fedora users to easily install on their systems using \&#96;dnf\&#96;.
 They can also be used to easily create xref:containers.adoc[container images] that users can run with Podman (or Docker).
 You can help the team by becoming a link:https://docs.fedoraproject.org/en-US/package-maintainers/Joining_the_Package_Maintainers/[Fedora package maintainer].
 
@@ -262,7 +268,7 @@ Any other issues related to NeuroFedora link:https://pagure.io/neuro-sig/NeuroFe
 
 User documentation is a most important resource.
 You can help by link:https://docs.fedoraproject.org/en-US/fedora-docs/contributing/[improving or contributing to our documentation].
-You can improve pre-existing pages by clicking on the "Edit this page" in the top right corner.
+You can improve pre-existing pages by clicking on the 'Edit this page' in the top right corner.
 The sources are kept link:https://pagure.io/neuro-sig/documentation[here].
 
 We are also always looking for people to write about NeuroFedora, the tools, community, and neuroscience on the link:https://neuroblog.fedoraproject.org/[NeuroFedora blog].
@@ -277,9 +283,11 @@ You can help by remaining present in the communication channels and answering us
 Help us spread the word!
 Write about NeuroFedora, share your opinions on social media, help more people learn about the project and get involved!
 
-* On Mastodon, we use the link:https://fosstodon.org/tags/neurofedora[#NeuroFedora] hash tag.
-* On Twitter, we are link:https://twitter.com/NeuroFedora[@NeuroFedora].
-* You can order NeuroFedora stikers off stickermule link:https://www.stickermule.com/uk/account/artworks/2036110[using the approved artwork].
+\&#42; On Mastodon, we use the link:https://fosstodon.org/tags/neurofedora[\&#35;NeuroFedora] hash tag.
+\&#42; On Twitter, we are link:https://twitter.com/NeuroFedora[@NeuroFedora].
+\&#42; You can order NeuroFedora stikers off stickermule link:https://www.stickermule.com/uk/account/artworks/2036110[using the approved artwork].
+
+
 
 = Using software included in NeuroFedora
 
@@ -287,10 +295,10 @@ NeuroFedora is a set of packages that can be installed on a Fedora system.
 So, one can setup a Fedora system and then install whatever tools they use.
 Fedora provides a variety of installation media:
 
-* We suggest the link:https://getfedora.org/en/workstation/[Fedora workstation] as a well designed link:https://www.gnome.org/[GNOME] based installation.
-* For headless (such as clusters and servers without a graphical interface) installations, we suggest the link:https://getfedora.org/en/server/[Fedora server] installation.
-* Users that prefer other desktop environments, such as link:https://www.kde.org/[KDE], link:https://xfce.org/[XFCE], link:https://lxqt.org/about/[LXQT], link:https://mate-desktop.org/[Mate], link:https://en.wikipedia.org/wiki/Cinnamon_(software)[Cinnamon] or link:https://lxde.org/[LXDE], can select a link:https://spins.fedoraproject.org/[Fedora spin].
-* The link:https://labs.fedoraproject.org/en/scientific/[Fedora scientific] image provides a KDE based installation that includes various generally used scientific tools.
+\&#42; We suggest the link:https://getfedora.org/en/workstation/[Fedora workstation] as a well designed link:https://www.gnome.org/[GNOME] based installation.
+\&#42; For headless (such as clusters and servers without a graphical interface) installations, we suggest the link:https://getfedora.org/en/server/[Fedora server] installation.
+\&#42; Users that prefer other desktop environments, such as link:https://www.kde.org/[KDE], link:https://xfce.org/[XFCE], link:https://lxqt.org/about/[LXQT], link:https://mate-desktop.org/[Mate], link:https://en.wikipedia.org/wiki/Cinnamon_(software)[Cinnamon] or link:https://lxde.org/[LXDE], can select a link:https://spins.fedoraproject.org/[Fedora spin].
+\&#42; The link:https://labs.fedoraproject.org/en/scientific/[Fedora scientific] image provides a KDE based installation that includes various generally used scientific tools.
 
 Detailed information on installing Fedora can be found in the link:https://docs.fedoraproject.org/[Fedora documentation].
 
@@ -301,10 +309,10 @@ NOTE: More software is regularly being added to NeuroFedora. Please xref:communi
 Users have access to the xref:installing-software.adoc[complete set of software maintained by the Fedora community].
 The NeuroFedora special interest group (SIG), however, focusses on providing software for:
 
-* xref:compneuro-tools.adoc[computational neuroscience]
-* xref:imaging-tools.adoc[neuro-imaging]
-* xref:analysis-tools.adoc[data-analysis]
-* xref:utilities.adoc[our digital goodie box of assorted tools]
+\&#42; xref:compneuro-tools.adoc[computational neuroscience]
+\&#42; xref:imaging-tools.adoc[neuro-imaging]
+\&#42; xref:analysis-tools.adoc[data-analysis]
+\&#42; xref:utilities.adoc[our digital goodie box of assorted tools]
 
 Please use the individual pages to learn more.
 
@@ -317,6 +325,8 @@ The NeuroFedora team will continue to work with upstreams to move it to official
 
 Use of containers is discussed on a xref:containers.adoc[separate page].
 
+
+
 = Software for computational neuroscience
 
 == Upstream packages
@@ -327,7 +337,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 === Python packages
 
 
-[.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,30%,20%,30%',frame='all']
 |===
 | Software | Summary | pip (PyPi) | Notes
 
@@ -339,40 +349,42 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 The following general purpose utilties are included in the repositories:
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[.datatable.dt-search,width="100%",cols="20%,40%,40%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,40%,40%',frame='all']
 |===
 | Software | Install with | Notes
 
 | link:https://src.fedoraproject.org/rpms/arbor[arbor]
-| `sudo dnf install arbor`
+| \&#96;sudo dnf install arbor\&#96;
 | A high-performance library for Computational Neuroscience simulations
 
 | link:https://src.fedoraproject.org/rpms/auryn[auryn]
-| `sudo dnf install auryn`
+| \&#96;sudo dnf install auryn\&#96;
 | A package to simulate recurrent spiking neural networks with spike timing dependent plasticity (STDP).
 
 | link:https://src.fedoraproject.org/rpms/libneurosim[libneurosim]
-| `sudo dnf install libneurosim`
+| \&#96;sudo dnf install libneurosim\&#96;
 | Common interfaces for neuronal simulators
 
 | link:https://src.fedoraproject.org/rpms/libsbml[libsbml]
-| `sudo dnf install libsbml`
+| \&#96;sudo dnf install libsbml\&#96;
 | Systems Biology Markup Language library
 
 | link:https://src.fedoraproject.org/rpms/libsonata[libsonata]
-| `sudo dnf install libsonata python3-libsonata`
+| \&#96;sudo dnf install libsonata python3-libsonata\&#96;
 | A Python and C++ interface to the SONATA format
 
 | link:https://src.fedoraproject.org/rpms/moose[moose]
-| `sudo dnf install moose python3-moose`
+| \&#96;sudo dnf install moose python3-moose\&#96;
 | Multiscale Neuroscience and Systems Biology Simulator
 
 | link:https://src.fedoraproject.org/rpms/nest[nest]
-| `sudo dnf install nest python3-nest`
+| \&#96;sudo dnf install nest python3-nest\&#96;
 | The NEST simulator
 
 
 |===
+
+
 = Software for data-analysis
 
 == Upstream packages
@@ -383,7 +395,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 === Python packages
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,30%,20%,30%',frame='all']
 |===
 | Software | Summary | pip (PyPi) | Notes
 
@@ -395,133 +407,135 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 The following are included in the repositories:
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[.datatable.dt-search,width="100%",cols="20%,40%,40%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,40%,40%',frame='all']
 |===
 | Software | Install with | Notes
 
 | link:https://src.fedoraproject.org/rpms/python-amply[amply]
-| `sudo dnf install python3-amply`
+| \&#96;sudo dnf install python3-amply\&#96;
 | A Python package for AMPL/GMPL datafile parsing.
 
 | link:https://src.fedoraproject.org/rpms/R-arules[arules]
-| `sudo dnf install R-arules`
+| \&#96;sudo dnf install R-arules\&#96;
 | Provides the infrastructure for representing, manipulating and analyzing transaction data and patterns.
 
 | link:https://src.fedoraproject.org/rpms/octave-brain2mesh[brain2mesh]
-| `sudo dnf install octave-brain2mesh`
+| \&#96;sudo dnf install octave-brain2mesh\&#96;
 | A fully automated high-quality brain tetrahedral mesh generation toolbox.
 
 | link:https://src.fedoraproject.org/rpms/python-contextualbandits[contextualbandits]
-| `sudo dnf install python3-contextualbandits`
+| \&#96;sudo dnf install python3-contextualbandits\&#96;
 | Python implementations of contextual bandits algorithms.
 
 | link:https://src.fedoraproject.org/rpms/python-cyipopt[cyipopt]
-| `sudo dnf install python3-cyipopt`
+| \&#96;sudo dnf install python3-cyipopt\&#96;
 | Cython interface for the interior point optimzer IPOPT.
 
 | link:https://src.fedoraproject.org/rpms/python-editdistance[editdistance]
-| `sudo dnf install python3-editdistance`
+| \&#96;sudo dnf install python3-editdistance\&#96;
 | A fast implementation of the edit distance (Levenshtein distance) in Python.
 
 | link:https://src.fedoraproject.org/rpms/fasttrack[FastTrack]
-| `sudo dnf install fasttrack fasttrack-cli`
+| \&#96;sudo dnf install fasttrack fasttrack-cli\&#96;
 | Application designed to track multiple objects in video recording.
 
 | link:https://src.fedoraproject.org/rpms/python-identify[identify]
-| `sudo dnf install python3-identify`
+| \&#96;sudo dnf install python3-identify\&#96;
 | File identification library for Python.
 
 | link:https://src.fedoraproject.org/rpms/octave-iso2mesh[iso2mesh]
-| `sudo dnf install octave-iso2mesh`
+| \&#96;sudo dnf install octave-iso2mesh\&#96;
 | A medical-image based 3-D mesh generation and analysis toolkit.
 
 | link:https://src.fedoraproject.org/rpms/octave-mcxlab[mcxlab]
-| `sudo dnf install octave-mcxlab`
+| \&#96;sudo dnf install octave-mcxlab\&#96;
 | A 3-D Monte Carlo photon transport simulation toolbox.
 
 | link:https://src.fedoraproject.org/rpms/python-meautility[MEAUtility]
-| `sudo dnf install python-meautility`
+| \&#96;sudo dnf install python-meautility\&#96;
 | Python package for multi-electrode array (MEA) handling and stimulation.
 
 | link:https://src.fedoraproject.org/rpms/mmc[mmc]
-| `sudo dnf install mmc octave-mmclab mmc-demos mmclab-demos`
+| \&#96;sudo dnf install mmc octave-mmclab mmc-demos mmclab-demos\&#96;
 | A 3-D mesh-based Monte Carlo photon transport simulator.
 
 | link:https://src.fedoraproject.org/rpms/python-mne[mne]
-| `sudo dnf install python3-mne`
+| \&#96;sudo dnf install python3-mne\&#96;
 | Magnetoencephalography (MEG) and Electroencephalography (EEG) data analysis.
 
 | link:https://src.fedoraproject.org/rpms/python-nashpy[Nashpy]
-| `sudo dnf install python3-nashpy`
+| \&#96;sudo dnf install python3-nashpy\&#96;
 | A library for the computation of Nash equilibria in two player games.
 
 | link:https://src.fedoraproject.org/rpms/python-neurodsp[neurodsp]
-| `sudo dnf install python3-neurodsp`
+| \&#96;sudo dnf install python3-neurodsp\&#96;
 | A Python package to analyze and simulate neural time series, using digital signal processing.
 
 | link:https://src.fedoraproject.org/rpms/python-neurosynth[neurosynth]
-| `sudo dnf install python3-neurosynth`
+| \&#96;sudo dnf install python3-neurosynth\&#96;
 | Large-scale synthesis of functional neuroimaging data.
 
 | link:https://src.fedoraproject.org/rpms/python-niaaml[NiaAML]
-| `sudo dnf install python3-niaaml`
+| \&#96;sudo dnf install python3-niaaml\&#96;
 | AutoML in Python.
 
 | link:https://src.fedoraproject.org/rpms/python-niaclass[NiaClass]
-| `sudo dnf install python3-niaclass`
+| \&#96;sudo dnf install python3-niaclass\&#96;
 | Framework for solving classification tasks using nature-inspired algorithms.
 
 | link:https://src.fedoraproject.org/rpms/python-niapy[NiaPy]
-| `sudo dnf install python3-niapy`
+| \&#96;sudo dnf install python3-niapy\&#96;
 | A Python package for solving optimization problems.
 
 | link:https://src.fedoraproject.org/rpms/python-nitime[nitime]
-| `sudo dnf install python3-nitime`
+| \&#96;sudo dnf install python3-nitime\&#96;
 | Timeseries analysis for neuroscience data.
 
 | link:https://src.fedoraproject.org/rpms/python-odml[odML]
-| `sudo dnf install python3-odml`
+| \&#96;sudo dnf install python3-odml\&#96;
 | File-format to store metadata in an organized way.
 
 | link:https://src.fedoraproject.org/rpms/openmeeg[openmeeg]
-| `sudo dnf install openmeeg`
+| \&#96;sudo dnf install openmeeg\&#96;
 | A C++ package for solving the forward problems of electroencephalography (EEG) and magnetoencephalography (MEG).
 
 | link:https://src.fedoraproject.org/rpms/python-pynwb[pynwb]
-| `sudo dnf install python3-pynwb`
+| \&#96;sudo dnf install python3-pynwb\&#96;
 | A Python package for working with NWB files.
 
 | link:https://src.fedoraproject.org/rpms/python-pyspike[PySpike]
-| `sudo dnf install python3-pyspike`
+| \&#96;sudo dnf install python3-pyspike\&#96;
 | A Python library for the numerical analysis of spiketrain similarity
 
 | link:https://src.fedoraproject.org/rpms/python-pyswarms[pyswarms]
-| `sudo dnf install python3-pyswarms`
+| \&#96;sudo dnf install python3-pyswarms\&#96;
 | PySwarms is an extensible research toolkit for particle swarm optimization (PSO) in Python.
 
 | link:https://src.fedoraproject.org/rpms/python-SALib[SALib]
-| `sudo dnf install python3-SALib`
+| \&#96;sudo dnf install python3-SALib\&#96;
 | Sensitivity Analysis Library.
 
 | link:https://src.fedoraproject.org/rpms/shybrid[shybrid]
-| `sudo dnf install shybrid`
+| \&#96;sudo dnf install shybrid\&#96;
 | GUI for generating hybrid ground-truth spiking data
 
 | link:https://src.fedoraproject.org/rpms/python-smart_open[smart_open]
-| `sudo dnf install python3-smart_open`
+| \&#96;sudo dnf install python3-smart_open\&#96;
 | Utils for streaming large files (S3, HDFS, gzip, bz2, and more).
 
 | link:https://src.fedoraproject.org/rpms/python-spyking-circus[Spyking circus]
-| `sudo dnf install python3-spyking-circus{-mpich,-openmpi}`
+| \&#96;sudo dnf install python3-spyking-circus{-mpich,-openmpi}\&#96;
 | A fast and scalable solution for spike sorting of large-scale extracellular recordings.
 
 | link:https://src.fedoraproject.org/rpms/python-trimesh[trimesh]
-| `sudo dnf install python3-trimesh`
+| \&#96;sudo dnf install python3-trimesh\&#96;
 | Import, export, process, analyze and view triangular meshes.
 
 |===
 
 Software that is in the queue for inclusion is listed link:https://pagure.io/neuro-sig/NeuroFedora/issues?tags=F%3A+Data+Analysis[here].
+
+
 = Software for neuro-imaging
 
 == Upstream packages
@@ -532,7 +546,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 === Python packages
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,30%,20%,30%',frame='all']
 |===
 | Software | Summary | pip (PyPi) | Notes
 
@@ -544,69 +558,71 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 The following are included in the repositories:
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[.datatable.dt-search,width="100%",cols="20%,40%,40%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,40%,40%',frame='all']
 |===
 | Software | Install with | Notes
 
 | link:https://src.fedoraproject.org/rpms/alizams[Alizams]
-| `sudo dnf install alizams`
+| \&#96;sudo dnf install alizams\&#96;
 | A DICOM viewer.
 
 | link:https://src.fedoraproject.org/rpms/dicomanonymizer[DICOMAnonymizer]
-| `sudo dnf install dicomanonymizer`
+| \&#96;sudo dnf install dicomanonymizer\&#96;
 | A multi-threaded anonymizer for DICOM files implementing most of DICOM PS 3.15 AnnexE
 
 | link:https://src.fedoraproject.org/rpms/python-dipy[dipy]
-| `sudo dnf install python3-dipy`
+| \&#96;sudo dnf install python3-dipy\&#96;
 | Diffusion MRI utilities in Python.
 
 | link:https://src.fedoraproject.org/rpms/python-ephyviewer[ephyviewer]
-| `sudo dnf install python3-ephyviewer`
+| \&#96;sudo dnf install python3-ephyviewer\&#96;
 | A Python library based on pyqtgraph for building custom viewers for electrophysiological signals, video, events, epochs, spike trains, data tables, and time-frequency representations of signals.
 
 | link:https://src.fedoraproject.org/rpms/python-fsleyes[fsleyes]
-| `sudo dnf install python3-fsleyes`
+| \&#96;sudo dnf install python3-fsleyes\&#96;
 | FSLeyes, the FSL image viewer.
 
 | link:https://src.fedoraproject.org/rpms/gifticlib[gifticlib]
-| `sudo dnf install gifticlib`
+| \&#96;sudo dnf install gifticlib\&#96;
 | Reference IO implementation for GIFTI
 
 | link:https://src.fedoraproject.org/rpms/python-giftiio[giftiio]
-| `sudo dnf install python3-giftiio`
+| \&#96;sudo dnf install python3-giftiio\&#96;
 | Python library for working with GIFTI.
 
 | link:https://src.fedoraproject.org/rpms/octave-jnifti[jnifti]
-| `sudo dnf install octave-jnifti`
+| \&#96;sudo dnf install octave-jnifti\&#96;
 | A fast NIfTI-1/2 reader and NIfTI-to-JNIfTI converter
 
 | link:https://src.fedoraproject.org/rpms/python-nilearn[nilearn]
-| `sudo dnf install python3-nilearn`
+| \&#96;sudo dnf install python3-nilearn\&#96;
 | Python module for fast and easy statistical learning on NeuroImaging data.
 
 | link:https://src.fedoraproject.org/rpms/python-nistats[nistats]
-| `sudo dnf install python3-nistats`
+| \&#96;sudo dnf install python3-nistats\&#96;
 | Modeling and Statistical analysis of fMRI data in Python.
 
 | link:https://src.fedoraproject.org/rpms/octave-dicom[octave-dicom]
-| `sudo dnf install octave-dicom`
+| \&#96;sudo dnf install octave-dicom\&#96;
 | dicom: file io for medical images and other data.
 
 | link:https://src.fedoraproject.org/rpms/python-pybids[pybids]
-| `sudo dnf install python3-pybids`
+| \&#96;sudo dnf install python3-pybids\&#96;
 | Interface with datasets conforming to BIDS.
 
 | link:https://src.fedoraproject.org/rpms/python-petlink[petlink]
-| `sudo dnf install python3-petlink`
+| \&#96;sudo dnf install python3-petlink\&#96;
 | Decode and encode Petlink data streams (32 and 64 bit).
 
 | link:https://src.fedoraproject.org/rpms/python-pynetdicom[pynetdicom]
-| `sudo dnf install python3-pynetdicom`
+| \&#96;sudo dnf install python3-pynetdicom\&#96;
 | A Python implementation of the DICOM networking protocol.
 
 |===
 
 Software that is in the queue for inclusion is listed link:https://pagure.io/neuro-sig/NeuroFedora/issues?tags=F%3A+Neuroimaging[here].
+
+
 = Extra software: COPR
 
 Free/Open source software that is harder to include in Fedora (usually because it is developed in a way that makes it difficult to package while implementing the Fedora packaging guidelines) is temporarily provided in an link:https://copr.fedorainfracloud.org/coprs/g/neurofedora/neurofedora-extra/[extra COPR repository].
@@ -630,23 +646,25 @@ The sources for building these packages can be found on link:https://pagure.io/p
 Software that is is currently provided in the COPR is listed below:
 
 
-[cols="10,25,25,25,15",frame="all"]
+[cols='10,25,25,25,15',frame='all']
 |===
 | Software | Command | Description | Why in COPR | Issue tracker
 
 | http://www.neuroconstruct.org[neuroConstruct]
-| `sudo dnf install neuroConstruct`
+| \&#96;sudo dnf install neuroConstruct\&#96;
 | Software for developing biologically realistic 3D neural networks.
 | Depends on NeuroML.
 | link:https://pagure.io/neuro-sig/neuroconstruct/issues[Pagure]
 
 |===
+
+
 = Excluded FOSS software
 
 Some Free/Open Source Software cannot be included in Fedora Linux because of various technical reasons.
 This page documents these tools and includes suggestions and alternatives for users.
 
-[cols="15,30,30,25",frame="all"]
+[cols='15,30,30,25',frame='all']
 |===
 | Software | Description | Why not included | Suggestion
 
@@ -657,7 +675,7 @@ This page documents these tools and includes suggestions and alternatives for us
 
 | link:https://portal.hdfgroup.org/display/HDFVIEW/HDFView[HDFView]
 | HDFView is a visual tool for browsing and editing HDF4 and HDF5 files.
-| It requires certain dependencies to build that cannot currently be included in Fedora. Please see link:https://bugzilla.redhat.com/show_bug.cgi?id=1799506#c7[this bug] for more information.
+| It requires certain dependencies to build that cannot currently be included in Fedora. Please see link:https://bugzilla.redhat.com/show_bug.cgi?id=1799506\&#35;c7[this bug] for more information.
 | The HDF Group provides ready to use binaries for HDFView. Please download them directly from link:https://portal.hdfgroup.org/display/HDFVIEW/HDFView[their website]. You can use the build for CentOS 7.
 
 | link:https://pytorch.org/[PyTorch]
@@ -668,6 +686,8 @@ This page documents these tools and includes suggestions and alternatives for us
 |===
 
 
+
+
 = Excluded non-FOSS software
 
 link:https://fedoraproject.org/wiki/Forbidden_items[Fedora does not include proprietary software and software with usage restrictions].
@@ -675,7 +695,7 @@ This page documents these tools and suggests alternatives for users.
 
 
 
-[cols="15,30,30,25",frame="all"]
+[cols='15,30,30,25',frame='all']
 |===
 | Software | Description | Why not included | Suggestion
 
@@ -706,6 +726,8 @@ In line with the Fedora communities link:https://docs.fedoraproject.org/en-US/pr
 | The library is source-available, and is free of charge for “private, research, and institutional use”, so some users may be able to compile from source without obtaining a paid license.
 
 |===
+
+
 = Utilities
 
 == Upstream packages
@@ -715,7 +737,7 @@ You can see the tests results link:https://ankursinha.fedorapeople.org/neurofedo
 
 === Python packages
 
-[.datatable.dt-search,width="100%",cols="20%,30%,20%,30%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,30%,20%,30%',frame='all']
 |===
 | Software | Summary | pip (PyPi) | Notes
 
@@ -728,7 +750,7 @@ Fedora does not currently include any of these tools.
 However, the developers provide pre-built binaries that are ready to use.
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[width="100%",cols="30%,70%",frame="all"]
+[width='100%',cols='30%,70%',frame='all']
 |===
 
 | link:http://www.jabref.org/[JabRef]
@@ -745,196 +767,196 @@ However, the developers provide pre-built binaries that are ready to use.
 The following general purpose utilties are included in the repositories:
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[.datatable.dt-search,width="100%",cols="20%,40%,40%",frame="all"]
+[.datatable.dt-search,width='100%',cols='20%,40%,40%',frame='all']
 |===
 | Software | Install with | Notes
 
 | link:https://src.fedoraproject.org/rpms/python-bioread[bioread]
-| `sudo dnf install python3-bioread`
+| \&#96;sudo dnf install python3-bioread\&#96;
 | Utilities to work with files from BIOPAC's AcqKnowlege software
 
 | link:https://src.fedoraproject.org/rpms/python-bluepyopt[BluePyOpt]
-| `sudo dnf install python3-bluepyopt python3-bluepyopt-doc`
+| \&#96;sudo dnf install python3-bluepyopt python3-bluepyopt-doc\&#96;
 | Blue Brain Python Optimisation Library
 
 | link:https://src.fedoraproject.org/rpms/python-chaospy[chaospy]
-| `sudo dnf install python3-chaospy`
+| \&#96;sudo dnf install python3-chaospy\&#96;
 | Numerical tool for performing uncertainty quantification using polynomial.
 
 | link:https://src.fedoraproject.org/rpms/python-connection_pool[connection_pool]
-| `sudo dnf install python3-connection_pool`
+| \&#96;sudo dnf install python3-connection_pool\&#96;
 | Thread-safe connection pool for python.
 
 | link:https://src.fedoraproject.org/rpms/python-datalad[datalad]
-| `sudo dnf install datalad python3-datalad`
+| \&#96;sudo dnf install datalad python3-datalad\&#96;
 | Keep code, data, containers under control with git and git-annex.
 
 | link:https://src.fedoraproject.org/rpms/python-datrie[datrie]
-| `sudo dnf install python3-datrie`
+| \&#96;sudo dnf install python3-datrie\&#96;
 | Super-fast, efficiently stored Trie for Python.
 
 | link:https://src.fedoraproject.org/rpms/python-devicely[devicely]
-| `sudo dnf install python3-devicely`
+| \&#96;sudo dnf install python3-devicely\&#96;
 | Python package for reading, timeshifting and writing sensor data.
 
 | link:https://src.fedoraproject.org/rpms/earcut-hpp[earcut.hpp]
-| `sudo dnf install earcut-hpp-devel`
+| \&#96;sudo dnf install earcut-hpp-devel\&#96;
 | C++ port of earcut.js, a fast, header-only polygon triangulation library.
 
 | link:https://src.fedoraproject.org/rpms/edflib[edflib]
-| `sudo dnf install edflib`
+| \&#96;sudo dnf install edflib\&#96;
 | C/C++ library to read/write EDF+ and BDF+ files.
 
 | link:https://src.fedoraproject.org/rpms/python-exdir[exdir]
-| `sudo dnf install python3-exdir`
+| \&#96;sudo dnf install python3-exdir\&#96;
 | Directory structure standard for experimental pipelines.
 
 | link:https://src.fedoraproject.org/rpms/python-git-changelog[Git-changelog]
-| `sudo dnf install python3-git-changelog`
+| \&#96;sudo dnf install python3-git-changelog\&#96;
 | An automatic Changelog generator using Jinja2 templates. From git logs to change logs.
 
 | link:https://src.fedoraproject.org/rpms/octave[GNU Octave]
-| `sudo dnf install octave`
+| \&#96;sudo dnf install octave\&#96;
 | GNU Octave: Scientific programming language. FOSS, compatible with Matlab scripts.
 
 | link:https://src.fedoraproject.org/rpms/python-graph-tool[Graph Tool]
-| `sudo dnf install python3-graph-tool`
+| \&#96;sudo dnf install python3-graph-tool\&#96;
 | An efficient Python module for manipulation and statistical analysis of graphs (a.k.a. networks).
 
 | link:https://src.fedoraproject.org/rpms/gsl-lite[gsl-lite]
-| `sudo dnf install gsl-lite-devel`
+| \&#96;sudo dnf install gsl-lite-devel\&#96;
 | A single-file header-only version of ISO C{plus}{plus} Guidelines Support Library (GSL) for C{plus}{plus}98, C{plus}{plus}11, and later.
 
 | link:https://src.fedoraproject.org/rpms/highfive[HighFive]
-| `sudo dnf install highfive-devel`
+| \&#96;sudo dnf install highfive-devel\&#96;
 | A modern header-only C{plus}{plus}11 friendly interface for libhdf5
 
 | link:https://src.fedoraproject.org/rpms/python-inspyred[inspyred]
-| `sudo dnf install python3-inspyred`
+| \&#96;sudo dnf install python3-inspyred\&#96;
 | Library for bio-inspired computational intelligence.
 
 | link:https://src.fedoraproject.org/rpms/python-interrogate[interrogate]
-| `sudo dnf install python3-interrogate`
+| \&#96;sudo dnf install python3-interrogate\&#96;
 | Interrogate a codebase for docstring coverage.
 
 | link:https://src.fedoraproject.org/rpms/octave-jsonlab[JSONLab]
-| `sudo dnf install octave-jsonlab`
+| \&#96;sudo dnf install octave-jsonlab\&#96;
 | A JSON/UBJSON/MessagePack encoder/decoder for GNU Octave.
 
 | link:https://src.fedoraproject.org/rpms/python-llvmlite[llvmlite]
-| `sudo dnf install python3-llvmlite`
+| \&#96;sudo dnf install python3-llvmlite\&#96;
 | A lightweight LLVM-Python binding for writing JIT compilers.
 
 | link:https://src.fedoraproject.org/rpms/python-mapbox-earcut[mapbox-earcut]
-| `sudo dnf install python3-mapbox-earcut`
+| \&#96;sudo dnf install python3-mapbox-earcut\&#96;
 | Very fast and quite robust triangulation of 2D polygons.
 
 | link:https://src.fedoraproject.org/rpms/python-matplotlib-venn[matplotlib-venn]
-| `sudo dnf install python3-matplotlib-venn`
+| \&#96;sudo dnf install python3-matplotlib-venn\&#96;
 | Venn diagram plotting routines for Python/Matplotlib.
 
 | link:https://src.fedoraproject.org/rpms/python-missingno[missingno]
-| `sudo dnf install python3-missingno`
+| \&#96;sudo dnf install python3-missingno\&#96;
 | Missing data visualization module for Python.
 
 | link:https://src.fedoraproject.org/rpms/morphio[MorphIO]
-| `sudo dnf install python3-morphio morphio-devel`
+| \&#96;sudo dnf install python3-morphio morphio-devel\&#96;
 | A python and C++ library for reading and writing neuronal morphologies.
 
 | link:https://src.fedoraproject.org/rpms/python-neurom[NeuroM]
-| `sudo dnf install python3-neurom`
+| \&#96;sudo dnf install python3-neurom\&#96;
 | Python toolkit for the analysis and processing of neuron morphologies.
 
 | link:https://src.fedoraproject.org/rpms/python-owl_rl[OWL_RL]
-| `sudo dnf install python3-owl_rl`
+| \&#96;sudo dnf install python3-owl_rl\&#96;
 | OWL-RL and RDFS based RDF Closure inferencing for Python.
 
 | link:https://src.fedoraproject.org/rpms/python-pew[Pew]
-| `sudo dnf install python3-pew`
+| \&#96;sudo dnf install python3-pew\&#96;
 | Virtual environment manager written in pure Python.
 
 | link:https://src.fedoraproject.org/rpms/python-pooch[Pooch]
-| `sudo dnf install python3-pooch`
+| \&#96;sudo dnf install python3-pooch\&#96;
 | A friend to fetch your data files.
 
 | link:https://src.fedoraproject.org/rpms/pre-commit[pre-commit]
-| `sudo dnf install pre-commit`
+| \&#96;sudo dnf install pre-commit\&#96;
 | Framework for managing and maintaining multi-language pre-commit hooks.
 
 | link:https://src.fedoraproject.org/rpms/python-progressbar2[progressbar2]
-| `sudo dnf install python3-progressbar2`
+| \&#96;sudo dnf install python3-progressbar2\&#96;
 | A Progressbar library to provide visual progress to long running operations.
 
 | link:https://src.fedoraproject.org/rpms/python-pulp[PuLP]
-| `sudo dnf install python3-pulp`
+| \&#96;sudo dnf install python3-pulp\&#96;
 | A python Linear Programming API.
 
 | link:https://src.fedoraproject.org/rpms/python-pyedflib[pyedflib]
-| `sudo dnf install python3-pyedflib`
+| \&#96;sudo dnf install python3-pyedflib\&#96;
 | Python library to read/write EDF+/BDF+ files, based on EDFlib.
 
 | link:https://src.fedoraproject.org/rpms/python-pypet[pypet]
-| `sudo dnf install python3-pypet`
+| \&#96;sudo dnf install python3-pypet\&#96;
 | Parameter exploration toolbox.
 
 | link:https://src.fedoraproject.org/rpms/pyplane[pyplane]
-| `sudo dnf install pyplane`
+| \&#96;sudo dnf install pyplane\&#96;
 | Phase plane analysis of nonlinear systems
 
 | link:https://src.fedoraproject.org/rpms/python-ratelimiter[ratelimiter]
-| `sudo dnf install python3-ratelimiter`
+| \&#96;sudo dnf install python3-ratelimiter\&#96;
 | Python module providing rate limiting.
 
 | link:https://src.fedoraproject.org/rpms/python-rdflib-jsonld[RDFlib-JSON-LD]
-| `sudo dnf install python3-rdflib-jsonld`
+| \&#96;sudo dnf install python3-rdflib-jsonld\&#96;
 | Python rdflib extension adding JSON-LD parser and serializer.
 
 | link:https://src.fedoraproject.org/rpms/python-sklearn-nature-inspired-algorithms[Sklearn-nature-inspired-algorithms]
-| `sudo dnf install python3-sklearn-nature-inspired-algorithms`
+| \&#96;sudo dnf install python3-sklearn-nature-inspired-algorithms\&#96;
 | Nature-inspired algorithms for hyper-parameter tuning of Scikit-Learn models.
 
 | link:https://src.fedoraproject.org/rpms/snakemake[snakemake]
-| `sudo dnf install snakemake`
+| \&#96;sudo dnf install snakemake\&#96;
 | Workflow management system to create reproducible and scalable data analyses.
 
 | link:https://src.fedoraproject.org/rpms/spyder[spyder]
-| `sudo dnf install spyder`
+| \&#96;sudo dnf install spyder\&#96;
 | A powerful scientific environment written in Python, for Python, and designed by and for scientists, engineers and data analysts.
 
 | link:https://src.fedoraproject.org/rpms/python-stopit[stopit]
-| `sudo dnf install python3-stopit`
+| \&#96;sudo dnf install python3-stopit\&#96;
 | Timeout control decorator and context managers.
 
 | link:https://src.fedoraproject.org/rpms/python-toposort[toposort]
-| `sudo dnf install python3-toposort`
+| \&#96;sudo dnf install python3-toposort\&#96;
 | Implements a topological sort algorithm.
 
 | link:https://src.fedoraproject.org/rpms/R-vcd[vcd]
-| `sudo dnf install R-vcd`
+| \&#96;sudo dnf install R-vcd\&#96;
 | Visualizing categorical data.
 
 | link:https://src.fedoraproject.org/rpms/python-wxnatpy[wxnatpy]
-| `sudo dnf install python3-wxnatpy`
+| \&#96;sudo dnf install python3-wxnatpy\&#96;
 | wxnatpy is a wxPython widget which allows users to browse the contents of a XNAT repository.
 
 | link:https://src.fedoraproject.org/rpms/python-xnat[xnat]
-| `sudo dnf install python3-xnat`
+| \&#96;sudo dnf install python3-xnat\&#96;
 | A new XNAT client that exposes XNAT objects/functions as python objects/functions.
 
 | link:https://src.fedoraproject.org/rpms/octave-zmat[ZMat]
-| `sudo dnf install octave-zmat`
+| \&#96;sudo dnf install octave-zmat\&#96;
 | A portable data compression/decompression toolbox for GNU Octave.
 
 | link:https://src.fedoraproject.org/rpms/zmat[ZMat Library]
-| `sudo dnf install zmat`
+| \&#96;sudo dnf install zmat\&#96;
 | A portable library with easy-to-use data compression/decompression interfaces.
 
 |===
 
 === Python Science Stack
 
-The `python-science` package group includes commonly used scientific Python libraries.
-This can be installed using `dnf`:
+The \&#96;python-science\&#96; package group includes commonly used scientific Python libraries.
+This can be installed using \&#96;dnf\&#96;:
 
 [source,bash]
 ----
@@ -944,58 +966,60 @@ sudo dnf install @python-science
 The individual packages may also be installed independently:
 
 // Please keep this list sorted alphabetically to make it easy to find tools
-[width="100%",cols="20%,40%,40%",frame="all"]
+[width='100%',cols='20%,40%,40%',frame='all']
 |===
 
 | link:https://src.fedoraproject.org/rpms/python-matplotlib[matplotlib]
-| `sudo dnf install python3-matplotlib`
+| \&#96;sudo dnf install python3-matplotlib\&#96;
 | The Python plotting package.
 
 | link:https://src.fedoraproject.org/rpms/python-notebook[Jupyter Notebook]
-| `sudo dnf install python3-notebook`
+| \&#96;sudo dnf install python3-notebook\&#96;
 | Jupyter notebook.
 
 | link:https://src.fedoraproject.org/rpms/python-numpy[numpy]
-| `sudo dnf install python3-numpy`
+| \&#96;sudo dnf install python3-numpy\&#96;
 | Fundamental package for array computing with Python.
 
 | link:https://src.fedoraproject.org/rpms/python-pandas[pandas]
-| `sudo dnf install python3-pandas`
+| \&#96;sudo dnf install python3-pandas\&#96;
 | Python Data Analysis library.
 
 | link:https://src.fedoraproject.org/rpms/python-pillow[pillow]
-| `sudo dnf install python3-pillow`
+| \&#96;sudo dnf install python3-pillow\&#96;
 | The Python Imaging Library.
 
 | link:https://src.fedoraproject.org/rpms/python-read-roi[read-roi]
-| `sudo dnf install python3-read-roi`
+| \&#96;sudo dnf install python3-read-roi\&#96;
 | Read ROI files .zip or .roi generated with ImageJ.
 
 | link:https://src.fedoraproject.org/rpms/python-scikit-image[scikit-image]
-| `sudo dnf install python3-scikit-image`
+| \&#96;sudo dnf install python3-scikit-image\&#96;
 | Collection of algorithms for image processing.
 
 | link:https://src.fedoraproject.org/rpms/python-scikit-learn[scikit-learn]
-| `sudo dnf install python3-scikit-learn`
+| \&#96;sudo dnf install python3-scikit-learn\&#96;
 | Machine learning in Python.
 
 | link:https://src.fedoraproject.org/rpms/python-scipy[scipy]
-| `sudo dnf install python3-scipy`
+| \&#96;sudo dnf install python3-scipy\&#96;
 | Python library for scientific computing.
 
 | link:https://src.fedoraproject.org/rpms/python-statsmodels[statsmodels]
-| `sudo dnf install python3-statsmodels`
+| \&#96;sudo dnf install python3-statsmodels\&#96;
 | Statistics in Python.
 
 | link:https://src.fedoraproject.org/rpms/python-sympy[sympy]
-| `sudo dnf install python3-sympy`
+| \&#96;sudo dnf install python3-sympy\&#96;
 | Library for symbolic mathematics.
 
 | link:https://src.fedoraproject.org/rpms/visidata[visidata]
-| `sudo dnf install visidata`
+| \&#96;sudo dnf install visidata\&#96;
 | An interactive multitool for tabular data.
 
 |===
+
+
 
 = LaTeX
 
@@ -1021,37 +1045,37 @@ Individual link:https://www.latex-project.org/[LaTeX] packages can also be insta
 
 [source,bash]
 ----
-sudo dnf install 'tex(beamer.cls)' # <1>
-sudo dnf install 'tex(hyperref.sty)' # <2>
+sudo dnf install 'tex(beamer.cls)' \&#35; \&lt;1\&gt;
+sudo dnf install 'tex(hyperref.sty)' \&#35; \&lt;2\&gt;
 ----
-<1> Install the beamer class.
-<2> Install the hyperref package.
+\&lt;1\&gt; Install the beamer class.
+\&lt;2\&gt; Install the hyperref package.
 
 == Utilities
 
 A number of utilities are also available to aid with LaTeX writing:
 
-[width="100%",cols="20%,40%,40%",frame="all"]
+[width='100%',cols='20%,40%,40%',frame='all']
 |===
 
 | link:https://packages.fedoraproject.org/pkgs/texlive-base/texlive-chktex/[chkTeX]
-| `sudo dnf install texlive-chktex`
+| \&#96;sudo dnf install texlive-chktex\&#96;
 | LaTeX semantic checker.
 
 | link:https://src.fedoraproject.org/rpms/LaTeXML[LaTeXML]
-| `sudo dnf install LaTeXML`
+| \&#96;sudo dnf install LaTeXML\&#96;
 | LaTeXML is a converter that transforms TeX and LaTeX into XML/HTML/ePub/MathML and other formats.
 
 | link:https://src.fedoraproject.org/rpms/lyx[LyX]
-| `sudo dnf install lyx`
+| \&#96;sudo dnf install lyx\&#96;
 | WYSIWYM (What You See Is What You Mean) document processor.
 
 | link:https://src.fedoraproject.org/rpms/python-pylatex[PyLaTeX]
-| `sudo dnf install python3-pylatex`
+| \&#96;sudo dnf install python3-pylatex\&#96;
 | Library for creating LaTeX files and snippets.
 
 | link:https://src.fedoraproject.org/rpms/texstudio[TeXStudio]
-| `sudo dnf install texstudio`
+| \&#96;sudo dnf install texstudio\&#96;
 | A fully featured LaTeX editor.
 
 |===
@@ -1063,13 +1087,15 @@ Joining TUG has a number of benefits---consider joining them!
 
 The link:https://en.wikibooks.org/wiki/LaTeX[LaTeX wiki book] works as an excellent reference, while http://detexify.kirelabs.org/classify.html[Detexify] is a most handy tool for finding commands for various LaTeX symbols.
 
-* How do I
+
+
+\&#42; How do I
 = Citing NeuroFedora
 
 Please cite NeuroFedora if you rely on the work we do.
 This helps us get an idea of how NeuroFedora is being used:
 
-```
+\&#96;\&#96;\&#96;
 @Article{NeuroFedora2019,
 author       = {Sinha, Ankur and Bazan, Luis and Segundo, Luis M. and J\k{e}drzejewski-Szmek, Zbigniew and Kellner, Christian J. and Pascual, Sergio and Trande, Antonio and Mangaonkar, Manas and Hlaváčková, Tereza and Hough, Morgan and Gradina, Ilya and Gnatenko, Igor},
 title        = {NeuroFedora: a ready to use Free/Open Source platform for Neuroscientists},
@@ -1081,7 +1107,9 @@ journal      = {BMC Neuroscience},
 publisher    = {BioMed Central},
 year         = {2019},
 }
-```
+\&#96;\&#96;\&#96;
+
+
 
 
 = Finding and installing software
@@ -1091,25 +1119,27 @@ Fedora platforms include the default package manager, link:https://dnf.readthedo
 
 [source,bash]
 ----
-sudo dnf search <search text>
+sudo dnf search \&lt;search text\&gt;
 ----
 
 Software can be installed using the link:https://dnf.readthedocs.io/en/latest/command_ref.html[DNF] package manager:
 
 [source,bash]
 ----
-sudo dnf install <package name> # <1>
+sudo dnf install \&lt;package name\&gt; \&#35; \&lt;1\&gt;
 ----
-<1> The name of the package.
+\&lt;1\&gt; The name of the package.
 
 Detailed information on installing specific software where needed is documented on independent pages linked in the side bar.
 A complete list of software maintained by the NeuroFedora SIG can be found link:https://src.fedoraproject.org/group/neuro-sig[here].
-If you use Free/Open source software that is not included in Fedora, you can xref:overview.adoc#_suggest_software_for_inclusion[suggest more software for inclusion in NeuroFedora].
+If you use Free/Open source software that is not included in Fedora, you can xref:overview.adoc\&#35;_suggest_software_for_inclusion[suggest more software for inclusion in NeuroFedora].
 
 == Flatpaks
 
 Users can also use sanboxed applications using link:https://flatpak.org/[Flatpaks] on Fedora.
 Please refer to link:https://flathub.org/home[Flathub] to see what software is available using Flatpaks.
+
+
 = Using containers (Docker/Podman)
 
 Since the NeuroFedora packages are available in the Fedora repositories, they can also be used in customised containers using the Fedora base containers.
@@ -1119,7 +1149,7 @@ These containers can be used with link:https://www.docker.com/[Docker], or link:
 
 Podman is a replacement for Docker that does not require administrative access.
 It can be used as a drop-in replacement for Docker in a majority of cases.
-On a Fedora system, Podman can be installed using `dnf`.
+On a Fedora system, Podman can be installed using \&#96;dnf\&#96;.
 
 [source,console]
 ----
@@ -1128,7 +1158,7 @@ sudo dnf install podman
 
 To use Docker, please refer to the link:https://docs.docker.com/engine/install/fedora/[Docker documentation].
 Fedora also includes the link:https://github.com/containers/toolbox[Toolbox] software, which allows the use of containerised command line environments.
-Toolbox can be installed using `dnf`:
+Toolbox can be installed using \&#96;dnf\&#96;:
 
 [source,console]
 ----
@@ -1148,8 +1178,8 @@ First, we pull the base Fedora container image:
 ----
 podman pull fedora:latest
 
-Resolved short name "fedora" to a recorded short-name alias (origin: /etc/containers/registries.conf.d/shortnames.conf)
-Trying to pull registry.fedoraproject.org/fedora:latest...
+Resolved short name 'fedora' to a recorded short-name alias (origin: /etc/containers/registries.conf.d/shortnames.conf)
+Trying to pull registry.fedoraproject.org/fedora:latest\&#8230;
 Getting image source signatures
 Copying blob 8fde7942e775 [--------------------------------------] 0.0b / 0.0b
 Copying config 79fd58dc76 done
@@ -1164,8 +1194,8 @@ We then run the image interactively.
 podman run -it fedora:latest /bin/bash
 
 
-# terminal in the container
-[root@95b9db71272f /]#
+\&#35; terminal in the container
+[root@95b9db71272f /]\&#35;
 ----
 
 This gives us a container that we can work with interactively.
@@ -1173,7 +1203,7 @@ We can install a package here as we would on a Fedora installation, for example:
 
 [source,console]
 ----
-[root@95b9db71272f /]# sudo dnf install python3-nest
+[root@95b9db71272f /]\&#35; sudo dnf install python3-nest
 
 Last metadata expiration check: 0:06:14 ago on Wed Jan  6 10:41:28 2021.
 Dependencies resolved.
@@ -1183,8 +1213,8 @@ Package                     Arch   Version                       Repo     Size
 Installing:
 python3-nest                x86_64 2.20.1-5.fc33                 updates 518 k
 Installing dependencies:
-....
-....
+\&#8230;.
+\&#8230;.
 Complete!
 ----
 
@@ -1192,7 +1222,7 @@ We can then run commands normally:
 
 [source,console]
 ----
-[root@95b9db71272f /]# ipython
+[root@95b9db71272f /]\&#35; ipython
 Python 3.9.0 (default, Oct  6 2020, 00:00:00)
 Type 'copyright', 'credits' or 'license' for more information
 IPython 7.18.1 -- An enhanced Interactive Python. Type '?' for help.
@@ -1239,9 +1269,9 @@ Let us create an example container that runs this short code-snippet.
 
 [source,python]
 ----
-#!/usr/bin/env python3
-# example Python source file
-# saved in the current directory as nest-test.py
+\&#35;!/usr/bin/env python3
+\&#35; example Python source file
+\&#35; saved in the current directory as nest-test.py
 import nest
 
 nest.version()
@@ -1254,13 +1284,13 @@ Our simple Containerfile looks like this:
 ----
 FROM fedora:33 as fedora-33
 
-# Install the required packages, in this case: NEST
+\&#35; Install the required packages, in this case: NEST
 RUN sudo dnf install python3-nest -y
 
 COPY nest-test.py .
 
-# Default command to run
-CMD ["python", "nest-test.py"]
+\&#35; Default command to run
+CMD ['python', 'nest-test.py']
 ----
 
 
@@ -1276,14 +1306,14 @@ podman build -f Containerfile  -t neurofedora/nest-test
 STEP 1: FROM fedora:33 AS fedora-33
 STEP 2: RUN sudo dnf install python3-nest -y
 Fedora 33 openh264 (From Cisco) - x86_64        1.9 kB/s | 2.5 kB     00:01
-....
+\&#8230;.
 Complete!
---> 2efea29a8db
+--\&gt; 2efea29a8db
 STEP 3: COPY nest-test.py .
---> b23a5c6f90d
-STEP 4: CMD ["python3", "nest-test.py"]
+--\&gt; b23a5c6f90d
+STEP 4: CMD ['python3', 'nest-test.py']
 STEP 5: COMMIT neurofedora/nest-test
---> da9240e572b
+--\&gt; da9240e572b
 da9240e572b4c08ac010001cbc15cb81ae879c63dca70afa4b3e6f313254b218
 ----
 
@@ -1323,8 +1353,10 @@ Visit https://www.nest-simulator.org
 Type 'nest.help()' to find out more about NEST.
 ----
 
-In a similar way, any package from the Fedora repositories can be used in containers using `dnf` (not just NeuroFedora packages).
-Additionally, we can also include software using `pip` and other package managers, just as we would on a normal system.
+In a similar way, any package from the Fedora repositories can be used in containers using \&#96;dnf\&#96; (not just NeuroFedora packages).
+Additionally, we can also include software using \&#96;pip\&#96; and other package managers, just as we would on a normal system.
+
+
 = Using MPI (Message Passing Interface) on Fedora
 
 Where supported, software in NeuroFedora is also built with link:https://www.mpi-forum.org/[MPI] support.
@@ -1334,8 +1366,8 @@ Software can be used with either of these, or without any link:https://www.mpi-f
 Software built with link:https://www.mpi-forum.org/[MPI] is provided as separate packages for each link:https://www.mpi-forum.org/[MPI] implementation:
 
 ----
-<software>-mpich
-<software>-openmpi
+\&lt;software\&gt;-mpich
+\&lt;software\&gt;-openmpi
 ----
 
 These packages can be installed using link:https://dnf.readthedocs.io/en/latest/command_ref.html[DNF] in the same way as normal packages.
@@ -1343,8 +1375,8 @@ These packages can be installed using link:https://dnf.readthedocs.io/en/latest/
 Binaries provided by the software, if any, will also be suffixed to clearly mark which implementation of link:https://www.mpi-forum.org/[MPI] is in use:
 
 ----
-<binary>_mpich
-<binary>_mpi
+\&lt;binary\&gt;_mpich
+\&lt;binary\&gt;_mpi
 ----
 
 For example, NEST is provided as:
@@ -1369,26 +1401,28 @@ For MPICH builds:
 
 [source,bash]
 ----
-module load mpi/mpich-$arch # $arch is the architecture, for example x86_64
+module load mpi/mpich-$arch \&#35; $arch is the architecture, for example x86_64
 ----
 
 For OpenMPI builds:
 
 [source,bash]
 ----
-module load mpi/openmpi-$arch # $arch is the architecture, for example x86_64
+module load mpi/openmpi-$arch \&#35; $arch is the architecture, for example x86_64
 ----
 
-The architecture can be obtained using the `uname` command in a terminal:
+The architecture can be obtained using the \&#96;uname\&#96; command in a terminal:
 
 [source,bash]
 ----
 uname -m
 ----
 
-It is generally easier to add these lines to the `~/.bashrc` file (for bash users) so that these commands are automatically run on each login.
+It is generally easier to add these lines to the \&#96;~/.bashrc\&#96; file (for bash users) so that these commands are automatically run on each login.
 
 Where required, use of software with link:https://www.mpi-forum.org/[MPI] is documented on a separate page.
+
+
 
 = Neuroscience resources
 
@@ -1397,7 +1431,7 @@ Please get in touch to add more entries to the list.
 
 == RSS Feeds
 
-[cols="20,80",frame="all"]
+[cols='20,80',frame='all']
 |===
 | link:https://neuroblog.fedoraproject.org/planet-neuroscience/[Planet neuroscience]
 | An aggregation of RSS feeds from various neuroscience journals.
@@ -1409,7 +1443,7 @@ Please get in touch to add more entries to the list.
 
 == Computing resources
 
-[cols="20,80",frame="all"]
+[cols='20,80',frame='all']
 |===
 
 | http://www.nsgportal.org/
@@ -1425,7 +1459,7 @@ Please get in touch to add more entries to the list.
 
 == Mailing lists and forums
 
-[cols="20,80",frame="all"]
+[cols='20,80',frame='all']
 |===
 
 | link:https://neurostars.org/[NeuroStars]
@@ -1450,7 +1484,7 @@ Please get in touch to add more entries to the list.
 
 == Organisations
 
-[cols="20,80",frame="all"]
+[cols='20,80',frame='all']
 |===
 
 | https://www.humanbrainproject.eu/en/
@@ -1475,13 +1509,13 @@ Please get in touch to add more entries to the list.
 | Federation of European Neuroscience Societies.
 
 | https://www.nitrc.org/
-| NeuroImaging Tools & Resources Collaboratory.
+| NeuroImaging Tools \&amp; Resources Collaboratory.
 
 |===
 
 == Neuroscience databases
 
-[cols="20,80",frame="all"]
+[cols='20,80',frame='all']
 |===
 
 | link:https://nda.nih.gov/abcd[ABCD Data Repository]
@@ -1553,7 +1587,7 @@ Please get in touch to add more entries to the list.
 | link:https://www.proteinatlas.org/[The Human Protein Atlas]
 | The Human Protein Atlas
 
-| link:https://en.wikipedia.org/wiki/List_of_neuroscience_databases#Neuroscience_article_aggregators[Neuroscience article aggregators list on Wikipedia]
+| link:https://en.wikipedia.org/wiki/List_of_neuroscience_databases\&#35;Neuroscience_article_aggregators[Neuroscience article aggregators list on Wikipedia]
 | Wikipedia: List of neuroscience data bases.
 
 | link:https://zenodo.org/[Zenodo]
@@ -1563,7 +1597,7 @@ Please get in touch to add more entries to the list.
 
 == Other resources
 
-[cols="20,80",frame="all"]
+[cols='20,80',frame='all']
 |===
 
 | link:http://neural-reckoning.org/comp-neuro-resources.html[Neural Reckoning: Computational neuroscience resources]
@@ -1593,6 +1627,9 @@ Please get in touch to add more entries to the list.
 |===
 
 
-* Other Fedora links
-** link:https://docs.fedoraproject.org/en-US/docs/[General documentation]
-** link:https://docs.fedoraproject.org/en-US/quick-docs/[Quick docs]
+
+
+\&#42; Other Fedora links
+\&#42;\&#42; link:https://docs.fedoraproject.org/en-US/docs/[General documentation]
+\&#42;\&#42; link:https://docs.fedoraproject.org/en-US/quick-docs/[Quick docs]
+

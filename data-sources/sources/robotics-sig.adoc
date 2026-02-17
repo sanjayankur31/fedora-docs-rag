@@ -6,7 +6,7 @@ This page lists the main initiatives under the Robotics SIG.
 
 === Links and References
 
-* https://bugzilla.redhat.com/show_bug.cgi?id=1225692
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=1225692
 
 === Scope
 
@@ -20,34 +20,36 @@ Bugzilla issue url.
 
 === Links and References
 
-* https://gitlab.com/fedora/sigs/robotics/images/container-image-ros2
-* https://gitlab.com/fedora/sigs/robotics/ros2-fedora-coreos
-* https://docs.ros.org/en/rolling/index.html
-* https://quay.io/organization/fedora-sig-robotics
+\&#42; https://gitlab.com/fedora/sigs/robotics/images/container-image-ros2
+\&#42; https://gitlab.com/fedora/sigs/robotics/ros2-fedora-coreos
+\&#42; https://docs.ros.org/en/rolling/index.html
+\&#42; https://quay.io/organization/fedora-sig-robotics
 
 === Scope
 
 We are looking into ways of making Fedora a friendlier environment for ROS2 by:
 
-* Building and maintaining non ROS2 packages within Fedora;
-* Creating ROS2 container images for both development and production environments;
-* Make ROS2 RPMs available in Fedora.
+\&#42; Building and maintaining non ROS2 packages within Fedora;
+\&#42; Creating ROS2 container images for both development and production environments;
+\&#42; Make ROS2 RPMs available in Fedora.
 
 == Autoware
 
 === Links and References
 
-* https://autoware.org
-* https://github.com/orgs/autowarefoundation/discussions/categories/working-group-meetings?discussions_q=is%3Aopen+category%3A%22Working+group+meetings%22+label%3Ameeting%3Aopenadkit-wg
-* https://quay.io/organization/fedora-sig-robotics
-* https://gitlab.com/fedora/sigs/robotics/images/container-image-autoware
+\&#42; https://autoware.org
+\&#42; https://github.com/orgs/autowarefoundation/discussions/categories/working-group-meetings?discussions_q=is%3Aopen+category%3A%22Working+group+meetings%22+label%3Ameeting%3Aopenadkit-wg
+\&#42; https://quay.io/organization/fedora-sig-robotics
+\&#42; https://gitlab.com/fedora/sigs/robotics/images/container-image-autoware
 
 === Scope
 
 Part of our effort it so also build and build, package and run Autoware components (Open Ad Kit for now) in Fedora by:
 
-* Make Autoware linux container images available;
-* Build and distribute Autoware as RPM packages.
+\&#42; Make Autoware linux container images available;
+\&#42; Build and distribute Autoware as RPM packages.
+
+
 = Robotics SIG Community
 
 == Packaging Tickets
@@ -62,12 +64,14 @@ All meeting notes can be found in Gitlab: https://gitlab.com/fedora/sigs/robotic
 
 == Fedora Dicussion
 
-You can filter robotics-sig dicussions by using the "robotics-sig" tag: https://discussion.fedoraproject.org/tag/robotics-sig.
+You can filter robotics-sig dicussions by using the 'robotics-sig' tag: https://discussion.fedoraproject.org/tag/robotics-sig.
 
 == Matrix Channel
 
-We have a Robotics SIG matrix channel as well: https://matrix.to/#/#robotics:fedoraproject.org
+We have a Robotics SIG matrix channel as well: https://matrix.to/\&#35;/\&#35;robotics:fedoraproject.org
 
 == Gitlab Org
 
 Source code produced by our group can be found in Gitlab: https://gitlab.com/fedora/sigs/robotics
+
+

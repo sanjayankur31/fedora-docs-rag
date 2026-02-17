@@ -26,12 +26,12 @@ This will get you the fastest turn-around if a bug lies with i3.
 [[fedora]]
 == Fedora package bugs
 
-Report bugs with the Fedora `i3` package to Red Hat Bugzilla::
+Report bugs with the Fedora \&#96;i3\&#96; package to Red Hat Bugzilla::
 xref:quick-docs::howto-file-a-bug/[How to file a Fedora Bugzilla bug]
 
-The `i3` package in Fedora (and other related packages) aim to follow upstream as much as possible.
+The \&#96;i3\&#96; package in Fedora (and other related packages) aim to follow upstream as much as possible.
 However, sometimes there are differences with upstream and the xref:packaging-guidelines::index.adoc[Fedora Packaging Guidelines].
-If you suspect a problem exists with the Fedora `i3` package, but not i3 itself, you need to alert the Fedora package maintainer.
+If you suspect a problem exists with the Fedora \&#96;i3\&#96; package, but not i3 itself, you need to alert the Fedora package maintainer.
 
 Use Red Hat Bugzilla to report a Fedora package bug to the responsible Fedora maintainer.
 The Fedora maintainer may also refer the problem upstream if it is warranted.
@@ -43,7 +43,7 @@ The Fedora maintainer may also refer the problem upstream if it is warranted.
 Make suggestions and report problems with the official Fedora i3 Spin on Pagure::
 https://pagure.io/i3-sig/Fedora-i3-Spin/issues[pagure.io/i3-sig/Fedora-i3-Spin/issues]
 
-This only applies to people using the official Fedora i3 `.iso`, either built manually by the Fedora i3 SIG or automatically by Fedora Infrastructure.
+This only applies to people using the official Fedora i3 \&#96;.iso\&#96;, either built manually by the Fedora i3 SIG or automatically by Fedora Infrastructure.
 
 Does something look wrong?
 Could something be better tweaked or customized for a default i3 install?
@@ -51,6 +51,8 @@ Or is there a related software that is not yet packaged officially in Fedora?
 For all concerns, ideas, and issues with the look-and-feel and default options of the i3 Spin, open a ticket with the Fedora i3 SIG on Pagure.
 
 The Fedora i3 Spin Pagure repo is the best place to get the attention of the wider i3 community in Fedora, and get feedback on ideas and suggestions from other i3 users.
+
+
 = i3 Spin Design Goals
 Justin W. Flory, Fedora i3 SIG
 :page-authors: {author}
@@ -58,20 +60,20 @@ Justin W. Flory, Fedora i3 SIG
 This page documents Design Goals the SIG always considers to the Fedora i3 Spin.
 This explains what the Fedora i3 SIG prioritizes and focuses on when working on the Spin.
 
-These Design Goals were first discussed in the https://meetbot.fedoraproject.org/fedora-i3/2020-07-21/i3.2020-07-21-16.06.log.html#l-98[2020-07-21 SIG meeting].
-A first draft was proposed in https://pagure.io/i3-sig/Fedora-i3-Spin/issue/10#comment-666646[i3-sig/Fedora-i3-Spin#10].
+These Design Goals were first discussed in the https://meetbot.fedoraproject.org/fedora-i3/2020-07-21/i3.2020-07-21-16.06.log.html\&#35;l-98[2020-07-21 SIG meeting].
+A first draft was proposed in https://pagure.io/i3-sig/Fedora-i3-Spin/issue/10\&#35;comment-666646[i3-sig/Fedora-i3-Spin\&#35;10].
 
 
 == 1. Simple is better than complex.
 
-*The Fedora i3 Spin will choose simplicity over complexity.*
+\&#42;The Fedora i3 Spin will choose simplicity over complexity.\&#42;
 
 Just because i3 is a Window Manager does not mean it needs to be difficult to do basic computing tasks (e.g. work on a document, connect to the Internet, connect Bluetooth headphones, etc.).
 
 
 == 2. Fast is better than features.
 
-*The Fedora i3 Spin will choose to be fast, lean, and quick instead of full of features.*
+\&#42;The Fedora i3 Spin will choose to be fast, lean, and quick instead of full of features.\&#42;
 
 We know i3wm is used by people on a variety of hardware, including low-end consumer-grade hardware.
 We also acknowledge advanced i3wm users often have their own preferences for extra applications.
@@ -80,7 +82,7 @@ The Fedora i3 Spin should work fast and quick on a variety of consumer hardware.
 
 == 3. There should be one—and preferably only one—obvious way to do it.
 
-*The Fedora i3 Spin will choose to maintain a single obvious way to do basic computing tasks.*
+\&#42;The Fedora i3 Spin will choose to maintain a single obvious way to do basic computing tasks.\&#42;
 
 For example, bundling two document-editing suites or network connection managers is confusing and disruptive to the user experience.
 It should be comfortable to use Fedora i3 Spin if you are an experienced Linux user, but new to i3 or window managers.
@@ -88,13 +90,17 @@ It should be comfortable to use Fedora i3 Spin if you are an experienced Linux u
 
 == 4. Now is better than never.
 
-*The Fedora i3 Spin will choose to try out and experiment with new ideas.*
+\&#42;The Fedora i3 Spin will choose to try out and experiment with new ideas.\&#42;
 
 This helps us collect data and info about what to keep doing and what to do less of.
 Even when we make a mistake, we will address it as expediently as possible, and then keep moving forward.
 
+
+
+
+
 = Kickstart files
-Fedora i3 SIG <i3wm@lists.fedoraproject.org>
+Fedora i3 SIG \&lt;i3wm@lists.fedoraproject.org\&gt;
 :toc:
 
 This page documents the kickstart files used for composing Fedora i3 Spin release images.
@@ -121,23 +127,23 @@ Coming soon!
 Complete the following steps to build a local ISO of the Fedora i3 Spin.
 
 Install dependencies::
-`sudo dnf install -y lorax pykickstart`
+\&#96;sudo dnf install -y lorax pykickstart\&#96;
 
 Clone Spin repository::
-`git clone https://pagure.io/fedora-kickstarts.git`
+\&#96;git clone https://pagure.io/fedora-kickstarts.git\&#96;
 
 Flatten the kickstart::
-`sudo ksflatten -c fedora-live-i3.ks -o flatten-i3.ks`
+\&#96;sudo ksflatten -c fedora-live-i3.ks -o flatten-i3.ks\&#96;
 
 Build ISO using Lorax::
-`sudo livemedia-creator --make-iso --ks flatten-i3.ks --no-virt --iso-only --iso-name fedora-i3-live-x86_64.iso --releasever 34`
+\&#96;sudo livemedia-creator --make-iso --ks flatten-i3.ks --no-virt --iso-only --iso-name fedora-i3-live-x86_64.iso --releasever 34\&#96;
 
 Create a QEMU virtual machine with the new ISO::
-`qemu-kvm -m 2048 -vga qxl -cdrom fedora-i3-live-x86_64.iso`
+\&#96;qemu-kvm -m 2048 -vga qxl -cdrom fedora-i3-live-x86_64.iso\&#96;
 
 [NOTE]
 ====
-When `--releasever` is not specified, it defaults to the current system version.
+When \&#96;--releasever\&#96; is not specified, it defaults to the current system version.
 ====
 
 [[build-iso--alternatives]]
@@ -171,22 +177,26 @@ Added first steps on building the ISO locally,
 
 We now have a flat i3 with lightdm-gtk as a Display manager and the live works fine on QEMU/KVM.
 The ks is initially brached off from XFCE and hence still have some bits that needs to be removed without breaking the live.
-The respin seems to cause some issues while installing with `liveinst` on urxvt with a GTK erorr.
+The respin seems to cause some issues while installing with \&#96;liveinst\&#96; on urxvt with a GTK erorr.
 
 === 2020-06-15
 
-For now, we've started with flattening/forking two widely used spins: `xfce` and `lxde` and adding the i3 packages there to ensure stability among packages.
-A compose build was made as `F32-20200615` with the help of folks from the Respins SiG.
+For now, we've started with flattening/forking two widely used spins: \&#96;xfce\&#96; and \&#96;lxde\&#96; and adding the i3 packages there to ensure stability among packages.
+A compose build was made as \&#96;F32-20200615\&#96; with the help of folks from the Respins SiG.
 
 The kickstart files that are available are:
 
-* `flat-i3-lxde.ks` which is flattened from `flat-live-lxde.ks` which we branched for F32 instead of rawhide.
-* `flat-i3-xfce.ks` whichi is flattened from `flat-live-xfce.ks` which is also branched for F32.
+\&#42; \&#96;flat-i3-lxde.ks\&#96; which is flattened from \&#96;flat-live-lxde.ks\&#96; which we branched for F32 instead of rawhide.
+\&#42; \&#96;flat-i3-xfce.ks\&#96; whichi is flattened from \&#96;flat-live-xfce.ks\&#96; which is also branched for F32.
 
-Both of them were modified in order to add the link:https://fedoraproject.org/wiki/SIGs/i3/Brainstorm#i3-minimal[i3-minimal] packages along with the packages used by the specific DE.
+Both of them were modified in order to add the link:https://fedoraproject.org/wiki/SIGs/i3/Brainstorm\&#35;i3-minimal[i3-minimal] packages along with the packages used by the specific DE.
+
+
+
+
 
 = Package groups
-Fedora i3 SIG <i3wm@lists.fedoraproject.org>
+Fedora i3 SIG \&lt;i3wm@lists.fedoraproject.org\&gt;
 :page-authors: {author}
 :toc:
 
@@ -195,42 +205,42 @@ Ideas for packages are below.
 
 
 [[minimal]]
-== `i3` (minimal)
+== \&#96;i3\&#96; (minimal)
 
-These are packages that will be installed by `sudo dnf install @i3`.
-It will include a minimal number of packages to provide a common "base" for an i3 workstation.
+These are packages that will be installed by \&#96;sudo dnf install @i3\&#96;.
+It will include a minimal number of packages to provide a common 'base' for an i3 workstation.
 
 [[minimal-core]]
 === Core packages
 
 These packages are required to get i3 working minimally.
 
-* `i3`
-* `i3lock`
-* `i3status`
-* `dmenu`
-* `dunst`
+\&#42; \&#96;i3\&#96;
+\&#42; \&#96;i3lock\&#96;
+\&#42; \&#96;i3status\&#96;
+\&#42; \&#96;dmenu\&#96;
+\&#42; \&#96;dunst\&#96;
 (notifications)
-* `lightdm`
+\&#42; \&#96;lightdm\&#96;
 (display manager)
-* Group:
-`@base-x`
-* urxvt
+\&#42; Group:
+\&#96;@base-x\&#96;
+\&#42; urxvt
 (virtual terminal)
 
 [[minimal-networking]]
 === Networking
 
-* `nmcli`
-* `network-manager-applet`
-* `firefox` (web browser)
+\&#42; \&#96;nmcli\&#96;
+\&#42; \&#96;network-manager-applet\&#96;
+\&#42; \&#96;firefox\&#96; (web browser)
 
 [[minimal-audio]]
 === Audio
 
-* `pactl`
-* `pauvcontrol`
-* `volumeicon`
+\&#42; \&#96;pactl\&#96;
+\&#42; \&#96;pauvcontrol\&#96;
+\&#42; \&#96;volumeicon\&#96;
 
 [[minimal-power-management]]
 === Power management
@@ -240,15 +250,15 @@ TBD.
 [[minimal-misc]]
 === Miscellaneous
 
-* `xbrightlight` (laptop backlight control)
-* `htop` (monitoring system)
-* `azote` (wallpaper management)
-* `mousepad` (text editor)
-* `thunar` (file browsing)
+\&#42; \&#96;xbrightlight\&#96; (laptop backlight control)
+\&#42; \&#96;htop\&#96; (monitoring system)
+\&#42; \&#96;azote\&#96; (wallpaper management)
+\&#42; \&#96;mousepad\&#96; (text editor)
+\&#42; \&#96;thunar\&#96; (file browsing)
 
 
 [[extended]]
-== `i3-extended`
+== \&#96;i3-extended\&#96;
 
 This package group provides a set of extended utilities, applications, or other useful tools.
 Some i3 users may prefer or expect these tools in an installation, but they are not required to use i3.
@@ -257,31 +267,33 @@ This package group can improve the user experience of using i3.
 [[extended-menu]]
 === Menu
 
-* `rofi`
-* `morc`
+\&#42; \&#96;rofi\&#96;
+\&#42; \&#96;morc\&#96;
 
 [[extended-power-management]]
 === Power management
 
-* `powertop`
+\&#42; \&#96;powertop\&#96;
 
 [[extended-misc]]
 === Miscellaneous
 
-* `arandr`
-* `conky`
-* `i3status-rs`
-* `font-awesome`
-* `alacritty`
-* `tmux`
-* `xarchiver`
-* `qutebrowser`
-* `st`
+\&#42; \&#96;arandr\&#96;
+\&#42; \&#96;conky\&#96;
+\&#42; \&#96;i3status-rs\&#96;
+\&#42; \&#96;font-awesome\&#96;
+\&#42; \&#96;alacritty\&#96;
+\&#42; \&#96;tmux\&#96;
+\&#42; \&#96;xarchiver\&#96;
+\&#42; \&#96;qutebrowser\&#96;
+\&#42; \&#96;st\&#96;
 (need to choose between alacritty and st)
-* `py3status`
-* `nitrogen`
-* `lxappearance`
+\&#42; \&#96;py3status\&#96;
+\&#42; \&#96;nitrogen\&#96;
+\&#42; \&#96;lxappearance\&#96;
 (GUI theming app)
+
+
 = Frequently Asked Questions (F.A.Q.)
 
 [qanda]
@@ -295,54 +307,56 @@ Writing documentation in asciidoc is very simple and straighforward.
 And in fact, writing documentation makes you very happy.
 Just try and see for yourself!
 Start with the link:https://docs.fedoraproject.org/en-US/fedora-docs/contributing/[Documentation Guide].
+
+
 = Fedora i3 S.I.G Meetings
 Nasir Hussain, Fedora i3 SIG
 :page-authors: {author}
 
-The Fedora i3 SIG (Special Interest Group) team meets every 2 weeks in Fedora i3 SIG's link:https://docs.fedoraproject.org/en-US/i3/#_communication[Communication Channels] at 16:00 UTC on Tuesdays.
+The Fedora i3 SIG (Special Interest Group) team meets every 2 weeks in Fedora i3 SIG's link:https://docs.fedoraproject.org/en-US/i3/\&#35;_communication[Communication Channels] at 16:00 UTC on Tuesdays.
 The calendar for future meetings is available link:https://apps.fedoraproject.org/calendar/meeting/9768[here].
-Meetings logs are available at https://meetbot.fedoraproject.org/sresults/?group_id=i3&type=team[Meetbot].
+Meetings logs are available at https://meetbot.fedoraproject.org/sresults/?group_id=i3\&amp;type=team[Meetbot].
 As part of the Fedora Project, the i3 SIG uses https://fedoraproject.org/wiki/Zodbot[zodbot] with the http://meetbot.debian.net/Manual.html[supybot-meetbot].
 Commands for both, zodbot and meetbot works on our meetings.
 
 == Steps to run the meeting
 
-* Ping i3-sig Members on the channel by sending `.members i3-sig` on the IRC channel before the meeting.
-* Type `#startmeeting Fedora i3 (YYYY-MM-DD)`
-* `#meetingname i3`
-* `#topic roll call`
+\&#42; Ping i3-sig Members on the channel by sending \&#96;.members i3-sig\&#96; on the IRC channel before the meeting.
+\&#42; Type \&#96;\&#35;startmeeting Fedora i3 (YYYY-MM-DD)\&#96;
+\&#42; \&#96;\&#35;meetingname i3\&#96;
+\&#42; \&#96;\&#35;topic roll call\&#96;
 
 Wait for 2-4 minutes for people to check in for the roll call.
 
-* `#chair` all the people present for the meeting
-* `#topic Action items from last meeting`
+\&#42; \&#96;\&#35;chair\&#96; all the people present for the meeting
+\&#42; \&#96;\&#35;topic Action items from last meeting\&#96;
 
 Find the last meeting log from link:https://meetbot-raw.fedoraproject.org/teams/i3/[meetbot] and post the action items in the meeting for people to update the status of.
 
-* After they are done, fetch the agenda sent on the mailing list
+\&#42; After they are done, fetch the agenda sent on the mailing list
 
 Do the following for each topic:
 
-* `#topic` Topic Subject
-* `#link` link (If any are provided on the Mailing list thread)
+\&#42; \&#96;\&#35;topic\&#96; Topic Subject
+\&#42; \&#96;\&#35;link\&#96; link (If any are provided on the Mailing list thread)
 
 During the meeting, you can five people action items for them to complete:
 
-* `#action <nickname>` description of what needs to be done
+\&#42; \&#96;\&#35;action \&lt;nickname\&gt;\&#96; description of what needs to be done
 
 When all topics are over, go for open floor:
 
-* `#topic Open Floor`
+\&#42; \&#96;\&#35;topic Open Floor\&#96;
 
 After open floor, end the meeting.
 
-* `#endmeeting`
+\&#42; \&#96;\&#35;endmeeting\&#96;
 
 Then, when convenient:
 
-* Send an emails to mailto:i3wm@lists.fedoraproject.org[i3wm@lists.fedoraproject.org] with the details of the meeting from https://meetbot.fedoraproject.org/sresults/?group_id=i3&type=team[meetbot page].
-Minutes in textual format are directly available using `.txt` as URL extension.
-It's easiest to get the Minutes/Minutes (text)/Log URLs by copying the footer that Meetbot prints after `#endmeeting`.
+\&#42; Send an emails to mailto:i3wm@lists.fedoraproject.org[i3wm@lists.fedoraproject.org] with the details of the meeting from https://meetbot.fedoraproject.org/sresults/?group_id=i3\&amp;type=team[meetbot page].
+Minutes in textual format are directly available using \&#96;.txt\&#96; as URL extension.
+It's easiest to get the Minutes/Minutes (text)/Log URLs by copying the footer that Meetbot prints after \&#96;\&#35;endmeeting\&#96;.
 You can see examples in the https://lists.fedoraproject.org/archives/list/i3wm@lists.fedoraproject.org/[archives]; The usual format follows:
 
 [source,text]
@@ -351,11 +365,13 @@ Subject: Fedora i3 SIG Meeting Minutes year-mm-dd
 
 Body:
 
-Minutes: <URL to meetbot .html>
-Minutes (text): <URL to meetbot .txt>
-Log: <URL to meetbot .log.html>
+Minutes: \&lt;URL to meetbot .html\&gt;
+Minutes (text): \&lt;URL to meetbot .txt\&gt;
+Log: \&lt;URL to meetbot .log.html\&gt;
 
-<Copy/paste content of meetbot .txt>
+\&lt;Copy/paste content of meetbot .txt\&gt;
 ----
 
 Thank you for running the meeting.
+
+

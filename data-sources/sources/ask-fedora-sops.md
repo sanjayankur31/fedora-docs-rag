@@ -8,23 +8,14 @@ clearly structured, but here is some guidance to get you started:
 Here are some very basic terms that will be helpful to keep in mind as
 you use the Site:
 
-- Topic: or ´thread´ The collection of messages grouped together.
-
-- Post: Each element of a topic is referred to as a post.
-
-- Original Post (or OP): The first post in any topic.
-
-- User: Registered Users.
-
-- Moderator : Keep The Site Clean and Organized.
-
-- Admin : Do Administrative Tasks
-
-- Category (Level-1): The Language that we can support. it's there for
-  organization only. Topic requires Moderation. (Parent Category)
-
-- Sub-Categiory (Level-2) : The place Where the Magic Occurs. (Child
-  Category)
+&#42; Topic: or ´thread´ The collection of messages grouped together.
+&#42; Post: Each element of a topic is referred to as a post. &#42;
+Original Post (or OP): The first post in any topic. &#42; User:
+Registered Users. &#42; Moderator : Keep The Site Clean and Organized.
+&#42; Admin : Do Administrative Tasks &#42; Category (Level-1): The
+Language that we can support. it's there for organization only. Topic
+requires Moderation. (Parent Category) &#42; Sub-Categiory (Level-2) :
+The place Where the Magic Occurs. (Child Category)
 
 # First Setup {#_first_setup}
 
@@ -38,16 +29,15 @@ able to take full advantage of the system.
 
 As a User you don't like see any messages about :
 
-- A new messages from other languages
-
-- Topic or Wharever other than you're not trackere and any kind of noisy
-  or disturb with any other (category/sub-category)...​
+&#42; A new messages from other languages &#42; Topic or Wharever other
+than you're not trackere and any kind of noisy or disturb with any other
+(category/sub-category)&#8230;
 
 for example (any other than your language or another that you're
 insteresting, for example (your language and English).
 
 What you Should DO? Muted these categories/sub-categories in your
-personal profile GO → Preference → Categories → (Muted).
+personal profile GO -&gt; Preference -&gt; Categories -&gt; (Muted).
 
 You are also able to change the Theme althought the default language in
 the Site is English, you can change it to your mother language.
@@ -63,15 +53,13 @@ You can mute as many as you like.
 
 Where're Running a Multi-lingual Site and We Sructuture it as follow :
 
-- Category Level-1 is The language Itself, and It there for
-  Organizational purpose. Topic here requires Moderation.
+&#42; Category Level-1 is The language Itself, and It there for
+Organizational purpose. Topic here requires Moderation.
 
 Next, sub-categories Level-2, that are identical for all supported
 languages.
 
-- on Using Fedora
-
-- on Installing or Upgrading Fedora
+&#42; on Using Fedora &#42; on Installing or Upgrading Fedora
 
 :::: note
 ::: title
@@ -120,14 +108,11 @@ There are several ways to see who is involved in topics.
 On the homepage you will see a selection of avatars (profile pictures)
 of:
 
-- the user who started the topic (always the first photo);
-
-- a selection of the most active participants;
-
-- and, who created the most recent post (usually the last photo).
-
-- in some cases, the first photo has a blue border or blue halo to
-  indicate that the original poster is also the most recent poster
+&#42; the user who started the topic (always the first photo); &#42; a
+selection of the most active participants; &#42; and, who created the
+most recent post (usually the last photo). &#42; in some cases, the
+first photo has a blue border or blue halo to indicate that the original
+poster is also the most recent poster
 
 The box at the bottom of the OP tells you; who created the post and
 when, gives a count of the replies and views in this topic to date, and
@@ -160,13 +145,12 @@ On smaller screens, select the bottom progress bar to expand it.
 
 ## Jump back in {#_jump_back_in}
 
-- Selecting a topic title will take you to your last read post in the
-  topic. To enter at the top ↑ or bottom ↓ instead, click the reply
-  count or last reply date.
-
-- Topics above the light red line on a list are new or updated since
-  your last visit. If you have read all the way to the end of a topic,
-  the title will be light grey instead of black.
+&#42; Selecting a topic title will take you to your last read post in
+the topic. To enter at the top ↑ or bottom ↓ instead, click the reply
+count or last reply date. &#42; Topics above the light red line on a
+list are new or updated since your last visit. If you have read all the
+way to the end of a topic, the title will be light grey instead of
+black.
 
 ## Related topics {#_related_topics}
 
@@ -198,18 +182,14 @@ lots of ways to follow the context of conversations.
 To reply to a specific post in a topic, clicking the grey Reply button
 at the end of each post and your reply is linked to that post.
 
-- If your reply is the next one published after the post you are
-  replying to, this will appear next in chronological order
-
-- If yours is NOT next, then two things happen after your post is
-  published:
-
-  - Your post will include a new link in its header with an image to
-    show what this is 'in reply to' - clicking this link displays that
-    previous post for context next to your reply
-
-  - The original post includes a count of replies at the bottom -
-    clicking this link displays the content of the
+&#42; If your reply is the next one published after the post you are
+replying to, this will appear next in chronological order &#42; If yours
+is NOT next, then two things happen after your post is published:
+&#42;&#42; Your post will include a new link in its header with an image
+to show what this is 'in reply to' - clicking this link displays that
+previous post for context next to your reply &#42;&#42; The original
+post includes a count of replies at the bottom - clicking this link
+displays the content of the
 
 ## Drafts {#_drafts}
 
@@ -255,13 +235,8 @@ How does it work?
 The process is easy: Paste a URL into a post, and that link is converted
 into a preview window
 
-- start a post
-
-- grab the URL you want to link to
-
-- paste this on a new line with no spaces before
-
-- magic happens
+&#42; start a post &#42; grab the URL you want to link to &#42; paste
+this on a new line with no spaces before &#42; magic happens
 
 To generate a summary for a link, paste it on a line by itself. To start
 a topic with a link, paste the link into the title field.
@@ -272,9 +247,9 @@ a topic with a link, paste the link into the title field.
 
 Your reply can be formatted using simple HTML, BBCode, or Markdown 18:
 
-    This is <b>bold</b>.
+    This is \&lt;b\&gt;bold\&lt;/b\&gt;.
     This is [b]bold[/b].
-    This is **bold**.
+    This is \&#42;\&#42;bold\&#42;\&#42;.
 
 For more formatting tips, [Try This
 Tutorial](http://commonmark.org/help/tutorial/).
@@ -285,17 +260,13 @@ There are action buttons at the bottom of each post:
 
 ![action](action.png)
 
-- To let someone know that you enjoyed and appreciated their post, use
-  the like button. Share the love! (we `encourage to use This`).
-
-- Grab a copy-pasteable (permalink) link to any reply or topic via the
-  link button.
-
-- Use the ... button to reveal more actions. Flag to privately let the
-  author, or the site staff, know about a problem. Bookmark to find this
-  post later on your profile page.
-
-- Mark a TOPIC as SOLVED.
+&#42; To let someone know that you enjoyed and appreciated their post,
+use the like button. Share the love! (we &#96;encourage to use
+This&#96;). &#42; Grab a copy-pasteable (permalink) link to any reply or
+topic via the link button. &#42; Use the ... button to reveal more
+actions. Flag to privately let the author, or the site staff, know about
+a problem. Bookmark to find this post later on your profile page. &#42;
+Mark a TOPIC as SOLVED.
 
 # Notifications {#_notifications}
 
@@ -341,80 +312,63 @@ the notification control above the topic list, on the right side.
 ::: title
 :::
 
-Based and Adapted from the Guide → [Discourse New User
+Based and Adapted from the Guide -&gt; [Discourse New User
 Guide](https://meta.discourse.org/t/discourse-new-user-guide/96331), if
 you don't feel confortable/agree with this content feel free to adap it
-and updating. = Standard Operation Procedure for Moderator
-:experimental: :toc:
+and updating.
 ::::
+
+# Standard Operation Procedure for Moderator {#_standard_operation_procedure_for_moderator}
 
 It's your role to help oversee the forum, ensuring that users and
 content are in line with FEDORA rules, guidelines and [code of
 conduct](https://docs.fedoraproject.org/en-US/project/code-of-conduct/index.html).
 The system comes with numerous tools to help you to accomplish this.
 
-# Moderator responsibilities and guidelines {#_moderator_responsibilities_and_guidelines}
+## Moderator responsibilities and guidelines {#_moderator_responsibilities_and_guidelines}
 
-- Ensure Ask Fedora is free of spam. With only FAS login enabled, there
-  should not be much spam on the forum.
-
-- All questions, answers and comments must follow the Fedora code of
-  conduct.
-
-- Encourage users to be helpful and participate actively.
-
-- Remind users of the guidelines listed above.
-
-- Ensure that questions are tagged appropriately.
-
-- Delete duplicate questions if they are exactly the same and have been
-  posted by mistake.
-
-- If questions are very similar in content, you may close the duplicate
-  question but MUST leave a comment pointing to the original question.
-
-- Do not close questions just because they are answered. Leave it open
-  unless there are special circumstances that warrant closing.
+&#42; Ensure Ask Fedora is free of spam. With only FAS login enabled,
+there should not be much spam on the forum. &#42; All questions, answers
+and comments must follow the Fedora code of conduct. &#42; Encourage
+users to be helpful and participate actively. &#42; Remind users of the
+guidelines listed above. &#42; Ensure that questions are tagged
+appropriately. &#42; Delete duplicate questions if they are exactly the
+same and have been posted by mistake. &#42; If questions are very
+similar in content, you may close the duplicate question but MUST leave
+a comment pointing to the original question. &#42; Do not close
+questions just because they are answered. Leave it open unless there are
+special circumstances that warrant closing.
 
 Some common scenarios you can see and how each ones can be handled:
 
-# Basic Terms Used by Discourse (Nomenclature) {#_basic_terms_used_by_discourse_nomenclature_2}
+## Basic Terms Used by Discourse (Nomenclature) {#_basic_terms_used_by_discourse_nomenclature_2}
 
 Here are some very basic terms that will be helpful :
 
-- Topic: or ´thread´ The collection of messages grouped together.
+&#42; Topic: or ´thread´ The collection of messages grouped together.
+&#42; Post: Each element of a topic is referred to as a post. &#42;
+Original Post (or OP): The first post in any topic. &#42; User:
+Registered Users.
 
-- Post: Each element of a topic is referred to as a post.
-
-- Original Post (or OP): The first post in any topic.
-
-- User: Registered Users.
-
-# Welcoming New Users {#_welcoming_new_users}
+## Welcoming New Users {#_welcoming_new_users}
 
 When you notice a new user on the site (evidenced by a light-grey
 username instead of dark-grey, which shows that a user is Trust Level
 0), say hi and welcome them to the site.
 
 Every User should Read the Start Here! first before Begin their
-Journey...​
+Journey&#8230;
 
-# Manage Banned and Delete Account(s) {#_manage_banned_and_delete_accounts}
+## Manage Banned and Delete Account(s) {#_manage_banned_and_delete_accounts}
 
-## What to do {#_what_to_do}
+### What to do {#_what_to_do}
 
-- Verify that the user does not belong to any fedora team and is a real
-  Spammer with any of the scripts that the fedora team provides →
-  <https://pagure.io/fedora-join/Fedora-Join/blob/master/f/scripts>
-
-- Open a Ticket in Fedora Infra TEAM →
-  <https://pagure.io/fedora-infrastructure/new_issue>
-
-- Issue Ticket : Spamm Account in AskFedora
-
-- Text of the Ticket :
-
-<!-- -->
+&#42; Verify that the user does not belong to any fedora team and is a
+real Spammer with any of the scripts that the fedora team provides -&gt;
+<https://pagure.io/fedora-join/Fedora-Join/blob/master/f/scripts> &#42;
+Open a Ticket in Fedora Infra TEAM -&gt;
+<https://pagure.io/fedora-infrastructure/new_issue> &#42; Issue Ticket :
+Spamm Account in AskFedora &#42; Text of the Ticket :
 
     People use their FAS in ask.fedoraproject.org for Spamming, the System Detect the following Account/s for the same reason, so we proceeded to delete that one/s there:
 
@@ -423,12 +377,12 @@ Journey...​
     Email
     Bio
 
-    Could you Please delete/Block the Respective Account/s in -> FAS (Fedora Account System)…
+    Could you Please delete/Block the Respective Account/s in -\&gt; FAS (Fedora Account System)…
 
-- Add this information in askfedora.fp.o →
-  <https://ask.fedoraproject.org/t/banned-and-deleted-accounts/3009>
+&#42; Add this information in askfedora.fp.o -&gt;
+<https://ask.fedoraproject.org/t/banned-and-deleted-accounts/3009>
 
-# Helpful Users {#_helpful_users}
+## Helpful Users {#_helpful_users}
 
 Some users, will go above and beyond what is expected. It is to your
 advantage to recognize these users and encourage them to keep doing what
@@ -440,12 +394,12 @@ or post they can see.
 - [Understanding User Truts
   Level](https://blog.discourse.org/2018/06/understanding-discourse-trust-levels/)
 
-# Getting User Information {#_getting_user_information}
+## Getting User Information {#_getting_user_information}
 
 The System maintains information on all users who register and interact
 with the site.
 
-## Public profile {#_public_profile}
+### Public profile {#_public_profile}
 
 You can get an overview of a user from their public profile. To access a
 profile click the user's avatar or username in a topic, their avatar in
@@ -459,7 +413,7 @@ You can also view and modify the user's preferences. This can be very
 helpful if a user is reporting an issue with their account that you
 suspect may be related to a preference change.
 
-## User admin page {#_user_admin_page}
+### User admin page {#_user_admin_page}
 
 From a user's public profile you can access the user's Admin page. The
 Admin page can also be accessed from the hamburger menu, and then by
@@ -474,13 +428,13 @@ their trust level adjusted.
 
 ![User Panel](User-Panel.png)
 
-# Complicated Topics {#_complicated_topics}
+## Complicated Topics {#_complicated_topics}
 
 Discussion takes place inside of topics. Each topic has a title and
 category, and it is important that the discussion within relates to the
 title/category.
 
-## Poor title/incorrect category {#_poor_titleincorrect_category}
+### Poor title/incorrect category {#_poor_titleincorrect_category}
 
 If Topic has poor title or select the wrong category, you can edit the
 topic to update one or both. Scroll to the top of the topic and click
@@ -488,7 +442,7 @@ the pencil next to the title.
 
 ![Complicated Topics](Complicated-Topics.png)
 
-## Duplicate topic {#_duplicate_topic}
+### Duplicate topic {#_duplicate_topic}
 
 If the posts in the duplicate topic add to the discussion, they can be
 moved to the existing one. Moving all posts in a topic will
@@ -496,7 +450,7 @@ automatically close the topic Just Select all and you can Delete/Move.
 
 ![Off Topic](Off-Topic.png)
 
-## Heated, difficult, non-productive discussion {#_heated_difficult_non_productive_discussion}
+### Heated, difficult, non-productive discussion {#_heated_difficult_non_productive_discussion}
 
 If discussion in a topic is no longer productive/focused, moderators
 should step in, Make a staff post. Many times, a simple reminder is
@@ -507,7 +461,7 @@ the post is the official position of the site.
 
 ![Heated](Heated.png)
 
-## Set a topic timer. {#_set_a_topic_timer}
+### Set a topic timer. {#_set_a_topic_timer}
 
 If the staff post doesn't help, or discussion seems so heated that a
 reminder won't help, you can "pause" the topic. Use the topic admin
@@ -517,52 +471,46 @@ will reopen.
 
 ![Topic Timer](Topic-Timer.png)
 
-# Moderator Communication {#_moderator_communication}
+## Moderator Communication {#_moderator_communication}
 
 Moderator's is not alone, are parts of a larger team. This team includes
 other moderators, as well as site admins/owners, and in many cases
 TL3/TL4 users. Regular and open communication between all should be
 encouraged.
 
-- **The Lounge:** Is a default category on installs restricted to users
-  TL3 or above, is a great place for the moderator team to communicate
-  with the site's trusted users. These users should be encouraged to
-  share their thoughts and concerns with the site staff
+- &#42;&#42;The Lounge:&#42;&#42; Is a default category on installs
+  restricted to users TL3 or above, is a great place for the moderator
+  team to communicate with the site's trusted users. These users should
+  be encouraged to share their thoughts and concerns with the site staff
 
-- **The staff category:** Is default category on installs restricted to
-  site staff: moderators and admins. The staff category is a great place
-  for moderators to discuss what they're seeing and doing within the
-  site, as well as to document internal policies and procedures.
+- &#42;&#42;The staff category:&#42;&#42; Is default category on
+  installs restricted to site staff: moderators and admins. The staff
+  category is a great place for moderators to discuss what they're
+  seeing and doing within the site, as well as to document internal
+  policies and procedures.
 
-- **Whispers:** When enabled in site settings, moderators can take
-  advantage of whispers. Whispers allow staff to create private replies
-  within an existing topic or PM. This allows moderators to discuss
-  issues within the topic, so no context is lost. Whispers can also be
-  used to mention other staff if assistance is required, but a public
-  reply would be inappropriate, and an invite wouldn't provide the
-  necessary context.
+- &#42;&#42;Whispers:&#42;&#42; When enabled in site settings,
+  moderators can take advantage of whispers. Whispers allow staff to
+  create private replies within an existing topic or PM. This allows
+  moderators to discuss issues within the topic, so no context is lost.
+  Whispers can also be used to mention other staff if assistance is
+  required, but a public reply would be inappropriate, and an invite
+  wouldn't provide the necessary context.
 
-# Inappropriate Content {#_inappropriate_content}
+## Inappropriate Content {#_inappropriate_content}
 
 Please keep the site clean, appropriate, and on-topic via the Flag
 system. When a topic or post is seen that does not belong, users and
 moderators can flag it for review.
 
-## Flags {#_flags}
+### Flags {#_flags}
 
 Flags can be your best friend. When a user doesn't like a post, they can
 choose to flag it for moderators. The flag dialog has 5 options:
 
-- message user (does not cause a flag, simply opens up the PM dialog),
-  see send_an_official_warning discuss later in this chapter.
-
-- off-topic.
-
-- inappropriate.
-
-- spam.
-
-- something else.
+&#42; message user (does not cause a flag, simply opens up the PM
+dialog), see send_an_official_warning discuss later in this chapter.
+&#42; off-topic. &#42; inappropriate. &#42; spam. &#42; something else.
 
 Off-topic, inappropriate, and spam simply cast a flag, and the user is
 done. Something else allows for a custom message and then casts the
@@ -570,13 +518,11 @@ flag. Once a flag is in the queue, moderators will see a red
 notification on the hamburger menu and can open the flag queue, you can
 decide what to do about the flag :
 
-- Agree, Agreeing with the flag signals that you confirm the post, You
-  can then message the user to edit it (automated message, no option to
-  customize), or delete the post.
-
-- Disagre, Disagring with the flag says that the post is not an issue.
-
-- Ignore, Means the flag doesn't need further action.
+&#42; Agree, Agreeing with the flag signals that you confirm the post,
+You can then message the user to edit it (automated message, no option
+to customize), or delete the post. &#42; Disagre, Disagring with the
+flag says that the post is not an issue. &#42; Ignore, Means the flag
+doesn't need further action.
 
 For example, a user might flag their own post if they need help with
 something. You would then ignore the flag so it doesn't hurt their trust
@@ -612,36 +558,27 @@ moderator notification so moderators may review the issue in their flag
 queue. Furthermore, this also "casts a flag" on the post, which has
 other consequences:
 
-- A user whose posts have accumulated 5 flags can not reach TL3.
-
-  - These flags do not revert, however for TL3 only flags within the
-    last 100 days are counted.
-
-  - Only flags that a staff member agrees with count towards this limit.
-    If a staff member ignores or disagrees with a flag, it isn't counted
-    as far as TL3 is concerned.
-
-- A post with 3 flags will be automatically hidden. Users may
-  click-to-view the post.
-
-  - A staff member can use the "Take Action" button, which will cause
-    this to happen immediately.
-
-  - When a post is automatically hidden due to flags, the user receives
-    a PM informing them their post was flagged. After 10 minutes, the
-    user may edit their post and it will be unhidden.
+&#42; A user whose posts have accumulated 5 flags can not reach TL3.
+&#42;&#42; These flags do not revert, however for TL3 only flags within
+the last 100 days are counted. &#42;&#42; Only flags that a staff member
+agrees with count towards this limit. If a staff member ignores or
+disagrees with a flag, it isn't counted as far as TL3 is concerned.
+&#42; A post with 3 flags will be automatically hidden. Users may
+click-to-view the post. &#42;&#42; A staff member can use the "Take
+Action" button, which will cause this to happen immediately. &#42;&#42;
+When a post is automatically hidden due to flags, the user receives a PM
+informing them their post was flagged. After 10 minutes, the user may
+edit their post and it will be unhidden.
 
 If another 3 flags occur, the post will be hidden again and editing will
 not unhide the post.
 
-- A new (TL0) user whose post is flagged as spam 3 times from 3
-  different users will have all their posts hidden as a result.
-
-- If after 48 hours a flag is still in the flag queue without any action
-  taken, an automatic PM will be sent to all moderators.
-
-- A topic with 12 unresolved flags from at least 5 different users will
-  be automatically closed until the moderators can intervene.
+&#42; A new (TL0) user whose post is flagged as spam 3 times from 3
+different users will have all their posts hidden as a result. &#42; If
+after 48 hours a flag is still in the flag queue without any action
+taken, an automatic PM will be sent to all moderators. &#42; A topic
+with 12 unresolved flags from at least 5 different users will be
+automatically closed until the moderators can intervene.
 
 :::: note
 ::: title
@@ -658,9 +595,7 @@ following options:
 
 Most of the time, lags are easy to handle :
 
-- The post is clearly spam
-
-- A user needs some help, etc.
+&#42; The post is clearly spam &#42; A user needs some help, etc.
 
 Sometimes the issue can be harder to address. Maybe a user is
 continually swearing in their posts and abusing others after being
@@ -673,7 +608,7 @@ discussion with you team in private. At the same time, don't hesitate to
 make your own decisions - you were made a moderator because you are
 trusted to do the right thing.
 
-**What happens when you flag something?**
+&#42;&#42;What happens when you flag something?&#42;&#42;
 
 For a single flag, the post appears in the staff flag queue. Staff can
 review the flag and choose which action to take, including hiding the
@@ -688,16 +623,12 @@ flag queue:
     from a trust level 0 user. Remember that new trust level 0 users
     don't have the ability to flag.
 
-2.  The post in question is immediately hidden:
-
-    - the post author sees Your post was flagged by the community.
-      Please see your messages.
-
-    - the community sees This post was flagged by the community and is
-      temporarily hidden. View hidden content.
-
-    - staff sees the actual post, as posted, in a dimmed state to
-      indicate it has been hidden for others.
+2.  The post in question is immediately hidden: &#42;&#42; the post
+    author sees Your post was flagged by the community. Please see your
+    messages. &#42;&#42; the community sees This post was flagged by the
+    community and is temporarily hidden. View hidden content. &#42;&#42;
+    staff sees the actual post, as posted, in a dimmed state to indicate
+    it has been hidden for others.
 
 3.  A very friendly private message is sent to the author of the post,
     describing what happened, in the friendliest imaginable language,
@@ -718,22 +649,15 @@ allowed owner edit interval, which is 6 months.
 
 Now some what ifs.
 
-- The post author edits, the post is un-hidden and nothing else happens:
-  success! No harm no foul, and notably no formal moderators had to be
-  around for this to work!
-
-- The post author does not edit, does not appeal: the post is never
-  un-hidden. If a post stays hidden for 30 days, it is automatically
-  deleted.
-
-- Moderator manually...
-
-  - disagrees with flags Post is unhidden.
-
-  - agrees with flags. Post stays hidden.
-
-  - ignores flags. Nothing happens. Post stays hidden. Posts hidden for
-    more than 30 days are automatically deleted.
+&#42; The post author edits, the post is un-hidden and nothing else
+happens: success! No harm no foul, and notably no formal moderators had
+to be around for this to work! &#42; The post author does not edit, does
+not appeal: the post is never un-hidden. If a post stays hidden for 30
+days, it is automatically deleted. &#42; Moderator manually...
+&#42;&#42; disagrees with flags Post is unhidden. &#42;&#42; agrees with
+flags. Post stays hidden. &#42;&#42; ignores flags. Nothing happens.
+Post stays hidden. Posts hidden for more than 30 days are automatically
+deleted.
 
 If the same post is hidden a second round of flags, the flags must now
 be manually handled by a moderator at that point, there is no automatic
@@ -753,21 +677,15 @@ Or you could disable it altogether, and go back to a world where every
 raised flag must be manually handled by an official mod, if that's how
 you roll. But this is on by default.
 
-## What we do: {#_what_we_do}
+### What we do: {#_what_we_do}
 
-- If a post is **clearly spam**, we flag it as spam. In this way the
-  post will be hidden.
-
-- If the user that created the post is crearly a fake user (i.e. there
-  are no other legit
-
-- If a post looks like spam, but we have **doubts** about the post, we
-  warn the user using
-
-  - If there are not answers or the user posts other spam content, we
-    silence the user and
-
-    - Eventually: suspend the user
+&#42; If a post is &#42;&#42;clearly spam&#42;&#42;, we flag it as spam.
+In this way the post will be hidden. &#42; If the user that created the
+post is crearly a fake user (i.e. there are no other legit &#42; If a
+post looks like spam, but we have &#42;&#42;doubts&#42;&#42; about the
+post, we warn the user using &#42;&#42; If there are not answers or the
+user posts other spam content, we silence the user and &#42;&#42;&#42;
+Eventually: suspend the user
 
 AskFedora users can help in keeping the forum a spam free place by
 flagging posts, In this way the moderators receive a report and can take
@@ -780,7 +698,7 @@ account.
 If the moderators and admins have doubts and they would like to discuss
 posts or actions to take, they can use the Staff category on AskFedora.
 
-# The Difficult User {#_the_difficult_user}
+## The Difficult User {#_the_difficult_user}
 
 :::: note
 ::: title
@@ -794,13 +712,13 @@ rules, is rude, posts inappropriate material, etc. How can you handle
 them?. There may be instances where one of the steps doesn't make sense
 or the action was so egregious that a step (or steps) are skipped.
 
-## Don't make assumptions {#_dont_make_assumptions}
+### Don't make assumptions {#_dont_make_assumptions}
 
 First, try to avoid assuming that the user has a negative intent. They
 may simply be ignorant of the rules, may not speak your forums language
 well, may be young, or have another reason for the way they act.
 
-## Reach out directly {#_reach_out_directly}
+### Reach out directly {#_reach_out_directly}
 
 Try to contact the user privately via PM to let them know what is wrong
 with their behavior. Remember to talk about the negative behaviors -
@@ -808,27 +726,28 @@ don't attack the user themselves. When possible, link to existing rules,
 guidelines, FAQs. In most cases, this contact will be enough. However,
 if it is not...
 
-## Send an official warning {#_send_an_official_warning}
+### Send an official warning {#_send_an_official_warning}
 
-You can make the message an \"official warning\". This PM will
+You can make the message an \'official warning\'. This PM will
 automatically gain staff color, and a notice that the user has received
 an official warning will appear on the user profile for other moderators
 to see. In the official warning, be sure to explain the negative
 behavior you have seen, detail specifically what you'd like them to do
 instead, and the consequences of not changing their behavior.
 
-Select The User and Click on Send a PM → then Click on Offical Warning
+Select The User and Click on Send a PM -&gt; then Click on Offical
+Warning
 
 ![Warning](Warning.png)
 
 If the behavior continues, be sure to follow through with the listed
 consequences. You may choose to :
 
-## Silence the user {#_silence_the_user}
+### Silence the user {#_silence_the_user}
 
 Silenced users are prevented from creating new topics, posts, flags, or
 PMs on the site. They are still able to complete other actions, like
-\"liking\" posts, reading topics, replying to PMs, etc. Additionally,
+\'liking\' posts, reading topics, replying to PMs, etc. Additionally,
 they can communicate with moderators via PM, so you can continue to
 communicate with them to try and address the behavior. Silencing a user
 is done from the user's Admin page. To access it:
@@ -847,7 +766,7 @@ If the behavior still continues...
 ::: title
 :::
 
-Based and Adapted from the Guide → [Discourse Moderation
+Based and Adapted from the Guide -&gt; [Discourse Moderation
 Guide](https://meta.discourse.org/t/discourse-moderation-guide/63116),
 if you don't feel confortable/agree with this content feel free to adap
 it and upating.

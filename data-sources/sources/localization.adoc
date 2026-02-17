@@ -13,7 +13,7 @@ Create such account by going to the https://accounts.fedoraproject.org[home page
 
 A further prerequisite to contributing is a signature of the {FWIKI}/Legal:Fedora_Project_Contributor_Agreement[Fedora Project Contributor Agreement], see the tab Agreements in the Settings of your Fedora Account.
 
-This is not a mandatory step, but it could be helpful to apply for a membership in https://accounts.fedoraproject.org/group/l10n/[l10n FA group] through the sponsorship (see xref:fedora-accounts::user.adoc#join-group[How do I become a member of a group?]).
+This is not a mandatory step, but it could be helpful to apply for a membership in https://accounts.fedoraproject.org/group/l10n/[l10n FA group] through the sponsorship (see xref:fedora-accounts::user.adoc\&#35;join-group[How do I become a member of a group?]).
 
 [[ml]]
 == Subscribe to Fedora Translation mailing list
@@ -21,10 +21,10 @@ This is not a mandatory step, but it could be helpful to apply for a membership 
 We use a public mailing list, open to all subscribers, for longer discussions (_asynchronous_ and sometimes multi-threaded communication) for which short live chats may not be enough.
 Log into the https://lists.fedoraproject.org/archives/[Fedora mailing lists] site using your Fedora Account credentials.
 Then, find the {TRANSML}[Fedora Translation Project mailing list] and subscribe using your personal email address.
-(A `@fedoraproject.org` alias can be also used, for more information see {FWIKI}/EmailAliases[e-mail aliases].)
+(A \&#96;@fedoraproject.org\&#96; alias can be also used, for more information see {FWIKI}/EmailAliases[e-mail aliases].)
 
 News, updates, and discussion about translations, team coordination, etc. are shared through on the mailing list.
-It is a *key part* to how we communicate.
+It is a \&#42;key part\&#42; to how we communicate.
 It is usually a low traffic list.
 
 [[introduction]]
@@ -36,15 +36,15 @@ Post a self-introduction to the mailing list and tell us a little about yourself
 Not sure what to say?
 Answer these questions to start:
 
-* Why are you interested in contributing to Fedora?
-* Why are you interested in contributing to Translations?
-* What is your native language?
+\&#42; Why are you interested in contributing to Fedora?
+\&#42; Why are you interested in contributing to Translations?
+\&#42; What is your native language?
 Do you know other languages?
-* If you're involved with other things in Fedora, what are/were you working on?
-* Do you have any experience in open source or online communities?
+\&#42; If you're involved with other things in Fedora, what are/were you working on?
+\&#42; Do you have any experience in open source or online communities?
 If so, what?
-* What parts of the L10n/G11n/Translation project are interesting to you?
-* Do you have any questions for us?
+\&#42; What parts of the L10n/G11n/Translation project are interesting to you?
+\&#42; Do you have any questions for us?
 How can we help _you_ get started?
 
 [[chat-irc]]
@@ -52,7 +52,7 @@ How can we help _you_ get started?
 
 Fedora uses https://chat.fedoraproject.org[Fedora Chat] powered by https://matrix.org[Matrix]/link:https://element.io[Element] and the https://libera.chat[Libera Chat IRC network] for instant messaging and _synchronous_ communication.
 
-Short discussions and planning happen in the {CHAT}[*#l10n:fedoraproject.org*] matrix room in https://chat.fedoraproject.org[Fedora Chat], which is bridged with the *#fedora-l10n* channel on https://libera.chat[Libera.Chat], so people in Fedora Chat are able to seamlessly chat with people in Libera.Chat and vice versa.
+Short discussions and planning happen in the {CHAT}[\&#42;\&#35;l10n:fedoraproject.org\&#42;] matrix room in https://chat.fedoraproject.org[Fedora Chat], which is bridged with the \&#42;\&#35;fedora-l10n\&#42; channel on https://libera.chat[Libera.Chat], so people in Fedora Chat are able to seamlessly chat with people in Libera.Chat and vice versa.
 If you want to stay connected even when you are not online, Fedora Chat can be a solution for you. But IRC clients offer a solution for staying connected permanently as well.
 Simply, use what serves your instant messaging needs the best.
 
@@ -82,6 +82,8 @@ Look for other people in your region and of your own language, join a language t
 
 NOTE: What you can find on the Fedora Wiki about the translation teams it is not always up to date.
 
+
+
 = How To Use Weblate
 Fedora Localization Team
 2023-08-27
@@ -105,7 +107,7 @@ To distinguish the instance from the upstream project further down this document
 
 A user must be logged in to Weblate in order to translate.
 Weblate access is tightly coupled with https://docs.fedoraproject.org/en-US/fedora-accounts[Fedora Accounts], as a consequence, it cannot be accessed without a Fedora Account ID (your username).
-How to create such account please see xref:join.adoc#fedora-account[Create a Fedora Account].
+How to create such account please see xref:join.adoc\&#35;fedora-account[Create a Fedora Account].
 
 Once you have the ID, you can click the btn:[Login] to access Weblate and begin your contribution.
 
@@ -128,11 +130,11 @@ Single string mode contains only one string in the page, but provides very detai
 On the other hand, in Zen mode, detailed information is hidden, multiple of strings are shown in the page instead, which helps the translator to move to the next string very quickly.
 Switching between two modes is quite easy, just click btn:[Exit Zen] or btn:[Zen] on the top right of the page, it's located to the left of the preference icon.
 
-* Zen Mode:
+\&#42; Zen Mode:
 
 image:Weblate_editor_zen_mode.png[]
 
-* Single String Mode:
+\&#42; Single String Mode:
 
 image:Single_string_mode.png[]
 
@@ -148,9 +150,9 @@ For further information about using Weblate software, please visit the official 
 == Translation hints and tips
 
 Our primary aim for this subchapter is to provide some useful and quick information you may seek, particularly when you have just begun translating for Fedora.
-It is inspired by questions received from within our community members and preserved in the "`question-and-answer`" style.
+It is inspired by questions received from within our community members and preserved in the '\&#96;question-and-answer\&#96;' style.
 
-Should you wish to see other question answered here, please xref:index.adoc#find-l10n[let us know].
+Should you wish to see other question answered here, please xref:index.adoc\&#35;find-l10n[let us know].
 
 // Question 1
 How to start translating a project in Weblate to my language? Why I can't find my language on the list?::
@@ -164,7 +166,7 @@ image::Weblate_project_components_list.png[]
 .A component with languages listed
 image::Weblate_project_component_languages.png[]
 
-Provided you have set a `_translated language_` in your profile setings, your language translation can be added, strictly speaking, created by clicking on the btn:[+] sign next to your language on the list (fig. 3).
+Provided you have set a \&#96;_translated language_\&#96; in your profile setings, your language translation can be added, strictly speaking, created by clicking on the btn:[+] sign next to your language on the list (fig. 3).
 If such option is not available to you, you can click btn:[Start new translation] button in the end of the list and subsequently choose your language from the list of all langauges available in Weblate (fig. 4)(fig. 5).
 
 .Create translation button for the Czech language
@@ -176,7 +178,7 @@ image::Weblate_project_start_newtrans.png[]
 .Dropdown list with all available languages
 image::Weblate_project_start_newtrans_langlist.png[]
 
-If you still cannot find your language and you expect 3 letter code, please note Weblate prefers https://docs.weblate.org/en/latest/admin/languages.html#language-code[two letter codes].
+If you still cannot find your language and you expect 3 letter code, please note Weblate prefers https://docs.weblate.org/en/latest/admin/languages.html\&#35;language-code[two letter codes].
 If you are not able to find your language even after that, https://pagure.io/fedora-l10n/tickets[file a ticket].
 --
 
@@ -204,7 +206,7 @@ Be assured that you will be able to translate the content of a template (text wh
 
 Let a text of the first numbered indent from the verification modal dialog (see fig. 6 below) which can be opened from a download page of the website serve us as an example:
 
-`Download the checksum file and signature into the same directory as the image you downloaded.`
+\&#96;Download the checksum file and signature into the same directory as the image you downloaded.\&#96;
 
 .Example of curly brackets translation - original
 image::Website_translation_curlybrackets_example_en.png[]
@@ -212,30 +214,30 @@ image::Website_translation_curlybrackets_example_en.png[]
 This sentence is a combination of an ordinary text and two web links - _checksum file_ and _signature_. For the purpose of its correct translation, you are supposed to translate three translation strings.
 
 .string 1
-....
+\&#8230;.
 Download the {checksum_file} and {signature} into the same directory as the image you downloaded.
-....
+\&#8230;.
 
-In this string you translate everything except `&#123;checksum_file&#125;` and `&#123;signature&#125;`, which should be retained unchanged (as these 'words' are actually the names of templates).
-They can be placed anywhere in your translation sentence, even their order of appereance, if appropriate, can be exchanged (`&#123;signature&#125;` might come first, `&#123;checksum_file&#125;` second).
+In this string you translate everything except \&#96;\&amp;\&#35;123;checksum_file\&amp;\&#35;125;\&#96; and \&#96;\&amp;\&#35;123;signature\&amp;\&#35;125;\&#96;, which should be retained unchanged (as these 'words' are actually the names of templates).
+They can be placed anywhere in your translation sentence, even their order of appereance, if appropriate, can be exchanged (\&#96;\&amp;\&#35;123;signature\&amp;\&#35;125;\&#96; might come first, \&#96;\&amp;\&#35;123;checksum_file\&amp;\&#35;125;\&#96; second).
 
 .string 2 and 3
-....
+\&#8230;.
 cheksum file
 signature
-....
+\&#8230;.
 
 How you translate these two strings, they will appear exactly in the sentence after the website is built.
 The following table shows an example of translation of the three strings to the Czech language:
 
 .Example comparison of string translations
-[cols="1,3,3,3"]
+[cols='1,3,3,3']
 |===
 | |English (original) |Czech (translated) |String key
 
 |string 1
-|Download the &#123;checksum_file&#125; and &#123;signature&#125; into the same directory as the image you downloaded.
-|Stáhněte si &#123;checksum_file&#125; a &#123;signature&#125; do stejného adresáře, kam jste stáhli obraz.
+|Download the \&amp;\&#35;123;checksum_file\&amp;\&#35;125; and \&amp;\&#35;123;signature\&amp;\&#35;125; into the same directory as the image you downloaded.
+|Stáhněte si \&amp;\&#35;123;checksum_file\&amp;\&#35;125; a \&amp;\&#35;123;signature\&amp;\&#35;125; do stejného adresáře, kam jste stáhli obraz.
 |download_the_checksum_and_signature
 
 |string 2
@@ -249,27 +251,29 @@ The following table shows an example of translation of the three strings to the 
 |signature
 |===
 
-NOTE: Keys of both string 2 and 3 - `checksum file` and `signature` - correspond with the templates' names.
+NOTE: Keys of both string 2 and 3 - \&#96;checksum file\&#96; and \&#96;signature\&#96; - correspond with the templates' names.
 
-Strings 2 and 3 substitute the templates `&#123;checksum_file&#125;` and `&#123;signature&#125;` in the string 1. So these three strings  will be combined together into the resulting sentence. Moreover, the translated version works the same, as can be seen on the below image.
+Strings 2 and 3 substitute the templates \&#96;\&amp;\&#35;123;checksum_file\&amp;\&#35;125;\&#96; and \&#96;\&amp;\&#35;123;signature\&amp;\&#35;125;\&#96; in the string 1. So these three strings  will be combined together into the resulting sentence. Moreover, the translated version works the same, as can be seen on the below image.
 
 .Example of curly brackets translation - translated
 image::Website_translation_curlybrackets_example_cs.png[]
 
 If templates and the text interpolation were not used, it would be needed to translate five translation strings to build the sentence:
 
-....
+\&#8230;.
 1. Download the
 2. checksum file
 3. and
 4. signature
 5. into the same directory as the image you downloaded.
-....
+\&#8230;.
 
 Imagine the strings in Weblate were not placed any near each other, then the text context for successful translation would be very limited, if not lost completely.
 
 CAUTION: If you attempted to translate the template names (curly brackets) in string 1 directly, the template substitution and consequently text/translation interpolation on the website would be broken.
 --
+
+
 
 = What Is Transtats?
 Fedora Localization Team
@@ -333,6 +337,8 @@ image:coverage-report.png[]
 Transtats exposes an array of REST end points. See https://transtats.fedoraproject.org/api-docs/
 
 For further information, please visit https://docs.transtats.org[Transtats Documentation].
+
+
 :experimental:
 
 = Documentation Translation Workflow
@@ -350,7 +356,7 @@ The localization process of the documentation works in three steps:
 - Translators translate these POT files and produce PO files.
 - We consume these PO files to construct translated sources, and finally to build the translated website.
 
-Step 1 and 3 is handled by the <<_core_scripts, localization pipeline scripts>>.
+Step 1 and 3 is handled by the \&lt;\&lt;_core_scripts, localization pipeline scripts\&gt;\&gt;.
 Step 2 take place in Weblate.
 
 === Core scripts
@@ -377,38 +383,38 @@ This is also valid for translations, moving components around should not change 
 That's why we need to organize the PO and POT wiles not according to repositories, but according to the components, modules, and versions.
 
 .Standard Antora repository structure
-[listing#ex-standard-dirs-root]
+[listing\&#35;ex-standard-dirs-root]
 ----
-📒 repository <.>
-📄 antora.yml <.>
-📂 modules <.>
-📂 ROOT <.>
-📁 attachments <.>
-📁 examples <.>
-📁 images <.>
-📁 pages <.>
-📁 partials <.>
-📄 nav.adoc <.>
-📂 named-module <.>
+📒 repository \&lt;.\&gt;
+📄 antora.yml \&lt;.\&gt;
+📂 modules \&lt;.\&gt;
+📂 ROOT \&lt;.\&gt;
+📁 attachments \&lt;.\&gt;
+📁 examples \&lt;.\&gt;
+📁 images \&lt;.\&gt;
+📁 pages \&lt;.\&gt;
+📁 partials \&lt;.\&gt;
+📄 nav.adoc \&lt;.\&gt;
+📂 named-module \&lt;.\&gt;
 📁 pages
 📄 nav.adoc
-📁 packages <.>
+📁 packages \&lt;.\&gt;
 ----
-<.> The repository name has no influence on the documentation & translation output.
-By default, Antora assumes the documentation content source is at the root of a repository unless the `start_path` or `start_paths` is defined in the link:https://gitlab.com/fedora/docs/docs-website/docs-fp-o/-/blob/prod/site.yml[Fedora Doc's playbook].
-<.> A component version descriptor file, named [.path]_antora.yml_, is required at each content source root.
-<.> Required directory named [.path]_modules_.
+\&lt;.\&gt; The repository name has no influence on the documentation \&amp; translation output.
+By default, Antora assumes the documentation content source is at the root of a repository unless the \&#96;start_path\&#96; or \&#96;start_paths\&#96; is defined in the link:https://gitlab.com/fedora/docs/docs-website/docs-fp-o/-/blob/prod/site.yml[Fedora Doc's playbook].
+\&lt;.\&gt; A component version descriptor file, named [.path]_antora.yml_, is required at each content source root.
+\&lt;.\&gt; Required directory named [.path]_modules_.
 A [.path]_modules_ directory must contain, at a minimum, either a _ROOT_ module directory or a named module directory.
-<.> Optional _ROOT_ module directory.
+\&lt;.\&gt; Optional _ROOT_ module directory.
 A module directory must contain at least one family directory.
-<.> Optional _attachments_ family directory.
-<.> Optional _examples_ family directory.
-<.> Optional _images_ family directory.
-<.> Optional _pages_ family directory.
-<.> Optional _partials_ family directory.
-<.> Optional navigation file named [.path]_nav.adoc_.
-<.> Optional named module directory.
-<.> Antora won't process the files in this directory because it's located outside the [.path]_modules_ directory.
+\&lt;.\&gt; Optional _attachments_ family directory.
+\&lt;.\&gt; Optional _examples_ family directory.
+\&lt;.\&gt; Optional _images_ family directory.
+\&lt;.\&gt; Optional _pages_ family directory.
+\&lt;.\&gt; Optional _partials_ family directory.
+\&lt;.\&gt; Optional navigation file named [.path]_nav.adoc_.
+\&lt;.\&gt; Optional named module directory.
+\&lt;.\&gt; Antora won't process the files in this directory because it's located outside the [.path]_modules_ directory.
 
 === Structure description
 
@@ -416,22 +422,22 @@ Translations are stored in dedicated repositories in the link:https://pagure.io/
 Each repository uses the following structure:
 
 .Standard translation repository structure
-[listing#ex-translation-dirs-root]
+[listing\&#35;ex-translation-dirs-root]
 ----
-📒 component-module <.>
-📂 pot <.>
-📁 version <.>
+📒 component-module \&lt;.\&gt;
+📂 pot \&lt;.\&gt;
+📁 version \&lt;.\&gt;
 📄 page.pot
-📁 po <.>
-📂 language-code <.>
+📁 po \&lt;.\&gt;
+📂 language-code \&lt;.\&gt;
 📁 version
 📄 page.po
 ----
-<.> The repository name is _<component_name>-<module_name>_, or just _<component_name>_ for the _ROOT_ module.
-<.> _pot_ directory contain the source translation files used to start new translations.
-<.> The version directory is named from the _version_ key in the component _antora.yml_. If not defined, it will be named _master_.
-<.> _po_ directory contain translations that come directly from Weblate.
-<.> The language-code directory is named using codes as defined by ISO 639-1, ISO 639-2 or ISO 639-3 when required. (ie.: _de_, _pt_BR_ or _zh_Hans_).
+\&lt;.\&gt; The repository name is _\&lt;component_name\&gt;-\&lt;module_name\&gt;_, or just _\&lt;component_name\&gt;_ for the _ROOT_ module.
+\&lt;.\&gt; _pot_ directory contain the source translation files used to start new translations.
+\&lt;.\&gt; The version directory is named from the _version_ key in the component _antora.yml_. If not defined, it will be named _master_.
+\&lt;.\&gt; _po_ directory contain translations that come directly from Weblate.
+\&lt;.\&gt; The language-code directory is named using codes as defined by ISO 639-1, ISO 639-2 or ISO 639-3 when required. (ie.: _de_, _pt_BR_ or _zh_Hans_).
 
 CAUTION: Renaming components or modules results in the loss of translations for that component and/or module.
 
@@ -440,22 +446,24 @@ IMPORTANT: While the content of those repositories is automatically generated by
 === Repository creation
 
 . Log in https://pagure.io and, in the top menu, click on: menu:Create[New project].
-- Project name: *_<component_name>-<module_name>_* or *_<component_name>_* if _ROOT_ module. +
-- Description: *translation of _<documentation_repository_url>_*.
-- Project Namespace: *fedora-docs-l10n*.
-- Select "*Create README*".
+- Project name: \&#42;_\&lt;component_name\&gt;-\&lt;module_name\&gt;_\&#42; or \&#42;_\&lt;component_name\&gt;_\&#42; if _ROOT_ module. +
+- Description: \&#42;translation of _\&lt;documentation_repository_url\&gt;_\&#42;.
+- Project Namespace: \&#42;fedora-docs-l10n\&#42;.
+- Select '\&#42;Create README\&#42;'.
 . In the new repository, go in menu:Settings[Project Options]: +
 In the Web-hooks field, add: https://translate.fedoraproject.org/hooks/pagure/, then click btn:[Update]
-. In menu:Settings[Users & Groups]: +
-Click btn:[add group], select the *fedora-docs-l10n* group, choose *commit* in the second list, then click btn:[Add].
-. In menu:Settings[Hooks > Fedmsg]: +
-Check "*Active*", then click btn:[Update].
+. In menu:Settings[Users \&amp; Groups]: +
+Click btn:[add group], select the \&#42;fedora-docs-l10n\&#42; group, choose \&#42;commit\&#42; in the second list, then click btn:[Add].
+. In menu:Settings[Hooks \&gt; Fedmsg]: +
+Check '\&#42;Active\&#42;', then click btn:[Update].
 
 == Weblate project
 Documentation related projects are prefixed with _fedora-docs-l10n_.
 
 === Project creation
 TBD
+
+
 
 // hosting.adoc? - is there a better file name for this page, will be part of URL?
 
@@ -485,14 +493,14 @@ Examples of free and open source projects which can be found on Fedora Weblate t
 
 === Considerations to upstream projects
 
-*Any free and open source software project is welcome to use this platform.*
+\&#42;Any free and open source software project is welcome to use this platform.\&#42;
 Not only is it in line with the Fedora Project's vision of a world where everyone benefits from free and open source software built by inclusive, welcoming, and open-minded communities, but also we considered there is more motivation behind this approach, such as:
 
-* To provide a support to any project sharing the *same xref:project:ROOT:index.adoc[values]* as the Fedora Project
-* To improve upstream i18n support
-* A potential source of growth in the Fedora Community itself
+\&#42; To provide a support to any project sharing the \&#42;same xref:project:ROOT:index.adoc[values]\&#42; as the Fedora Project
+\&#42; To improve upstream i18n support
+\&#42; A potential source of growth in the Fedora Community itself
 
-As the Fedora l10n Team, we believe we are enough _"mature and consistent with our values to be ready to welcome projects which have different technical choices from those the Fedora implements"_ (Jean-Baptiste Holcroft, a member of the Fedora L10N Team, 2020).
+As the Fedora l10n Team, we believe we are enough _'mature and consistent with our values to be ready to welcome projects which have different technical choices from those the Fedora implements'_ (Jean-Baptiste Holcroft, a member of the Fedora L10N Team, 2020).
 
 
 ////
@@ -503,14 +511,14 @@ What makes us different with https://hosted.weblate.org?
 
 We are a structured community sharing open-source values with
 experienced translators
-* Structured community: we have language teams https://fedoraproject.org/wiki/L10N_Teams and a global {TRANSML}[translator
+\&#42; Structured community: we have language teams https://fedoraproject.org/wiki/L10N_Teams and a global {TRANSML}[translator
 mailing list]
-* we have open-source values: https://docs.fedoraproject.org/en-US/project/#_freedom
+\&#42; we have open-source values: https://docs.fedoraproject.org/en-US/project/\&#35;_freedom
 
 Rule examples:
-* announce translation readiness to translators one week before release?
-* include translators in credits
-* allow translation of website and man-pages
+\&#42; announce translation readiness to translators one week before release?
+\&#42; include translators in credits
+\&#42; allow translation of website and man-pages
 ////
 
 
@@ -518,9 +526,9 @@ Rule examples:
 
 In spite of the effort to be open and inclusive as much as possible, some associated concerns has led us to enforce it is not possible to create a translation project in the platform by everyone:
 
-* A translation of an (open source) project has to be ensured - _not what an individual has decided to translate._
-* A project does not have to learn the weblate internals
-* Configuring Weblate is not so obvious - _preferable is to do the first configuration for a project by us to reduce e.g. the migration costs._
+\&#42; A translation of an (open source) project has to be ensured - _not what an individual has decided to translate._
+\&#42; A project does not have to learn the weblate internals
+\&#42; Configuring Weblate is not so obvious - _preferable is to do the first configuration for a project by us to reduce e.g. the migration costs._
 
 In order to request an establishment of a new translation project in {weblate}[Weblate], open a link:https://pagure.io/fedora-l10n/tickets[ticket].
 
@@ -531,7 +539,7 @@ In order to request an establishment of a new translation project in {weblate}[W
 | Website: | _https://github.com/debbuild/debbuild_ |
 | Repository: | _https://github.com/debbuild/debbuild_ |
 | Name of the development branch: |   |
-| Filemask: | _po/*_ |
+| Filemask: | _po/\&#42;_ |
 | Username: | _ngompa_ |
 | Optional: ||
 | Any announcement/warning you would like to display to the translators? (it will be displayed in Weblate): ||
@@ -563,7 +571,7 @@ Weblate provides different means to recieve and send changes between Weblate and
 But what we have learned from helping to set various projects:
 
 // webhooks
-Do not forget to set, if appropriate, a https://docs.weblate.org/en/latest/api.html#notification-hooks[webhook] in the project options in order to automatically receive changes from your VCS, such as
+Do not forget to set, if appropriate, a https://docs.weblate.org/en/latest/api.html\&#35;notification-hooks[webhook] in the project options in order to automatically receive changes from your VCS, such as
 
 ----
 https://translate.fedoraproject.org/hooks/pagure  //for Pagure
@@ -572,16 +580,16 @@ https://translate.fedoraproject.org/hooks/github  //for GitHub
 ----
 
 // repository push URL
-Weblate is able to https://docs.weblate.org/en/latest/admin/continuous.html#pushing-changes-from-weblate[push translations] to your repository by setting 'Repository push URL' option of a component configuration.
+Weblate is able to https://docs.weblate.org/en/latest/admin/continuous.html\&#35;pushing-changes-from-weblate[push translations] to your repository by setting 'Repository push URL' option of a component configuration.
 For GitHub there is https://github.com/weblate[Weblate user] which should be given a commit access to the repository.
 The same applies for GitLab.
 For Pagure there is https://pagure.io/user/weblatebot[weblatebot user].
 
 // pleaceholders flag
 Weblate provides a wide range of quality checks on strings.
-A `placeholders` flag can be set to add a quality check on texts from source string that must not be missing in the translation.
+A \&#96;placeholders\&#96; flag can be set to add a quality check on texts from source string that must not be missing in the translation.
 If missing, a warning will pop up to the translator.
-Besides being extracted from the translation file, placeholders can be added manually by project administrators on a *per-component* or *per-string* basis, but not project-wide.
+Besides being extracted from the translation file, placeholders can be added manually by project administrators on a \&#42;per-component\&#42; or \&#42;per-string\&#42; basis, but not project-wide.
 
 To set placeholders for a component:
 
@@ -589,31 +597,33 @@ To set placeholders for a component:
 . Use the menu menu:Manage[Settings]
 . On the menu:Settings[] page, go to btn:[Translation] tab
 . Scroll until you see btn:[Translation flags] field
-. Write the `placeholders` flag expression in there
+. Write the \&#96;placeholders\&#96; flag expression in there
 +
 --
 ====
-For example: `placeholders:{}:{0}:{1}:{2}`
+For example: \&#96;placeholders:{}:{0}:{1}:{2}\&#96;
 ====
 
-Such placeholders might be good for whole component as these terms might come up very often, like in a translation string _Failed to cleanup repository cache in path "{0}": {1}_.
+Such placeholders might be good for whole component as these terms might come up very often, like in a translation string _Failed to cleanup repository cache in path '{0}': {1}_.
 --
 
 To set a placeholders for a specific string (which will override its component's placeholders):
 
 . When editing a string, go to the right-side sidebar and find btn:[Flags] item
 . Click on the pencil icon to edit the flags
-. In the btn:[Translation flags] field, write the `placeholders` flag expression in there
+. In the btn:[Translation flags] field, write the \&#96;placeholders\&#96; flag expression in there
 +
 --
 ====
-For example: `placeholders:--alldeps:--resolve`
+For example: \&#96;placeholders:--alldeps:--resolve\&#96;
 ====
 
-These command-line options might be very good per-string placeholders if there isn't much of their occurence in the given component, like in a translation string _Option "--alldeps" should be used with "--resolve"_.
+These command-line options might be very good per-string placeholders if there isn't much of their occurence in the given component, like in a translation string _Option '--alldeps' should be used with '--resolve'_.
 --
 
 Further reference from Weblate software documentation:
 
-* https://docs.weblate.org/en/latest/user/checks.html#placeholders[Syntax on placeholders]
-* https://docs.weblate.org/en/latest/admin/checks.html#custom-checks[Customizing behavior using flags]
+\&#42; https://docs.weblate.org/en/latest/user/checks.html\&#35;placeholders[Syntax on placeholders]
+\&#42; https://docs.weblate.org/en/latest/admin/checks.html\&#35;custom-checks[Customizing behavior using flags]
+
+

@@ -12,15 +12,14 @@ and window managers.
 
 # Links {#_links}
 
-- <https://www.kde.org/> - Home of the KDE community
+&#42; <https://www.kde.org/> - Home of the KDE community &#42;
+<https://www.kde.org/plasma-desktop/> - The Plasma Desktop &#42;
+<https://userbase.kde.org/Tutorials> - KDE-related tutorials &#42;
+<https://community.kde.org/Main_Page> - KDE Community Wiki
 
-- <https://www.kde.org/plasma-desktop/> - The Plasma Desktop
+Category:KDE
 
-- <https://userbase.kde.org/Tutorials> - KDE-related tutorials
-
-- <https://community.kde.org/Main_Page> - KDE Community Wiki
-
-Category:KDE = Getting KDE on Fedora
+# Getting KDE on Fedora {#_getting_kde_on_fedora}
 
 Get the KDE Plasma Desktop Edition
 [here](https://fedoraproject.org/kde/). Alternatively, [Fedora
@@ -39,29 +38,31 @@ Otherwise, if you have an existing installation of Fedora Workstation,
 any other Fedora spin, or a non-Kinoite variant of Fedora Atomic Desktop
 and wish to keep that installation, follow the instructions below.
 
-# Installing KDE Plasma on non-KDE variants of Fedora {#installing_kde_plasma_on_non_kde_variants_of_fedora}
+## Installing KDE Plasma on non-KDE variants of Fedora {#installing_kde_plasma_on_non_kde_variants_of_fedora}
 
-## On regular Fedora {#on_regular_fedora}
+### On regular Fedora {#on_regular_fedora}
 
 To install Plasma using the command line with dnf, execute the following
-with `sudo` or as root:
+with &#96;+sudo+&#96; or as root:
 
-`dnf install @kde-desktop-environment`
+&#96;+dnf install @kde-desktop-environment+&#96;
 
-Or to install the full package set with the `groupinstall` command:
+Or to install the full package set with the &#96;+groupinstall+&#96;
+command:
 
-`dnf groupinstall "KDE Plasma Workspaces"`
+&#96;+dnf groupinstall \'KDE Plasma Workspaces\'+&#96;
 
-## On Fedora Atomic {#on_fedora_atomic}
+### On Fedora Atomic {#on_fedora_atomic}
 
 You can rebase any existing Fedora Atomic Desktop (Silverblue, Atomic
 Sway, etc) installation to Kinoite with rpm-ostree by simply running
 
-`rpm-ostree rebase fedora:fedora/VersionNumber/x86_64/kinoite`
+&#96;+rpm-ostree rebase fedora:fedora/VersionNumber/x86_64/kinoite+&#96;
 
 Replace VersionNumber with the number of the current Fedora release
 you're running. (For example, if you're on Fedora Silverblue 40, you
-would run `rpm-ostree rebase fedora:fedora/40/x86_64/kinoite`.)
+would run &#96;+rpm-ostree rebase
+fedora:fedora/40/x86_64/kinoite+&#96;.)
 
 :::: note
 ::: title
@@ -71,7 +72,7 @@ Rebasing to Kinoite gives you a complete setup, with SDDM pre-configured
 and all. All you need to do is simply reboot after rebasing.
 ::::
 
-# Logging into KDE Plasma {#logging_into_kde_plasma}
+## Logging into KDE Plasma {#logging_into_kde_plasma}
 
 After installing the packages, either log out or reboot back to your
 login screen.
@@ -83,7 +84,7 @@ If you're using LightDM (default on the Fedora Cinnamon, Budgie, XFCE,
 LXDE and MATE-Compiz spins), select the button next to your username and
 select Plasma.
 
-# Switching the display manager to SDDM {#switching_the_display_manager_to_sddm}
+## Switching the display manager to SDDM {#switching_the_display_manager_to_sddm}
 
 You may want to switch your existing display manager (also known as a
 login manager) to SDDM, recommended by the Plasma team (but not
@@ -91,7 +92,7 @@ developed by the KDE community). This has little impact on the end-user
 experience and isn't necessary in order to use Plasma.
 
 To enable SDDM / replace your existing display manager, run the
-`systemctl enable --force sddm.service` command.
+&#96;+systemctl enable \--force sddm.service+&#96; command.
 
 # Fedora KDE Plasma Mobile {#kde_plasma_mobile}
 
@@ -117,30 +118,27 @@ replace later please!)</figcaption>
 
 # Installation {#_installation}
 
-- dnf group install kde-mobile -y
-
-- (Optional: tablet) dnf group install kde-mobile-apps -y
-
-- (Optional: phone) dnf group install kde-mobile-apps \--with-optional
-  -y
-
-- (Optional) dnf install fedora-release-kde fedora-release-identity-kde
-  \--allowerasing -y
+&#42; dnf group install kde-mobile -y &#42; (Optional: tablet) dnf group
+install kde-mobile-apps -y &#42; (Optional: phone) dnf group install
+kde-mobile-apps \--with-optional -y &#42; (Optional) dnf install
+fedora-release-kde fedora-release-identity-kde \--allowerasing -y
 
 ## Enable Graphical Mode {#enable_graphical_mode}
 
 If the machine you started with did not boot into graphical mode, set it
 so it does
 
-- systemctl set-default graphical.target
+&#42; systemctl set-default graphical.target
 
 ## Set sddm as default {#set_sddm_as_default}
 
-- systemctl enable sddm -f
+&#42; systemctl enable sddm -f
 
 ## Reboot {#_reboot}
 
-- reboot = Installing Applications and Updates with Discover
+&#42; reboot
+
+# Installing Applications and Updates with Discover {#_installing_applications_and_updates_with_discover}
 
 In KDE Plasma desktop, Discover helps you explore, install and update
 applications and system extensions.
@@ -218,13 +216,16 @@ need to be installed elsewhere.
 ## With a GUI {#_with_a_gui}
 
 The application
-[**dnfdragora**](appstream://org.mageia.dnfdragora.desktop) provides a
-graphical interface to install packages from the Fedora repositories.
+[&#42;dnfdragora&#42;](appstream://org.mageia.dnfdragora.desktop)
+provides a graphical interface to install packages from the Fedora
+repositories.
 
 ## With the terminal {#_with_the_terminal}
 
-see <https://docs.fedoraproject.org/en-US/quick-docs/dnf/#sect-usage> =
-Offline Updates
+see
+<https://docs.fedoraproject.org/en-US/quick-docs/dnf/&#35;sect-usage>
+
+# Offline Updates {#_offline_updates}
 
 Offline updates are updates which are installed during a reboot or
 shutdown. On Fedora KDE, this is the default for system updates

@@ -1,0 +1,27 @@
+
+
+
+= Fedora Accessibility (a11y) Working Group
+
+[[vision]]
+== Vision
+
+[quote]
+____
+Fedora Linux is the most comfortable desktop operating system to use for accessibility needs.
+____
+
+[[mission]]
+== Mission
+
+[quote]
+____
+The Fedora Accessibility Working Group empowers Fedora to be the accessible distribution with a focus on four pillars:
+
+\&#42; Create a designated place where people can raise issues about assistive technologies.
+\&#42; Bring together stakeholders from different Fedora teams and different communities to solve accessibility issues.
+\&#42; Educate accessibility developers about operating system requirements.
+\&#42; Raise awareness about accessibility to the wider community.
+____
+
+

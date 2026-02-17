@@ -16,11 +16,12 @@ Discussion regarding Fedora Badges takes place on
 account that you setup earlier.
 
 You can quickly filter for discussions concerning Fedor Badges by using
-the [#badges-team](https://discussion.fedoraproject.org/tag/badges-team)
+the
+[&#35;badges-team](https://discussion.fedoraproject.org/tag/badges-team)
 tag.
 
-News, updates, and discussions are shared on Discourse. It is a **key
-part** to how we communicate. It receives low to medium traffic.
+News, updates, and discussions are shared on Discourse. It is a &#42;key
+part&#42; to how we communicate. It receives low to medium traffic.
 
 ## Post a self-introduction {#introduction}
 
@@ -30,21 +31,13 @@ on Discourse and tell us a little about yourself.
 
 Not sure what to say? Answer these questions to start:
 
-- Why are you interested in contributing to Fedora?
-
-- Why are you interested in contributing to Badges?
-
-- If you're involved with other things in Fedora, what are/were you
-  working on?
-
-- Do you have any experience in open source or online communities? If
-  so, what?
-
-- What parts of the Badges project are interesting to you?
-
-- Do you have any questions for us? How can we help *you* get started?
-
-- Add the `#badges-team` tag to your post
+&#42; Why are you interested in contributing to Fedora? &#42; Why are
+you interested in contributing to Badges? &#42; If you're involved with
+other things in Fedora, what are/were you working on? &#42; Do you have
+any experience in open source or online communities? If so, what? &#42;
+What parts of the Badges project are interesting to you? &#42; Do you
+have any questions for us? How can we help *you* get started? &#42; Add
+the &#96;&#35;badges-team&#96; tag to your post
 
 ## Join our IRC/Matrix chat {#irc-matrix}
 
@@ -63,11 +56,12 @@ consider [using Element](https://element.io/get-started) as your IRC
 client.
 
 The IRC channel is also
-[bridged](https://matrix.to/#/#badges:fedoraproject.org) to Matrix.
+[bridged](https://matrix.to/&#35;/&#35;badges:fedoraproject.org) to
+Matrix.
 
 ## Register on Community Blog {#community-blog}
 
-**Note:** *This section appears to be deprecated and is subject to
+&#42;Note:&#42; *This section appears to be deprecated and is subject to
 removal.*
 
 The Fedora {COMMBLOG}\[Community Blog\] is an important place for
@@ -90,11 +84,7 @@ info.
 
 There are three ways to contribute to Fedora Badges:
 
-- As a designer
-
-- As a developer
-
-- As a system administrator
+&#42; As a designer &#42; As a developer &#42; As a system administrator
 
 Before you begin any of the following tasks, [introduce
 yourself](https://discussion.fedoraproject.org/t/introduce-yourself/)!
@@ -113,7 +103,7 @@ get started with badge design, follow these steps:
     (provided in documentation)
 
 3.  Review Badge tickets tagged as [AW:
-    needed](https://pagure.io/fedora-badges/issues?status=Open&tags=AW%3A+needed&close_status=)
+    needed](https://pagure.io/fedora-badges/issues?status=Open&amp;tags=AW%3A+needed&amp;close_status=)
 
 4.  If nobody is assigned to the issue, leave a comment that you want to
     work on the Badge artwork
@@ -152,7 +142,7 @@ If anything is not working as expected please open an
 have a fix, submit a PR.
 
 Alternatively, have a look at issues tagged [good first
-issue](https://pagure.io/fedora-badges/issues?status=Open&tags=good+first+issue&close_status=).
+issue](https://pagure.io/fedora-badges/issues?status=Open&amp;tags=good+first+issue&amp;close_status=).
 If you want to work on one of these, leave a comment, so someone from
 the team can assign it to you. Help is always welcome.
 
@@ -161,11 +151,8 @@ the team can assign it to you. Help is always welcome.
 This page explains how to design and create new Fedora Badges. This
 guide walks through the following:
 
-- Review guidelines for creating a Badge
-
-- Set up Inkscape for Fedora Badges
-
-- Get badge template files
+&#42; Review guidelines for creating a Badge &#42; Set up Inkscape for
+Fedora Badges &#42; Get badge template files
 
 ## Review Badges style guide {#style-guide}
 
@@ -201,13 +188,11 @@ palettes, common colors will appear in the color toolbar of Inkscape.
 These palettes may work with other design programs, but they are not
 officially supported.
 
-- [Basic color
-  palette]({attachmentsdir}/palettes/badges_fedora_palette.gpl):
-  Required
-
-- [Extended color
-  palette]({attachmentsdir}/palettes/badges_extended_palette.gpl):
-  Optional (gives you extra choices to work with)
+&#42; [Basic color
+palette]({attachmentsdir}/palettes/badges_fedora_palette.gpl): Required
+&#42; [Extended color
+palette]({attachmentsdir}/palettes/badges_extended_palette.gpl):
+Optional (gives you extra choices to work with)
 
 To install, move the downloaded palette files to
 \~/.config/inkscape/palettes To access the newly installed palettes, in
@@ -221,7 +206,7 @@ used across the Fedora community. Install the typeface so it is
 available in your design program. *Note*: If you use Fedora, the font
 may already be installed.
 
-- [Comfortaa typeface]({attachmentsdir}/typeface/comfortaa.zip)
+&#42; [Comfortaa typeface]({attachmentsdir}/typeface/comfortaa.zip)
 
 ## Download Badge template assets {#badge-template-assets}
 
@@ -236,22 +221,17 @@ Guide]({attachmentsdir}/fedora-badges-style-guide.pdf)). Not sure what
 template to use? Ask for help in a Fedora Badges ticket and a designer
 will help you choose.
 
-- [Community
-  template]({attachmentsdir}/templates/community-template.svg)
-
-- [Content
-  template]({attachmentsdir}/templates/content-learning-template.svg)
-
-- [Development
-  template]({attachmentsdir}/templates/development-template.svg)
-
-- [Events template]({attachmentsdir}/templates/events-template.svg)
-
-- [Miscellaneous
-  template]({attachmentsdir}/templates/miscellaneous-template.svg)
-
-- [Quality Assurance
-  template]({attachmentsdir}/templates/quality-template.svg)
+&#42; [Community
+template]({attachmentsdir}/templates/community-template.svg) &#42;
+[Content
+template]({attachmentsdir}/templates/content-learning-template.svg)
+&#42; [Development
+template]({attachmentsdir}/templates/development-template.svg) &#42;
+[Events template]({attachmentsdir}/templates/events-template.svg) &#42;
+[Miscellaneous
+template]({attachmentsdir}/templates/miscellaneous-template.svg) &#42;
+[Quality Assurance
+template]({attachmentsdir}/templates/quality-template.svg)
 
 ### Content templates
 
@@ -259,17 +239,12 @@ Content templates are common patterns or content used across many
 badges. The Badges team encourages using these templates where possible.
 It helps maintain a consistent theme across the Badges site.
 
-- [Backgrounds template]({attachmentsdir}/content/backgrounds.svg):
-  Different backgrounds to use for badge designs
-
-- [Misc. graphics]({attachmentsdir}/content/badge_graphics.svg): Random
-  icons and patterns
-
-- [Badger templates]({attachmentsdir}/content/badgers.svg): Example
-  badgers to reuse
-
-- [Panda templates]({attachmentsdir}/content/pandas.svg): Example pandas
-  to reuse
+&#42; [Backgrounds template]({attachmentsdir}/content/backgrounds.svg):
+Different backgrounds to use for badge designs &#42; [Misc.
+graphics]({attachmentsdir}/content/badge_graphics.svg): Random icons and
+patterns &#42; [Badger templates]({attachmentsdir}/content/badgers.svg):
+Example badgers to reuse &#42; [Panda
+templates]({attachmentsdir}/content/pandas.svg): Example pandas to reuse
 
 ### Tutorial content
 
@@ -278,26 +253,22 @@ a Fedora Badge. Tutorial content was created for other badges, but can
 be reused in future designs. If you want to try out a new design, try
 using these to create your ideas!
 
-- [Bicycle]({attachmentsdir}/tutorial-content/bike.svg) (with no rider)
-
-- [Package hatching from
-  egg]({attachmentsdir}/tutorial-content/hatchling.svg)
-
-- [Package icon]({attachmentsdir}/tutorial-content/package.svg)
-
-- [Full-sized panda]({attachmentsdir}/tutorial-content/panda.svg) (from
-  panda riding bike)
+&#42; [Bicycle]({attachmentsdir}/tutorial-content/bike.svg) (with no
+rider) &#42; [Package hatching from
+egg]({attachmentsdir}/tutorial-content/hatchling.svg) &#42; [Package
+icon]({attachmentsdir}/tutorial-content/package.svg) &#42; [Full-sized
+panda]({attachmentsdir}/tutorial-content/panda.svg) (from panda riding
+bike)
 
 ### Further reading
 
 More information about the way that Fedora badges are created, added to
 Pagure and distributed to the community are available.
 
-- [How to push Fedora Badges](:push-badges.xml)
+&#42; [How to push Fedora Badges](:push-badges.xml) &#42; [Fedbadges
+repository at Github](https://github.com/fedora-infra/fedbadges)
 
-- [Fedbadges repository at
-  Github](https://github.com/fedora-infra/fedbadges) = How to push
-  Fedora Badges :toc:
+# How to push Fedora Badges {#_how_to_push_fedora_badges}
 
 ## Architecture {#_architecture}
 
@@ -313,107 +284,101 @@ The front-end is a web application called
 [Tahrir](https://github.com/fedora-infra/tahrir). It mostly is just an
 interface for users to look at their badges. However, it also has an
 admin interface for manually adding new badges, awarding badges, and
-creating \"invitations\" (QR codes) for badges.
+creating \'invitations\' (QR codes) for badges.
 
 The badge-awarding back-end daemon,
 [fedbadges](https://github.com/fedora-infra/fedbadges), runs in
-OpenShift, in the `badges` project. The front-end runs in OpenShift as
-well.
+OpenShift, in the &#96;badges&#96; project. The front-end runs in
+OpenShift as well.
 
 ### Upstream documentation {#_upstream_documentation}
 
-- For a detailed description of how the fedbadges daemon works, see the
-  [fedbadges
-  README](https://github.com/fedora-infra/fedbadges/blob/develop/README.rst).
-
-- For a diagram of the interacting pieces in the Fedora Badges system,
-  see the [fedbadges
-  diagrams](https://github.com/fedora-infra/fedbadges/blob/develop/diagrams/).
+&#42; For a detailed description of how the fedbadges daemon works, see
+the [fedbadges
+README](https://github.com/fedora-infra/fedbadges/blob/develop/README.rst).
+&#42; For a diagram of the interacting pieces in the Fedora Badges
+system, see the [fedbadges
+diagrams](https://github.com/fedora-infra/fedbadges/blob/develop/diagrams/).
 
 ## Sysadmin process: How to push a Badge {#_sysadmin_process_how_to_push_a_badge}
 
 Pushing badges consists of two operations:
 
-1.  Push badge assets (`.png`, `.svg`, `.yaml`) to
-    [fedora-badges](https://pagure.io/fedora-badges) repository
+1.  Push badge assets (&#96;.png&#96;, &#96;.svg&#96;, &#96;.yaml&#96;)
+    to [fedora-badges](https://pagure.io/fedora-badges) repository
 
 2.  Add badge to
     [badges.fedoraproject.org](https://badges.fedoraproject.org/)
 
 Anyone with write permissions to
 [fedora-badges](https://pagure.io/fedora-badges) can push badges. Pull
-requests can also be used. Only members of the `sysadmin-badges` FAS
-group *and* [admins of the web interface](#add-tahrir-admins) can add
-badges.
+requests can also be used. Only members of the &#96;sysadmin-badges&#96;
+FAS group *and* [admins of the web interface](#add-tahrir-admins) can
+add badges.
 
-Badge artists and badge developers should push design assets (`png` and
-`svg` art) and rules (`yaml`) to the
+Badge artists and badge developers should push design assets
+(&#96;png&#96; and &#96;svg&#96; art) and rules (&#96;yaml&#96;) to the
 [fedora-badges](https://pagure.io/fedora-badges) repository.
 
 ### Preparing to create a badge {#_preparing_to_create_a_badge}
 
 Once a badge is approved by the Design Team and has the [ready to
-push](https://pagure.io/fedora-badges/issues?status=Open&tags=ready+to+push)
+push](https://pagure.io/fedora-badges/issues?status=Open&amp;tags=ready+to+push)
 tag, they are ready to be pushed. Follow this checklist to push a new
 badge:
 
-1.  Ensure artwork is **approved** by Design Team
+1.  Ensure artwork is &#42;approved&#42; by Design Team
 
 2.  Ensure name and description of badge are clear
 
-3.  Ensure one of these requirements is met:
-
-    - *Manually awarded badges*: What FAS accounts receive permissions
-      to award badge
-
-    - *Awarded via fedmsg rule*: YAML file with rules is present
+3.  Ensure one of these requirements is met: &#42;&#42; *Manually
+    awarded badges*: What FAS accounts receive permissions to award
+    badge &#42;&#42; *Awarded via fedmsg rule*: YAML file with rules is
+    present
 
 If you are confused or something is missing, comment on the issue and
-remove the **ready to push** tag.
+remove the &#42;ready to push&#42; tag.
 
 ### Add badge assets to Pagure {#_add_badge_assets_to_pagure}
 
-1.  Download artwork and rule file (if applicable):
+1.  Download artwork and rule file (if applicable): &#42;&#42;
+    Double-check the artwork is actually the final version from ticket
+    &#42;&#42; Open / view both art files to check they are not corrupt
+    (in the past, corrupt images were accidentally pushed)
 
-    - Double-check the artwork is actually the final version from ticket
-
-    - Open / view both art files to check they are not corrupt (in the
-      past, corrupt images were accidentally pushed)
-
-2.  Give both art and rule files the **same name**, place into
+2.  Give both art and rule files the &#42;same name&#42;, place into
     [pngs/](https://pagure.io/fedora-badges/blob/master/f/pngs),
     [svg/](https://pagure.io/fedora-badges/blob/master/f/svgs),
     [rules/](https://pagure.io/fedora-badges/blob/master/f/rules)
     directories
 
 3.  *On request only*: Generate a STL file for 3D-printing a badge:
-
-    - Change directories into `bin/` and run `export.sh`. This creates a
-      STL file for the badge and moves it to the correct place.
-
-    - Check the `README` file in `bin/` for more info about the script.
+    &#42;&#42; Change directories into &#96;bin/&#96; and run
+    &#96;export.sh&#96;. This creates a STL file for the badge and moves
+    it to the correct place. &#42;&#42; Check the &#96;README&#96; file
+    in &#96;bin/&#96; for more info about the script.
 
 4.  Commit all files and push to
     [fedora-badges](https://pagure.io/fedora-badges) (or make a PR)
 
 Make sure files have a reasonable name (e.g.
-`all-lowercase-dashes-only.png`). Some types of badges follow a naming
-convention, like FAS group membership badges (i.e. `fas-badge-name.png`)
-or Koji build badges (i.e. `koji-badge-name.png`). Follow past precedent
-where possible. Later, the file name is used for the file on the
-front-end server (e.g.
-`https://badges.fedoraproject.org/pngs/all-lowercase-dashes-only.png`).
+&#96;all-lowercase-dashes-only.png&#96;). Some types of badges follow a
+naming convention, like FAS group membership badges (i.e.
+&#96;fas-badge-name.png&#96;) or Koji build badges (i.e.
+&#96;koji-badge-name.png&#96;). Follow past precedent where possible.
+Later, the file name is used for the file on the front-end server (e.g.
+&#96;<https://badges.fedoraproject.org/pngs/all-lowercase-dashes-only.png&#96>;).
 
 ### Let the assets be pulled by the back-end server {#_let_the_assets_be_pulled_by_the_back_end_server}
 
-*Note*: All assets must be in the `master` branch of
+*Note*: All assets must be in the &#96;master&#96; branch of
 [fedora-badges](https://pagure.io/fedora-badges) before proceeding.
 
 The badges will be automatically pulled from the Pagure repository every
 15 minutes.
 
 Once finished, ensure badge is now publicly visible (i.e.
-`https://badges.fedoraproject.org/pngs/<name>.png`)
+&#96;<https://badges.fedoraproject.org/pngs/&lt;name&gt;.png&#96>;)
 
 ### Add automatically-awarded badges {#_add_automatically_awarded_badges}
 
@@ -440,7 +405,7 @@ information is entered correctly on first go, or else you have to write
 SQL statements to fix it later.
 
 Once the badge assets are pulled by the back-end, add the badge to the
-front-end, [Tahrir]{.title-ref}. The front-end is hosted at
+front-end, \[.title-ref\]&#35;Tahrir&#35;. The front-end is hosted at
 [badges.fedoraproject.org](https://badges.fedoraproject.org/). Follow
 these steps to add the badge in Tahrir.
 
@@ -452,7 +417,8 @@ these steps to add the badge in Tahrir.
 3.  Enter in all information as provided in the badge ticket (see [Badge
     metadata](#badge-metadata) below.)
 
-4.  Double-check all entered information is **correct and accurate**
+4.  Double-check all entered information is &#42;correct and
+    accurate&#42;
 
 5.  Click *Create badge* to create new badge
 
@@ -464,40 +430,30 @@ index](https://badges.fedoraproject.org/explore/badges).
 Manually-awarded badges require authorized users to issue a badge. You
 can do this at the bottom of the *Admin* interface, near *Create
 Authorizations*. Add the person to receive awarding privileges into the
-*Person Email* field. **This must be formatted as their
-fedoraproject.org email address** (e.g. FASuser \[at\] fedoraproject
+*Person Email* field. &#42;This must be formatted as their
+fedoraproject.org email address&#42; (e.g. FASuser \[at\] fedoraproject
 \[dot\] org). For badge name, use the slug (or badge name) from the URL
 of the badge (e.g. for
 [badges.fedoraproject.org/badge/commops-superstar](https://badges.fedoraproject.org/badge/commops-superstar),
-this is `commops-superstar`).
+this is &#96;commops-superstar&#96;).
 
 To add multiple users, repeat this process for each user.
 
 ### Badge metadata
 
-- **Name**: name of the badge -- this determines URL of badge, so
-  triple-check for typos
-
-- **Image**: full link to the PNG (e.g.
-  `https://badges.fedoraproject.org/pngs/all-lowercase-dashes-only.png`)
-
-- **Description**: badge description text (ensure there is *no* hanging
-  whitespace)
-
-- **Criteria**: link to the issue in
-  [fedora-badges](https://pagure.io/fedora-badges)
-
-- **Issuer**: keep the default
-
-- **Tags**: comma-delimited list of tags:
-
-  - **Review other similar badges to ensure tags are correct.** Some
-    tags are special and function as categories.
-
-  - **Follow past precedent** for tags. Avoid creating new tags if at
-    all possible.
-
-  - Removing tags *is not* easy. Adding them later *is* easy.
+&#42; &#42;Name&#42;: name of the badge -- this determines URL of badge,
+so triple-check for typos &#42; &#42;Image&#42;: full link to the PNG
+(e.g.
+&#96;<https://badges.fedoraproject.org/pngs/all-lowercase-dashes-only.png&#96>;)
+&#42; &#42;Description&#42;: badge description text (ensure there is
+*no* hanging whitespace) &#42; &#42;Criteria&#42;: link to the issue in
+[fedora-badges](https://pagure.io/fedora-badges) &#42; &#42;Issuer&#42;:
+keep the default &#42; &#42;Tags&#42;: comma-delimited list of tags:
+&#42;&#42; &#42;Review other similar badges to ensure tags are
+correct.&#42; Some tags are special and function as categories.
+&#42;&#42; &#42;Follow past precedent&#42; for tags. Avoid creating new
+tags if at all possible. &#42;&#42; Removing tags *is not* easy. Adding
+them later *is* easy.
 
 #### Close out the ticket {#_close_out_the_ticket}
 
@@ -508,40 +464,42 @@ index](https://badges.fedoraproject.org/explore/badges).
 
 Return to the Pagure issue for the badge. Post a link to the pushed
 badge. If you granted authorizations, list the FAS usernames you granted
-authorizations to. After commenting, closing the issue as **pushed**.
+authorizations to. After commenting, closing the issue as
+&#42;pushed&#42;.
 
 Congratulations, you just pushed your very own Fedora Badge!
 
 ## How to manually award a badge {#_how_to_manually_award_a_badge}
 
-To perform this, you must be in the `sysadmin-badges` FAS group.
+To perform this, you must be in the &#96;sysadmin-badges&#96; FAS group.
 
-There is a script installed on `badges-backend01` in
-`/usr/local/bin/award-badge`. It has help options that you can pull up
-with `award-badge -h`. It takes a required `--user FAS_USERNAME` and a
-required `--badge BADGE_ID` option. For example, the following
-invocation would award the \"Associate Editor\" badge to \"ralph\":
+There is a script installed on &#96;badges-backend01&#96; in
+&#96;/usr/local/bin/award-badge&#96;. It has help options that you can
+pull up with &#96;award-badge -h&#96;. It takes a required &#96;\--user
+FAS_USERNAME&#96; and a required &#96;\--badge BADGE_ID&#96; option. For
+example, the following invocation would award the \'Associate Editor\'
+badge to \'ralph\':
 
 ``` bash
 sudo /usr/local/bin/award-badge --user ralph --badge associate-editor
 ```
 
-The `BADGE_ID` for a badge can be found by visiting its page on the web
-UI. That badge can be found at
-`https://badges.fedoraproject.org/badge/associate-editor`.
+The &#96;BADGE_ID&#96; for a badge can be found by visiting its page on
+the web UI. That badge can be found at
+&#96;<https://badges.fedoraproject.org/badge/associate-editor&#96>;.
 
-The `award-badge` script and source code is managed by ansible.git. The
-source code is in
+The &#96;award-badge&#96; script and source code is managed by
+ansible.git. The source code is in
 [roles/badges/backend/files/award-badge](https://pagure.io/fedora-infra/ansible/blob/master/f/roles/badges/backend/files/award-badge).
 
 Often enough, there is need for a workflow to batch award a badge to a
 number of people. For instance, the *Keepin\' Fedora Beautiful* badge
 comes from a member of the Design Team posting a ticket with a list of
 FAS usernames (i.e.
-[fedora-badges#129](https://pagure.io/fedora-badges/issue/129)).
+[fedora-badges&#35;129](https://pagure.io/fedora-badges/issue/129)).
 
-For cases, like that you can `wget` the file with the list of FAS
-usernames on `badges-backend01` and run something like:
+For cases, like that you can &#96;wget&#96; the file with the list of
+FAS usernames on &#96;badges-backend01&#96; and run something like:
 
 ``` bash
 $ for i in $(cat keepingbeautiful-list ) ; do
@@ -552,9 +510,9 @@ done
 ## How to manually revoke a badge or authorization {#manually-revoke-badge}
 
 You may revoke badge or badge authorizations in a similar fashion to the
-`award-badges` script. You may chain the invocation of the
-`revoke-badge` or `revoke-authorization` script in the same manner as
-the `award-badges` script.
+&#96;award-badges&#96; script. You may chain the invocation of the
+&#96;revoke-badge&#96; or &#96;revoke-authorization&#96; script in the
+same manner as the &#96;award-badges&#96; script.
 
 :::: formalpara
 ::: title
@@ -579,23 +537,23 @@ sudo /usr/local/bin/revoke-authorization --user ralph --badge associate-editor
 ## How to add admins to Tahrir {#add-tahrir-admins}
 
 It would be nice if we could automatically grant admin access in the web
-interface to members of the `sysadmin-badges` FAS group. We currently do
-not have this feature and must maintain the list of web UI admins
-separately.
+interface to members of the &#96;sysadmin-badges&#96; FAS group. We
+currently do not have this feature and must maintain the list of web UI
+admins separately.
 
 The configuration file for the badges front-end web app is managed by
 ansible.git. The source code is in
 [roles/badges/frontend/templates/tahrir.ini](https://pagure.io/fedora-infra/ansible/blob/master/f/roles/badges/frontend/templates/tahrir.ini).
 
-In that file, find the `tahrir.admin` option. It is a comma-separated
-list of email addresses that, when logged in, should be granted rights
-to access the admin panels at
+In that file, find the &#96;tahrir.admin&#96; option. It is a
+comma-separated list of email addresses that, when logged in, should be
+granted rights to access the admin panels at
 [badges.fedoraproject.org](https://badges.fedoraproject.org/).
 
-To add a new admin, add their `FAS_USERNAME@fedoraproject.org` email to
-that line, commit, and push. Use Ansible to run the
-`openshift-apps/badges.yml` playbook to push the config change out to
-the web front-end nodes.
+To add a new admin, add their &#96;<FAS_USERNAME@fedoraproject.org>&#96;
+email to that line, commit, and push. Use Ansible to run the
+&#96;openshift-apps/badges.yml&#96; playbook to push the config change
+out to the web front-end nodes.
 
 ## How to create an invitation and QR code {#_how_to_create_an_invitation_and_qr_code}
 
@@ -618,24 +576,19 @@ the badge.
 
 2.  Click the *Admin* link in the UI
 
-3.  Under the *Invitations* section, add this information:
-
-    - **Creation Date**: Optional. It defaults to the current date.
-
-    - **Expiration Date**: Optional, but you probably want to specify
-      one. It defaults to 2 hours from the current time. For instance,
-      at the Flock 2013 conference, we set the expiration date at the
-      end of the conference. Anyone who tried to claim the badge with
-      the QR code after that time would be denied, with the message
-      *this invitation is expired*.
-
-    - **Badge ID**: \"ID\" of the badge you want to award. See the
-      [section above](#manually-revoke-badge) for how to find a badge
-      ID.
-
-    - **Person email**: Email of a person in the badges database. In our
-      case, use their Fedora email (e.g.
-      `FAS_USERNAME@fedoraproject.org`).
+3.  Under the *Invitations* section, add this information: &#42;&#42;
+    &#42;Creation Date&#42;: Optional. It defaults to the current date.
+    &#42;&#42; &#42;Expiration Date&#42;: Optional, but you probably
+    want to specify one. It defaults to 2 hours from the current time.
+    For instance, at the Flock 2013 conference, we set the expiration
+    date at the end of the conference. Anyone who tried to claim the
+    badge with the QR code after that time would be denied, with the
+    message *this invitation is expired*. &#42;&#42; &#42;Badge ID&#42;:
+    \'ID\' of the badge you want to award. See the [section
+    above](#manually-revoke-badge) for how to find a badge ID.
+    &#42;&#42; &#42;Person email&#42;: Email of a person in the badges
+    database. In our case, use their Fedora email (e.g.
+    &#96;<FAS_USERNAME@fedoraproject.org>&#96;).
 
 Now, the user you specified will have a link to the QR code and invite
 link on their profile page. They can take initiative to distribute and
@@ -643,33 +596,34 @@ share the badge as they wish.
 
 ## Useful scripts for manual work {#_useful_scripts_for_manual_work}
 
-See `ansible/roles/badges/backend/files/` for the motherload. These all
-get deployed to `/usr/local/bin/` on `badges-backend01` where you can
-login to execute them.
+See &#96;ansible/roles/badges/backend/files/&#96; for the motherload.
+These all get deployed to &#96;/usr/local/bin/&#96; on
+&#96;badges-backend01&#96; where you can login to execute them.
 
-**edit-badge**
+&#42;edit-badge&#42;
 
 :   Update the description and the criteria link for a badge. Useful in
     the event you created it incorrectly, or if feedback from other
     stakeholders requires us to change something.
 
-**award-badge**
+&#42;award-badge&#42;
 
 :   Award a badge to a specific user.
 
-**revoke-badge**
+&#42;revoke-badge&#42;
 
 :   Removes a badge from a user to whom it has been awarded erroneously.
-    **Remember!** If you revoke a badge award from a user, you should
-    also give them the `consolation-prize` badge as a token of apology.
+    &#42;Remember!&#42; If you revoke a badge award from a user, you
+    should also give them the &#96;consolation-prize&#96; badge as a
+    token of apology.
 
-**grant-authorization**
+&#42;grant-authorization&#42;
 
 :   Grant authorization rights on a badge to a privileged user. They can
     then create invitation links and QR codes for that badge as well as
     award it directly to other users from the web interface.
 
-**revoke-authorization**
+&#42;revoke-authorization&#42;
 
 :   Revoke those authorization rights for a user on a given badge.
 
@@ -681,12 +635,12 @@ Owner
 
 Contact
 
-:   #fedora-badges
+:   &#35;fedora-badges
 
 Servers
 
-:   badges-web0\*, badges-backend0\*
+:   badges-web0&#42;, badges-backend0&#42;
 
 Purpose
 
-:   Award \"badges\" to Fedora Contributors
+:   Award \'badges\' to Fedora Contributors

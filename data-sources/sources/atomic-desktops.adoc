@@ -18,16 +18,16 @@ If you are uncertain about this, a Fedora Atomic Desktop can also be tested in a
 [[known-limitations]]
 == Known limitations
 
-*Dual booting and manual partitioning is not fully functional.*
+\&#42;Dual booting and manual partitioning is not fully functional.\&#42;
 
 It is possible to make Fedora Atomic Desktops work for both dual boot and manual partitioning, and some guidance is provided on manual partitioning below.
 However, there are hazards involved in both cases, and you should only attempt to use these features if you have done the necessary research, and are confident that you can overcome any issues that you might encounter.
 
-This issue is tracked in https://github.com/fedora-silverblue/issue-tracker/issues/284[issue +#284+].
+This issue is tracked in https://github.com/fedora-silverblue/issue-tracker/issues/284[issue +\&#35;284+].
 
-*Known issues for specific Fedora Atomic Desktop variants.*
+\&#42;Known issues for specific Fedora Atomic Desktop variants.\&#42;
 
-For Fedora Kinoite, a list of currently known bugs, issues and missing features is compiled in https://pagure.io/fedora-kde/SIG/issue/112[issue +#112+] in the https://pagure.io/fedora-kde/SIG/issues?status=Open&order_key=last_updated&order=desc[KDE SIG tracker].
+For Fedora Kinoite, a list of currently known bugs, issues and missing features is compiled in https://pagure.io/fedora-kde/SIG/issue/112[issue +\&#35;112+] in the https://pagure.io/fedora-kde/SIG/issues?status=Open\&amp;order_key=last_updated\&amp;order=desc[KDE SIG tracker].
 
 [[getting-atomic-desktop]]
 == Getting a Fedora Atomic Desktop
@@ -37,11 +37,11 @@ However, if it isn't, or if you want to download it manually, an install image c
 
 See the individual download page for each Fedora Atomic Desktop variant:
 
-* https://fedoraproject.org/atomic-desktops/silverblue/download[Fedora Silverblue]
-* https://fedoraproject.org/atomic-desktops/kinoite/download[Fedora Kinoite]
-* https://fedoraproject.org/atomic-desktops/sway/download[Fedora Sway Atomic]
-* https://fedoraproject.org/atomic-desktops/budgie/download[Fedora Budgie Atomic]
-* https://fedoraproject.org/atomic-desktops/cosmic/download[Fedora COSMIC Atomic]
+\&#42; https://fedoraproject.org/atomic-desktops/silverblue/download[Fedora Silverblue]
+\&#42; https://fedoraproject.org/atomic-desktops/kinoite/download[Fedora Kinoite]
+\&#42; https://fedoraproject.org/atomic-desktops/sway/download[Fedora Sway Atomic]
+\&#42; https://fedoraproject.org/atomic-desktops/budgie/download[Fedora Budgie Atomic]
+\&#42; https://fedoraproject.org/atomic-desktops/cosmic/download[Fedora COSMIC Atomic]
 
 Once you have got your copy of a Fedora Atomic Desktop, it can be installed in the usual manner.
 We hope that you love it!
@@ -49,12 +49,12 @@ We hope that you love it!
 [[preparing-boot-media]]
 == Preparing Boot Media
 
-Fedora installation images are *Hybrid ISOs* and can be used to create installation media with both optical and USB disks, for booting on both BIOS and UEFI systems.
+Fedora installation images are \&#42;Hybrid ISOs\&#42; and can be used to create installation media with both optical and USB disks, for booting on both BIOS and UEFI systems.
 
 We recommend using Fedora Media Writer to make a bootable USB media to install a Fedora Atomic Desktop.
 Other USB media creation software may work as well but are not regularly tested.
 
-See the https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/#_fedora_media_writer[Fedora Media Writer] section to learn how to use it.
+See the https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/\&#35;_fedora_media_writer[Fedora Media Writer] section to learn how to use it.
 
 
 [[manual-partition]]
@@ -67,28 +67,28 @@ Automatic partitioning is recommended.
 With Fedora Atomic Desktops, only certain mounts can be manually specified as partitions.
 These include:
 
-* `/boot/efi` (for the UEFI boot loaders)
-* `/boot`
-* `/var`
-* Subdirectories under `/var`, including:
-** `/var/home` (there is a symlink from `/home` to `/var/home`)
-** `/var/log`
-** `/var/containers`
-* The root filesystem: `/`
+\&#42; \&#96;/boot/efi\&#96; (for the UEFI boot loaders)
+\&#42; \&#96;/boot\&#96;
+\&#42; \&#96;/var\&#96;
+\&#42; Subdirectories under \&#96;/var\&#96;, including:
+\&#42;\&#42; \&#96;/var/home\&#96; (there is a symlink from \&#96;/home\&#96; to \&#96;/var/home\&#96;)
+\&#42;\&#42; \&#96;/var/log\&#96;
+\&#42;\&#42; \&#96;/var/containers\&#96;
+\&#42; The root filesystem: \&#96;/\&#96;
 
 The Fedora installer is not aware of these restrictions and will accept custom partitions without error, even if they are incompatible with Fedora Atomic Desktops.
 
-image::faw-manual-partition-complete.png[title="Partitioning Complete"]
+image::faw-manual-partition-complete.png[title='Partitioning Complete']
 
-The above screenshot shows a typical configuration with manual partitioning in UEFI firmware, with partitions for `/boot`, `/boot/efi`, `/`, and `/var/home`.
+The above screenshot shows a typical configuration with manual partitioning in UEFI firmware, with partitions for \&#96;/boot\&#96;, \&#96;/boot/efi\&#96;, \&#96;/\&#96;, and \&#96;/var/home\&#96;.
 
-Manual partitioning on Fedora Atomic Desktops can be done with `BTRFS`, https://en.wikipedia.org/wiki/Logical_Volume_Manager_%28Linux%29[LVM], as well as standard partitions or an `XFS` filesystem.
+Manual partitioning on Fedora Atomic Desktops can be done with \&#96;BTRFS\&#96;, https://en.wikipedia.org/wiki/Logical_Volume_Manager_%28Linux%29[LVM], as well as standard partitions or an \&#96;XFS\&#96; filesystem.
 
 [IMPORTANT]
 ====
-BTRFS filesystems smaller than 5 GiB should be formatted using `--mixed` (`-M`) flag.
-Currently neither `mkfs.btrfs` nor Blivet does this automatically.
-See https://btrfs.readthedocs.io/en/latest/mkfs.btrfs.html#mkfs-feature-mixed-bg[BTRFS documentation] for more details.
+BTRFS filesystems smaller than 5 GiB should be formatted using \&#96;--mixed\&#96; (\&#96;-M\&#96;) flag.
+Currently neither \&#96;mkfs.btrfs\&#96; nor Blivet does this automatically.
+See https://btrfs.readthedocs.io/en/latest/mkfs.btrfs.html\&#35;mkfs-feature-mixed-bg[BTRFS documentation] for more details.
 ====
 
 [[first-run]]
@@ -99,7 +99,7 @@ See https://btrfs.readthedocs.io/en/latest/mkfs.btrfs.html#mkfs-feature-mixed-bg
 On first startup you will be asked to enable third-party repositories, location services, and to create a new user.
 You can enable third-party repositories and location later, but you must create a new user by entering your desired name and password.
 
-image::Fedora_40_new_user.png[title="Silverblue - Create New User"]
+image::Fedora_40_new_user.png[title='Silverblue - Create New User']
 
 Once you have created the user you can start using your Fedora Silverblue system.
 
@@ -108,21 +108,21 @@ Once you have created the user you can start using your Fedora Silverblue system
 On first startup, you will be asked to enter the password for the user created during installation.
 Depending on different personal needs, there are several starting actions and installations that you could perform on newly installed Fedora Kinoite for a customized user experience.
 
-image::kinoite-first-run.png[title="Kinoite - Welcome Center"]
+image::kinoite-first-run.png[title='Kinoite - Welcome Center']
 
 === Fedora Sway Atomic
 
 On first startup, you will be asked to enter the password for the user created during installation.
 Then, you can start using Fedora Sway Atomic.
 
-image::sway-atomic-first-run.png[title="Sway Atomic - First Run"]
+image::sway-atomic-first-run.png[title='Sway Atomic - First Run']
 
 === Fedora Budgie Atomic
 
 On first startup, you will be asked to enter the password for the user created during installation.
 Then, you can start using Fedora Budgie Atomic.
 
-image::budgie-atomic-first-run.png[title="Budgie Atomic - First Run"]
+image::budgie-atomic-first-run.png[title='Budgie Atomic - First Run']
 
 == Where to go next?
 
@@ -130,10 +130,12 @@ Depending on different personal needs, there are several starting actions and in
 
 [IMPORTANT]
 ====
-If you are new to Fedora Atomic Desktops and before installing software in your newly installed system, you should read the xref:getting-started.adoc[Getting Started] section to learn about the difference between *Flatpak*, *Toolbox* and *package layering* (rpm-ostree).
+If you are new to Fedora Atomic Desktops and before installing software in your newly installed system, you should read the xref:getting-started.adoc[Getting Started] section to learn about the difference between \&#42;Flatpak\&#42;, \&#42;Toolbox\&#42; and \&#42;package layering\&#42; (rpm-ostree).
 ====
 
 For some tips about Fedora Atomic Desktops, see the xref:tips-and-tricks.adoc[Tips and Tricks] section.
+
+
 :experimental:
 
 [[getting-started]]
@@ -145,16 +147,16 @@ However, Fedora Atomic Desktops are built differently from other operating syste
 Fedora Atomic Desktops have different options for installing software, compared with a standard Fedora installation (or other package-based Linux distributions).
 These include:
 
-* Flatpak apps: This is the primary way that (GUI) apps get installed on Fedora Atomic Desktops.
-* Toolbx: Used primarily for CLI apps; development, debugging tools, etc., but also has support for graphical apps.
-* Package layering: Most Fedora packages can be installed on the system with the help of package layering.
+\&#42; Flatpak apps: This is the primary way that (GUI) apps get installed on Fedora Atomic Desktops.
+\&#42; Toolbx: Used primarily for CLI apps; development, debugging tools, etc., but also has support for graphical apps.
+\&#42; Package layering: Most Fedora packages can be installed on the system with the help of package layering.
 By default the system operates in pure image mode, but package layering is useful for things like libvirt, drivers, etc.
 
 Although Flatpak is best suited for GUI apps, Toolbx for CLI apps and package layering for system-level packages, it's ultimately up to you to choose the method that best suits your needs.
 There's nothing wrong in installing CLI apps with Flatpak, or GUI apps with Toolbx, or using package layering only.
 Nevertheless, our examples stick to the aforementioned recommendations throughout this documentation.
 
-For information on <<flatpak>> and <<package-layering,package layering>>, see below.
+For information on \&lt;\&lt;flatpak\&gt;\&gt; and \&lt;\&lt;package-layering,package layering\&gt;\&gt;, see below.
 
 See the dedicated xref:toolbox.adoc[Toolbx] page to get started with it.
 
@@ -178,19 +180,19 @@ The steps may vary slightly depending on the Atomic Desktop variant, but the ove
 
 To setup Flathub on Fedora Atomic Desktops, open the https://flatpak.org/setup/Fedora[Flathub setup page for Fedora] and click the btn:[Flathub repository file] button to download the Flathub configuration.
 
-image::sfg_flathub_fedora.png[title="Fedora quick setup page"]
+image::sfg_flathub_fedora.png[title='Fedora quick setup page']
 
 A popup window will show a download option for the file.
-The “Open with” option should show “Software Install (default)” or "Discover (default)".
+The “Open with” option should show “Software Install (default)” or 'Discover (default)'.
 Click on the btn:[OK] button to start the download.
 
-image::sfg_flathub_download.png[title="Flathub download options"]
+image::sfg_flathub_download.png[title='Flathub download options']
 
 After the download is complete, a new window will open showing the Flathub repository.
-This window also shows the source location of the repository to be installed, under the "Details" heading *(1)*.
-To start the installation of the Flathub repository, click on the btn:[Install] button *(2)*.
+This window also shows the source location of the repository to be installed, under the 'Details' heading \&#42;(1)\&#42;.
+To start the installation of the Flathub repository, click on the btn:[Install] button \&#42;(2)\&#42;.
 
-image::sfg_flathub_install.png[title="Flathub install window"]
+image::sfg_flathub_install.png[title='Flathub install window']
 
 After the repository installation process is complete, the window will be updated to show a btn:[Remove] button in place of the btn:[Install] button.
 
@@ -212,16 +214,16 @@ For example, to install https://www.libreoffice.org[LibreOffice], you first sear
 After clicking the btn:[Install] button, a download information window will be shown.
 Verify the correct Flatpak has been downloaded and then click on the btn:[OK] button to begin installing the LibreOffice application.
 
-image::sfg_libreoffice_install.png[title="LibreOffice Flatpak download"]
+image::sfg_libreoffice_install.png[title='LibreOffice Flatpak download']
 
-Once the Flatpak is downloaded, the GNOME Software or the Plasma Discover application will open a new window with an btn:[Install] button *(2)*.
+Once the Flatpak is downloaded, the GNOME Software or the Plasma Discover application will open a new window with an btn:[Install] button \&#42;(2)\&#42;.
 Click this button to begin installation.
 
 Alternatively, each application on Flathub can be installed through the terminal by running the installation command at the bottom of the page that should look something like this:
 
 [source]
 ----
-$ flatpak install flathub <package-name>
+$ flatpak install flathub \&lt;package-name\&gt;
 ----
 
 As an example, Firefox can be installed by running the following command which can be found on Firefox's flathub page:
@@ -243,17 +245,17 @@ As the name implies, it works by extending the packages from which the Fedora At
 
 Good examples of packages to be layered would be:
 
-* `fish`: An alternative Unix shell
-* `i3`: A X11 tiling compositor
-* `libvirt`: The libvirt daemon
+\&#42; \&#96;fish\&#96;: An alternative Unix shell
+\&#42; \&#96;i3\&#96;: A X11 tiling compositor
+\&#42; \&#96;libvirt\&#96;: The libvirt daemon
 
 Most (but not all) RPM packages provided by Fedora can be installed on Fedora Atomic Desktops using this method.
 
 Using package layering creates a new deployment, or bootable filesystem root.
 It does not affect your current root.
 This preserves rollback and the transactional model, but means that the system must be rebooted after a package has been layered or updated.
-You can alternatively use `rpm-ostree install --apply-live <package-name>` to also temporarily apply the change directly to your currently booted deployment.
-It's generally expected that you use package layering sparingly, and use <<flatpak>> and xref:toolbox.adoc[Toolbx] whenever possible.
+You can alternatively use \&#96;rpm-ostree install --apply-live \&lt;package-name\&gt;\&#96; to also temporarily apply the change directly to your currently booted deployment.
+It's generally expected that you use package layering sparingly, and use \&lt;\&lt;flatpak\&gt;\&gt; and xref:toolbox.adoc[Toolbx] whenever possible.
 
 Package layering is generally done from the command line.
 However, the GNOME Software or the Plasma Discover application does rely on it for installing a small number of apps that are currently difficult to install as Flatpaks.
@@ -264,15 +266,15 @@ Packages can be installed on Fedora Atomic Desktops using:
 
 [source]
 ----
-$ rpm-ostree install <package-name>
+$ rpm-ostree install \&lt;package-name\&gt;
 ----
 
 This will download the package and any required dependencies, and recompose your Fedora Atomic Desktop image with them.
-`rpm-ostree` uses standard Fedora package names, which can be searched with `rpm-ostree search` since Fedora Atomic Desktops 39, or using DNF inside a xref:toolbox.adoc[Toolbx] for previous versions.
+\&#96;rpm-ostree\&#96; uses standard Fedora package names, which can be searched with \&#96;rpm-ostree search\&#96; since Fedora Atomic Desktops 39, or using DNF inside a xref:toolbox.adoc[Toolbx] for previous versions.
 
 Once a package has been installed in this manner, it will be kept up-to-date as new versions are released and as the base operating system is updated.
 
-By default, `rpm-ostree` will download both required and recommended dependencies of layered packages.
+By default, \&#96;rpm-ostree\&#96; will download both required and recommended dependencies of layered packages.
 If you want dependency resolver to stick to required dependencies only, then you have to append
 
 [source]
@@ -280,18 +282,18 @@ If you want dependency resolver to stick to required dependencies only, then you
 Recommends=false
 ----
 
-line to the `/etc/rpm-ostreed.conf` file.
-There's no ad-hoc CLI flag to do so because of how `rpm-ostree` works internally.
+line to the \&#96;/etc/rpm-ostreed.conf\&#96; file.
+There's no ad-hoc CLI flag to do so because of how \&#96;rpm-ostree\&#96; works internally.
 
 === Replacing packages
 
-In some scenarios, you may want to test out a new version of `podman` or `kernel` or other packages that live on the host.
-The `rpm-ostree override` command can be used to replace a package with a different version.
+In some scenarios, you may want to test out a new version of \&#96;podman\&#96; or \&#96;kernel\&#96; or other packages that live on the host.
+The \&#96;rpm-ostree override\&#96; command can be used to replace a package with a different version.
 You can download the package locally and run:
 
 [source]
 ----
-$ rpm-ostree override replace <path/to/package>
+$ rpm-ostree override replace \&lt;path/to/package\&gt;
 ----
 
 Or you can override packages without downloading using links from Koji or Bodhi.
@@ -302,7 +304,7 @@ For example:
 $ rpm-ostree override replace https://kojipkgs.fedoraproject.org//packages/podman/5.7.0/1.fc43/x86_64/podman-5.7.0-1.fc43.x86_64.rpm
 ----
 
-You may also use `rpm-ostree override remove` to effectively "hide" packages.
+You may also use \&#96;rpm-ostree override remove\&#96; to effectively 'hide' packages.
 They will still exist in the underlying base layer, but will not appear in the booted root.
 
 Removing and replacing packages using package layering is not generally recommended.
@@ -310,9 +312,11 @@ For more information, see the https://coreos.github.io/rpm-ostree/administrator-
 
 === Adding packages from external repositories
 
-See xref:troubleshooting.adoc#_adding_external_package_repositories[Adding external package repositories].
+See xref:troubleshooting.adoc\&#35;_adding_external_package_repositories[Adding external package repositories].
+
+
 [[updates-upgrades-rollbacks]]
-= Updates, Upgrades & Rollbacks
+= Updates, Upgrades \&amp; Rollbacks
 
 Installing updates on Fedora Atomic Desktops is easy and fast.
 It also has a special rollback feature, in case anything goes wrong.
@@ -349,7 +353,7 @@ $ rpm-ostree upgrade --check
 == Upgrading between major versions
 
 Upgrading between major versions (such as from Fedora {version-oldstable} to Fedora {version-stable}) can be completed using GNOME Software on Silverblue, Plasma Discover on Kinoite and Budgie Atomic.
-Alternatively, Fedora Atomic Desktops can be upgraded between major versions using the `rpm-ostree` command.
+Alternatively, Fedora Atomic Desktops can be upgraded between major versions using the \&#96;rpm-ostree\&#96; command.
 
 [WARNING]
 ====
@@ -377,16 +381,16 @@ $ ostree remote refs ${ID} | grep $(arch) | grep ${VARIANT_ID}
 After you've verified the name of your branch, you are ready to proceed.
 For example, to upgrade to Fedora Silverblue {version-stable}, the command is:
 
-[source,bash,subs="attributes"]
+[source,bash,subs='attributes']
 ----
 $ rpm-ostree rebase fedora:fedora/{version-stable}/x86_64/silverblue
 ----
 
-The old variant name for Sway Atomic is `sericea` and for Budgie Atomic it is `onyx`.
+The old variant name for Sway Atomic is \&#96;sericea\&#96; and for Budgie Atomic it is \&#96;onyx\&#96;.
 
 The process is very similar to a system update: the new OS is downloaded and installed in the background, and you just boot into it when it is ready.
 
-NOTE: If you are using the RPM Fusion repositories and are having issues during major updates, see the xref:tips-and-tricks.adoc#_enabling_rpm_fusion_repos[Enabling RPM Fusion repos] section.
+NOTE: If you are using the RPM Fusion repositories and are having issues during major updates, see the xref:tips-and-tricks.adoc\&#35;_enabling_rpm_fusion_repos[Enabling RPM Fusion repos] section.
 
 [[rebasing]]
 == Rebasing to another Atomic Desktop
@@ -397,7 +401,7 @@ Fedora Kinoite is similar to Fedora Silverblue, except for the fact that it uses
 
 What this means is, you can rebase to Fedora Kinoite to try it out, without ever touching your current system.
 Because the two system images are isolated from each other, the two desktop environments will never be installed at the same time.
-All your flatpak apps and files in the `/home` directory will remain persistent between rebases.
+All your flatpak apps and files in the \&#96;/home\&#96; directory will remain persistent between rebases.
 Same applies for testing out the development version of Fedora Atomic Desktops, which is Rawhide.
 
 [NOTE]
@@ -415,17 +419,17 @@ While this shouldn't usually be necessary, it can be helpful if there is a probl
 There are two ways to roll back to the previous version:
 
 . Temporary rollbacks: to temporarily roll back to a previous version, simply reboot and select the previous version from the boot menu (often known as the GRUB menu).
-. Permanent rollbacks: to permanently switch back to the previous deployment, use the `rpm-ostree rollback` command.
+. Permanent rollbacks: to permanently switch back to the previous deployment, use the \&#96;rpm-ostree rollback\&#96; command.
 
 After rolling back, you will technically be on an old OS version, and may be prompted to update.
 Updating will undo the rollback, so it should be avoided if you want the rollback to stay in effect.
 
-`rpm-ostree` only keeps one rollback version available by default.
+\&#96;rpm-ostree\&#96; only keeps one rollback version available by default.
 If you want to rollback to another version than the one currently available on your system, you can do so with the following commands:
 
 . Pull the ostree commit log from the remote repository:
 +
-[source,bash,subs="attributes"]
+[source,bash,subs='attributes']
 ----
 $ source /etc/os-release
 $ sudo ostree pull --commit-metadata-only --depth=10 $\{ID\} $\{ID\}/{version-stable}/$(arch)/$\{VARIANT_ID\}
@@ -433,14 +437,14 @@ $ sudo ostree pull --commit-metadata-only --depth=10 $\{ID\} $\{ID\}/{version-st
 
 . Display the log:
 +
-[source,bash,subs="attributes"]
+[source,bash,subs='attributes']
 ----
 $ ostree log $\{ID\}:$\{ID\}/{version-stable}/$(arch)/$\{VARIANT_ID\}
 ----
 
 . Deploy a specific commit:
 +
-[source,bash,subs="attributes"]
+[source,bash,subs='attributes']
 ----
 $ rpm-ostree deploy {version-stable}.20251031.0
 ----
@@ -450,7 +454,7 @@ NOTE: This will deploy the exact version as requested and will not include overl
 [[pinning-and-cleaning-deployments]]
 == Pinning and cleaning deployments
 
-By default, the `rpm-ostree upgrade` or `rpm-ostree rebase` commands will keep at most two bootable deployments, though the underlying technology supports more.
+By default, the \&#96;rpm-ostree upgrade\&#96; or \&#96;rpm-ostree rebase\&#96; commands will keep at most two bootable deployments, though the underlying technology supports more.
 In some cases, such as a major version upgrade or rebase, you may want to keep your current deployment as a guaranteed fallback.
 OSTree allows you to pin deployments.
 Pinning ensures that your deployment of choice is kept and not discarded.
@@ -469,7 +473,7 @@ If you want to pin your currently booted deployment, run the following command:
 $ sudo ostree admin pin 0
 ----
 
-If you pin many deployments, the `/boot` partition may run out of space and as a consequence the system may not be able to be upgraded.
+If you pin many deployments, the \&#96;/boot\&#96; partition may run out of space and as a consequence the system may not be able to be upgraded.
 In such cases, it is necessary to unpin and clean up some deployments.
 To unpin a deployment, run the following command:
 
@@ -486,7 +490,9 @@ Then clean up unpinned deployments:
 $ rpm-ostree cleanup --rollback
 ----
 
-NOTE: The `rpm-ostree cleanup --rollback` command will not remove pinned deployments.
+NOTE: The \&#96;rpm-ostree cleanup --rollback\&#96; command will not remove pinned deployments.
+
+
 :experimental:
 
 [[toolbox]]
@@ -507,10 +513,10 @@ However, toolbx can also be used on package-based systems.
 
 Using Toolbx for running your workflows in a containerized manner brings you several advantages:
 
-* It keeps the host OS clean and stable, and helps to avoid the clutter that can happen after installing lots of development tools and packages.
-* You get access to different versions of supported distributions independent of the version you are running.
-* Containers are a good way to isolate and organise the dependencies needed for different projects.
-* Containers are a safe space to experiment: if things go wrong, it's easy to throw a toolbox away and start again.
+\&#42; It keeps the host OS clean and stable, and helps to avoid the clutter that can happen after installing lots of development tools and packages.
+\&#42; You get access to different versions of supported distributions independent of the version you are running.
+\&#42; Containers are a good way to isolate and organise the dependencies needed for different projects.
+\&#42; Containers are a safe space to experiment: if things go wrong, it's easy to throw a toolbox away and start again.
 
 However, it is very important to note that toolbx containers are still integrated with your host system, so you should not attempt to do things or run software you otherwise wouldn't on your host system. Toolbx containers are not completely isolated environments like virtual machines.
 
@@ -527,18 +533,18 @@ The team behind Toolbx maintains a Fedora image where such tools and documentati
 Each toolbx container is an environment that you can enter from the command line.
 Inside each one, you will find:
 
-* Your existing username and permissions.
-* Access to your home directory and several other locations.
-* Access to both system and session D-Bus, system journal and Kerberos.
-* Common command lines tools, including a package manager (e.g., DNF on Fedora).
+\&#42; Your existing username and permissions.
+\&#42; Access to your home directory and several other locations.
+\&#42; Access to both system and session D-Bus, system journal and Kerberos.
+\&#42; Common command lines tools, including a package manager (e.g., DNF on Fedora).
 
 In other words, toolbx containers look, feel and behave like a standard Linux command line environment.
 By connecting all this information, toolbx containers lose a certain amount of security gained by using the containers technology.
 Therefore, you should not treat toolbx containers as a sandbox where you can execute any script you would never run on any other system.
 
 In most cases, when a command is run inside a container, the program from inside the container is used.
-However, there are a few special cases where the program on the host is used instead (using `flatpak-spawn`).
-One example of this is the `toolbox` command itself; this makes it possible to use toolbx from inside toolbx containers.
+However, there are a few special cases where the program on the host is used instead (using \&#96;flatpak-spawn\&#96;).
+One example of this is the \&#96;toolbox\&#96; command itself; this makes it possible to use toolbx from inside toolbx containers.
 
 [[toolbox-installation]]
 == Installation
@@ -586,72 +592,72 @@ The diamond symbol may not be present if you use a custom shell theme.
 == Commands and usage
 
 [[toolbox-create]]
-=== toolbox create [options] <name>
+=== toolbox create [options] \&lt;name\&gt;
 
 Creates a toolbx container.
 This will download an OCI image if one isn't available (this is required to create the container).
 By default an image matching the version of the host is used.
 If the host system does not have a matching image, a Fedora image is used instead.
 
-Used without options, `toolbox create` will automatically name the container it creates.
-To create additional toolboxes, use the `<name>` argument.
+Used without options, \&#96;toolbox create\&#96; will automatically name the container it creates.
+To create additional toolboxes, use the \&#96;\&lt;name\&gt;\&#96; argument.
 
-To use a specific version of the host system (e.g., Fedora {version-oldstable} on Fedora {version-stable}), use the `--release <release> | -r <release>` option.
+To use a specific version of the host system (e.g., Fedora {version-oldstable} on Fedora {version-stable}), use the \&#96;--release \&lt;release\&gt; | -r \&lt;release\&gt;\&#96; option.
 
-To use a different distribution to create a toolbx container (e.g., RHEL on Fedora), use the `--distro <distro> | -d <distro>` option.
+To use a different distribution to create a toolbx container (e.g., RHEL on Fedora), use the \&#96;--distro \&lt;distro\&gt; | -d \&lt;distro\&gt;\&#96; option.
 
-To use a different image, use the ``--image <name> | -i <name>`` option.
+To use a different image, use the \&#96;\&#96;--image \&lt;name\&gt; | -i \&lt;name\&gt;\&#96;\&#96; option.
 
 [[toolbox-enter]]
-=== toolbox enter [options] <name>
+=== toolbox enter [options] \&lt;name\&gt;
 
 Enters a toolbox for interactive use.
-Used without options, `toolbox enter` opens the default toolbox.
+Used without options, \&#96;toolbox enter\&#96; opens the default toolbox.
 
-To enter a toolbox with specific name, use the `name` argument.
+To enter a toolbox with specific name, use the \&#96;name\&#96; argument.
 
-To enter a toolbox for a different distribution (e.g., Fedora on RHEL), use the `--distro <distro> |-d <distro>` option.
+To enter a toolbox for a different distribution (e.g., Fedora on RHEL), use the \&#96;--distro \&lt;distro\&gt; |-d \&lt;distro\&gt;\&#96; option.
 
-To enter a toolbox with specific version (e.g., RHEL 9.6 on RHEL 10.0), use the `--release <release> | -r <release>` option.
+To enter a toolbox with specific version (e.g., RHEL 9.6 on RHEL 10.0), use the \&#96;--release \&lt;release\&gt; | -r \&lt;release\&gt;\&#96; option.
 
 [[toolbox-run]]
-=== toolbox run [options] <cmd> <arg ...>
+=== toolbox run [options] \&lt;cmd\&gt; \&lt;arg \&#8230;\&gt;
 
 Runs a command in a toolbox without entering it.
-Used without options, `toolbox run` runs the command in the default toolbox.
+Used without options, \&#96;toolbox run\&#96; runs the command in the default toolbox.
 
-To run a command in a toolbox with specific name, use the `--container <name> | -c <name>` option.
+To run a command in a toolbox with specific name, use the \&#96;--container \&lt;name\&gt; | -c \&lt;name\&gt;\&#96; option.
 
-To run a command in a toolbox for a different distribution (e.g., Fedora on RHEL), use the `--distro <distro> |-d <distro>` option.
+To run a command in a toolbox for a different distribution (e.g., Fedora on RHEL), use the \&#96;--distro \&lt;distro\&gt; |-d \&lt;distro\&gt;\&#96; option.
 
-To run a command in a toolbox with specific version (e.g., RHEL 9.6 on RHEL 10.0), use the `--release <release> | -r <release>` option.
+To run a command in a toolbox with specific version (e.g., RHEL 9.6 on RHEL 10.0), use the \&#96;--release \&lt;release\&gt; | -r \&lt;release\&gt;\&#96; option.
 
 [[toolbox-list]]
 === toolbox list [options]
 
 Lists local toolbx images and containers.
 
-To only show containers, use the `--containers | -c` option.
+To only show containers, use the \&#96;--containers | -c\&#96; option.
 
-To only show images, use the `--images | -i` option.
+To only show images, use the \&#96;--images | -i\&#96; option.
 
 [[toolbox-rm]]
-=== toolbox rm [options] <name ...>
+=== toolbox rm [options] \&lt;name \&#8230;\&gt;
 
 Removes one or more toolbx containers.
 
-The `--force | -f` option removes the marked containers even if they are running.
+The \&#96;--force | -f\&#96; option removes the marked containers even if they are running.
 
-The `--all | -a` option removes all toolbx containers.
+The \&#96;--all | -a\&#96; option removes all toolbx containers.
 
 [[toolbox-rmi]]
-=== toolbox rmi [options] <name ...>
+=== toolbox rmi [options] \&lt;name \&#8230;\&gt;
 
 Removes one or more toolbx images.
 
-The `--force | -f` option removes the marked images and all containers that have been created using the marked images.
+The \&#96;--force | -f\&#96; option removes the marked images and all containers that have been created using the marked images.
 
-The `--all | -a` option removes all toolbx images.
+The \&#96;--all | -a\&#96; option removes all toolbx images.
 
 [[toolbox-help]]
 === toolbox --help
@@ -661,22 +667,24 @@ Shows Toolbx's manual page.
 [[toolbox-exiting]]
 === Exiting a toolbox
 
-To return to the host environment, either run `exit` or quit the current shell (typically kbd:[Ctrl+D]).
+To return to the host environment, either run \&#96;exit\&#96; or quit the current shell (typically kbd:[Ctrl+D]).
 
 [[toolbox-under-the-hood]]
 == Under the hood
 
 Toolbx uses the following technologies:
 
-* https://www.opencontainers.org[OCI container images]
-* https://podman.io[Podman]
+\&#42; https://www.opencontainers.org[OCI container images]
+\&#42; https://podman.io[Podman]
 
 [[toolbox-contact]]
 == Contact and issues
 
 To report issues, make suggestions, or contribute fixes, see https://github.com/containers/toolbox[toolbx's GitHub project].
 
-To get in touch with toolbx users and developers, use the https://discussion.fedoraproject.org/tag/toolbx[Fedora Discussion], or join the https://matrix.to/#/#toolbx:matrix.org[Toolbx Matrix Room].
+To get in touch with toolbx users and developers, use the https://discussion.fedoraproject.org/tag/toolbx[Fedora Discussion], or join the https://matrix.to/\&#35;/\&#35;toolbx:matrix.org[Toolbx Matrix Room].
+
+
 [technical-information]
 = Technical Information
 
@@ -692,60 +700,64 @@ https://ostreedev.github.io/ostree/[ostree] is the core technology that is used 
 ostree operates in a similar manner to a version control system, but it operates on entire filesystem trees.
 It is often described as “Git for operating system binaries”.
 
-For Fedora Atomic Desktops installations, ostree is responsible for deploying and updating the OS image (including everything below `/` that is not symlinked into `/var`).
-It also updates `grub.cfg` entries to point to the current image.
+For Fedora Atomic Desktops installations, ostree is responsible for deploying and updating the OS image (including everything below \&#96;/\&#96; that is not symlinked into \&#96;/var\&#96;).
+It also updates \&#96;grub.cfg\&#96; entries to point to the current image.
 
 https://coreos.github.io/rpm-ostree/[rpm-ostree] builds on top of ostree, and makes it possible to install RPMs as a “layer” on top of an ostree image.
 This makes it possible to install RPMs on Fedora Atomic Desktops.
 
-When a package is installed with `rpm-ostree`, a new OS image is composed by adding the RPM payload to the existing OS image, and creating a new, combined image.
+When a package is installed with \&#96;rpm-ostree\&#96;, a new OS image is composed by adding the RPM payload to the existing OS image, and creating a new, combined image.
 To see the newly installed RPMs, the system needs to be rebooted with the new image.
 rpm-ostree also takes care of recreating the layered image whenever you update the base OS image.
 
 [[filesystem-layout]]
 == Fedora Atomic Desktops filesystem layout
 
-On Fedora Atomic Desktops, the root filesystem (`/`) is mounted read-only.
-The `/usr` directory and everything below it is also read-only.
+On Fedora Atomic Desktops, the root filesystem (\&#96;/\&#96;) is mounted read-only.
+The \&#96;/usr\&#96; directory and everything below it is also read-only.
 
-The `/etc` and `/var` directories are respectively used to store configuration files and runtime state and are thus writable.
+The \&#96;/etc\&#96; and \&#96;/var\&#96; directories are respectively used to store configuration files and runtime state and are thus writable.
 Symlinks are used to make traditional state-carrying directories available in their expected locations.
 This includes:
 
-* `/home` → `/var/home`
-* `/opt` → `/var/opt`
-* `/srv` → `/var/srv`
-* `/root` → `/var/roothome`
-* `/usr/local` → `/var/usrlocal`
-* `/mnt`→ `/var/mnt`
-* `/tmp` → `/sysroot/tmp`
+\&#42; \&#96;/home\&#96; → \&#96;/var/home\&#96;
+\&#42; \&#96;/opt\&#96; → \&#96;/var/opt\&#96;
+\&#42; \&#96;/srv\&#96; → \&#96;/var/srv\&#96;
+\&#42; \&#96;/root\&#96; → \&#96;/var/roothome\&#96;
+\&#42; \&#96;/usr/local\&#96; → \&#96;/var/usrlocal\&#96;
+\&#42; \&#96;/mnt\&#96;→ \&#96;/var/mnt\&#96;
+\&#42; \&#96;/tmp\&#96; → \&#96;/sysroot/tmp\&#96;
 
-This means that separate home partitions should be mounted on `/var/home`.
+This means that separate home partitions should be mounted on \&#96;/var/home\&#96;.
 
-Since Fedora Linux 37, the `/sysroot` directory is also https://fedoraproject.org/wiki/Changes/Silverblue_Kinoite_readonly_sysroot[mounted read-only].
+Since Fedora Linux 37, the \&#96;/sysroot\&#96; directory is also https://fedoraproject.org/wiki/Changes/Silverblue_Kinoite_readonly_sysroot[mounted read-only].
 
-The `/boot` and `/boot/efi` directories are currently also mounted as writable but there are plans to mount them read-only in the future or even not mount them at all.
+The \&#96;/boot\&#96; and \&#96;/boot/efi\&#96; directories are currently also mounted as writable but there are plans to mount them read-only in the future or even not mount them at all.
 See https://gitlab.com/fedora/ostree/sig/-/issues/21[Mount /boot as Read Only by default] and https://gitlab.com/fedora/ostree/sig/-/issues/22[Do not mount /boot/efi by default].
 
 For a more detailed explanation of Fedora Atomic Desktops' filesystem layout, refer to the https://ostreedev.github.io/ostree/adapting-existing/[libostree documentation].
-= Reading & Resources
+
+
+= Reading \&amp; Resources
 
 This page is a list of further reading and resources for Fedora Atomic Desktops.
 
 == Technology websites and documentation
 
-* https://buildah.io/[Buildah] - build OCI container images
-* http://flatpak.org[Flatpak] - next-generation desktop app framework
-* https://ostreedev.github.io/ostree/[ostree] - OS image composition and updates
-* https://podman.io/[podman] - daemonless container engine
-* https://coreos.github.io/rpm-ostree/[rpm-ostree] - hybrid image/package system
+\&#42; https://buildah.io/[Buildah] - build OCI container images
+\&#42; http://flatpak.org[Flatpak] - next-generation desktop app framework
+\&#42; https://ostreedev.github.io/ostree/[ostree] - OS image composition and updates
+\&#42; https://podman.io/[podman] - daemonless container engine
+\&#42; https://coreos.github.io/rpm-ostree/[rpm-ostree] - hybrid image/package system
 
 == Documents
 
-* link:{attachmentsdir}/team-silverblue-origins.pdf[Team Silverblue - The Origins] - PDF that explains the motivations, goals, and history behind Fedora Silverblue, the first Fedora Atomic Desktop
-* link:{attachmentsdir}/flatpak-print-cheatsheet.pdf[Flatpak Cheat Sheet] - PDF with common flatpak commands
-* link:{attachmentsdir}/silverblue-cheatsheet.pdf[rpm-ostree Cheat Sheet] - PDF with common rpm-ostree commands, branded for Silverblue but applies to all Fedora Atomic Desktops
-* link:{attachmentsdir}/container-commandos.pdf[Container commandos] -  a playful introduction to tools such as podman, cri-o and buildah by Máirín Duffy and Dan Walsh. Print it out, and learn as you color!
+\&#42; link:{attachmentsdir}/team-silverblue-origins.pdf[Team Silverblue - The Origins] - PDF that explains the motivations, goals, and history behind Fedora Silverblue, the first Fedora Atomic Desktop
+\&#42; link:{attachmentsdir}/flatpak-print-cheatsheet.pdf[Flatpak Cheat Sheet] - PDF with common flatpak commands
+\&#42; link:{attachmentsdir}/silverblue-cheatsheet.pdf[rpm-ostree Cheat Sheet] - PDF with common rpm-ostree commands, branded for Silverblue but applies to all Fedora Atomic Desktops
+\&#42; link:{attachmentsdir}/container-commandos.pdf[Container commandos] -  a playful introduction to tools such as podman, cri-o and buildah by Máirín Duffy and Dan Walsh. Print it out, and learn as you color!
+
+
 [[contributing]]
 = Contributing to Fedora Atomic Desktops
 
@@ -764,12 +776,12 @@ See the repositories in the https://forge.fedoraproject.org/atomic-desktops[atom
 If you are a developer, you can contribute to one of the several projects which make Fedora Atomic Desktops possible.
 Submit your pull requests to:
 
-* https://github.com/bootc-dev/bootc[bootc]
-* https://github.com/coreos/rpm-ostree[rpm-ostree]
-* https://github.com/flatpak/flatpak[flatpak]
-* https://github.com/ostreedev/ostree[ostree]
-* https://github.com/containers/toolbox[toolbox]
-* https://github.com/containers/podman[podman]
+\&#42; https://github.com/bootc-dev/bootc[bootc]
+\&#42; https://github.com/coreos/rpm-ostree[rpm-ostree]
+\&#42; https://github.com/flatpak/flatpak[flatpak]
+\&#42; https://github.com/ostreedev/ostree[ostree]
+\&#42; https://github.com/containers/toolbox[toolbox]
+\&#42; https://github.com/containers/podman[podman]
 
 Your contributions towards the main https://docs.fedoraproject.org/en-US/project/join[Fedora] project are also very welcome.
 
@@ -779,6 +791,8 @@ Your contributions towards the main https://docs.fedoraproject.org/en-US/project
 Head over to our https://forge.fedoraproject.org/atomic-desktops/docs[documentation] repository, fork it and create a pull request.
 
 If you are not comfortable with using git, create a new topic in our https://discussion.fedoraproject.org/tag/atomic-desktops[community] or log an https://forge.fedoraproject.org/atomic-desktops/docs/issues[issue] describing what needs to be changed.
+
+
 :experimental:
 
 = Troubleshooting
@@ -786,7 +800,7 @@ If you are not comfortable with using git, create a new topic in our https://dis
 Fedora Atomic Desktops use a new way of deploying and managing your desktop operating system, so you may occasionally run into problems while going through your day to day.
 Below are some of the more common problems reported and any workarounds for those problems.
 
-== "Forbidden base package replacements"
+== 'Forbidden base package replacements'
 
 This can happen when a package that is being layered has a dependency on a package that is in the base OS.
 In the problematic case, the layered package requires a newer version of the dependent package which is not available in the base OS.
@@ -794,18 +808,18 @@ In the problematic case, the layered package requires a newer version of the dep
 In most cases, waiting for a newer OSTree compose will resolve this problem.
 The dependent package will be updated in the compose and the package that was going to be layered will be successful.
 
-However, if you continue to encounter this problem with a newer compose, you can try to cleanup the metadata with `rpm-ostree cleanup -m` and then retrying the `rpm-ostree install`.
+However, if you continue to encounter this problem with a newer compose, you can try to cleanup the metadata with \&#96;rpm-ostree cleanup -m\&#96; and then retrying the \&#96;rpm-ostree install\&#96;.
 
-Alternatively, you can try rebasing to any `updates` ref, like `fedora/{version-stable}/updates/x86_64` after the `cleanup` operation.
+Alternatively, you can try rebasing to any \&#96;updates\&#96; ref, like \&#96;fedora/{version-stable}/updates/x86_64\&#96; after the \&#96;cleanup\&#96; operation.
 
-For more information, see https://github.com/coreos/rpm-ostree/issues/415[rpm-ostree#415].
+For more information, see https://github.com/coreos/rpm-ostree/issues/415[rpm-ostree\&#35;415].
 
-== Installing packages to `/opt` or `/usr/local`
+== Installing packages to \&#96;/opt\&#96; or \&#96;/usr/local\&#96;
 
-Installing into `/opt` was commonly raised as a problem when users where trying to install Google Chrome.
-A https://github.com/projectatomic/rpm-ostree/pull/1795[partial solution] has been implemented that allows users to layer Google Chrome, however it is not a complete solution for applications that write mutable data to `/opt`.
+Installing into \&#96;/opt\&#96; was commonly raised as a problem when users where trying to install Google Chrome.
+A https://github.com/projectatomic/rpm-ostree/pull/1795[partial solution] has been implemented that allows users to layer Google Chrome, however it is not a complete solution for applications that write mutable data to \&#96;/opt\&#96;.
 
-This issue is tracked in https://github.com/coreos/rpm-ostree/issues/233[rpm-ostree#233].
+This issue is tracked in https://github.com/coreos/rpm-ostree/issues/233[rpm-ostree\&#35;233].
 
 == Using NVIDIA drivers
 
@@ -821,37 +835,37 @@ You can install the official NVIDIA binary drivers from the RPM Fusion repositor
 
 CAUTION: The NVIDIA binary drivers are not maintained by the Fedora Project and may sometimes not be available for the kernel version included in Fedora Atomic Desktops.
 
-. First, ensure that your system is fully updated by running `sudo rpm-ostree upgrade` and rebooting.
+. First, ensure that your system is fully updated by running \&#96;sudo rpm-ostree upgrade\&#96; and rebooting.
 
-. Then setup the RPM Fusion repositories following the https://docs.fedoraproject.org/en-US/quick-docs/rpmfusion-setup/#_enabling_the_rpm_fusion_repositories_for_ostree_based_systems[documentation], including the two reboots.
+. Then setup the RPM Fusion repositories following the https://docs.fedoraproject.org/en-US/quick-docs/rpmfusion-setup/\&#35;_enabling_the_rpm_fusion_repositories_for_ostree_based_systems[documentation], including the two reboots.
 
 . Finally, install the drivers:
 +
 [source]
 ----
-# rpm-ostree install kmod-nvidia xorg-x11-drv-nvidia
-# rpm-ostree kargs --append=rd.driver.blacklist=nouveau,nova-core \
+\&#35; rpm-ostree install kmod-nvidia xorg-x11-drv-nvidia
+\&#35; rpm-ostree kargs --append=rd.driver.blacklist=nouveau,nova-core \
 --append=modprobe.blacklist=nouveau,nova-core \
 --append=nvidia-drm.modeset=1 \
 --append=initcall_blacklist=simpledrm_platform_driver_init
-# systemctl reboot
+\&#35; systemctl reboot
 ----
 
 [NOTE]
 ====
-When using Secure Boot, the locally installed NVIDIA drivers have to be signed with a local key that is enrolled using `mokutil`.
-See the https://github.com/fedora-silverblue/issue-tracker/issues/499[fedora-silverblue#499] issue for more details.
+When using Secure Boot, the locally installed NVIDIA drivers have to be signed with a local key that is enrolled using \&#96;mokutil\&#96;.
+See the https://github.com/fedora-silverblue/issue-tracker/issues/499[fedora-silverblue\&#35;499] issue for more details.
 ====
 
-You may also encounter the following issues during installation: https://github.com/fedora-silverblue/issue-tracker/issues/286[#286], https://github.com/fedora-silverblue/issue-tracker/issues/331[#331]
+You may also encounter the following issues during installation: https://github.com/fedora-silverblue/issue-tracker/issues/286[\&#35;286], https://github.com/fedora-silverblue/issue-tracker/issues/331[\&#35;331]
 
-Thanks to https://blogs.gnome.org/alexl/[Alex Larsson] who made the required changes to the `akmods` and `kmodtools` packages.
+Thanks to https://blogs.gnome.org/alexl/[Alex Larsson] who made the required changes to the \&#96;akmods\&#96; and \&#96;kmodtools\&#96; packages.
 You can read more about the work that Alex did on his https://blogs.gnome.org/alexl/2019/03/06/nvidia-drivers-in-fedora-silverblue/[blog].
 
 == Out of tree kernel modules and drivers using DKMS
 
 Fedora Atomic Desktops currently do not have support for DKMS.
-See the upstream issue https://github.com/coreos/rpm-ostree/issues/1091[rpm-ostree#1091].
+See the upstream issue https://github.com/coreos/rpm-ostree/issues/1091[rpm-ostree\&#35;1091].
 
 Instead, we recommend that you make https://rpmfusion.org/Packaging/KernelModules/Kmods2[kmods] packages for out of tree kernel modules and submit them to the https://rpmfusion.org/[RPM Fusion] repos.
 The kmods packages will then be used by https://rpmfusion.org/Packaging/KernelModules/Akmods[akmods] which is supported on Fedora Atomic Desktops.
@@ -864,10 +878,10 @@ This section discusses third-party software sources not officially affiliated wi
 Use them at your own discretion.
 ====
 
-NOTE: If you want to use RPM Fusion repositories, please follow the xref:tips-and-tricks.adoc#_enabling_rpm_fusion_repos[Enabling RPM Fusion repos] section.
+NOTE: If you want to use RPM Fusion repositories, please follow the xref:tips-and-tricks.adoc\&#35;_enabling_rpm_fusion_repos[Enabling RPM Fusion repos] section.
 
 Some sofware may only be available from a third-party repository.
-You can add an external repository manually on Fedora Atomic Desktops by placing the `.repo` file into `/etc/yum.repos.d/` and the GPG key into `/etc/pki/rpm-gpg/`.
+You can add an external repository manually on Fedora Atomic Desktops by placing the \&#96;.repo\&#96; file into \&#96;/etc/yum.repos.d/\&#96; and the GPG key into \&#96;/etc/pki/rpm-gpg/\&#96;.
 The following is a full example for setting up the Taiscale repo:
 
 . Fetch and install the repo config:
@@ -894,7 +908,7 @@ $ curl -O https://pkgs.tailscale.com/stable/fedora/repo.gpg
 $ sudo install -o 0 -g 0 -m644 repo.gpg /etc/pki/rpm-gpg/tailscale.gpg
 ----
 
-. Replace the `gpgkey=` URL in the repo config by the path the GPG keys:
+. Replace the \&#96;gpgkey=\&#96; URL in the repo config by the path the GPG keys:
 +
 [source]
 ----
@@ -907,9 +921,9 @@ enabled=1
 type=rpm
 repo_gpgcheck=1
 gpgcheck=0
-### Update this line
+\&#35;\&#35;\&#35; Update this line
 gpgkey=file:///etc/pki/rpm-gpg/tailscale.gpg
-###    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+\&#35;\&#35;\&#35;    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ----
 
 . Install the new packages with:
@@ -919,7 +933,7 @@ gpgkey=file:///etc/pki/rpm-gpg/tailscale.gpg
 $ rpm-ostree install tailscale
 ----
 
-Better support in `rpm-ostree` for this use case is tracked in https://github.com/coreos/rpm-ostree/issues/4014[rpm-ostree#4014].
+Better support in \&#96;rpm-ostree\&#96; for this use case is tracked in https://github.com/coreos/rpm-ostree/issues/4014[rpm-ostree\&#35;4014].
 
 == SELinux problems
 
@@ -949,7 +963,7 @@ $ sudo cp -al /etc/selinux{,.bak}
 $ sudo rsync -rlv /usr/etc/selinux/ /etc/selinux/
 ----
 +
-After doing this, the output from `ostree admin config-diff | grep policy` should no longer indicate the policy is modified.
+After doing this, the output from \&#96;ostree admin config-diff | grep policy\&#96; should no longer indicate the policy is modified.
 +
 If your policy still appears to be modified, you can try the following approach.
 
@@ -961,14 +975,14 @@ $ sudo rm -rf /etc/selinux
 $ sudo cp -aT /usr/etc/selinux /etc/selinux
 ----
 +
-After this, the `ostree admin config-diff | grep policy` command should return no modifications.
+After this, the \&#96;ostree admin config-diff | grep policy\&#96; command should return no modifications.
 
 == Unable to add user to group
 
-Due to how `rpm-ostree` handles user + group entries, it may not be possible to use `usermod -a -G` to add a user to a group successfully.
-Until `rpm-ostree` moves to using `systemd sysusers`, users will have to populate the `/etc/group` file from the `/usr/lib/group` file before they can add themselves to the group.
+Due to how \&#96;rpm-ostree\&#96; handles user + group entries, it may not be possible to use \&#96;usermod -a -G\&#96; to add a user to a group successfully.
+Until \&#96;rpm-ostree\&#96; moves to using \&#96;systemd sysusers\&#96;, users will have to populate the \&#96;/etc/group\&#96; file from the \&#96;/usr/lib/group\&#96; file before they can add themselves to the group.
 
-For example, if you wanted to add a user to the `libvirt` group:
+For example, if you wanted to add a user to the \&#96;libvirt\&#96; group:
 [source,bash]
 ----
 $ grep -E '^libvirt:' /usr/lib/group | sudo tee -a /etc/group
@@ -977,29 +991,29 @@ $ sudo usermod -aG libvirt $USER
 
 NOTE: You will need to log off and log back in to apply these changes.
 
-This issue is tracked in https://github.com/coreos/rpm-ostree/issues/29[rpm-ostree#29] and https://github.com/coreos/rpm-ostree/issues/49[rpm-ostree#49].
+This issue is tracked in https://github.com/coreos/rpm-ostree/issues/29[rpm-ostree\&#35;29] and https://github.com/coreos/rpm-ostree/issues/49[rpm-ostree\&#35;49].
 
-== `ostree fsck` reports file corruption
+== \&#96;ostree fsck\&#96; reports file corruption
 
 It is possible to end up in a situation where one or more files on the disk have become corrupted or missing.
-In this case, `ostree fsck` will report errors in certain commits.
-The https://github.com/ostreedev/ostree/pull/345#issuecomment-262263824[workaround] in this case is to mark the entire OSTree commit as partially retrieved and then re-pull the commit.
+In this case, \&#96;ostree fsck\&#96; will report errors in certain commits.
+The https://github.com/ostreedev/ostree/pull/345\&#35;issuecomment-262263824[workaround] in this case is to mark the entire OSTree commit as partially retrieved and then re-pull the commit.
 
-== Read-only `/boot/efi` prevents any upgrades
+== Read-only \&#96;/boot/efi\&#96; prevents any upgrades
 
 This issue is most commonly seen when users have installed Fedora Atomic Desktops on Apple hardware.
-The `/boot/efi` partition on Apple hardware is formatted as HFS+ and is not always resilient to power failures or other kinds of hard power events.
+The \&#96;/boot/efi\&#96; partition on Apple hardware is formatted as HFS+ and is not always resilient to power failures or other kinds of hard power events.
 
-Since Fedora Atomic Desktops now includes the `hfsplus-tools` package in the base compose, it has become relatively easy for users to workaround this kind of error.
+Since Fedora Atomic Desktops now includes the \&#96;hfsplus-tools\&#96; package in the base compose, it has become relatively easy for users to workaround this kind of error.
 
 [source]
 ----
-# umount /boot/efi
-# fsck.hfsplus /dev/sda1
-# mount -o rw /boot/efi
+\&#35; umount /boot/efi
+\&#35; fsck.hfsplus /dev/sda1
+\&#35; mount -o rw /boot/efi
 ----
 
-See the https://github.com/coreos/rpm-ostree/issues/1380[rpm-ostree#1380] GitHub issue for additional details.
+See the https://github.com/coreos/rpm-ostree/issues/1380[rpm-ostree\&#35;1380] GitHub issue for additional details.
 
 == Unable to install a Fedora Atomic Desktop on EFI systems
 
@@ -1008,36 +1022,36 @@ The error that is often observed looks like:
 
 [source]
 ----
-ostree ['admin', '--sysroot=/mnt/sysimage', 'deploy', '--os=fedora-workstation', 'fedora-workstation:fedora/28/x86_64/workstation'] exited with code -6`
+ostree ['admin', '--sysroot=/mnt/sysimage', 'deploy', '--os=fedora-workstation', 'fedora-workstation:fedora/28/x86_64/workstation'] exited with code -6\&#96;
 ----
 
 A couple of possible workarounds exist:
 
-* During the install process, select "Custom Partitioning" and create an additional EFI partition.
-Assign the newly created EFI partition to `/boot/efi`.
+\&#42; During the install process, select 'Custom Partitioning' and create an additional EFI partition.
+Assign the newly created EFI partition to \&#96;/boot/efi\&#96;.
 You will then be able to boot the previous OS(s) alongside your Fedora Atomic Desktop.
 If this workaround is not successful follow the below step.
 
-* Reformat the EFI partition on the host during the install process.
-This can be done by selecting "Custom Partitioning" and checking the `Reformat` box when creating the `/boot/efi` partition.
+\&#42; Reformat the EFI partition on the host during the install process.
+This can be done by selecting 'Custom Partitioning' and checking the \&#96;Reformat\&#96; box when creating the \&#96;/boot/efi\&#96; partition.
 
 [WARNING]
 ====
-Choosing to reformat `/boot/efi` will likely result in the inability to boot any other operating systems that were previously installed.
+Choosing to reformat \&#96;/boot/efi\&#96; will likely result in the inability to boot any other operating systems that were previously installed.
 Be sure that you have backed up any important data before using this workaround.
 ====
 
-This issue is tracked in https://bugzilla.redhat.com/show_bug.cgi?id=1575957[Bugzilla#1575957].
+This issue is tracked in https://bugzilla.redhat.com/show_bug.cgi?id=1575957[Bugzilla\&#35;1575957].
 
 == toolbox: failed to list images with com.redhat.component=fedora-toolbox
 
 [IMPORTANT]
 ====
-As of `podman` version `1.4.0` this workaround is not necessary.
-Ensure `podman` is up to date by issuing `rpm-ostree upgrade` before attempting this workaround.
+As of \&#96;podman\&#96; version \&#96;1.4.0\&#96; this workaround is not necessary.
+Ensure \&#96;podman\&#96; is up to date by issuing \&#96;rpm-ostree upgrade\&#96; before attempting this workaround.
 ====
 
-When issuing the `toolbox list` command, systems using `podman` versions newer than `1.2.0`, will generate the following error:
+When issuing the \&#96;toolbox list\&#96; command, systems using \&#96;podman\&#96; versions newer than \&#96;1.2.0\&#96;, will generate the following error:
 
 [source,bash]
 ----
@@ -1046,11 +1060,11 @@ toolbox: failed to list images with com.redhat.component=fedora-toolbox
 
 [TIP]
 ====
-The following workaround might be useful for other `toolbox` errors caused by `podman` versions greater than `1.2.0`.
-See https://github.com/containers/toolbox/issues/169#issuecomment-495193902[toolbox#169].
+The following workaround might be useful for other \&#96;toolbox\&#96; errors caused by \&#96;podman\&#96; versions greater than \&#96;1.2.0\&#96;.
+See https://github.com/containers/toolbox/issues/169\&#35;issuecomment-495193902[toolbox\&#35;169].
 ====
 
-As a workaround, it is possible to override `podman` packages newer than version `1.2.0` by issuing:
+As a workaround, it is possible to override \&#96;podman\&#96; packages newer than version \&#96;1.2.0\&#96; by issuing:
 
 [source,bash]
 ----
@@ -1062,9 +1076,9 @@ Reboot the system to apply the changes.
 
 For reference, it is also possible to override the package by following these steps:
 
-. Download `podman-1.2.0-2.git3bd528e.fc30.x86_64.rpm` from https://kojipkgs.fedoraproject.org//packages/podman/1.2.0/2.git3bd528e.fc30/x86_64/podman-1.2.0-2.git3bd528e.fc30.x86_64.rpm[Koji].
-. Remove `podman-manpages` issuing: `rpm-ostree override remove podman-manpages`.
-. Override the currently installed `podman` package (using the package you have downloaded on the first step) by:
+. Download \&#96;podman-1.2.0-2.git3bd528e.fc30.x86_64.rpm\&#96; from https://kojipkgs.fedoraproject.org//packages/podman/1.2.0/2.git3bd528e.fc30/x86_64/podman-1.2.0-2.git3bd528e.fc30.x86_64.rpm[Koji].
+. Remove \&#96;podman-manpages\&#96; issuing: \&#96;rpm-ostree override remove podman-manpages\&#96;.
+. Override the currently installed \&#96;podman\&#96; package (using the package you have downloaded on the first step) by:
 +
 [source,bash]
 ----
@@ -1083,7 +1097,7 @@ $ rpm-ostree override reset podman-manpages
 
 == Unable to enter a toolbox due to permissions errors
 
-With certain versions of `podman`, trying to enter a toolbox will result in errors.
+With certain versions of \&#96;podman\&#96;, trying to enter a toolbox will result in errors.
 You can fix this by resetting the permissions on the overlay-containers with the following command:
 
 [source,bash]
@@ -1093,30 +1107,30 @@ $ sudo chown -R $USER ~/.local/share/containers/storage/overlay-containers
 
 This will reset the permissions on your containers and allow you to enter them again.
 
-See the upstream podman issue: https://github.com/containers/podman/issues/3187[podman#3187].
+See the upstream podman issue: https://github.com/containers/podman/issues/3187[podman\&#35;3187].
 
-== Running `restorecon`
+== Running \&#96;restorecon\&#96;
 
 [WARNING]
 ====
-You should never run `restorecon` on a Fedora Atomic Desktop system.
-See the following bug for details - https://bugzilla.redhat.com/show_bug.cgi?id=1259018[Bugzilla#1259018]
+You should never run \&#96;restorecon\&#96; on a Fedora Atomic Desktop system.
+See the following bug for details - https://bugzilla.redhat.com/show_bug.cgi?id=1259018[Bugzilla\&#35;1259018]
 ====
 
 However, if you happened to do this, it is possible to recover.
 
-. Boot with `enforcing=0` on the kernel command line
-. Create a new, "fixed" commit locally
-. Deploy the new "fixed" commit
-. Run `restorecon`
+. Boot with \&#96;enforcing=0\&#96; on the kernel command line
+. Create a new, 'fixed' commit locally
+. Deploy the new 'fixed' commit
+. Run \&#96;restorecon\&#96;
 . Reboot
 . Cleanup
 
-[source,bash,subs="attributes"]
+[source,bash,subs='attributes']
 ----
 $ rpm-ostree status -b | grep BaseCommit
 BaseCommit: 696991d589980aeaef5eda352dd7ad3d33c444c789c209f793a84bc6e7269aee
-### If the above command does not display any output, try:
+\&#35;\&#35;\&#35; If the above command does not display any output, try:
 $ rpm-ostree status -b | grep Commit
 Commit: 696991d589980aeaef5eda352dd7ad3d33c444c789c209f793a84bc6e7269aee
 $ sudo ostree checkout \
@@ -1127,16 +1141,16 @@ $ sudo ostree commit --consume \
 --link-checkout-speedup --orphan --selinux-policy=/ /ostree/repo/tmp/selinux-fix
 $ sudo restorecon -Rv /var
 $ sudo restorecon -Rv /etc
-### In the command below, substitute:
-### - x86_64 with your actual CPU architecture
-### - silverblue with the name for your Fedora Atomic Desktop variant
+\&#35;\&#35;\&#35; In the command below, substitute:
+\&#35;\&#35;\&#35; - x86_64 with your actual CPU architecture
+\&#35;\&#35;\&#35; - silverblue with the name for your Fedora Atomic Desktop variant
 $ sudo ostree admin deploy fedora:fedora/{version-stable}/x86_64/silverblue
 $ sudo reboot
 ----
 
 The caveat to this recovery is that your layered packages will be removed; you'll need to relayer them after the recovery.
 
-See this upstream comment for additional details: https://github.com/ostreedev/ostree/issues/1265#issuecomment-484557615[ostree#1265].
+See this upstream comment for additional details: https://github.com/ostreedev/ostree/issues/1265\&#35;issuecomment-484557615[ostree\&#35;1265].
 
 == Resetting passwords in Rescue Mode
 
@@ -1145,23 +1159,25 @@ In the case where you are unable to remember your user password or root password
 . While the system is booting, interrupt the boot sequence at the https://docs.fedoraproject.org/en-US/quick-docs/grub2-bootloader/[GRUB2] menu by using the kbd:[Esc] key.
 . Select the boot entry that you wish to edit using the arrow keys.
 . Edit the selected entry with the kbd:[e] key.
-. Use the arrow keys to select the line beginning with `linux`, `linux16`, or `linuxefi`.
-. Go to the end of that line (by pressing kbd:[Ctrl] + kbd:[e]) and append `init=/bin/bash`.
+. Use the arrow keys to select the line beginning with \&#96;linux\&#96;, \&#96;linux16\&#96;, or \&#96;linuxefi\&#96;.
+. Go to the end of that line (by pressing kbd:[Ctrl] + kbd:[e]) and append \&#96;init=/bin/bash\&#96;.
 . Press kbd:[Ctrl] + kbd:[x] or kbd:[F10] to boot the entry.
-. At the resulting `bash` prompt, run the following commands:
+. At the resulting \&#96;bash\&#96; prompt, run the following commands:
 
 [source]
 ----
-# mount -t selinuxfs selinuxfs /sys/fs/selinux
-# /sbin/load_policy
-# passwd
-# sync
-# /sbin/reboot -ff
+\&#35; mount -t selinuxfs selinuxfs /sys/fs/selinux
+\&#35; /sbin/load_policy
+\&#35; passwd
+\&#35; sync
+\&#35; /sbin/reboot -ff
 ----
 
-If you want to change the password for a user account, replace the `passwd` command with `passwd <username>`.
+If you want to change the password for a user account, replace the \&#96;passwd\&#96; command with \&#96;passwd \&lt;username\&gt;\&#96;.
 
 After the system finishes rebooting, you should be able to login with the username and new password.
+
+
 = Frequently Asked Questions (FAQ)
 
 == About the Fedora Atomic Desktops projects
@@ -1188,9 +1204,9 @@ However, the two efforts do share a desire to deliver a user experience that is 
 
 We chose the Kinoite name for the following reasons:
 
-* KDE based projects traditionally start with a "K".
-* Kinoite is a blue mineral (https://en.wikipedia.org/wiki/Kinoite[Wikipedia]), thus referring to both the "silver" and "blue" part of Silverblue and the blue color of the KDE logo.
-* "Kinoite" means "There is a tree" in Japanese (https://translate.google.com/?sl=auto&tl=en&text=kinoite&op=translate[Google Translate]), thus referring to the "tree" in "ostree".
+\&#42; KDE based projects traditionally start with a 'K'.
+\&#42; Kinoite is a blue mineral (https://en.wikipedia.org/wiki/Kinoite[Wikipedia]), thus referring to both the 'silver' and 'blue' part of Silverblue and the blue color of the KDE logo.
+\&#42; 'Kinoite' means 'There is a tree' in Japanese (https://translate.google.com/?sl=auto\&amp;tl=en\&amp;text=kinoite\&amp;op=translate[Google Translate]), thus referring to the 'tree' in 'ostree'.
 
 === What is Fedora Atomic Desktops' relationship with Fedora IoT and Fedora CoreOS?
 
@@ -1201,26 +1217,26 @@ However, Fedora Atomic Desktops are specifically focused on workstation and desk
 
 === How can I play more videos in Firefox, like YouTube?
 
-Firefox is included in the OS image for now (see https://gitlab.com/fedora/ostree/sig/-/issues/3[issue#3] for progress on moving to Flatpak by default).
+Firefox is included in the OS image for now (see https://gitlab.com/fedora/ostree/sig/-/issues/3[issue\&#35;3] for progress on moving to Flatpak by default).
 Until that changes, getting it to play videos works the same way as it does for the regular package mode Fedora: find a package with the needed codecs, and install it.
-The one difference is that you use `rpm-ostree install` instead of `dnf install`.
+The one difference is that you use \&#96;rpm-ostree install\&#96; instead of \&#96;dnf install\&#96;.
 An alternative solution is to install https://flathub.org/apps/details/org.mozilla.firefox[Firefox from Flathub].
 
 === How do I create a VPN connection?
 
-`/etc` is not part of the read-only root filesystem, so you can just copy files into `/etc/NetworkManager/system-connections` (or let NetworkManager store them there when you recreate your connections).
-Certificates in `/etc/pki` need to be handled similarly.
+\&#96;/etc\&#96; is not part of the read-only root filesystem, so you can just copy files into \&#96;/etc/NetworkManager/system-connections\&#96; (or let NetworkManager store them there when you recreate your connections).
+Certificates in \&#96;/etc/pki\&#96; need to be handled similarly.
 
 === How can I install my preferred IDE on Fedora Atomic Desktops?
 
 You can install most IDE directly in a toolbox where you can also install all the developments tools from the Fedora repositories.
-To be able to launch them directly from menus, you can copy the `.desktop` file for the IDE from the toolbox to your home directory in `~/.local/share/applications/`.
-You should then update the `Exec` line in the `.desktop` file to prepend `toolbox run` to start it from the toolbox.
+To be able to launch them directly from menus, you can copy the \&#96;.desktop\&#96; file for the IDE from the toolbox to your home directory in \&#96;~/.local/share/applications/\&#96;.
+You should then update the \&#96;Exec\&#96; line in the \&#96;.desktop\&#96; file to prepend \&#96;toolbox run\&#96; to start it from the toolbox.
 You can also use the IDEs packaged as Flatpaks from Flathub.
 
 === How can I see what packages were updated between two commits?
 
-* If you want to compare the booted deployment with the pending deployment (or rollback deployment), simply issue:
+\&#42; If you want to compare the booted deployment with the pending deployment (or rollback deployment), simply issue:
 +
 [source,bash]
 ----
@@ -1228,22 +1244,22 @@ $ rpm-ostree db diff
 ----
 
 +
-TIP: You can also see the RPM changelog by adding the `-c` option like so: `rpm-ostree db diff -c`.
+TIP: You can also see the RPM changelog by adding the \&#96;-c\&#96; option like so: \&#96;rpm-ostree db diff -c\&#96;.
 
-* If you want to see which packages were updated between two specific commits:
+\&#42; If you want to see which packages were updated between two specific commits:
 
 . Find out which two commits you want to compare by issuing:
 +
 [source]
 ----
-$ ostree log <ref>
+$ ostree log \&lt;ref\&gt;
 ----
 
 . You can now compare the two commits by issuing:
 +
 [source]
 ----
-$ rpm-ostree db diff <commit x> <commit y>
+$ rpm-ostree db diff \&lt;commit x\&gt; \&lt;commit y\&gt;
 ----
 
 === How can I check the version number of an installed package?
@@ -1251,28 +1267,28 @@ $ rpm-ostree db diff <commit x> <commit y>
 You can simply use:
 [source]
 ----
-$ rpm -q <package>
+$ rpm -q \&lt;package\&gt;
 ----
 
-=== How can I check if an `rpm` software package is available in the repository?
+=== How can I check if an \&#96;rpm\&#96; software package is available in the repository?
 
 To search for packages in your enabled repositories, use:
 [source]
 ----
-$ rpm-ostree search <package>
+$ rpm-ostree search \&lt;package\&gt;
 ----
 
 === How can I downgrade my system's kernel?
 
 If, for whatever reason, you need to downgrade the kernel, you can do so by following these steps:
 
-. For the version you need to downgrade, download `<kernel>`, `<kernel-core>`, `<kernel-modules>`, `<kernel-modules-core>` and `<kernel-modules-extra>` from https://koji.fedoraproject.org/koji/packageinfo?packageID=8[Koji].
+. For the version you need to downgrade, download \&#96;\&lt;kernel\&gt;\&#96;, \&#96;\&lt;kernel-core\&gt;\&#96;, \&#96;\&lt;kernel-modules\&gt;\&#96;, \&#96;\&lt;kernel-modules-core\&gt;\&#96; and \&#96;\&lt;kernel-modules-extra\&gt;\&#96; from https://koji.fedoraproject.org/koji/packageinfo?packageID=8[Koji].
 
 . Install the packages downloaded on the previous step by issuing:
 +
 [source]
 ----
-$ rpm-ostree override replace <kernel> <kernel-core> <kernel-modules> <kernel-modules-core> <kernel-modules-extra>
+$ rpm-ostree override replace \&lt;kernel\&gt; \&lt;kernel-core\&gt; \&lt;kernel-modules\&gt; \&lt;kernel-modules-core\&gt; \&lt;kernel-modules-extra\&gt;
 ----
 
 . Reboot the system to apply the changes.
@@ -1290,7 +1306,7 @@ $ sudo ostree admin pin 0
 ----
 
 +
-NOTE: `0` here refers to the first deployment listed by `rpm-ostree status`
+NOTE: \&#96;0\&#96; here refers to the first deployment listed by \&#96;rpm-ostree status\&#96;
 
 . Verify that you have pinned your deployment of choice by issuing:
 +
@@ -1299,23 +1315,26 @@ NOTE: `0` here refers to the first deployment listed by `rpm-ostree status`
 $ rpm-ostree status
 ----
 
-. After the deployment is pinned, you can upgrade your system by using the instructions found xref:updates-upgrades-rollbacks.adoc#upgrading[here].
+. After the deployment is pinned, you can upgrade your system by using the instructions found xref:updates-upgrades-rollbacks.adoc\&#35;upgrading[here].
 
 . When you have completed rebasing, reboot the system.
-The GRUB menu will now present you with both: the previous deployment major version entry (e.g.: *"Fedora {version-oldstable}.YYYYMMDD.n"*) and the new deployment major version entry (e.g.: *"Fedora {version-stable}.YYYYMMDD.n"*).
+The GRUB menu will now present you with both: the previous deployment major version entry (e.g.: \&#42;'Fedora {version-oldstable}.YYYYMMDD.n'\&#42;) and the new deployment major version entry (e.g.: \&#42;'Fedora {version-stable}.YYYYMMDD.n'\&#42;).
 
 +
 NOTE: At the moment it is not possible to name (pinned) deployments and their associated GRUB menu entries.
+
+
 = Tips and Tricks
 
 == Hiding the default browser (Firefox)
 
 If you're using another browser than the one installed by default (Firefox) then you can hide the default one from the interface via the following commands:
 
-[source]
+[source,console]
 ----
+$ sudo mkdir -p /usr/local/share/applications
 $ sudo cp /usr/share/applications/org.mozilla.firefox.desktop /usr/local/share/applications/
-$ sudo sed -i "2a\\NotShowIn=GNOME;KDE" /usr/local/share/applications/org.mozilla.firefox.desktop
+$ sudo sed -i '2a\\NotShowIn=GNOME;KDE' /usr/local/share/applications/org.mozilla.firefox.desktop
 $ sudo update-desktop-database /usr/local/share/applications/
 ----
 
@@ -1323,10 +1342,30 @@ $ sudo update-desktop-database /usr/local/share/applications/
 
 If you want to make the default browser (Firefox) visible again after hiding it, you can follow these steps:
 
-[source]
+[source,console]
 ----
-$ sudo rm -f /usr/local/share/applications/*firefox*.desktop
+$ sudo rm -f /usr/local/share/applications/org.mozilla.firefox.desktop
 $ sudo update-desktop-database /usr/local/share/applications
+----
+
+=== Alternative method
+
+If you are using sway, or want to hide the default browser for only your user, you can do that with these commands:
+
+[source,console]
+----
+$ mkdir -p ~/.local/share/applications
+$ cp /usr/share/applications/org.mozilla.firefox.desktop ~/.local/share/applications/
+$ sed -i '2a\\NotShowIn=GNOME;KDE;sway' ~/.local/share/applications/org.mozilla.firefox.desktop
+$ update-desktop-database ~/.local/share/applications
+----
+
+and to reenable:
+
+[source,console]
+----
+$ rm -f ~/.local/share/applications/org.mozilla.firefox.desktop
+$ update-desktop-database ~/.local/share/applications
 ----
 
 == Enabling RPM Fusion repos
@@ -1378,89 +1417,89 @@ For more information, see https://discussion.fedoraproject.org/t/simplifying-upd
 If you frequently make use of Toolbx to perform various tasks and use multiple Toolbx containers it can be hard to keep track of whether you are currently executing commands on the host or in a Toolbx container.
 Furthermore, there is currently no command to tell you in which Toolbx container you are working.
 
-To alleviate this, you can add the following shell alias at the end of your `~/.bashrc`:
+To alleviate this, you can add the following shell alias at the end of your \&#96;~/.bashrc\&#96;:
 
 [source,bash]
 ----
-alias istoolbx='[ -f "/run/.toolboxenv" ] && grep -oP "(?<=name=\")[^\";]+" /run/.containerenv'
+alias istoolbx='[ -f '/run/.toolboxenv' ] \&amp;\&amp; grep -oP '(?\&lt;=name=\')[^\';]+' /run/.containerenv'
 ----
 
-When you open a new shell, you now have access to the new command `istoolbx`.
+When you open a new shell, you now have access to the new command \&#96;istoolbx\&#96;.
 This will behave as follows:
 
-* When run from the host, returns an exit code of 1.
-* When run from a Toolbx container, returns an exit code of 0 and prints the current Toolbx containers name to the console.
+\&#42; When run from the host, returns an exit code of 1.
+\&#42; When run from a Toolbx container, returns an exit code of 0 and prints the current Toolbx containers name to the console.
 
-If a more automated solution is your preference the following added to your `~/.bashrc` will change your bash prompt to include "[toolbox <name>]":
+If a more automated solution is your preference the following added to your \&#96;~/.bashrc\&#96; will change your bash prompt to include '[toolbox \&lt;name\&gt;]':
 
 [source,bash]
 ----
 function is_toolbox() {
-if [ -f "/run/.toolboxenv" ]
+if [ -f '/run/.toolboxenv' ]
 then
-TOOLBOX_NAME=$(cat /run/.containerenv | grep -oP "(?<=name=\")[^\";]+")
-echo "[${HOSTNAME} ${TOOLBOX_NAME}]"
+TOOLBOX_NAME=$(cat /run/.containerenv | grep -oP '(?\&lt;=name=\')[^\';]+')
+echo '[${HOSTNAME} ${TOOLBOX_NAME}]'
 fi
 }
 ----
 
-Now you can include `is_toolbox` in your `PS1` variable and not need to execute any extra commands in order to know whether or not your are in a toolbox or host shell.
+Now you can include \&#96;is_toolbox\&#96; in your \&#96;PS1\&#96; variable and not need to execute any extra commands in order to know whether or not your are in a toolbox or host shell.
 
 .Example:
 [source,bash]
 ----
-export PS1="\[\e[31m\]\`is_toolbox\`\]\e[m\]\[\e[32m\]\\$ \[\e[m\]\[\e[37m\]❱\[\e[m\] "
+export PS1='\[\e[31m\]\\&#96;is_toolbox\\&#96;\]\e[m\]\[\e[32m\]\\$ \[\e[m\]\[\e[37m\]❱\[\e[m\] '
 ----
 
-This results in a prompt which appears as such when not in a toolbox: `$ ❱`
+This results in a prompt which appears as such when not in a toolbox: \&#96;$ ❱\&#96;
 
-However, when running in a toolbox named "default" looks like: `[toolbox default]$ ❱`
+However, when running in a toolbox named 'default' looks like: \&#96;[toolbox default]$ ❱\&#96;
 
 === Running applications from inside Toolbx on the host
 
-This can be necessary if you want to interact with tools available from the host, for example `podman`, `nmcli` or `rpm-ostree` without leaving the Toolbx container in between.
-You can use `flatpak-spawn`, included in the base installation for this:
+This can be necessary if you want to interact with tools available from the host, for example \&#96;podman\&#96;, \&#96;nmcli\&#96; or \&#96;rpm-ostree\&#96; without leaving the Toolbx container in between.
+You can use \&#96;flatpak-spawn\&#96;, included in the base installation for this:
 
 [source,bash]
 ----
 $ flatpak-spawn --host podman --help
 ----
 
-If the application you want to call requires `sudo` access, the `-S` option must be supplied to `sudo` like below:
+If the application you want to call requires \&#96;sudo\&#96; access, the \&#96;-S\&#96; option must be supplied to \&#96;sudo\&#96; like below:
 
 [source,bash]
 ----
 $ flatpak-spawn --host sudo -S rpm-ostree status
 ----
 
-If you find yourself using commands like these frequently to access e.g. the flatpak command from inside the Toolbx container, you can create yourself a short custom wrapper script (*inside the Toolbx container*).
+If you find yourself using commands like these frequently to access e.g. the flatpak command from inside the Toolbx container, you can create yourself a short custom wrapper script (\&#42;inside the Toolbx container\&#42;).
 To do this, perform the following steps:
 
-. Define the `istoolbx` alias (for convenience) by executing the command mentioned above in your terminal.
+. Define the \&#96;istoolbx\&#96; alias (for convenience) by executing the command mentioned above in your terminal.
 . Make sure you are in a Toolbx container.
 If the following command doesn't produce any output, you are likely still working on the host!
 +
 [source,bash]
 ----
 [toolbx]$ istoolbx
-<Toolbx container name here>
+\&lt;Toolbx container name here\&gt;
 ----
 . Once you have made sure you're in a Toolbx container, execute the following command:
 +
 [source,bash]
 ----
-[toolbx]$ echo -e '#!/bin/sh\nexec /usr/bin/flatpak-spawn --host flatpak "$@"' | \
-sudo tee /usr/local/bin/flatpak 1>/dev/null && sudo chmod +x /usr/local/bin/flatpak
+[toolbx]$ echo -e '\&#35;!/bin/sh\nexec /usr/bin/flatpak-spawn --host flatpak '$@'' | \
+sudo tee /usr/local/bin/flatpak 1\&gt;/dev/null \&amp;\&amp; sudo chmod +x /usr/local/bin/flatpak
 ----
 
-You now have a `flatpak` command available that allows you to interact with `flatpak` as if you were running the command on the host.
+You now have a \&#96;flatpak\&#96; command available that allows you to interact with \&#96;flatpak\&#96; as if you were running the command on the host.
 
-== Working with `ostree`/`rpm-ostree`
+== Working with \&#96;ostree\&#96;/\&#96;rpm-ostree\&#96;
 
 === Tracking changes to the base OS
 
-Some directories in `ostree`-based operating systems are writable by the user, like `/etc`.
-You can get a quick overview of the files changed under `/etc` using the following command:
+Some directories in \&#96;ostree\&#96;-based operating systems are writable by the user, like \&#96;/etc\&#96;.
+You can get a quick overview of the files changed under \&#96;/etc\&#96; using the following command:
 
 [source,bash]
 ----
@@ -1471,13 +1510,13 @@ To get a more elaborate diff, you can use something like this:
 
 [source,bash]
 ----
-$ sudo diff -yrW200 --suppress-common-lines --color=always /usr/etc /etc 2>/dev/null
+$ sudo diff -yrW200 --suppress-common-lines --color=always /usr/etc /etc 2\&gt;/dev/null
 ----
 
 [NOTE]
 ====
-This works because ostree keeps an unmodified copy of the `/etc` directory under `/usr/etc`.
-All of your changes go to `/etc` directly.
+This works because ostree keeps an unmodified copy of the \&#96;/etc\&#96; directory under \&#96;/usr/etc\&#96;.
+All of your changes go to \&#96;/etc\&#96; directly.
 ====
 
 == Working with Flatpak applications
@@ -1501,8 +1540,8 @@ $ flatpak run org.gnome.Evince
 
 In addition, most Flatpak applications export their internal binaries under an installation-dependent location:
 
-* For Flatpak applications installed from `system` remotes, these can be found under `/var/lib/flatpak/exports/bin/`.
-* For Flatpak applications installed from `user` remotes, these can be found under `$HOME/.local/share/flatpak/exports/bin/`.
+\&#42; For Flatpak applications installed from \&#96;system\&#96; remotes, these can be found under \&#96;/var/lib/flatpak/exports/bin/\&#96;.
+\&#42; For Flatpak applications installed from \&#96;user\&#96; remotes, these can be found under \&#96;$HOME/.local/share/flatpak/exports/bin/\&#96;.
 
 [NOTE]
 ====
@@ -1514,23 +1553,25 @@ $ flatpak list --app --columns=name,installation
 ----
 ====
 
-You can then either add these directories to your `$PATH`:
+You can then either add these directories to your \&#96;$PATH\&#96;:
 
 [source,bash]
 ----
 $ org.gnome.Evince
 ----
 
-or setup shell `alias`es as needed to make them available to the CLI like so:
+or setup shell \&#96;alias\&#96;es as needed to make them available to the CLI like so:
 
 [source,bash]
 ----
-$ alias evince="flatpak run org.gnome.Evince"
-### or:
-alias evince="org.gnome.Evince"
+$ alias evince='flatpak run org.gnome.Evince'
+\&#35;\&#35;\&#35; or:
+alias evince='org.gnome.Evince'
 $ evince
 ----
-* Configuration Guides
+
+
+\&#42; Configuration Guides
 [[sway-configuration-guide]]
 
 :config-repo:  https://gitlab.com/fedora/sigs/sway/sway-config-fedora
@@ -1547,26 +1588,26 @@ Important differences will be highlighted.
 
 If you are looking for more general resources, please check:
 
-* man pages: https://man.archlinux.org/man/sway.5[`sway(5)`] https://man.archlinux.org/man/sway-bar.5[`sway-bar(5)`] https://man.archlinux.org/man/sway-input.5[`sway-input(5)`] https://man.archlinux.org/man/sway-output.5[`sway-output(5)`]
-* https://github.com/swaywm/sway/wiki[Official Sway wiki]
-* https://i3wm.org/docs/userguide.html[i3 User's Guide]&#8212;while it's written for i3, all the important concepts are the same for Sway.
+\&#42; man pages: https://man.archlinux.org/man/sway.5[\&#96;sway(5)\&#96;] https://man.archlinux.org/man/sway-bar.5[\&#96;sway-bar(5)\&#96;] https://man.archlinux.org/man/sway-input.5[\&#96;sway-input(5)\&#96;] https://man.archlinux.org/man/sway-output.5[\&#96;sway-output(5)\&#96;]
+\&#42; https://github.com/swaywm/sway/wiki[Official Sway wiki]
+\&#42; https://i3wm.org/docs/userguide.html[i3 User's Guide]\&amp;\&#35;8212;while it's written for i3, all the important concepts are the same for Sway.
 
 == Configuration profiles
 
-The Sway package in Fedora defers most of the dependencies and the config file ownership to the `sway-config-*` subpackages.
+The Sway package in Fedora defers most of the dependencies and the config file ownership to the \&#96;sway-config-\&#42;\&#96; subpackages.
 This allows us to ship different configuration profiles with different sets of runtime dependencies.
 
 The following profile packages are currently available in Fedora:
 
-* *sway-config-upstream* - the upstream configuration as it comes with the Sway sources.
+\&#42; \&#42;sway-config-upstream\&#42; - the upstream configuration as it comes with the Sway sources.
 The only permitted modifications to this profile's config file are adjustments for dependencies currently unavailable in Fedora.
-* *sway-config-minimal* - minimal configuration with any optional dependencies excluded.
+\&#42; \&#42;sway-config-minimal\&#42; - minimal configuration with any optional dependencies excluded.
 The profile was created for headless servers, containers and buildroot usage.
 It is also suitable for building a very minimal installation from scratch.
-* *sway-config-fedora* - customized configuration for Fedora Sway Spin.
+\&#42; \&#42;sway-config-fedora\&#42; - customized configuration for Fedora Sway Spin.
 
 The packages are mutually exclusive, and one of these must be present.
-The one installed by default with `dnf install sway` is *sway-config-upstream* and the one that will be installed with Sway Spin/Sway Desktop Environment group is *sway-config-fedora*.
+The one installed by default with \&#96;dnf install sway\&#96; is \&#42;sway-config-upstream\&#42; and the one that will be installed with Sway Spin/Sway Desktop Environment group is \&#42;sway-config-fedora\&#42;.
 
 You can select the profile with following command:
 
@@ -1577,7 +1618,7 @@ $ sudo dnf swap sway-config sway-config-minimal
 $ sudo dnf swap sway-config sway-config-fedora
 ----
 
-The command will replace the default `/etc/sway/config` file and apply the new set of dependencies.
+The command will replace the default \&#96;/etc/sway/config\&#96; file and apply the new set of dependencies.
 Packages unused by the new profile will be autoremoved.
 
 The corresponding incantation for Sway Atomic and other custom Sway images is:
@@ -1591,45 +1632,45 @@ Note, however, that it does not remove the original profile dependencies from th
 
 == Fedora configuration
 
-{config-repo}[*sway-config-fedora*] contains the default configuration for Fedora Sway Spin.
+{config-repo}[\&#42;sway-config-fedora\&#42;] contains the default configuration for Fedora Sway Spin.
 It is built on top of the default Sway config with a few quality of life improvements and opinionated changes.
 
-Most of the additions are implemented as a standalone configuration snippets stored at {config-dir}/sway/config.d[`/usr/share/sway/config.d/`] and automatically loaded from the main configuration file.
-Environment configuration and logging interception are implemented in the {config-file}/sway/start-sway[`/usr/bin/start-sway`] wrapper script.
+Most of the additions are implemented as a standalone configuration snippets stored at {config-dir}/sway/config.d[\&#96;/usr/share/sway/config.d/\&#96;] and automatically loaded from the main configuration file.
+Environment configuration and logging interception are implemented in the {config-file}/sway/start-sway[\&#96;/usr/bin/start-sway\&#96;] wrapper script.
 
 === Environment variables
 
-If you are using a compatible Display Manager (GDM or SDDM), you should be able to adjust the initial environment for Sway using a system-wide configuration at `/etc/sway/environment` or per-user config at `~/.config/sway/environment`.
+If you are using a compatible Display Manager (GDM or SDDM), you should be able to adjust the initial environment for Sway using a system-wide configuration at \&#96;/etc/sway/environment\&#96; or per-user config at \&#96;~/.config/sway/environment\&#96;.
 The variables set in the user configuration overwrite matching variables set system-wide.
 
-Please, check the comments and examples in {config-file}/sway/environment[`/etc/sway/environment`] to learn more.
+Please, check the comments and examples in {config-file}/sway/environment[\&#96;/etc/sway/environment\&#96;] to learn more.
 
 === Sections
 
 The configuration snippets we provide are grouped into the following sections:
 
-50-59 (`50-rules-*.conf`):: Window rules (`for_window`, `assign` and related configuration).
-60-69 (`60-bindings-\*.conf`, `65-mode-*.conf`):: Key bindings and binding modes.
-90-94 (`90-*.conf`):: System applications: bars, idle daemons and other components.
-95-99 (`95-*.conf`):: Autostart applications.
+50-59 (\&#96;50-rules-\&#42;.conf\&#96;):: Window rules (\&#96;for_window\&#96;, \&#96;assign\&#96; and related configuration).
+60-69 (\&#96;60-bindings-\\&#42;.conf\&#96;, \&#96;65-mode-\&#42;.conf\&#96;):: Key bindings and binding modes.
+90-94 (\&#96;90-\&#42;.conf\&#96;):: System applications: bars, idle daemons and other components.
+95-99 (\&#96;95-\&#42;.conf\&#96;):: Autostart applications.
 
 === Overrides and load precedence
 
-Fedora configuration pass:[<del>ab</del>]uses the implementation details of the Sway configuration parser (https://man7.org/linux/man-pages/man3/wordexp.3p.html[`wordexp(3p)`]) to implement an overrides mechanism for the snippets.
+Fedora configuration pass:[\&lt;del\&gt;ab\&lt;/del\&gt;]uses the implementation details of the Sway configuration parser (https://man7.org/linux/man-pages/man3/wordexp.3p.html[\&#96;wordexp(3p)\&#96;]) to implement an overrides mechanism for the snippets.
 
 The priority increases from the packaged configuration to a system-wide configuration and an user configuration directories:
 
-* `/usr/share/sway/config.d/*.conf`
-* `/etc/sway/config.d/*.conf`
-* `$XDG_CONFIG_HOME/sway/config.d/*.conf` (defaults to `+~/.config/sway/config.d/*.conf+`)
+\&#42; \&#96;/usr/share/sway/config.d/\&#42;.conf\&#96;
+\&#42; \&#96;/etc/sway/config.d/\&#42;.conf\&#96;
+\&#42; \&#96;$XDG_CONFIG_HOME/sway/config.d/\&#42;.conf\&#96; (defaults to \&#96;+~/.config/sway/config.d/\&#42;.conf+\&#96;)
 
 The includes are also sorted by a file name across all the directories.
 
-By creating a file with the same name in `/etc/sway/config.d` you'll force the config preprocessor to ignore the corresponding snippet from `/usr` and load the one from `/etc`.
+By creating a file with the same name in \&#96;/etc/sway/config.d\&#96; you'll force the config preprocessor to ignore the corresponding snippet from \&#96;/usr\&#96; and load the one from \&#96;/etc\&#96;.
 Similarly, the configuration snippet from a home directory wins over the earlier locations.
 
-To put it even more simple: imagine the distribution configuration file `/usr/share/sway/config.d/90-bar.conf` that sets `waybar` as a status bar.
-If you want to prevent `waybar` from starting, you could create an empty file in your home directory:
+To put it even more simple: imagine the distribution configuration file \&#96;/usr/share/sway/config.d/90-bar.conf\&#96; that sets \&#96;waybar\&#96; as a status bar.
+If you want to prevent \&#96;waybar\&#96; from starting, you could create an empty file in your home directory:
 
 [source,shell]
 ----
@@ -1643,19 +1684,19 @@ For example, copy the default bar section from the upstream Sway config:
 [source]
 ----
 $ mkdir -p ~/.config/sway/config.d
-$ cat >~/.config/sway/config.d/90-bar.conf <<EOF
-## Read `man 5 sway-bar` for more information about this section.
+$ cat \&gt;~/.config/sway/config.d/90-bar.conf \&lt;\&lt;EOF
+\&#35;\&#35; Read \&#96;man 5 sway-bar\&#96; for more information about this section.
 bar {
 position top
 
-## When the status_command prints a new line to stdout, swaybar updates.
-## The default just shows the current date and time.
+\&#35;\&#35; When the status_command prints a new line to stdout, swaybar updates.
+\&#35;\&#35; The default just shows the current date and time.
 status_command while date +'%Y-%m-%d %I:%M:%S %p'; do sleep 1; done
 
 colors {
-statusline #ffffff
-background #323232
-inactive_workspace #32323200 #32323200 #5c5c5c
+statusline \&#35;ffffff
+background \&#35;323232
+inactive_workspace \&#35;32323200 \&#35;32323200 \&#35;5c5c5c
 }
 }
 EOF
@@ -1666,16 +1707,18 @@ EOF
 Sometimes it's useful to know how the configuration loaded by Sway actually looks.
 There are two ways to debug that:
 
-* Run sway config validation:
+\&#42; Run sway config validation:
 +
 [source,shell]
 ----
 $ sway --debug --validate [--config /path/to/config]
 ----
 
-* Check intermediate files generated by the layered include script
+\&#42; Check intermediate files generated by the layered include script
 +
 [source]
 ----
-$ less $XDG_RUNTIME_DIR/sway/layered-include-*.conf
+$ less $XDG_RUNTIME_DIR/sway/layered-include-\&#42;.conf
 ----
+
+

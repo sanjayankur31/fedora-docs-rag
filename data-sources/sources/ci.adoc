@@ -17,12 +17,12 @@ We may have different frameworks, implementations or tests, but need to play the
 
 == The Definition ==
 
-*You don’t get to call it “Continuous Integration” unless you ...*
+\&#42;You don’t get to call it “Continuous Integration” unless you \&#8230;\&#42;
 
 . Assemble it together like in production, then test drive it like a user.
-This is *Integration*.
-. Do those integration tests for every single "change".
-This is *Continuous*.
+This is \&#42;Integration\&#42;.
+. Do those integration tests for every single 'change'.
+This is \&#42;Continuous\&#42;.
 
 Without these, it may be “unit testing”, “acceptance testing”, “regression testing”, “quality assurance”, or other steps in the pipeline … but it’s not “continuous integration”.
 You might even run the same tests again later as part of one of these other testing processes.
@@ -33,7 +33,7 @@ A developer is someone who instigated and/or implemented the change and is our t
 In Fedora this is a packager or maintainer.
 Usually we apply that integration to a stream of software changes, but at other times it is hardware changes, or other changes.
 
-*Continuous delivery* is taking some of those successful integrations and delivering them.
+\&#42;Continuous delivery\&#42; is taking some of those successful integrations and delivering them.
 
 == The Manifesto ==
 
@@ -55,7 +55,7 @@ Aim to store a test along with the software that the test is most related to.
 
 == The Rules ==
 
-*Continuous Integration becomes self-sustaining by following two basic rules ...*
+\&#42;Continuous Integration becomes self-sustaining by following two basic rules \&#8230;\&#42;
 
 In order to scale our CI effort, it must be made self-sustaining.
 This is not that hard.
@@ -68,7 +68,7 @@ The tests become the responsibility of packagers, and the packaging cycle.
 It is possible to start off with a small corpus of tests that meet this requirement.
 This small corpus will eventually outpace any “non-Open Source” tests.
 
-*Reason:* Open source, reproducible tests allow developers and packagers to contribute to, fix out of date tests, and grow the test suites.
+\&#42;Reason:\&#42; Open source, reproducible tests allow developers and packagers to contribute to, fix out of date tests, and grow the test suites.
 They then pay attention to the tests and maintain them.
 
 === 2. Rapid Feedback to the Person who makes a Change ===
@@ -76,11 +76,13 @@ They then pay attention to the tests and maintain them.
 The developer or packager who makes change to a package or container needs rapid feedback from the continuous integration.
 The change should not proceed until that person reacts to integration failure results.
 
-*Reason:* Rapid feedback causes developers and packagers to
+\&#42;Reason:\&#42; Rapid feedback causes developers and packagers to
 
 . pay attention to the tests
 . fix problems while the change is fresh in their mind and
 . gate the change on the tests.
+
+
 
 = Pull Requests =
 
@@ -92,25 +94,25 @@ To use this workflow there are two situations to consider:
 == You are a packager ==
 
 If you are a packager, you have ssh access to dist-git, so you can use pagure directly.
-Find the repository you would like to contribute to, fork it via the *fork* button at the top right.
+Find the repository you would like to contribute to, fork it via the \&#42;fork\&#42; button at the top right.
 Wait a couple of minutes for the git repository and its access to be re-generated.
 Clone locally using the ssh URL and interact with this git repo as you would do normally.
 
-== You are *NOT* a packager ==
+== You are \&#42;NOT\&#42; a packager ==
 
 Contributors that are not in the packager group cannot ssh into dist-git.
 This is for security reasons and will not be changed.
 
 However, pagure on dist-git supports now pushing via https.
 
-For this you will need the `fedpkg` package:
+For this you will need the \&#96;fedpkg\&#96; package:
 
 sudo dnf install fedpkg
 
-To push via https, your git repository needs to be configured in a certain way (i.e. you need to have a `[credential]` section in your `.git/config`).
+To push via https, your git repository needs to be configured in a certain way (i.e. you need to have a \&#96;[credential]\&#96; section in your \&#96;.git/config\&#96;).
 There are two ways you can have this.
 
-* Clone your git repo using
+\&#42; Clone your git repo using
 
 fedpkg clone -a
 +
@@ -122,11 +124,9 @@ In this case fedpkg will take care of setting up correctly your git repository a
 
 git push
 
-* Clone your git repo using
+\&#42; Clone your git repo using
 
-----
-git clone https://...
-----
+git clone https://\&#8230;
 +
 and push using
 
@@ -136,7 +136,7 @@ Here as well, fedpkg will take care of configuring correctly your git repository
 
 [NOTE]
 ====
-*Username/Password* +
+\&#42;Username/Password\&#42; +
 If you ever see the CLI asking you for an username and/or password, your git repo is not correctly configured.
 The only place that should be asking you for an username and password is https://id.fedoraproject.org[https://id.fedoraproject.org]
 
@@ -144,34 +144,36 @@ The only place that should be asking you for an username and password is https:/
 
 [NOTE]
 ====
-*fork(s)* +
-The URL used for web browsing uses "fork/" (singular) while the path used for git uses "forks/" (plural).
+\&#42;fork(s)\&#42; +
+The URL used for web browsing uses 'fork/' (singular) while the path used for git uses 'forks/' (plural).
 
 ====
 
 == Open a pull-request ==
 
-Once you have pushed your commits to your fork, you can navigate to your fork in the UI and open the pull-request using either the *New PR* button appearing next to the branch you pushed into or on the main page of the project.
+Once you have pushed your commits to your fork, you can navigate to your fork in the UI and open the pull-request using either the \&#42;New PR\&#42; button appearing next to the branch you pushed into or on the main page of the project.
 
 [NOTE]
 ====
-*Working with Pull Requests* +
+\&#42;Working with Pull Requests\&#42; +
 You may encounter a situation where you want to include changes from the master branch that were made after you created your pull request.
-Follow the article https://docs.pagure.org/pagure/usage/pull_requests.html#working-with-pull-requests[Working with Pull Requests]
+Follow the article https://docs.pagure.org/pagure/usage/pull_requests.html\&#35;working-with-pull-requests[Working with Pull Requests]
 ====
+
+
 
 = Gating =
 
 == Enable Gating ==
 
 Gating of packages based on test results is currently enabled on demand.
-If you want to turn the gating on for your component create a new file `gating.yaml` in the root of the package dist git directory with the following content:
+If you want to turn the gating on for your component create a new file \&#96;gating.yaml\&#96; in the root of the package dist git directory with the following content:
 
 Enable gate to the testing repository:
 
 --- !Policy
 product_versions:
-- fedora-*
+- fedora-\&#42;
 decision_contexts: [bodhi_update_push_testing]
 subject_type: koji_build
 rules:
@@ -181,7 +183,7 @@ Enable gate to the stable repository (use this one for gating rawhide):
 
 --- !Policy
 product_versions:
-- fedora-*
+- fedora-\&#42;
 decision_contexts: [bodhi_update_push_stable]
 subject_type: koji_build
 rules:
@@ -189,72 +191,74 @@ rules:
 
 TIP: In order to enable both gates, simply concatenate both examples above.
 
-TIP: To add another test just extend the `rules` list with additional `!PassingTestCaseRule`.
+TIP: To add another test just extend the \&#96;rules\&#96; list with additional \&#96;!PassingTestCaseRule\&#96;.
 
 This will enable gating for all Fedora releases based on the result of the CI xref:pipeline.adoc[Pipeline].
 A decision context identifies set of policies used for a specific gating.
-For example, `bodhi_update_push_stable` decision context is used for gating RPM builds in Bodhi updates before getting to the stable repository.
+For example, \&#96;bodhi_update_push_stable\&#96; decision context is used for gating RPM builds in Bodhi updates before getting to the stable repository.
 
-The `decision_contexts` should match in both remote rules file and the policy in the Greenwave configuration (at least one decision context).
-Rules define resultsdb test cases that should be considered for the gating decision, in this case `fedora-ci.koji-build.tier0.functional`
+The \&#96;decision_contexts\&#96; should match in both remote rules file and the policy in the Greenwave configuration (at least one decision context).
+Rules define resultsdb test cases that should be considered for the gating decision, in this case \&#96;fedora-ci.koji-build.tier0.functional\&#96;
 which are tests that were run in the CI based on the xref:tmt.adoc[tmt] or xref:standard-test-interface.adoc[STI] configuration in package's dist-git.
-If no tests are required for the particular decision context(s) rules should be set to an empty list, i. e. `rules: []`,
+If no tests are required for the particular decision context(s) rules should be set to an empty list, i. e. \&#96;rules: []\&#96;,
 otherwise Greenwave will return, that it could not find any applicable policies.
 
 The following Fedora CI tests can be enabled for gating:
 
-* fedora-ci.koji-build.tier0.functional - component-specific tests enabled using xref:tmt.adoc[tmt] or xref:standard-test-interface.adoc[STI] in dist-git
-* https://github.com/fedora-ci/rpmdeplint-pipeline[fedora-ci.koji-build.rpmdeplint.functional] - to make sure the update's dependencies are available
-* https://github.com/fedora-ci/rpminspect-pipeline[fedora-ci.koji-build.rpminspect.static-analysis] - to check package sanity including ABI stability
-* https://github.com/fedora-ci/installability-pipeline[fedora-ci.koji-build.installability.functional] - to make sure package installation / update works well
+\&#42; fedora-ci.koji-build.tier0.functional - component-specific tests enabled using xref:tmt.adoc[tmt] or xref:standard-test-interface.adoc[STI] in dist-git
+\&#42; https://github.com/fedora-ci/rpmdeplint-pipeline[fedora-ci.koji-build.rpmdeplint.functional] - to make sure the update's dependencies are available
+\&#42; https://github.com/fedora-ci/rpminspect-pipeline[fedora-ci.koji-build.rpminspect.static-analysis] - to check package sanity including ABI stability
+\&#42; https://github.com/fedora-ci/installability-pipeline[fedora-ci.koji-build.installability.functional] - to make sure package installation / update works well
 
 See Greenwave's https://docs.pagure.org/greenwave/package-specific-policies.html[Package-specific policies] for more technical details about setting the policy.
 
 == Using Multiple Plans ==
 
 If you are using multiple xref:tmt.adoc[tmt] plans it is also possible to enable gating for selected plans only.
-Instead of the generic `tier0` type use the name of the desired plan in the resultsdb testcase name:
+Instead of the generic \&#96;tier0\&#96; type use the name of the desired plan in the resultsdb testcase name:
 
-!PassingTestCaseRule {test_case_name: fedora-ci.koji-build.<plan-name>.functional}
+!PassingTestCaseRule {test_case_name: fedora-ci.koji-build.\&lt;plan-name\&gt;.functional}
 
-For example, rule used to enable gating for the `/plans/basic` plan would look like this:
+For example, rule used to enable gating for the \&#96;/plans/basic\&#96; plan would look like this:
 
 !PassingTestCaseRule {test_case_name: fedora-ci.koji-build./plans/basic.functional}
 
 Before the above-mentioned rules can be used, separate plan reporting has to be enabled.
-See the xref:tmt.adoc#_multiple_plans[Multiple Plans] section for details.
+See the xref:tmt.adoc\&#35;_multiple_plans[Multiple Plans] section for details.
 
 == Waive ==
 
 If the failed test result is irrelevant you can waive it using the https://bodhi.fedoraproject.org[Bodhi web interface] or directly from the command line:
 
-# List blocking test results
-bodhi updates waive <id> --show
+\&#35; List blocking test results
+bodhi updates waive \&lt;id\&gt; --show
 
-# Specify which tests to waive via:
-bodhi updates waive <id> --test="dist.rpmlint" --test="atomic-ci" "Comment explaining the waiver"
+\&#35; Specify which tests to waive via:
+bodhi updates waive \&lt;id\&gt; --test='dist.rpmlint' --test='atomic-ci' 'Comment explaining the waiver'
 
-# Waive all tests:
-bodhi updates waive <id> --test=all "Comment explaining the waiver"
+\&#35; Waive all tests:
+bodhi updates waive \&lt;id\&gt; --test=all 'Comment explaining the waiver'
 
 While the web UI only allows to waive all tests, command line provides a way to select tests which should be waived.
 
 == Links ==
 
-* https://pagure.io/greenwave[Greenwave] ... service to evaluate gating policies based on test results
-* https://pagure.io/taskotron/resultsdb[ResultsDB] ... results store engine
-* https://pagure.io/waiverdb[WaiverDB] ... service for recording waivers against test results
-* Greenwave's https://docs.pagure.org/greenwave/package-specific-policies.html[Package-specific policies]
-* https://pagure.io/fesco/issue/1966[Allow turning on opt-in gating] issue
-* https://github.com/fedora-infra/bodhi/pull/2468[Implement the possibility to waive missing requirements via bodhi-cli]
+\&#42; https://pagure.io/greenwave[Greenwave] \&#8230; service to evaluate gating policies based on test results
+\&#42; https://pagure.io/taskotron/resultsdb[ResultsDB] \&#8230; results store engine
+\&#42; https://pagure.io/waiverdb[WaiverDB] \&#8230; service for recording waivers against test results
+\&#42; Greenwave's https://docs.pagure.org/greenwave/package-specific-policies.html[Package-specific policies]
+\&#42; https://pagure.io/fesco/issue/1966[Allow turning on opt-in gating] issue
+\&#42; https://github.com/fedora-infra/bodhi/pull/2468[Implement the possibility to waive missing requirements via bodhi-cli]
 
-* Tests
+
+
+\&#42; Tests
 
 
 = Generic Tests =
 
 
-Generic tests are tests that don't check only specific components (e.g. "dnf" or "kernel") but can be typically applied to all artifacts of a certain type.
+Generic tests are tests that don't check only specific components (e.g. 'dnf' or 'kernel') but can be typically applied to all artifacts of a certain type.
 An example of such a test could be a test that can be run on all RPM builds in a Bodhi update.
 
 
@@ -265,7 +269,7 @@ All of them run on packages that are being pushed to Rawhide via automatic Bodhi
 == rpmdeplint ==
 
 
-`rpmdeplint` is a generic test that tries to identify problems in RPM packages in the context of their dependency graph.
+\&#96;rpmdeplint\&#96; is a generic test that tries to identify problems in RPM packages in the context of their dependency graph.
 
 There are four different checks that the test performs:
 
@@ -287,18 +291,18 @@ which is also contained in some other package.
 
 This command will not report a file as conflicting between two packages if:
 
-* there is an explicit RPM Conflicts between the two packages; or
+\&#42; there is an explicit RPM Conflicts between the two packages; or
 
-* the file’s checksum, permissions, owner, and group are identical in both packages (RPM allows both packages to own
+\&#42; the file’s checksum, permissions, owner, and group are identical in both packages (RPM allows both packages to own
 the file in this case); or
 
-* the file’s color is different between the two packages (RPM will silently resolve the conflict in favor of the
+\&#42; the file’s color is different between the two packages (RPM will silently resolve the conflict in favor of the
 64-bit file).
 
 [NOTE]
 ====
 Sometimes files can be owned by literally thousands of different packages.
-In order to properly check that there are no file conflicts, `rpmdeplint` would need to download all other packages.
+In order to properly check that there are no file conflicts, \&#96;rpmdeplint\&#96; would need to download all other packages.
 This would be very slow, so only a single other package is downloaded and checked.
 ====
 
@@ -311,34 +315,36 @@ If this check fails, it means that the package under test will never be installe
 == rpminspect ==
 
 RPM build deviation analysis tools.
-`rpminspect` looks at the output of an RPM build (e.g., the output of a Koji build) and examines the contents of the build artifacts to report:
+\&#96;rpminspect\&#96; looks at the output of an RPM build (e.g., the output of a Koji build) and examines the contents of the build artifacts to report:
 
-* Policy compliance
+\&#42; Policy compliance
 
-* Changes from a previous build to the current build
-** the previous build is the latest build in the stable repository (in Rawhide, it is simply the previous build)
+\&#42; Changes from a previous build to the current build
+\&#42;\&#42; the previous build is the latest build in the stable repository (in Rawhide, it is simply the previous build)
 
-* General correctness and best practices
+\&#42; General correctness and best practices
 
-`rpminspect` performs more than 30 different checks on packages.
-To list all of them, with a nice description, please run `rpminspect -v -l`.
+\&#96;rpminspect\&#96; performs more than 30 different checks on packages.
+To list all of them, with a nice description, please run \&#96;rpminspect -v -l\&#96;.
 
 
 == installability ==
 
 This is a generic test that tries to perform the following operations on the given packages:
 
-* dnf install
-* dnf remove
-* dnf update
-* dnf downgrade
+\&#42; dnf install
+\&#42; dnf remove
+\&#42; dnf update
+\&#42; dnf downgrade
 
 All problems are logged and reported.
+
+
 = Test Management Tool =
 
 == Summary ==
 
-The `tmt` tool aims to provide an efficient and comfortable way to create, execute, debug and enable tests in the Continuous Integration.
+The \&#96;tmt\&#96; tool aims to provide an efficient and comfortable way to create, execute, debug and enable tests in the Continuous Integration.
 
 It implements the https://tmt.readthedocs.io/en/stable/spec.html[Test Metadata Specification] which allows to store all needed test execution data directly within a git repository.
 The same configuration can be used for enabling tests in the Fedora CI, RHEL CI and https://packit.dev/[Packit].
@@ -350,15 +356,15 @@ Tests can be easily executed in your preferred environment, e.g. in virtual mach
 
 Install tmt on your laptop:
 
-sudo dnf install -y tmt       # basic features, executing tests on localhost
-sudo dnf install -y tmt+all   # install all available tmt subpackages including all dependencies
+sudo dnf install -y tmt       \&#35; basic features, executing tests on localhost
+sudo dnf install -y tmt+all   \&#35; install all available tmt subpackages including all dependencies
 
 You can also install selected provision plugins only:
 
-sudo dnf install -y tmt+provision-container   # additional dependencies for executing tests in containers
-sudo dnf install -y tmt+provision-virtual     # support for running tests in a virtual machine using testcloud
+sudo dnf install -y tmt+provision-container   \&#35; additional dependencies for executing tests in containers
+sudo dnf install -y tmt+provision-virtual     \&#35; support for running tests in a virtual machine using testcloud
 
-See the tmt https://tmt.readthedocs.io/en/stable/overview.html#install[install] section for more installation options.
+See the tmt https://tmt.readthedocs.io/en/stable/overview.html\&#35;install[install] section for more installation options.
 
 === Git Repo ===
 
@@ -429,7 +435,7 @@ tmt run discover -v
 
 === Provision Options ===
 
-Choose `local` as the provision method but run `--all` steps:
+Choose \&#96;local\&#96; as the provision method but run \&#96;--all\&#96; steps:
 
 tmt run --all provision --how local
 
@@ -469,7 +475,7 @@ In order to create more complex tests let's use the base plan template:
 tmt plan create /plans/basic --template base
 tmt plan create /plans/basic -t base
 
-Update summary as needed, keep discover method to `fmf` and choose whether tests should be executed as `shell` scripts (just check the exit code) or `beakerlib` tests (investigate journal for test results):
+Update summary as needed, keep discover method to \&#96;fmf\&#96; and choose whether tests should be executed as \&#96;shell\&#96; scripts (just check the exit code) or \&#96;beakerlib\&#96; tests (investigate journal for test results):
 
 summary:
 Check basic bash features
@@ -491,19 +497,19 @@ Test script '/tmp/bash/tests/smoke/test.sh' created.
 Update metadata file:
 
 summary: Check bash version
-contact: Petr Šplíchal <psplicha@redhat.com>
+contact: Petr Šplíchal \&lt;psplicha@redhat.com\&gt;
 test: ./test.sh
 
 Adjust the test script as desired:
 
-#!/bin/sh -eux
+\&#35;!/bin/sh -eux
 tmp=$(mktemp)
-bash --version > $tmp
+bash --version \&gt; $tmp
 grep 'GNU bash' $tmp
 grep 'Free Software Foundation' $tmp
 rm $tmp
 
-Use `tmt run` to verify the test is working as expected.
+Use \&#96;tmt run\&#96; to verify the test is working as expected.
 
 === BeakerLib Test ===
 
@@ -514,12 +520,12 @@ Directory '/tmp/bash/tests/smoke' created.
 Test metadata '/tmp/bash/tests/smoke/main.fmf' created.
 Test script '/tmp/bash/tests/smoke/test.sh' created.
 
-Update test metadata and code as needed, use `tmt run` to verify everything is working fine.
+Update test metadata and code as needed, use \&#96;tmt run\&#96; to verify everything is working fine.
 
 
 == Pull Requests ==
 
-When creating the pull request make sure you add all created files including the special `.fmf` directory.
+When creating the pull request make sure you add all created files including the special \&#96;.fmf\&#96; directory.
 
 git add .
 git commit
@@ -534,7 +540,7 @@ git push fork -u enable-tests
 
 === GitHub ===
 
-In order to test a pull request on GitHub enable the https://github.com/marketplace/packit-as-a-service[Packit-as-a-Service] integration and add a `.packit.yaml` configuration file:
+In order to test a pull request on GitHub enable the https://github.com/marketplace/packit-as-a-service[Packit-as-a-Service] integration and add a \&#96;.packit.yaml\&#96; configuration file:
 
 jobs:
 - job: tests
@@ -550,11 +556,11 @@ git push origin -u enable-tests
 
 === Templates ===
 
-When creating a pull request to enable tests in a repository with no `tmt` configuration,
+When creating a pull request to enable tests in a repository with no \&#96;tmt\&#96; configuration,
 include a couple of hints and links for those who are not familiar with the new tooling:
 
-....
-This pull request enables tests in the Fedora CI using `tmt` which
+\&#8230;.
+This pull request enables tests in the Fedora CI using \&#96;tmt\&#96; which
 also allows to easily execute and debug tests from your laptop:
 
 Run tests directly on your localhost:
@@ -569,7 +575,7 @@ tmt run
 
 Check the documentation to learn more about the tool:
 https://docs.fedoraproject.org/en-US/ci/tmt/
-....
+\&#8230;.
 
 
 == Manage Tests ==
@@ -590,7 +596,7 @@ To see an overview of all metadata:
 
 tmt
 
-Explore all available options and commands using `--help`.
+Explore all available options and commands using \&#96;--help\&#96;.
 
 === Share Tests ===
 
@@ -611,14 +617,14 @@ execute:
 how: tmt
 
 Now you will be able to run tests from the remote repository.
-See the https://tmt.readthedocs.io/en/stable/spec/steps.html#discover[discover] step documentation for details.
+See the https://tmt.readthedocs.io/en/stable/spec/steps.html\&#35;discover[discover] step documentation for details.
 
 
 == Various Hints ==
 
 === Multiple Commands ===
 
-Multiple shell commands can be provided under the `script` attribute as well:
+Multiple shell commands can be provided under the \&#96;script\&#96; attribute as well:
 
 summary:
 Basic smoke test for bash
@@ -627,11 +633,11 @@ script:
 - bash --version
 - bash -c 'echo $((1+1+1))' | grep 3
 
-See the https://tmt.readthedocs.io/en/stable/spec/plans.html#script[script] method documentation for details.
+See the https://tmt.readthedocs.io/en/stable/spec/plans.html\&#35;script[script] method documentation for details.
 
 === Installing Dependencies ===
 
-Required packages can be installed using the `prepare` attribute:
+Required packages can be installed using the \&#96;prepare\&#96; attribute:
 
 summary: Basic smoke test for python3-m2crypto
 prepare:
@@ -640,9 +646,9 @@ package:
 - python3-setuptools
 - python3-m2crypto
 execute:
-script: python3 -c "import M2Crypto"
+script: python3 -c 'import M2Crypto'
 
-See the https://tmt.readthedocs.io/en/stable/spec/plans.html#prepare[prepare] step documentation for details.
+See the https://tmt.readthedocs.io/en/stable/spec/plans.html\&#35;prepare[prepare] step documentation for details.
 
 === Multiple Repositories ===
 
@@ -662,14 +668,14 @@ See also https://github.com/teemtee/tmt/blob/main/examples/multiple/basic.fmf[mu
 === Multiple Plans ===
 
 It is possible to use multiple plans to group relevant tests together or to be able to easily run a subset of tests.
-For example, let's have a `/plans/features` plan which covers all functionality tests from the local git repository:
+For example, let's have a \&#96;/plans/features\&#96; plan which covers all functionality tests from the local git repository:
 
 discover:
 how: fmf
 execute:
 how: tmt
 
-And a separate `/plans/integration` plan to enable integration testing with another component:
+And a separate \&#96;/plans/integration\&#96; plan to enable integration testing with another component:
 
 discover:
 how: fmf
@@ -682,13 +688,13 @@ Running all tests from given plan is then very easy:
 tmt run plan --name /plans/features
 
 When run in the CI, results from such plans are reported as a single resultsdb testcase and are shown in pull requests as a single flag.
-In order to enable separate result for each plan, create a `ci.fmf` file in the git repository root with the following content:
+In order to enable separate result for each plan, create a \&#96;ci.fmf\&#96; file in the git repository root with the following content:
 
 resultsdb-testcase: separate
 
 Once the separate reporting is enabled, you can turn on gating for selected plans only.
-Plan name becomes part of the resultsdb testcase name which is used in the `gating.yaml` config.
-See the gating documentation on xref:gating.adoc#_using_multiple_plans[Using Multiple Plans] for more details.
+Plan name becomes part of the resultsdb testcase name which is used in the \&#96;gating.yaml\&#96; config.
+See the gating documentation on xref:gating.adoc\&#35;_using_multiple_plans[Using Multiple Plans] for more details.
 
 
 === Minimal Path ===
@@ -710,17 +716,17 @@ cd bash
 tmt init
 tmt plan create --template base plans/smoke
 tmt test create --template beakerlib tests/smoke
-vim plans/smoke.fmf tests/smoke/*
+vim plans/smoke.fmf tests/smoke/\&#42;
 tmt run --all provision -h local
 git add .
-git commit -m "Enable basic tests"
+git commit -m 'Enable basic tests'
 git push
 
 === Virtualization Tips ===
 
-In order to safely run tests under a virtual machine started on your laptop you only need to install the `tmt+provision-virtual` package.
-By default the session connection is used so no other steps should be needed, just execute tests using the `tmt run` command.
-See the upstream https://tmt.readthedocs.io/en/stable/questions.html#virtualization-tips[Virtualization Tips] for more options.
+In order to safely run tests under a virtual machine started on your laptop you only need to install the \&#96;tmt+provision-virtual\&#96; package.
+By default the session connection is used so no other steps should be needed, just execute tests using the \&#96;tmt run\&#96; command.
+See the upstream https://tmt.readthedocs.io/en/stable/questions.html\&#35;virtualization-tips[Virtualization Tips] for more options.
 
 
 == More Info ==
@@ -729,26 +735,26 @@ See the upstream https://tmt.readthedocs.io/en/stable/questions.html#virtualizat
 
 Example projects with tmt tests:
 
-* https://github.com/InfrastructureServices/bind-tests
-* https://github.com/teemtee/tmt
-* https://github.com/teemtee/fmf
-* https://github.com/psss/did
+\&#42; https://github.com/InfrastructureServices/bind-tests
+\&#42; https://github.com/teemtee/tmt
+\&#42; https://github.com/teemtee/fmf
+\&#42; https://github.com/psss/did
 
 See the tmt https://tmt.readthedocs.io/en/stable/examples.html[examples] page for more inspiration.
 
 
 === Links ===
 
-* https://tmt.readthedocs.io/[Test Management Tool]
-* https://fmf.readthedocs.io/[Flexible Metadata Format]
-* https://packit.dev/testing-farm/[Packit Testing Farm]
+\&#42; https://tmt.readthedocs.io/[Test Management Tool]
+\&#42; https://fmf.readthedocs.io/[Flexible Metadata Format]
+\&#42; https://packit.dev/testing-farm/[Packit Testing Farm]
 
 
 == Questions ==
 
 Does the tool replace/deprecate STI?::
 No, currently there is no plan to decommission STI.
-Both `tmt` and `sti` approach to CI configuration can be used in parallel.
+Both \&#96;tmt\&#96; and \&#96;sti\&#96; approach to CI configuration can be used in parallel.
 
 Are these tests supported in Fedora CI?::
 Yes, Fedora CI support is enabled for all active branches and the tests namespace as well.
@@ -757,6 +763,8 @@ Which Linux distributions does the tool support?::
 As a system under test (on which the tests are executed) all supported Fedora versions, Centos 6+ and Red Hat Enterprise Linux 6+ can be used.
 For the test runner (where tmt command is run) all supported Fedora versions, Centos 8+ or Red Hat Enterprise Linux 8+ are required.
 
+
+
 = Share Test Code =
 
 == Motivation ==
@@ -764,9 +772,9 @@ For the test runner (where tmt command is run) all supported Fedora versions, Ce
 In order to make the CI workflow reliable and efficient it is crucial to keep the test coverage in a good shape at all times.
 Sharing test code between several packages (even within multiple branches of the same package) may significantly help to:
 
-* Prevent test code duplication
-* Minimize test maintenance
-* Catch incompatibilities early
+\&#42; Prevent test code duplication
+\&#42; Minimize test maintenance
+\&#42; Catch incompatibilities early
 
 In general, tests define how the software works and the basic functionality of many packages doesn’t change that often.
 We try hard to keep the backward compatibility where possible.
@@ -777,11 +785,11 @@ See the whole https://lists.fedoraproject.org/archives/list/ci@lists.fedoraproje
 == Implementation ==
 
 Store test code in your preferred repository and reference the tests from the dist-git yaml file.
-There is also a special `tests` namespace dedicated for storing Fedora CI integration tests:
+There is also a special \&#96;tests\&#96; namespace dedicated for storing Fedora CI integration tests:
 
-* https://src.fedoraproject.org/projects/tests/*
+\&#42; https://src.fedoraproject.org/projects/tests/\&#42;
 
-Use `fedpkg` to quickly clone repositories from the tests namespace:
+Use \&#96;fedpkg\&#96; to quickly clone repositories from the tests namespace:
 
 fedpkg clone tests/shell
 
@@ -796,7 +804,7 @@ how: fmf
 url: https://src.fedoraproject.org/tests/shell.git
 ----
 
-See the https://tmt.readthedocs.io/en/stable/spec/plans.html#fmf[discover] step documentation for more details.
+See the https://tmt.readthedocs.io/en/stable/spec/plans.html\&#35;fmf[discover] step documentation for more details.
 
 === STI ===
 
@@ -806,8 +814,8 @@ Some of the xref:standard-test-roles.adoc[Standard Test Roles] (currently basic 
 ----
 - role: standard-test-beakerlib
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
 ----
 
 It is also possible to specify version (branch, commit hash) which should be fetched from the remote repository:
@@ -816,15 +824,15 @@ It is also possible to specify version (branch, commit hash) which should be fet
 ----
 - role: standard-test-beakerlib
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
-version: "devel"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
+version: 'devel'
 ----
 
 == Testing Tests ==
 
 It is a good idea to ensure that updating tests in the shared repository does not negatively impact packages which they are testing.
-To enable pull request pipeline for tests stored in the Fedora dist git tests namespace simply include `tests.yml` file in the root of the test repository.
+To enable pull request pipeline for tests stored in the Fedora dist git tests namespace simply include \&#96;tests.yml\&#96; file in the root of the test repository.
 
 [source,ansible]
 ----
@@ -849,7 +857,7 @@ required_packages:
 - python37
 ----
 
-The example above is a simplified version of the https://src.fedoraproject.org/tests/python/blob/main/f/tests.yml[tests.yml] file from the Python shared test repo and shows how to enable `smoke` test to be executed against three versions of the Python interpreter.
+The example above is a simplified version of the https://src.fedoraproject.org/tests/python/blob/main/f/tests.yml[tests.yml] file from the Python shared test repo and shows how to enable \&#96;smoke\&#96; test to be executed against three versions of the Python interpreter.
 
 == Examples ==
 
@@ -859,17 +867,17 @@ Here are some real-life examples where sharing test code can increase long-term 
 
 There are several shells which implement the POSIX specification:
 
-* bash
-* ksh
-* mksh
-* zsh
-* dash
+\&#42; bash
+\&#42; ksh
+\&#42; mksh
+\&#42; zsh
+\&#42; dash
 
-All of them share a significant amount of test coverage and it does not make sense to commit & maintain identical tests in five different repositories (+ possible branches).
+All of them share a significant amount of test coverage and it does not make sense to commit \&amp; maintain identical tests in five different repositories (+ possible branches).
 
 Shell tests repository:
 
-* https://src.fedoraproject.org/tests/shell
+\&#42; https://src.fedoraproject.org/tests/shell
 
 Bash https://src.fedoraproject.org/rpms/bash/blob/rawhide/f/tests/tests.yml[tests.yml]:
 
@@ -881,15 +889,15 @@ roles:
 tags:
 - classic
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
 tests:
 - shell/func
 - shell/login
 - shell/smoke
 required_packages:
-- expect            # login requires expect
-- which             # smoke requires which
+- expect            \&#35; login requires expect
+- which             \&#35; smoke requires which
 ----
 
 Ksh https://src.fedoraproject.org/rpms/ksh/blob/rawhide/f/tests/tests.yml[tests.yml]:
@@ -902,8 +910,8 @@ roles:
 tags:
 - classic
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
 tests:
 - shell/func
 - shell/login
@@ -913,8 +921,8 @@ PACKAGES: ksh
 SH_BIN: ksh
 required_packages:
 - ksh
-- expect            # login requires expect
-- which             # smoke requires which
+- expect            \&#35; login requires expect
+- which             \&#35; smoke requires which
 ----
 
 === Ruby ===
@@ -924,39 +932,41 @@ Conversely, maintaining those tests in 80 repos would be a tedious task.
 
 Currently the shared https://src.fedoraproject.org/tests/ruby[tests/ruby] repository hosts these three ruby integration tests:
 
-* systemtap-static-probes-in-ruby - exercising ruby's systemtap api
-* bundler-unit-test - run bundler's unit tests
-* run-basic-rails-application - run a simple rails application
+\&#42; systemtap-static-probes-in-ruby - exercising ruby's systemtap api
+\&#42; bundler-unit-test - run bundler's unit tests
+\&#42; run-basic-rails-application - run a simple rails application
 
 === SELinux ===
 
 Several SELinux user space components are sharing test coverage in a single https://src.fedoraproject.org/tests/selinux.git[selinux] test repository:
 
-* https://src.fedoraproject.org/rpms/libsepol/blob/rawhide/f/tests/tests.yml[libsepol]
-* https://src.fedoraproject.org/rpms/libselinux/blob/rawhide/f/tests/tests.yml[libselinux]
-* https://src.fedoraproject.org/rpms/libsemanage/blob/rawhide/f/tests/tests.yml[libsemanage]
-* https://src.fedoraproject.org/rpms/libsepol/blob/rawhide/f/tests/tests.yml[policycoreutils]
+\&#42; https://src.fedoraproject.org/rpms/libsepol/blob/rawhide/f/tests/tests.yml[libsepol]
+\&#42; https://src.fedoraproject.org/rpms/libselinux/blob/rawhide/f/tests/tests.yml[libselinux]
+\&#42; https://src.fedoraproject.org/rpms/libsemanage/blob/rawhide/f/tests/tests.yml[libsemanage]
+\&#42; https://src.fedoraproject.org/rpms/libsepol/blob/rawhide/f/tests/tests.yml[policycoreutils]
 
 == Start ==
 
-In order to create a new repository in the tests namespace use the fedpkg's `request-tests-repo` command.
+In order to create a new repository in the tests namespace use the fedpkg's \&#96;request-tests-repo\&#96; command.
 For example to create a shared test repository with the name foo, which will be available at https://src.fedoraproject.org/tests/foo.git
 
-* Setup authentication to pagure according to the help in request-repo command
+\&#42; Setup authentication to pagure according to the help in request-repo command
 
 fedpkg request-repo -h
 
-* Request a new repository with a sensible decription
+\&#42; Request a new repository with a sensible decription
 
-fedpkg request-tests-repo foo "Description of the repository"
+fedpkg request-tests-repo foo 'Description of the repository'
 
-** STI tests
+
+
+\&#42;\&#42; STI tests
 
 = Standard Test Interface =
 
 Standard Discovery, Staging and Invocation of Integration Tests.
 
-Version: `2.0.0`
+Version: \&#96;2.0.0\&#96;
 
 == Summary ==
 
@@ -965,7 +975,7 @@ This is the standard interface.
 What follows is a standard way to discover, package and invoke integration tests for a package stored in a Fedora dist-git repo.
 
 Many Fedora packages have unit tests.
-These tests are typically run during a `%check` RPM build step and run in a build root.
+These tests are typically run during a \&#96;%check\&#96; RPM build step and run in a build root.
 On the other hand, integration testing should happen against a composed system.
 Upstream projects have integration tests,
 both Fedora QA and the Atomic Host team would like to create more integration tests,
@@ -986,7 +996,7 @@ The integration tests outlast the implementation details of either the framework
 
 Test Subject::
 The items that are to be tested.
-Examples: RPMs, OCI image, ISO, QCow2, Module repository ...
+Examples: RPMs, OCI image, ISO, QCow2, Module repository \&#8230;
 
 Test::
 A callable/runnable piece of code and corresponding test data and mocks which exercises and evaluates a _test subject_.
@@ -1003,7 +1013,7 @@ Examples: https://avocado-framework.github.io/[Avocado],
 https://wiki.gnome.org/Initiatives/GnomeGoals/InstalledTests[GNOME Installed Tests],
 https://github.com/fedora-modularity/meta-test-family/[Meta Test Family],
 https://github.com/projectatomic/atomic-host-tests[Ansible tests in Atomic Host],
-https://tunir.readthedocs.io/en/latest/[Tunir tests], docker test images...
+https://tunir.readthedocs.io/en/latest/[Tunir tests], docker test images\&#8230;
 
 Test Result::
 A boolean pass/fail output of a _test suite_.
@@ -1023,7 +1033,7 @@ https://github.com/projectatomic/papr[Papr],
 https://travis-ci.org/[Travis],
 https://semaphoreci.com/[Semaphore],
 https://developers.openshift.com/managing-your-applications/continuous-integration.html[Openshift CI/CD],
-https://wiki.ubuntu.com/ProposedMigration/AutopkgtestInfrastructure[Ubuntu CI]...
+https://wiki.ubuntu.com/ProposedMigration/AutopkgtestInfrastructure[Ubuntu CI]\&#8230;
 
 Test Runner::
 _Testing system_ delegates running of the test to _test runner_ which can be different from _test environment_.
@@ -1032,14 +1042,14 @@ Usually a stable version of OS is used for _test runner_.
 
 === Results Format ===
 
-The following format should be used to report results of individual tests in the `results.yml` file:
+The following format should be used to report results of individual tests in the \&#96;results.yml\&#96; file:
 
 results:
 - {result: pass, test: test1, logs: [test1.log]}
 - {result: fail, test: test2, logs: [test2.log, debug.log]}
 - {result: error, test: test3, logs: [test3.log, debug.log, error.log]}
 
-result:: Test result. One of `pass`, `fail` or `error`. Mandatory.
+result:: Test result. One of \&#96;pass\&#96;, \&#96;fail\&#96; or \&#96;error\&#96;. Mandatory.
 test:: Test name. A unique identifier. Mandatory.
 logs::
 One or more logs with detailed test output. Optional.
@@ -1047,7 +1057,7 @@ Path should be relative to the artifacts directory.
 Some user interfaces might show only a single log by default.
 In that case first log from the list should be presented to the user.
 
-The `result` field can contain following values:
+The \&#96;result\&#96; field can contain following values:
 
 pass:: Test has successfully finished and passed.
 fail:: Test has successfully finished and failed.
@@ -1056,47 +1066,47 @@ error:: There has been a problem with test execution.
 
 == Responsibilities ==
 
-The *Testing System* is responsible to:
+The \&#42;Testing System\&#42; is responsible to:
 
-* Build or otherwise acquire the _test subject_, such as a package, container image, tree...
-* Decide which _test suite_ to run, often by using the standard interface to discover appropriate _tests_ for the dist-git repo that a test subject originated in.
-* Schedule, provision or orchestrate a job to run the _test suite_ on appropriate compute, storage...
-* Stage the _test suite_ as described by the _standard interface_.
-* Invoke the _test suite_ as described by the _standard interface_.
-* Gather the _test results_ and _test artifacts_ as described by the _standard interface_.
-* Announce and relay the _test results_ and _test artifacts_ for gating, archival...
+\&#42; Build or otherwise acquire the _test subject_, such as a package, container image, tree\&#8230;
+\&#42; Decide which _test suite_ to run, often by using the standard interface to discover appropriate _tests_ for the dist-git repo that a test subject originated in.
+\&#42; Schedule, provision or orchestrate a job to run the _test suite_ on appropriate compute, storage\&#8230;
+\&#42; Stage the _test suite_ as described by the _standard interface_.
+\&#42; Invoke the _test suite_ as described by the _standard interface_.
+\&#42; Gather the _test results_ and _test artifacts_ as described by the _standard interface_.
+\&#42; Announce and relay the _test results_ and _test artifacts_ for gating, archival\&#8230;
 
-The *Standard Interface* describes how to:
+The \&#42;Standard Interface\&#42; describes how to:
 
-* Discover a _test suite_ for a given dist-git repo.
-* Uniquely identify a _test suite_.
-* Stage a _test suite_ and its dependencies such as _test frameworks_.
-* Provide the _test subject_ to the _test suite_.
-* Invoke a _test suite_ in a consistent way.
-* Gather _test results_ and _test artifacts_ from the invoked _test suite_.
+\&#42; Discover a _test suite_ for a given dist-git repo.
+\&#42; Uniquely identify a _test suite_.
+\&#42; Stage a _test suite_ and its dependencies such as _test frameworks_.
+\&#42; Provide the _test subject_ to the _test suite_.
+\&#42; Invoke a _test suite_ in a consistent way.
+\&#42; Gather _test results_ and _test artifacts_ from the invoked _test suite_.
 
-The *Test Suite* is responsible to:
+The \&#42;Test Suite\&#42; is responsible to:
 
-* Declare its dependencies such as a _test framework_ via the _standard interface_.
-* Execute the _test framework_ as necessary.
-* Provision (usually locally) any containers or virtual machines necessary for testing the _test subject_.
-* Provide _test results_ and _test subjects_ back according to the standard
+\&#42; Declare its dependencies such as a _test framework_ via the _standard interface_.
+\&#42; Execute the _test framework_ as necessary.
+\&#42; Provision (usually locally) any containers or virtual machines necessary for testing the _test subject_.
+\&#42; Provide _test results_ and _test subjects_ back according to the standard
 
 The format of the textual logs and _test artifacts_ that come out of a test suite is not prescribed by this document.
 Nor is it envisioned to be standardized across all possible _test suites_.
 
 == Requirements ==
 
-* The _test suite_ and _test framework_ SHOULD NOT leak its implementation details into the testing system, other than via the _standard interface_.
-* The _test suite_ and _test framework_ SHOULD NOT rely on the behavior of the testing system other than the _standard interface_.
-* The _standard interface_ MUST enable a dist-git packager to run a _test suite_ locally.
-** _Test suites_ or _test frameworks_ MAY call out to the network for certain tasks.
-* It MUST be possible to stage an upstream _test suite_ using the _standard interface_.
-* Both _in-situ tests_, and more rigorous _outside-in tests_ MUST be possible with the _standard interface_.
-** For _in-situ tests_ the _test suite_ is in the same file system tree and process space as the _test subject_.
-** For _outside-in tests_ the _test suite_ is outside of the file system tree and process space of the _test subject_.
-* The _test suite_ and _test framework_ SHOULD be able to provision containers and virtual machines necessary for its testing without requesting them from the _testing system_.
-* The _standard interface_ SHOULD describe how to uniquely identify a _test suite_.
+\&#42; The _test suite_ and _test framework_ SHOULD NOT leak its implementation details into the testing system, other than via the _standard interface_.
+\&#42; The _test suite_ and _test framework_ SHOULD NOT rely on the behavior of the testing system other than the _standard interface_.
+\&#42; The _standard interface_ MUST enable a dist-git packager to run a _test suite_ locally.
+\&#42;\&#42; _Test suites_ or _test frameworks_ MAY call out to the network for certain tasks.
+\&#42; It MUST be possible to stage an upstream _test suite_ using the _standard interface_.
+\&#42; Both _in-situ tests_, and more rigorous _outside-in tests_ MUST be possible with the _standard interface_.
+\&#42;\&#42; For _in-situ tests_ the _test suite_ is in the same file system tree and process space as the _test subject_.
+\&#42;\&#42; For _outside-in tests_ the _test suite_ is outside of the file system tree and process space of the _test subject_.
+\&#42; The _test suite_ and _test framework_ SHOULD be able to provision containers and virtual machines necessary for its testing without requesting them from the _testing system_.
+\&#42; The _standard interface_ SHOULD describe how to uniquely identify a _test suite_.
 
 == Detailed Description ==
 
@@ -1104,24 +1114,24 @@ This standard interface describes how to discover, stage and invoke tests.
 It is important to cleanly separate implementation details of the _testing system_ from the _test suite_ and its framework.
 It is also important to allow Fedora packagers to locally and manually invoke a _test suite_.
 
-First see the link:#_terminology[Terminogy], division of link:#_responsibilities[Responsibilities] and link:#_requirements[Requirements].
+First see the link:\&#35;_terminology[Terminogy], division of link:\&#35;_responsibilities[Responsibilities] and link:\&#35;_requirements[Requirements].
 
 === Staging ===
 
-Tests files will be added into the `tests/` folder of a dist-git repository branch.
-The structure of the files and folders is left to the liberty of the packagers but there are one or more playbooks in the `tests/` folder that can be invoked to run the test suites.
+Tests files will be added into the \&#96;tests/\&#96; folder of a dist-git repository branch.
+The structure of the files and folders is left to the liberty of the packagers but there are one or more playbooks in the \&#96;tests/\&#96; folder that can be invoked to run the test suites.
 
 . The _testing system_ SHOULD stage the tests on target (eg: Fedora) operating system appropriate for the branch name of the dist-git repository containing the tests.
 . The _testing system_ SHOULD stage a clean _test runner_ for each set of tests it runs.
 . The _testing system_ MUST stage the following package on the _test runner_:
-.. `standard-test-roles`
+.. \&#96;standard-test-roles\&#96;
 . The _testing system_ MUST clone the dist-git repository for the test on the _test runner_, and checks out the appropriate branch.
-. The contents of `/etc/yum.repos.d` on the *staged system* SHOULD be replaced with repository information that reflects the known good Fedora packages corresponding to the branch of the dist-git repository.
+. The contents of \&#96;/etc/yum.repos.d\&#96; on the \&#42;staged system\&#42; SHOULD be replaced with repository information that reflects the known good Fedora packages corresponding to the branch of the dist-git repository.
 .. The _testing system_ MAY use multiple repositories, including _updates_ or _updates-testing_ to ensure this.
 
 === Invocation ===
 
-The testing system MUST run each playbook matching the glob `tests/tests*.yml` in the dist-git repo.
+The testing system MUST run each playbook matching the glob \&#96;tests/tests\&#42;.yml\&#96; in the dist-git repo.
 Each of these files constitutes a test suite.
 Each test suite is invoked by the testing system independently and executed in a clear test environment as follows.
 
@@ -1131,12 +1141,12 @@ However multiple subjects may be concatenated together in a shell escaped string
 The playbooks and/or inventory script split the string.
 The extensions as follows are used to determine the type of subject:
 
-*.rpm:: Absolute path to an RPM file
-*.repo:: Absolute repo filenames appropriate for `/etc/yum.repos.d`
-*.qcow2, *.qcow2c:: Absolute path to one virtual machine disk image bootable with cloud-init
-*.oci:: Absolute path of one OCI container image filesystem bundle
-docker:*:: Fully qualified path to a docker image in a registry
-...:: Other _test subject_ identifiers may be added later.
+\&#42;.rpm:: Absolute path to an RPM file
+\&#42;.repo:: Absolute repo filenames appropriate for \&#96;/etc/yum.repos.d\&#96;
+\&#42;.qcow2, \&#42;.qcow2c:: Absolute path to one virtual machine disk image bootable with cloud-init
+\&#42;.oci:: Absolute path of one OCI container image filesystem bundle
+docker:\&#42;:: Fully qualified path to a docker image in a registry
+\&#8230;:: Other _test subject_ identifiers may be added later.
 
 Various _tests_ in a playbook constitute a _test suite_.
 Some parts of these _test suites_ will run in certain contexts, against certain deliverable artifacts.
@@ -1148,42 +1158,42 @@ Ansible tags are used to denote these contexts.
 atomic:: Atomic Host
 container:: A Docker or OCI container
 classic:: Tested against a classic installed YUM/DNF installed system.
-...:: Other _test subject_ identifiers may be added later.
+\&#8230;:: Other _test subject_ identifiers may be added later.
 
 To invoke the tests, the _testing system_ must perform the following
 tasks for each _test suite_ playbook:
 
 . MUST execute the playbook with the following operating system environment variables:
-.. `TEST_SUBJECTS`: The _test subjects_ string as described above
-.. `TEST_ARTIFACTS`: The full path of an empty folder for _test artifacts_
+.. \&#96;TEST_SUBJECTS\&#96;: The _test subjects_ string as described above
+.. \&#96;TEST_ARTIFACTS\&#96;: The full path of an empty folder for _test artifacts_
 . SHOULD execute the playbook with all Ansible tags best represent the intended _test context_.
 .. The choice of _test context_ tags is related to the _test subject_ being tested
-. MUST execute Ansible with inventory set to the full path of the file or directory `tests/inventory` if it exists.
-.. If the `tests/inventory` file doesn't exist, then `/usr/share/ansible/inventory` SHOULD be used as a default.
+. MUST execute Ansible with inventory set to the full path of the file or directory \&#96;tests/inventory\&#96; if it exists.
+.. If the \&#96;tests/inventory\&#96; file doesn't exist, then \&#96;/usr/share/ansible/inventory\&#96; SHOULD be used as a default.
 . MUST execute the playbook as root.
-. MUST execute the playbook passing `git_branch` as ansible variable.
-.. The branch used to clone tests*.yml
+. MUST execute the playbook passing \&#96;git_branch\&#96; as ansible variable.
+.. The branch used to clone tests\&#42;.yml
 . MUST examine the exit code of the playbook. A zero exit code means tests completed successfully, non-zero means a problem with running tests.
-. MUST examine the file `results.yml` in the `artifacts` folder to detect whether tests passed of failed.
-. MUST treat the file `test.log` in the `artifacts` folder as the main readable output of the test.
-. SHOULD place the textual stdout/stderr of the `ansible-playbook` command in the `ansible.log` file in the `artifacts` folder.
-. SHOULD treat the contents of the `artifacts` folder as the _test artifacts_.
+. MUST examine the file \&#96;results.yml\&#96; in the \&#96;artifacts\&#96; folder to detect whether tests passed of failed.
+. MUST treat the file \&#96;test.log\&#96; in the \&#96;artifacts\&#96; folder as the main readable output of the test.
+. SHOULD place the textual stdout/stderr of the \&#96;ansible-playbook\&#96; command in the \&#96;ansible.log\&#96; file in the \&#96;artifacts\&#96; folder.
+. SHOULD treat the contents of the \&#96;artifacts\&#96; folder as the _test artifacts_.
 
 Each _test suite_ playbook or _test framework_ contained therein:
 
 . SHOULD drop privileges appropriately if the _test suite_ should be run as non-root.
 . MUST install any requirements of its _test suite_ or _test framework_ and MUST fail if this is not possible.
-. MUST provision the _test subject_ listed in the `subjects` variable appropriately for its playbook name (described above) and MUST fail if this is not possible.
-. MUST place the main readable output of the _test suite_ into a `test.log` file in the `artifacts` variable folder. This MUST happen even if some of the test suites fail.
-. SHOULD place additional _test artifacts_ in the folder defined in the `artifacts` variable.
+. MUST provision the _test subject_ listed in the \&#96;subjects\&#96; variable appropriately for its playbook name (described above) and MUST fail if this is not possible.
+. MUST place the main readable output of the _test suite_ into a \&#96;test.log\&#96; file in the \&#96;artifacts\&#96; variable folder. This MUST happen even if some of the test suites fail.
+. SHOULD place additional _test artifacts_ in the folder defined in the \&#96;artifacts\&#96; variable.
 . MUST return a zero exit code of the playbook if tests have been executed successfully, or a non-zero exit code if failed to run any test (e.g. because of an infrastructure error).
-. MUST create a `results.yml` file in the `artifacts` directory with test results in the _results format_ defined above.
+. MUST create a \&#96;results.yml\&#96; file in the \&#96;artifacts\&#96; directory with test results in the _results format_ defined above.
 
 If an inventory file or script exists, it:
 
 . MUST describe where to invoke the playbook and how to connect to that target.
-. SHOULD launch or install any supported `$TEST_SUBJECTS` so that the playbook can be invoked against them.
-. SHOULD put relevant logs in the `$TEST_ARTIFACTS` directory.
+. SHOULD launch or install any supported \&#96;$TEST_SUBJECTS\&#96; so that the playbook can be invoked against them.
+. SHOULD put relevant logs in the \&#96;$TEST_ARTIFACTS\&#96; directory.
 
 === Discovery ===
 
@@ -1205,9 +1215,9 @@ Only the testing system will need to be taught to install the requirements and r
 
 A standard way to package, store and run tests benefits Fedora stability, and makes Fedora better for users.
 
-* This structure makes it easy to run locally thus potentially reproducing an error triggered on the test system.
-* Ansible is being more and more popular, thus making it easier for people to contribute new tests
-* Used by a lot of sys-admin, ansible could help sys-admin to bring test-cases to the packagers and developers about situation where something failed for them.
+\&#42; This structure makes it easy to run locally thus potentially reproducing an error triggered on the test system.
+\&#42; Ansible is being more and more popular, thus making it easier for people to contribute new tests
+\&#42; Used by a lot of sys-admin, ansible could help sys-admin to bring test-cases to the packagers and developers about situation where something failed for them.
 
 == Diagram ==
 
@@ -1225,14 +1235,16 @@ https://fedoraproject.org/wiki/Changes/InvokingTestsProposals[several proposals]
 
 == Contact ==
 
-* Name: Stef Walter, stefw@fedoraproject.org
-* Name: Pierre-Yves Chibon, pingou@fedoraproject.org
-* Name: Andrei Stepanov
-* Name: Serhii Turivnyi, sturivny@fedoraproject.org
+\&#42; Name: Stef Walter, stefw@fedoraproject.org
+\&#42; Name: Pierre-Yves Chibon, pingou@fedoraproject.org
+\&#42; Name: Andrei Stepanov
+\&#42; Name: Serhii Turivnyi, sturivny@fedoraproject.org
+
+
 
 = Standard Test Roles =
 
-Package `standard-test-roles` provides shared Ansible roles and inventory scripts implementing the xref:standard-test-interface.adoc[Standard Test Interface] version `1.1.0`.
+Package \&#96;standard-test-roles\&#96; provides shared Ansible roles and inventory scripts implementing the xref:standard-test-interface.adoc[Standard Test Interface] version \&#96;1.1.0\&#96;.
 It has support for multiple testing frameworks (such as BeakerLib or Avocado) and in this way allows to easily enable existing tests in Fedora CI.
 
 == Setup ==
@@ -1251,15 +1263,15 @@ sudo dnf update standard-test-roles
 
 === Artifacts ===
 
-Output of the test (such as the stdout/stderr output, log files or screenshots) is by default saved in the `artifacts` directory.
-Use `TEST_ARTIFACTS` environment variable to choose a different location if desired:
+Output of the test (such as the stdout/stderr output, log files or screenshots) is by default saved in the \&#96;artifacts\&#96; directory.
+Use \&#96;TEST_ARTIFACTS\&#96; environment variable to choose a different location if desired:
 
 export TEST_ARTIFACTS=/tmp/artifacts
 
 [NOTE]
 ====
-*Artifacts cleanup* +
-Before running tests make sure that all logs `/tmp/artifacts/test.*` are deleted.
+\&#42;Artifacts cleanup\&#42; +
+Before running tests make sure that all logs \&#96;/tmp/artifacts/test.\&#42;\&#96; are deleted.
 ====
 
 === Inventory ===
@@ -1268,7 +1280,7 @@ A _test subject_ is what we call the thing to be tested.
 To turn a test subject into a launched, installed system to be tested, we use http://docs.ansible.com/ansible/intro_dynamic_inventory.html[Ansible dynamic inventory].
 Use the following command to enable it:
 
-export ANSIBLE_INVENTORY=$(test -e inventory && echo inventory || echo /usr/share/ansible/inventory)
+export ANSIBLE_INVENTORY=$(test -e inventory \&amp;\&amp; echo inventory || echo /usr/share/ansible/inventory)
 
 As you can see from the way how the inventory is set, tests may contain their own inventory, which defines their own instructions for turning a _test subject_ into one or more testable systems.
 
@@ -1282,18 +1294,18 @@ The following examples invoke tests against the same system that the package git
 Below there are further options for invoking tests against another fully formed and integrated systems, such as an Atomic Host or container image _test subject_.
 
 There may be more than one test present in a package git repository.
-Testing system will run each playbook matching the glob `tests/tests*.yml` separately in a clean environment.
-Most often a single `tests.yml` file is used as the main entry point.
+Testing system will run each playbook matching the glob \&#96;tests/tests\&#42;.yml\&#96; separately in a clean environment.
+Most often a single \&#96;tests.yml\&#96; file is used as the main entry point.
 To run it use the following command:
 
 ansible-playbook tests.yml
 
-You can find output artifacts of the tests in an `artifacts/` or specify a specific directory like this:
+You can find output artifacts of the tests in an \&#96;artifacts/\&#96; or specify a specific directory like this:
 
 TEST_ARTIFACTS=/tmp/output ansible-playbook tests.yml
 
-You can filter which kinds of tests are run by providing a `--tags` argument.
-To only run tests that are suited for classic systems installed by `yum` or `dnf` you can use a command like:
+You can filter which kinds of tests are run by providing a \&#96;--tags\&#96; argument.
+To only run tests that are suited for classic systems installed by \&#96;yum\&#96; or \&#96;dnf\&#96; you can use a command like:
 
 ansible-playbook --tags=classic tests.yml
 
@@ -1316,7 +1328,7 @@ ansible-playbook tests.yml
 
 You'll notice that the RPM is installed into the testable system before invoking the tests.
 Some tests contain their own inventory, that is their own instructions for turning a _test subject_ into one or more testable systems.
-But in this case we use the default `standard-test-roles` inventory in `/usr/share/ansible/inventory` to do this.
+But in this case we use the default \&#96;standard-test-roles\&#96; inventory in \&#96;/usr/share/ansible/inventory\&#96; to do this.
 
 === Container ===
 
@@ -1338,9 +1350,9 @@ Not all tests are able to function in the somewhat different environment of a co
 In fact, for certain tests, the software to be tested may not be included in the container.
 But many of the tests for core packages should work here.
 
-The `--tags` argument filters out tests that are not suitable for running in a container, either because the system functions differently, or the correct packages are not installable.
+The \&#96;--tags\&#96; argument filters out tests that are not suitable for running in a container, either because the system functions differently, or the correct packages are not installable.
 
-See the <<_debug>> section for instructions how to log into a running container and diagnose why the tests failed.
+See the \&lt;\&lt;_debug\&gt;\&gt; section for instructions how to log into a running container and diagnose why the tests failed.
 
 ==== Additional arguments for Docker ====
 
@@ -1348,18 +1360,18 @@ Tests for containers are run with a help of Docker.
 Containers are run within default security context.
 For more info see https://docs.docker.com/engine/security/seccomp/[Seccomp security profiles for Docker].
 It is possible that some tests require additional privileges.
-In this case specify necessary arguments for Docker using an environment variable `TEST_DOCKER_EXTRA_ARGS`.
-For this create a file `inventory` file in `tests` directory with the following content:
+In this case specify necessary arguments for Docker using an environment variable \&#96;TEST_DOCKER_EXTRA_ARGS\&#96;.
+For this create a file \&#96;inventory\&#96; file in \&#96;tests\&#96; directory with the following content:
 
-#!/bin/bash
-export TEST_DOCKER_EXTRA_ARGS="--security-opt seccomp:unconfined"
-exec merge-standard-inventory "$@"
+\&#35;!/bin/bash
+export TEST_DOCKER_EXTRA_ARGS='--security-opt seccomp:unconfined'
+exec merge-standard-inventory '$@'
 
 or
 
-#!/bin/bash
-export TEST_DOCKER_EXTRA_ARGS="--privileged"
-exec merge-standard-inventory "$@"
+\&#35;!/bin/bash
+export TEST_DOCKER_EXTRA_ARGS='--privileged'
+exec merge-standard-inventory '$@'
 
 See https://pagure.io/standard-test-roles/blob/master/f/scripts/README.md[merge-standard-inventory] documentation for details.
 
@@ -1379,32 +1391,32 @@ Not all tests are able to function in the somewhat different environment of Atom
 But most of the tests in core packages should work here.
 
 Some tests contain their own inventory, that is their own instructions for turning a _test subject_ into one or more testable systems.
-But in this case we use the default `standard-test-roles` inventory to do this.
+But in this case we use the default \&#96;standard-test-roles\&#96; inventory to do this.
 
-The `--tags` argument filters out tests that are not suitable for running on an Atomic Host, either because the system functions differently, or the correct packages are not available on that system.
+The \&#96;--tags\&#96; argument filters out tests that are not suitable for running on an Atomic Host, either because the system functions differently, or the correct packages are not available on that system.
 
-See the <<_debug>> section to learn how to diagnose why the tests failed, and log into the running Atomic Host.
+See the \&lt;\&lt;_debug\&gt;\&gt; section to learn how to diagnose why the tests failed, and log into the running Atomic Host.
 
 
 [NOTE]
 ====
-*Required Packages* +
-are specified in `tests.yml` for Atomic Host, additional packages will be installed using the `rpm-ostree` command which is affecting the test subject (it's similar as rebuilding an rpm package to be tested) so this should be used with caution and only when necessary.
+\&#42;Required Packages\&#42; +
+are specified in \&#96;tests.yml\&#96; for Atomic Host, additional packages will be installed using the \&#96;rpm-ostree\&#96; command which is affecting the test subject (it's similar as rebuilding an rpm package to be tested) so this should be used with caution and only when necessary.
 Also be aware that there are certain limitations for this approach (e.g. it's not possible to install different version of packages that are already part of the tree).
 ====
 
 [NOTE]
 ====
-*Required Packages* +
-Atomic Host is shipped as a base ostree image, however you can install additional packages with a help of `rpm-ostree install` command.
+\&#42;Required Packages\&#42; +
+Atomic Host is shipped as a base ostree image, however you can install additional packages with a help of \&#96;rpm-ostree install\&#96; command.
 Currently (10.01.2018 )  repo with additional packages is actual only for the latest base-ostree image.
-Consequence: tests that install additional packages for Atomic Host can fail sometimes with: `error: The following base packages would be replaced: xxx` Solution: make sure you have the latest Atomic Host image.
-Additional information you can find https://github.com/projectatomic/rpm-ostree/issues/415[rpm-ostree issue 415] and a possible solution in the feature using `rpm-ostree jigdo` https://github.com/projectatomic/rpm-ostree/issues/1081[rpm-ostree issue 1081].
+Consequence: tests that install additional packages for Atomic Host can fail sometimes with: \&#96;error: The following base packages would be replaced: xxx\&#96; Solution: make sure you have the latest Atomic Host image.
+Additional information you can find https://github.com/projectatomic/rpm-ostree/issues/415[rpm-ostree issue 415] and a possible solution in the feature using \&#96;rpm-ostree jigdo\&#96; https://github.com/projectatomic/rpm-ostree/issues/1081[rpm-ostree issue 1081].
 ====
 
 === Debug ===
 
-To increase output verbosity use option `-v` or `-vvv`:
+To increase output verbosity use option \&#96;-v\&#96; or \&#96;-vvv\&#96;:
 
 ansible-playbook --tags=container tests.yml -v
 
@@ -1412,7 +1424,7 @@ or for full verbosity:
 
 ansible-playbook --tags=container tests.yml -vvv
 
-To debug tests in a running container or atomic host use the `TEST_DEBUG` environment variable.
+To debug tests in a running container or atomic host use the \&#96;TEST_DEBUG\&#96; environment variable.
 After the playbook runs, you'll see diagnosis information with a helpful command to log in.
 
 export TEST_DEBUG=1
@@ -1420,16 +1432,16 @@ export TEST_DEBUG=1
 For container you'll see output like this:
 
 DIAGNOSE: docker exec -it 56de801f0ddde36fc9770666f7be2a68f89d7f18f52b7b6fe7df7a12b193bf08 /bin/bash
-DIAGNOSE: kill 18261 # when finished
+DIAGNOSE: kill 18261 \&#35; when finished
 
 For atomic host the instructions are a bit different:
 
-DIAGNOSE: ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@127.0.0.3 # password: foobar
+DIAGNOSE: ssh -p 2222 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null root@127.0.0.3 \&#35; password: foobar
 DIAGNOSE: export ANSIBLE_INVENTORY=/tmp/inventory-cloudxyhF2M/inventory
-DIAGNOSE: kill 16611 # when finished
+DIAGNOSE: kill 16611 \&#35; when finished
 
 Now you can easily connect using these commands.
-Use suggested `kill` command to finish the running instance when done with investigation.
+Use suggested \&#96;kill\&#96; command to finish the running instance when done with investigation.
 
 == Roles ==
 
@@ -1456,8 +1468,8 @@ A role for extracting upstream source tarball (with tests)
 This is the recommended role for running tests written via the https://github.com/beakerlib/beakerlib[Beakerlib Testing Framework] as it supports all currenlty supported testing environments (atomic, classic, container).
 It also supports https://pagure.io/beakerlib-libraries[beakerlib-libraries] which allow easy code reuse among multiple tests.
 
-To use this role create `tests.yml` file with contents similar to the following snippet.
-The `tests` parameter should include the list of directories with your beakerlib tests.
+To use this role create \&#96;tests.yml\&#96; file with contents similar to the following snippet.
+The \&#96;tests\&#96; parameter should include the list of directories with your beakerlib tests.
 [source,ansible]
 ----
 - hosts: localhost
@@ -1471,8 +1483,8 @@ tests:
 - cmd-line-options
 ----
 
-The `required_packages` parameter can be used to list additional packages that need to be installed on the system to run tests.
-If you have required packages correctly specified in the beakerlib test metadata (in Makefile `RhtsRequires` stands for hard requirements, `Requires` for soft requirements) it is not necessary to list them again here.
+The \&#96;required_packages\&#96; parameter can be used to list additional packages that need to be installed on the system to run tests.
+If you have required packages correctly specified in the beakerlib test metadata (in Makefile \&#96;RhtsRequires\&#96; stands for hard requirements, \&#96;Requires\&#96; for soft requirements) it is not necessary to list them again here.
 
 [source,ansible]
 ----
@@ -1486,15 +1498,15 @@ roles:
 tests:
 - cmd-line-options
 required_packages:
-- which         # which package required for cmd-line-options
-- rpm-build     # upstream-testsuite requires rpmbuild command
-- libtool       # upstream-testsuite requires libtool
-- gettext       # upstream-testsuite requires gettext
+- which         \&#35; which package required for cmd-line-options
+- rpm-build     \&#35; upstream-testsuite requires rpmbuild command
+- libtool       \&#35; upstream-testsuite requires libtool
+- gettext       \&#35; upstream-testsuite requires gettext
 ----
 
 [NOTE]
 ====
-The `required_packages` parameter is ignored when running on Atomic Host--since there is no way to install additional packages in that environment.
+The \&#96;required_packages\&#96; parameter is ignored when running on Atomic Host--since there is no way to install additional packages in that environment.
 ====
 
 Instead of manually listing all tests to be executed it is also possible to provide an fmf filter in the following way:
@@ -1507,9 +1519,9 @@ roles:
 tags:
 - classic
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
-fmf_filter: "tier: 1"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
+fmf_filter: 'tier: 1'
 ----
 
 Filter can be used also if tests are stored directly in the git:
@@ -1521,7 +1533,7 @@ roles:
 - role: standard-test-beakerlib
 tags:
 - classic
-fmf_filter: "tier: 1"
+fmf_filter: 'tier: 1'
 ----
 
 See https://pagure.io/fedora-ci/metadata[Metadata] for more info about filtering tests based on fmf metadata.
@@ -1529,7 +1541,7 @@ See https://pagure.io/fedora-ci/metadata[Metadata] for more info about filtering
 === Basic ===
 
 Basic role can be used for executing scripts or binaries as simple tests.
-For example the following `tests.yml` file will run `binary --help` as a shell command in the current directory and provide pass/fail based on its return code:
+For example the following \&#96;tests.yml\&#96; file will run \&#96;binary --help\&#96; as a shell command in the current directory and provide pass/fail based on its return code:
 
 [source,ansible]
 ----
@@ -1544,7 +1556,7 @@ dir: .
 run: binary --help
 ----
 
-Here's another example `tests.yml` file which fetches a single integration test from a shared repository and uses parametrizing to run it multiple times with different environment variables:
+Here's another example \&#96;tests.yml\&#96; file which fetches a single integration test from a shared repository and uses parametrizing to run it multiple times with different environment variables:
 
 [source,ansible]
 ----
@@ -1554,8 +1566,8 @@ roles:
 tags:
 - classic
 repositories:
-- repo: "https://src.fedoraproject.org/tests/python.git"
-dest: "python"
+- repo: 'https://src.fedoraproject.org/tests/python.git'
+dest: 'python'
 tests:
 - smoke27:
 dir: python/smoke
@@ -1574,7 +1586,7 @@ required_packages:
 
 === RHTS ===
 
-This role has been obsoleted by the <<_beakerlib>> role which provides similar functionality.
+This role has been obsoleted by the \&lt;\&lt;_beakerlib\&gt;\&gt; role which provides similar functionality.
 
 == More ==
 
@@ -1582,24 +1594,26 @@ This role has been obsoleted by the <<_beakerlib>> role which provides similar f
 
 Pagure and Copr repositories:
 
-* https://pagure.io/standard-test-roles[pagure.io/standard-test-roles]
-* https://copr.fedorainfracloud.org/coprs/g/osci/standard-test-roles/builds[standard-test-roles copr builds]
+\&#42; https://pagure.io/standard-test-roles[pagure.io/standard-test-roles]
+\&#42; https://copr.fedorainfracloud.org/coprs/g/osci/standard-test-roles/builds[standard-test-roles copr builds]
 
 === Contact ===
 
-* Andrei Stepanov (astepano)
-* Miroslav Vadkerti (mvadkert)
+\&#42; Andrei Stepanov (astepano)
+\&#42; Miroslav Vadkerti (mvadkert)
+
+
 
 = How to add simple STI test for a package =
 
 == Test as a single command ==
 === Task ===
 
-There is a package *somepackage*, which contains a binary:
-*/usr/bin/somebinary*
+There is a package \&#42;somepackage\&#42;, which contains a binary:
+\&#42;/usr/bin/somebinary\&#42;
 
 The most simple and obvious way to test this binary is to run it:
-*somebinary --help* and check the exit status of the result.
+\&#42;somebinary --help\&#42; and check the exit status of the result.
 
 How to add this test for the package?
 
@@ -1609,7 +1623,7 @@ supported in Fedora Rawhide.
 
 === Solution ===
 
-Create file `tests/tests.yml` in the dist-git of the package:
+Create file \&#96;tests/tests.yml\&#96; in the dist-git of the package:
 
 .rpms/somepackage.git:
 ----
@@ -1621,7 +1635,7 @@ Create file `tests/tests.yml` in the dist-git of the package:
 └── tests.yml
 ----
 
-*tests.yml* is an ansible playbook, where you describe test environment
+\&#42;tests.yml\&#42; is an ansible playbook, where you describe test environment
 and steps to run your tests.
 
 There are many options and
@@ -1635,37 +1649,37 @@ For this case the content of the file should look as follows:
 ----
 - hosts: localhost
 roles:
-- role: standard-test-basic                         // <1>
+- role: standard-test-basic                         // \&lt;1\&gt;
 tags:
 - classic
 tests:
 - simple:
 dir: .
-run: "somebinary --help"                      // <2>
+run: 'somebinary --help'                      // \&lt;2\&gt;
 ----
-<1> this is a standard test role, it takes care of the test environment, logging, archiving results, etc
-<2> this is your test command, its exit code defines the outcome of the test
+\&lt;1\&gt; this is a standard test role, it takes care of the test environment, logging, archiving results, etc
+\&lt;2\&gt; this is your test command, its exit code defines the outcome of the test
 
 Submit your change as a pull request to see test results in Pagure
 interface, or push it directly to dist-git and get new test results
 every time you build package in Koji.
 
-NOTE: Test will be running in a *non-blocking* mode until you configure
+NOTE: Test will be running in a \&#42;non-blocking\&#42; mode until you configure
 gating for it.
 
 == Tests in a (sub)package ==
 
 === Task ===
 
-There is a package `somepackage`, and there is an integration test suite
-for it packaged in a separate `sometests` package, which provides the
-`run_some_tests` binary in the system path.
+There is a package \&#96;somepackage\&#96;, and there is an integration test suite
+for it packaged in a separate \&#96;sometests\&#96; package, which provides the
+\&#96;run_some_tests\&#96; binary in the system path.
 
 There goal is to trigger this binary as a test for a main package.
 
 === Solution ===
 
-Same as above, you need to create a `tests.yml` configuration file with
+Same as above, you need to create a \&#96;tests.yml\&#96; configuration file with
 the following content:
 
 .rpms/somepackage.git:tests/tests.yml
@@ -1678,16 +1692,16 @@ roles:
 tags:
 - classic
 required_packages:
-- sometests                    # <1>
+- sometests                    \&#35; \&lt;1\&gt;
 
 tests:
-- integration_tests:            # <2>
+- integration_tests:            \&#35; \&lt;2\&gt;
 dir: .
-run: run_some_tests         # <3>
+run: run_some_tests         \&#35; \&lt;3\&gt;
 ----
-<1> additional package which needs to be installed in the test environment
-<2> any string, will be used as identifier for artifacts and test results
-<3> test execution command
+\&lt;1\&gt; additional package which needs to be installed in the test environment
+\&lt;2\&gt; any string, will be used as identifier for artifacts and test results
+\&lt;3\&gt; test execution command
 
 == Tests in the source tarball ==
 
@@ -1698,18 +1712,18 @@ run: run_some_tests         # <3>
 
 Let's look into slightly more complicated setup now.
 
-Suppose there is a package `somepackage` which we are going to
+Suppose there is a package \&#96;somepackage\&#96; which we are going to
 test. There is an integration test suite for it, which is (sadly) not
 yet packaged and located in a separate git repository
-`https://somewhere/sometests.git`. Test suite has a dependency on some
-packaged tool `sometool`.  And in test repository there is a
-`run_some_tests` script which triggers test execution.
+\&#96;https://somewhere/sometests.git\&#96;. Test suite has a dependency on some
+packaged tool \&#96;sometool\&#96;.  And in test repository there is a
+\&#96;run_some_tests\&#96; script which triggers test execution.
 
 There goal is to trigger the execution of the test suite for a package.
 
 === Solution ===
 
-We need to create a `tests.yml` configuration file with the following
+We need to create a \&#96;tests.yml\&#96; configuration file with the following
 content:
 
 .rpms/somepackage.git:tests/tests.yml
@@ -1718,35 +1732,35 @@ content:
 ---
 - hosts: localhost
 roles:
-- role: standard-test-basic                        # <1>
+- role: standard-test-basic                        \&#35; \&lt;1\&gt;
 tags:
 - classic
 
 required_packages:
-- sometool                                     # <2>
+- sometool                                     \&#35; \&lt;2\&gt;
 
 repositories:
-- repo: "https://somewhere/sometests.git"      # <3>
-dest: "sometests"                            # <4>
+- repo: 'https://somewhere/sometests.git'      \&#35; \&lt;3\&gt;
+dest: 'sometests'                            \&#35; \&lt;4\&gt;
 
 tests:
-- integration_tests:                           # <5>
-dir: "sometests"                           # <6>
-run: "run_some_tests --all"                # <7>
+- integration_tests:                           \&#35; \&lt;5\&gt;
+dir: 'sometests'                           \&#35; \&lt;6\&gt;
+run: 'run_some_tests --all'                \&#35; \&lt;7\&gt;
 ----
-<1> same basic test role as usual
-<2> additional package which needs to be installed in the test environment
-<3> path to remote git repository
-<4> local path where the repository will be checked out
-<5> any string, will be used as identifier for artifacts and test results
-<6> same folder as in `<4>`, contains the checked out external repository
-<7> test execution command
+\&lt;1\&gt; same basic test role as usual
+\&lt;2\&gt; additional package which needs to be installed in the test environment
+\&lt;3\&gt; path to remote git repository
+\&lt;4\&gt; local path where the repository will be checked out
+\&lt;5\&gt; any string, will be used as identifier for artifacts and test results
+\&lt;6\&gt; same folder as in \&#96;\&lt;4\&gt;\&#96;, contains the checked out external repository
+\&lt;7\&gt; test execution command
 
 == Questions ==
 
 === What if I want to run not one but a sequence of commands? ===
 
-Put a bash script in **tests/scripts/** folder and run it from the
+Put a bash script in \&#42;\&#42;tests/scripts/\&#42;\&#42; folder and run it from the
 playbook.
 
 .rpms/somepackage.git:
@@ -1757,36 +1771,36 @@ playbook.
 ├── sources
 └── tests
 ├── scripts
-│   └── run_tests.sh      # <1>
+│   └── run_tests.sh      \&#35; \&lt;1\&gt;
 └── tests.yml
 ----
-<1> your custom test scenario
+\&lt;1\&gt; your custom test scenario
 
 Configure dist-git test to run this script:
 [source,yaml]
-....
+\&#8230;.
 - hosts: localhost
 roles:
-- role: standard-test-basic      # <1>
+- role: standard-test-basic      \&#35; \&lt;1\&gt;
 tags:
 - classic
 tests:
 - simple:
-dir: scripts               # <2>
-run: ./run_tests.sh        # <3>
-....
-<1> same standard role
-<2> switch to subfolder (path is relative to `tests/` folder)
-<3> this is the test script, its exit code is the outcome of the test
+dir: scripts               \&#35; \&lt;2\&gt;
+run: ./run_tests.sh        \&#35; \&lt;3\&gt;
+\&#8230;.
+\&lt;1\&gt; same standard role
+\&lt;2\&gt; switch to subfolder (path is relative to \&#96;tests/\&#96; folder)
+\&lt;3\&gt; this is the test script, its exit code is the outcome of the test
 
 === What is under the hood? ===
 
 To test the build we:
 
-* checkout dist-git repo
-* take latest qcow image of Fedora Rawhide
-* install all packages from the koji build on it
-* run ansible playbook defined in tests.yml
+\&#42; checkout dist-git repo
+\&#42; take latest qcow image of Fedora Rawhide
+\&#42; install all packages from the koji build on it
+\&#42; run ansible playbook defined in tests.yml
 
 === How do I verify my configuration? ===
 
@@ -1801,7 +1815,9 @@ And as soon as result of the test is ready, it will appear on the pull
 request page in http://src.fedoraproject.org/[Fedora Pagure]
 
 To restart the test add a comment to PR in Pagure, with the following
-content: `[citest]`
+content: \&#96;[citest]\&#96;
+
+
 
 = Quick Start Guide =
 
@@ -1815,27 +1831,27 @@ Install the following essential packages on your system (consider using a virtua
 
 sudo dnf install fedpkg standard-test-roles
 
-Use `fedpkg` to clone the package git repository.
+Use \&#96;fedpkg\&#96; to clone the package git repository.
 See the https://docs.fedoraproject.org/en-US/package-maintainers/Package_Maintenance_Guide/[Package Maintenance Guide] for more info about the tool.
 
 fedpkg clone -a bash
 git checkout -b f33 remotes/origin/f33
 
-Tests are defined according to the xref:standard-test-interface.adoc[Standard Test Interface] in the `tests` directory:
+Tests are defined according to the xref:standard-test-interface.adoc[Standard Test Interface] in the \&#96;tests\&#96; directory:
 
 cd bash/tests/
 
 Test coverage to be executed together with the basic set of metadata is described in the https://src.fedoraproject.org/rpms/bash/blob/rawhide/f/tests/tests.yml[tests.yml] playbook.
-Use `ansible-playbook` to run all available tests for the classic environment on the local host (needs to be run as root):
+Use \&#96;ansible-playbook\&#96; to run all available tests for the classic environment on the local host (needs to be run as root):
 
 ansible-playbook --tags=classic tests.yml
 
 From the ansible output you can directly see an overall summary of the testing.
-If you see `failed=0` at the end of the log then all tests passed:
+If you see \&#96;failed=0\&#96; at the end of the log then all tests passed:
 
 localhost: ok=29 changed=11 unreachable=0 failed=0
 
-For more detailed test results check the `test.log` and other files in the `artifacts` directory:
+For more detailed test results check the \&#96;test.log\&#96; and other files in the \&#96;artifacts\&#96; directory:
 
 vim artifacts/test.log
 
@@ -1844,7 +1860,7 @@ That's it! You just executed test coverage for the Bash package :)
 == Test Subjects ==
 
 To execute tests against different test subjects we need to prepare the environment.
-Let's store the detailed test results in `/tmp/artifacts`, use dynamic inventory as defined by the xref:standard-test-roles.adoc[Standard Test Roles] and download the latest Atomic Host image.
+Let's store the detailed test results in \&#96;/tmp/artifacts\&#96;, use dynamic inventory as defined by the xref:standard-test-roles.adoc[Standard Test Roles] and download the latest Atomic Host image.
 
 export TEST_ARTIFACTS=/tmp/artifacts
 export ANSIBLE_INVENTORY=/usr/share/ansible/inventory
@@ -1859,7 +1875,7 @@ Run tests against classic rpms installed on the system:
 export TEST_SUBJECTS=''
 ansible-playbook --tags=classic tests.yml
 
-See xref:standard-test-roles.adoc#_classic[Classic] for detailed docs.
+See xref:standard-test-roles.adoc\&#35;_classic[Classic] for detailed docs.
 
 === Container ===
 
@@ -1872,7 +1888,7 @@ Run tests in a docker container:
 export TEST_SUBJECTS=docker:docker.io/library/fedora:latest
 ansible-playbook --tags=container tests.yml
 
-See xref:standard-test-roles.adoc#_container[Container] for detailed docs.
+See xref:standard-test-roles.adoc\&#35;_container[Container] for detailed docs.
 
 === Atomic ===
 
@@ -1881,7 +1897,7 @@ Run tests against the Atomic Host:
 export TEST_SUBJECTS=/tmp/atomic.qcow2
 ansible-playbook --tags=atomic tests.yml
 
-See xref:standard-test-roles.adoc#_atomic[Atomic] for detailed docs.
+See xref:standard-test-roles.adoc\&#35;_atomic[Atomic] for detailed docs.
 
 == Hints ==
 
@@ -1892,27 +1908,27 @@ Would you like to investigate why a test failed? Enable debugging to easilly con
 export TEST_DEBUG=1
 ansible-playbook --tags=atomic tests.yml
 
-See xref:standard-test-roles.adoc#_debug[Debug] for details about debugging.
+See xref:standard-test-roles.adoc\&#35;_debug[Debug] for details about debugging.
 
 === Ignore ===
 
-Use `.gitignore` to specify files that Git should ignore.
+Use \&#96;.gitignore\&#96; to specify files that Git should ignore.
 Such files are created during tests run.
-Create a `tests/.gitignore` file with the following contents:
+Create a \&#96;tests/.gitignore\&#96; file with the following contents:
 
 [source,gitignore]
 ----
-# Ignore tests runs/artefacts.
-artifacts/**
-**/*.retry
+\&#35; Ignore tests runs/artefacts.
+artifacts/\&#42;\&#42;
+\&#42;\&#42;/\&#42;.retry
 ----
 
 == Contribute ==
 
 Are you interested in contributing a new test coverage?
 You are most welcome!
-As you have seen xref:tests.adoc#_executing[Executing] a test is quite easy.
-xref:tests.adoc#_writing[Writing] a new test or xref:tests.adoc#_wrapping[Wrapping] an existing one is quite simple as well.
+As you have seen xref:tests.adoc\&#35;_executing[Executing] a test is quite easy.
+xref:tests.adoc\&#35;_writing[Writing] a new test or xref:tests.adoc\&#35;_wrapping[Wrapping] an existing one is quite simple as well.
 Here's a few recommendations for creating a new pull request.
 
 === Fork ===
@@ -1924,7 +1940,7 @@ For example:
 git remote add fork ssh://psss@pkgs.fedoraproject.org/forks/psss/rpms/bash.git
 git checkout -b tests
 
-If you are not a Fedora packager, use `fedpkg` command to clone you fork and set up the git repo config so that you are able to push to it.
+If you are not a Fedora packager, use \&#96;fedpkg\&#96; command to clone you fork and set up the git repo config so that you are able to push to it.
 See xref:pull-requests.adoc[Pull Requests] for more detailed info.
 
 fedpkg clone -a forks/psss/rpms/bash
@@ -1932,12 +1948,12 @@ git checkout -b tests
 
 === Add ===
 
-Create new test coverage under the `tests` directory, update the `tests.yml` file accorgingly or create a new one.
+Create new test coverage under the \&#96;tests\&#96; directory, update the \&#96;tests.yml\&#96; file accorgingly or create a new one.
 Run tests and verify they are stable and working fine in all supported environments.
 Add files to git, commit and push:
 
 git add tests.yml test1 test2 test3
-git commit -m "Add CI tests using the Standard Test Interface"
+git commit -m 'Add CI tests using the Standard Test Interface'
 git push fork tests:tests
 
 It is a good idea to include more details and links in the commit message to make the pull request easier for review:
@@ -1956,7 +1972,7 @@ and the Fedora CI portal [3] for more detailed info and links.
 [3] https://docs.fedoraproject.org/en-US/ci
 ----
 
-Create a new pull request from your `tests` branch against the rawhide branch in the https://src.fedoraproject.org/fork/psss/rpms/bash[Pagure] web interface.
+Create a new pull request from your \&#96;tests\&#96; branch against the rawhide branch in the https://src.fedoraproject.org/fork/psss/rpms/bash[Pagure] web interface.
 You might want to include an additional info about the tests such as:
 
 [source,message]
@@ -1976,12 +1992,14 @@ See the xref:pipeline.adoc[Pipeline] page for the list of active pipelines and r
 === Gating ===
 
 Currently gating the package on test results is an opt-in feature.
-In order to enable gating for you component create a `gating.yaml` file in the root of your component dist git repository.
+In order to enable gating for you component create a \&#96;gating.yaml\&#96; file in the root of your component dist git repository.
 See xref:gating.adoc[Gating] for more details.
+
+
 
 = Tests =
 
-[cols="1", options="header"]
+[cols='1',_options='header']
 |===
 |Quick links to automated test reports
 
@@ -2001,23 +2019,23 @@ See xref:gating.adoc[Gating] for more details.
 == Enabling ==
 
 Tests may be written in different ways, but are exposed and invoked in a standard way as defined by the xref:standard-test-interface.adoc[Standard Test Interface] directly in the package https://src.fedoraproject.org/projects/rpms/%2A[git repository].
-It is also possible to enable pipeline for the tests namespace, see xref:share-test-code.adoc#_testing_tests[Testing Tests] for details.
+It is also possible to enable pipeline for the tests namespace, see xref:share-test-code.adoc\&#35;_testing_tests[Testing Tests] for details.
 To start working on tests you can clone a package repo directly:
 
 git clone https://src.fedoraproject.org/rpms/qrencode.git
 
-You can also use the `fedpkg` to clone the repo.
+You can also use the \&#96;fedpkg\&#96; to clone the repo.
 See the https://docs.fedoraproject.org/en-US/package-maintainers/Package_Maintenance_Guide/[Package Maintenance Guide] for more info about the tool:
 
 fedpkg clone -a qrencode
 
-Tests are enabled by including the `tests.yml` file under the `tests` directory:
+Tests are enabled by including the \&#96;tests.yml\&#96; file under the \&#96;tests\&#96; directory:
 
 cd qrencode/tests
 cat tests.yml
 
 Tests are wrapped or written as http://docs.ansible.com/ansible/playbooks.html[Ansible playbooks].
-Here is an example of a simple playbok which enables a single `smoke` test of the `qrencode` package:
+Here is an example of a simple playbok which enables a single \&#96;smoke\&#96; test of the \&#96;qrencode\&#96; package:
 
 [source,ansible]
 ----
@@ -2037,24 +2055,24 @@ required_packages:
 
 Let's now briefly look at the playbook to see which variables are defined in order to enable the smoke test:
 
-role:: this test uses role `standard-test-beakerlib` from xref:standard-test-roles.adoc[Standard Test Roles] to run a BeakerLib test
-tags:: all three test subjects (xref:standard-test-roles.adoc#_classic[classic] rpm, docker xref:standard-test-roles.adoc#_container[container] and xref:standard-test-roles.adoc#_atomic[atomic] host) are relevant for this test
+role:: this test uses role \&#96;standard-test-beakerlib\&#96; from xref:standard-test-roles.adoc[Standard Test Roles] to run a BeakerLib test
+tags:: all three test subjects (xref:standard-test-roles.adoc\&#35;_classic[classic] rpm, docker xref:standard-test-roles.adoc\&#35;_container[container] and xref:standard-test-roles.adoc\&#35;_atomic[atomic] host) are relevant for this test
 tests:: list of tests to be executed (here we have just a single smoke test)
 required_packages:: list of rpm packages required for test execution
 
 It is possible to separate tests into multiple playbooks, each of them can represent a test or a part of a test.
-Testing system will run each playbook matching the glob `tests/tests*.yml` separately in a clean environment.
-Optionally you can have multiple playbooks without the `tests` prefix and link them from the `tests.yml` file.
+Testing system will run each playbook matching the glob \&#96;tests/tests\&#42;.yml\&#96; separately in a clean environment.
+Optionally you can have multiple playbooks without the \&#96;tests\&#96; prefix and link them from the \&#96;tests.yml\&#96; file.
 Let's have a look at the https://src.fedoraproject.org/rpms/gzip/blob/rawhide/f/tests[gzip] example:
 
-> fedpkg clone -a gzip
-Cloning into 'gzip'...
+\&gt; fedpkg clone -a gzip
+Cloning into 'gzip'\&#8230;
 
-> cd gzip/tests/
-> ls
+\&gt; cd gzip/tests/
+\&gt; ls
 test-simple  test_simple.yml  tests.yml
 
-> cat tests.yml
+\&gt; cat tests.yml
 - include: test_simple.yml
 
 == Executing ==
@@ -2069,7 +2087,7 @@ But in general be sure to be root when invoking tests.
 
 [NOTE]
 ====
-*Tests may modify or destroy your environment* +
+\&#42;Tests may modify or destroy your environment\&#42; +
 It's recommended to use a virtual machine for testing to prevent any unwated changes performed by the test to your system.
 ====
 
@@ -2077,11 +2095,11 @@ Running a test directly on the current system is easy:
 
 ansible-playbook tests.yml
 
-To only run tests that are suited for classic systems installed by `yum` or `dnf` use the `--tags` argument:
+To only run tests that are suited for classic systems installed by \&#96;yum\&#96; or \&#96;dnf\&#96; use the \&#96;--tags\&#96; argument:
 
 ansible-playbook --tags=classic tests.yml
 
-See xref:standard-test-roles.adoc[Standard Test Roles] documentation for detailed instructions how to run tests for a specific xref:standard-test-roles.adoc#_package[Rpm Package], xref:standard-test-roles.adoc#_container[Docker Container] or xref:standard-test-roles.adoc#_atomic[Atomic Host].
+See xref:standard-test-roles.adoc[Standard Test Roles] documentation for detailed instructions how to run tests for a specific xref:standard-test-roles.adoc\&#35;_package[Rpm Package], xref:standard-test-roles.adoc\&#35;_container[Docker Container] or xref:standard-test-roles.adoc\&#35;_atomic[Atomic Host].
 
 == Writing ==
 
@@ -2091,15 +2109,15 @@ If you want to create a custom test follow instructions below.
 
 Once you've identified a dist-git repository you will be adding new tests to (above), you can start to write a new Ansible test.
 Create an http://docs.ansible.com/ansible/latest/playbooks.html[Ansible playbook] with a new name.
-Make sure the extension is `.yml`.
-Lets place the following example in `test_pid_1.yml` file.
+Make sure the extension is \&#96;.yml\&#96;.
+Lets place the following example in \&#96;test_pid_1.yml\&#96; file.
 
 [source,ansible]
 ----
 ---
 - hosts: localhost
 vars:
-- artifacts: "{{ lookup('env', 'TEST_ARTIFACTS')|default('./artifacts', true) }}"
+- artifacts: '{{ lookup('env', 'TEST_ARTIFACTS')|default('./artifacts', true) }}'
 tags:
 - atomic
 - classic
@@ -2109,15 +2127,15 @@ tasks:
 block:
 - name: Test that /proc/1 exists
 shell: |
-ls /proc > /tmp/test.log || exit 1
-grep -qw 1 /tmp/test.log && result=pass || result=fail
-echo -e "results:\n- {result: $result, test: proc}" > /tmp/results.yml
+ls /proc \&gt; /tmp/test.log || exit 1
+grep -qw 1 /tmp/test.log \&amp;\&amp; result=pass || result=fail
+echo -e 'results:\n- {result: $result, test: proc}' \&gt; /tmp/results.yml
 
 always:
 - name: Pull out the artifacts
 fetch:
-dest: "{{ artifacts }}/"
-src: "{{ item }}"
+dest: '{{ artifacts }}/'
+src: '{{ item }}'
 flat: yes
 with_items:
 - /tmp/test.log
@@ -2128,9 +2146,9 @@ All tests have an artifacts directory where they place their output.
 The testing or CI system that invokes the test will fill in this variable with a directory that it will archive.
 We ensure this directory exists in the test.
 
-By use of `tags` we note what kind of systems this test is suitable to run on.
-When including additional tasks such as `pre_tasks` make sure you set appropriate tag as well.
-In addition to tags listed above it's also possible to use `always` to denote the task should run for all environments.
+By use of \&#96;tags\&#96; we note what kind of systems this test is suitable to run on.
+When including additional tasks such as \&#96;pre_tasks\&#96; make sure you set appropriate tag as well.
+In addition to tags listed above it's also possible to use \&#96;always\&#96; to denote the task should run for all environments.
 For example:
 
 [source,ansible]
@@ -2146,27 +2164,27 @@ groups:
 - adm
 ----
 
-The `block` is the section that runs the actual test.
+The \&#96;block\&#96; is the section that runs the actual test.
 In this example, we use a rather convoluted way of checking that PID 1 exists.
 However, by doing so, we place an extra test artifact in the artifacts directory.
 
 Lastly, we download the artifacts.
 Remember that the test is not always running on the same system that it was invoked on.
-Try running this example test against an xref:standard-test-roles.adoc#_atomic[Atomic Host] or xref:standard-test-roles.adoc#_container[Docker Container].
+Try running this example test against an xref:standard-test-roles.adoc\&#35;_atomic[Atomic Host] or xref:standard-test-roles.adoc\&#35;_container[Docker Container].
 It should pass.
-Try changing the `/proc/1` argument to another value, and the test should fail.
+Try changing the \&#96;/proc/1\&#96; argument to another value, and the test should fail.
 
 You can use most of the Ansible techniques in your playbooks.
 Take a look at the xref:standard-test-roles.adoc[Standard Test Roles] for Ansible roles to make writing your tests easier.
 
-*Marking the test to be run*
+\&#42;Marking the test to be run\&#42;
 
-Just having a `.yml` file in the right directory doesn't yet mean it will be invoked.
-Make sure to reference or add it from a `tests.yml` playbook.
+Just having a \&#96;.yml\&#96; file in the right directory doesn't yet mean it will be invoked.
+Make sure to reference or add it from a \&#96;tests.yml\&#96; playbook.
 This is the entry point that the testing or CI system will use to invoke all the tests for a given package.
 
-If the `tests.yml` file doesn't yet exist, create it.
-Lets continue with our above example and create a `tests.yml` with the following content:
+If the \&#96;tests.yml\&#96; file doesn't yet exist, create it.
+Lets continue with our above example and create a \&#96;tests.yml\&#96; with the following content:
 
 [source,ansible]
 ----
@@ -2175,33 +2193,33 @@ Lets continue with our above example and create a `tests.yml` with the following
 
 You can now run this test with the standard commands above.
 
-See the xref:quick-start-guide.adoc#_contributing[Quick Start Guide] to get recommendations for contributing new tests.
+See the xref:quick-start-guide.adoc\&#35;_contributing[Quick Start Guide] to get recommendations for contributing new tests.
 
 == Wrapping ==
 
 Let's say you have a script that runs a test.
 Its stdout and stderr is the test output, and an exit status of zero indicates success.
 Here's how we would wrap that test to be invoked.
-Lets say we have a simple script like in a file called `test-simple`
+Lets say we have a simple script like in a file called \&#96;test-simple\&#96;
 
-#!/bin/sh
+\&#35;!/bin/sh
 set -ex
-# exercise installed gzip/gunzip programs
-echo "Bla" > bla.file
+\&#35; exercise installed gzip/gunzip programs
+echo 'Bla' \&gt; bla.file
 cp bla.file bla.file.orig
 gzip bla.file
 gunzip bla.file.gz
 cmp bla.file bla.file.orig
 rm bla.file bla.file.orig
 
-We can write an Ansible wrapper for this script like this in `test_simple.yml`:
+We can write an Ansible wrapper for this script like this in \&#96;test_simple.yml\&#96;:
 
 [source,ansible]
 ----
 ---
 - hosts: localhost
 vars:
-- artifacts: "{{ lookup('env', 'TEST_ARTIFACTS')|default('./artifacts', true) }}"
+- artifacts: '{{ lookup('env', 'TEST_ARTIFACTS')|default('./artifacts', true) }}'
 tags:
 - atomic
 - classic
@@ -2217,14 +2235,14 @@ with_items:
 block:
 - name: Execute the tests
 shell: |
-/usr/local/bin/test-simple &> /tmp/test.log && result=pass || result=fail
-echo -e "results:\n- {result: $result, test: simple}" > /tmp/results.yml
+/usr/local/bin/test-simple \&amp;\&gt; /tmp/test.log \&amp;\&amp; result=pass || result=fail
+echo -e 'results:\n- {result: $result, test: simple}' \&gt; /tmp/results.yml
 
 always:
 - name: Pull out the logs
 fetch:
-dest: "{{ artifacts }}/"
-src: "{{ item }}"
+dest: '{{ artifacts }}/'
+src: '{{ item }}'
 flat: yes
 with_items:
 - /tmp/test.log
@@ -2235,26 +2253,26 @@ All tests have an artifacts directory where they place their output.
 The testing or CI system that invokes the test will fill in this variable with a directory that it will archive.
 We create ensure this directory exists in the test.
 
-The `block` is the section that runs the actual test.
+The \&#96;block\&#96; is the section that runs the actual test.
 
 Lastly, we download the artifacts.
 Remember that the test is not always running on the same system that it was invoked on.
 
 
-If the `tests.yml` file doesn't yet exist, create it.
-Lets continue with our above example and create a `tests.yml` with the following content:
+If the \&#96;tests.yml\&#96; file doesn't yet exist, create it.
+Lets continue with our above example and create a \&#96;tests.yml\&#96; with the following content:
 
 [source,ansible]
 ----
 - import_playbook: test_simple.yml
 ----
 
-Try running this example test against an xref:standard-test-roles.adoc#_atomic[Atomic Host] or xref:standard-test-roles.adoc#_container[Docker Container].
+Try running this example test against an xref:standard-test-roles.adoc\&#35;_atomic[Atomic Host] or xref:standard-test-roles.adoc\&#35;_container[Docker Container].
 It should pass.
 
-See xref:standard-test-roles.adoc[Standard Test Roles] documentation for instructions how to wrap a xref:standard-test-roles.adoc#_beakerlib[BeakerLib] and xref:standard-test-roles.adoc#_rhts[RHTS] tests.
+See xref:standard-test-roles.adoc[Standard Test Roles] documentation for instructions how to wrap a xref:standard-test-roles.adoc\&#35;_beakerlib[BeakerLib] and xref:standard-test-roles.adoc\&#35;_rhts[RHTS] tests.
 
-See the xref:quick-start-guide.adoc#_contributing[Quick Start Guide] to get recommendations for contributing new tests.
+See the xref:quick-start-guide.adoc\&#35;_contributing[Quick Start Guide] to get recommendations for contributing new tests.
 
 == Preparation ==
 
@@ -2268,7 +2286,7 @@ tags:
 - classic
 tasks:
 - dnf:
-name: "*"
+name: '\&#42;'
 state: latest
 
 - hosts: localhost
@@ -2282,13 +2300,15 @@ dir: smoke
 run: VERSION=3.8 METHOD=virtualenv ./venv.sh
 ----
 
+
+
 = Examples =
 
 On this page you can find some inspiration from real-life examples of tests already enabled in the Fedora CI.
 
 == did ==
 
-For each component it makes sense to enable even the most simple test such as running the binary with `--help` or using an internal smoke test.
+For each component it makes sense to enable even the most simple test such as running the binary with \&#96;--help\&#96; or using an internal smoke test.
 Here's an example from the https://src.fedoraproject.org/rpms/did/pull-request/5[did] component:
 
 [source,ansible]
@@ -2307,25 +2327,25 @@ required_packages:
 ----
 
 That's it.
-As you see above, executing a single command as a test is very easy with the help of the xref:standard-test-roles.adoc#_basic[Basic] role.
+As you see above, executing a single command as a test is very easy with the help of the xref:standard-test-roles.adoc\&#35;_basic[Basic] role.
 
 == Python ==
 
 There are multiple versions of Python programming language available in Fedora and a number of related subpackages.
-As all of them should be tested (including their various combinatios) we xref:share-test-code.adoc[share] test coverage for them in the `tests` namespace:
+As all of them should be tested (including their various combinatios) we xref:share-test-code.adoc[share] test coverage for them in the \&#96;tests\&#96; namespace:
 
-* https://src.fedoraproject.org/tests/python[Python tests]
+\&#42; https://src.fedoraproject.org/tests/python[Python tests]
 
 The test repo contains basic smoke test for virtualenv together with example test https://pagure.io/fedora-ci/metadata[Metadata] stored in the https://fedoraproject.org/wiki/Flexible_Metadata_Format[Flexible Metadata Format]:
 
-* https://src.fedoraproject.org/tests/python/blob/main/f/main.fmf[main.fmf]
-* https://src.fedoraproject.org/tests/python/blob/main/f/smoke/venv.fmf[venv.fmf]
+\&#42; https://src.fedoraproject.org/tests/python/blob/main/f/main.fmf[main.fmf]
+\&#42; https://src.fedoraproject.org/tests/python/blob/main/f/smoke/venv.fmf[venv.fmf]
 
 Once the test is avaible in the share test repository it can be easily linked from supported Python versions:
 
-* https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/tests/tests.yml[python2.7]
+\&#42; https://src.fedoraproject.org/rpms/python2.7/blob/rawhide/f/tests/tests.yml[python2.7]
 
-* https://src.fedoraproject.org/rpms/python3.6/blob/rawhide/f/tests/tests.yml[python3.6],
+\&#42; https://src.fedoraproject.org/rpms/python3.6/blob/rawhide/f/tests/tests.yml[python3.6],
 https://src.fedoraproject.org/rpms/python3.7/blob/rawhide/f/tests/tests.yml[python3.7],
 https://src.fedoraproject.org/rpms/python3.8/blob/rawhide/f/tests/tests.yml[python3.8],
 https://src.fedoraproject.org/rpms/python3.9/blob/rawhide/f/tests/tests.yml[python3.9],
@@ -2334,16 +2354,16 @@ https://src.fedoraproject.org/rpms/python3.11/blob/rawhide/f/tests/tests.yml[pyt
 
 We test additional Python implementations as well:
 
-* https://src.fedoraproject.org/rpms/pypy/blob/rawhide/f/tests/tests.yml[pypy],
+\&#42; https://src.fedoraproject.org/rpms/pypy/blob/rawhide/f/tests/tests.yml[pypy],
 https://src.fedoraproject.org/rpms/pypy3.7/blob/rawhide/f/tests/tests.yml[pypy3.7]
 
-Plus we ensure that essential tools for venv and virtualnv, such as `setuptools`, `pip` or `virtualenv` itself correctly work with all supported versions:
+Plus we ensure that essential tools for venv and virtualnv, such as \&#96;setuptools\&#96;, \&#96;pip\&#96; or \&#96;virtualenv\&#96; itself correctly work with all supported versions:
 
-* https://src.fedoraproject.org/rpms/python-pip/blob/rawhide/f/tests/tests.yml[python-pip]
-* https://src.fedoraproject.org/rpms/python-wheel/blob/rawhide/f/tests/tests.yml[python-wheel]
-* https://src.fedoraproject.org/rpms/python-setuptools/blob/rawhide/f/tests/tests.yml[python-setuptools]
-* https://src.fedoraproject.org/rpms/python-virtualenv/blob/rawhide/f/tests/tests.yml[python-virtualenv]
-* https://src.fedoraproject.org/rpms/python-tox/blob/rawhide/f/tests/tests.yml[python-tox]
+\&#42; https://src.fedoraproject.org/rpms/python-pip/blob/rawhide/f/tests/tests.yml[python-pip]
+\&#42; https://src.fedoraproject.org/rpms/python-wheel/blob/rawhide/f/tests/tests.yml[python-wheel]
+\&#42; https://src.fedoraproject.org/rpms/python-setuptools/blob/rawhide/f/tests/tests.yml[python-setuptools]
+\&#42; https://src.fedoraproject.org/rpms/python-virtualenv/blob/rawhide/f/tests/tests.yml[python-virtualenv]
+\&#42; https://src.fedoraproject.org/rpms/python-tox/blob/rawhide/f/tests/tests.yml[python-tox]
 
 Note that for the last set of examples we run the same test several times with modified environment.
 For example:
@@ -2372,21 +2392,21 @@ In this way we create several virtual test cases from a single test code which p
 == Shell ==
 
 There are several shells which implement the POSIX specification: bash, ksh, mksh, zsh, dash.
-All of them share a significant amount of test coverage and it does not make sense to commit & maintain identical tests in five different repositories (+ possible branches).
-Thus we store test code in the `tests` namespace:
+All of them share a significant amount of test coverage and it does not make sense to commit \&amp; maintain identical tests in five different repositories (+ possible branches).
+Thus we store test code in the \&#96;tests\&#96; namespace:
 
-* https://src.fedoraproject.org/tests/shell[Shell tests]
+\&#42; https://src.fedoraproject.org/tests/shell[Shell tests]
 
-These tests are then linked from all relevant `tests.yml` files:
+These tests are then linked from all relevant \&#96;tests.yml\&#96; files:
 
-* https://src.fedoraproject.org/rpms/bash/blob/rawhide/f/tests/tests.yml[bash]
-* https://src.fedoraproject.org/rpms/ksh/blob/rawhide/f/tests/tests.yml[ksh]
-* https://src.fedoraproject.org/rpms/mksh/blob/rawhide/f/tests/tests.yml[mksh]
-* https://src.fedoraproject.org/rpms/zsh/blob/rawhide/f/tests/tests.yml[zsh]
-* https://src.fedoraproject.org/rpms/dash/blob/rawhide/f/tests/tests.yml[dash]
+\&#42; https://src.fedoraproject.org/rpms/bash/blob/rawhide/f/tests/tests.yml[bash]
+\&#42; https://src.fedoraproject.org/rpms/ksh/blob/rawhide/f/tests/tests.yml[ksh]
+\&#42; https://src.fedoraproject.org/rpms/mksh/blob/rawhide/f/tests/tests.yml[mksh]
+\&#42; https://src.fedoraproject.org/rpms/zsh/blob/rawhide/f/tests/tests.yml[zsh]
+\&#42; https://src.fedoraproject.org/rpms/dash/blob/rawhide/f/tests/tests.yml[dash]
 
 https://fedoraproject.org/wiki/Flexible_Metadata_Format[Flexible Metadata Format] filter is used to select appropriate tests instead of listing individual tests manually.
-Environment variables `PACKAGES` and `SH_BIN` are used to specify which shell implementation is being tested:
+Environment variables \&#96;PACKAGES\&#96; and \&#96;SH_BIN\&#96; are used to specify which shell implementation is being tested:
 
 [source,ansible]
 ----
@@ -2396,27 +2416,27 @@ roles:
 tags:
 - classic
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
-fmf_filter: "tier: 1, 2 & tags: classic"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
+fmf_filter: 'tier: 1, 2 \&amp; tags: classic'
 environment:
 PACKAGES: ksh
 SH_BIN: ksh
 required_packages:
 - ksh
-- expect            # login requires expect
-- which             # smoke requires which
+- expect            \&#35; login requires expect
+- which             \&#35; smoke requires which
 ----
 
 Some of the tests might be relevant only for selected components.
-This can be handled easily by additional `component` condition:
+This can be handled easily by additional \&#96;component\&#96; condition:
 
 [source,ansible]
 ----
 repositories:
-- repo: "https://src.fedoraproject.org/tests/shell.git"
-dest: "shell"
-fmf_filter: "tier: 1, 2 & component: dash"
+- repo: 'https://src.fedoraproject.org/tests/shell.git'
+dest: 'shell'
+fmf_filter: 'tier: 1, 2 \&amp; component: dash'
 ----
 
 See the https://pagure.io/fedora-ci/metadata[Metadata] page for the full list of so far drafted attributes.
@@ -2427,7 +2447,7 @@ There are several components related to SELinux.
 They are tightly connected so change in one of them can cause problems in other.
 That's why their tests are shared and executed together:
 
-* https://src.fedoraproject.org/tests/selinux[SELinux]
+\&#42; https://src.fedoraproject.org/tests/selinux[SELinux]
 
 Instead of listing relevant tests to be executed manually in each dist git rpms repository https://fedoraproject.org/wiki/Flexible_Metadata_Format[Flexible Metadata Format] is used:
 
@@ -2439,30 +2459,30 @@ roles:
 tags:
 - classic
 repositories:
-- repo: "https://src.fedoraproject.org/tests/selinux.git"
-dest: "selinux"
-fmf_filter: "tier: 1 | component: selinux-policy"
+- repo: 'https://src.fedoraproject.org/tests/selinux.git'
+dest: 'selinux'
+fmf_filter: 'tier: 1 | component: selinux-policy'
 ----
 
-Provided `fmf_filter` selects all tests relevant for the `selinux-policy` component plus all Tier 1 selinux tests:
+Provided \&#96;fmf_filter\&#96; selects all tests relevant for the \&#96;selinux-policy\&#96; component plus all Tier 1 selinux tests:
 
 tier: 1 | component: selinux-policy
 
 The following six components are covered:
 
-* https://src.fedoraproject.org/rpms/checkpolicy/blob/rawhide/f/tests/tests.yml[checkpolicy]
-* https://src.fedoraproject.org/rpms/libselinux/blob/rawhide/f/tests/tests.yml[libselinux]
-* https://src.fedoraproject.org/rpms/libsemanage/blob/rawhide/f/tests/tests.yml[libsemanage]
-* https://src.fedoraproject.org/rpms/libsepol/blob/rawhide/f/tests/tests.yml[libsepol]
-* https://src.fedoraproject.org/rpms/policycoreutils/blob/rawhide/f/tests/tests.yml[policycoreutils]
-* https://src.fedoraproject.org/rpms/selinux-policy/blob/rawhide/f/tests/tests.yml[selinux-policy]
+\&#42; https://src.fedoraproject.org/rpms/checkpolicy/blob/rawhide/f/tests/tests.yml[checkpolicy]
+\&#42; https://src.fedoraproject.org/rpms/libselinux/blob/rawhide/f/tests/tests.yml[libselinux]
+\&#42; https://src.fedoraproject.org/rpms/libsemanage/blob/rawhide/f/tests/tests.yml[libsemanage]
+\&#42; https://src.fedoraproject.org/rpms/libsepol/blob/rawhide/f/tests/tests.yml[libsepol]
+\&#42; https://src.fedoraproject.org/rpms/policycoreutils/blob/rawhide/f/tests/tests.yml[policycoreutils]
+\&#42; https://src.fedoraproject.org/rpms/selinux-policy/blob/rawhide/f/tests/tests.yml[selinux-policy]
 
-Use the `fmf` command line tool to quickly check which tests will be scheduled:
+Use the \&#96;fmf\&#96; command line tool to quickly check which tests will be scheduled:
 
-# dnf install -y fmf
-# fedpkg clone -a tests/selinux
-# cd selinux
-# fmf ls --filter "tier: 1 | component: checkpolicy"
+\&#35; dnf install -y fmf
+\&#35; fedpkg clone -a tests/selinux
+\&#35; cd selinux
+\&#35; fmf ls --filter 'tier: 1 | component: checkpolicy'
 /selinux-policy/policy-rpm-macros
 /checkpolicy/sedispol
 /checkpolicy/checkmodule
@@ -2474,10 +2494,12 @@ Use the `fmf` command line tool to quickly check which tests will be scheduled:
 /libselinux/getsebool
 /policycoreutils/booleans
 
-See the Flexible Metadata Format documentation for other options how to https://fmf.readthedocs.io/en/latest/overview.html#install[install] fmf.
+See the Flexible Metadata Format documentation for other options how to https://fmf.readthedocs.io/en/latest/overview.html\&#35;install[install] fmf.
 
 
-* Infrastructure
+
+
+\&#42; Infrastructure
 
 = Jenkins =
 
@@ -2489,14 +2511,14 @@ Our Jenkins instances are configured with https://plugins.jenkins.io/openid/[Ope
 
 To configure this, you simply need to:
 
-* install the https://plugins.jenkins.io/openid/[OpenID] plugin
-* As an admin, go to Jenkins -> Configure Global Security
-* Under Access Control, change Security Realm to "OpenID SSO"
-** Set Provider URL to: `https://id.fedoraproject.org/`
-* Under Authorization, set to "Project-based Matrix Authorization Strategy"
-** Add `fedora-ci-admins` and check the "Administer" box in the Overall column
-* Once you save/apply this config, you may need to logout/login to re-apply your permissions
-** NOTE: OpenID does pulls from groups in Jenkins without any custom prefixes required
+\&#42; install the https://plugins.jenkins.io/openid/[OpenID] plugin
+\&#42; As an admin, go to Jenkins -\&gt; Configure Global Security
+\&#42; Under Access Control, change Security Realm to 'OpenID SSO'
+\&#42;\&#42; Set Provider URL to: \&#96;https://id.fedoraproject.org/\&#96;
+\&#42; Under Authorization, set to 'Project-based Matrix Authorization Strategy'
+\&#42;\&#42; Add \&#96;fedora-ci-admins\&#96; and check the 'Administer' box in the Overall column
+\&#42; Once you save/apply this config, you may need to logout/login to re-apply your permissions
+\&#42;\&#42; NOTE: OpenID does pulls from groups in Jenkins without any custom prefixes required
 
 == Notes ==
 
@@ -2506,13 +2528,13 @@ The goal is to move all of our repos under this org in the near future.
 
 == RabbitMQ and pipelines ==
 
-*The same pipeline cannot be used twice by two different pipelines.*
+\&#42;The same pipeline cannot be used twice by two different pipelines.\&#42;
 
 Each Jenkins job that uses one of osci rabbitmq queue must have entry in the table bellow.
 
 Ref doc https://pagure.io/fedora-infrastructure/issue/8996
 
-.Table Queue <-> pipeline
+.Table Queue \&lt;-\&gt; pipeline
 |===
 | Queue | Pipeline URL
 
@@ -2566,18 +2588,20 @@ Ref doc https://pagure.io/fedora-infrastructure/issue/8996
 
 Jenkins repos:
 
-* https://github.com/tflink/fedora-ci-generic-checks[Fedora CI Jenkins]
-* https://github.com/CentOS-PaaS-SIG/ci-pipeline[Fedora CI Current Deploy]
-* https://github.com/CentOS-PaaS-SIG/upstream-fedora-pipeline[Fedora CI Jenkins Triggers]
-* http://fedora-build-checks.apps.ci.centos.org/[rpminspect Jenkins]
-* https://github.com/tflink/fedora-ci-generic-checks[rpminspect Jenkins Deploy]
+\&#42; https://github.com/tflink/fedora-ci-generic-checks[Fedora CI Jenkins]
+\&#42; https://github.com/CentOS-PaaS-SIG/ci-pipeline[Fedora CI Current Deploy]
+\&#42; https://github.com/CentOS-PaaS-SIG/upstream-fedora-pipeline[Fedora CI Jenkins Triggers]
+\&#42; http://fedora-build-checks.apps.ci.centos.org/[rpminspect Jenkins]
+\&#42; https://github.com/tflink/fedora-ci-generic-checks[rpminspect Jenkins Deploy]
 
 === Contact ===
 
-* Andrei Stepanov (astepano)
-* Bruno Goncalves (bgoncalv)
-* Jim Bair (jimbair)
-* Tim Flink (tflink)
+\&#42; Andrei Stepanov (astepano)
+\&#42; Bruno Goncalves (bgoncalv)
+\&#42; Jim Bair (jimbair)
+\&#42; Tim Flink (tflink)
+
+
 = Testing Farm =
 
 The Fedora CI uses https://docs.testing-farm.io[Testing Farm] to execute functional tests, rpmdeplint, rpminspect and installability checks.
@@ -2593,12 +2617,14 @@ Please use the https://pagure.io/fedora-ci/general[fedora-ci/general project on 
 
 === Contact ===
 
-Please find us in https://matrix.to/#/#fedora-ci:fedoraproject.org[Fedora CI matrix room].
+Please find us in https://matrix.to/\&#35;/\&#35;fedora-ci:fedoraproject.org[Fedora CI matrix room].
 
-* Miroslav Vadkerti (mvadkert)
-* Jan Havlin (jhavlin)
-* Evgeny Fedin (efedin)
-* Ondrej Ptak (optak)
+\&#42; Miroslav Vadkerti (mvadkert)
+\&#42; Jan Havlin (jhavlin)
+\&#42; Evgeny Fedin (efedin)
+\&#42; Ondrej Ptak (optak)
+
+
 
 = dist-git pipeline - rebuild container images =
 
@@ -2607,8 +2633,8 @@ Please find us in https://matrix.to/#/#fedora-ci:fedoraproject.org[Fedora CI mat
 There are cases where it is necessary to rebuild the container image used by the pipeline.
 For example if some package needs to be updated, like for example:
 
-* rpm-build
-* standard-test-roles
+\&#42; rpm-build
+\&#42; standard-test-roles
 
 == How to ==
 
@@ -2621,14 +2647,16 @@ For example if some package needs to be updated, like for example:
 == Troubleshooting ==
 
 . If the job fails the initial point to search for the cause is to look at the build on https://jenkins-continuous-infra.apps.ci.centos.org/view/Fedora%20All%20Packages%20Pipeline/job/fedora-stage-container-image-build/[fedora-stage-container-image-build] job.
-. If it failed before running https://jenkins-continuous-infra.apps.ci.centos.org/view/Fedora%20All%20Packages%20Pipeline/job/fedora-rawhide-stage-pr-pipeline/["fedora-rawhide-stage-pr-pipeline"] stage it is likely a problem creating the container image checking it on https://console.apps.ci.centos.org:8443/console/project/continuous-infra/browse/builds/fedoraci-runner?tab=history[openshift] could help.
-. If the problem was during https://jenkins-continuous-infra.apps.ci.centos.org/view/Fedora%20All%20Packages%20Pipeline/job/fedora-rawhide-stage-pr-pipeline/["fedora-rawhide-stage-pr-pipeline"] then is necessary to check its build log.
+. If it failed before running https://jenkins-continuous-infra.apps.ci.centos.org/view/Fedora%20All%20Packages%20Pipeline/job/fedora-rawhide-stage-pr-pipeline/['fedora-rawhide-stage-pr-pipeline'] stage it is likely a problem creating the container image checking it on https://console.apps.ci.centos.org:8443/console/project/continuous-infra/browse/builds/fedoraci-runner?tab=history[openshift] could help.
+. If the problem was during https://jenkins-continuous-infra.apps.ci.centos.org/view/Fedora%20All%20Packages%20Pipeline/job/fedora-rawhide-stage-pr-pipeline/['fedora-rawhide-stage-pr-pipeline'] then is necessary to check its build log.
+
+
 = Pipeline =
 
 WARNING: This page is outdated.
 
-The testing *Pipeline* detects tests for enabled packages, executes the test coverage and gathers the results.
-Currently version `1.1.0` of the xref:standard-test-interface.adoc[Standard Test Interface] specification is supported.
+The testing \&#42;Pipeline\&#42; detects tests for enabled packages, executes the test coverage and gathers the results.
+Currently version \&#96;1.1.0\&#96; of the xref:standard-test-interface.adoc[Standard Test Interface] specification is supported.
 
 == Instances ==
 
@@ -2636,16 +2664,16 @@ There are several CI https://jenkins-continuous-infra.apps.ci.centos.org/blue/pi
 
 They are for Fedora Rawhide, current and pending releases as reported by https://bodhi.fedoraproject.org/releases/[bodhi]
 
-* Build Pipeline - non-scratch koji builds:
-** https://jenkins-continuous-infra.apps.ci.centos.org/job/fedora-rawhide-build-pipeline/[Rawhide]
-** https://jenkins-continuous-infra.apps.ci.centos.org/blue/pipelines?search=fedora-f*build-pipeline[Other releases]
-* Pull Request Pipeline - tests on a pull-request (both rpms and tests namespace)
-** https://osci-jenkins-1.ci.fedoraproject.org/job/fedora-ci/job/dist-git-pipeline/job/master/[Rawhide]
-** https://osci-jenkins-1.ci.fedoraproject.org/job/fedora-ci/job/dist-git-pipeline/[List all releases]
-* Base qcow2 images used by the pipelines:
-** https://jenkins-continuous-infra.apps.ci.centos.org/job/fedora-rawhide-image-test/lastSuccessfulBuild/artifact/Fedora-Rawhide.qcow2[Rawhide]
-** Other releases example:
-*** https://jenkins-continuous-infra.apps.ci.centos.org/job/fedora-f32-image-test/lastSuccessfulBuild/artifact/Fedora-32.qcow2
+\&#42; Build Pipeline - non-scratch koji builds:
+\&#42;\&#42; https://jenkins-continuous-infra.apps.ci.centos.org/job/fedora-rawhide-build-pipeline/[Rawhide]
+\&#42;\&#42; https://jenkins-continuous-infra.apps.ci.centos.org/blue/pipelines?search=fedora-f\&#42;build-pipeline[Other releases]
+\&#42; Pull Request Pipeline - tests on a pull-request (both rpms and tests namespace)
+\&#42;\&#42; https://osci-jenkins-1.ci.fedoraproject.org/job/fedora-ci/job/dist-git-pipeline/job/master/[Rawhide]
+\&#42;\&#42; https://osci-jenkins-1.ci.fedoraproject.org/job/fedora-ci/job/dist-git-pipeline/[List all releases]
+\&#42; Base qcow2 images used by the pipelines:
+\&#42;\&#42; https://jenkins-continuous-infra.apps.ci.centos.org/job/fedora-rawhide-image-test/lastSuccessfulBuild/artifact/Fedora-Rawhide.qcow2[Rawhide]
+\&#42;\&#42; Other releases example:
+\&#42;\&#42;\&#42; https://jenkins-continuous-infra.apps.ci.centos.org/job/fedora-f32-image-test/lastSuccessfulBuild/artifact/Fedora-32.qcow2
 
 == Reschedule ==
 
@@ -2657,12 +2685,12 @@ In order to manually create a new job in the pipeline (e.g. to execute the tests
 
 To learn more about the pipeline visit following links:
 
-* https://github.com/CentOS-PaaS-SIG/ci-pipeline/blob/master/README.md#ci-pipeline-architecture-and-design[CI Pipeline Architecture and Design]
-* https://fedoraproject.org/wiki/FedoraAtomicCI/pipeline[Detailed pipeline description]
-* https://fedoraproject.org/wiki/FedoraAtomicCI/KojiBuilds[Build options and ideas]
-* https://fedoraproject.org/wiki/FedoraAtomicCI/upstream[Upstream open-source project integration]
-* https://fedoraproject.org/wiki/Fedora_requirements_for_CI_and_CD[Fedora requirements for CI and CD]
-* https://jenkins-continuous-infra.apps.ci.centos.org[CI-Pipeline instance in Centos CI]
+\&#42; https://github.com/CentOS-PaaS-SIG/ci-pipeline/blob/master/README.md\&#35;ci-pipeline-architecture-and-design[CI Pipeline Architecture and Design]
+\&#42; https://fedoraproject.org/wiki/FedoraAtomicCI/pipeline[Detailed pipeline description]
+\&#42; https://fedoraproject.org/wiki/FedoraAtomicCI/KojiBuilds[Build options and ideas]
+\&#42; https://fedoraproject.org/wiki/FedoraAtomicCI/upstream[Upstream open-source project integration]
+\&#42; https://fedoraproject.org/wiki/Fedora_requirements_for_CI_and_CD[Fedora requirements for CI and CD]
+\&#42; https://jenkins-continuous-infra.apps.ci.centos.org[CI-Pipeline instance in Centos CI]
 
 == Examples ==
 
@@ -2671,7 +2699,7 @@ To learn more about the pipeline visit following links:
 Testing results appear as green or red dots directly in the Pagure interface.
 Clicking on them will bring you to result details.
 
-* https://src.fedoraproject.org/rpms/passwd/commits/f27[passwd]
+\&#42; https://src.fedoraproject.org/rpms/passwd/commits/f27[passwd]
 
 image::Pipeline-results.png[]
 
@@ -2679,9 +2707,11 @@ image::Pipeline-results.png[]
 
 For pull requests you can find test results in the right tab of the pull request page, for example: https://src.fedoraproject.org/rpms/python-virtualenv/pull-request/3[python-virtualenv]
 
-For re-running the tests, a comment `[citest]` can be added into the pull-request.
+For re-running the tests, a comment \&#96;[citest]\&#96; can be added into the pull-request.
 
 image::Pipeline-pr-results.png[]
+
+
 
 = Onboarding of a CI System =
 
@@ -2696,10 +2726,10 @@ Here we describe necessary steps to add a new CI system.
 
 In order to provide a good workflow and user experience, here are some aspects of CI systems that have proven to be successful:
 
-* Tests are reliable (low false negative and false positive rates) and cover important stories
-* Tests can be contributed to (open source model) and are ideally similar to other tests, e.g. by using established frameworks / languages
-* Results / notifications are easy to understand and help identify errors quickly
-* Tests are reproducible, if necessary artifacts from test runs are stored for users to consume, such as virtual machine images
+\&#42; Tests are reliable (low false negative and false positive rates) and cover important stories
+\&#42; Tests can be contributed to (open source model) and are ideally similar to other tests, e.g. by using established frameworks / languages
+\&#42; Results / notifications are easy to understand and help identify errors quickly
+\&#42; Tests are reproducible, if necessary artifacts from test runs are stored for users to consume, such as virtual machine images
 
 In short, test results should be directly actionable! As a developer, I need to quickly decide whether the test is broken or the code, and then fix the issue.
 
@@ -2709,11 +2739,11 @@ In short, test results should be directly actionable! As a developer, I need to 
 
 On the highest level, the gating workflow consists of the following steps:
 
-* Submit a build of a package (Koji)
-* Trigger CI systems to run tests  (Fedora CI, Your CI, etc.)
-* Collect results from the CI systems (ResultsDB)
-* Make a decision (Greenwave)
-* If the decision is "pass", then let the build pass the gate to the main repository (Bodhi)
+\&#42; Submit a build of a package (Koji)
+\&#42; Trigger CI systems to run tests  (Fedora CI, Your CI, etc.)
+\&#42; Collect results from the CI systems (ResultsDB)
+\&#42; Make a decision (Greenwave)
+\&#42; If the decision is 'pass', then let the build pass the gate to the main repository (Bodhi)
 
 === Gating Messages ===
 
@@ -2721,27 +2751,27 @@ Gating process is implemented as a set of services which interact with each othe
 
 Therefore to add a piece (for example a CI system) to the process, you essentially need to start receiving and sending messages via FedoraMessaging.
 
-TIP: Find out more about https://docs.fedoraproject.org/en-US/rawhide-gating/[gating in Fedora Rawhide] -- especially about the https://docs.fedoraproject.org/en-US/rawhide-gating/single-builds/#_how_does_gating_single_build_updates_work[single] and https://docs.fedoraproject.org/en-US/rawhide-gating/multi-builds/[multi-build] updates.
+TIP: Find out more about https://docs.fedoraproject.org/en-US/rawhide-gating/[gating in Fedora Rawhide] -- especially about the https://docs.fedoraproject.org/en-US/rawhide-gating/single-builds/\&#35;_how_does_gating_single_build_updates_work[single] and https://docs.fedoraproject.org/en-US/rawhide-gating/multi-builds/[multi-build] updates.
 
 
 == How to add a CI System ==
 
 CI systems in Fedora are autonomous entities that typically need to handle following things:
 
-* triggering when certain events occur
-* actual testing
-* publishing test results
+\&#42; triggering when certain events occur
+\&#42; actual testing
+\&#42; publishing test results
 
 
 === Triggering and Testing ===
 
 Services in Fedora publish messages when various events occur and thus CI systems can trigger testing when for example new Bodhi update is created.
 
-When Bodhi update is created, a new "koji-build-group.build.complete" message is published on the https://apps.fedoraproject.org/datagrepper/raw?topic=org.fedoraproject.prod.bodhi.update.status.testing.koji-build-group.build.complete[org.fedoraproject.prod.bodhi.update.status.testing.koji-build-group.build.complete] topic.
+When Bodhi update is created, a new 'koji-build-group.build.complete' message is published on the https://apps.fedoraproject.org/datagrepper/raw?topic=org.fedoraproject.prod.bodhi.update.status.testing.koji-build-group.build.complete[org.fedoraproject.prod.bodhi.update.status.testing.koji-build-group.build.complete] topic.
 
-The schema of these "koji-build-group.build.complete" messages is defined in the https://pagure.io/fedora-ci/messages[CI Messages specification].
+The schema of these 'koji-build-group.build.complete' messages is defined in the https://pagure.io/fedora-ci/messages[CI Messages specification].
 
-If your CI system is Jenkins, then you can use the https://plugins.jenkins.io/jms-messaging/[jms-messaging plugin] to trigger your tests when defined events occur. Getting the trigger syntax right in Jenkins pipelines can be tricky, but you can take a look at the existing example https://github.com/fedora-ci/rpmdeplint-trigger/blob/b078ae3f7134dbc5a155aa435362cd3a241ab99a/Jenkinsfile#L13-L29[here].
+If your CI system is Jenkins, then you can use the https://plugins.jenkins.io/jms-messaging/[jms-messaging plugin] to trigger your tests when defined events occur. Getting the trigger syntax right in Jenkins pipelines can be tricky, but you can take a look at the existing example https://github.com/fedora-ci/rpmdeplint-trigger/blob/b078ae3f7134dbc5a155aa435362cd3a241ab99a/Jenkinsfile\&#35;L13-L29[here].
 
 It's of course possible to trigger testing on other types of events, not just the Bodhi updates. You can find more Fedora message topics in the older https://fedmsg2.readthedocs.io/en/latest/topics.html[fedmsg2 documentation]. Beware though, the list is incomplete.
 
@@ -2753,46 +2783,46 @@ Although publishing test results is not mandatory, CI systems which don't publis
 
 There are four types of messages that CI systems should be sending:
 
-* test.queued - when there is an artifact (a Bodhi update for example) in a queue waiting to be tested
-* test.running - when testing is in progress
-* test.complete - when testing is finished
-* test.error - when testing couldn't start or couldn't finish due to an outside circumstances (typically an infrastructure error)
+\&#42; test.queued - when there is an artifact (a Bodhi update for example) in a queue waiting to be tested
+\&#42; test.running - when testing is in progress
+\&#42; test.complete - when testing is finished
+\&#42; test.error - when testing couldn't start or couldn't finish due to an outside circumstances (typically an infrastructure error)
 
 These messages have well-defined schemas. The schemas are part of https://pagure.io/fedora-ci/messages[the CI Messages specification].
 
 
 For convenience, here are links to schemas for simple koji-build artifacts and koji-build-group artifacts:
 
-* koji-build
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.queued.yaml[test.queued message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.queued.json[example])
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.running.yaml[test.running message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.running.json[example])
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.complete.yaml[test.complete message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.complete.json[example])
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.error.yaml[test.error message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.error.json[example])
-* koji-build-group
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.queued.yaml[test.queued message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.queued.json[example])
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.running.yaml[test.running message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.running.json[example])
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.complete.yaml[test.complete message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.complete.json[example])
-** https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.error.yaml[test.error message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.error.json[example])
+\&#42; koji-build
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.queued.yaml[test.queued message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.queued.json[example])
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.running.yaml[test.running message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.running.json[example])
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.complete.yaml[test.complete message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.complete.json[example])
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build.test.error.yaml[test.error message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build.test.error.json[example])
+\&#42; koji-build-group
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.queued.yaml[test.queued message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.queued.json[example])
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.running.yaml[test.running message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.running.json[example])
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.complete.yaml[test.complete message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.complete.json[example])
+\&#42;\&#42; https://pagure.io/fedora-ci/messages/blob/master/f/schemas/koji-build-group.test.error.yaml[test.error message schema] (https://pagure.io/fedora-ci/messages/blob/master/f/examples/koji-build-group.test.error.json[example])
 
 
 ==== Test Identifiers ====
 
-When you send a "koji-build.test.complete" message to the message bus, the test result gets stored in the ResultsDB. Later on you can refer to the stored test result in a Greenwave policy: "if test XYZ passed, let the build through the gate".
+When you send a 'koji-build.test.complete' message to the message bus, the test result gets stored in the ResultsDB. Later on you can refer to the stored test result in a Greenwave policy: 'if test XYZ passed, let the build through the gate'.
 
 Therefore you need unique identifiers for test results.
 
 Test identifiers are built from three parts: test namespace, test category and test type.
 
-In the "koji-build.test.complete" schema, these variables are represented by namespace, category and type fields respectively.
+In the 'koji-build.test.complete' schema, these variables are represented by namespace, category and type fields respectively.
 
 Namespace is always an ID of your CI system with the name of the artifact type, so for example: fedora-ci.koji-build, or osci.pull-request.
 
 Category you can choose from a predefined list:
 
-* static-analysis
-* functional
-* integration
-* validation
+\&#42; static-analysis
+\&#42; functional
+\&#42; integration
+\&#42; validation
 
 Type is an arbitrary string, which you can define based on the specifics of your CI system.
 
@@ -2803,14 +2833,16 @@ The final test identifier may look like this: fedora-ci.koji-build.tier0.functio
 
 == Useful Links ==
 
-* https://docs.fedoraproject.org/en-US/rawhide-gating/[Fedora Rawhide Gating]
-* https://docs.fedoraproject.org/en-US/rawhide-gating/optin/[How to Opt in to Gating?]
-* https://pagure.io/greenwave[Greenwave] - service to evaluate gating policies based on test results
-* https://pagure.io/taskotron/resultsdb[ResultsDB] - results store engine
-* https://pagure.io/waiverdb[WaiverDB] - service for recording waivers against test results
-* Greenwave's https://docs.pagure.org/greenwave/package-specific-policies.html[Package-specific policies]
+\&#42; https://docs.fedoraproject.org/en-US/rawhide-gating/[Fedora Rawhide Gating]
+\&#42; https://docs.fedoraproject.org/en-US/rawhide-gating/optin/[How to Opt in to Gating?]
+\&#42; https://pagure.io/greenwave[Greenwave] - service to evaluate gating policies based on test results
+\&#42; https://pagure.io/taskotron/resultsdb[ResultsDB] - results store engine
+\&#42; https://pagure.io/waiverdb[WaiverDB] - service for recording waivers against test results
+\&#42; Greenwave's https://docs.pagure.org/greenwave/package-specific-policies.html[Package-specific policies]
 
-* More
+
+
+\&#42; More
 
 = Test Case Relevancy =
 
@@ -2821,21 +2853,21 @@ Test Case Relevancy allows to filter irrelevant test cases out.
 
 == Implementation ==
 
-Test case relevancy is function which takes environment parameters and returns `True`, `False` or a list of environment variables.
+Test case relevancy is function which takes environment parameters and returns \&#96;True\&#96;, \&#96;False\&#96; or a list of environment variables.
 
 === Syntax ===
 
-Test case relevancy is defined by one or more `condition: decision` rules.
+Test case relevancy is defined by one or more \&#96;condition: decision\&#96; rules.
 
-Allowed operators are: `+= == != < <= > >= &&+`.
-Anything beyond a `#` sign is considered to be a comment and will be ignored.
+Allowed operators are: \&#96;+= == != \&lt; \&lt;= \&gt; \&gt;= \&amp;\&amp;+\&#96;.
+Anything beyond a \&#96;\&#35;\&#96; sign is considered to be a comment and will be ignored.
 
 Everything is case insensitive.
 First matching rule wins (terminates immediately the relevancy evaluation, the rest of the rules will be ignored).
 
 === Defaults ===
 
-If there is no rule specified, test case relevancy defaults to `True`, that is test case is relevant and should be executed.
+If there is no rule specified, test case relevancy defaults to \&#96;True\&#96;, that is test case is relevant and should be executed.
 
 === Environment ===
 
@@ -2845,21 +2877,21 @@ product:: product name (rhel rhel-5 rhel-5.6 rhdts rhscl)
 distro:: distribution (rhel-6 rhel-6.3 rhscl-1.0.0 f-28)
 variant:: distro variant (Client Desktop Server Workstation)
 arch:: architecture (i386 ppc64 s390x x86_64)
-collection:: software collection (python27 python33 perl516...)
-component:: component to be tested (php, apache, ...)
+collection:: software collection (python27 python33 perl516\&#8230;)
+component:: component to be tested (php, apache, \&#8230;)
 
-While `distro` is always used to define the operating system the software is supposed to run on, `product` is used to describe the target product subscribed and consumed by the customer (can be a layered product on top of RHEL such as RHSCL, or RHEL itself if the component is included directly in the operating system).
+While \&#96;distro\&#96; is always used to define the operating system the software is supposed to run on, \&#96;product\&#96; is used to describe the target product subscribed and consumed by the customer (can be a layered product on top of RHEL such as RHSCL, or RHEL itself if the component is included directly in the operating system).
 
 Distro comparison operates in two modes:
 
-Major mode:: When comparing against a major version such as `distro < rhel-6` other major versions are considered (matches any of `rhel-3 rhel-4 rhel-5`).
-Minor mode:: If minor version is provided as well, for example `distro < rhel-6.3`, comparison is performed only within the given major (matches `rhel-6.0 rhel-6.1 rhel-6.2`).
+Major mode:: When comparing against a major version such as \&#96;distro \&lt; rhel-6\&#96; other major versions are considered (matches any of \&#96;rhel-3 rhel-4 rhel-5\&#96;).
+Minor mode:: If minor version is provided as well, for example \&#96;distro \&lt; rhel-6.3\&#96;, comparison is performed only within the given major (matches \&#96;rhel-6.0 rhel-6.1 rhel-6.2\&#96;).
 
 Rules which contain environment parameters which are not known at the time of evaluation will be skipped.
 
 === Decision ===
 
-The `decision` part of the rule can contain following values:
+The \&#96;decision\&#96; part of the rule can contain following values:
 
 True:: test case is relevant for given environment
 False:: test case is not relevant for this environment
@@ -2868,43 +2900,45 @@ A=X B=Y C=Z:: test case is relevant for the modified environment
 The last option above allows to adjust the environment in which the test case is to be executed by providing the list of environment variables which will be passed to the test.
 
 The decision value may be omitted.
-In such case `True` is used by default.
+In such case \&#96;True\&#96; is used by default.
 So these two lines define identical relevancy:
 
-distro > rhel-7: True
-distro > rhel-7
+distro \&gt; rhel-7: True
+distro \&gt; rhel-7
 
 == Examples ==
 
 mod_wsgi relevant for RHEL6 and newer:
 
-distro < rhel-6: False
+distro \&lt; rhel-6: False
 
 busybox not available for s390x on RHEL6:
 
-arch = s390x && distro = rhel-6: False
+arch = s390x \&amp;\&amp; distro = rhel-6: False
 
-perl-Config-General not present in the `Client` variant:
+perl-Config-General not present in the \&#96;Client\&#96; variant:
 
 variant = Client: False
 
 Run python unit tests under valgrind on suitable archs only:
 
 arch = ia64: PHASES=novalgrind
-arch = s390x && distro < rhel-6: PHASES=novalgrind
+arch = s390x \&amp;\&amp; distro \&lt; rhel-6: PHASES=novalgrind
 
 New component python-ctypes added in rhel-5.8:
 
-distro < rhel-5:   False
-distro < rhel-5.8: False
+distro \&lt; rhel-5:   False
+distro \&lt; rhel-5.8: False
 
 Exim present solely in RHEL5:
 
 distro != rhel-5: False
 
+
+
 = Source Git =
 
-`source-git` is current code-name for work which covers multiple areas:
+\&#96;source-git\&#96; is current code-name for work which covers multiple areas:
 packaging automation and improvements, rawhide stabilization, and getting upstream projects closer to Fedora.
 In our world, source git is a repository with upstream sources and Fedora build recipes (spec files, downstream patches as additional commits).
 The repository contains git branches which track respective Fedora versions.
@@ -2923,31 +2957,31 @@ Interested? Please, read on!
 
 == What and Why? ==
 
-* Our intent is to bring downstream and upstream communities closer: Provide feedback from downstream to upstream
-(e.g. _"Hello \<upstream project Y>, your newest release doesn't work in Fedora rawhide, it breaks \<Z>, here is a link to logs."_).
+\&#42; Our intent is to bring downstream and upstream communities closer: Provide feedback from downstream to upstream
+(e.g. _'Hello \\&lt;upstream project Y\&gt;, your newest release doesn't work in Fedora rawhide, it breaks \\&lt;Z\&gt;, here is a link to logs.'_).
 All of this can be automated.
 
-* One of the implications is that it's trivial to propose changes back to upstream or cherry-pick fixes from upstream to downstream.
+\&#42; One of the implications is that it's trivial to propose changes back to upstream or cherry-pick fixes from upstream to downstream.
 
-* Fedora rawhide stability is on the menu now:
+\&#42; Fedora rawhide stability is on the menu now:
 only merge, build and compose components which integrate well with the rest of the operating system.
 No more broken composes or updates which break rest of the operating system.
 
-* Developing in dist-git is cumbersome.
+\&#42; Developing in dist-git is cumbersome.
 Editing patch files and moving tarballs around is not fun.
 Why not working with the source code itself?
 With source git, you'll have an upstream repository and the dist-git content stuffed in a dedicated directory.
 
-* Let's use modern development techniques such as pull requests, code review, modern git forges, automation and continuous integration.
+\&#42; Let's use modern development techniques such as pull requests, code review, modern git forges, automation and continuous integration.
 We have computers to do all the mundane tasks.
 Why we, as humans, should do such work?
 
-* We want dist-git to be "a database of content in a release" rather a place to do actual work.
+\&#42; We want dist-git to be 'a database of content in a release' rather a place to do actual work.
 On the other hand, you'll still be able to interact with dist-git the same way.
 We are not taking that away.
 Source git is meant to be the modern, better alternative.
 
-* Automatically pull and validate new upstream releases.
+\&#42; Automatically pull and validate new upstream releases.
 This can be a trivial thing to do, why should maintainers waste their times on work which can be automated.
 
 == Current Status ==
@@ -2960,6 +2994,8 @@ Once we have more information to share (especially when the PoC is done), we'll 
 In the meantime, please check out the https://github.com/packit-service/packit[github repo] for an up-to-date information.
 
 
+
+
 = Frequently Asked Questions =
 
 [qanda]
@@ -2968,22 +3004,24 @@ Of course you should!
 
 How do I get help?::
 Use the
-https://matrix.to/#/#fedora-ci:fedoraproject.org[#fedora-ci channel]
+https://matrix.to/\&#35;/\&#35;fedora-ci:fedoraproject.org[\&#35;fedora-ci channel]
 on Matrix.
 
 Why not rely on %check?::
-`%check` and the tests run in the CI pipeline are complementary.
-`%check` allows to perform a number of checks at build time but will not detect missing requirement, missing configuration file and this kind of situation which the CI pipeline will be able to test and find.
-We could see this as `%check` being unit-test (where the unit is the package) versus integration tests where the tests are run in the entire distribution just as we distribute it to our users.
-So the CI pipeline will be able to find integration bugs that the `%check` section will never be able to.
+\&#96;%check\&#96; and the tests run in the CI pipeline are complementary.
+\&#96;%check\&#96; allows to perform a number of checks at build time but will not detect missing requirement, missing configuration file and this kind of situation which the CI pipeline will be able to test and find.
+We could see this as \&#96;%check\&#96; being unit-test (where the unit is the package) versus integration tests where the tests are run in the entire distribution just as we distribute it to our users.
+So the CI pipeline will be able to find integration bugs that the \&#96;%check\&#96; section will never be able to.
 
 Where do I put my tests?::
 There are several options where to store the test code.
 Here are some of the most important advantages and disadvantages of each approach:
-Test code in *dist git rpms namespace* is branched together with spec files and thus can closely mirror functionality.
-Tests used across multiple components or OS releases can be stored in the *dist git test namespace* to share the test code and minimize maintenance.
-Fetching tests from an *upstream project git* is also possible and supported by standard-test-roles (source role).
+Test code in \&#42;dist git rpms namespace\&#42; is branched together with spec files and thus can closely mirror functionality.
+Tests used across multiple components or OS releases can be stored in the \&#42;dist git test namespace\&#42; to share the test code and minimize maintenance.
+Fetching tests from an \&#42;upstream project git\&#42; is also possible and supported by standard-test-roles (source role).
 In order to prevent unexpected test failures caused by upstream changes it is sometimes better to reference a specific commit rather then branch.
-Tests enabled in *make check* are executed in a different environment (buildroot).
+Tests enabled in \&#42;make check\&#42; are executed in a different environment (buildroot).
 This is good for unit tests but not recommended for new Tier 1 test coverage.
 Enable 'make check' in tests.yml only if testing installed rpm.
+
+

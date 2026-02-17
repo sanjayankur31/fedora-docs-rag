@@ -19,31 +19,32 @@ The builder is a Fedora system provisioned using the
 [playbook-builder.yml]({attachmentsdir}/playbook-mirror.yml) Ansible
 playbook. The builder is a Jenkins CI server which rebuilds RPMs when
 changes are made in the version control. The automation should be
-configured in Jenkins to trigger on a push to `master` for each repo
-housing package sources.
+configured in Jenkins to trigger on a push to &#96;master&#96; for each
+repo housing package sources.
 
 # RPMs {#RPMs}
 
 The series of commands shown below illustrates the process of building
 RPM packages with Jenkins.
 
-    sudo rm -rf /home/$USER/to-sign/
-    mkdir -p /home/$USER/to-sign/
-    copr-rpmbuild scm --clone-url [URL of git repo with package source] --chroot \
-    fedora-$(lsb_release -a | grep Release | cut -f2)-x86_64
-    sudo cp /var/lib/copr-rpmbuild/results/*.rpm /home/$USER/to-sign
-    rm -rf /var/lib/copr-rpmbuild/results
+&#8230;. sudo rm -rf /home/\$USER/to-sign/ mkdir -p
+/home/\$USER/to-sign/ copr-rpmbuild scm \--clone-url \[URL of git repo
+with package source\] \--chroot \\ fedora-\$(lsb_release -a \| grep
+Release \| cut -f2)-x86_64 sudo cp
+/var/lib/copr-rpmbuild/results/&#42;.rpm /home/\$USER/to-sign rm -rf
+/var/lib/copr-rpmbuild/results &#8230;.
 
 Once the RPM build finishes, a responsible team member then needs to
 connect to the build server via SSH in order to sign the completed RPM
 package using:
 
-`sudo rpmsign --addsign /path/to/to-sign/directory/*rpm`
+&#96;sudo rpmsign \--addsign /path/to/to-sign/directory/&#42;rpm&#96;
 
-A tool such as `rsync` should then be used to push the new packages to
-the mirror. After verifying the permissions are correct, run:
+A tool such as &#96;rsync&#96; should then be used to push the new
+packages to the mirror. After verifying the permissions are correct,
+run:
 
-`sudo createrepo_c --update /path/to/RPMs or SRPMs`
+&#96;sudo createrepo_c \--update /path/to/RPMs or SRPMs&#96;
 
 on the mirror in order to update the proper RPM repository.
 
@@ -55,45 +56,48 @@ prerequisites:
 1.  A kickstart file to be used by the [Anaconda
     Installer](https://fedoraproject.org/wiki/Anaconda)
 
-2.  The `lorax-lmc-novirt` and `pykickstart` Fedora packages
+2.  The &#96;lorax-lmc-novirt&#96; and &#96;pykickstart&#96; Fedora
+    packages
 
 ## Initial ISO Building {#_initial_iso_building}
 
-1.  Clone the Fedora Kickstarts repository:
-    `git clone https://pagure.io/fedora-kickstarts.git`
+1.  Clone the Fedora Kickstarts repository: &#96;git clone
+    <https://pagure.io/fedora-kickstarts.git&#96>;
 
-2.  Enter the directory: `cd fedora-kickstarts/`
+2.  Enter the directory: &#96;cd fedora-kickstarts/&#96;
 
 3.  Choose a kickstart to use as a base for your remix
 
-4.  Flatten the kickstart:
-    `ksflatten --config [name of kickstart].ks -o flat-[name of kickstart].ks --version [fedora version]`
+4.  Flatten the kickstart: &#96;ksflatten \--config \[name of
+    kickstart\].ks -o flat-\[name of kickstart\].ks \--version \[fedora
+    version\]&#96;
 
-5.  Edit the `%packages` section of the flat kickstart if you wish to
-    add/remove base packages
+5.  Edit the &#96;%packages&#96; section of the flat kickstart if you
+    wish to add/remove base packages
 
-6.  Set `SELinux` to permissive with: `sudo setenforce 0`
+6.  Set &#96;SELinux&#96; to permissive with: &#96;sudo setenforce
+    0&#96;
 
-7.  Run `livemedia-creator`:
+7.  Run &#96;livemedia-creator&#96;:
 
 sudo livemedia-creator \--ks /path/to/flat/kickstart/file \--no-virt \\
 \--resultdir /var/lmc \--project \[image name\] \--make-iso \--volid
 \[image name\] \\ \--iso-only \--iso-name \[image name\].iso
 \--releasever \[fedora release\] \\ \--title \[image name\] \--macboot
 
-1.  The resulting ISO will be in `/var/lib/lmc`.
+1.  The resulting ISO will be in &#96;/var/lib/lmc&#96;.
 
-2.  Finally, set `SELinux` back to enforcing: `sudo setenforce 1`
+2.  Finally, set &#96;SELinux&#96; back to enforcing: &#96;sudo
+    setenforce 1&#96;
 
 ## General ISO Building {#_general_iso_building}
 
 After an initial ISO build, a new ISO may be created by running:
 
-    setenforce 0
-    livemedia-creator --ks [kickstart-name].ks --no-virt --resultdir /var/lmc \
-    --project [remix name]-Live --make-iso --volid [remix name] \
-    --iso-only --iso-name [remix name].iso --releasever $vers \
-    --title [remix name]-live --macboot
-    setenforce 1
+&#8230;. setenforce 0 livemedia-creator \--ks \[kickstart-name\].ks
+\--no-virt \--resultdir /var/lmc \\ \--project \[remix name\]-Live
+\--make-iso \--volid \[remix name\] \\ \--iso-only \--iso-name \[remix
+name\].iso \--releasever \$vers \\ \--title \[remix name\]-live
+\--macboot setenforce 1 &#8230;.
 
 You may want to consider automating the ISO build with Jenkins.

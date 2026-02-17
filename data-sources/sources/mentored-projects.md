@@ -1,689 +1,3 @@
-- Handbooks = Tools of the Trade :page-authors: {author}, {author_2},
-  {author_3} Smera Goel; Fernando Fernandez Mancera; Justin W. Flory
-  2024-07-16
-
-The purpose of this page is to introduce you to the essential, basic
-tools that all Fedora interns and mentors commonly use. Some of these
-are universal and you will absolutely encounter as a Fedora intern.
-Other tools will be used at varying levels depending on your specific
-project and mentor. Use this as a place to get started with setting up
-your Fedora toolbox.
-
-# Fedora Accounts System (FAS) {#fas}
-
-The Fedora Account System, or FAS for short, is the underpinning of all
-the digital infrastructure in Fedora. Think of it like your passport to
-start your Fedora adventure. If you have not yet created an account, do
-so now. Once your account is created, complete the following steps:
-
-1.  **Fill your profile out completely**. Name, Matrix ID, time zone,
-    GitHub/GitLab usernames, etc. If you have SSH or GPG keys, you can
-    also add them.
-
-2.  **Set a profile picture using
-    [Libravatar](https://www.libravatar.org/)**. Log in with the [OpenID
-    option](https://www.libravatar.org/openid/login/). To log in with
-    OpenID, use the following identifier below in the Libravatar login
-    page. You will be redirected to a FAS login screen. Add and confirm
-    your personal email once you log in.
-
-    a.  `my-username.id.fedoraproject.org` (example:
-        `jflory7.id.fedoraproject.org`)
-
-3.  **Sign the Fedora Project Contributor Agreement**. You can find this
-    in the Agreements tab of the Settings menu. Ask a mentor if you have
-    questions about the agreement and what it means for your
-    contributions.
-
-# Fedora Wiki {#wiki}
-
-The [Fedora Wiki](https://fedoraproject.org/wiki/Fedora_Project_Wiki) is
-a common tool used for collaboration. Think of it as a whiteboard space
-for scratch notes or for short-term documentation. We often use the
-Fedora Wiki as a planning tool for virtual events, like the [F40 Release
-Party wiki
-page](https://fedoraproject.org/wiki/Fedora_Linux_40_Release_Party_Schedule).
-
-However, **first, you need to create your userpage**. Wiki userpages are
-like biography pages to know more about a Fedora contributor. This is a
-good place to be more detailed about your background, what you do in
-Fedora, and how people can get in touch with you. See an example
-userpage [here](https://fedoraproject.org/wiki/User:Jflory7). You will
-need to write your userpage using [MediaWiki
-markup](https://www.mediawiki.org/wiki/Help:Formatting). Create your
-userpage by clicking on your username in the dropdown menu after logging
-in (see below).
-
-![tmp](ROOT:handbooks/interns-wiki-userpage.png)
-
-# GitLab
-
-[GitLab.com](https://gitlab.com/) is a common tool used to track tasks,
-update progress, and plan future work. Check with your mentor if you
-will use GitLab.com regularly during your internship. If you have not
-already, create a GitLab.com account. Once you have a GitLab account,
-link your FAS account to GitLab using ✨ [this magic
-link](https://gitlab.com/groups/fedora/-/saml/sso) ✨.
-
-:::: important
-::: title
-:::
-
-Sign in to GitLab FIRST before linking your FAS account with the magic
-link. If you are not logged into GitLab.com and link your FAS account,
-you will end up with two accounts. It is not easy to merge two accounts
-into one later.
-::::
-
-# Fedora Chat {#chat}
-
-[Fedora Chat](https://chat.fedoraproject.org/) is our primary chat tool
-used in Fedora. Fedora Chat is a hosted Matrix homeserver linked to FAS
-logins. However, if you already have a Matrix account, you can use your
-own Matrix account without creating a Fedora-specific Matrix account. It
-is up to you whether you want to use a Fedora-hosted Matrix account or
-use an account hosted somewhere else. You can use a `:matrix.org`
-account and use features in the Element X client, which is not currently
-supported with Fedora-hosted Matrix accounts. However, sometimes people
-prefer to use a Fedora-hosted Matrix account to keep work and personal
-activities separate.
-
-**If you want a Fedora-hosted Matrix account**: Use FAS to create an
-account at [chat.fedoraproject.org](https://chat.fedoraproject.org). Let
-a mentor know once you have an account so you can be invited to any
-rooms needed for the internship.
-
-**If you are using another Matrix account**: Join the Fedora Space at
-([#fedora-space:fedoraproject.org](https://matrix.to/#/#fedora-space:fedoraproject.org))
-if you are not already a member. Ask your mentor(s) to invite you to any
-internship-specific rooms, if you are not yet invited.
-
-# Fedora Discussion {#discussion}
-
-[Fedora Discussion](https://discussion.fedoraproject.org/) is an online
-web forum powered by a tool called Discourse. Create an account and
-[fill in your
-profile](https://discussion.fedoraproject.org/my/preferences/profile).
-Write a self-introduction in the [Fedora Mentored PRojects
-tag](https://discussion.fedoraproject.org/tags/c/project/7/mentored-projects-team).
-= Accepted Interns Handbook :page-authors: {author}, {author_2},
-{author_3}, {author_4} Smera Goel; Fernando Fernandez Mancera; Justin W.
-Flory; Jona Azizaj, 2024-07-16
-
-Congratulations on being accepted as an intern with Fedora! You are now
-a part of a vibrant community and an integral part of advancing free and
-open source software. This handbook is designed to be your guide,
-helping you navigate your role, responsibilities and the community at
-large.
-
-In Fedora, a project doesn't exist in isolation. It is a part of a big
-ecosystem that thrives on the collaboration between numerous community
-members, who bring a diverse range of perspectives and expertise to the
-table. Your role extends beyond the specific tasks of your project. As
-you immerse yourself in your project, remember the bigger picture: each
-contribution you make enriches the Fedora ecosystem, and by extension,
-the wider world of open source.
-
-# Getting Started {#started}
-
-Here are some suggestions on how you can set yourself up for a
-successful internship:
-
-## Hello world! {#hello}
-
-It is always nice to introduce yourself to the Fedora community.
-Introduce yourself as the project intern on Fedora Discussion, Fedora
-Chat, and the appropriate mailing lists.
-
-Not sure how to introduce yourself? Here is a good place to start:
-
-- Name, location/time zone, any prior open source or Linux experience
-
-- Something you are excited to do or support during your internship
-
-- Something you are looking forward to learning more about during your
-  internship
-
-- Where to get in touch with you in Fedora's communication platforms
-  (e.g. Discussion, Matrix, email, etc.)
-
-## Adapting to Open Source Culture {#adapting}
-
-Open source has a very unique culture, that is different from a more
-corporate structure that many interns often expect. You can talk to your
-mentor to learn the norms and expectations of the open-source community
-to help you acclimatize better, including how to respectfully contribute
-to discussions, submit work, and respect the community guidelines.
-Familiarizing yourself with the ways to receive and provide constructive
-feedback within your project team and the wider community is also an
-essential skill for both personal and professional growth.
-
-## Tools of the Trade {#tools}
-
-There are some tools that we often use in Fedora for account management,
-documentation, project management, and communication. In a remote setup
-like this, we rely on these tools a lot, so it is important that you
-familiarize yourself with these tools. You can find a [comprehensive
-documentation here](tools.xml).
-
-## Establish a rhythm with your mentors! {#rhythm}
-
-Mentorship is a key ingredient for a successful internship. Think of
-your mentor as your personal guide in the community: someone who's been
-there, done that, and probably got a T-Shirt for it. Here's how to make
-the most of it:
-
-- **Schedule regular check-ins**: Work with your mentor to schedule
-  regular meetings that work for everyone's time zones.
-
-- **Prepare for your meetings**: Joining your mentor meetings without
-  preparation is like going to a potluck without a dish. You might get
-  some goodies, but you will not be contributing much to the feast. Come
-  prepared with updates, questions, and topics you want advice on.
-
-- **Be open and honest**: Transparency with your mentor is key.
-  Struggling with a bug, feeling overwhelmed, or something isn't
-  working? Bring it up. Do not think of your mentor as your manager, but
-  rather as your ally, there to support you in your open source journey.
-
-- **Give and take feedback**: Feedback is the breakfast of champions! Be
-  receptive to feedback, even if it is not always what you want to hear.
-  And do not forget to give your mentor feedback. They will also
-  appreciate knowing what works and what does not.
-
-- **Celebrate wins together**: Do not forget to celebrate your wins, no
-  matter how small. Your mentor is your cheerleader, ready with a
-  virtual high-five for every victory.
-
-# Making the most of your internship {#making}
-
-Work with your mentor to set clear, achievable goals. You can use
-frameworks like SMART - Specific, Measurable, Achievable, Relevant, and
-Time-bound - to help you. Regularly review and adjust these goals.
-
-## Setting goals {#goals}
-
-Networking is an important part of career growth. We encourage you to
-engage with the broader Fedora community through forums, mailing lists
-and various events. You can also ask your mentor to support you and make
-introductions.
-
-## Career development {#career}
-
-Your internship will focus on a specific project(s) and tasks. However,
-internships are also learning opportunities for you to grow and develop
-in your career. Outside of project work, your mentor(s) plays an
-important role in supporting you in your development goals and skill
-development. As you start your internship, reflect on areas that you
-would like to grow and develop in. Are there technical skills that you
-would like to improve? Do you want to learn more about git, a
-programming language, or a particular framework? What about soft skills?
-Are you confident in delivering a presentation and collaborating with a
-diverse group of stakeholders across multiple teams? These are good
-questions to reflect on, and ultimately can only be answered by you!
-
-Work your mentor as a partner in your career development goals, and make
-sure you communicate these development goals to your mentor, so that you
-can partner on them together and have a successful internship that both
-contributes to your specific project and also strengthens your portfolio
-as a working professional in the open source space.
-
-## Reflect and share {#reflect}
-
-Document your journey and share it through blog posts or talks, and
-contribute back to the community. Reflecting on your experiences can
-provide valuable insights for future interns. Here are some examples of
-works like this by past interns:
-
-- [Outreachy
-  Internship](https://rolandixor.pro/blog/2024/04/outreachy-internship)
-  by Roland Taylor (@rolandxior)
-
-- [Outreachy: The Fedora
-  Project](https://smera.notion.site/Outreachy-The-Fedora-Project-6919e20d745f4b18850200909f190c0b)
-  by Smera Goel (@smeragoel)
-
-Outreachy encourages blogging as a way to do this, providing specific
-prompts to guide your posts. These blog posts not only document your
-journey, but also connect you with the broader open source community.
-They are also helpful for future applicants, just like you may have come
-across when you were an applicant. For more details on the blogging
-schedule and prompts, you can refer to the Outreachy Internship Guide.
-
-## Fedora Events {#events}
-
-Ask your mentor about upcoming events and meetings. Participating in
-these gatherings, whether online or in-person, can enhance your
-understanding of the project and expand your professional network as
-well.
-
-# Beyond the Internship & Continuing Contributions {#beyond}
-
-It is always a bittersweet experience when your internship ends, but the
-good thing about open source is that you can always stick around. Many
-interns continue to contribute as community members, mentors and project
-leaders. Talk with your mentor about how you can stay involved and
-continue to be a part of the community!
-
-## Off-boarding best practices {#offboarding}
-
-For an effective off-boarding process:
-
-- **Document Everything**: Ensure all work, including code and
-  processes, is thoroughly documented.
-
-- **Feedback**: Share feedback with your mentor and team to discuss
-  improvements and your overall internship experience
-
-- **Network**: Keep contact details for team members and plan to stay
-  connected through professional networks.
-
-- **Files and deliverables**: Make sure all files and deliverables are
-  shared with your mentor. = Mentors Hanbook :page-authors: {author},
-  {author_2}, {author_3}, {author_4} Smera Goel; Fernando Fernandez
-  Mancera; Justin W. Flory; Jona Azizaj, 2024-07-16
-
-Welcome to the Fedora Project Mentor Handbook, a guide designed to equip
-mentors with the tools, resources, and best practices needed to support
-contributors within the Fedora community. Whether you're an experienced
-contributor looking to give back or a newcomer eager to support others
-on their journey, this handbook will provide you with the knowledge and
-strategies needed for your mentorship role.
-
-# Understanding Mentorship {#understanding}
-
-Becoming a mentor implies taking on additional responsibilities within
-your organization instead of reducing your workload. It's crucial for
-the organization to understand that mentees are typically inexperienced
-contributors who may require support and direction to effectively
-accomplish their tasks. As a mentor, you'll be investing time and effort
-into guiding these individuals, helping them navigate challenges, and
-empowering them to grow within the organization. This commitment to
-mentorship not only benefits the mentees but also contributes to the
-overall success and sustainability of the organization by fostering a
-culture of learning and development.
-
-## Communication and culture tips {#communication}
-
-**Open Communication:**
-
-- Encourage transparent and respectful communication between mentors and
-  mentees.
-
-- Actively listen to mentees\' perspectives and concerns without
-  interruptions.
-
-- Provide constructive feedback that is specific, actionable, and
-  supportive.
-
-**Cultural Sensitivity:**
-
-- Respect and celebrate diversity in backgrounds, cultures, and
-  experiences.
-
-- Be mindful of language and behaviors that may unintentionally exclude
-  or offend individuals from different cultural backgrounds.
-
-- Foster an inclusive environment where everyone feels valued and
-  respected regardless of cultural differences.
-
-By prioritizing open communication and cultural sensitivity, mentors can
-create a welcoming and supportive environment that promotes effective
-collaboration and growth within the Outreachy program.
-
-# Getting Started {#started}
-
-## Quick start {#quick}
-
-1.  Work with your project team to identify a project that can be
-    achieved by a junior contributor in 2-3 months.
-
-2.  Propose your project idea in the Fedora Mentored Projects
-    repository. Use the provided issue template.
-
-3.  Receive feedback from Mentored Project coordinators and respond to
-    questions.
-
-4.  If approved by Fedora coordinators: Submit your project into the
-    program-specific portal, e.g. Outreachy or GSoC websites.
-
-5.  Begin preparing applicant tasks in advance of the contribution phase
-    start date.
-
-## How is the project improving Fedora? {#improving}
-
-To join in, the Fedora Project needs to know how mentorship will help
-the community and the Project as a whole. Understanding these benefits
-helps us design the program to meet everyone's needs. When proposing a
-project, make sure to address how this project fits in with Fedora's
-philosophies.
-
-## How many mentors are going to participate? {#many}
-
-Taking part in the program with only one mentor can present challenges,
-which is why we advise having at least one other person willing to help
-out. The other person can be a co-mentor, general mentor or a team
-member who understands the project and is willing to cover in case the
-primary mentor isn't available, for example, during vacations or
-unplanned absences. Having access to a diverse range of mentors (e.g.
-different cultures, different time zones, etc.) can provide a broader
-perspective and offer different areas of expertise. This approach not
-only enhances the mentorship experience but also increases the
-likelihood of success.
-
-## What is the timeline expected for the mentees {#timeline}
-
-Setting a clear timeline for the mentee is important in mentorship. When
-both the mentor and mentee know what to expect and when, they can work
-better together. This helps avoid confusion and makes sure everyone's on
-the same page. Plus, having a timeline lets us see how things are going,
-figure out what needs improving, and celebrate successes. It makes the
-whole mentorship experience better for everyone involved.
-
-For Outreachy, applicants are advised to contact a project mentor to
-propose a timeline for the project. This is a question asked to all
-applicants in their final Outreachy applications. Knowing an approximate
-timeline will make navigating these questions toward the end of the
-application period easier.
-
-# Application Period {#application}
-
-## Onboarding material {#onboarding}
-
-It's beneficial to have onboarding resources ready for candidates during
-the application phase. These resources will provide guidance on
-comprehending the project's scope, contributing effectively, locating
-suitable initial tasks, and communicating with mentors.
-
-# Mentorship Period {#mentorship}
-
-## Introductions
-
-Ask the mentee to introduce themselves in the following places (and any
-other project-specific places):
-
-- [#mentored-projects](https://discussion.fedoraproject.org/tags/c/project/7/mentored-projects-team)
-  on Fedora Discussion
-
-- [#commops:fedoraproject.org](https://matrix.to/#/#commops:fedoraproject.org)
-  on Fedora Chat/Matrix
-
-- [#devel:fedoraproject.org](https://matrix.to/#/#devel:fedoraproject.org)
-  on Fedora Chat/Matrix
-
-- [#council:fedoraproject.org](https://matrix.to/#/#council:fedoraproject.org)
-  on Fedora Chat/Matrix
-
-- [devel@lists.fp.o](https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/)
-
-## Communicating frequency {#frequency}
-
-**Regular Check-ins:**
-
-- Plan weekly or bi-weekly meetings to discuss progress and goals.
-
-- Adjust frequency based on project needs and mentee preferences.
-
-**Availability:**
-
-- Be reachable during agreed-upon working hours.
-
-- Respond promptly to messages and emails within a reasonable timeframe.
-
-**Ad Hoc Communication:**
-
-- Encourage quick questions or updates via chat or email outside of
-  scheduled meetings.
-
-- Stay open to informal check-ins based on mentee needs.
-
-**Documentation:**
-
-- Keep notes of discussions and decisions for reference.
-
-- Share helpful resources and documentation to support mentee learning
-  and project progress.
-
-# Wrapping Up {#wrapping}
-
-## Handling over the project {#handling}
-
-- Do not wait until the last day for merging things and getting changes
-  landed.
-
-- Try to wrap significant work before the mentee's last week.
-
-- Spend some time with the mentee to review their work, summarize and
-  advocate their accomplishments.
-
-- It's nice to keep in touch with the mentee after the internship ends.
-  It can help with contributor retention and also lead to new projects
-  in the future.
-
-- Talk to your mentee about their future plans, both project-related or
-  career-related.
-
-- Introduce the idea that the mentee can continue contributing to the
-  project after the internship, but they might need to reevaluate how
-  much time and commitment they can give as a volunteer.
-
-- Discuss the idea of periodic check-in calls after their internship,
-  e.g. monthly, quarterly, or any other cadence that works best for both
-  parties.
-
-## Helping the mentee to continue contributing {#helping}
-
-- If the project can continue accepting contributions, talk about what
-  continuing on the project might look like.
-
-- If the project cannot accept more contributions or is integrated into
-  something larger, talk about what other options there are to
-  contribute to Fedora.
-
-- Encourage the mentee to participate in virtual events, like Release
-  Parties, Week of Diversity, Appreciation Week, etc. = Program
-  Coordinator Handbook :page-authors: {author}, {author_2}, {author_3},
-  {author_4} Smera Goel; Fernando Fernandez Mancera; Justin W. Flory;
-  Jona Azizaj 2024-11-18
-
-Coordinators play an important role in the facilitation and execution of
-Fedora Mentored Projects programs. Coordinators are the
-points-of-contact between Fedora community interns and mentors, and
-administrators of the Mentored Projects programs we participate in.
-Coordinators are responsible for overseeing applications to the programs
-we participate in, applying to new programs, guiding Fedora mentors to
-propose projects for the programs, and being a neutral group for
-conflict resolution during the course of an internship. Additionally,
-coordinators play an important role in promoting and advocating for
-intern success, with key participation in major Fedora community events
-like Flock to Fedora and the Fedora Mentor Summit.
-
-This handbook describes the various key responsibilities of Fedora
-Mentored Project coordinators and gives more background to how
-coordinators support intern success in the Fedora community.
-
-# Key responsibilities {#responsibilities}
-
-## Applying to existing programs we participate in {#apply-existing}
-
-## Applying to new programs we are not participating in {#apply-new}
-
-### New program issue template {#program-template}
-
-    <!-- Thank you for your interest in proposing a new program for Fedora to participate in. This issue template is your first step in initiating a proposal under consideration by the community.
-
-    This issue template is specifically for proposing new mentorship programs similar to Outreachy or Google Summer of Code.
-
-    This GitLab issue is the primary place to get feedback and requests on your program proposal. The issue is meant to be public, to allow for community feedback and participation. -->
-
-    ## About You
-
-    <!-- These questions help us understand more about you and your involvement with Fedora. -->
-
-    * **Name**:
-
-    * **FAS Username**:
-
-    * **Your role in Fedora** (2-3 sentences):
-
-
-    ## About the Program
-
-    <!-- These questions help us understand more about the proposed program. -->
-
-    * **Program Name**:
-
-    * **Program Website**:
-
-    * **Program Overview** (2-3 sentences):
-
-    * **Program Objectives**:
-
-    * **Program Duration**:
-
-    * **Historical Context**:
-    - How long has the program been running?
-    - Past successes or notable outcomes.
-
-
-    ## Program Rationale
-
-    * **Why Should Fedora Participate?**:
-    - Benefits to Fedora and its community.
-    - Alignment with Fedora's mission and goals.
-
-
-    ## Project Requirements
-
-    * **Mentor Commitments**:
-    - Details on mentor responsibilities and time commitments.
-
-    * **Time Required**:
-    - Estimated total time investment for mentors and contributors.
-
-    * **Budget Needs**:
-    - Estimated costs and potential funding sources.
-
-
-    ## Program Proposal Submission
-
-    * **Proposal Details**:
-    - How do you propose to implement this program within Fedora?
-    - Project ideas and their feasibility for Fedora's participation.
-
-    * **Community Engagement**:
-    - How do you plan to engage the Fedora community in this program?
-
-
-    ## Additional Information
-
-    * **Is there anything else we should know when reviewing your proposal?**:
-
-    <!-- DO NOT EDIT BELOW THIS LINE! -->
-
-    /labels ~"?::needs review" ~"category::mentorship programs"
-
-# Guidance to Fedora mentors proposing projects {#guidance-mentors}
-
-Fedora Mentored Projects coordinators guide Fedora contributors in
-becoming project mentors and proposing projects for the programs Fedora
-participates in. Coordinators play an important role in reviewing and
-approving all project proposals in the community, as well as allocating
-funding for different projects in the community. As part of this
-responsibility, coordinators provide advice and guidance to Fedora
-community mentors on crafting the perfect proposal proposal for an
-intern project.
-
-Coordinators accept project proposals as public issues on the [Mentoring
-Working Group Home](https://gitlab.com/fedora/mentoring/home) repository
-on GitLab. This is the main tool that coordinators should engage and
-follow up with mentors who propose projects for upcoming Mentored
-Projects rounds.
-
-## Build a team around the project {#build-team}
-
-Before proposing a project, your project needs a team! The best Fedora
-Mentored Projects are ones where there is a wide net of support.
-Although there should be one, individual mentor who is directly
-responsible for the project and the intern(s), there should be a bigger
-team that supports the project. This way, there is less burden on an
-individual mentor, in case the mentor needs to take time away from the
-project, planned or unplanned. So, the main ingredient for a successful
-Fedora Mentored Project is a team to support the project, so the burden
-is shared beyond one, single person. Anyone who has participated in a
-Fedora Mentored Project program like Outreachy knows it can be a lot to
-handle on your own!
-
-## How to propose a Fedora Mentored Project {#propose-project}
-
-There are a few steps to proposing a Fedora Mentored Project:
-
-1.  Mentor(s) propose a project to Fedora Mentored Projects
-    coordinators.
-
-2.  Coordinators and invited reviewers review project proposals and give
-    feedback to mentors on their project proposals. Mentors have a brief
-    time period to revise their proposals.
-
-3.  Coordinators give an approval or rejection of project proposals for
-    an upcoming Fedora Mentored Projects rounds. If approved, a project
-    proposal becomes a Fedora Mentored Project and will run in the next
-    round of a program. If rejected, a project proposal will not receive
-    an intern allocation but the mentors are invited to submit and apply
-    again in a future round.
-
-## Common project proposal questions {#proposal-faq}
-
-Coordinators often consider the following questions when reviewing
-project proposals from community mentors:
-
-- Does the project have adequate staffing?
-
-- Are there enough tasks for the intern to do?
-
-- Is there too much for an intern to do?
-
-- What formal and informal mentors are available to the intern?
-
-- Is there a high probability of the internship deliverables being
-  deployed and/or used in the community?
-
-- What is the real-world applicability of the project proposal? Does it
-  solve an important problem or provide a useful function for the
-  community?
-
-- Are there opportunities for the intern to network and collaborate with
-  Fedora contributors in other parts of the community?
-
-# Coordinator best practices and conflict resolution {#best-practices}
-
-Sometimes, coordinators are asked to help in difficult situations and to
-mediate conflicts. Although this scenario is uncommon and Fedora
-generally has a high completion rate for Fedora Mentored Projects,
-sometimes difficult situations arise and conflicts must be resolved.
-Coordinators play an important role as mediators in conflicts, whether
-this is between program administrators and project mentors, or project
-mentors and interns. Because every scenario is unique and different,
-there is not a fixed set of rules about how to solve conflicts when they
-arise. Coordinators should use their best judgment and the context
-available to make the best decision possible for our interns, our
-mentors, and our community. However, instead of a fixed set of rules,
-there are general best practices and important considerations when
-stepping into this conflict mediation role as a Fedora Mentored Projects
-coordinator.
-
-## When things are going well {#going-well}
-
-## When things are not going well {#not-going-well}
-
-# Promoting & advocating for intern success {#intern-success}
-
-## Mentored Projects showcase @ Flock {#flock-showcase}
-
-## Flock Mentor Summit: Supported by Mentored Project coordinators {#flock-mentor-summit}
-
-# Mentored Project {#_mentored_project}
-
 Fedora Project participates in multiple mentored project programs and is
 actively looking for new mentors, projects and programs that fit the
 criteria and can help the project/community grow.
@@ -691,126 +5,95 @@ criteria and can help the project/community grow.
 Two main programs that the Fedora Project has been a part of for a long
 time are
 
-- [Google Summer of Code](gsoc/2021/index.xml)
+&#42; [Google Summer of Code](gsoc/2021/index.xml) &#42;
+[Outreachy](outreachy/2020/index.xml)
 
-- [Outreachy](outreachy/2020/index.xml)
-
-## Roles {#_roles}
+# Roles {#_roles}
 
 What are the different roles that people can play in the mentored
 projects workflow?
 
-- Intern.
+&#42; Intern. &#42; Mentor. &#42;&#42; Pitching a project &#42;&#42;
+Joining an existing project &#42; Program manager. &#42; Mentored
+project coordinator.
 
-- Mentor.
+# How to get from a 'project idea' to 'running an internship with Fedora'? {#_how_to_get_from_a_project_idea_to_running_an_internship_with_fedora}
 
-  - Pitching a project
-
-  - Joining an existing project
-
-- Program manager.
-
-- Mentored project coordinator.
-
-## How to get from a 'project idea' to 'running an internship with Fedora'? {#_how_to_get_from_a_project_idea_to_running_an_internship_with_fedora}
-
-### Want to be an intern with Fedora project? {#_want_to_be_an_intern_with_fedora_project}
+## Want to be an intern with Fedora project? {#_want_to_be_an_intern_with_fedora_project}
 
 Intern application process varies from project to project. Please refer
 to *some fedora page* to check the existing programs where Fedora is
 participating.
 
-### Want to be a mentor? {#_want_to_be_a_mentor}
+## Want to be a mentor? {#_want_to_be_a_mentor}
 
 In Fedora there are 2 kind of mentors.
 
-- Who guide mentees and work with them on the project. To mentor a
-  project, you need to first contact the Mindshare/mentored-projects
-  team by creating an issue on the mentored-projects gitlab. Please,
-  check the project elegibility criteria defined by Fedora community.
+&#42; Who guide mentees and work with them on the project. To mentor a
+project, you need to first contact the Mindshare/mentored-projects team
+by creating an issue on the mentored-projects gitlab. Please, check the
+project elegibility criteria defined by Fedora community. &#42; Who
+coordinate the programs. They collaborate closely with Mindshare
+committee. They are responsible to provide proper communication with
+interns, project mentors, ensuring feedback/evaluation submission and
+ensure project mentors are following Fedora community guidelines.
 
-- Who coordinate the programs. They collaborate closely with Mindshare
-  committee. They are responsible to provide proper communication with
-  interns, project mentors, ensuring feedback/evaluation submission and
-  ensure project mentors are following Fedora community guidelines.
-
-### Want to propose a project? {#_want_to_propose_a_project}
+## Want to propose a project? {#_want_to_propose_a_project}
 
 In order to propose a project, follow these steps.
 
-- Check the existing programs where Fedora project is participating.
-  *link to a webpage*
+&#42; Check the existing programs where Fedora project is participating.
+*link to a webpage* &#42; Check the eligibility criteria for running a
+project under Fedora. &#42; Mentoring is a time consuming activity and
+is not meant to reduce your project workload. When volunteering as a
+mentor, you are committing time and effort to guide and help a newcomer.
+&#42; Open an issue on *mentored-projects gitlab* and choose the
+template for the program you consider is a good fit for your project.
 
-- Check the eligibility criteria for running a project under Fedora.
-
-- Mentoring is a time consuming activity and is not meant to reduce your
-  project workload. When volunteering as a mentor, you are committing
-  time and effort to guide and help a newcomer.
-
-- Open an issue on *mentored-projects gitlab* and choose the template
-  for the program you consider is a good fit for your project.
-
-## Eligibility criteria used for running a project under Fedora {#_eligibility_criteria_used_for_running_a_project_under_fedora}
+# Eligibility criteria used for running a project under Fedora {#_eligibility_criteria_used_for_running_a_project_under_fedora}
 
 Fedora project will evaluate all the projects proposed and will use the
 following criteria to accept or reject them. A project should meet one
 of the following criteria:
 
-- The project is directly related to Fedora project
+&#42; The project is directly related to Fedora project &#42;&#42;
+Fedora branding with the project &#42;&#42; We use the project to build
+our operating system &#42;&#42; We use the project inside by Fedora
+project &#42; The project is heavily used by Fedora project &#42; The
+project provides a direct benefit to Fedora project
 
-  - Fedora branding with the project
-
-  - We use the project to build our operating system
-
-  - We use the project inside by Fedora project
-
-- The project is heavily used by Fedora project
-
-- The project provides a direct benefit to Fedora project
-
-## Interns onboarding process {#_interns_onboarding_process}
+# Interns onboarding process {#_interns_onboarding_process}
 
 Note: This process is to enable summer coding participants to
 communicate with the community \| With Mindshare, I mean Mindshare:
 Mentored project representative hereafter
 
-- Within two weeks of announcing accepted students (by Google Summer of
-  Code and Outreachy committee), Mindshare coordinates with mentors,
-  students, and general mentors to publish intern introduction blog
-  posts on the community blog for the respective programs.
+&#42; Within two weeks of announcing accepted students (by Google Summer
+of Code and Outreachy committee), Mindshare coordinates with mentors,
+students, and general mentors to publish intern introduction blog posts
+on the community blog for the respective programs.
 
-- Mentors ensure that Students are posting a post every 2-3 weeks once
-  the coding period starts. (Can we use fedocal to set reminder and send
-  an email to the summer-coding/outreachy list? - needs discussion)
+&#42; Mentors ensure that Students are posting a post every 2-3 weeks
+once the coding period starts. (Can we use fedocal to set reminder and
+send an email to the summer-coding/outreachy list? - needs discussion)
 
-  The post should ideally contain
+\+ The post should ideally contain
 
-  - Community Interaction
+&#42;&#42; Community Interaction &#42;&#42; Project updates/roadmaps
+&#42;&#42; Challenges/success &#42;&#42; Other things they want to share
 
-  - Project updates/roadmaps
+&#42; Summer coding showcase session in Flock/One of the monthly Council
+calls
 
-  - Challenges/success
+&#42; Post coding period, Mindshare to publish a magazine post with:
+&#42;&#42; Outcomes of the GSoC/Outreachy projects &#42;&#42; Fedora
+participation in outreach programs &#42;&#42; Reflection &#42;&#42;
+Links to the interns\' work &#42;&#42; What's Next: (Ideas and Call for
+participation)
 
-  - Other things they want to share
+&#42; Google Summer of Code &#42;&#42; 2025
 
-- Summer coding showcase session in Flock/One of the monthly Council
-  calls
-
-- Post coding period, Mindshare to publish a magazine post with:
-
-  - Outcomes of the GSoC/Outreachy projects
-
-  - Fedora participation in outreach programs
-
-  - Reflection
-
-  - Links to the interns\' work
-
-  - What's Next: (Ideas and Call for participation)
-
-- Google Summer of Code
-
-  - 2025 = Google Summer of Code 2025
+# Google Summer of Code 2025
 
 :::: note
 ::: title
@@ -845,15 +128,15 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on a mentor-submitted idea, read the
-  [ideas page](gsoc/2025/ideas.xml) and about the project and the
-  related technology. There is no need to contact the mentor unless you
-  have a specific question about the project. Don't send an \"I'm
-  interested\" email.
+&#42; If you're interested in working on a mentor-submitted idea, read
+the [ideas page](gsoc/2025/ideas.xml) and about the project and the
+related technology. There is no need to contact the mentor unless you
+have a specific question about the project. Don't send an \'I'm
+interested\' email.
 
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS?
 
@@ -865,21 +148,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora?
 
@@ -908,16 +183,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities
 
@@ -926,18 +197,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application
 
@@ -975,7 +241,7 @@ things:
     finding a student with enough skills to respond to a use case need.
     Also, students learn more when they help design and guide the
     project. In other words, provide guidance and direction but let the
-    student do some of the \"driving.\"
+    student do some of the \'driving.\'
 
 3.  Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -988,28 +254,28 @@ things:
 If you're interested in working with a student on a specific project you
 should post your idea to the [Mentored Projects Issue
 Tracker](https://pagure.io/mentored-projects/issues). Your issue should
-be tagged **GSoC** and use the **Google Summer of Code** template. We
-strongly encourage you to find a second person to help with mentoring
-and to solicit feedback on your proposal
+be tagged &#42;GSoC&#42; and use the &#42;Google Summer of Code&#42;
+template. We strongly encourage you to find a second person to help with
+mentoring and to solicit feedback on your proposal
 
 ### Can I be a Mentor Without a Project? {#_can_i_be_a_mentor_without_a_project}
 
 Yes! You can either:
 
-- Work with a student who brings an idea to your sub-project. This
-  requires a different level of communication throughout the project,
-  but can be the most rewarding.
+&#42; Work with a student who brings an idea to your sub-project. This
+requires a different level of communication throughout the project, but
+can be the most rewarding.
 
-- Be a general mentor. This is a person who works with all students
-  regardless of their project. To become a general mentor please open an
-  issue in the [Mentored Projects Issue
-  Tracker](https://gitlab.com/fedora/mentoring/home) offering your help.
-  Please tag the issue with the **GSoC** tag.
+&#42; Be a general mentor. This is a person who works with all students
+regardless of their project. To become a general mentor please open an
+issue in the [Mentored Projects Issue
+Tracker](https://gitlab.com/fedora/mentoring/home) offering your help.
+Please tag the issue with the &#42;GSoC&#42; tag.
 
 ### How to work with students
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities
 
@@ -1018,40 +284,30 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **Matrix/element Chatroom:**
-  [#google-summer-coding](https://chat.fedoraproject.org/#/room/#google-summer-coding:fedora.im)
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;Matrix/element Chatroom:&#42;
+[&#35;google-summer-coding](https://chat.fedoraproject.org/&#35;/room/&#35;google-summer-coding:fedora.im)
 
 ## Timeline
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration
@@ -1061,13 +317,12 @@ this year's GSoC with Fedora, please contact the administrators directly
 (please consider CCing the summer-coding list where ever possible).
 
 1.  [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
-
-    - Email : <sumantro@redhat.com>
+    &#42; Email : <sumantro@redhat.com>
 
 2.  [Fernando F. Mancera](https://fedoraproject.org/wiki/User:ffmancera)
+    &#42; Email : <ferferna@redhat.com>
 
-    - Email : <ferferna@redhat.com> = Ideas for Student Projects for
-      2025
+# Ideas for Student Projects for 2025
 
 :::: note
 ::: title
@@ -1085,15 +340,15 @@ of Code with Fedora](gsoc/2025/index.xml), please feel free to browse
 this idea list. There may be additional ideas added during the
 application period.
 
-**Now please go read the [What Can I do
-Today](gsoc/2025/index.xml#what-can-i-do-today) section of the main
+&#42;&#42;Now please go read the [What Can I do
+Today](gsoc/2025/index.adoc&#35;what-can-i-do-today) section of the main
 page. This has the answers to your questions and tells you how to
-apply**
+apply&#42;&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
 the [Matrix
-channel](https://chat.fedoraproject.org/#/room/#google-summer-coding:fedora.im),
+channel](https://chat.fedoraproject.org/&#35;/room/&#35;google-summer-coding:fedora.im),
 or use the [mailing
 list](https://lists.fedoraproject.org/archives/list/summer-coding@lists.fedoraproject.org/).
 can be used for getting help with programming problems.
@@ -1105,12 +360,12 @@ support for the GSoC program If a specific project mentor is busy, you
 can contact one of the people below for short-term help on your project
 or task. add yourselves and your wiki page).
 
-- [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
-  (General development, quality, general Linux, Fedora community, GSoC
-  alumnus, questions about program, misc. advice)
-
-- [Fernando F. Mancera](https://fedoraproject.org/wiki/User:ffmancera)
-  (GSoC, general linux, Fedora community, Mentoring, Networking)
+&#42; [Sumantro
+Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom) (General
+development, quality, general Linux, Fedora community, GSoC alumnus,
+questions about program, misc. advice) &#42; [Fernando F.
+Mancera](https://fedoraproject.org/wiki/User:ffmancera) (GSoC, general
+linux, Fedora community, Mentoring, Networking)
 
 ## Idea List {#_idea_list}
 
@@ -1121,11 +376,9 @@ or task. add yourselves and your wiki page).
 Ideas are subject to change as additional mentors are onboarded.
 ::::
 
-- [AI-Powered Log Triage and Security Alert Aggregator for
-  Fedora](#_ai_powered_log_triage_and_security_alert_aggregator_for_fedora)
-
-- [Create a service to get a new project to Fedora more
-  easily](#_create_a_service_to_get_a_new_project_to_fedora_more_easily)
+&#42; &lt;&lt;AI-Powered Log Triage and Security Alert Aggregator for
+Fedora&gt;&gt; &#42; &lt;&lt;Create a service to get a new project to
+Fedora more easily&gt;&gt;
 
 ### AI-Powered Log Triage and Security Alert Aggregator for Fedora {#_ai_powered_log_triage_and_security_alert_aggregator_for_fedora}
 
@@ -1166,8 +419,8 @@ As a GSoC intern, you will be responsible for the following :
 - Demonstration/Prototype: A working setup (CLI or basic UI) showcasing
   how logs are collected, classified, and prioritized in real time.
 
-- Testing & Evaluation Results: A set of tests (unit/integration) plus
-  any benchmarking or evaluation reports on model performance and
+- Testing &amp; Evaluation Results: A set of tests (unit/integration)
+  plus any benchmarking or evaluation reports on model performance and
   accuracy.
 
 ### Create a service to get a new project to Fedora more easily {#_create_a_service_to_get_a_new_project_to_fedora_more_easily}
@@ -1201,8 +454,8 @@ get feedback both from tools and more experienced packagers.
 - Demonstration/Prototype: A working setup showcasing how this service
   works and integrating at least a single automatic feedback.
 
-- Testing & Evaluation Results: A set of tests (unit/integration) of the
-  new code.
+- Testing &amp; Evaluation Results: A set of tests (unit/integration) of
+  the new code.
 
 - Deployment: The service is deployed and running or it is available to
   be run and deployed in the form of a container.
@@ -1230,15 +483,12 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important}
 
-- Timelines are set by Google for the entire program. [Follow the
-  timeline](https://summerofcode.withgoogle.com/how-it-works/).
-
-- Applications are due in Google's system by April 8 - 18:00 UTC.
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. [Follow the
+timeline](https://summerofcode.withgoogle.com/how-it-works/). &#42;
+Applications are due in Google's system by April 8 - 18:00 UTC. &#42;
+Applications Must be filed in the Google system. No other material can
+be read or accepted. &#42; The final application is required to be
+submitted as a PDF.
 
 ## Student Application Process {#_student_application_process}
 
@@ -1247,9 +497,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate}
 
@@ -1260,11 +509,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -1291,7 +539,7 @@ The application process consists of 5 steps:
     This list is fairly low volume.
 
 3.  Join the Matrix Room for Async Comms [GSoC
-    2025](https://chat.fedoraproject.org/#/room/#google-summer-coding:fedora.im)
+    2025](https://chat.fedoraproject.org/&#35;/room/&#35;google-summer-coding:fedora.im)
 
 4.  Join the devel mailing list [Devel Mailing
     List](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org) -
@@ -1316,60 +564,46 @@ provide guidance on whether your plan is good.
 In addition to the information Google requests, the Fedora Project
 requires you to submit the following information:
 
-- What project are you applying to? Seriously consider choosing a
-  project for proposal from [ideas list](gsoc/2025/ideas.xml). While it
-  is possible to propose your own project, it is often more successful
-  for you to select one that is already proposed by a mentor.
+&#42; What project are you applying to? Seriously consider choosing a
+project for proposal from [ideas list](gsoc/2025/ideas.xml). While it is
+possible to propose your own project, it is often more successful for
+you to select one that is already proposed by a mentor.
 
-- Contact Information
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email.
 
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
+&#42; About You - Consider these questions &#42;&#42; Do you have any
+past involvement with the Fedora Project or another open-source project
+as a contributor? What kind of contributions have you made (code and
+non-code)? Please share any public contributions you have made (urls,
+etc.) &#42;&#42; What are you studying? Why? &#42;&#42; What motivates
+you to do your best? How do you stay focused? Briefly describe how you
+organize your work.
 
-- About You - Consider these questions
+&#42; Why Us? - Consider these questions &#42;&#42; Why do you want to
+work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with?
 
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
+&#42; Why This Project? - Consider these questions &#42;&#42; Which
+specific project interests you? If you are proposing your own project,
+do it here. If you are proposing the project, explain why it benefits
+the community. &#42;&#42; Have you contacted the mentor(s) listed for
+the project? &#42;&#42; What relevant experience do you have for this
+project? &#42;&#42; What do you want to gain from this project?
+&#42;&#42; Describe this project in your own words. What does it mean to
+you? What do you think the final deliverable is?
 
-  - What are you studying? Why?
+&#42; Why should we choose you over other applicants?
 
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period.
 
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; What are you specific plans from May to September (eg: Exams in
+university, internships, vacations..etc). We need to know if there are
+periods of time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 :::: note
 ::: title
@@ -1391,7 +625,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2024
+contributors are often very busy people.
+
+&#42;&#42; 2024
 
 # Google Summer of Code 2024
 
@@ -1424,20 +660,20 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on a mentor-submitted idea, read the
-  [ideas page](gsoc/2024/ideas.xml) and about the project and the
-  related technology. There is no need to contact the mentor unless you
-  have a specific question about the project. Don't send an \"I'm
-  interested\" email.
+&#42; If you're interested in working on a mentor-submitted idea, read
+the [ideas page](gsoc/2024/ideas.xml) and about the project and the
+related technology. There is no need to contact the mentor unless you
+have a specific question about the project. Don't send an \'I'm
+interested\' email.
 
-- If you're interested in proposing your own project start looking
-  around the Fedora Project for a mentor and send your idea to the
-  mailing list or post it on the wiki. A list of potential mentors is
-  also on the [ideas page](gsoc/2024/ideas.xml).
+&#42; If you're interested in proposing your own project start looking
+around the Fedora Project for a mentor and send your idea to the mailing
+list or post it on the wiki. A list of potential mentors is also on the
+[ideas page](gsoc/2024/ideas.xml).
 
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -1449,21 +685,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -1492,16 +720,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities {#student-responsibilities}
 
@@ -1510,18 +734,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application {#student-application}
 
@@ -1559,7 +778,7 @@ things:
     finding a student with enough skills to respond to a use case need.
     Also, students learn more when they help design and guide the
     project. In other words, provide guidance and direction but let the
-    student do some of the \"driving.\"
+    student do some of the \'driving.\'
 
 3.  Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -1572,28 +791,28 @@ things:
 If you're interested in working with a student on a specific project you
 should post your idea to the [Mentored Projects Issue
 Tracker](https://pagure.io/mentored-projects/issues). Your issue should
-be tagged **GSoC** and use the **Google Summer of Code** template. We
-strongly encourage you to find a second person to help with mentoring
-and to solicit feedback on your proposal
+be tagged &#42;GSoC&#42; and use the &#42;Google Summer of Code&#42;
+template. We strongly encourage you to find a second person to help with
+mentoring and to solicit feedback on your proposal
 
 ### Can I be a Mentor Without a Project? {#_can_i_be_a_mentor_without_a_project_2}
 
 Yes! You can either:
 
-- Work with a student who brings an idea to your sub-project. This
-  requires a different level of communication throughout the project,
-  but can be the most rewarding.
+&#42; Work with a student who brings an idea to your sub-project. This
+requires a different level of communication throughout the project, but
+can be the most rewarding.
 
-- Be a general mentor. This is a person who works with all students
-  regardless of their project. To become a general mentor please open an
-  issue in the [Mentored Projects Issue
-  Tracker](https://pagure.io/mentored-projects/issues) offering your
-  help. Please tag the issue with the **GSoC** tag.
+&#42; Be a general mentor. This is a person who works with all students
+regardless of their project. To become a general mentor please open an
+issue in the [Mentored Projects Issue
+Tracker](https://pagure.io/mentored-projects/issues) offering your help.
+Please tag the issue with the &#42;GSoC&#42; tag.
 
 ### How to work with students {#how-to-work-with-students}
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities {#mentor-responsibilities}
 
@@ -1602,43 +821,33 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC:**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC:&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline {#timeline}
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration {#administration}
@@ -1665,10 +874,10 @@ of Code with Fedora](gsoc/2024/index.xml), please feel free to browse
 this idea list. There may be additional ideas added during the
 application period.
 
-**Now please go read the [What Can I do
-Today](gsoc/2024/index.xml#what-can-i-do-today) section of the main
+&#42;&#42;Now please go read the [What Can I do
+Today](gsoc/2024/index.adoc&#35;what-can-i-do-today) section of the main
 page. This has the answers to your questions and tells you how to
-apply**
+apply&#42;&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
@@ -1682,12 +891,12 @@ support for the GSoC program If a specific project mentor is busy, you
 can contact one of the people below for short-term help on your project
 or task. add yourselves and your wiki page).
 
-- [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
-  (General development, general Linux,Fedora community, GSoC alumnus,
-  questions about program, misc. advice)
-
-- [Justin Flory](https://fedoraproject.org/wiki/User:Jflory7) (Fedora
-  CI,GCI,GSoC,general linux,Fedora community, misc.)
+&#42; [Sumantro
+Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom) (General
+development, general Linux,Fedora community, GSoC alumnus, questions
+about program, misc. advice) &#42; [Justin
+Flory](https://fedoraproject.org/wiki/User:Jflory7) (Fedora
+CI,GCI,GSoC,general linux,Fedora community, misc.)
 
 ## Idea list {#_idea_list_2}
 
@@ -1698,11 +907,9 @@ or task. add yourselves and your wiki page).
 Ideas are subject to change as additional mentors are onboarded.
 ::::
 
-- [Use natural language to create network
-  configuration](#_use_natural_language_to_create_network_configuration)
-
-- [Make AI understand NetworkManager
-  logs](#_make_ai_understand_networkmanager_logs)
+&#42; &lt;&lt;Use natural language to create network
+configuration&gt;&gt; &#42; &lt;&lt;Make AI understand NetworkManager
+logs&gt;&gt;
 
 ### Genric Intro {#_genric_intro}
 
@@ -1850,15 +1057,12 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important_2}
 
-- Timelines are set by Google for the entire program. [Follow the
-  timeline](https://summerofcode.withgoogle.com/how-it-works/).
-
-- Applications are due in Google's system by Feb 6 18:00 UTC.
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. [Follow the
+timeline](https://summerofcode.withgoogle.com/how-it-works/). &#42;
+Applications are due in Google's system by Feb 6 18:00 UTC. &#42;
+Applications Must be filed in the Google system. No other material can
+be read or accepted. &#42; The final application is required to be
+submitted as a PDF.
 
 ## Student Application Process {#_student_application_process_2}
 
@@ -1867,9 +1071,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate_2}
 
@@ -1880,11 +1083,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -1944,60 +1146,46 @@ generate a PDF for your application.
 In addition to the information Google requests, the Fedora Project
 requires you to submit the following information:
 
-- What project are you applying to? Seriously consider choosing a
-  project for proposal from [ideas list](gsoc/2024/ideas.xml). While it
-  is possible to propose your own project, it is often more successful
-  for you to select one that is already proposed by a mentor.
+&#42; What project are you applying to? Seriously consider choosing a
+project for proposal from [ideas list](gsoc/2024/ideas.xml). While it is
+possible to propose your own project, it is often more successful for
+you to select one that is already proposed by a mentor.
 
-- Contact Information
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email.
 
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
+&#42; About You - Consider these questions &#42;&#42; Do you have any
+past involvement with the Fedora Project or another open-source project
+as a contributor? What kind of contributions have you made (code and
+non-code)? Please share any public contributions you have made (urls,
+etc.) &#42;&#42; What are you studying? Why? &#42;&#42; What motivates
+you to do your best? How do you stay focused? Briefly describe how you
+organize your work.
 
-- About You - Consider these questions
+&#42; Why Us? - Consider these questions &#42;&#42; Why do you want to
+work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with?
 
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
+&#42; Why This Project? - Consider these questions &#42;&#42; Which
+specific project interests you? If you are proposing your own project,
+do it here. If you are proposing the project, explain why it benefits
+the community. &#42;&#42; Have you contacted the mentor(s) listed for
+the project? &#42;&#42; What relevant experience do you have for this
+project? &#42;&#42; What do you want to gain from this project?
+&#42;&#42; Describe this project in your own words. What does it mean to
+you? What do you think the final deliverable is?
 
-  - What are you studying? Why?
+&#42; Why should we choose you over other applicants?
 
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period.
 
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; What are you specific plans from May to September (eg: Exams in
+university, internships, vacations..etc). We need to know if there are
+periods of time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 :::: note
 ::: title
@@ -2019,7 +1207,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2022
+contributors are often very busy people.
+
+&#42;&#42; 2022
 
 # Google Summer of Code 2021
 
@@ -2050,19 +1240,19 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on a mentor-submitted idea, Check
-  tickets on [our project idea
-  tracker](https://pagure.io/mentored-projects/issues?status=Open&tags=project-idea&tags=GSoC&close_status=).
-  There is no need to contact the mentor unless you have a specific
-  question about the project. Don't send an \"I'm interested\" email.
+&#42; If you're interested in working on a mentor-submitted idea, Check
+tickets on [our project idea
+tracker](https://pagure.io/mentored-projects/issues?status=Open&amp;tags=project-idea&amp;tags=GSoC&amp;close_status=).
+There is no need to contact the mentor unless you have a specific
+question about the project. Don't send an \'I'm interested\' email.
 
-- If you're interested in proposing your own project, check [Call for
-  Projects and Mentors: GSoC
-  2022](https://communityblog.fedoraproject.org/call-for-projects-and-mentors-gsoc-2022/)
+&#42; If you're interested in proposing your own project, check [Call
+for Projects and Mentors: GSoC
+2022](https://communityblog.fedoraproject.org/call-for-projects-and-mentors-gsoc-2022/)
 
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -2074,21 +1264,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -2117,16 +1299,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities {#student-responsibilities}
 
@@ -2135,18 +1313,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application {#student-application}
 
@@ -2173,8 +1346,8 @@ people than just you.
 
 ### How to work with students {#how-to-work-with-students}
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities {#mentor-responsibilities}
 
@@ -2183,43 +1356,33 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC:**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC:&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline {#timeline}
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration {#administration}
@@ -2231,8 +1394,9 @@ this year's GSoC with Fedora, please contact the administrators directly
 1.  [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
 
 2.  [Vipul
-    Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1) =
-    Google Summer of Code Application Process
+    Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1)
+
+# Google Summer of Code Application Process {#_google_summer_of_code_application_process_3}
 
 :::: note
 ::: title
@@ -2251,15 +1415,12 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important_3}
 
-- Timelines are set by Google for the entire program. [Follow the
-  timeline](https://summerofcode.withgoogle.com/how-it-works/).
-
-- Applications are due in Google's system by April 13 18:00 UTC.
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. [Follow the
+timeline](https://summerofcode.withgoogle.com/how-it-works/). &#42;
+Applications are due in Google's system by April 13 18:00 UTC. &#42;
+Applications Must be filed in the Google system. No other material can
+be read or accepted. &#42; The final application is required to be
+submitted as a PDF.
 
 ## Student Application Process {#_student_application_process_3}
 
@@ -2268,9 +1429,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate_3}
 
@@ -2281,11 +1441,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -2403,7 +1562,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2021
+contributors are often very busy people.
+
+&#42;&#42; 2021
 
 # Google Summer of Code 2021 {#google-summer-of-code-2021}
 
@@ -2437,20 +1598,20 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on a mentor-submitted idea, read the
-  [ideas page](gsoc/2021/ideas.xml) and about the project and the
-  related technology. There is no need to contact the mentor unless you
-  have a specific question about the project. Don't send an \"I'm
-  interested\" email.
+&#42; If you're interested in working on a mentor-submitted idea, read
+the [ideas page](gsoc/2021/ideas.xml) and about the project and the
+related technology. There is no need to contact the mentor unless you
+have a specific question about the project. Don't send an \'I'm
+interested\' email.
 
-- If you're interested in proposing your own project start looking
-  around the Fedora Project for a mentor and send your idea to the
-  mailing list or post it on the wiki. A list of potential mentors is
-  also on the [ideas page](gsoc/2021/ideas.xml).
+&#42; If you're interested in proposing your own project start looking
+around the Fedora Project for a mentor and send your idea to the mailing
+list or post it on the wiki. A list of potential mentors is also on the
+[ideas page](gsoc/2021/ideas.xml).
 
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -2462,21 +1623,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -2505,16 +1658,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities {#student-responsibilities}
 
@@ -2523,18 +1672,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application {#student-application}
 
@@ -2572,7 +1716,7 @@ things:
     finding a student with enough skills to respond to a use case need.
     Also, students learn more when they help design and guide the
     project. In other words, provide guidance and direction but let the
-    student do some of the \"driving.\"
+    student do some of the \'driving.\'
 
 3.  Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -2585,28 +1729,28 @@ things:
 If you're interested in working with a student on a specific project you
 should post your idea to the [Mentored Projects Issue
 Tracker](https://pagure.io/mentored-projects/issues). Your issue should
-be tagged **GSoC** and use the **Google Summer of Code** template. We
-strongly encourage you to find a second person to help with mentoring
-and to solicit feedback on your proposal
+be tagged &#42;GSoC&#42; and use the &#42;Google Summer of Code&#42;
+template. We strongly encourage you to find a second person to help with
+mentoring and to solicit feedback on your proposal
 
 ### Can I be a Mentor Without a Project? {#_can_i_be_a_mentor_without_a_project_3}
 
 Yes! You can either:
 
-- Work with a student who brings an idea to your sub-project. This
-  requires a different level of communication throughout the project,
-  but can be the most rewarding.
+&#42; Work with a student who brings an idea to your sub-project. This
+requires a different level of communication throughout the project, but
+can be the most rewarding.
 
-- Be a general mentor. This is a person who works with all students
-  regardless of their project. To become a general mentor please open an
-  issue in the [Mentored Projects Issue
-  Tracker](https://pagure.io/mentored-projects/issues) offering your
-  help. Please tag the issue with the **GSoC** tag.
+&#42; Be a general mentor. This is a person who works with all students
+regardless of their project. To become a general mentor please open an
+issue in the [Mentored Projects Issue
+Tracker](https://pagure.io/mentored-projects/issues) offering your help.
+Please tag the issue with the &#42;GSoC&#42; tag.
 
 ### How to work with students {#how-to-work-with-students}
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities {#mentor-responsibilities}
 
@@ -2615,43 +1759,33 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC:**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC:&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline {#timeline}
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration {#administration}
@@ -2679,10 +1813,10 @@ of Code with Fedora](gsoc/2021/index.xml), please feel free to browse
 this idea list. There may be additional ideas added during the
 application period.
 
-**Now please go read the [What Can I do
-Today](gsoc/2021/index.xml#what-can-i-do-today) section of the main
+&#42;&#42;Now please go read the [What Can I do
+Today](gsoc/2021/index.adoc&#35;what-can-i-do-today) section of the main
 page. This has the answers to your questions and tells you how to
-apply**
+apply&#42;&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
@@ -2696,12 +1830,12 @@ support for the GSoC program If a specific project mentor is busy, you
 can contact one of the people below for short-term help on your project
 or task. add yourselves and your wiki page).
 
-- [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
-  (General development, general Linux,Fedora community, GSoC alumnus,
-  questions about program, misc. advice)
-
-- [Vipul Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1)
-  (Fedora CI,GCI,GSoC,general linux,Fedora community, misc.)
+&#42; [Sumantro
+Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom) (General
+development, general Linux,Fedora community, GSoC alumnus, questions
+about program, misc. advice) &#42; [Vipul
+Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1) (Fedora
+CI,GCI,GSoC,general linux,Fedora community, misc.)
 
 ## Idea list {#_idea_list_3}
 
@@ -2712,10 +1846,8 @@ or task. add yourselves and your wiki page).
 Ideas are subject to change as additional mentors are onboarded.
 ::::
 
-- [Fedora QA Dashboard](#_fedora_qa_dashboard)
-
-- [KiwiTCMS integration with Fedora QA
-  workflow](#_kiwitcms_integration_with_fedora_qa_workflow)
+&#42; &lt;&lt;Fedora QA Dashboard&gt;&gt; &#42; &lt;&lt;KiwiTCMS
+integration with Fedora QA workflow&gt;&gt;
 
 ### Fedora QA Dashboard {#_fedora_qa_dashboard}
 
@@ -2785,7 +1917,7 @@ As a GSoC intern, you will be responsible for the following :
 
 - Share monthly reports to the community blog and QA meetings
 
-# Google Summer of Code Application Process {#_google_summer_of_code_application_process_3}
+# Google Summer of Code Application Process {#_google_summer_of_code_application_process_4}
 
 :::: note
 ::: title
@@ -2804,15 +1936,12 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important_4}
 
-- Timelines are set by Google for the entire program. [Follow the
-  timeline](https://summerofcode.withgoogle.com/how-it-works/).
-
-- Applications are due in Google's system by April 13 18:00 UTC.
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. [Follow the
+timeline](https://summerofcode.withgoogle.com/how-it-works/). &#42;
+Applications are due in Google's system by April 13 18:00 UTC. &#42;
+Applications Must be filed in the Google system. No other material can
+be read or accepted. &#42; The final application is required to be
+submitted as a PDF.
 
 ## Student Application Process {#_student_application_process_4}
 
@@ -2821,9 +1950,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate_4}
 
@@ -2834,11 +1962,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -2898,60 +2025,46 @@ generate a PDF for your application.
 In addition to the information Google requests, the Fedora Project
 requires you to submit the following information:
 
-- What project are you applying to? Seriously consider choosing a
-  project for proposal from [ideas list](gsoc/2021/ideas.xml). While it
-  is possible to propose your own project, it is often more successful
-  for you to select one that is already proposed by a mentor.
+&#42; What project are you applying to? Seriously consider choosing a
+project for proposal from [ideas list](gsoc/2021/ideas.xml). While it is
+possible to propose your own project, it is often more successful for
+you to select one that is already proposed by a mentor.
 
-- Contact Information
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email.
 
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
+&#42; About You - Consider these questions &#42;&#42; Do you have any
+past involvement with the Fedora Project or another open-source project
+as a contributor? What kind of contributions have you made (code and
+non-code)? Please share any public contributions you have made (urls,
+etc.) &#42;&#42; What are you studying? Why? &#42;&#42; What motivates
+you to do your best? How do you stay focused? Briefly describe how you
+organize your work.
 
-- About You - Consider these questions
+&#42; Why Us? - Consider these questions &#42;&#42; Why do you want to
+work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with?
 
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
+&#42; Why This Project? - Consider these questions &#42;&#42; Which
+specific project interests you? If you are proposing your own project,
+do it here. If you are proposing the project, explain why it benefits
+the community. &#42;&#42; Have you contacted the mentor(s) listed for
+the project? &#42;&#42; What relevant experience do you have for this
+project? &#42;&#42; What do you want to gain from this project?
+&#42;&#42; Describe this project in your own words. What does it mean to
+you? What do you think the final deliverable is?
 
-  - What are you studying? Why?
+&#42; Why should we choose you over other applicants?
 
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period.
 
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; What are you specific plans from May to September (eg: Exams in
+university, internships, vacations..etc). We need to know if there are
+periods of time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 :::: note
 ::: title
@@ -2973,7 +2086,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2020
+contributors are often very busy people.
+
+&#42;&#42; 2020
 
 # Google Summer of Code 2020
 
@@ -3006,20 +2121,20 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on a mentor-submitted idea, read the
-  [ideas page](gsoc/2020/ideas.xml) and about the project and the
-  related technology. There is no need to contact the mentor unless you
-  have a specific question about the project. Don't send an \"I'm
-  interested\" email.
+&#42; If you're interested in working on a mentor-submitted idea, read
+the [ideas page](gsoc/2020/ideas.xml) and about the project and the
+related technology. There is no need to contact the mentor unless you
+have a specific question about the project. Don't send an \'I'm
+interested\' email.
 
-- If you're interested in proposing your own project start looking
-  around the Fedora Project for a mentor and send your idea to the
-  mailing list or post it on the wiki. A list of potential mentors is
-  also on the [ideas page](gsoc/2019/ideas.xml).
+&#42; If you're interested in proposing your own project start looking
+around the Fedora Project for a mentor and send your idea to the mailing
+list or post it on the wiki. A list of potential mentors is also on the
+[ideas page](gsoc/2019/ideas.xml).
 
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -3031,21 +2146,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -3074,16 +2181,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities {#student-responsibilities}
 
@@ -3092,18 +2195,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application {#student-application}
 
@@ -3141,7 +2239,7 @@ things:
     finding a student with enough skills to respond to a use case need.
     Also, students learn more when they help design and guide the
     project. In other words, provide guidance and direction but let the
-    student do some of the \"driving.\"
+    student do some of the \'driving.\'
 
 3.  Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -3154,28 +2252,28 @@ things:
 If you're interested in working with a student on a specific project you
 should post your idea to the [Mentored Projects Issue
 Tracker](https://pagure.io/mentored-projects/issues). Your issue should
-be tagged **GSoC** and use the **Google Summer of Code** template. We
-strongly encourage you to find a second person to help with mentoring
-and to solicit feedback on your proposal
+be tagged &#42;GSoC&#42; and use the &#42;Google Summer of Code&#42;
+template. We strongly encourage you to find a second person to help with
+mentoring and to solicit feedback on your proposal
 
 ### Can I be a Mentor Without a Project? {#_can_i_be_a_mentor_without_a_project_4}
 
 Yes! You can either:
 
-- Work with a student who brings an idea to your sub-project. This
-  requires a different level of communication throughout the project,
-  but can be the most rewarding.
+&#42; Work with a student who brings an idea to your sub-project. This
+requires a different level of communication throughout the project, but
+can be the most rewarding.
 
-- Be a general mentor. This is a person who works with all students
-  regardless of their project. To become a general mentor please open an
-  issue in the [Mentored Projects Issue
-  Tracker](https://pagure.io/mentored-projects/issues) offering your
-  help. Please tag the issue with the **GSoC** tag.
+&#42; Be a general mentor. This is a person who works with all students
+regardless of their project. To become a general mentor please open an
+issue in the [Mentored Projects Issue
+Tracker](https://pagure.io/mentored-projects/issues) offering your help.
+Please tag the issue with the &#42;GSoC&#42; tag.
 
 ### How to work with students {#how-to-work-with-students}
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities {#mentor-responsibilities}
 
@@ -3184,43 +2282,33 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC:**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC:&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline {#timeline}
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration {#administration}
@@ -3248,10 +2336,10 @@ of Code with Fedora](gsoc/2020/index.xml), please feel free to browse
 this idea list. There may be additional ideas added during the
 application period.
 
-**Now please go read the [What Can I do
-Today](gsoc/2019/index.xml#what-can-i-do-today) section of the main
+&#42;&#42;Now please go read the [What Can I do
+Today](gsoc/2019/index.adoc&#35;what-can-i-do-today) section of the main
 page. This has the answers to your questions and tells you how to
-apply**
+apply&#42;&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
@@ -3265,12 +2353,12 @@ support for the GSoC program If a specific project mentor is busy, you
 can contact one of the people below for short-term help on your project
 or task. add yourselves and your wiki page).
 
-- [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
-  (General development, general Linux, Fedora community, GSoC alumnus,
-  questions about program, misc. advice)
-
-- [Vipul Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1)
-  (Fedora CI,GCI,GSoC,general linux,Fedora community, misc.)
+&#42; [Sumantro
+Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom) (General
+development, general Linux, Fedora community, GSoC alumnus, questions
+about program, misc. advice) &#42; [Vipul
+Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1) (Fedora
+CI,GCI,GSoC,general linux,Fedora community, misc.)
 
 ## Idea list {#_idea_list_4}
 
@@ -3281,14 +2369,9 @@ or task. add yourselves and your wiki page).
 Ideas are subject to change as additional mentors are onboarded.
 ::::
 
-- [Packit can work with Gitlab](#_packit_can_work_with_gitlab)
-
-- [Dashboard for Packit](#_dashboard_for_packit)
-
-- [Improve Network Linux System
-  Role](#_improve_network_linux_system_role)
-
-- [Add varlink support to Nmstate](#_add_varlink_support_to_nmstate)
+&#42; &lt;&lt;Packit can work with Gitlab&gt;&gt; &#42;
+&lt;&lt;Dashboard for Packit&gt;&gt; &#42; &lt;&lt;Improve Network Linux
+System Role&gt;&gt; &#42; &lt;&lt;Add varlink support to Nmstate&gt;&gt;
 
 ### Packit can work with Gitlab {#_packit_can_work_with_gitlab}
 
@@ -3298,7 +2381,7 @@ Ideas are subject to change as additional mentors are onboarded.
 
 - Mentor : Frantisek Lachman
 
-- IRC & Email : Frantisek Lachman \[IRC: lachmanfrantisek,
+- IRC &amp; Email : Frantisek Lachman \[IRC: lachmanfrantisek,
   <flachman@redhat.com>\]
 
 #### Description {#_description_7}
@@ -3321,28 +2404,24 @@ Resources can be found at Upstream tracking issue:
 
 As a GSoC intern, you will be responsible for the following :
 
-- Code in Packit service repository which makes packit understand the
-  gitlab events
-
-- Packit is able to talk to a GitLab server API and:
-
-  - Comment on merge request
-
-  - Report check results (builds, tests)
-
-- On-board at least a single project from GNOME gitlab instance
-  (<https://gitlab.gnome.org/explore/groups>) to use packit.
+&#42; Code in Packit service repository which makes packit understand
+the gitlab events &#42; Packit is able to talk to a GitLab server API
+and: &#42;&#42; Comment on merge request &#42;&#42; Report check results
+(builds, tests) &#42; On-board at least a single project from GNOME
+gitlab instance (<https://gitlab.gnome.org/explore/groups>) to use
+packit.
 
 ### Dashboard for Packit {#_dashboard_for_packit}
 
 - Difficulty : Intermediate
 
 - Technology : Python, Flask, Container basics, REST API, webdesign (CSS
-  & javascript)
+  &amp; javascript)
 
 - Mentor : Hunor Csomortáni
 
-- IRC & Email : Hunor Csomortáni \[IRC: csomh, csomh₊<gsoc@redhat.com>\]
+- IRC &amp; Email : Hunor Csomortáni \[IRC: csomh,
+  csomh₊<gsoc@redhat.com>\]
 
 #### Description {#_description_8}
 
@@ -3390,7 +2469,8 @@ As a GSoC intern, you will be responsible for the following :
 
 - Mentor : Till Maas, Thomas Haller
 
-- IRC & Email : tyll, till q redhat.com / thaller, thaller q redhat.com
+- IRC &amp; Email : tyll, till q redhat.com / thaller, thaller q
+  redhat.com
 
 #### Description {#_description_9}
 
@@ -3399,60 +2479,34 @@ for network-scripts and NetworkManager. In this project, the role would
 be improved. There are several areas that could be selected by an intern
 depending on their interest:
 
-- Add support for more interfaces/options, this includes the following
-  tasks
+&#42; Add support for more interfaces/options, this includes the
+following tasks . Write missing tests/documentation for open PRs to
+finalize them . Add support for wake-on-lan options:
+<https://github.com/linux-system-roles/network/issues/150> . Add proper
+support for team and make the configuration more uniform with bonding
 
-  1.  Write missing tests/documentation for open PRs to finalize them
+&#42; Improve the testing framework . Write an integration test to
+become familiar with the role, for example for
+<https://github.com/linux-system-roles/network/issues/124> . Make the
+tests more uniform (they developed over the time. Adjust old tests to
+use the conventions of newer tests) . Add support to test the ansible
+module directly via pytest instead of only via ansible-playbook .
+Simplify test playbooks by writing custom Ansible modules that simplify
+test setup/preparation and assertions
 
-  2.  Add support for wake-on-lan options:
-      <https://github.com/linux-system-roles/network/issues/150>
+&#42; Network state management (most difficult) . Support to update only
+partial settings . Return the current network configuration . Initially
+only the configuration files . Maybe also the runtime state
 
-  3.  Add proper support for team and make the configuration more
-      uniform with bonding
+&#42; What are we looking for: . Interest in writing high-quality code
+in Python for Ansible . Personal accountability with regular, clear and
+open communication . Ability to independently transfer feedback into
+code . Support for more features or a better test framework . Effective
+collaboration via GitHub, IRC and video conferences
 
-- Improve the testing framework
-
-  1.  Write an integration test to become familiar with the role, for
-      example for
-      <https://github.com/linux-system-roles/network/issues/124>
-
-  2.  Make the tests more uniform (they developed over the time. Adjust
-      old tests to use the conventions of newer tests)
-
-  3.  Add support to test the ansible module directly via pytest instead
-      of only via ansible-playbook
-
-  4.  Simplify test playbooks by writing custom Ansible modules that
-      simplify test setup/preparation and assertions
-
-- Network state management (most difficult)
-
-  1.  Support to update only partial settings
-
-  2.  Return the current network configuration
-
-  3.  Initially only the configuration files
-
-  4.  Maybe also the runtime state
-
-- What are we looking for:
-
-  1.  Interest in writing high-quality code in Python for Ansible
-
-  2.  Personal accountability with regular, clear and open communication
-
-  3.  Ability to independently transfer feedback into code
-
-  4.  Support for more features or a better test framework
-
-  5.  Effective collaboration via GitHub, IRC and video conferences
-
-- Notes & references:
-
-  1.  <https://github.com/linux-system-roles/network/>
-
-  2.  Current tests:
-      <https://github.com/linux-system-roles/network/tree/master/tests>
+&#42; Notes &amp; references: .
+<https://github.com/linux-system-roles/network/> . Current tests:
+<https://github.com/linux-system-roles/network/tree/master/tests>
 
 ### Add varlink support to Nmstate {#_add_varlink_support_to_nmstate}
 
@@ -3463,7 +2517,7 @@ depending on their interest:
 - Mentor : Fernando Fernandez Mancera, Till Maas (Helping with
   mentoring) and Gris Ge (Helping with mentoring).
 
-- IRC & Email :ffmancera, <ferferna@redhat.com>
+- IRC &amp; Email :ffmancera, <ferferna@redhat.com>
 
 #### Description {#_description_10}
 
@@ -3494,7 +2548,7 @@ As a GSoC intern, you will be responsible for the following :
 - Code documentation (Not very detailed, just general comments on how is
   the code structured)
 
-# Google Summer of Code Application Process {#_google_summer_of_code_application_process_4}
+# Google Summer of Code Application Process {#_google_summer_of_code_application_process_5}
 
 :::: note
 ::: title
@@ -3513,16 +2567,11 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important_5}
 
-- Timelines are set by Google for the entire program. Follow the
-  timeline.
-
-- Applications are due in Google's system by March 31st, 2020 18:00
-  (UTC).
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. Follow the
+timeline. &#42; Applications are due in Google's system by March 31st,
+2020 18:00 (UTC). &#42; Applications Must be filed in the Google system.
+No other material can be read or accepted. &#42; The final application
+is required to be submitted as a PDF.
 
 ## Student Application Process {#_student_application_process_5}
 
@@ -3531,9 +2580,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate_5}
 
@@ -3544,11 +2592,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -3608,60 +2655,46 @@ generate a PDF for your application.
 In addition to the information Google requests, the Fedora Project
 requires you to submit the following information:
 
-- What project are you applying to? Seriously consider choosing a
-  project for proposal from [ideas list](gsoc/2020/ideas.xml). While it
-  is possible to propose your own project, it is often more successful
-  for you to select one that is already proposed by a mentor.
+&#42; What project are you applying to? Seriously consider choosing a
+project for proposal from [ideas list](gsoc/2020/ideas.xml). While it is
+possible to propose your own project, it is often more successful for
+you to select one that is already proposed by a mentor.
 
-- Contact Information
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email.
 
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
+&#42; About You - Consider these questions &#42;&#42; Do you have any
+past involvement with the Fedora Project or another open-source project
+as a contributor? What kind of contributions have you made (code and
+non-code)? Please share any public contributions you have made (urls,
+etc.) &#42;&#42; What are you studying? Why? &#42;&#42; What motivates
+you to do your best? How do you stay focused? Briefly describe how you
+organize your work.
 
-- About You - Consider these questions
+&#42; Why Us? - Consider these questions &#42;&#42; Why do you want to
+work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with?
 
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
+&#42; Why This Project? - Consider these questions &#42;&#42; Which
+specific project interests you? If you are proposing your own project,
+do it here. If you are proposing the project, explain why it benefits
+the community. &#42;&#42; Have you contacted the mentor(s) listed for
+the project? &#42;&#42; What relevant experience do you have for this
+project? &#42;&#42; What do you want to gain from this project?
+&#42;&#42; Describe this project in your own words. What does it mean to
+you? What do you think the final deliverable is?
 
-  - What are you studying? Why?
+&#42; Why should we choose you over other applicants?
 
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period.
 
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; What are you specific plans from May to September (eg: Exams in
+university, internships, vacations..etc). We need to know if there are
+periods of time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 :::: note
 ::: title
@@ -3683,7 +2716,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2019
+contributors are often very busy people.
+
+&#42;&#42; 2019
 
 # Google Summer of Code 2019
 
@@ -3716,20 +2751,20 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on a mentor-submitted idea, read the
-  [ideas page](gsoc/2019/ideas.xml) and about the project and the
-  related technology. There is no need to contact the mentor unless you
-  have a specific question about the project. Don't send an \"I'm
-  interested\" email.
+&#42; If you're interested in working on a mentor-submitted idea, read
+the [ideas page](gsoc/2019/ideas.xml) and about the project and the
+related technology. There is no need to contact the mentor unless you
+have a specific question about the project. Don't send an \'I'm
+interested\' email.
 
-- If you're interested in proposing your own project start looking
-  around the Fedora Project for a mentor and send your idea to the
-  mailing list or post it on the wiki. A list of potential mentors is
-  also on the [ideas page](gsoc/2019/ideas.xml).
+&#42; If you're interested in proposing your own project start looking
+around the Fedora Project for a mentor and send your idea to the mailing
+list or post it on the wiki. A list of potential mentors is also on the
+[ideas page](gsoc/2019/ideas.xml).
 
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -3741,21 +2776,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -3784,16 +2811,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities {#student-responsibilities}
 
@@ -3802,18 +2825,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application {#student-application}
 
@@ -3851,7 +2869,7 @@ things:
     finding a student with enough skills to respond to a use case need.
     Also, students learn more when they help design and guide the
     project. In other words, provide guidance and direction but let the
-    student do some of the \"driving.\"
+    student do some of the \'driving.\'
 
 3.  Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -3864,28 +2882,28 @@ things:
 If you're interested in working with a student on a specific project you
 should post your idea to the [Mentored Projects Issue
 Tracker](https://pagure.io/mentored-projects/issues). Your issue should
-be tagged **GSoC** and use the **Google Summer of Code** template. We
-strongly encourage you to find a second person to help with mentoring
-and to solicit feedback on your proposal
+be tagged &#42;GSoC&#42; and use the &#42;Google Summer of Code&#42;
+template. We strongly encourage you to find a second person to help with
+mentoring and to solicit feedback on your proposal
 
 ### Can I be a Mentor Without a Project? {#_can_i_be_a_mentor_without_a_project_5}
 
 Yes! You can either:
 
-- Work with a student who brings an idea to your sub-project. This
-  requires a different level of communication throughout the project,
-  but can be the most rewarding.
+&#42; Work with a student who brings an idea to your sub-project. This
+requires a different level of communication throughout the project, but
+can be the most rewarding.
 
-- Be a general mentor. This is a person who works with all students
-  regardless of their project. To become a general mentor please open an
-  issue in the [Mentored Projects Issue
-  Tracker](https://pagure.io/mentored-projects/issues) offering your
-  help. Please tag the issue with the **GSoC** tag.
+&#42; Be a general mentor. This is a person who works with all students
+regardless of their project. To become a general mentor please open an
+issue in the [Mentored Projects Issue
+Tracker](https://pagure.io/mentored-projects/issues) offering your help.
+Please tag the issue with the &#42;GSoC&#42; tag.
 
 ### How to work with students {#how-to-work-with-students}
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities {#mentor-responsibilities}
 
@@ -3894,43 +2912,33 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC:**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC:&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline {#timeline}
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration {#administration}
@@ -3961,10 +2969,10 @@ of Code with Fedora](gsoc/2019/index.xml), please feel free to browse
 this idea list. There may be additional ideas added during the
 application period.
 
-**Now please go read the [What Can I do
-Today](gsoc/2019/index.xml#what-can-i-do-today) section of the main
+&#42;&#42;Now please go read the [What Can I do
+Today](gsoc/2019/index.adoc&#35;what-can-i-do-today) section of the main
 page. This has the answers to your questions and tells you how to
-apply**
+apply&#42;&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
@@ -3978,16 +2986,14 @@ support for the GSoC program If a specific project mentor is busy, you
 can contact one of the people below for short-term help on your project
 or task. add yourselves and your wiki page).
 
-- [Brian (bex) Exelbierd](https://fedoraproject.org/wiki/User:Bex)
-  (Fedora Community Action and Impact Coordinator, FCAIC, 🎂,
-  containers, general development, general Linux)
-
-- [Sumantro Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom)
-  (General development, general Linux, Fedora community, GSoC alumnus,
-  questions about program, misc. advice)
-
-- [Alberto](https://fedoraproject.org/wiki/User:Bt0dotninja)
-  (Commops/Fedora-Join/Marketing teams)
+&#42; [Brian (bex) Exelbierd](https://fedoraproject.org/wiki/User:Bex)
+(Fedora Community Action and Impact Coordinator, FCAIC, 🎂, containers,
+general development, general Linux) &#42; [Sumantro
+Mukherjee](https://fedoraproject.org/wiki/User:Sumantrom) (General
+development, general Linux, Fedora community, GSoC alumnus, questions
+about program, misc. advice) &#42;
+[Alberto](https://fedoraproject.org/wiki/User:Bt0dotninja)
+(Commops/Fedora-Join/Marketing teams)
 
 ## Idea list {#_idea_list_5}
 
@@ -3998,18 +3004,11 @@ or task. add yourselves and your wiki page).
 Ideas are subject to change as additional mentors are onboarded.
 ::::
 
-- [CentOS CI user front end](#_centos_ci_user_front_end)
-
-- [Improving Fedora Android App](#_improving_fedora_android_app)
-
-- [Fedora Gooey Karma](#_fedora_gooey_karma)
-
-- [Change management tool](#_change_management_tool)
-
-- [Podman Container SECCOMP generation
-  tool](#_podman_container_seccomp_generation_tool)
-
-- [Release-bot](#_release_bot)
+&#42; &lt;&lt;CentOS CI user front end&gt;&gt; &#42; &lt;&lt;Improving
+Fedora Android App&gt;&gt; &#42; &lt;&lt;Fedora Gooey Karma&gt;&gt;
+&#42; &lt;&lt;Change management tool&gt;&gt; &#42; &lt;&lt;Podman
+Container SECCOMP generation tool&gt;&gt; &#42;
+&lt;&lt;Release-bot&gt;&gt;
 
 ### CentOS CI user front end {#_centos_ci_user_front_end}
 
@@ -4021,8 +3020,9 @@ Ideas are subject to change as additional mentors are onboarded.
   Stinson](https://fedoraproject.org/wiki/User:Bstinson), [Vipul
   Siddharth](https://fedoraproject.org/wiki/User:Siddharthvipul1)
 
-- IRC & Email : Brian Stinson \[IRC: bstinson, <bstinson@redhat.com>\],
-  Vipul Siddharth \[IRC: siddharthvipul, <vsiddhar@redhat.com>\]
+- IRC &amp; Email : Brian Stinson \[IRC: bstinson,
+  <bstinson@redhat.com>\], Vipul Siddharth \[IRC: siddharthvipul,
+  <vsiddhar@redhat.com>\]
 
 #### Description {#_description_11}
 
@@ -4123,7 +3123,7 @@ As a GSoC intern, you will be responsible for the following :
 
 - Mentor : [Ben Cotton](https://fedoraproject.org/wiki/User:Bcotton)
 
-- IRC & Email : bcotton \| <bcotton@fedoraproject.org>
+- IRC &amp; Email : bcotton \| <bcotton@fedoraproject.org>
 
 #### Description {#_description_14}
 
@@ -4223,7 +3223,7 @@ how workflow of release-bot can be improved:
 
 - Improve end to end integration test suite
 
-- Make release-bot \"smarter\" in various ways (e.g communication with
+- Make release-bot \'smarter\' in various ways (e.g communication with
   maintainer)
 
 - We are open to your new ideas
@@ -4235,9 +3235,10 @@ Repo : <https://github.com/user-cont/release-bot>
 If you are interested to start working on this project, please see our
 [issue tracker](https://github.com/user-cont/release-bot/issues). Choose
 an issue to work on and open PR. Issues that are newcomers friendly are
-labeled with `good first issue label`. Good code contributions during
-application period highly increasing your chance to be selected. =
-Google Summer of Code Application Process
+labeled with &#96;good first issue label&#96;. Good code contributions
+during application period highly increasing your chance to be selected.
+
+# Google Summer of Code Application Process {#_google_summer_of_code_application_process_6}
 
 :::: note
 ::: title
@@ -4257,16 +3258,11 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important_6}
 
-- Timelines are set by Google for the entire program. Follow the
-  timeline.
-
-- Applications are due in Google's system by April 9th, 2019 18:00
-  (CEST).
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. Follow the
+timeline. &#42; Applications are due in Google's system by April 9th,
+2019 18:00 (CEST). &#42; Applications Must be filed in the Google
+system. No other material can be read or accepted. &#42; The final
+application is required to be submitted as a PDF.
 
 ## Student Application Process {#_student_application_process_6}
 
@@ -4275,9 +3271,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate_6}
 
@@ -4288,11 +3283,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -4352,60 +3346,46 @@ generate a PDF for your application.
 In addition to the information Google requests, the Fedora Project
 requires you to submit the following information:
 
-- What project are you applying to? Seriously consider choosing a
-  project for proposal from [ideas list](gsoc/2019/ideas.xml). While it
-  is possible to propose your own project, it is often more successful
-  for you to select one that is already proposed by a mentor.
+&#42; What project are you applying to? Seriously consider choosing a
+project for proposal from [ideas list](gsoc/2019/ideas.xml). While it is
+possible to propose your own project, it is often more successful for
+you to select one that is already proposed by a mentor.
 
-- Contact Information
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email.
 
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
+&#42; About You - Consider these questions &#42;&#42; Do you have any
+past involvement with the Fedora Project or another open-source project
+as a contributor? What kind of contributions have you made (code and
+non-code)? Please share any public contributions you have made (urls,
+etc.) &#42;&#42; What are you studying? Why? &#42;&#42; What motivates
+you to do your best? How do you stay focused? Briefly describe how you
+organize your work.
 
-- About You - Consider these questions
+&#42; Why Us? - Consider these questions &#42;&#42; Why do you want to
+work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with?
 
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
+&#42; Why This Project? - Consider these questions &#42;&#42; Which
+specific project interests you? If you are proposing your own project,
+do it here. If you are proposing the project, explain why it benefits
+the community. &#42;&#42; Have you contacted the mentor(s) listed for
+the project? &#42;&#42; What relevant experience do you have for this
+project? &#42;&#42; What do you want to gain from this project?
+&#42;&#42; Describe this project in your own words. What does it mean to
+you? What do you think the final deliverable is?
 
-  - What are you studying? Why?
+&#42; Why should we choose you over other applicants?
 
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period.
 
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; What are you specific plans from May to September (eg: Exams in
+university, internships, vacations..etc). We need to know if there are
+periods of time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 :::: note
 ::: title
@@ -4427,7 +3407,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2018
+contributors are often very busy people.
+
+&#42;&#42; 2018
 
 # Google Summer of Code 2018
 
@@ -4449,20 +3431,18 @@ Do you want to contribute to one of the world's leading innovative Linux
 distributions? GSoC could be your chance. Please refer to the
 information below.
 
-- If you're interested in working on an existing project, read up on the
-  project and the related technology. There is no need to contact the
-  mentor unless you have a specific question about the project. Don't
-  send an \"I'm interested\" email.
+&#42; If you're interested in working on an existing project, read up on
+the project and the related technology. There is no need to contact the
+mentor unless you have a specific question about the project. Don't send
+an \'I'm interested\' email.
 
-- If you're interested in proposing your own project start looking
-  around the Fedora Project for a mentor and send your idea to the
-  mailing list or post it on the wiki.
+&#42; If you're interested in proposing your own project start looking
+around the Fedora Project for a mentor and send your idea to the mailing
+list or post it on the wiki.
 
-<!-- -->
-
-- You may also wish to start working on the Fedora specific parts of the
-  application, see below for more information. Carefully review the
-  student responsibilities section.
+&#42; You may also wish to start working on the Fedora specific parts of
+the application, see below for more information. Carefully review the
+student responsibilities section.
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -4474,21 +3454,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -4517,16 +3489,12 @@ and the community.
 If you are new to the Fedora Project, the following material will help
 you to get started.
 
-- [Fedora Project
-  Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Fedora Technical and Community
-  Documentation](https://docs.fedoraproject.org)
-
-- [How to use IRC](https://fedoraproject.org/wiki/How_to_use_IRC)
-
-- [Information about Development in
-  Fedora](https://fedoraproject.org/wiki/Development)
+&#42; [Fedora Project
+Overview](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Fedora Technical and Community
+Documentation](https://docs.fedoraproject.org) &#42; [How to use
+IRC](https://fedoraproject.org/wiki/How_to_use_IRC) &#42; [Information
+about Development in Fedora](https://fedoraproject.org/wiki/Development)
 
 ### Student Responsibilities {#student-responsibilities}
 
@@ -4535,18 +3503,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending the brief student calls, as announced
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending the brief
+student calls, as announced &#42; Being accountable for your success and
+your actions
 
 ### Student Application {#student-application}
 
@@ -4584,7 +3547,7 @@ things:
     finding a student with enough skills to respond to a use case need.
     Also, students learn more when they help design and guide the
     project. In other words, provide guidance and direction but let the
-    student do some of the \"driving.\"
+    student do some of the \'driving.\'
 
 3.  Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -4597,28 +3560,28 @@ things:
 If you're interested in working with a student on a specific project you
 should post your idea to the [Mentored Projects Issue
 Tracker](https://pagure.io/mentored-projects/issues). Your issue should
-be tagged **GSoC** and use the **Google Summer of Code** template. We
-strongly encourage you to find a second person to help with mentoring
-and to solicit feedback on your proposal
+be tagged &#42;GSoC&#42; and use the &#42;Google Summer of Code&#42;
+template. We strongly encourage you to find a second person to help with
+mentoring and to solicit feedback on your proposal
 
 ### Can I be a Mentor Without a Project? {#_can_i_be_a_mentor_without_a_project_6}
 
 Yes! You can either:
 
-- Work with a student who brings an idea to your sub-project. This
-  requires a different level of communication throughout the project,
-  but can be the most rewarding.
+&#42; Work with a student who brings an idea to your sub-project. This
+requires a different level of communication throughout the project, but
+can be the most rewarding.
 
-- Be a general mentor. This is a person who works with all students
-  regardless of their project. To become a general mentor please open an
-  issue in the [Mentored Projects Issue
-  Tracker](https://pagure.io/mentored-projects/issues) offering your
-  help. Please tag the issue with the **GSoC** tag.
+&#42; Be a general mentor. This is a person who works with all students
+regardless of their project. To become a general mentor please open an
+issue in the [Mentored Projects Issue
+Tracker](https://pagure.io/mentored-projects/issues) offering your help.
+Please tag the issue with the &#42;GSoC&#42; tag.
 
 ### How to work with students {#how-to-work-with-students}
 
-- Read about good mentoring in the [Manual on
-  Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
+&#42; Read about good mentoring in the [Manual on
+Mentoring](http://write.flossmanuals.net/gsoc-mentoring/what-makes-a-good-mentor)
 
 #### Mentor responsibilities {#mentor-responsibilities}
 
@@ -4627,43 +3590,33 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attending a brief mentors call, as scheduled.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attending a brief mentors call, as scheduled. &#42; Be the final,
+accountable person for deciding if the student is successful or not.
+This is responsibility akin to being a professor or boss.
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related):**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical):**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC:**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related):&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical):&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC:&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline {#timeline}
 
 Always refer to the [Official Google Summer of Code
-Timeline](https://summerofcode.withgoogle.com/how-it-works/#timeline)
+Timeline](https://summerofcode.withgoogle.com/how-it-works/&#35;timeline)
 for details.
 
 ### Administration {#administration}
@@ -4676,7 +3629,9 @@ this year's GSoC with Fedora, please contact the administrators directly
     (Primary)
 
 2.  [Martin Bříza](https://fedoraproject.org/wiki/User:Mbriza)
-    (Secondary) = Google Summer of Code 2018 Mentors and Ideas
+    (Secondary)
+
+# Google Summer of Code 2018 Mentors and Ideas {#_google_summer_of_code_2018_mentors_and_ideas}
 
 :::: note
 ::: title
@@ -4691,9 +3646,10 @@ If you are a student looking forward to participating in [Google Summer
 of Code with Fedora](index.html), please feel free to browse this idea
 list. There may be additional ideas added during the application period.
 
-**Now please go read the [What Can I do
-Today](index.html#what-can-i-do-today) section of the main page. This
-has the answers to your questions and tells you how to apply**
+&#42;&#42;Now please go read the [What Can I do
+Today](index.html&#35;what-can-i-do-today) section of the main page.
+This has the answers to your questions and tells you how to
+apply&#42;&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
@@ -4707,19 +3663,16 @@ support for the GSoC program If a specific project mentor is busy, you
 can contact one of the people below for short-term help on your project
 or task. add yourselves and your wiki page).
 
-- [Brian (bex) Exelbierd](https://fedoraproject.org/wiki/User:Bex)
-  (Fedora Community Action and Impact Coordinator, FCAIC, 🎂,
-  containers, general development, general Linux)
-
-- [Justin W. Flory](https://fedoraproject.org/wiki/User:Jflory7)
-  (General development, general Linux, Fedora community, GSoC alumnus,
-  questions about program, misc. advice)
-
-- [Sachin S. Kamath](https://fedoraproject.org/wiki/User:Skamath)
-  (Python Dev, General Linux, Fedora community, Metrics, GSoC alumnus,
-  Help with program)
-
-- [Martin Bříza](https://fedoraproject.org/wiki/User:Mbriza)
+&#42; [Brian (bex) Exelbierd](https://fedoraproject.org/wiki/User:Bex)
+(Fedora Community Action and Impact Coordinator, FCAIC, 🎂, containers,
+general development, general Linux) &#42; [Justin W.
+Flory](https://fedoraproject.org/wiki/User:Jflory7) (General
+development, general Linux, Fedora community, GSoC alumnus, questions
+about program, misc. advice) &#42; [Sachin S.
+Kamath](https://fedoraproject.org/wiki/User:Skamath) (Python Dev,
+General Linux, Fedora community, Metrics, GSoC alumnus, Help with
+program) &#42; [Martin
+Bříza](https://fedoraproject.org/wiki/User:Mbriza)
 
 ## Idea list {#_idea_list_6}
 
@@ -4730,47 +3683,23 @@ or task. add yourselves and your wiki page).
 Ideas are subject to change as additional mentors are onboarded.
 ::::
 
-- [Improve Fedora Android App - UI/UX Research and
-  Design](#_improve_fedora_android_app_uiux_research_and_design)
-
-- [Improve Fedora Android App -
-  Backend](#_improve_fedora_android_app_backend)
-
-- [Metrics : fedmsg plugin for
-  perceval](#_metrics_fedmsg_plugin_for_perceval)
-
-- [Pagure: A git based source
-  repository](#_pagure_a_git_based_source_repository)
-
-- [ASP.NET Core web application for /r/Fedora subreddit and
-  Discord.](#_asp_net_core_web_application_for_rfedora_subreddit_and_discord)
-
-- [Fedora Packets: Fedora Happiness
-  Packets](#_fedora_packets_fedora_happiness_packets)
-
-- [Atomic IoT (likely useful in numerous other Atomic ideas) host
-  upgrade
-  daemon](#_atomic_iot_likely_useful_in_numerous_other_atomic_ideas_host_upgrade_daemon)
-
-- [Fedora Dockerfile linter leveraging Container Best
-  Practices](#_fedora_dockerfile_linter_leveraging_container_best_practices)
-
-- [Advanced test cases for images running in OpenShift using
-  conu](#_advanced_test_cases_for_images_running_in_openshift_using_conu)
-
-- [Complete support for OpenShift and Kubernetes as a backend in
-  conu](#_complete_support_for_openshift_and_kubernetes_as_a_backend_in_conu)
-
-- [Open Ideas From Previous Years](#_open_ideas_from_previous_years)
-
-- [Continuous Integration for Fedora Media Writer +
-  Tests](#_continuous_integration_for_fedora_media_writer_tests)
-
-- [ARM uBoot Support in Fedora Media
-  Writer](#_arm_uboot_support_in_fedora_media_writer)
-
-- Improve GPIO support in Fedora in general and particularly on the
-  Raspberry Pi - This project is no longer available
+&#42; &lt;&lt;Improve Fedora Android App - UI/UX Research and
+Design&gt;&gt; &#42; &lt;&lt;Improve Fedora Android App -
+Backend&gt;&gt; &#42; &lt;&lt;Metrics : fedmsg plugin for
+perceval&gt;&gt; &#42; &lt;&lt;Pagure: A git based source
+repository&gt;&gt; &#42; &lt;&lt;ASP.NET Core web application for
+/r/Fedora subreddit and Discord.&gt;&gt; &#42; &lt;&lt;Fedora Packets:
+Fedora Happiness Packets&gt;&gt; &#42; &lt;&lt;Atomic IoT (likely useful
+in numerous other Atomic ideas) host upgrade daemon&gt;&gt; &#42;
+&lt;&lt;Fedora Dockerfile linter leveraging Container Best
+Practices&gt;&gt; &#42; &lt;&lt;Advanced test cases for images running
+in OpenShift using conu&gt;&gt; &#42; &lt;&lt;Complete support for
+OpenShift and Kubernetes as a backend in conu&gt;&gt; &#42; &lt;&lt;Open
+Ideas From Previous Years&gt;&gt; &#42; &lt;&lt;Continuous Integration
+for Fedora Media Writer + Tests&gt;&gt; &#42; &lt;&lt;ARM uBoot Support
+in Fedora Media Writer&gt;&gt; &#42; Improve GPIO support in Fedora in
+general and particularly on the Raspberry Pi - This project is no longer
+available
 
 ### Improve Fedora Android App - UI/UX Research and Design {#_improve_fedora_android_app_uiux_research_and_design}
 
@@ -4904,9 +3833,10 @@ and other data sources
 ::: title
 :::
 
-Applicants interested in Pagure **must** contribute by solving [easy fix
-issues](https://pagure.io/pagure/issues?status=Open&tags=easyfix) before
-the end of the application period.
+Applicants interested in Pagure &#42;must&#42; contribute by solving
+[easy fix
+issues](https://pagure.io/pagure/issues?status=Open&amp;tags=easyfix)
+before the end of the application period.
 ::::
 
 [Pagure](https://pagure.io/) is a git-centered forge, python based using
@@ -4929,10 +3859,10 @@ areas of interest.
 ### ASP.NET Core web application for /r/Fedora subreddit and Discord. {#_asp_net_core_web_application_for_rfedora_subreddit_and_discord}
 
 - Difficulty: Intermediate (some Object Oriented language experience
-  required, not necessarily C#)
+  required, not necessarily C&#35;)
 
-- Technology: [C# - .NET Core on Fedora](http://fedoraloves.net) &
-  [ipsilon](https://ipsilon-project.org/)
+- Technology: [C&#35; - .NET Core on Fedora](http://fedoraloves.net)
+  &amp; [ipsilon](https://ipsilon-project.org/)
 
 - Mentors: [Radka Janeková
   (rhea)](https://fedoraproject.org/wiki/User:Rhea)
@@ -4942,12 +3872,12 @@ areas of interest.
 ASP.NET Core web application for our /r/Fedora subreddit to let the user
 choose a flair, based on their FAS (Fedora Account System) Group
 memberships, and to be able to verify Discord account with FAS as
-contributor with CLA+1. These will be written in C# and deployed on a
-Fedora production server as systemd service.
+contributor with CLA+1. These will be written in C&#35; and deployed on
+a Fedora production server as systemd service.
 
 You will learn: - What is it .NET Core and how to use it in Linux - How
-to write C# code in Linux and what IDEs are available to you. - Basic
-systemd unitfile structure and working with services.
+to write C&#35; code in Linux and what IDEs are available to you. -
+Basic systemd unitfile structure and working with services.
 
 #### Deliverables {#_deliverables_17}
 
@@ -4960,26 +3890,17 @@ systemd unitfile structure and working with services.
 
 ### Fedora Packets: Fedora Happiness Packets {#_fedora_packets_fedora_happiness_packets}
 
-- Difficulty: Intermediate - Expert
-
-- Technology: Python, HTML/CSS/JS, knowledge of
-  [fedmsg](http://www.fedmsg.com/en/stable/) optional: Cloud / Ansible,
-  UI UX skills graphic design
-
-- Mentors:
-
-  - [Jona Azizaj
-    (jonatoni)](https://fedoraproject.org/wiki/User:Jonatoni)
-
-  - [Bee Padalkar
-    (bee2502)](https://fedoraproject.org/wiki/User:Bee2502) (tentative)
-
-  - [Eduard Lucena (x3mboy)](https://fedoraproject.org/wiki/User:X3mboy)
-
-  - [Alberto Rodríguez
-    (bt0dotninja)](https://fedoraproject.org/wiki/User:Bt0dotninja)
-
-  - Project is open for mentors (commitment 6-8 hrs/week)
+&#42; Difficulty: Intermediate - Expert &#42; Technology: Python,
+HTML/CSS/JS, knowledge of [fedmsg](http://www.fedmsg.com/en/stable/)
+optional: Cloud / Ansible, UI UX skills graphic design &#42; Mentors:
+&#42;&#42; [Jona Azizaj
+(jonatoni)](https://fedoraproject.org/wiki/User:Jonatoni) &#42;&#42;
+[Bee Padalkar (bee2502)](https://fedoraproject.org/wiki/User:Bee2502)
+(tentative) &#42;&#42; [Eduard Lucena
+(x3mboy)](https://fedoraproject.org/wiki/User:X3mboy) &#42;&#42;
+[Alberto Rodríguez
+(bt0dotninja)](https://fedoraproject.org/wiki/User:Bt0dotninja)
+&#42;&#42; Project is open for mentors (commitment 6-8 hrs/week)
 
 #### Summary {#_summary}
 
@@ -5009,28 +3930,17 @@ deliverables (optional).
 
 ##### Primary deliverables {#_primary_deliverables}
 
-- Add back-end support for [Ipsilon](https://ipsilon-project.org/)
-  authentication
-
-  - Push the application upstream
-
-- Integrate [fedmsg
-  publishing](http://www.fedmsg.com/en/stable/publishing/)
-
-- Create Fedora Badge rule file to automatically award badge
+&#42; Add back-end support for [Ipsilon](https://ipsilon-project.org/)
+authentication &#42;&#42; Push the application upstream &#42; Integrate
+[fedmsg publishing](http://www.fedmsg.com/en/stable/publishing/) &#42;
+Create Fedora Badge rule file to automatically award badge
 
 ##### Secondary deliverables {#_secondary_deliverables}
 
-- Add support for video messages
-
-- Add support for emojis
-
-- Explore major social media APIs (for example, Twitter, Facebook,
-  Reddit) to allow sharing on social networks
-
-  - Twitter
-
-  - Facebook
+&#42; Add support for video messages &#42; Add support for emojis &#42;
+Explore major social media APIs (for example, Twitter, Facebook, Reddit)
+to allow sharing on social networks &#42;&#42; Twitter &#42;&#42;
+Facebook
 
 ### Atomic IoT (likely useful in numerous other Atomic ideas) host upgrade daemon {#_atomic_iot_likely_useful_in_numerous_other_atomic_ideas_host_upgrade_daemon}
 
@@ -5048,32 +3958,17 @@ newer fixed version.
 A daemon to manage this state is required. The daemon would need to be
 able to do the following:
 
-- Monitor the status of available downloads
-
-- Apply the Atomic update delta
-
-- Set a \"boot once\" flag to boot the new version via grub
-
-- Set a hardware watchdog
-
-- initiate a reboot of the system
-
-- If boot to normal userspace fails the watchdog triggers and it resets
-  to the old version
-
-- If boot succeeds to the point the daemon starts up it then proceeds to
-  phase two of the upgrade process
-
-- Unsets watchdog so the OS won't reset
-
-- Checks it can see all required network interfaces
-
-- Checks it can resolve addresses and contact the update server
-
-- Check it's connected to all other critical services (eg MQTT or a
-  HTTPS API
-
-- Checks it can see and all sensors and services are running correctly
+&#42; Monitor the status of available downloads &#42; Apply the Atomic
+update delta &#42; Set a \'boot once\' flag to boot the new version via
+grub &#42; Set a hardware watchdog &#42; initiate a reboot of the system
+&#42; If boot to normal userspace fails the watchdog triggers and it
+resets to the old version &#42; If boot succeeds to the point the daemon
+starts up it then proceeds to phase two of the upgrade process &#42;
+Unsets watchdog so the OS won't reset &#42; Checks it can see all
+required network interfaces &#42; Checks it can resolve addresses and
+contact the update server &#42; Check it's connected to all other
+critical services (eg MQTT or a HTTPS API &#42; Checks it can see and
+all sensors and services are running correctly
 
 There needs to be a means of specifying what components are critical to
 the successful operation of the device. Some components will be the same
@@ -5095,7 +3990,7 @@ seen as expected.
 
 - Mentor(s): Tomas Tomecek, Eliska Slobodova
 
-- Contacts (IRC & email): ttomecek (ttomecek \@redhat.com), eslobodo
+- Contacts (IRC &amp; email): ttomecek (ttomecek \@redhat.com), eslobodo
   (eslobodo \@redhat.com)
 
 #### Description {#_description_21}
@@ -5124,7 +4019,7 @@ changes remotely.
 
 - Mentor(s): Tomas Tomecek, Dominika Hodovska
 
-- Contacts (IRC & email): ttomecek (ttomecek \@redhat.com), dhodovsk
+- Contacts (IRC &amp; email): ttomecek (ttomecek \@redhat.com), dhodovsk
   (dhodovsk \@redhat.com)
 
 #### Description {#_description_22}
@@ -5151,7 +4046,7 @@ currently lacks support for OpenShift and Kubernetes.
 
 - Mentor(s): Tomas Tomecek
 
-- Contacts (IRC & email): ttomecek (ttomecek \@redhat.com)
+- Contacts (IRC &amp; email): ttomecek (ttomecek \@redhat.com)
 
 #### Description {#_description_23}
 
@@ -5179,7 +4074,7 @@ orchestration systems --- Kubernetes and OpenShift.
 
 - Mentor(s): Martin Bříza
 
-- Contacts (IRC & email): mbriza@freenode & <m@rtinbriza.cz>
+- Contacts (IRC &amp; email): mbriza@freenode &amp; <m@rtinbriza.cz>
 
 #### Description {#_description_24}
 
@@ -5217,7 +4112,7 @@ tests covering at least 5 closed bugs.
 
 - Mentor(s): Martin Bříza
 
-- Contacts (IRC & email): mbriza@freenode & <m@rtinbriza.cz>
+- Contacts (IRC &amp; email): mbriza@freenode &amp; <m@rtinbriza.cz>
 
 #### Description {#_description_25}
 
@@ -5258,28 +4153,30 @@ they're still interested in mentoring someone this year.
 
 *Note*: Do not submit a proposal for an idea from a previous year
 without contacting the mentor to ensure they will be available to mentor
-you. **Without a mentor, proposals will be rejected.**
+you. &#42;Without a mentor, proposals will be rejected.&#42;
 
-- [2017](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2017)
+&#42;
+[2017](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2017)
+&#42;
+[2016](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2016)
+&#42;
+[2015](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2015)
+&#42;
+[2014](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2014)
+&#42;
+[2013](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2013)
+&#42;
+[2012](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2012)
+&#42;
+[2011](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2011)
+&#42;
+[2010](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2010)
+&#42;
+[2009](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2009)
+&#42;
+[2008](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2008)
 
-- [2016](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2016)
-
-- [2015](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2015)
-
-- [2014](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2014)
-
-- [2013](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2013)
-
-- [2012](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2012)
-
-- [2011](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2011)
-
-- [2010](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2010)
-
-- [2009](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2009)
-
-- [2008](https://fedoraproject.org/wiki/Summer_coding_ideas_for_2008) =
-  Google Summer of Code Application Process
+# Google Summer of Code Application Process {#_google_summer_of_code_application_process_7}
 
 Interested in applying for Google Summer of Code with Fedora? Here is
 how you do that!
@@ -5291,16 +4188,11 @@ by the deadline. Late applications cannot be accepted.
 
 ## Important {#_important_7}
 
-- Timelines are set by Google for the entire program. Follow the
-  timeline.
-
-- Applications are due in Google's system by March 27, 2018 18:00
-  (CEST).
-
-- Applications Must be filed in the Google system. No other material can
-  be read or accepted.
-
-- The final application is required to be submitted as a PDF.
+&#42; Timelines are set by Google for the entire program. Follow the
+timeline. &#42; Applications are due in Google's system by March 27,
+2018 18:00 (CEST). &#42; Applications Must be filed in the Google
+system. No other material can be read or accepted. &#42; The final
+application is required to be submitted as a PDF.
 
 ## Student Application Process {#_student_application_process_7}
 
@@ -5309,9 +4201,8 @@ by the deadline. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [Information about Fedora's Participation in GSoC](index.html)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[Information about Fedora's Participation in GSoC](index.html)
 
 ### Communicate {#_communicate_7}
 
@@ -5322,11 +4213,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -5378,60 +4268,46 @@ generate a PDF for your application.
 In addition to the information Google requests, the Fedora Project
 requires you to submit the following information:
 
-- What project are you applying to? Seriously consider choosing a
-  project for proposal from [ideas list](ideas.xml). While it is
-  possible to propose your own project, it is often more successful for
-  you to select one that is already proposed by a mentor.
+&#42; What project are you applying to? Seriously consider choosing a
+project for proposal from [ideas list](ideas.xml). While it is possible
+to propose your own project, it is often more successful for you to
+select one that is already proposed by a mentor.
 
-- Contact Information
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email.
 
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
+&#42; About You - Consider these questions &#42;&#42; Do you have any
+past involvement with the Fedora Project or another open-source project
+as a contributor? What kind of contributions have you made (code and
+non-code)? Please share any public contributions you have made (urls,
+etc.) &#42;&#42; What are you studying? Why? &#42;&#42; What motivates
+you to do your best? How do you stay focused? Briefly describe how you
+organize your work.
 
-- About You - Consider these questions
+&#42; Why Us? - Consider these questions &#42;&#42; Why do you want to
+work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with?
 
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
+&#42; Why This Project? - Consider these questions &#42;&#42; Which
+specific project interests you? If you are proposing your own project,
+do it here. If you are proposing the project, explain why it benefits
+the community. &#42;&#42; Have you contacted the mentor(s) listed for
+the project? &#42;&#42; What relevant experience do you have for this
+project? &#42;&#42; What do you want to gain from this project?
+&#42;&#42; Describe this project in your own words. What does it mean to
+you? What do you think the final deliverable is?
 
-  - What are you studying? Why?
+&#42; Why should we choose you over other applicants?
 
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period.
 
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; What are you specific plans from May to September (eg: Exams in
+university, internships, vacations..etc). We need to know if there are
+periods of time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 :::: note
 ::: title
@@ -5453,7 +4329,9 @@ all information must be readable.
 We cannot overstress the importance of communication. Keep talking, and
 listening, to the discussion group, to the sub-projects relevant to your
 proposal and to potential mentors. Be patient, as mentors and other
-contributors are often very busy people. \*\* 2017
+contributors are often very busy people.
+
+&#42;&#42; 2017
 
 # Google Summer of Code 2017 {#google-summer-of-code-2018}
 
@@ -5468,21 +4346,18 @@ IRC channel, .
 Fedora has been accepted as a mentoring organization. Student
 applications open on 20 March.
 
-- Students
-
-  - If you're interested in working on an existing project, read up on
-    the project and the related technology. There is no need to contact
-    the mentor unless you have a specific question about the project.
-    Don't send \"I'm interested\" email.
-
-  - If you're interested in proposing your own project start looking
-    around the Fedora Project for a mentor and send your idea to the
-    mailing list or post it on the wiki.
+&#42; Students &#42;&#42; If you're interested in working on an existing
+project, read up on the project and the related technology. There is no
+need to contact the mentor unless you have a specific question about the
+project. Don't send \'I'm interested\' email. &#42;&#42; If you're
+interested in proposing your own project start looking around the Fedora
+Project for a mentor and send your idea to the mailing list or post it
+on the wiki.
 
 Students may also wish to start working on the Fedora specific parts of
 the application (see the application section)
 
-- Mentors
+&#42; Mentors
 
 If you're interested in working with a student you should post your idea
 to the idea page.
@@ -5493,7 +4368,7 @@ Do you want to contribute to one of the world's leading and innovative
 Linux distributions? GSoC could be your chance. Please refer to the
 material below and start contacting mentors.
 
-- [Ideas](ideas.xml)
+&#42; [Ideas](ideas.xml)
 
 ### Why spend your summer working on FOSS? {#why-spend-your-summer-working-on-foss}
 
@@ -5505,21 +4380,13 @@ contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professionals.
-
-- Contribute to something meaningful while learning and earning.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Attract attention that can lead to an internship or job after
-  graduation.
-
-- Create lifetime connections and associations.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professionals. &#42; Contribute to something
+meaningful while learning and earning. &#42; Learn tools and processes
+that are just like what you are going to use if you work in technology
+after graduation. &#42; Make friends and contacts around the globe.
+&#42; Attract attention that can lead to an internship or job after
+graduation. &#42; Create lifetime connections and associations.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -5552,18 +4419,13 @@ important to you, your mentor, and the entire Fedora Community.
 
 Your responsibilities include:
 
-- Communicating early and often with your mentor.
-
-- Blogging every week about what you're learning, how you're doing,
-  challenges and successes. This is key way to keep the entire Fedora
-  Community informed.
-
-- Working with your mentor on realistic achievable milestones that
-  provide for regular deliverables and feedback.
-
-- Attending a brief monthly student call
-
-- Being accountable for your success and your actions
+&#42; Communicating early and often with your mentor. &#42; Blogging
+every week about what you're learning, how you're doing, challenges and
+successes. This is key way to keep the entire Fedora Community informed.
+&#42; Working with your mentor on realistic achievable milestones that
+provide for regular deliverables and feedback. &#42; Attending a brief
+monthly student call &#42; Being accountable for your success and your
+actions
 
 ### Student Application {#student-application}
 
@@ -5591,27 +4453,27 @@ projects.
 
 ### How to work with students {#how-to-work-with-students}
 
-- One way is to provide an idea for students to work on. This idea might
-  be very well planned out, in which case you may need a high-level of
-  contact with the student to get it implemented correctly. Other ideas
-  may be more general and require more planning during onboarding.
+&#42; One way is to provide an idea for students to work on. This idea
+might be very well planned out, in which case you may need a high-level
+of contact with the student to get it implemented correctly. Other ideas
+may be more general and require more planning during onboarding.
 
-- It is harder to find success when you are completely certain of how an
-  idea needs to be implemented; finding a student with the skills and
-  interest to implement a specific solution is a lot harder than finding
-  a student with enough skills to respond to a use case need. Also,
-  students learn more when they help design and guide the project. In
-  other words, provide guidance and direction but let the student do
-  some of the \"driving.\"
+&#42; It is harder to find success when you are completely certain of
+how an idea needs to be implemented; finding a student with the skills
+and interest to implement a specific solution is a lot harder than
+finding a student with enough skills to respond to a use case need.
+Also, students learn more when they help design and guide the project.
+In other words, provide guidance and direction but let the student do
+some of the \'driving.\'
 
-- Where you can have looser ideas, you may be able to find a student who
-  works as a sort-of intern who can implement a solution to a use case
-  you have. In past experiences, students going after a use case are
-  more likely to get somewhere with self-direction and support from you.
+&#42; Where you can have looser ideas, you may be able to find a student
+who works as a sort-of intern who can implement a solution to a use case
+you have. In past experiences, students going after a use case are more
+likely to get somewhere with self-direction and support from you.
 
-- You may also want to work with a student who brings an idea to your
-  sub-project. This requires a different level of communication
-  throughout the project, but can be the most rewarding.
+&#42; You may also want to work with a student who brings an idea to
+your sub-project. This requires a different level of communication
+throughout the project, but can be the most rewarding.
 
 ### Mentor responsibilities {#mentor-responsibilities}
 
@@ -5620,24 +4482,16 @@ success, and the success for the Fedora Project.
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Helping the student plan realistic achievable milestones that provide
-  for regular deliverables and feedback.
-
-- Regular communication with your student. This means you must be
-  regularly available for the entire project. If you take a holiday you
-  need to know early and help your student be ready for your brief
-  absence.
-
-- Attend a brief monthly mentors call.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not. This is responsibility akin to being a professor or
-  boss.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Helping the student plan realistic achievable milestones
+that provide for regular deliverables and feedback. &#42; Regular
+communication with your student. This means you must be regularly
+available for the entire project. If you take a holiday you need to know
+early and help your student be ready for your brief absence. &#42;
+Attend a brief monthly mentors call. &#42; Be the final, accountable
+person for deciding if the student is successful or not. This is
+responsibility akin to being a professor or boss.
 
 ### List of Mentors
 
@@ -5646,97 +4500,79 @@ List](ideas.xml)
 
 ## Communication {#communication}
 
-- **Mailing List (GSoC-related) :**
-  [summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
-
-- **Mailing List (Technical) :**
-  [devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
-
-- **IRC :**
-  [#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-  or
-  [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
-  on Freenode
+&#42; &#42;Mailing List (GSoC-related) :&#42;
+[summer-coding@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
+&#42; &#42;Mailing List (Technical) :&#42;
+[devel@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)
+&#42; &#42;IRC :&#42;
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
+on Freenode
 
 ## Timeline (Abbreviated)
 
-- Reference: [Full
-  Timeline](https://developers.google.com/open-source/gsoc/timeline)
+&#42; Reference: [Full
+Timeline](https://developers.google.com/open-source/gsoc/timeline)
 
-- **10 October, 2016**: Program announced.
-
-- **19 January, 2017: 16:00 UTC** Mentoring organizations can begin
-  submitting applications to Google.
-
-- **09 February: 16:00 UTC** Mentoring organization application
-  deadline.
-
-- **10 - 26 February**: Google program administrators review
-  organization applications.
-
-- **27 February 16:00 UTC** List of accepted mentoring organizations
-  published on the Google Summer of Code site.
+&#42; &#42;10 October, 2016&#42;: Program announced. &#42; &#42;19
+January, 2017: 16:00 UTC&#42; Mentoring organizations can begin
+submitting applications to Google. &#42; &#42;09 February: 16:00
+UTC&#42; Mentoring organization application deadline. &#42; &#42;10 - 26
+February&#42;: Google program administrators review organization
+applications. &#42; &#42;27 February 16:00 UTC&#42; List of accepted
+mentoring organizations published on the Google Summer of Code site.
 
 Interim Period: Would-be students discuss project ideas with potential
 mentoring organizations.
 
-- **20 March: 16:00 UTC** Student application period opens.
-
-- **03 April: 16:00 UTC** Student application deadline.
+&#42; &#42;20 March: 16:00 UTC&#42; Student application period opens.
+&#42; &#42;03 April: 16:00 UTC&#42; Student application deadline.
 
 Interim Period: Slot allocation trades happen among organizations.
 Mentoring organizations review and rank student proposals; where
 necessary, mentoring organizations may request further proposal detail
 from the student applicant.
 
-- **04 May: 16:00 UTC** Accepted student proposals announced.
+&#42; &#42;04 May: 16:00 UTC&#42; Accepted student proposals announced.
 
 [Community Bonding
 Period](http://googlesummerofcode.blogspot.cz/2007/04/so-what-is-this-community-bonding-all.html) -
 Students get to know mentors, read documentation, get up to speed to
 begin working on their projects.
 
-- **30 May**: Students begin coding for their Google Summer of Code
-  projects; Google begins issuing initial student payments provided tax
-  forms are on file and students are in good standing with their
-  communities.
+&#42; &#42;30 May&#42;: Students begin coding for their Google Summer of
+Code projects; Google begins issuing initial student payments provided
+tax forms are on file and students are in good standing with their
+communities.
 
 Work Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- **26 June: 16:00 UTC** Mentors and students can begin submitting Phase
-  1 evaluations.
-
-- **30 June: 16:00 UTC** Phase 1 evaluations deadline; Google begins
-  issuing mid-term student payments provided passing student survey is
-  on file.
+&#42; &#42;26 June: 16:00 UTC&#42; Mentors and students can begin
+submitting Phase 1 evaluations. &#42; &#42;30 June: 16:00 UTC&#42; Phase
+1 evaluations deadline; Google begins issuing mid-term student payments
+provided passing student survey is on file.
 
 Work Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- **28 July: 16:00 UTC** Phase 2 evaluations deadline.
-
-- **21 to 29 August: 16:00 UTC**: Final week: Students tidy code, write
-  tests, improve documentation and submit their code sample. Students
-  also submit their final mentor evaluation.
-
-- **29 August**: Mentors can start submitting final student evaluations.
-
-- **05 September: 16:00 UTC**: Final evaluation deadline
-
-- **06 September**: Final results of Google Summer of Code 2017
-  announced
-
-- **Late October**: Mentor Summit at Google. Mentors and Organization
-  Administrators from each participating organization are invited to
-  Google for an unconference to collaborate on ideas to make the program
-  better and to make new friends too!
+&#42; &#42;28 July: 16:00 UTC&#42; Phase 2 evaluations deadline. &#42;
+&#42;21 to 29 August: 16:00 UTC&#42;: Final week: Students tidy code,
+write tests, improve documentation and submit their code sample.
+Students also submit their final mentor evaluation. &#42; &#42;29
+August&#42;: Mentors can start submitting final student evaluations.
+&#42; &#42;05 September: 16:00 UTC&#42;: Final evaluation deadline &#42;
+&#42;06 September&#42;: Final results of Google Summer of Code 2017
+announced &#42; &#42;Late October&#42;: Mentor Summit at Google. Mentors
+and Organization Administrators from each participating organization are
+invited to Google for an unconference to collaborate on ideas to make
+the program better and to make new friends too!
 
 ## Ideas Page
 
-- **Status :** Open for Ideas\
-
-- **Link :** [Summer coding ideas for 2017](ideas.xml)
+&#42; &#42;Status :&#42; Open for Ideas\
+&#42; &#42;Link :&#42; [Summer coding ideas for 2017](ideas.xml)
 
 ## Links
 
@@ -5773,9 +4609,9 @@ If you are a student looking forward to participating in [GSOC
 2017](index.html) with Fedora, please feel free to browse this idea list
 which is still growing.
 
-**Now please go read the [What Can I do
-Today](https://fedoraproject.org/wiki/GSOC_2017#What_can_I_do_today.3F)
-section of the main page.**
+&#42;Now please go read the [What Can I do
+Today](https://fedoraproject.org/wiki/GSOC_2017&#35;What_can_I_do_today.3F)
+section of the main page.&#42;
 
 Do not hesitate to contact the mentors or contributors listed on this
 page for any questions or clarification. You can find helpful people on
@@ -5786,17 +4622,14 @@ If you are new to the Fedora Project, the following material will help
 you to get started. You should also follow the [student application
 process](application_process.xml)
 
-- [The Four Foundations of
-  Fedora](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [Official GSoC
-  Resources](https://developers.google.com/open-source/gsoc/resources/)
-
-- [Fedora Documentation](http://docs.fedoraproject.org/en-US/index.html)
-
-- [IRC](https://fedoraproject.org/wiki/How_to_use_IRC?rd=Communicate/IRCHowTo)
-
-- [Development](https://fedoraproject.org/wiki/Development)
+&#42; [The Four Foundations of
+Fedora](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [Official GSoC
+Resources](https://developers.google.com/open-source/gsoc/resources/)
+&#42; [Fedora
+Documentation](http://docs.fedoraproject.org/en-US/index.html) &#42;
+[IRC](https://fedoraproject.org/wiki/How_to_use_IRC?rd=Communicate/IRCHowTo)
+&#42; [Development](https://fedoraproject.org/wiki/Development)
 
 ### Supporting Mentors {#supporting-mentors}
 
@@ -5806,86 +4639,79 @@ add yourselves and your wiki page). If a specific project mentor is
 busy, you can contact one of the people below for short-term help on
 your project or task.
 
-- [Brian (bex) Exelbierd](https://fedoraproject.org/wiki/User:Bex)
-  (Fedora Community Action and Impact Coordinator, FCAIC, 🎂,
-  containers, general development, general Linux)
-
-- [Justin W. Flory](https://fedoraproject.org/wiki/User:Jflory7)
-  (General development, general Linux, Fedora community, GSoC alumnus,
-  questions about program, misc. advice)
-
-- [Radka (rhea) Janek](https://fedoraproject.org/wiki/User:Rhea) (C#,
-  webserver or dotnet related stuff on Linux, general support and help
-  with the program)
-
-- [Corey Sheldon](https://fedoraproject.org/wiki/User:Linuxmodder)
-  (Python, 2Factor/Multi-Factor Auth, QA Testing, general mentoring,
-  security, 2nd year mentor)
-
-- [Sachin S. Kamath](https://fedoraproject.org/wiki/User:Skamath)
-  (General Linux, Fedora community, Metrics, GSoC alumnus, Help with
-  program)
-
-- [Bhagyashree(Bee)](https://fedoraproject.org/wiki/User:Bee2502) (
-  Fedora community, Metrics, Python, past GSoC mentor, Support related
-  to GSoC)
-
-- [Lali Devamanthri](https://fedoraproject.org/wiki/User:Lsd) (General
-  development, Middleware/Integration, general Linux, Fedora community,
-  GSoC alumnus, past GSoC mentor)
-
-- [Devyani Kota](https://fedoraproject.org/wiki/User:Devyani7) (Fedora
-  community, GSoC Alumnus, General Linux, Python, questions related to
-  GSoC)
+&#42; [Brian (bex) Exelbierd](https://fedoraproject.org/wiki/User:Bex)
+(Fedora Community Action and Impact Coordinator, FCAIC, 🎂, containers,
+general development, general Linux) &#42; [Justin W.
+Flory](https://fedoraproject.org/wiki/User:Jflory7) (General
+development, general Linux, Fedora community, GSoC alumnus, questions
+about program, misc. advice) &#42; [Radka (rhea)
+Janek](https://fedoraproject.org/wiki/User:Rhea) (C&#35;, webserver or
+dotnet related stuff on Linux, general support and help with the
+program) &#42; [Corey
+Sheldon](https://fedoraproject.org/wiki/User:Linuxmodder) (Python,
+2Factor/Multi-Factor Auth, QA Testing, general mentoring, security, 2nd
+year mentor) &#42; [Sachin S.
+Kamath](https://fedoraproject.org/wiki/User:Skamath) (General Linux,
+Fedora community, Metrics, GSoC alumnus, Help with program) &#42;
+[Bhagyashree(Bee)](https://fedoraproject.org/wiki/User:Bee2502) ( Fedora
+community, Metrics, Python, past GSoC mentor, Support related to GSoC)
+&#42; [Lali Devamanthri](https://fedoraproject.org/wiki/User:Lsd)
+(General development, Middleware/Integration, general Linux, Fedora
+community, GSoC alumnus, past GSoC mentor) &#42; [Devyani
+Kota](https://fedoraproject.org/wiki/User:Devyani7) (Fedora community,
+GSoC Alumnus, General Linux, Python, questions related to GSoC)
 
 ### Draft of an idea
 
 Please add your idea using the following template. The template contains
 *comments in italic text*, examples and questions that should be
-answered. **Please copy the template (your idea) into the list of
-ideas - do not change it here.**
+answered. &#42;Please copy the template (your idea) into the list of
+ideas - do not change it here.&#42;
 
 #### Project Name
 
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft *Use this status.*                  |
 +===============+======================================================+
-| **Skill       | Novice / Intermediate / Proficient *Are the required |
-| level**       | skills below something a beginner would no or could  |
+| &#42;Skill    | Novice / Intermediate / Proficient *Are the required |
+| level&#42;    | skills below something a beginner would no or could  |
 |               | reasonably learn quickly? Is there an area where     |
 |               | knowledge is already expected making this an         |
 |               | advanced project? Also consider how much knowledge   |
 |               | about Fedora is required.*                           |
 +---------------+------------------------------------------------------+
-| **Skills      | *Programming languages or other skills that the      |
-| required**    | student should already posess. Keep in mind that     |
+| &#42;Skills   | *Programming languages or other skills that the      |
+| required&#42; | student should already posess. Keep in mind that     |
 |               | students come to both practice thieir existing       |
 |               | skills and grow. Scope your tasks for someone to be  |
 |               | able to apply and learn during the project,          |
 |               | therefore you shouldn't list everything required to  |
 |               | complete the task.*                                  |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | *If your SIG is taking the responsibility, specify   |
-|               | as in this example (and always link to people or     |
+| &#42;M        | *If your SIG is taking the responsibility, specify   |
+| entor(s)&#42; | as in this example (and always link to people or     |
 |               | groups)* [DotNet                                     |
 |               | SIG](https://fedoraproject.org/wiki/SIGs/DotNet) -   |
 |               | [Radka (rhea)                                        |
 |               | Janek](https://fedoraproject.org/wiki/User:Rhea),    |
-|               | ...​                                                  |
+|               | &#8230;                                              |
 +---------------+------------------------------------------------------+
-| **Contacts    | *[#example-irc-channel](https://                     |
-| (IRC &        | webchat.freenode.net/?channels=#example-irc-channel) |
-| email)**      | &                                                    |
+| &#42;Contacts | *[&#35;example-irc-channel](https://webc             |
+| (IRC &amp;    | hat.freenode.net/?channels=&#35;example-irc-channel) |
+| email)&#42;   | &amp;                                                |
 |               | [exaple-list@lists                                   |
 |               | .fedoraproject.org](https://lists.fedoraproject.org/ |
 |               | admin/lists/example-list@lists.fedoraproject.org/) - |
 |               | Mentors email or mailing list of your SIG.*          |
 +---------------+------------------------------------------------------+
-| **Idea        | *Something something.*                               |
-| description** |                                                      |
+| &#42;Idea     | *Something something.*                               |
+| des           |                                                      |
+| cription&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Notes &     | *Something or nothing.*                              |
-| references**  |                                                      |
+| &#42;Notes    | *Something or nothing.*                              |
+| &amp;         |                                                      |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ## Idea list for GSoC 2017
@@ -5893,28 +4719,30 @@ ideas - do not change it here.**
 ### 389 Directory Server: developing administrative tools
 
 +---------------+------------------------------------------------------+
-| **Status**    | Proposed - draft                                     |
+| &#4           | Proposed - draft                                     |
+| 2;Status&#42; |                                                      |
 +===============+======================================================+
-| **Skill       | Intermediate                                         |
-| level**       |                                                      |
+| &#42;Skill    | Intermediate                                         |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | Python: Must understand Classes, Inheritance, and    |
-| required**    | Modules                                              |
+| &#42;Skills   | Python: Must understand Classes, Inheritance, and    |
+| required&#42; | Modules                                              |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [William                                             |
-|               | B                                                    |
+| &#42;M        | [William                                             |
+| entor(s)&#42; | B                                                    |
 |               | rown](https://fedoraproject.org/wiki/User:Firstyear) |
 |               | (firstyear UTC+10, please be patient!)               |
 +---------------+------------------------------------------------------+
-| **Contacts    | [#839](https://webchat.freenode.net/?channels=#389)  |
-| (IRC &        | &                                                    |
-| email)**      | [389-devel@                                          |
+| &#42;Contacts | [&#35;8                                              |
+| (IRC &amp;    | 39](https://webchat.freenode.net/?channels=&#35;389) |
+| email)&#42;   | &amp;                                                |
+|               | [389-devel@                                          |
 |               | lists.fedoraproject.org](https://lists.fedoraproject |
 |               | .org/admin/lists/389-devel@lists.fedoraproject.org/) |
 +---------------+------------------------------------------------------+
-| **Idea        | 389 Directory Server is an enterprise class LDAP     |
-| description** | server, used in businesses globally to authenticate  |
-|               | and identify people. We have a large code base that  |
+| &#42;Idea     | 389 Directory Server is an enterprise class LDAP     |
+| des           | server, used in businesses globally to authenticate  |
+| cription&#42; | and identify people. We have a large code base that  |
 |               | has gone through nearly 20 years of evolution.       |
 |               |                                                      |
 |               | Part of this evolution has been the recent addition  |
@@ -5926,56 +4754,44 @@ ideas - do not change it here.**
 |               |                                                      |
 |               | Throughout this process you will need to:            |
 |               |                                                      |
-|               | - Learn to deploy a 389 Directory Server.            |
-|               |                                                      |
-|               | - Learn some of the functions of 389 DS (account     |
-|               |   policy, plugin management).                        |
-|               |                                                      |
-|               | - Read and interpret some of our existing perl and   |
-|               |   shell scripts.                                     |
-|               |                                                      |
-|               | - Extend the python tools dsconf to support enabling |
-|               |   / disabling / configuration of modules in          |
-|               |   Directory Server to replace our legacy tools.      |
-|               |                                                      |
-|               | - Review other team members\' python code.           |
-|               |                                                      |
-|               | - Participate in our community.                      |
+|               | &#42; Learn to deploy a 389 Directory Server. &#42;  |
+|               | Learn some of the functions of 389 DS (account       |
+|               | policy, plugin management). &#42; Read and interpret |
+|               | some of our existing perl and shell scripts. &#42;   |
+|               | Extend the python tools dsconf to support enabling / |
+|               | disabling / configuration of modules in Directory    |
+|               | Server to replace our legacy tools. &#42; Review     |
+|               | other team members\' python code. &#42; Participate  |
+|               | in our community.                                    |
 |               |                                                      |
 |               | From this you will learn:                            |
 |               |                                                      |
-|               | - How to integrate and use existing python           |
-|               |   frameworks and servers.                            |
-|               |                                                      |
-|               | - Techniques to unit test command line and python    |
-|               |   tools.                                             |
-|               |                                                      |
-|               | - How to work with a geographically distributed      |
-|               |   team.                                              |
-|               |                                                      |
-|               | - Engineering principles expected of a project with  |
-|               |   high quality demands.                              |
-|               |                                                      |
-|               | - Use of git and ticket trackers for a project.      |
-|               |                                                      |
-|               | - How to contribute to mailing lists and the review  |
-|               |   process.                                           |
+|               | &#42; How to integrate and use existing python       |
+|               | frameworks and servers. &#42; Techniques to unit     |
+|               | test command line and python tools. &#42; How to     |
+|               | work with a geographically distributed team. &#42;   |
+|               | Engineering principles expected of a project with    |
+|               | high quality demands. &#42; Use of git and ticket    |
+|               | trackers for a project. &#42; How to contribute to   |
+|               | mailing lists and the review process.                |
 |               |                                                      |
 |               | What are we looking for:                             |
 |               |                                                      |
-|               | - To teach you good community engagement, and        |
-|               |   engineering skills. The coding project is a means  |
-|               |   to help us teach you to interact effectively with  |
-|               |   a team, and to learn engineering principles.       |
+|               | &#42; To teach you good community engagement, and    |
+|               | engineering skills. The coding project is a means to |
+|               | help us teach you to interact effectively with a     |
+|               | team, and to learn engineering principles.           |
 |               |                                                      |
 |               | Is this project right for you?                       |
 |               |                                                      |
-|               | - Come and talk to wibrown on #389 in irc on         |
-|               |   freenode, or email our mailing list                |
-|               |   <389-devel@lists.fedoraproject.org>                |
+|               | &#42; Come and talk to wibrown on &#35;389 in irc on |
+|               | freenode, or email our mailing list                  |
+|               | <389-devel@lists.fedoraproject.org>                  |
 +---------------+------------------------------------------------------+
-| **Notes &     | [port389.org](http://www.port389.org/)               |
-| references**  |                                                      |
+| &#42;Notes    | [port389.org](http://www.port389.org/)               |
+| &amp;         |                                                      |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ### ASP.NET Core web application for /r/Fedora subreddit
@@ -5983,49 +4799,47 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Novice                                               |
-| level**       |                                                      |
+| &#42;Skill    | Novice                                               |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | Basic C#                                             |
-| required**    |                                                      |
+| &#42;Skills   | Basic C&#35;                                         |
+| required&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [DotNet                                              |
-|               | SIG](https://fedoraproject.org/wiki/SIGs/DotNet) -   |
+| &#42;M        | [DotNet                                              |
+| entor(s)&#42; | SIG](https://fedoraproject.org/wiki/SIGs/DotNet) -   |
 |               | [Radka (rhea)                                        |
 |               | Janek](https://fedoraproject.org/wiki/User:Rhea)     |
 +---------------+------------------------------------------------------+
-| **Contacts    | [#fedora-dotnet](ht                                  |
-| (IRC &        | tps://webchat.freenode.net/?channels=#fedora-dotnet) |
-| email)**      | &                                                    |
+| &#42;Contacts | [&#35;fedora-dotnet](https:                          |
+| (IRC &amp;    | //webchat.freenode.net/?channels=&#35;fedora-dotnet) |
+| email)&#42;   | &amp;                                                |
 |               | [dotnet-sig@li                                       |
 |               | sts.fedoraproject.org](https://lists.fedoraproject.o |
 |               | rg/admin/lists/dotnet-sig@lists.fedoraproject.org/), |
 |               | <radka.janek@redhat.com>                             |
 +---------------+------------------------------------------------------+
-| **Idea        | Goals:                                               |
-| description** |                                                      |
-|               | - ASP.NET Core web application for our [/r/Fedora    |
-|               |   subreddit](https://www.reddit.com/r/Fedora) to let |
-|               |   the user choose a flair, based on their FAS Group  |
-|               |   memberships, written in C# and deployed on a       |
-|               |   Fedora production server as systemd service.       |
+| &#42;Idea     | Goals:                                               |
+| des           |                                                      |
+| cription&#42; | &#42; ASP.NET Core web application for our           |
+|               | [/r/Fedora                                           |
+|               | subreddit](https://www.reddit.com/r/Fedora) to let   |
+|               | the user choose a flair, based on their FAS Group    |
+|               | memberships, written in C&#35; and deployed on a     |
+|               | Fedora production server as systemd service.         |
 |               |                                                      |
 |               | You will learn:                                      |
 |               |                                                      |
-|               | - What is it .NET Core and how to use it in Linux    |
-|               |                                                      |
-|               | - How to write C# code on Linux and what IDEs are    |
-|               |   available to you.                                  |
-|               |                                                      |
-|               | - You will create and deploy an ASP.NET Core         |
-|               |   application on our Fedora production server as     |
-|               |   systemd service, with secure Apache in front of    |
-|               |   it.                                                |
+|               | &#42; What is it .NET Core and how to use it in      |
+|               | Linux &#42; How to write C&#35; code on Linux and    |
+|               | what IDEs are available to you. &#42; You will       |
+|               | create and deploy an ASP.NET Core application on our |
+|               | Fedora production server as systemd service, with    |
+|               | secure Apache in front of it.                        |
 +---------------+------------------------------------------------------+
-| **Notes &     | [.NET on                                             |
-| references**  | Fedora](https://fedoraproject.org/wiki/DotNet),      |
-|               | [ipsilon](https://fedorahosted.org/ipsilon) ; *Due   |
-|               | to high interest we recommend that you apply for     |
+| &#42;Notes    | [.NET on                                             |
+| &amp;         | Fedora](https://fedoraproject.org/wiki/DotNet),      |
+| re            | [ipsilon](https://fedorahosted.org/ipsilon) ; *Due   |
+| ferences&#42; | to high interest we recommend that you apply for     |
 |               | different project.*                                  |
 +---------------+------------------------------------------------------+
 
@@ -6034,51 +4848,45 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Intermediate                                         |
-| level**       |                                                      |
+| &#42;Skill    | Intermediate                                         |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | C# and basic Linux                                   |
-| required**    |                                                      |
+| &#42;Skills   | C&#35; and basic Linux                               |
+| required&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [DotNet                                              |
-|               | SIG](https://fedoraproject.org/wiki/SIGs/DotNet) -   |
+| &#42;M        | [DotNet                                              |
+| entor(s)&#42; | SIG](https://fedoraproject.org/wiki/SIGs/DotNet) -   |
 |               | [Radka (rhea)                                        |
 |               | Janek](https://fedoraproject.org/wiki/User:Rhea)     |
 +---------------+------------------------------------------------------+
-| **Contacts    | [#fedora-dotnet](ht                                  |
-| (IRC &        | tps://webchat.freenode.net/?channels=#fedora-dotnet) |
-| email)**      | &                                                    |
+| &#42;Contacts | [&#35;fedora-dotnet](https:                          |
+| (IRC &amp;    | //webchat.freenode.net/?channels=&#35;fedora-dotnet) |
+| email)&#42;   | &amp;                                                |
 |               | [dotnet-sig@li                                       |
 |               | sts.fedoraproject.org](https://lists.fedoraproject.o |
 |               | rg/admin/lists/dotnet-sig@lists.fedoraproject.org/), |
 |               | <radka.janek@redhat.com>                             |
 +---------------+------------------------------------------------------+
-| **Idea        | Goals:                                               |
-| description** |                                                      |
-|               | - .NET Standard library wrapping systemd, written in |
-|               |   C# and published on NuGet.                         |
-|               |                                                      |
-|               | - By utilizing systemd, we can control various       |
-|               |   aspects of the system underneath directly from C#  |
-|               |   (eg. stopping or starting services, scheduling     |
-|               |   reboots)                                           |
+| &#42;Idea     | Goals:                                               |
+| des           |                                                      |
+| cription&#42; | &#42; .NET Standard library wrapping systemd,        |
+|               | written in C&#35; and published on NuGet. &#42; By   |
+|               | utilizing systemd, we can control various aspects of |
+|               | the system underneath directly from C&#35; (eg.      |
+|               | stopping or starting services, scheduling reboots)   |
 |               |                                                      |
 |               | You will learn:                                      |
 |               |                                                      |
-|               | - What is it .NET Core and how to use it in Linux    |
-|               |                                                      |
-|               | - How to write C# code on Linux and what IDEs are    |
-|               |   available to you.                                  |
-|               |                                                      |
-|               | - How to create and maintain NuGet packages.         |
-|               |                                                      |
-|               | - How to utilize systemd and dbus to control your    |
-|               |   Linux system.                                      |
+|               | &#42; What is it .NET Core and how to use it in      |
+|               | Linux &#42; How to write C&#35; code on Linux and    |
+|               | what IDEs are available to you. &#42; How to create  |
+|               | and maintain NuGet packages. &#42; How to utilize    |
+|               | systemd and dbus to control your Linux system.       |
 +---------------+------------------------------------------------------+
-| **Notes &     | [.NET on                                             |
-| references**  | Fedora](https://fedoraproject.org/wiki/DotNet) ;     |
-|               | *Due to high interest we recommend that you apply    |
-|               | for different project.*                              |
+| &#42;Notes    | [.NET on                                             |
+| &amp;         | Fedora](https://fedoraproject.org/wiki/DotNet) ;     |
+| re            | *Due to high interest we recommend that you apply    |
+| ferences&#42; | for different project.*                              |
 +---------------+------------------------------------------------------+
 
 ### Continuous static analysis db
@@ -6086,25 +4894,24 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Intermediate                                         |
-| level**       |                                                      |
+| &#42;Skill    | Intermediate                                         |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | - Python                                             |
-| required**    |                                                      |
-|               | - Distributed systems                                |
+| &#42;Skills   | &#42; Python &#42; Distributed systems               |
+| required&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [ Athos                                              |
-|               | R                                                    |
+| &#42;M        | [ Athos                                              |
+| entor(s)&#42; | R                                                    |
 |               | ibiero](https://fedoraproject.org/wiki/User:Athoscr) |
 |               | (athoscr)                                            |
 +---------------+------------------------------------------------------+
-| **Contacts    | IRC: athos Email: <athoscribeiro@gmail.com>          |
-| (IRC &        |                                                      |
-| email)**      |                                                      |
+| &#42;Contacts | IRC: athos Email: <athoscribeiro@gmail.com>          |
+| (IRC &amp;    |                                                      |
+| email)&#42;   |                                                      |
 +---------------+------------------------------------------------------+
-| **Idea        | This project proposes the design and implementation  |
-| description** | of a system to continuously run multiple security    |
-|               | oriented static analyzers on source code and display |
+| &#42;Idea     | This project proposes the design and implementation  |
+| des           | of a system to continuously run multiple security    |
+| cription&#42; | oriented static analyzers on source code and display |
 |               | the alarms related to a specific version of the      |
 |               | analyzed software. The alarms to be presented will   |
 |               | be ranked based on their importance, where critical  |
@@ -6116,8 +4923,10 @@ ideas - do not change it here.**
 |               | also propose a visualization approach for the        |
 |               | information generated with our tool.                 |
 +---------------+------------------------------------------------------+
-| **Notes &     | [Static Analysis                                     |
-| references**  | SIG](https://fedoraproject.org/wiki/StaticAnalysis)  |
+| &#42;Notes    | [Static Analysis                                     |
+| &amp;         | SIG](https://fedoraproject.org/wiki/StaticAnalysis)  |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ### Migrate Plinth to Fedora Server
@@ -6125,33 +4934,27 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Novice                                               |
-| level**       |                                                      |
+| &#42;Skill    | Novice                                               |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | - Python and Django                                  |
-| required**    |                                                      |
-|               | - Git                                                |
-|               |                                                      |
-|               | - dnf knowledge                                      |
-|               |                                                      |
-|               | - ARM based hardware is a plus                       |
-|               |                                                      |
-|               | - RPM packaging knowledge is a plus                  |
+| &#42;Skills   | &#42; Python and Django &#42; Git &#42; dnf          |
+| required&#42; | knowledge &#42; ARM based hardware is a plus &#42;   |
+|               | RPM packaging knowledge is a plus                    |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [Tong                                                |
-|               | Hui](https://fedoraproject.org/wiki/User:Tonghuix)   |
+| &#42;M        | [Tong                                                |
+| entor(s)&#42; | Hui](https://fedoraproject.org/wiki/User:Tonghuix)   |
 |               | (first year, UTC+8, please be patient!)              |
 +---------------+------------------------------------------------------+
-| **Contacts    | - [#fedora-arm]                                      |
-| (IRC &        | (https://webchat.freenode.net/?channels=#fedora-arm) |
-| email)**      |   &                                                  |
-|               |                                                      |
-|               |  [arm@lists.fedoraproject.org](https://lists.fedorap |
+| &#42;Contacts | &#42;                                                |
+| (IRC &amp;    | [&#35;fedora-arm](htt                                |
+| email)&#42;   | ps://webchat.freenode.net/?channels=&#35;fedora-arm) |
+|               | &amp;                                                |
+|               | [arm@lists.fedoraproject.org](https://lists.fedorap  |
 |               | roject.org/admin/lists/arm@lists.fedoraproject.org/) |
 +---------------+------------------------------------------------------+
-| **Idea        | Plinth is developed by                               |
-| description** | [Freedombox](https://wiki.debian.org/FreedomBox/)    |
-|               | which is a Debian based project. The Freedombox is   |
+| &#42;Idea     | Plinth is developed by                               |
+| des           | [Freedombox](https://wiki.debian.org/FreedomBox/)    |
+| cription&#42; | which is a Debian based project. The Freedombox is   |
 |               | aiming for building a 100% free software             |
 |               | self-hosting web server to deploy social             |
 |               | applications on small machines. It provides online   |
@@ -6179,15 +4982,15 @@ ideas - do not change it here.**
 |               |                                                      |
 |               | You will learn:                                      |
 |               |                                                      |
-|               | - how to write modern test driven Python projects    |
-|               |                                                      |
-|               | - how to running Fedora Server on a ARM machine.     |
-|               |                                                      |
-|               | - how to migrate deb package to RPM package from     |
-|               |   source.                                            |
+|               | &#42; how to write modern test driven Python         |
+|               | projects &#42; how to running Fedora Server on a ARM |
+|               | machine. &#42; how to migrate deb package to RPM     |
+|               | package from source.                                 |
 +---------------+------------------------------------------------------+
-| **Notes &     | [Architectures/AR                                    |
-| references**  | M](https://fedoraproject.org/wiki/Architectures/ARM) |
+| &#42;Notes    | [Architectures/AR                                    |
+| &amp;         | M](https://fedoraproject.org/wiki/Architectures/ARM) |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ### Patternfly Frontend Pattern Development
@@ -6195,21 +4998,22 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Intermediate                                         |
-| level**       |                                                      |
+| &#42;Skill    | Intermediate                                         |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | Javascript                                           |
-| required**    |                                                      |
+| &#42;Skills   | Javascript                                           |
+| required&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | Brian Leathem                                        |
+| &#42;M        | Brian Leathem                                        |
+| entor(s)&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Contacts    | [#patternfly]                                        |
-| (IRC &        | (https://webchat.freenode.net/?channels=#patternfly) |
-| email)**      | & <patternfly@redhat.com>                            |
+| &#42;Contacts | [&#35;patternfly](htt                                |
+| (IRC &amp;    | ps://webchat.freenode.net/?channels=&#35;patternfly) |
+| email)&#42;   | &amp; <patternfly@redhat.com>                        |
 +---------------+------------------------------------------------------+
-| **Idea        | Explore the emerging web component specifications by |
-| description** | implementing patternfly.org patterns as web          |
-|               | components. Begin with smaller simpler web component |
+| &#42;Idea     | Explore the emerging web component specifications by |
+| des           | implementing patternfly.org patterns as web          |
+| cription&#42; | components. Begin with smaller simpler web component |
 |               | implementations to learn the APIs, then follow on    |
 |               | with a more complex composite component to fully     |
 |               | exercise the APIs and make a robust and feature-rich |
@@ -6218,8 +5022,10 @@ ideas - do not change it here.**
 |               | web component effort. //// don't know if the link is |
 |               | working ////                                         |
 +---------------+------------------------------------------------------+
-| **Notes &     | link:https://patternfly-webcomponents.github.io/     |
-| references**  |                                                      |
+| &#42;Notes    | link:https://patternfly-webcomponents.github.io/     |
+| &amp;         |                                                      |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ### Fedora Media Writer - New Features
@@ -6227,26 +5033,26 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Intermediate                                         |
-| level**       |                                                      |
+| &#42;Skill    | Intermediate                                         |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | C++/Qt and/or QML                                    |
-| required**    |                                                      |
+| &#42;Skills   | C++/Qt and/or QML                                    |
+| required&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [Martin                                              |
-|               | Bříza](https://fedoraproject.org/wiki/User:Mbriza)   |
+| &#42;M        | [Martin                                              |
+| entor(s)&#42; | Bříza](https://fedoraproject.org/wiki/User:Mbriza)   |
 +---------------+------------------------------------------------------+
-| **Contacts    | mbriza on Freenode (for example on                   |
-| (IRC &        | [#fedora-devel](h                                    |
-| email)**      | ttps://webchat.freenode.net/?channels=#fedora-devel) |
+| &#42;Contacts | mbriza on Freenode (for example on                   |
+| (IRC &amp;    | [&#35;fedora-devel](https                            |
+| email)&#42;   | ://webchat.freenode.net/?channels=&#35;fedora-devel) |
 |               | or                                                   |
-|               | [#fedora-apps](                                      |
-|               | https://webchat.freenode.net/?channels=#fedora-apps) |
+|               | [&#35;fedora-apps](http                              |
+|               | s://webchat.freenode.net/?channels=&#35;fedora-apps) |
 |               | ) or <mbriza@redhat.com>                             |
 +---------------+------------------------------------------------------+
-| **Idea        | Fedora Media Writer is a tool that makes putting     |
-| description** | Fedora images on portable media (such as flash       |
-|               | drives) much easier. Since Fedora 25, it is offered  |
+| &#42;Idea     | Fedora Media Writer is a tool that makes putting     |
+| des           | Fedora images on portable media (such as flash       |
+| cription&#42; | drives) much easier. Since Fedora 25, it is offered  |
 |               | as the default download options for users coming to  |
 |               | [Get Fedora](https://getfedora.org) from a Mac or a  |
 |               | Windows computer.                                    |
@@ -6264,30 +5070,29 @@ ideas - do not change it here.**
 |               | anything else, or look on the GitHub page for some   |
 |               | more):                                               |
 |               |                                                      |
-|               | - *Persistent storage*. To explain how it works,     |
-|               |   I'll start with how live media works now for us:   |
-|               |   After booting into the live system, you can do     |
-|               |   whatever you want, install programs, save files to |
-|               |   your home folder or even modify the root           |
-|               |   filesystem, as much as your free memory permits    |
-|               |   you. However, after rebooting you lose all those   |
-|               |   changes because the partitions on the drive are    |
-|               |   not touched. Persistent storage adds the           |
-|               |   possibility to retain those changes through        |
-|               |   reboots so you would be able to install new apps   |
-|               |   to your live environment or work with files stored |
-|               |   on the flash drive.                                |
+|               | &#42; *Persistent storage*. To explain how it works, |
+|               | I'll start with how live media works now for us:     |
+|               | After booting into the live system, you can do       |
+|               | whatever you want, install programs, save files to   |
+|               | your home folder or even modify the root filesystem, |
+|               | as much as your free memory permits you. However,    |
+|               | after rebooting you lose all those changes because   |
+|               | the partitions on the drive are not touched.         |
+|               | Persistent storage adds the possibility to retain    |
+|               | those changes through reboots so you would be able   |
+|               | to install new apps to your live environment or work |
+|               | with files stored on the flash drive.                |
 |               |                                                      |
-|               | - Being able to write the images without destroying  |
-|               |   the data that was already present on the flash     |
-|               |   drive before.                                      |
+|               | &#42; Being able to write the images without         |
+|               | destroying the data that was already present on the  |
+|               | flash drive before.                                  |
 |               |                                                      |
-|               | - Having a Fedora ARM image resized to fit the size  |
-|               |   of your SD card immediately after having it        |
-|               |   written.                                           |
+|               | &#42; Having a Fedora ARM image resized to fit the   |
+|               | size of your SD card immediately after having it     |
+|               | written.                                             |
 |               |                                                      |
-|               | - Proper privilege escalation through launchd for    |
-|               |   the helper process on macOS.                       |
+|               | &#42; Proper privilege escalation through launchd    |
+|               | for the helper process on macOS.                     |
 |               |                                                      |
 |               | Understanding of libraries and techniques relevant   |
 |               | to this project on Linux, Mac or Windows (or all of  |
@@ -6298,8 +5103,10 @@ ideas - do not change it here.**
 |               | thing new users see when they are going to try       |
 |               | Fedora.                                              |
 +---------------+------------------------------------------------------+
-| **Notes &     | link:https://github.com/MartinBriza/MediaWriter      |
-| references**  |                                                      |
+| &#42;Notes    | link:https://github.com/MartinBriza/MediaWriter      |
+| &amp;         |                                                      |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ### Adwaita and HighContrast style for QtQuickControls
@@ -6307,25 +5114,26 @@ ideas - do not change it here.**
 +---------------+------------------------------------------------------+
 | Status        | Proposed - draft                                     |
 +===============+======================================================+
-| **Skill       | Novice                                               |
-| level**       |                                                      |
+| &#42;Skill    | Novice                                               |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | QML and a little bit of C++                          |
-| required**    |                                                      |
+| &#42;Skills   | QML and a little bit of C++                          |
+| required&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | User:Mbriza\[Martin Bříza\]                          |
+| &#42;M        | User:Mbriza\[Martin Bříza\]                          |
+| entor(s)&#42; |                                                      |
 +---------------+------------------------------------------------------+
-| **Contacts    | mbriza on Freenode (for example on                   |
-| (IRC &        | [#fedora-devel](h                                    |
-| email)**      | ttps://webchat.freenode.net/?channels=#fedora-devel) |
+| &#42;Contacts | mbriza on Freenode (for example on                   |
+| (IRC &amp;    | [&#35;fedora-devel](https                            |
+| email)&#42;   | ://webchat.freenode.net/?channels=&#35;fedora-devel) |
 |               | or                                                   |
-|               | [#fedora-apps](                                      |
-|               | https://webchat.freenode.net/?channels=#fedora-apps) |
+|               | [&#35;fedora-apps](http                              |
+|               | s://webchat.freenode.net/?channels=&#35;fedora-apps) |
 |               | ) or <mbriza@redhat.com>                             |
 +---------------+------------------------------------------------------+
-| **Idea        | Fedora Workstation ships custom Qt themes that match |
-| description** | its Adwaita and Highcontrast themes from its default |
-|               | GNOME desktop environment. This makes Qt             |
+| &#42;Idea     | Fedora Workstation ships custom Qt themes that match |
+| des           | its Adwaita and Highcontrast themes from its default |
+| cription&#42; | GNOME desktop environment. This makes Qt             |
 |               | applications blend nicely into the overall Fedora    |
 |               | Worstation experience.                               |
 |               |                                                      |
@@ -6335,64 +5143,57 @@ ideas - do not change it here.**
 |               |                                                      |
 |               | Work on this would consist of three main parts:      |
 |               |                                                      |
-|               | - Figuring out where and how to install the theme    |
-|               |   (CMake)                                            |
-|               |                                                      |
-|               | - Implementing the look of all necessary widgets     |
-|               |   (QML)                                              |
-|               |                                                      |
-|               | - Making this theme selected by default when the app |
-|               |   runs in GNOME (probably C++, in the QGnomePlatform |
-|               |   project)                                           |
+|               | &#42; Figuring out where and how to install the      |
+|               | theme (CMake) &#42; Implementing the look of all     |
+|               | necessary widgets (QML) &#42; Making this theme      |
+|               | selected by default when the app runs in GNOME       |
+|               | (probably C++, in the QGnomePlatform project)        |
 |               |                                                      |
 |               | This project is best suited to a candidate who wants |
 |               | to learn about QML.                                  |
 +---------------+------------------------------------------------------+
-| **Notes &     | link:https://github.com/MartinBriza/adwaita-qt       |
-| references**  |                                                      |
-|               | link:https://github.com/MartinBriza/highcontrast-qt  |
-|               |                                                      |
+| &#42;Notes    | link:https://github.com/MartinBriza/adwaita-qt       |
+| &amp;         |                                                      |
+| re            | link:https://github.com/MartinBriza/highcontrast-qt  |
+| ferences&#42; |                                                      |
 |               | link:https://github.com/MartinBriza/QGnomePlatform   |
 +---------------+------------------------------------------------------+
 
 ### Fedora CommOps : Centralized Metrics generation
 
 +---------------+------------------------------------------------------+
-| **Status**    | Proposed - draft                                     |
+| &#4           | Proposed - draft                                     |
+| 2;Status&#42; |                                                      |
 +===============+======================================================+
-| **Skill       | Intermediate                                         |
-| level**       |                                                      |
+| &#42;Skill    | Intermediate                                         |
+| level&#42;    |                                                      |
 +---------------+------------------------------------------------------+
-| **Skills      | Required:                                            |
-| required**    |                                                      |
-|               | - Python                                             |
-|               |                                                      |
-|               | - Basic understanding of APIs                        |
-|               |                                                      |
-|               | - Flask                                              |
+| &#42;Skills   | Required:                                            |
+| required&#42; |                                                      |
+|               | &#42; Python &#42; Basic understanding of APIs &#42; |
+|               | Flask                                                |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | - Data analytics algorithms                          |
-|               |                                                      |
-|               | - Knowledge of Fedora Apps                           |
+|               | &#42; Data analytics algorithms &#42; Knowledge of   |
+|               | Fedora Apps                                          |
 +---------------+------------------------------------------------------+
-| **Mentor(s)** | [ Sachin S.                                          |
-|               | Kamath](https://fedoraproject.org/wiki/User:Skamath) |
+| &#42;M        | [ Sachin S.                                          |
+| entor(s)&#42; | Kamath](https://fedoraproject.org/wiki/User:Skamath) |
 |               | (skamath) [ Bhagyashree(Bee)                         |
 |               | ](https://fedoraproject.org/wiki/User:Bee2502)       |
 |               | (bee2502)                                            |
 +---------------+------------------------------------------------------+
-| **Contacts    | [#fedora-commops](htt                                |
-| (IRC &        | ps://webchat.freenode.net/?channels=#fedora-commops) |
-| email)**      | &                                                    |
+| &#42;Contacts | [&#35;fedora-commops](https:/                        |
+| (IRC &amp;    | /webchat.freenode.net/?channels=&#35;fedora-commops) |
+| email)&#42;   | &amp;                                                |
 |               | [commop                                              |
 |               | s@lists.fedoraproject.org](https://lists.fedoraproje |
 |               | ct.org/admin/lists/commops.lists.fedoraproject.org/) |
 +---------------+------------------------------------------------------+
-| **Idea        | Right now, metrics collection in CommOps is not very |
-| description** | efficient and requires a lot of manual work. Metrics |
-|               | for various events/FAS groups/users are collected    |
+| &#42;Idea     | Right now, metrics collection in CommOps is not very |
+| des           | efficient and requires a lot of manual work. Metrics |
+| cription&#42; | for various events/FAS groups/users are collected    |
 |               | using scripts which query datagrepper and return     |
 |               | results. This process is very time consuming and     |
 |               | writing scripts each time is a very tedious process. |
@@ -6405,8 +5206,10 @@ ideas - do not change it here.**
 |               | ticket](https://pagure.io/fedora-commops/issue/105)  |
 |               | for more details.                                    |
 +---------------+------------------------------------------------------+
-| **Notes &     | [Pagure                                              |
-| references**  | ticket](https://pagure.io/fedora-commops/issue/105)  |
+| &#42;Notes    | [Pagure                                              |
+| &amp;         | ticket](https://pagure.io/fedora-commops/issue/105)  |
+| re            |                                                      |
+| ferences&#42; |                                                      |
 +---------------+------------------------------------------------------+
 
 ### Open Ideas From GSoC 2016
@@ -6417,12 +5220,13 @@ they're still interested in mentoring someone this year.
 
 *Note*: Do not submit a proposal for an idea from a previous year
 without contacting the mentor to ensure they will be available to mentor
-you. **Without a mentor, proposals will be rejected.**
+you. &#42;Without a mentor, proposals will be rejected.&#42;
 
-    March 20: 16:00 UTC Student application period opens
-    April 03: 16:00 UTC Student application Deadline
+&#8230;. March 20: 16:00 UTC Student application period opens April 03:
+16:00 UTC Student application Deadline
 
-    **Note** There is a new requirement that you submit all materials in PDF form.  See below.
+&#42;&#42;Note&#42;&#42; There is a new requirement that you submit all
+materials in PDF form. See below. &#8230;.
 
 This timeline is decided and published by Google, see the full timeline
 on [the official
@@ -6440,17 +5244,13 @@ by the deadline listed above. Late applications cannot be accepted.
 Before you do anything, learn about the program and Fedora. These links
 may be helpful:
 
-- [GSoC official site](https://summerofcode.withgoogle.com/)
-
-- [GSoC 2016 FAQs](https://developers.google.com/open-source/gsoc/faq)
-
-- [The Four Foundations of
-  Fedora](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
-
-- [General GSoC Guidance](https://fedoraproject.org/wiki/GSOC_2017)
-
-- [Mailing List
-  Guidelines](https://fedoraproject.org/wiki/Mailing_list_guidelines)
+&#42; [GSoC official site](https://summerofcode.withgoogle.com/) &#42;
+[GSoC 2016 FAQs](https://developers.google.com/open-source/gsoc/faq)
+&#42; [The Four Foundations of
+Fedora](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
+&#42; [General GSoC Guidance](https://fedoraproject.org/wiki/GSOC_2017)
+&#42; [Mailing List
+Guidelines](https://fedoraproject.org/wiki/Mailing_list_guidelines)
 
 ### Communicate {#communicate}
 
@@ -6461,11 +5261,10 @@ existing project proposals. If you're going to try and propose your own
 project, this is a great way to understand the needs of the project and
 find a mentor.
 
-- [the summer-coding
-  list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
-
-- [the development
-  list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
+&#42; [the summer-coding
+list](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org)
+&#42; [the development
+list](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org).
 
 Don't forget to contact mentors on projects that interest you to learn
 more. If you're going to propose a project you must have a mentor at the
@@ -6487,8 +5286,8 @@ need to be completed by the due date.
 Submit the application/proposal at the [Google Summer of Code
 Site](https://summerofcode.withgoogle.com/get-started/)
 
-**Note:** You must submit a PDF version of all of the information you
-prepare with your application using the Google site. The PDF should
+&#42;Note:&#42; You must submit a PDF version of all of the information
+you prepare with your application using the Google site. The PDF should
 consist of the information from the supplemental application
 requirements section below. It should also contain any custom project
 you are proposing, if any.
@@ -6508,114 +5307,78 @@ one that is already proposed by a mentor.
 Create a new wiki page to hold your application. The url should look
 like
 
-[`https://fedoraproject.org/wiki/GSOC_2017/Student_Application_Yourusername`](https://fedoraproject.org/wiki/GSOC_2017/Student_Application_Yourusername),
-replacing `Yourusername` with your actual [Fedora Account
+[&#96;https://fedoraproject.org/wiki/GSOC_2017/Student_Application_Yourusername&#96;](https://fedoraproject.org/wiki/GSOC_2017/Student_Application_Yourusername),
+replacing &#96;Yourusername&#96; with your actual [Fedora Account
 System](https://fedoraproject.org/wiki/Account_System) username.
 
 You should include the information that is relevant to the project your
 are selecting or proposing as well as information about you, your
 background, etc. The following format provides some guidance:
 
-- Contact Information
-
-  - List your Name, Email Address, Blog URL, and any additional contact
-    information you think we need. We tend to email so be sure you're
-    reading your email.
-
-- About You - Consider these questions
-
-  - Do you have any past involvement with the Fedora Project or another
-    open-source project as a contributor? What kind of contributions
-    have you made (code and non-code)? Please share any public
-    contributions you have made (urls, etc.)
-
-  - What are you studying? Why?
-
-  - What motivates you to do your best? How do you stay focused? Briefly
-    describe how you organize your work.
-
-- Why Us? - Consider these questions
-
-  - Why do you want to work with the Fedora Project?
-
-  - Do you plan to continue contributing to the Fedora Project after
-    GSoC? If yes, what sub-project(s) are you interested with?
-
-- Why This Project? - Consider these questions
-
-  - Which specific project interests you? If you are proposing your own
-    project, do it here. If you are proposing the project, explain why
-    it benefits the community.
-
-  - Have you contacted the mentor(s) listed for the project?
-
-  - What relevant experience do you have for this project?
-
-  - What do you want to gain from this project?
-
-  - Describe this project in your own words. What does it mean to you?
-    What do you think the final deliverable is?
-
-- Why should we choose you over other applicants?
-
-- Propose a rough schedule for this project. Ideally you will have
-  regular deliverables throughout the entire period.
-
-- What are you specific plans from May to September (eg: Exams in
-  university, internships, vacations..etc). We need to know if there are
-  periods of time where you are likely to be unavailable. We are better
-  at accommodating these periods if we know of them in advance.
+&#42; Contact Information &#42;&#42; List your Name, Email Address, Blog
+URL, and any additional contact information you think we need. We tend
+to email so be sure you're reading your email. &#42; About You -
+Consider these questions &#42;&#42; Do you have any past involvement
+with the Fedora Project or another open-source project as a contributor?
+What kind of contributions have you made (code and non-code)? Please
+share any public contributions you have made (urls, etc.) &#42;&#42;
+What are you studying? Why? &#42;&#42; What motivates you to do your
+best? How do you stay focused? Briefly describe how you organize your
+work. &#42; Why Us? - Consider these questions &#42;&#42; Why do you
+want to work with the Fedora Project? &#42;&#42; Do you plan to continue
+contributing to the Fedora Project after GSoC? If yes, what
+sub-project(s) are you interested with? &#42; Why This Project? -
+Consider these questions &#42;&#42; Which specific project interests
+you? If you are proposing your own project, do it here. If you are
+proposing the project, explain why it benefits the community. &#42;&#42;
+Have you contacted the mentor(s) listed for the project? &#42;&#42; What
+relevant experience do you have for this project? &#42;&#42; What do you
+want to gain from this project? &#42;&#42; Describe this project in your
+own words. What does it mean to you? What do you think the final
+deliverable is? &#42; Why should we choose you over other applicants?
+&#42; Propose a rough schedule for this project. Ideally you will have
+regular deliverables throughout the entire period. &#42; What are you
+specific plans from May to September (eg: Exams in university,
+internships, vacations..etc). We need to know if there are periods of
+time where you are likely to be unavailable. We are better at
+accommodating these periods if we know of them in advance.
 
 #### Additional Fedora Requirements
 
 Students need to do the following as part of the application process:
 
-- Create a FAS account [FAS Account Signup / Login
-  Page](https://admin.fedoraproject.org/accounts)
-
-- If you can't edit the wiki (see next step), email [Brian (bex)
-  Exelbierd](https://fedoraproject.org/wiki/User:Bex), the primary
-  administrator with your FAS ID and request access.
-
-- On the project wiki link:https://fedoraproject.org/wiki, create a user
-  page. Do this by opening a new web browser tab and going to
-  [`https://fedoraproject.org/wiki/User:Yourusername`](https://fedoraproject.org/wiki/User:Yourusername),
-  replacing `Yourusername` with your actual Fedora Account System
-  username.
-
-  - This [user page
-    template](https://fedoraproject.org/wiki/Template:Userpage) provides
-    a basic layout that you can copy. You can also look at the markup
-    for other users\' pages. Here's a selection of some nice user pages:
-
-    - [Joerg Simon](https://fedoraproject.org/wiki/User:Jsimon)
-
-    - [Iliana
-      Weller](https://fedoraproject.org/wiki/User:Ilianaw?rd=User:Ianweller)
-
-    - [Paul W. Frields](https://fedoraproject.org/wiki/User:Pfrields)
-
-    - [Caius C.
-      Chance](https://fedoraproject.org/wiki/Kaio2012?rd=User:Kaio)
-
-  - Do not forget to add the Summer coding category to your page, for
-    example for 2017: ``
-
-  - When you save the page, remember to click \'watch this page\' at the
-    top.
-
-- Join the fedora-summer-coding mailing list [Fedora Summer Coding
-  Mailing
-  List](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org) -
-  This list is fairly low volume.
-
-- Join the devel mailing list [Devel Mailing
-  List](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org) -
-  this list can be higher volume you may wish to use mail filters
-  appropriately.
-
-- Sign the FPCA by following the directions
-  [here](https://fedoraproject.org/wiki/Account_System/CompleteFPCA)
+&#42; Create a FAS account [FAS Account Signup / Login
+Page](https://admin.fedoraproject.org/accounts) &#42; If you can't edit
+the wiki (see next step), email [Brian (bex)
+Exelbierd](https://fedoraproject.org/wiki/User:Bex), the primary
+administrator with your FAS ID and request access. &#42; On the project
+wiki link:https://fedoraproject.org/wiki, create a user page. Do this by
+opening a new web browser tab and going to
+[&#96;https://fedoraproject.org/wiki/User:Yourusername&#96;](https://fedoraproject.org/wiki/User:Yourusername),
+replacing &#96;Yourusername&#96; with your actual Fedora Account System
+username. &#42;&#42; This [user page
+template](https://fedoraproject.org/wiki/Template:Userpage) provides a
+basic layout that you can copy. You can also look at the markup for
+other users\' pages. Here's a selection of some nice user pages:
+&#42;&#42;&#42; [Joerg
+Simon](https://fedoraproject.org/wiki/User:Jsimon) &#42;&#42;&#42;
+[Iliana
+Weller](https://fedoraproject.org/wiki/User:Ilianaw?rd=User:Ianweller)
+&#42;&#42;&#42; [Paul W.
+Frields](https://fedoraproject.org/wiki/User:Pfrields) &#42;&#42;&#42;
+[Caius C. Chance](https://fedoraproject.org/wiki/Kaio2012?rd=User:Kaio)
+&#42;&#42; Do not forget to add the Summer coding category to your page,
+for example for 2017: &#96;[]{#category:Summer_coding_2017}&#96;
+&#42;&#42; When you save the page, remember to click \'watch this page\'
+at the top. &#42; Join the fedora-summer-coding mailing list [Fedora
+Summer Coding Mailing
+List](https://lists.fedoraproject.org/admin/lists/summer-coding.lists.fedoraproject.org) -
+This list is fairly low volume. &#42; Join the devel mailing list [Devel
+Mailing
+List](https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org) -
+this list can be higher volume you may wish to use mail filters
+appropriately. &#42; Sign the FPCA by following the directions
+[here](https://fedoraproject.org/wiki/Account_System/CompleteFPCA)
 
 ### Let others know
 
@@ -6637,7 +5400,8 @@ If you need help, use the methods described at [GSOC_2017](index.html)
 
 You also find this example application helpful:
 [GSOC_2012/Student_Application_Bckurera](https://fedoraproject.org/wiki/GSOC_2012/Student_Application_Bckurera)
-\*\* 2016 = Google Summer of Code 2016
+
+&#42;&#42; 2016 = Google Summer of Code 2016
 
 ![GSoC_logo](GSoC_2016.png)
 
@@ -6646,7 +5410,7 @@ ten years and we are participating in the 2016 program as well. This
 wiki page serves as the GSoC portal. Please feel free to contact us via
 [sumer-coding](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
 list for clarifications and more information. You can also use the IRC
-channel,[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding).
+channel,[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding).
 
 ## Students {#students}
 
@@ -6667,22 +5431,13 @@ to contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real-world, large codebases.
-
-- Collaborate with real engineers and other professional experts.
-
-- Contribute to something meaningful while learning and earning student
-  value.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Possibly attract attention that gets you an internship or job after
-  graduation.
-
-- Create lifetime connections.
+&#42; Work with real-world, large codebases. &#42; Collaborate with real
+engineers and other professional experts. &#42; Contribute to something
+meaningful while learning and earning student value. &#42; Learn tools
+and processes that are just like what you are going to use if you work
+in technology after graduation. &#42; Make friends and contacts around
+the globe. &#42; Possibly attract attention that gets you an internship
+or job after graduation. &#42; Create lifetime connections.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -6742,23 +5497,23 @@ the students\' idea page and pick one as per your interest.
 
 ### How to work with students {#how-to-work-with-students}
 
-- One way is to provide an idea for students to work on. This idea might
-  be very well planned out, in which case you may need a high-level of
-  contact with the student to get it implemented correctly.
+&#42; One way is to provide an idea for students to work on. This idea
+might be very well planned out, in which case you may need a high-level
+of contact with the student to get it implemented correctly.
 
-- It is harder to find success where you are completely certain of how
-  an idea needs to be implemented; finding a student with the skills and
-  interest to implement a specific solution is a lot harder than finding
-  a student with enough skills to respond to a use case need.
+&#42; It is harder to find success where you are completely certain of
+how an idea needs to be implemented; finding a student with the skills
+and interest to implement a specific solution is a lot harder than
+finding a student with enough skills to respond to a use case need.
 
-- Where you can have looser ideas, you may be able to find a student who
-  works as a sort-of intern who can implement a solution to a use case
-  you have. In past experiences, students going after a use case are
-  more likely to get somewhere with self-direction.
+&#42; Where you can have looser ideas, you may be able to find a student
+who works as a sort-of intern who can implement a solution to a use case
+you have. In past experiences, students going after a use case are more
+likely to get somewhere with self-direction.
 
-- You may also want to work with a student who brings an idea to your
-  sub-project. This requires a different level of communication
-  throughout the project, but can be the most rewarding.
+&#42; You may also want to work with a student who brings an idea to
+your sub-project. This requires a different level of communication
+throughout the project, but can be the most rewarding.
 
 ### Mentor responsibilities {#mentor-responsibilities}
 
@@ -6768,13 +5523,10 @@ JBoss.org, or another).
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not, which affects payment.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Be the final, accountable person for deciding if the
+student is successful or not, which affects payment.
 
 ### List of Mentors {#list-of-mentors}
 
@@ -6788,43 +5540,37 @@ List](https://fedoraproject.org/wiki/GSOC_2016/Registered_Mentors_List)
 
 ## Communication {#communication}
 
-**Mailing List (GSOC related) :**
+&#42;Mailing List (GSOC related) :&#42;
 [summer-coding](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)\
-**Mailing List (Technical) :**
+&#42;Mailing List (Technical) :&#42;
 [devel](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)\
-**IRC :** Channel -
-[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-or [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
+&#42;IRC :&#42; Channel -
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
 on Freenode
 
 ## Timeline (Student version)
 
-- [Official Google
-  Calendar](http://www.google.com/calendar/ical/gsummerofcode%40gmail.com/public/basic.ics?ctz=America/Los_Angeles)
+&#42; [Official Google
+Calendar](http://www.google.com/calendar/ical/gsummerofcode%40gmail.com/public/basic.ics?ctz=America/Los_Angeles)
+&#42; Reference: [Full
+Timeline](https://developers.google.com/open-source/gsoc/timeline)
 
-- Reference: [Full
-  Timeline](https://developers.google.com/open-source/gsoc/timeline)
-
-- **13 October, 2015**: Program announced.
-
-- **8 February, 2016: 19:00 UTC** Mentoring organizations can begin
-  submitting applications to Google.
-
-- **19 February: 19:00 UTC** Mentoring organization application
-  deadline.
-
-- **20 - 29 February**: Google program administrators review
-  organization applications.
-
-- **29 February 19:00 UTC** List of accepted mentoring organizations
-  published on the Google Summer of Code 2016 site.
+&#42; &#42;13 October, 2015&#42;: Program announced. &#42; &#42;8
+February, 2016: 19:00 UTC&#42; Mentoring organizations can begin
+submitting applications to Google. &#42; &#42;19 February: 19:00
+UTC&#42; Mentoring organization application deadline. &#42; &#42;20 - 29
+February&#42;: Google program administrators review organization
+applications. &#42; &#42;29 February 19:00 UTC&#42; List of accepted
+mentoring organizations published on the Google Summer of Code 2016
+site.
 
 Interim Period: Would-be students discuss project ideas with potential
 mentoring organizations.
 
-- **14 March: 19:00 UTC** Student application period opens.
-
-- **25 March: 19:00 UTC** Student application deadline.
+&#42; &#42;14 March: 19:00 UTC&#42; Student application period opens.
+&#42; &#42;25 March: 19:00 UTC&#42; Student application deadline.
 
 Interim Period: Mentoring organizations review and rank student
 proposals; where necessary, mentoring organizations may request further
@@ -6835,53 +5581,45 @@ Mentoring organizations review and rank student proposals; where
 necessary, mentoring organizations may request further proposal detail
 from the student applicant.
 
-- **22 April**: Accepted student proposals announced on the Google
-  Summer of Code 2016 site.
+&#42; &#42;22 April&#42;: Accepted student proposals announced on the
+Google Summer of Code 2016 site.
 
 Community Bonding Period: Students get to know mentors, read
 documentation, get up to speed to begin working on their projects.
 
-- **23 May**: Students begin coding for their Google Summer of Code
-  projects; Google begins issuing initial student payments provided tax
-  forms are on file and students are in good standing with their
-  communities.
+&#42; &#42;23 May&#42;: Students begin coding for their Google Summer of
+Code projects; Google begins issuing initial student payments provided
+tax forms are on file and students are in good standing with their
+communities.
 
 Work Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- **20 June: 19:00 UTC** Mentors and students can begin submitting
-  mid-term evaluations.
-
-- \'\'\'27 June: 19:00 UTC \'\'\'Mid-term evaluations deadline; Google
-  begins issuing mid-term student payments provided passing student
-  survey is on file.
+&#42; &#42;20 June: 19:00 UTC&#42; Mentors and students can begin
+submitting mid-term evaluations. &#42; \'\'\'27 June: 19:00 UTC
+\'\'\'Mid-term evaluations deadline; Google begins issuing mid-term
+student payments provided passing student survey is on file.
 
 Work Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- **15 August**: Suggested \'pencils down\' date. Take a week to scrub
-  code, write tests, improve documentation, etc.
-
-- **21 to 23 August**: Final week: Students tidy code, write tests,
-  improve documentation and submit their code sample. Students also
-  submit their final mentor evaluation.
-
-- **23 August**: Mentors can start submitting final student evaluations.
-
-- **29 August**: 19:00 UTC Final evaluation deadline
-
-- **30 August**: Final results of Google Summer of Code 2016 announced
-
-- **Late October**: Mentor Summit at Google. Mentors and Organization
-  Administrators from each participating organization are invited to
-  Google for an unconference to collaborate on ideas to make the program
-  better and to make new friends too!
+&#42; &#42;15 August&#42;: Suggested \'pencils down\' date. Take a week
+to scrub code, write tests, improve documentation, etc. &#42; &#42;21 to
+23 August&#42;: Final week: Students tidy code, write tests, improve
+documentation and submit their code sample. Students also submit their
+final mentor evaluation. &#42; &#42;23 August&#42;: Mentors can start
+submitting final student evaluations. &#42; &#42;29 August&#42;: 19:00
+UTC Final evaluation deadline &#42; &#42;30 August&#42;: Final results
+of Google Summer of Code 2016 announced &#42; &#42;Late October&#42;:
+Mentor Summit at Google. Mentors and Organization Administrators from
+each participating organization are invited to Google for an
+unconference to collaborate on ideas to make the program better and to
+make new friends too!
 
 ## Ideas Page {#ideas-page}
 
-- **Status :** Open for Ideas\
-
-- **Link :** [Summer coding ideas for 2016](ideas.xml)
+&#42; &#42;Status :&#42; Open for Ideas\
+&#42; &#42;Link :&#42; [Summer coding ideas for 2016](ideas.xml)
 
 ## Links {#links}
 
@@ -6896,9 +5634,10 @@ projects.
 
 4.  [IRC](https://fedoraproject.org/wiki/How_to_use_IRC?rd=Communicate/IRCHowTo)
 
-5.  [Development](https://fedoraproject.org/wiki/Development) Find an
-    idea you like? Want to propose your own? See the [Getting Started
-    Guide](https://fedoraproject.org/wiki/GSOC_Guide_studentsGSoC).
+5.  [Development](https://fedoraproject.org/wiki/Development)
+
+Find an idea you like? Want to propose your own? See the [Getting
+Started Guide](https://fedoraproject.org/wiki/GSOC_Guide_studentsGSoC).
 
 ## Students Welcome {#students-welcome}
 
@@ -6906,14 +5645,15 @@ If you are a student looking forward to participate the GSoC 2016 with
 Fedora, please feel free to browse the idea list which is still growing.
 Do not hesitate to contact the mentors or contributors as indicated in
 this page for any related clarification. You also should find some
-like-minded people on the `#fedora-summer-coding` IRC channel.
+like-minded people on the &#96;&#35;fedora-summer-coding&#96; IRC
+channel.
 
 If you are new to the Fedora Project, the following material will help
 you to get started. Additionally, please register in the [Fedora Account
 System (FAS)](https://fedoraproject.org/wiki/Account_System?rd=FAS) if
 you are willing to continue with the Fedora Project. For getting quick
-help, `#fedora-devel` can be used for getting help with programming
-problems.
+help, &#96;&#35;fedora-devel&#96; can be used for getting help with
+programming problems.
 
 1.  [The Four Foundations of
     Fedora](https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html)
@@ -6971,9 +5711,9 @@ The following mentors are specifically available for projects related to
 crash dumping (kdump) memory image to usb storage. Compared to the
 traditional kdump solution, it is,
 
-\* more reliable and scalable\
-\* has smaller memory foot-print\
-\* more friendly to kernel developers
+&#96;&#42; more reliable and scalable&#96;\
+&#96;&#42; has smaller memory foot-print&#96;\
+&#96;&#42; more friendly to kernel developers &#96;
 
 More information here: <https://fedorahosted.org/tinykdump/>
 
@@ -6987,14 +5727,11 @@ More information here: <https://fedorahosted.org/tinykdump/>
 
 *Notes*: Rough roadmap:
 
-- Implement tinykdump daemon to be included in Fedora.
-
-- Submit kernel patches for reserving kdump memory at run-time for
-  community review and inclusion.
-
-- Currently, pstore only log kernel messages for panic and Oops. Patches
-  are needed to support logging of kdump kernel and initramfs console
-  output.
+&#42; Implement tinykdump daemon to be included in Fedora. &#42; Submit
+kernel patches for reserving kdump memory at run-time for community
+review and inclusion. &#42; Currently, pstore only log kernel messages
+for panic and Oops. Patches are needed to support logging of kdump
+kernel and initramfs console output.
 
 ### Implement MIPS bits to packages
 
@@ -7016,54 +5753,44 @@ them upstream.
 
 *Notes*: The following packages are in question:
 
-- **java** - builds on 32-bit MIPS but does not work, dies with SIGILL
-
-- **redhat-lsb** - misses assembly bits for MIPS
-
-- **anaconda/blivet** - completely MIPS unaware
-
-- **valgrind** - no FPXX support on 32-bit MIPS, builds on mips64el but
-  does not work
-
-- **elfutils** - unwinding is not supported on MIPS
-
-- **u-boot** - build working MIPS images
-
-- ...​ there are more but these are the most painful
+&#42; &#42;java&#42; - builds on 32-bit MIPS but does not work, dies
+with SIGILL &#42; &#42;redhat-lsb&#42; - misses assembly bits for MIPS
+&#42; &#42;anaconda/blivet&#42; - completely MIPS unaware &#42;
+&#42;valgrind&#42; - no FPXX support on 32-bit MIPS, builds on mips64el
+but does not work &#42; &#42;elfutils&#42; - unwinding is not supported
+on MIPS &#42; &#42;u-boot&#42; - build working MIPS images &#42; &#8230;
+there are more but these are the most painful
 
 This is obviously too much for a single project, we are going to agree
 on a reasonable subset.
 
 *Expected outcome*:
 
-- Better MIPS support in upstream projects and Fedora packages
-
-- Learn about MIPS architecture
-
-- Learn to communicate with upstreams
+&#42; Better MIPS support in upstream projects and Fedora packages &#42;
+Learn about MIPS architecture &#42; Learn to communicate with upstreams
 
 ## Idea list {#idea-list-for-fedora-community-operations-and-infrastructure}
 
 for Fedora Community Operations and Infrastructure
 
-### Fedora Infrastructure Web Application Development: \*Community Operations {#fedora-infrastructure-web-application-development-community-operations-commops}
+### Fedora Infrastructure Web Application Development: &#42;Community Operations {#fedora-infrastructure-web-application-development-community-operations-commops}
 
-(CommOps)\*
+(CommOps)&#42;
 
 +---------------+------------------------------------------------------+
-| Project       | **Community Operations** (CommOps)                   |
+| Project       | &#42;Community Operations&#42; (CommOps)             |
 +===============+======================================================+
-| IRC Channel   | #fedora-commops                                      |
+| IRC Channel   | &#35;fedora-commops                                  |
 +---------------+------------------------------------------------------+
 | Web page      | [CommOps                                             |
 |               | Wiki](https://fedoraproject.org/wiki/CommOps)        |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Remy                                            |
+| Mentor(s)     | &#42; [ Remy                                         |
 |               | DeCaus                                               |
 |               | emaker](https://fedoraproject.org/wiki/User:decause) |
 |               | (decause)                                            |
 |               |                                                      |
-|               | \* [ Corey                                           |
+|               | &#42; [ Corey                                        |
 |               | S                                                    |
 |               | heldon](https://fedoraproject.org/wiki/USER:corey84) |
 |               | (linux-modder)                                       |
@@ -7075,8 +5802,8 @@ for Fedora Community Operations and Infrastructure
 |               | support community infrastructure in a distributed    |
 |               | and automated fashion, that doesn't force people to  |
 |               | choose between using their precious volunteer time   |
-|               | to \"build things\" or \"build communities that      |
-|               | build things.\" The community operations team works  |
+|               | to \'build things\' or \'build communities that      |
+|               | build things.\' The community operations team works  |
 |               | across numerous technologies, and interest areas in  |
 |               | Fedora, including Messaging, Storytelling, Fedora    |
 |               | Badges, Fedora Hubs, Wiki, Culture, Metrics, Voting, |
@@ -7099,52 +5826,52 @@ for Fedora Community Operations and Infrastructure
 |               | Your internship with this project could also involve |
 |               | any or all of the following:                         |
 |               |                                                      |
-|               | \* Web testing and bug reporting / triaging \*       |
-|               | Content development and syndication \* Writing for   |
-|               | the web and print \* Collaboration with Fedora       |
-|               | Council and Leadership on Project Objectives and     |
-|               | Initiatives \* Volunteer Coordination and Organizing |
-|               | \* Campaign development and implementation \*        |
-|               | Advocacy and Messaging                               |
+|               | &#42; Web testing and bug reporting / triaging &#42; |
+|               | Content development and syndication &#42; Writing    |
+|               | for the web and print &#42; Collaboration with       |
+|               | Fedora Council and Leadership on Project Objectives  |
+|               | and Initiatives &#42; Volunteer Coordination and     |
+|               | Organizing &#42; Campaign development and            |
+|               | implementation &#42; Advocacy and Messaging          |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* Effective Communication Skills; written and       |
-|               | verbal, synchronous and asynchronous. \* Passion for |
-|               | Free/Open Source Software and Free Culture \*        |
-|               | Self-directed and Curious nature \* Experience       |
+|               | &#42; Effective Communication Skills; written and    |
+|               | verbal, synchronous and asynchronous. &#42; Passion  |
+|               | for Free/Open Source Software and Free Culture &#42; |
+|               | Self-directed and Curious nature &#42; Experience    |
 |               | writing for the web (Content only is ok, HTML/CSS    |
-|               | even better) \* Experience publishing and/or         |
-|               | syndicating content via Social Media \* Experience   |
-|               | working in teams, or community organizing \* Basic   |
-|               | Web development/design skills                        |
+|               | even better) &#42; Experience publishing and/or      |
+|               | syndicating content via Social Media &#42;           |
+|               | Experience working in teams, or community organizing |
+|               | &#42; Basic Web development/design skills            |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Basic multimedia development skills \*            |
-|               | Sysadmin/Devops skills \* programming/scripting      |
+|               | &#42; Basic multimedia development skills &#42;      |
+|               | Sysadmin/Devops skills &#42; programming/scripting   |
 |               | skills                                               |
 +---------------+------------------------------------------------------+
 
-### Fedora Infrastructure Web Application Development: **Fedora Hubs**
+### Fedora Infrastructure Web Application Development: &#42;Fedora Hubs&#42; {#fedora-infrastructure-web-application-development-fedora-hubs}
 
 +---------------+------------------------------------------------------+
 | Project       | Fedora Infrastructure Web Application Development:   |
-|               | **Fedora Hubs**                                      |
+|               | &#42;Fedora Hubs&#42;                                |
 +===============+======================================================+
-| IRC Channel   | #fedora-hubs                                         |
+| IRC Channel   | &#35;fedora-hubs                                     |
 +---------------+------------------------------------------------------+
-| Web page      | \* [ Fedora Infrastructure                           |
+| Web page      | &#42; [ Fedora Infrastructure                        |
 |               | Team](https://fedoraproject.org/wiki/Infrastructure) |
-|               | \* [Fedora Hubs                                      |
+|               | &#42; [Fedora Hubs                                   |
 |               | Wiki](https://fedoraproject.org/wiki/Fedora_Hubs)    |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Luke                                            |
+| Mentor(s)     | &#42; [ Luke                                         |
 |               | Macken](https://fedoraproject.org/wiki/User:lmacken) |
-|               | (lmacken) \* [ Remy                                  |
+|               | (lmacken) &#42; [ Remy                               |
 |               | DeCaus                                               |
 |               | emaker](https://fedoraproject.org/wiki/User:decause) |
-|               | (decause) \* [ Corey                                 |
+|               | (decause) &#42; [ Corey                              |
 |               | S                                                    |
 |               | heldon](https://fedoraproject.org/wiki/USER:corey84) |
 |               | (linux-modder)                                       |
@@ -7177,20 +5904,20 @@ for Fedora Community Operations and Infrastructure
 |               | Working on this project could involve any of the     |
 |               | following:                                           |
 |               |                                                      |
-|               | \* Adding new features to the web frontend \* Adding |
-|               | new capabilities to the backend \* Writing and       |
-|               | deploying new widgets \* Triaging and processing new |
-|               | widget ideas submitted by the community at large. \* |
-|               | Implementing existing (and thoroughly detailed)      |
-|               | mockups from previous UI/UX interns and team         |
-|               | members.                                             |
+|               | &#42; Adding new features to the web frontend &#42;  |
+|               | Adding new capabilities to the backend &#42; Writing |
+|               | and deploying new widgets &#42; Triaging and         |
+|               | processing new widget ideas submitted by the         |
+|               | community at large. &#42; Implementing existing (and |
+|               | thoroughly detailed) mockups from previous UI/UX     |
+|               | interns and team members.                            |
 |               |                                                      |
 |               | Skills:                                              |
 |               |                                                      |
-|               | \* HTML/Javascript/CSS \* Basic Python a plus \*     |
-|               | Bonus: Experience with Bootstrap, jinja templates,   |
-|               | Fedmsg, datanommer/grepper, or other fedora          |
-|               | infrastructure projects a HUGE plus.                 |
+|               | &#42; HTML/Javascript/CSS &#42; Basic Python a plus  |
+|               | &#42; Bonus: Experience with Bootstrap, jinja        |
+|               | templates, Fedmsg, datanommer/grepper, or other      |
+|               | fedora infrastructure projects a HUGE plus.          |
 |               |                                                      |
 |               | When applying to this project, it may be useful to   |
 |               | review the designers\' blogs about the projects\'    |
@@ -7198,14 +5925,15 @@ for Fedora Community Operations and Infrastructure
 |               |                                                      |
 |               | Fedora Developer Portal                              |
 |               |                                                      |
-|               | \*                                                   |
+|               | &#42;                                                |
 |               | <http://blog.linuxg                                  |
 |               | rrl.com/2015/09/15/fedora-developer-website-design/> |
 |               |                                                      |
 |               | Fedora Hubs                                          |
 |               |                                                      |
-|               | \* <http://blog.linuxgrrl.com/category/fedora-hubs>  |
-|               | \* <https://meghanrichardson.wordpress.com/>         |
+|               | &#42;                                                |
+|               | <http://blog.linuxgrrl.com/category/fedora-hubs>     |
+|               | &#42; <https://meghanrichardson.wordpress.com/>      |
 |               |                                                      |
 |               | A video overview of the Hubs project is available    |
 |               | here:                                                |
@@ -7213,12 +5941,12 @@ for Fedora Community Operations and Infrastructure
 |               | //blog.linuxgrrl.com/2015/07/01/fedora-hubs-update/> |
 +---------------+------------------------------------------------------+
 
-### Fedora Infrastructure Web Application Development: **Pagure**
+### Fedora Infrastructure Web Application Development: &#42;Pagure&#42; {#fedora-infrastructure-web-application-development-pagure}
 
 +---------------+------------------------------------------------------+
-| Project       | **Pagure**                                           |
+| Project       | &#42;Pagure&#42;                                     |
 +===============+======================================================+
-| IRC Channel   | #fedora-apps                                         |
+| IRC Channel   | &#35;fedora-apps                                     |
 +---------------+------------------------------------------------------+
 | Web page      | [Pagure project](https://pagure.io)                  |
 +---------------+------------------------------------------------------+
@@ -7238,29 +5966,30 @@ for Fedora Community Operations and Infrastructure
 |               | Your internship with this project could also involve |
 |               | any or all of the following:                         |
 |               |                                                      |
-|               | \* Web testing and bug reporting / triaging \*       |
-|               | Content development and syndication \* Participating |
-|               | in the effort to make of pagure the official         |
-|               | front-end to Fedora's packages git repositories      |
-|               | (currently being the read-only cgit) \* Implementing |
-|               | private projects in pagure \* Figuring out how/if    |
-|               | pagure can be a front-end for Fedora's git repo now  |
-|               | that they are namespaced (to offer more than just    |
-|               | rpms, for example docker containers)                 |
+|               | &#42; Web testing and bug reporting / triaging &#42; |
+|               | Content development and syndication &#42;            |
+|               | Participating in the effort to make of pagure the    |
+|               | official front-end to Fedora's packages git          |
+|               | repositories (currently being the read-only cgit)    |
+|               | &#42; Implementing private projects in pagure &#42;  |
+|               | Figuring out how/if pagure can be a front-end for    |
+|               | Fedora's git repo now that they are namespaced (to   |
+|               | offer more than just rpms, for example docker        |
+|               | containers)                                          |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* Effective Communication Skills; written and       |
-|               | verbal, synchronous and asynchronous. \* Passion for |
-|               | Free/Open Source Software and Free Culture \*        |
-|               | Self-directed and Curious nature \* Experience with  |
-|               | Flask, javascript and HTML \* Experience with git \* |
-|               | Sysadmin/Devops skills                               |
+|               | &#42; Effective Communication Skills; written and    |
+|               | verbal, synchronous and asynchronous. &#42; Passion  |
+|               | for Free/Open Source Software and Free Culture &#42; |
+|               | Self-directed and Curious nature &#42; Experience    |
+|               | with Flask, javascript and HTML &#42; Experience     |
+|               | with git &#42; Sysadmin/Devops skills                |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Previous experience with Pagure \* Experience     |
-|               | with developing APIs and CLIs using it               |
+|               | &#42; Previous experience with Pagure &#42;          |
+|               | Experience with developing APIs and CLIs using it    |
 +---------------+------------------------------------------------------+
 
 ## Idea list for Fedora Atomic GSoC 2016
@@ -7274,19 +6003,19 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic*                                      |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Colin                                           |
+| Mentor(s)     | &#42; [ Colin                                        |
 |               | W                                                    |
 |               | alters](https://fedoraproject.org/wiki/User:walters) |
-|               | (walters) \* [ Giuseppe                              |
+|               | (walters) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
 |               | (gscrivano)                                          |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Next generation super-privileged                 |
+| Notes         | &#42; [Next generation super-privileged              |
 |               | containers](                                         |
 |               | https://github.com/projectatomic/atomic/issues/298): |
 |               | Improve building, managing, and updating these       |
@@ -7296,21 +6025,22 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required skills:                                     |
 |               |                                                      |
-|               | \* C programming \* Python programming \* Docker     |
-|               | and/or runC experience                               |
+|               | &#42; C programming &#42; Python programming &#42;   |
+|               | Docker and/or runC experience                        |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Golang programming \* SELinux knowledge           |
+|               | &#42; Golang programming &#42; SELinux knowledge     |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Implement ability for user to install flannel,    |
+|               | &#42; Implement ability for user to install flannel, |
 |               | etcd, and other bootstrap containers and manage them |
-|               | easily \* New super-priv containers are accepted     |
-|               | into planned design of Atomic Host \* Learn how      |
-|               | container security works \* Learn advanced SELinux   |
-|               | hackery \* Learn how to manage container dependances |
+|               | easily &#42; New super-priv containers are accepted  |
+|               | into planned design of Atomic Host &#42; Learn how   |
+|               | container security works &#42; Learn advanced        |
+|               | SELinux hackery &#42; Learn how to manage container  |
+|               | dependances                                          |
 +---------------+------------------------------------------------------+
 
 ### Atomic Host package layering
@@ -7318,19 +6048,19 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic*                                      |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Colin                                           |
+| Mentor(s)     | &#42; [ Colin                                        |
 |               | W                                                    |
 |               | alters](https://fedoraproject.org/wiki/User:walters) |
-|               | (walters) \* [ Giuseppe                              |
+|               | (walters) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
 |               | (gscrivano)                                          |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Atomic Host package                              |
+| Notes         | &#42; [Atomic Host package                           |
 |               | layering](ht                                         |
 |               | tps://github.com/projectatomic/rpm-ostree/pull/107): |
 |               | Improve the package layering design, support more    |
@@ -7338,26 +6068,26 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming \* Fedora or other Linux            |
+|               | &#42; C programming &#42; Fedora or other Linux      |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Knowledge of RPM packaging \* Experience working  |
-|               | in Linux distributions                               |
+|               | &#42; Knowledge of RPM packaging &#42; Experience    |
+|               | working in Linux distributions                       |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* rpm-ostree, libhif                                |
+|               | &#42; rpm-ostree, libhif                             |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Advanced                                          |
+|               | &#42; Advanced                                       |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Ability to layer debugging, bootstrap, and other  |
-|               | packages \* Learn how OStree images work \* Learn    |
-|               | packaging security practices and theory              |
+|               | &#42; Ability to layer debugging, bootstrap, and     |
+|               | other packages &#42; Learn how OStree images work    |
+|               | &#42; Learn packaging security practices and theory  |
 +---------------+------------------------------------------------------+
 
 ### Bootstrap with gpgcheck in kickstart
@@ -7365,51 +6095,52 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic*                                      |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Josh                                            |
+| Mentor(s)     | &#42; [ Josh                                         |
 |               | Berkus](https://fedoraproject.org/wiki/User:jberkus) |
-|               | (jberkus) \* [ Giuseppe                              |
+|               | (jberkus) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
-|               | (gscrivano) \* [ Corey                               |
+|               | (gscrivano) &#42; [ Corey                            |
 |               | S                                                    |
 |               | heldon](https://fedoraproject.org/wiki/User:corey84) |
 |               | (linux-modder)                                       |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Bootstrap with gpgcheck in                       |
+| Notes         | &#42; [Bootstrap with gpgcheck in                    |
 |               | kickstart](http                                      |
 |               | s://github.com/projectatomic/rpm-ostree/issues/190): |
 |               | Add a way for importing a GPG key from the kickstart |
-|               | `ostreesetup` command before the download starts.    |
-|               | [\"ostreesetup\" is described                        |
+|               | &#96;ostreesetup&#96; command before the download    |
+|               | starts. [\'ostreesetup\' is described                |
 |               | here](http                                           |
 |               | s://docs.fedoraproject.org/en-US/Fedora/23/html/Inst |
 |               | allation_Guide/appe-kickstart-syntax-reference.html) |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* Ability to use kickstart images \* Experience     |
-|               | with virt helpful \* Fedora or other Linux           |
-|               | Experience                                           |
+|               | &#42; Ability to use kickstart images &#42;          |
+|               | Experience with virt helpful &#42; Fedora or other   |
+|               | Linux Experience                                     |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* kickstart \* gpg \* virt \* RPM-OStree            |
+|               | &#42; kickstart &#42; gpg &#42; virt &#42;           |
+|               | RPM-OStree                                           |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Ability to kickstart atomic images with full gpg  |
-|               | support working \* Improved software supply chain    |
-|               | hygiene for project atomic \* Learning how secure    |
-|               | provisioning works \* Learning how to get code       |
-|               | merged upstream                                      |
+|               | &#42; Ability to kickstart atomic images with full   |
+|               | gpg support working &#42; Improved software supply   |
+|               | chain hygiene for project atomic &#42; Learning how  |
+|               | secure provisioning works &#42; Learning how to get  |
+|               | code merged upstream                                 |
 +---------------+------------------------------------------------------+
 
 ### Improve ability to monitor running/canceled transactions
@@ -7417,20 +6148,21 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic* IRC Channel                          |
 +===============+======================================================+
-| #atomic       | Web page                                             |
+| &#35;atomic   | Web page                                             |
 +---------------+------------------------------------------------------+
 | [Proj         | Mentor(s)                                            |
 | ectAtomic.io] |                                                      |
 | (https://proj |                                                      |
 | ectatomic.io) |                                                      |
 +---------------+------------------------------------------------------+
-| \* [ Josh     | Notes                                                |
+| &#42; [ Josh  | Notes                                                |
 | Berkus](https |                                                      |
 | ://fedoraproj |                                                      |
 | ect.org/wiki/ |                                                      |
 | User:jberkus) |                                                      |
-| (jberkus) \*  |                                                      |
-| [ Giuseppe    |                                                      |
+| (jberkus)     |                                                      |
+| &#42; [       |                                                      |
+| Giuseppe      |                                                      |
 | Scri          |                                                      |
 | vano](https:/ |                                                      |
 | /fedoraprojec |                                                      |
@@ -7444,7 +6176,7 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic*                                      |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
@@ -7452,47 +6184,48 @@ up-to-date version is there.
 |               | Berkus](https://fedoraproject.org/wiki/User:jberkus) |
 |               | (jberkus)                                            |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Support for end-of-life                          |
+| Notes         | &#42; [Support for end-of-life                       |
 |               | notification](http                                   |
 |               | s://github.com/projectatomic/rpm-ostree/issues/142): |
-|               | Add support for having an `end-of-life` notification |
-|               | to inform users if a particular branch is not        |
-|               | supported anymore.                                   |
+|               | Add support for having an &#96;end-of-life&#96;      |
+|               | notification to inform users if a particular branch  |
+|               | is not supported anymore.                            |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming experience \* Fedora or other       |
+|               | &#42; C programming experience &#42; Fedora or other |
 |               | GNU/Linux Experience                                 |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Advanced C programming experience \* experience   |
-|               | with RPM packaging                                   |
+|               | &#42; Advanced C programming experience &#42;        |
+|               | experience with RPM packaging                        |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* rpm-ostree \* atomic CLI                          |
+|               | &#42; rpm-ostree &#42; atomic CLI                    |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Novice                                            |
+|               | &#42; Novice                                         |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* rpm-ostree and atomic command output explaining   |
-|               | when a version of an upgraded tree branch is end of  |
-|               | life (EoL) \* feature merged into future releases,   |
-|               | and packaged for distribution \* Learn how to work   |
-|               | with upstreams and Linux distributions \* Understand |
-|               | how EOL policies and lifecycles work                 |
+|               | &#42; rpm-ostree and atomic command output           |
+|               | explaining when a version of an upgraded tree branch |
+|               | is end of life (EoL) &#42; feature merged into       |
+|               | future releases, and packaged for distribution &#42; |
+|               | Learn how to work with upstreams and Linux           |
+|               | distributions &#42; Understand how EOL policies and  |
+|               | lifecycles work                                      |
 +---------------+------------------------------------------------------+
 
 ### rpm-ostree operation history support
 
 +---------------+------------------------------------------------------+
-| Project       | **Fedora Atomic**                                    |
+| Project       | &#42;Fedora Atomic&#42;                              |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
@@ -7500,53 +6233,54 @@ up-to-date version is there.
 |               | Berkus](https://fedoraproject.org/wiki/User:jberkus) |
 |               | (jberkus)                                            |
 +---------------+------------------------------------------------------+
-| Notes         | \* [rpm-ostree operation history                     |
+| Notes         | &#42; [rpm-ostree operation history                  |
 |               | support](htt                                         |
 |               | ps://github.com/projectatomic/rpm-ostree/issues/85): |
-|               | Add support for `atomic history` to display the      |
-|               | transactions history. It should work in a similar    |
-|               | way to `yum history`.                                |
+|               | Add support for &#96;atomic history&#96; to display  |
+|               | the transactions history. It should work in a        |
+|               | similar way to &#96;yum history&#96;.                |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming experience \* Python Programming    |
-|               | experience \* Fedora or other GNU/Linux experience   |
+|               | &#42; C programming experience &#42; Python          |
+|               | Programming experience &#42; Fedora or other         |
+|               | GNU/Linux experience                                 |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Advanced C programming experience \* Advanced     |
-|               | Python programming experience \* Ability to work     |
-|               | with Upstreams                                       |
+|               | &#42; Advanced C programming experience &#42;        |
+|               | Advanced Python programming experience &#42; Ability |
+|               | to work with Upstreams                               |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Duplication of support for history in the atomic  |
-|               | command, similar to \"yum history\" \* Strong        |
-|               | command history and output on the system, possibly   |
-|               | in systemd journal                                   |
+|               | &#42; Duplication of support for history in the      |
+|               | atomic command, similar to \'yum history\' &#42;     |
+|               | Strong command history and output on the system,     |
+|               | possibly in systemd journal                          |
 +---------------+------------------------------------------------------+
 
 ### Support Metalink for OSTree
 
 +---------------+------------------------------------------------------+
-| Project       | **Fedora Atomic**                                    |
+| Project       | &#42;Fedora Atomic&#42;                              |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Josh                                            |
+| Mentor(s)     | &#42; [ Josh                                         |
 |               | Berkus](https://fedoraproject.org/wiki/User:jberkus) |
-|               | (jberkus) \* [ Giuseppe                              |
+|               | (jberkus) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
 |               | (giuseppe)                                           |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Support metalink for                             |
+| Notes         | &#42; [Support metalink for                          |
 |               | OSTree]                                              |
 |               | (https://bugzilla.gnome.org/show_bug.cgi?id=729388): |
 |               | Add support for metalink files and support downloads |
@@ -7555,22 +6289,23 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming experience \* Metalink experience   |
-|               | \* Experience working with RPM packaging             |
+|               | &#42; C programming experience &#42; Metalink        |
+|               | experience &#42; Experience working with RPM         |
+|               | packaging                                            |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Advanced C programming experience \* Ability to   |
-|               | work with Upstreams                                  |
+|               | &#42; Advanced C programming experience &#42;        |
+|               | Ability to work with Upstreams                       |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Ability to use a list of mirrors for OSTree       |
-|               | upgrade \* Ability to fetch trees in parallel        |
+|               | &#42; Ability to use a list of mirrors for OSTree    |
+|               | upgrade &#42; Ability to fetch trees in parallel     |
 +---------------+------------------------------------------------------+
 
 ### Drop privileges for HTTP fetches
@@ -7578,18 +6313,18 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *\'Fedora Atomic*                                    |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Josh                                            |
+| Mentor(s)     | &#42; [ Josh                                         |
 |               | Berkus](https://fedoraproject.org/wiki/User:jberkus) |
-|               | (jberkus) \* [ Giuseppe                              |
+|               | (jberkus) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
 |               | (giuseppe)                                           |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Drop privileges for HTTP                         |
+| Notes         | &#42; [Drop privileges for HTTP                      |
 |               | fetches]                                             |
 |               | (https://bugzilla.gnome.org/show_bug.cgi?id=730037): |
 |               | The HTTP fetcher code is running in the same process |
@@ -7598,25 +6333,26 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming experience \* SELinux knowledge     |
+|               | &#42; C programming experience &#42; SELinux         |
+|               | knowledge                                            |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Advanced C programming experience \* libsoup      |
-|               | experience helpful \* Advanced SELinux Experience \* |
-|               | Ability to work with Upstreams                       |
+|               | &#42; Advanced C programming experience &#42;        |
+|               | libsoup experience helpful &#42; Advanced SELinux    |
+|               | Experience &#42; Ability to work with Upstreams      |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* OSTree uses a different process for fetching data |
-|               | over HTTP \* Main OSTree process communicates        |
-|               | through Inter Process Communication (IPC) with       |
-|               | fetcher process \* Fetcher confined to write-only in |
-|               | a temporary file                                     |
+|               | &#42; OSTree uses a different process for fetching   |
+|               | data over HTTP &#42; Main OSTree process             |
+|               | communicates through Inter Process Communication     |
+|               | (IPC) with fetcher process &#42; Fetcher confined to |
+|               | write-only in a temporary file                       |
 +---------------+------------------------------------------------------+
 
 ### Support kpatch
@@ -7624,21 +6360,21 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic*                                      |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Josh                                            |
+| Mentor(s)     | &#42; [ Josh                                         |
 |               | Berkus](https://fedoraproject.org/wiki/User:jberkus) |
-|               | (jberkus) \* [ Giuseppe                              |
+|               | (jberkus) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
-|               | (giuseppe) \* [ Corey                                |
+|               | (giuseppe) &#42; [ Corey                             |
 |               | S                                                    |
 |               | heldon](https://fedoraproject.org/wiki/User:corey84) |
 |               | (linux-modder)                                       |
 +---------------+------------------------------------------------------+
-| Notes         | \* [Support                                          |
+| Notes         | &#42; [Support                                       |
 |               | kpatch](http                                         |
 |               | s://github.com/projectatomic/rpm-ostree/issues/118): |
 |               | Support live update for the kernel without rebooting |
@@ -7646,26 +6382,28 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming experience \* Python programming    |
-|               | experience \* Basic knowledge of D-Bus               |
+|               | &#42; C programming experience &#42; Python          |
+|               | programming experience &#42; Basic knowledge of      |
+|               | D-Bus                                                |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Advanced C programming experience \* Advanced     |
-|               | Python programming experience \* Advanced knowledge  |
-|               | of D-Bus \* Familiarity with kpatch                  |
+|               | &#42; Advanced C programming experience &#42;        |
+|               | Advanced Python programming experience &#42;         |
+|               | Advanced knowledge of D-Bus &#42; Familiarity with   |
+|               | kpatch                                               |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Partial live update feature integrated into       |
-|               | Fedora Atomic Host \* Learn to implement live kernel |
-|               | update \* Learn to work with upstream project        |
-|               | integration \* Understand RPM-OSTree packaging and   |
-|               | images                                               |
+|               | &#42; Partial live update feature integrated into    |
+|               | Fedora Atomic Host &#42; Learn to implement live     |
+|               | kernel update &#42; Learn to work with upstream      |
+|               | project integration &#42; Understand RPM-OSTree      |
+|               | packaging and images                                 |
 +---------------+------------------------------------------------------+
 
 ### Automatic Atomic Host Updates
@@ -7673,19 +6411,19 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Fedora Atomic*                                      |
 +===============+======================================================+
-| IRC Channel   | #atomic                                              |
+| IRC Channel   | &#35;atomic                                          |
 +---------------+------------------------------------------------------+
 | Web page      | [ProjectAtomic.io](https://projectatomic.io)         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* [ Colin                                           |
+| Mentor(s)     | &#42; [ Colin                                        |
 |               | W                                                    |
 |               | alters](https://fedoraproject.org/wiki/User:walters) |
-|               | (walters) \* [ Giuseppe                              |
+|               | (walters) &#42; [ Giuseppe                           |
 |               | Scri                                                 |
 |               | vano](https://fedoraproject.org/wiki/User:gscrivano) |
 |               | (giuseppe)                                           |
 +---------------+------------------------------------------------------+
-| Notes         | \*                                                   |
+| Notes         | &#42;                                                |
 |               | <http                                                |
 |               | s://github.com/projectatomic/rpm-ostree/issues/177>: |
 |               | implement a service that automatically upgrades the  |
@@ -7695,25 +6433,26 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* C programming experience \* Python programming    |
-|               | experience \* Basic knowledge of systemd \* Ability  |
-|               | to create and run VMs.                               |
+|               | &#42; C programming experience &#42; Python          |
+|               | programming experience &#42; Basic knowledge of      |
+|               | systemd &#42; Ability to create and run VMs.         |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Advanced C programming experience \* Advanced     |
-|               | Python programming experience \* Familiarity with    |
-|               | RPM packaging                                        |
+|               | &#42; Advanced C programming experience &#42;        |
+|               | Advanced Python programming experience &#42;         |
+|               | Familiarity with RPM packaging                       |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* Automated updates integrated into Fedora Atomic   |
-|               | Host \* Learn how RPM-OStree packaging and images    |
-|               | work \* Develop ability to contribute to Atomic Host |
+|               | &#42; Automated updates integrated into Fedora       |
+|               | Atomic Host &#42; Learn how RPM-OStree packaging and |
+|               | images work &#42; Develop ability to contribute to   |
+|               | Atomic Host                                          |
 +---------------+------------------------------------------------------+
 
 ## Idea list for Cockpit
@@ -7723,15 +6462,15 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Cockpit*                                            |
 +===============+======================================================+
-| IRC Channel   | #cockpit                                             |
+| IRC Channel   | &#35;cockpit                                         |
 +---------------+------------------------------------------------------+
 | Webpage       | <http://cockpit-project.org>                         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* Dominik Perpeet (dperpeet) \* Peter Volpe         |
+| Mentor(s)     | &#42; Dominik Perpeet (dperpeet) &#42; Peter Volpe   |
 |               | (petervo)                                            |
 +---------------+------------------------------------------------------+
-| Notes         | \* Systemd provides timers for calendar time events  |
-|               | and monotonic time events                            |
+| Notes         | &#42; Systemd provides timers for calendar time      |
+|               | events and monotonic time events                     |
 |               | (<http://www.freed                                   |
 |               | esktop.org/software/systemd/man/systemd.timer.html>, |
 |               | <ht                                                  |
@@ -7740,34 +6479,35 @@ up-to-date version is there.
 |               | Cockpit Project, a web-based management console for  |
 |               | servers.                                             |
 |               |                                                      |
-|               | \* Some designs for timers in Cockpit exist at       |
+|               | &#42; Some designs for timers in Cockpit exist at    |
 |               | <https://trello.com/c/1B2lZViZ/74-timers-and-cron>.  |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* JavaScript (ideally jQuery) \* Fedora or other    |
-|               | Linux                                                |
+|               | &#42; JavaScript (ideally jQuery) &#42; Fedora or    |
+|               | other Linux                                          |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Familiarity with D-BUS \* Familiarity with Python |
-|               | (2.7) \* Experience working in Linux distributions   |
+|               | &#42; Familiarity with D-BUS &#42; Familiarity with  |
+|               | Python (2.7) &#42; Experience working in Linux       |
+|               | distributions                                        |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* cockpit (<http://cockpit-project.org/>)           |
+|               | &#42; cockpit (<http://cockpit-project.org/>)        |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Beginner to intermediate                          |
+|               | &#42; Beginner to intermediate                       |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* A user of the Cockpit UI is able to view existing |
-|               | timers, edit existing ones or create new timers      |
-|               | while providing the minimum set of necessary         |
-|               | information to the UI \* The UI optionally allows    |
-|               | more advanced settings to be selected \*             |
+|               | &#42; A user of the Cockpit UI is able to view       |
+|               | existing timers, edit existing ones or create new    |
+|               | timers while providing the minimum set of necessary  |
+|               | information to the UI &#42; The UI optionally allows |
+|               | more advanced settings to be selected &#42;          |
 |               | Functionality of added features is tested via unit   |
 |               | and/or integration tests                             |
 +---------------+------------------------------------------------------+
@@ -7777,14 +6517,14 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Cockpit*                                            |
 +===============+======================================================+
-| IRC Channel   | #cockpit                                             |
+| IRC Channel   | &#35;cockpit                                         |
 +---------------+------------------------------------------------------+
 | Web page      | <http://cockpit-project.org>                         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* Dominik Perpeet (dperpeet) \* Peter Volpe         |
+| Mentor(s)     | &#42; Dominik Perpeet (dperpeet) &#42; Peter Volpe   |
 |               | (petervo)                                            |
 +---------------+------------------------------------------------------+
-| Notes         | \* Cockpit provides an interface for updating the    |
+| Notes         | &#42; Cockpit provides an interface for updating the |
 |               | installed software on Atomic systems using           |
 |               | rpm-ostree. Admins should be able to examine the     |
 |               | OSTree repos enabled on a machine, and               |
@@ -7792,30 +6532,30 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* JavaScript (ideally angular) \* Fedora or other   |
-|               | Linux                                                |
+|               | &#42; JavaScript (ideally angular) &#42; Fedora or   |
+|               | other Linux                                          |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Familiarity with D-BUS \* Familiarity with Python |
-|               | (2.7) \* Familiarity with OSTree \* Experience       |
-|               | working in Linux distributions                       |
+|               | &#42; Familiarity with D-BUS &#42; Familiarity with  |
+|               | Python (2.7) &#42; Familiarity with OSTree &#42;     |
+|               | Experience working in Linux distributions            |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* cockpit (<http://cockpit-project.org/>) \*        |
+|               | &#42; cockpit (<http://cockpit-project.org/>) &#42;  |
 |               | rpm-ostree                                           |
 |               | (<https://github.com/projectatomic/rpm-ostree>)      |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Beginner to intermediate                          |
+|               | &#42; Beginner to intermediate                       |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* A user of the Cockpit UI is able to examine the   |
-|               | OSTree repos enabled on a machine, and               |
-|               | add/edit/remove them. \* Functionality of added      |
+|               | &#42; A user of the Cockpit UI is able to examine    |
+|               | the OSTree repos enabled on a machine, and           |
+|               | add/edit/remove them. &#42; Functionality of added   |
 |               | features is tested via unit and/or integration tests |
 +---------------+------------------------------------------------------+
 
@@ -7824,14 +6564,14 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Cockpit*                                            |
 +===============+======================================================+
-| IRC Channels  | #cockpit                                             |
+| IRC Channels  | &#35;cockpit                                         |
 +---------------+------------------------------------------------------+
 | Webpage       | <http://cockpit-project.org>                         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* Dominik Perpeet (dperpeet) \* Peter Volpe         |
+| Mentor(s)     | &#42; Dominik Perpeet (dperpeet) &#42; Peter Volpe   |
 |               | (petervo)                                            |
 +---------------+------------------------------------------------------+
-| Notes         | \* Cockpit provides an interface for updating the    |
+| Notes         | &#42; Cockpit provides an interface for updating the |
 |               | installed software on Atomic systems using           |
 |               | rpm-ostree. Admins should be able to \'rebase\' to a |
 |               | different operating system channel or timeline via   |
@@ -7839,31 +6579,32 @@ up-to-date version is there.
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* JavaScript (ideally angular) \* Fedora or other   |
-|               | Linux                                                |
+|               | &#42; JavaScript (ideally angular) &#42; Fedora or   |
+|               | other Linux                                          |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Familiarity with D-BUS \* Familiarity with Python |
-|               | (2.7) \* Familiarity with OSTree \* Experience       |
-|               | working in Linux distributions                       |
+|               | &#42; Familiarity with D-BUS &#42; Familiarity with  |
+|               | Python (2.7) &#42; Familiarity with OSTree &#42;     |
+|               | Experience working in Linux distributions            |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* cockpit (<http://cockpit-project.org/>) \*        |
+|               | &#42; cockpit (<http://cockpit-project.org/>) &#42;  |
 |               | rpm-ostree                                           |
 |               | (<https://github.com/projectatomic/rpm-ostree>)      |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Beginner to intermediate                          |
+|               | &#42; Beginner to intermediate                       |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* A user of the Cockpit UI is able to be able to    |
+|               | &#42; A user of the Cockpit UI is able to be able to |
 |               | \'rebase\' to a different operating system channel   |
-|               | or timeline via Cockpit. \* Functionality of added   |
-|               | features is tested via unit and/or integration tests |
+|               | or timeline via Cockpit. &#42; Functionality of      |
+|               | added features is tested via unit and/or integration |
+|               | tests                                                |
 +---------------+------------------------------------------------------+
 
 ### Setup a FreeIPA server in Cockpit using Rolekit
@@ -7871,18 +6612,18 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | *Cockpit*                                            |
 +===============+======================================================+
-| IRC Channel   | #cockpit                                             |
+| IRC Channel   | &#35;cockpit                                         |
 +---------------+------------------------------------------------------+
 | Webpage       | <http://cockpit-project.org>                         |
 +---------------+------------------------------------------------------+
-| Mentor(s)     | \* Dominik Perpeet (dperpeet) \* Peter Volpe         |
+| Mentor(s)     | &#42; Dominik Perpeet (dperpeet) &#42; Peter Volpe   |
 |               | (petervo)                                            |
 +---------------+------------------------------------------------------+
-| Notes         | \* FreeIPA is a domain and directory server. This    |
+| Notes         | &#42; FreeIPA is a domain and directory server. This |
 |               | task implements a UI for setting it up.              |
 |               |                                                      |
-|               | \* The Rolekit Project provides a platform API for   |
-|               | deploying Server Roles such as FreeIPA onto a        |
+|               | &#42; The Rolekit Project provides a platform API    |
+|               | for deploying Server Roles such as FreeIPA onto a    |
 |               | system. Currently, it supports creating a Domain     |
 |               | Controller (based on FreeIPA) or a Database Server   |
 |               | (based on PostgreSQL). A major component of the      |
@@ -7891,40 +6632,41 @@ up-to-date version is there.
 |               | effort would be to enhance the Cockpit UI so that an |
 |               | administrator could deploy the FreeIPA role.         |
 |               |                                                      |
-|               | \* Some designs for rolekit integration into Cockpit |
-|               | exist at                                             |
+|               | &#42; Some designs for rolekit integration into      |
+|               | Cockpit exist at                                     |
 |               | <https://trello.com/c/7CZ                            |
 |               | qL9AQ/54-rolekit-integration-for-domain-controller>. |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* JavaScript (ideally jQuery) \* Fedora or other    |
-|               | Linux                                                |
+|               | &#42; JavaScript (ideally jQuery) &#42; Fedora or    |
+|               | other Linux                                          |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* Familiarity with D-BUS \* Familiarity with Python |
-|               | (2.7) \* Experience working in Linux distributions   |
-|               | \* Domain or directory experience                    |
+|               | &#42; Familiarity with D-BUS &#42; Familiarity with  |
+|               | Python (2.7) &#42; Experience working in Linux       |
+|               | distributions &#42; Domain or directory experience   |
 |               |                                                      |
 |               | Libraries and Software:                              |
 |               |                                                      |
-|               | \* cockpit (<http://cockpit-project.org/>) \*        |
+|               | &#42; cockpit (<http://cockpit-project.org/>) &#42;  |
 |               | FreeIPA (<https://www.freeipa.org/page/Main_Page>)   |
-|               | \* Rolekit (<https://fedorahosted.org/rolekit/>)     |
+|               | &#42; Rolekit (<https://fedorahosted.org/rolekit/>)  |
 |               |                                                      |
 |               | Difficulty Level:                                    |
 |               |                                                      |
-|               | \* Intermediate                                      |
+|               | &#42; Intermediate                                   |
 |               |                                                      |
 |               | Expected outcomes                                    |
 |               |                                                      |
-|               | \* A user of the Cockpit UI is able to deploy a      |
+|               | &#42; A user of the Cockpit UI is able to deploy a   |
 |               | Domain Controller while providing the minimum set of |
-|               | necessary information to the UI \* The UI allows     |
-|               | more advanced settings to be selected \* The UI also |
-|               | provides a link post-deployment that allows the user |
-|               | to browse to the Domain Controller administration UI |
+|               | necessary information to the UI &#42; The UI allows  |
+|               | more advanced settings to be selected &#42; The UI   |
+|               | also provides a link post-deployment that allows the |
+|               | user to browse to the Domain Controller              |
+|               | administration UI                                    |
 +---------------+------------------------------------------------------+
 
 ## Docs
@@ -7934,7 +6676,7 @@ up-to-date version is there.
 +---------------+------------------------------------------------------+
 | Project       | Docs Project                                         |
 +===============+======================================================+
-| IRC Channel   | #fedora-docs                                         |
+| IRC Channel   | &#35;fedora-docs                                     |
 +---------------+------------------------------------------------------+
 | Webpage       | <https://fedoraproject.org/wiki/Docs_Project>        |
 +---------------+------------------------------------------------------+
@@ -7974,26 +6716,26 @@ up-to-date version is there.
 |               | Your internship with this project could also involve |
 |               | any or all of the following:                         |
 |               |                                                      |
-|               | \* Exposure to content development workflows. \*     |
-|               | Mentoring from seasoned sysadmins, veteran technical |
-|               | writers, and free software advocates. \* Learning    |
-|               | the Open Source Way, the practice of transparent     |
-|               | positive collaboration that forms bedrock of         |
-|               | Fedora's Foundations. \*                             |
+|               | &#42; Exposure to content development workflows.     |
+|               | &#42; Mentoring from seasoned sysadmins, veteran     |
+|               | technical writers, and free software advocates.      |
+|               | &#42; Learning the Open Source Way, the practice of  |
+|               | transparent positive collaboration that forms        |
+|               | bedrock of Fedora's Foundations. &#42;               |
 |               |                                                      |
 |               | Required:                                            |
 |               |                                                      |
-|               | \* general python skills \* experience with          |
-|               | generating and rendering ReStructuredText \*         |
+|               | &#42; general python skills &#42; experience with    |
+|               | generating and rendering ReStructuredText &#42;      |
 |               | familiarity with DocBook, or other structured        |
-|               | contextual XML. \* familiarity with Jenkins,         |
+|               | contextual XML. &#42; familiarity with Jenkins,      |
 |               | buildbot, or similar buildsystems                    |
 |               |                                                      |
 |               | Bonus Skills:                                        |
 |               |                                                      |
-|               | \* UX Design experience \* Free software advocacy \* |
-|               | Extended community participation \* Ownership of     |
-|               | amusing hats                                         |
+|               | &#42; UX Design experience &#42; Free software       |
+|               | advocacy &#42; Extended community participation      |
+|               | &#42; Ownership of amusing hats                      |
 +---------------+------------------------------------------------------+
 
 ## Open Ideas From GSoC 2015
@@ -8004,10 +6746,10 @@ they're still interested in mentoring someone this year.
 
 *Note*: Do not submit a proposal for an idea from a previous year
 without contacting the mentor to ensure they will be available to mentor
-you. **Without a mentor, proposals will be rejected.**
+you. &#42;Without a mentor, proposals will be rejected.&#42;
 
-    14 March: 19:00 UTC Student application period opens...
-    Deadline March 25, 1900 UTC !!!
+&#8230;. 14 March: 19:00 UTC Student application period opens&#8230;
+Deadline March 25, 1900 UTC !!! &#8230;.
 
 The timeline is decided and published by Google, track it at [the
 official page](https://developers.google.com/open-source/gsoc/timeline).
@@ -8022,46 +6764,48 @@ applications will not be entertained after the deadline.
 Following criterion should be fulfilled on or before the application
 deadline unless otherwise specifically noted.
 
-- Create a FAS account [FAS Account Signup / Login
-  Page](https://admin.fedoraproject.org/accounts)
+&#42; Create a FAS account [FAS Account Signup / Login
+Page](https://admin.fedoraproject.org/accounts)
 
-- Join with fedora-summer-coding mailing list [Fedora Summer Coding
-  Mailing
-  List](https://lists.fedoraproject.org/admin/lists/summer-coding)
+&#42; Join with fedora-summer-coding mailing list [Fedora Summer Coding
+Mailing List](https://lists.fedoraproject.org/admin/lists/summer-coding)
 
-- Join with devel mailing list [Devel Mailing
-  List](https://admin.fedoraproject.org/mailman/devel)
+&#42; Join with devel mailing list [Devel Mailing
+List](https://admin.fedoraproject.org/mailman/devel)
 
-- Chose a project for proposal from
-  [Summer_coding_ideas_for_2016](ideas.xml)
+&#42; Chose a project for proposal from
+[Summer_coding_ideas_for_2016](ideas.xml)
 
-- Submit application/proposal on Google-Melange [Google Melange
-  Submission Page](https://summerofcode.withgoogle.com/get-started/)
+&#42; Submit application/proposal on Google-Melange [Google Melange
+Submission Page](https://summerofcode.withgoogle.com/get-started/)
 
 \'\'*\'What to write about in your proposal / application.*
 
-- Details on your previous FOSS contributions (if any).
+&#42; Details on your previous FOSS contributions (if any).
 
-- A detailed plan with your planned activities in May to September (eg:
-  Exams in university, internships, vacations..etc)
+&#42; A detailed plan with your planned activities in May to September
+(eg: Exams in university, internships, vacations..etc)
 
-- Bare mind - Remember to contact your mentor before you submit the
-  application.
+&#42; Bare mind - Remember to contact your mentor before you submit the
+application.
 
 *Mentors are more likely to accommodate summer travel if they know in
 advance*
 
-We ***DO NOT*** accept any document after Google student application
-deadline, all entries make after the deadline is ignored unless you have
-not informed to Org Admins! However if you have any difficulty to meet
-this requirement please let us know in advance (before the deadline).
+We &#42;\_DO NOT\_&#42; accept any document after Google student
+application deadline, all entries make after the deadline is ignored
+unless you have not informed to Org Admins! However if you have any
+difficulty to meet this requirement please let us know in advance
+(before the deadline).
 
 *\'*FAQ
 
 What is the need of a detailed plan of my activities? It is important to
 get an idea about your free time and arrange things at the early stage.
 Therefore this is really important and try to make it accurate as much
-as possible. \*\* 2015 = Google Summer of Code 2015 ![Gsoc 2015
+as possible.
+
+&#42;&#42; 2015 = Google Summer of Code 2015 ![Gsoc 2015
 logo](Gsoc-2015-logo.jpg)
 
 The Fedora project represented the Google Summer of Code program for 9
@@ -8069,7 +6813,7 @@ years and participating on year 2016 program as well. This wiki page
 serves as the GSoC portal. Please feel free to contact us via list for
 [summer-coding](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)
 clarifications/ more info, or the IRC channel:
-[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
 .
 
 ## Students {#students}
@@ -8091,22 +6835,13 @@ to contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real world large codebases.
-
-- Collaborate with real engineers and other professional experts.
-
-- Contribute to something meaningful while learning and earning student
-  value.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Possibly attract attention that gets you an internship or job after
-  graduation.
-
-- Create life time connections.
+&#42; Work with real world large codebases. &#42; Collaborate with real
+engineers and other professional experts. &#42; Contribute to something
+meaningful while learning and earning student value. &#42; Learn tools
+and processes that are just like what you are going to use if you work
+in technology after graduation. &#42; Make friends and contacts around
+the globe. &#42; Possibly attract attention that gets you an internship
+or job after graduation. &#42; Create life time connections.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -8168,23 +6903,23 @@ students\' idea page and pick one as per your interest.
 
 ### How to work with students {#how-to-work-with-students}
 
-- One way is to provide an idea for students to work on. This idea might
-  be very well planned out, in which case you may need a high-level of
-  contact with the student to get it implemented correctly.
+&#42; One way is to provide an idea for students to work on. This idea
+might be very well planned out, in which case you may need a high-level
+of contact with the student to get it implemented correctly.
 
-- It is harder to find success where you are completely certain of how
-  an idea needs to be implemented; finding a student with the skills and
-  interest to implement a specific solution is a lot harder than finding
-  a student with enough skills to respond to a use case need.
+&#42; It is harder to find success where you are completely certain of
+how an idea needs to be implemented; finding a student with the skills
+and interest to implement a specific solution is a lot harder than
+finding a student with enough skills to respond to a use case need.
 
-- Where you can have looser ideas, you may be able to find a student who
-  works as a sort-of intern who can implement a solution to a use case
-  you have. In past experiences, students going after a use case are
-  more likely to get somewhere with self-direction.
+&#42; Where you can have looser ideas, you may be able to find a student
+who works as a sort-of intern who can implement a solution to a use case
+you have. In past experiences, students going after a use case are more
+likely to get somewhere with self-direction.
 
-- You may also want to work with a student who brings an idea to your
-  sub-project. This requires a different level of communication
-  throughout the project, but can be the most rewarding.
+&#42; You may also want to work with a student who brings an idea to
+your sub-project. This requires a different level of communication
+throughout the project, but can be the most rewarding.
 
 ### Mentor responsibilities {#mentor-responsibilities}
 
@@ -8194,13 +6929,10 @@ JBoss.org, or another).
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not, which affects payment.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Be the final, accountable person for deciding if the
+student is successful or not, which affects payment.
 
 ### List of Mentors {#list-of-mentors}
 
@@ -8214,13 +6946,14 @@ List](https://fedoraproject.org/wiki/GSOC_2016/Registered_Mentors_List)
 
 ## Communication {#communication}
 
-**Mailing List (GSOC related) :**
+&#42;Mailing List (GSOC related) :&#42;
 [summer-coding](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)\
-**Mailing List (Technical) :**
+&#42;Mailing List (Technical) :&#42;
 [devel](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)\
-**IRC :** Channel -
-[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-or [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
+&#42;IRC :&#42; Channel -
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
 on Freenode
 
 ## Time Line (Student version)
@@ -8228,108 +6961,80 @@ on Freenode
 Reference : [Full
 timeline](http://www.google-melange.com/gsoc/events/google/gsoc2016)
 
-- 6 October, 2014: Program announced.
-
-- 9 February, 2015: 19:00 UTC Mentoring organizations can begin
-  submitting applications to Google.
-
-- 20 February: 19:00 UTC Mentoring organization application deadline.
-
-- 23 - 27 February: Google program administrators review organization
-  applications.
-
-- 2 March: 19:00 UTC List of accepted mentoring organizations published
-  on the Google Summer of Code 2015 site.
-
-- Interim Period: Would-be students discuss project ideas with potential
-  mentoring organizations.
-
-- 6 March 16:00 UTC: IRC feedback meeting for rejected organizations for
-  Google Summer of Code 2015. #gsoc on freenode.net. Rejected
-  organizations may also choose to email the administrators directly for
-  feedback.
-
-- 14 March: 19:00 UTC Student application period opens.
-
-- 27 March: 19:00 UTC Student application deadline.
-
-- Interim Period: Mentoring organizations review and rank student
-  proposals; where necessary, mentoring organizations may request
-  further proposal detail from the student applicant.
-
-- 13 April: Mentoring organizations should have requested slots via
-  their profile in Melange by this point.
-
-- 15 April: Slot allocations published to mentoring organizations.
-
-- Interim Period: Slot allocation trades happen amongst organizations.
-  Mentoring organizations review and rank student proposals; where
-  necessary, mentoring organizations may request further proposal detail
-  from the student applicant.
-
-- 21 April: First round of de-duplication checks happens; organizations
-  work together to try to resolve as many duplicates as possible.
-
-- 24 April: All mentors must be signed up and all student proposals
-  matched with a mentor -07:00 UTC. Student acceptance choice
-  deadline.IRC meeting to resolve any outstanding duplicate accepted
-  students - 19:00 UTC #gsoc (organizations must send a delegate to
-  represent them in this meeting regardless of if they are in a
-  duplicate situation before the meeting.)
-
-- 27 April: 19:00 UTC Accepted student proposals announced on the Google
-  Summer of Code 2015 site.
+&#42; 6 October, 2014: Program announced. &#42; 9 February, 2015: 19:00
+UTC Mentoring organizations can begin submitting applications to Google.
+&#42; 20 February: 19:00 UTC Mentoring organization application
+deadline. &#42; 23 - 27 February: Google program administrators review
+organization applications. &#42; 2 March: 19:00 UTC List of accepted
+mentoring organizations published on the Google Summer of Code 2015
+site. &#42; Interim Period: Would-be students discuss project ideas with
+potential mentoring organizations. &#42; 6 March 16:00 UTC: IRC feedback
+meeting for rejected organizations for Google Summer of Code 2015.
+&#35;gsoc on freenode.net. Rejected organizations may also choose to
+email the administrators directly for feedback. &#42; 14 March: 19:00
+UTC Student application period opens. &#42; 27 March: 19:00 UTC Student
+application deadline. &#42; Interim Period: Mentoring organizations
+review and rank student proposals; where necessary, mentoring
+organizations may request further proposal detail from the student
+applicant. &#42; 13 April: Mentoring organizations should have requested
+slots via their profile in Melange by this point. &#42; 15 April: Slot
+allocations published to mentoring organizations. &#42; Interim Period:
+Slot allocation trades happen amongst organizations. Mentoring
+organizations review and rank student proposals; where necessary,
+mentoring organizations may request further proposal detail from the
+student applicant. &#42; 21 April: First round of de-duplication checks
+happens; organizations work together to try to resolve as many
+duplicates as possible. &#42; 24 April: All mentors must be signed up
+and all student proposals matched with a mentor -07:00 UTC. Student
+acceptance choice deadline.IRC meeting to resolve any outstanding
+duplicate accepted students - 19:00 UTC &#35;gsoc (organizations must
+send a delegate to represent them in this meeting regardless of if they
+are in a duplicate situation before the meeting.) &#42; 27 April: 19:00
+UTC Accepted student proposals announced on the Google Summer of Code
+2015 site.
 
 Community Bonding Period: Students get to know mentors, read
 documentation, get up to speed to begin working on their projects.
 
-- 25 May: Students begin coding for their Google Summer of Code
-  projects;
+&#42; 25 May: Students begin coding for their Google Summer of Code
+projects;
 
 Google begins issuing initial student payments provided tax forms are on
 file and students are in good standing with their communities. Work
 Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- 26 June: 19:00 UTCMentors and students can begin submitting mid-term
-  evaluations.
-
-- 3 July: 19:00 UTC Mid-term evaluations deadline;
+&#42; 26 June: 19:00 UTCMentors and students can begin submitting
+mid-term evaluations. &#42; 3 July: 19:00 UTC Mid-term evaluations
+deadline;
 
 Google begins issuing mid-term student payments provided passing student
 survey is on file. Work Period: Mentors give students a helping hand and
 guidance on their projects.
 
-- 17 August: Suggested \'pencils down\' date. Take a week to scrub code,
-  write tests, improve documentation, etc.
-
-- 21 August: 19:00 UTC Firm \'pencils down\' date. Mentors, students and
-  organization administrators can begin submitting final evaluations to
-  Google.
-
-- 28 August: 19:00 UTC Final evaluation deadline
+&#42; 17 August: Suggested \'pencils down\' date. Take a week to scrub
+code, write tests, improve documentation, etc. &#42; 21 August: 19:00
+UTC Firm \'pencils down\' date. Mentors, students and organization
+administrators can begin submitting final evaluations to Google. &#42;
+28 August: 19:00 UTC Final evaluation deadline
 
 Google begins issuing student and mentoring organization payments
 provided forms and evaluations are on file.
 
-- 28 August: 19:30 UTC Students can begin submitting required code
-  samples to Google
-
-- 31 August: Final results of Google Summer of Code 2015 announced
-
-- 25 September: 19:00 UTC \"Soft\" deadline for student code sample
-  submission. Students who want their t-shirts and certificates in the
-  first wave of shipments must submit their code sample by this date.
-
-- 6 - 8 November: Mentor Summit at Google: Delegates from each
-  successfully participating organization are invited to Google to
-  greet, collaborate and code. Our mission for the weekend: make the
-  program even better, have fun and make new friends.
+&#42; 28 August: 19:30 UTC Students can begin submitting required code
+samples to Google &#42; 31 August: Final results of Google Summer of
+Code 2015 announced &#42; 25 September: 19:00 UTC \'Soft\' deadline for
+student code sample submission. Students who want their t-shirts and
+certificates in the first wave of shipments must submit their code
+sample by this date. &#42; 6 - 8 November: Mentor Summit at Google:
+Delegates from each successfully participating organization are invited
+to Google to greet, collaborate and code. Our mission for the weekend:
+make the program even better, have fun and make new friends.
 
 ## Ideas Page {#ideas-page}
 
-**Status :** Open for Ideas\
-**Link :** [Summer coding ideas for 2015](ideas.xml)
+&#42;Status :&#42; Open for Ideas\
+&#42;Link :&#42; [Summer coding ideas for 2015](ideas.xml)
 
 We encourage students to provide creative yet useful ideas towards the
 Fedora project as well. Please use [Student
@@ -8345,9 +7050,9 @@ no communication after then even we ask more info on Google-melange.
 Such nature of submissions need extra effort when it comes to manage
 proposals on Google-Melange. Therefore as a policy, proposals for
 students ideas (with no supporting mentor indicated) that are being
-submitted directly to Google-melange will be marked **Ignore** after a
-24 hours of warning unless the students does not voluntary withdraw the
-proposal or explain basis of their idea.\
+submitted directly to Google-melange will be marked &#42;Ignore&#42;
+after a 24 hours of warning unless the students does not voluntary
+withdraw the proposal or explain basis of their idea.\
 This will not restrict submitting proposals on students ideas, we always
 welcome novel and innovative ideas from students if they follow the
 right path. As the first step send us your idea and will start discuss
@@ -8384,13 +7089,14 @@ If you are a student looking forward to participate the GSoC 2016 with
 Fedora, please feel free to browse the idea list which is still growing.
 Do not hesitate to contact the mentors/ contributors as indicated in
 this page for any related clarification. You also should find some
-like-minded people on the `#fedora-summer-coding` IRC channel.
+like-minded people on the &#96;&#35;fedora-summer-coding&#96; IRC
+channel.
 
 If you are new to The Fedora project, the following material would help
 you to get started. Further please sign-up with the [Fedora Account
 System(FAS)](https://fedoraproject.org/wiki/FAS) if you are willing to
-continue with the Fedora project. `#fedora-devel`, IRC channel can be
-used to get instant support.
+continue with the Fedora project. &#96;&#35;fedora-devel&#96;, IRC
+channel can be used to get instant support.
 
 1.  [The Foundation](https://fedoraproject.org/wiki/Foundation)
 
@@ -8441,8 +7147,8 @@ Please add your idea as follows.
 
 *Notes:*
 
-**!!!The draft was changed slightly, please add required field as
-required!!!**
+&#42;!!!The draft was changed slightly, please add required field as
+required!!!&#42;
 
 ## Idea list for GSoC 2016 {#idea-list-for-gsoc-2016}
 
@@ -8454,9 +7160,9 @@ required!!!**
 crash dumping (kdump) memory image to usb storage. Compared to the
 traditional kdump solution, it is,
 
-\* more reliable and scalable\
-\* has smaller memory foot-print\
-\* more friendly to kernel developers
+&#96;&#42; more reliable and scalable&#96;\
+&#96;&#42; has smaller memory foot-print&#96;\
+&#96;&#42; more friendly to kernel developers &#96;
 
 More information here: <https://fedorahosted.org/tinykdump/>
 
@@ -8470,14 +7176,11 @@ More information here: <https://fedorahosted.org/tinykdump/>
 
 *Notes:* Rough roadmap:
 
-- Implement tinykdump daemon to be included in Fedora.
-
-- Submit kernel patches for reserving kdump memory at run-time for
-  community review and inclusion.
-
-- Currently, pstore only log kernel messages for panic and Oops. Patches
-  are needed to support logging of kdump kernel and initramfs console
-  output.
+&#42; Implement tinykdump daemon to be included in Fedora. &#42; Submit
+kernel patches for reserving kdump memory at run-time for community
+review and inclusion. &#42; Currently, pstore only log kernel messages
+for panic and Oops. Patches are needed to support logging of kdump
+kernel and initramfs console output.
 
 ### Improve Fedora Review
 
@@ -8491,7 +7194,7 @@ changes in the guidelines. Also there is currently no process to ensure
 that existing packages adhere to the packaging guidelines. This project
 is meant to improve this.
 
-*Knowledge prerequisite:* Python 2&3 programming skills
+*Knowledge prerequisite:* Python 2&amp;3 programming skills
 
 *Skill level:* intermediate (programming)
 
@@ -8502,18 +7205,14 @@ is meant to improve this.
 
 *Notes:* Possible tasks:
 
-- Make Fedora Review PEP8 compliant, fix its current test cases
-
-- Help running Fedora Review regularly for existing packages e.g.,
-  updating the Jenkins continuous builds and/or integrate it into
-  Taskotron
-
-- Add static code checker support to Fedora Review (e.g. with
-  [csmock](https://git.fedorahosted.org/git/csmock.git))
-
-- Build a web service mockup supporting the review process
-  [1](http://fedoraproject.org/wiki/Package_Review_Process) replacing
-  current bugzilla workflow.
+&#42; Make Fedora Review PEP8 compliant, fix its current test cases
+&#42; Help running Fedora Review regularly for existing packages e.g.,
+updating the Jenkins continuous builds and/or integrate it into
+Taskotron &#42; Add static code checker support to Fedora Review (e.g.
+with [csmock](https://git.fedorahosted.org/git/csmock.git)) &#42; Build
+a web service mockup supporting the review process
+[1](http://fedoraproject.org/wiki/Package_Review_Process) replacing
+current bugzilla workflow.
 
 ### Enhance Fedora build setup
 
@@ -8538,32 +7237,20 @@ code, GNU/Linux)
 
 *Notes:* Rough roadmap:
 
-- Make select [releng scripts](https://fedorahosted.org/rel-eng/) PEP8
-  compliant/python3 ready
-
-- Make other python tools PEP8 compliant, python3 ready:
-
-  - [fedpkg](https://fedorahosted.org/fedpkg/)
-
-  - [mash](https://git.fedorahosted.org/cgit/mash/)
-
-  - [rpkg](https://fedorahosted.org/rpkg/)
-
-- Become familiar with the Fedora packaging workflow, maybe by packaging
-  some software
-
-- Learn how to interface koji and write a script to get a mapping of git
-  commit ID to package build (name, version, release)
-
-- Write a koji plugin to enforce that pkgs can be only built from the
-  right GIT branch for each build target (might need improvements to
-  koji's plugin interface as well):
-  <https://fedorahosted.org/rel-eng/ticket/5843>
-
-- Write a fedmsg service/cronjob to regularly tag sucessful builds in
-  GIT: <https://fedorahosted.org/rel-eng/ticket/5856>
-
-- Help with koji2
+&#42; Make select [releng scripts](https://fedorahosted.org/rel-eng/)
+PEP8 compliant/python3 ready &#42; Make other python tools PEP8
+compliant, python3 ready: &#42;&#42;
+[fedpkg](https://fedorahosted.org/fedpkg/) &#42;&#42;
+[mash](https://git.fedorahosted.org/cgit/mash/) &#42;&#42;
+[rpkg](https://fedorahosted.org/rpkg/) &#42; Become familiar with the
+Fedora packaging workflow, maybe by packaging some software &#42; Learn
+how to interface koji and write a script to get a mapping of git commit
+ID to package build (name, version, release) &#42; Write a koji plugin
+to enforce that pkgs can be only built from the right GIT branch for
+each build target (might need improvements to koji's plugin interface as
+well): <https://fedorahosted.org/rel-eng/ticket/5843> &#42; Write a
+fedmsg service/cronjob to regularly tag sucessful builds in GIT:
+<https://fedorahosted.org/rel-eng/ticket/5856> &#42; Help with koji2
 
 ### Improve Sigul Signing Server
 
@@ -8593,43 +7280,32 @@ Bean](https://fedoraproject.org/wiki/User:ralph)
 
 *Notes:* Rough roadmap:
 
-- To test whether everything works, a test instance needs to be setup.
-  This is rather complex because it requires interaction with koji.
-  Maybe it is possible to add a test instance to Infrastructure that can
-  use the koji staging system, but the latter is not fully functional
-  right now.
-
-- Debug why sigul hangs sometimes when using the
-  [sign-rpms](https://git.fedorahosted.org/cgit/sigul.git/tree/src/client.py#n1090)
-  command (called by `--batch-size` greater than one with
-  `sigulsign_unsigned.py`
-
-- Enable sigul to process multiple tasks at once, e.g. sign for multiple
-  releases or architectures at once.
-
-- Fix other bugs/issues, examples:
-
-  - Currently [logrotate](http://linux.die.net/man/8/logrotate) does not
-    make sigul properly re-open its logfiles, which is why sigul does
-    not log to the new logfile after rotation. This needs to be fixed in
-    sigul
-
-  - The GPG defaults in sigul might not be up-to-date, they should be
-    reviewed and improved if necessary
-
-  - Add support for e.g. signing and revoking GPG keys, to build a local
-    web of trust between [Fedora release
-    keys](https://getfedora.org/keys/)
+&#42; To test whether everything works, a test instance needs to be
+setup. This is rather complex because it requires interaction with koji.
+Maybe it is possible to add a test instance to Infrastructure that can
+use the koji staging system, but the latter is not fully functional
+right now. &#42; Debug why sigul hangs sometimes when using the
+[sign-rpms](https://git.fedorahosted.org/cgit/sigul.git/tree/src/client.py&#35;n1090)
+command (called by &#96;\--batch-size&#96; greater than one with
+&#96;sigulsign_unsigned.py&#96; &#42; Enable sigul to process multiple
+tasks at once, e.g. sign for multiple releases or architectures at once.
+&#42; Fix other bugs/issues, examples: &#42;&#42; Currently
+[logrotate](http://linux.die.net/man/8/logrotate) does not make sigul
+properly re-open its logfiles, which is why sigul does not log to the
+new logfile after rotation. This needs to be fixed in sigul &#42;&#42;
+The GPG defaults in sigul might not be up-to-date, they should be
+reviewed and improved if necessary &#42;&#42; Add support for e.g.
+signing and revoking GPG keys, to build a local web of trust between
+[Fedora release keys](https://getfedora.org/keys/)
 
 Ressources:
 
-- [Script used by rel-eng to run
-  sigul](https://git.fedorahosted.org/cgit/releng/tree/scripts/sigulsign_unsigned.py)
+&#42; [Script used by rel-eng to run
+sigul](https://git.fedorahosted.org/cgit/releng/tree/scripts/sigulsign_unsigned.py)
+&#42; [Protocol
+description](https://git.fedorahosted.org/cgit/sigul.git/tree/doc/protocol-design.txt)
 
-- [Protocol
-  description](https://git.fedorahosted.org/cgit/sigul.git/tree/doc/protocol-design.txt)
-
-### AskFedora UX/UI & Functionality Overhaul
+### AskFedora UX/UI &amp; Functionality Overhaul {#askfedora-uxui-functionality-overhaul}
 
 *Status:* Proposed - draft
 
@@ -8693,43 +7369,35 @@ allows designers and artists to create, share, and collaborate, backed
 by Git for version control, and intended to be part of a FLOSS design
 suite that includes
 
-- [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox like
-  system that will automatically check in and push files in project
-  directly to a shared git repo
-
-- [Magic Mockup](https://github.com/garrett/magicmockup) - a javascript
-  library you can insert into an SVG of mockups to enable interactive,
-  click-through mockups ([see a demo
-  here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
-
-- [Inkscape](http://inkscape.org) is our preferred design tool of choice
+&#42; [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox
+like system that will automatically check in and push files in project
+directly to a shared git repo &#42; [Magic
+Mockup](https://github.com/garrett/magicmockup) - a javascript library
+you can insert into an SVG of mockups to enable interactive,
+click-through mockups ([see a demo
+here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
+&#42; [Inkscape](http://inkscape.org) is our preferred design tool of
+choice
 
 Last year, two GSoC students worked on a number of critical improvements
 to GlitterGallery, but there is still plenty of work to be done.
 
-- Public gallery of works; currently the app requires a user to login
-  and to follow other users before they can see work other than their
-  own. They can also view direct links to works. A public gallery can be
-  used to browse and explore works without having to be logged in.
-
-- Better design suite integration, which could mean better support for
-  local editing with SparkleShare; Inkscape integration through an
-  extension; and/or support for creating and sharing interactive SVGs
-  with Magic Mockup
-
-- Better commenting - the current commenting system is basic, and
-  there's lots of ways it could be improved, including thread support,
-  pingback support, the ability to reference a specific region of a
-  design in a comment
-
-- External issue tracking - Glitter Gallery has an integrated issue
-  tracker, but it would be useful to also be able to integrate with
-  external bug/issue trackers such as GitHub and Bugzilla.
-
-- Enhanced history view - (see
-  <https://github.com/glittergallery/GlitterGallery/issues/187>)
-
-- Your own ideas
+&#42; Public gallery of works; currently the app requires a user to
+login and to follow other users before they can see work other than
+their own. They can also view direct links to works. A public gallery
+can be used to browse and explore works without having to be logged in.
+&#42; Better design suite integration, which could mean better support
+for local editing with SparkleShare; Inkscape integration through an
+extension; and/or support for creating and sharing interactive SVGs with
+Magic Mockup &#42; Better commenting - the current commenting system is
+basic, and there's lots of ways it could be improved, including thread
+support, pingback support, the ability to reference a specific region of
+a design in a comment &#42; External issue tracking - Glitter Gallery
+has an integrated issue tracker, but it would be useful to also be able
+to integrate with external bug/issue trackers such as GitHub and
+Bugzilla. &#42; Enhanced history view - (see
+<https://github.com/glittergallery/GlitterGallery/issues/187>) &#42;
+Your own ideas
 
 *Knowledge prerequisites:* git, Ruby on Rails, front-end (HTML/CSS/JS)
 development, design experience would be great but optional
@@ -8951,61 +7619,38 @@ development
 
 *Notes:* Potential features:
 
-- Show a clear overview for patches in Fedora for a certain package
-
-  - Link to bugs that were mentioned, extract key information from the
-    bug
-
-- Allow to get notifications for new patches, e.g. via fedmsg
-
-- Allow to get information about patches for the package in other
-  distros
-
-- Try to figure out if patches are already upstream
-
-- ...​
+&#42; Show a clear overview for patches in Fedora for a certain package
+&#42;&#42; Link to bugs that were mentioned, extract key information
+from the bug &#42; Allow to get notifications for new patches, e.g. via
+fedmsg &#42; Allow to get information about patches for the package in
+other distros &#42; Try to figure out if patches are already upstream
+&#42; &#8230;
 
 Rough potential roadmap:
 
-- Get the debian patch tracker running on a test system, maybe with some
-  example debian packages
-
-- Port it for one example Fedora package
-
-- Port it to a modern web framework such as Flask or Pyramid
-
-- Make sure it is PEP8 compliant
-
-- Make it generic to work for Fedora and Debian
-
-- Add feature to patches that are present only in Fedora or Debian
-
-- Add more distros, e.g. OpenSUSE, Arch, Ubuntu, Gentoo
-
-- Add more features
+&#42; Get the debian patch tracker running on a test system, maybe with
+some example debian packages &#42; Port it for one example Fedora
+package &#42; Port it to a modern web framework such as Flask or Pyramid
+&#42; Make sure it is PEP8 compliant &#42; Make it generic to work for
+Fedora and Debian &#42; Add feature to patches that are present only in
+Fedora or Debian &#42; Add more distros, e.g. OpenSUSE, Arch, Ubuntu,
+Gentoo &#42; Add more features
 
 Basic requirements:
 
-- Target platform is RHEL/CentOS7 with EPEL
-
-- All dependencies should be available on the target platform as RPM
-  packages or possible to be packaged (e.g. requiring newer versions of
-  packages already included in the target platform might not be easily
-  possible)
-
-- It needs to be possible to package the final project for Fedora/EPEL,
-  i.e. there may not be bundled libraries included
-
-- The code needs to be PEP8 compliant and contain proper docstrings
-
-- Proper automtatic tests should be included to allow meaningful
-  continuous integration
+&#42; Target platform is RHEL/CentOS7 with EPEL &#42; All dependencies
+should be available on the target platform as RPM packages or possible
+to be packaged (e.g. requiring newer versions of packages already
+included in the target platform might not be easily possible) &#42; It
+needs to be possible to package the final project for Fedora/EPEL, i.e.
+there may not be bundled libraries included &#42; The code needs to be
+PEP8 compliant and contain proper docstrings &#42; Proper automtatic
+tests should be included to allow meaningful continuous integration
 
 Recommended basic knowledge:
 
-- Know about PEP8, pylint, continuous integration,
-
-- Understand the different diff formats
+&#42; Know about PEP8, pylint, continuous integration, &#42; Understand
+the different diff formats
 
 ### Better OVAL development tools in OpenSCAP
 
@@ -9036,7 +7681,7 @@ Preisler](https://fedoraproject.org/wiki/User:Mpreisle)
 debug their checks, they can browse the execution, looking at inputs and
 outputs of each step. They are able to analyze their OVAL content for
 common mistakes using the lint-like tool. Such common mistakes include
-ID mismatches, wrong usage of regexes, ...​
+ID mismatches, wrong usage of regexes, &#8230;
 
 ### Fix bugs in packages that break compiling as position independent {#fix-bugs-in-packages-that-break-compiling-as-position-independent-executable}
 
@@ -9088,12 +7733,12 @@ executables.
 Example problems that block some packages to be built with the right
 flags:
 
-- <https://bugzilla.redhat.com/show_bug.cgi?id=1199775>
+&#42; <https://bugzilla.redhat.com/show_bug.cgi?id=1199775>
 
 Helpful documentation:
 
-- [Using Mock to test package
-  builds](https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds)
+&#42; [Using Mock to test package
+builds](https://fedoraproject.org/wiki/Using_Mock_to_test_package_builds)
 
 ### Enhance PostgreSQL GSSAPI Support
 
@@ -9140,21 +7785,8 @@ some idea about non-x86 architectures
 
 *Notes:* Possible work areas:
 
-- kernel
-
-- anaconda
-
-- openjdk
-
-- ghc
-
-- ocaml
-
-- erlang
-
-- fpc
-
-- ...​
+&#42; kernel &#42; anaconda &#42; openjdk &#42; ghc &#42; ocaml &#42;
+erlang &#42; fpc &#42; &#8230;
 
 ## Open Ideas From GSoC 2016 {#open-ideas-from-gsoc-2016}
 
@@ -9162,8 +7794,8 @@ Despite the list of ideas, you may want to check out the ideas of the
 previous years and contact the admins to see if they are still
 interested in mentoring someone this year.
 
-    14 March: 19:00 UTC Student application period opens...
-    Deadline March 25, 1900 UTC !!!
+&#8230;. 14 March: 19:00 UTC Student application period opens&#8230;
+Deadline March 25, 1900 UTC !!! &#8230;.
 
 The timeline is decided and published by Google, track it at [the
 official page](https://developers.google.com/open-source/gsoc/timeline).
@@ -9178,47 +7810,48 @@ applications will not be entertained after the deadline.
 Following criterion should be fulfilled on or before the application
 deadline unless otherwise specifically noted.
 
-- Create a FAS account [FAS Account Signup / Login
-  Page](https://admin.fedoraproject.org/accounts)
+&#42; Create a FAS account [FAS Account Signup / Login
+Page](https://admin.fedoraproject.org/accounts)
 
-- Join with fedora-summer-coding mailing list [Fedora Summer Coding
-  Mailing
-  List](https://lists.fedoraproject.org/admin/lists/summer-coding)
+&#42; Join with fedora-summer-coding mailing list [Fedora Summer Coding
+Mailing List](https://lists.fedoraproject.org/admin/lists/summer-coding)
 
-- Join with devel mailing list [Devel Mailing
-  List](https://admin.fedoraproject.org/mailman/devel)
+&#42; Join with devel mailing list [Devel Mailing
+List](https://admin.fedoraproject.org/mailman/devel)
 
-- Chose a project for proposal from
-  [Summer_coding_ideas_for_2016](ideas.xml)
+&#42; Chose a project for proposal from
+[Summer_coding_ideas_for_2016](ideas.xml)
 
-- Submit application/proposal on Google-Melange [Google Melange
-  Submission Page](https://summerofcode.withgoogle.com/get-started/)
+&#42; Submit application/proposal on Google-Melange [Google Melange
+Submission Page](https://summerofcode.withgoogle.com/get-started/)
 
 \'\'*\'What to write about in your proposal / application.*
 
-- Details on your previous FOSS contributions (if any).
+&#42; Details on your previous FOSS contributions (if any).
 
-- A detailed plan with your planned activities in May to September (eg:
-  Exams in university, internships, vacations..etc)
+&#42; A detailed plan with your planned activities in May to September
+(eg: Exams in university, internships, vacations..etc)
 
-- Bare mind - Remember to contact your mentor before you submit the
-  application.
+&#42; Bare mind - Remember to contact your mentor before you submit the
+application.
 
 *Mentors are more likely to accommodate summer travel if they know in
 advance*
 
-We ***DO NOT*** accept any document after Google student application
-deadline, all entries make after the deadline is ignored unless you have
-not informed to Org Admins! However if you have any difficulty to meet
-this requirement please let us know in advance (before the deadline).
+We &#42;\_DO NOT\_&#42; accept any document after Google student
+application deadline, all entries make after the deadline is ignored
+unless you have not informed to Org Admins! However if you have any
+difficulty to meet this requirement please let us know in advance
+(before the deadline).
 
 *\'*FAQ
 
 What is the need of a detailed plan of my activities? It is important to
 get an idea about your free time and arrange things at the early stage.
 Therefore this is really important and try to make it accurate as much
-as possible. \*\* 2014 = Google Summer of Code 2014
-![](Gsoc-2014-logo.jpg)
+as possible.
+
+&#42;&#42; 2014 = Google Summer of Code 2014 ![](Gsoc-2014-logo.jpg)
 
 The Fedora project represented the Google Summer of Code program for 8
 years with managing 62 projects and willing to participate on year 2014
@@ -9246,22 +7879,13 @@ to contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real world large codebases.
-
-- Collaborate with real engineers and other professional experts.
-
-- Contribute to something meaningful while learning and earning student
-  value.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Possibly attract attention that gets you an internship or job after
-  graduation.
-
-- Create life time connections.
+&#42; Work with real world large codebases. &#42; Collaborate with real
+engineers and other professional experts. &#42; Contribute to something
+meaningful while learning and earning student value. &#42; Learn tools
+and processes that are just like what you are going to use if you work
+in technology after graduation. &#42; Make friends and contacts around
+the globe. &#42; Possibly attract attention that gets you an internship
+or job after graduation. &#42; Create life time connections.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -9325,23 +7949,23 @@ students\' idea page and pick one as per your interest.
 
 ### How to work with students {#how-to-work-with-students}
 
-- One way is to provide an idea for students to work on. This idea might
-  be very well planned out, in which case you may need a high-level of
-  contact with the student to get it implemented correctly.
+&#42; One way is to provide an idea for students to work on. This idea
+might be very well planned out, in which case you may need a high-level
+of contact with the student to get it implemented correctly.
 
-- It is harder to find success where you are completely certain of how
-  an idea needs to be implemented; finding a student with the skills and
-  interest to implement a specific solution is a lot harder than finding
-  a student with enough skills to respond to a use case need.
+&#42; It is harder to find success where you are completely certain of
+how an idea needs to be implemented; finding a student with the skills
+and interest to implement a specific solution is a lot harder than
+finding a student with enough skills to respond to a use case need.
 
-- Where you can have looser ideas, you may be able to find a student who
-  works as a sort-of intern who can implement a solution to a use case
-  you have. In past experiences, students going after a use case are
-  more likely to get somewhere with self-direction.
+&#42; Where you can have looser ideas, you may be able to find a student
+who works as a sort-of intern who can implement a solution to a use case
+you have. In past experiences, students going after a use case are more
+likely to get somewhere with self-direction.
 
-- You may also want to work with a student who brings an idea to your
-  sub-project. This requires a different level of communication
-  throughout the project, but can be the most rewarding.
+&#42; You may also want to work with a student who brings an idea to
+your sub-project. This requires a different level of communication
+throughout the project, but can be the most rewarding.
 
 ### Mentor responsibilities {#mentor-responsibilities}
 
@@ -9351,13 +7975,10 @@ JBoss.org, or another).
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not, which affects payment.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Be the final, accountable person for deciding if the
+student is successful or not, which affects payment.
 
 ### List of Mentors {#list-of-mentors}
 
@@ -9371,13 +7992,14 @@ List](https://fedoraproject.org/wiki/GSOC_2014/Registered_Mentors_List)
 
 ## Communication {#communication}
 
-**Mailing List (GSOC related) :**
+&#42;Mailing List (GSOC related) :&#42;
 [summer-coding](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)\
-**Mailing List (Technical) :**
+&#42;Mailing List (Technical) :&#42;
 [devel](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)\
-**IRC :** Channel -
-[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-or [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
+&#42;IRC :&#42; Channel -
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
 on Freenode
 
 ## Time Line (Student version) {#time-line-student-version}
@@ -9385,75 +8007,60 @@ on Freenode
 Reference : [Full
 timeline](http://www.google-melange.com/gsoc/events/google/gsoc2014)
 
-- 24 February:19:00 UTC List of accepted mentoring organizations
-  published on the Google Summer of Code 2014 site.
-
-- February 24 - March 10: Would-be student participants discuss
-  application ideas with mentoring organizations.
-
-- 10 March:19:00 UTC Student application period opens.
-
-- 21 March:19:00 UTC Student application deadline.
+&#42; 24 February:19:00 UTC List of accepted mentoring organizations
+published on the Google Summer of Code 2014 site. &#42; February 24 -
+March 10: Would-be student participants discuss application ideas with
+mentoring organizations. &#42; 10 March:19:00 UTC Student application
+period opens. &#42; 21 March:19:00 UTC Student application deadline.
 
 Interim Period: Mentoring organizations review and rank student
 proposals; where necessary, mentoring organizations may request further
 proposal detail from the student applicant.
 
-- 7 April: Mentoring organizations should have requested slots via their
-  profile in Melange by this point.
-
-- 9 April: Slot allocations published to mentoring organizations
+&#42; 7 April: Mentoring organizations should have requested slots via
+their profile in Melange by this point. &#42; 9 April: Slot allocations
+published to mentoring organizations
 
 Interim Period: Slot allocation trades happen amongst organizations.
 Mentoring organizations review and rank student proposals; where
 necessary, mentoring organizations may request further proposal detail
 from the student applicant.
 
-- 21 April: 19:00 UTC Accepted student proposals announced on the Google
-  Summer of Code 2014 site.
+&#42; 21 April: 19:00 UTC Accepted student proposals announced on the
+Google Summer of Code 2014 site.
 
 Community Bonding Period: Students get to know mentors, read
 documentation, get up to speed to begin working on their projects.
 
-- 19 May: Students begin coding for their Google Summer of Code
-  projects;
+&#42; 19 May: Students begin coding for their Google Summer of Code
+projects;
 
 Google begins issuing initial student payments provided tax forms are on
 file and students are in good standing with their communities. Work
 Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- 23 June: 19:00 UTC Mentors and students can begin submitting mid-term
-  evaluations.
-
-- 27 June: 19:00 UTC Mid-term evaluations deadline;
-
-- Work Period: Mentors give students a helping hand and guidance on
-  their projects.
-
-- 11 August: Suggested \'pencils down\' date. Take a week to scrub code,
-  write tests, improve documentation, etc.
-
-- 18 August: 19:00 UTC Firm \'pencils down\' date. Mentors, students and
-  organization administrators can begin submitting final evaluations to
-  Google.
-
-- 22 August: 19:00 UTC Final evaluation deadline
+&#42; 23 June: 19:00 UTC Mentors and students can begin submitting
+mid-term evaluations. &#42; 27 June: 19:00 UTC Mid-term evaluations
+deadline; &#42; Work Period: Mentors give students a helping hand and
+guidance on their projects. &#42; 11 August: Suggested \'pencils down\'
+date. Take a week to scrub code, write tests, improve documentation,
+etc. &#42; 18 August: 19:00 UTC Firm \'pencils down\' date. Mentors,
+students and organization administrators can begin submitting final
+evaluations to Google. &#42; 22 August: 19:00 UTC Final evaluation
+deadline
 
 Google begins issuing student and mentoring organization payments
 provided forms and evaluations are on file.
 
-- 22 August: 20:00 UTC Students can begin submitting required code
-  samples to Google
-
-- 25 August: Final results of Google Summer of Code 2014 announced
-
-- 25 & 26 October: Mentor Summit at Google
+&#42; 22 August: 20:00 UTC Students can begin submitting required code
+samples to Google &#42; 25 August: Final results of Google Summer of
+Code 2014 announced &#42; 25 &amp; 26 October: Mentor Summit at Google
 
 ## Ideas Page {#ideas-page}
 
-**Status :** Done\
-**Link :** [Summer coding ideas for 2014](ideas.xml)
+&#42;Status :&#42; Done\
+&#42;Link :&#42; [Summer coding ideas for 2014](ideas.xml)
 
 We encourage students to provide creative yet useful ideas towards the
 Fedora project as well. Please use [Student
@@ -9469,9 +8076,9 @@ no communication after then even we ask more info on Google-melange.
 Such nature of submissions need extra effort when it comes to manage
 proposals on Google-Melange. Therefore as a policy, proposals for
 students ideas (with no supporting mentor indicated) that are being
-submitted directly to Google-melange will be marked **Ignore** after a
-24 hours of warning unless the students does not voluntary withdraw the
-proposal or explain basis of their idea.\
+submitted directly to Google-melange will be marked &#42;Ignore&#42;
+after a 24 hours of warning unless the students does not voluntary
+withdraw the proposal or explain basis of their idea.\
 This will not restrict submitting proposals on students ideas, we always
 welcome novel and innovative ideas from students if they follow the
 right path. As the first step send us your idea and will start discuss
@@ -9491,8 +8098,9 @@ note the mentors\' contact details.
 
 4.  [IRC](https://fedoraproject.org/wiki/Communicate/IRCHowTo)
 
-5.  [Development](https://fedoraproject.org/wiki/Development) = Ideas:
-    Google Summer od Code 2014
+5.  [Development](https://fedoraproject.org/wiki/Development)
+
+# Ideas: Google Summer od Code 2014 {#_ideas_google_summer_od_code_2014}
 
 Find an idea you like? Want to propose your own? See the Getting Started
 Guide with GSoC:
@@ -9512,8 +8120,8 @@ this page for any related clarification. If you are new to The Fedora
 project, following material would help you to get started. Further
 please sign-up with the [Fedora Account
 System(FAS)](https://fedoraproject.org/wiki/FAS) if you are willing to
-continue with the Fedora project. `#fedora-devel`, IRC channel can be
-used to get instant support.
+continue with the Fedora project. &#96;&#35;fedora-devel&#96;, IRC
+channel can be used to get instant support.
 
 1.  [The Foundation](https://fedoraproject.org/wiki/Foundation)
 
@@ -9593,8 +8201,8 @@ Please add your idea as follows.
 
 *Notes:*
 
-**!!!The draft was changed slightly, please add required field as
-required!!!**
+&#42;!!!The draft was changed slightly, please add required field as
+required!!!&#42;
 
 ## Idea list for GSoC 2014
 
@@ -9635,14 +8243,14 @@ Project details can be found at
 
 Minimal required TODO
 
-- Fully working frontend, primary idea is to go fully selfhosted. All
-  bugs should be filed in that instance against Bugspad.
+&#42; Fully working frontend, primary idea is to go fully selfhosted.
+All bugs should be filed in that instance against Bugspad.
 
 *Knowledge prerequisite:*
 
-\* Good idea on web applications and frontend design.\
-\* The person should know about API(s) in general and how to design them well.\
-\* Python, Javascript, HTML, CSS will be the primary languages to deal with.
+&#96; &#42; Good idea on web applications and frontend design. &#96;\
+&#96; &#42; The person should know about API(s) in general and how to design them well. &#96;\
+&#96; &#42; Python, Javascript, HTML, CSS will be the primary languages to deal with.&#96;
 
 *Skill level:* Medium-High
 
@@ -9655,11 +8263,11 @@ at least one instance up somewhere (hints: your laptop).
 
 ### Waartaa
 
-**Status:** Proposed
+&#42;Status:&#42; Proposed
 
-**Summary of idea:** Waartaa is an open source communication tool for
-teams and groups. It is built on top of IRC. Currently, Waartaa is an
-IRC client as a service and it supports centralized logging, 24x7
+&#42;Summary of idea:&#42; Waartaa is an open source communication tool
+for teams and groups. It is built on top of IRC. Currently, Waartaa is
+an IRC client as a service and it supports centralized logging, 24x7
 idling, notifications and unique identity to a user on IRC. You can
 visit the project's homepage: <https://www.waartaa.com> for more
 details. A demo instance of Waartaa is hosted at
@@ -9667,62 +8275,50 @@ details. A demo instance of Waartaa is hosted at
 
 Roadmap:
 
-- Build a central hub for searching/reading channel logs for Open Source
-  communities and projects.
+&#42; Build a central hub for searching/reading channel logs for Open
+Source communities and projects. &#42; Build a faster and scalable
+backend. &#42; Freedom of choice: Expose an API so that users can use
+their existing IRC clients with waartaa. &#42; Find a secure way to
+authenticate with IRC services without storing RAW passwords. &#42;
+Respect user privacy: user personal messages should be stored in an
+encrypted format in the server. &#42; Allow users to download chat logs
+in various formats compatible with popular IRC clients. &#42; HTML5
+mobile app &#42; VCS, Bugzilla and other task management tools
+integration. &#42; Video/audio conference facility on top of HTML5 and
+JS technologies.
 
-- Build a faster and scalable backend.
+&#42;Knowledge prerequisite:&#42; Python, Javascript, HTML, CSS.
 
-- Freedom of choice: Expose an API so that users can use their existing
-  IRC clients with waartaa.
+&#42;Skill level:&#42; Medium
 
-- Find a secure way to authenticate with IRC services without storing
-  RAW passwords.
+&#42;Contacts:&#42;
 
-- Respect user privacy: user personal messages should be stored in an
-  encrypted format in the server.
+&#42; rtnpro at fedoraproject dot org &#42; sayanchowdhury at
+fedoraproject dot org
 
-- Allow users to download chat logs in various formats compatible with
-  popular IRC clients.
-
-- HTML5 mobile app
-
-- VCS, Bugzilla and other task management tools integration.
-
-- Video/audio conference facility on top of HTML5 and JS technologies.
-
-**Knowledge prerequisite:** Python, Javascript, HTML, CSS.
-
-**Skill level:** Medium
-
-**Contacts:**
-
-- rtnpro at fedoraproject dot org
-
-- sayanchowdhury at fedoraproject dot org
-
-**Mentor(s):** [Ratnadeep
+&#42;Mentor(s):&#42; [Ratnadeep
 Debnath](https://fedoraproject.org/wiki/User:Rtnpro), [Kushal
 Das](https://fedoraproject.org/wiki/User:Kushal), [Sayan
 Chowdhury](https://fedoraproject.org/wiki/User:Sayanchowdhury)
 
-**Notes:**
+&#42;Notes:&#42;
 
 ### Afterthought
 
-**Status:** Proposed
+&#42;Status:&#42; Proposed
 
-**Summary of idea:** Afterthought will be the tool to run (not
-predefined) jobs on \*nix systems. At very high level, it will take an
-URI as argument, fetch the data of the URI, strip/parse the formatted
-data (with instruction sets) & execute the commands/jobs. This makes
+&#42;Summary of idea:&#42; Afterthought will be the tool to run (not
+predefined) jobs on &#42;nix systems. At very high level, it will take
+an URI as argument, fetch the data of the URI, strip/parse the formatted
+data (with instruction sets) &amp; execute the commands/jobs. This makes
 automating tasks, server/application deployments so much easy.
 
 By operation, one can simply consider it as a *dynamic*, *lazy-loaded*
 shell-script. When running a script it follows the routines put in it at
 the creation time (which may have been obsoleted at the time of
-execution); whereas, **afterthought** fetches the latest routines, which
-would be the latest route-to-follow for the operation - without the user
-needing to worry about it (or get the \'latest\' script).
+execution); whereas, &#42;afterthought&#42; fetches the latest routines,
+which would be the latest route-to-follow for the operation - without
+the user needing to worry about it (or get the \'latest\' script).
 
 Other possibilities include, configuring a base procedure customized to
 particular needs, profiles and/or credentials. And the endpoint doesn't
@@ -9730,33 +8326,33 @@ need to reply the same on 2020 for a Fedora Machine with Clang, as it
 did on 2015 for a CentOS rig with GCC - if you know get what I mean.
 Other such possibilities are:
 
-`` $ afterthought `http://zomg.app/install[`http://zomg.app/install ``\]\
-`` $ afterthought `https://le-wild-github.app/username/pushes/to/ci[`https://le-wild-github.app/username/pushes/to/ci ``\]\
-`` $ afterthought `https://thoughtpolice.tld/openshift/deploy?user=id&code=github.com/foo/bar[`https://thoughtpolice.tld/openshift/deploy?user=id&code=github.com/foo/bar ``\]\
-`` $ afterthought `https://thoughtpolice.tld/user/?profile=setup-irc-bouncer-on-my-raspberry-pidora[`https://thoughtpolice.tld/user/?profile=setup-irc-bouncer-on-my-raspberry-pidora ``\]\
-`` $ afterthought `https://thoughtpolice.tld/user/?profile=run-httpd-server-on-a-docker-image-of-fedora[`https://thoughtpolice.tld/user/?profile=run-httpd-server-on-a-docker-image-of-fedora ``\]
+&#96; \$ afterthought &#96;[&#96;http://zomg.app/install&#96;](http://zomg.app/install)\
+&#96; \$ afterthought &#96;[&#96;https://le-wild-github.app/username/pushes/to/ci&#96;](https://le-wild-github.app/username/pushes/to/ci)\
+&#96; \$ afterthought &#96;[&#96;https://thoughtpolice.tld/openshift/deploy?user=id&amp;code=github.com/foo/bar&#96;](https://thoughtpolice.tld/openshift/deploy?user=id&amp;code=github.com/foo/bar)\
+&#96; \$ afterthought &#96;[&#96;https://thoughtpolice.tld/user/?profile=setup-irc-bouncer-on-my-raspberry-pidora&#96;](https://thoughtpolice.tld/user/?profile=setup-irc-bouncer-on-my-raspberry-pidora)\
+&#96; \$ afterthought &#96;[&#96;https://thoughtpolice.tld/user/?profile=run-httpd-server-on-a-docker-image-of-fedora&#96;](https://thoughtpolice.tld/user/?profile=run-httpd-server-on-a-docker-image-of-fedora)
 
 OR maybe, in a Dockerfile
 
-`CMD ["afterthought", http://thoughthacker.tld/rule-the-world#plan-TBD-but-this-image-ships-today]`
+&#96; CMD \[\'afterthought\', \'&#96;[&#96;http://thoughthacker.tld/rule-the-world&#35;plan-TBD-but-this-image-ships-today&#96;](http://thoughthacker.tld/rule-the-world&#35;plan-TBD-but-this-image-ships-today)&#96;\'\]&#96;
 
 So, all in all - less RTFM, less maintenance (or chasing ghost of the
 past routines/scripts), more automation - wherever applies (hint:
 applies in way too many places).
 
-**Knowledge prerequisite:** \*nix && (Rust \|\| C/C++ \|\| Go) &&
-(Node.js::FlatIron/Express \|\| Python::Flask/Pyramids \|\|
-Ruby::Rails/Camping)
+&#42;Knowledge prerequisite:&#42; &#42;nix &amp;&amp; (Rust \|\| C/C++
+\|\| Go) &amp;&amp; (Node.js::FlatIron/Express \|\|
+Python::Flask/Pyramids \|\| Ruby::Rails/Camping)
 
-**Skill level:** Intermediate
+&#42;Skill level:&#42; Intermediate
 
-**Contacts:** [Soumya Deb
+&#42;Contacts:&#42; [Soumya Deb
 (Debloper)](https://fedoraproject.org/wiki/User:Debloper)
 
-**Mentor(s):** [Soumya Deb
+&#42;Mentor(s):&#42; [Soumya Deb
 (Debloper)](https://fedoraproject.org/wiki/User:Debloper)
 
-**Notes:**
+&#42;Notes:&#42;
 
 ### Shumgrepper
 
@@ -9778,7 +8374,7 @@ to work on top of summershum.
 *Contacts:* pingou at fedoraproject dot org
 
 *Mentor(s):*[Pierre-Yves
-Chibon](https://fedoraproject.org/wiki/User:pingou) & [Ralph
+Chibon](https://fedoraproject.org/wiki/User:pingou) &amp; [Ralph
 Bean](https://fedoraproject.org/wiki/User:ralph)
 
 *Notes:*
@@ -9794,46 +8390,34 @@ is GitHub for designers. It's a web app that allows designers and
 artists to create, share, and collaborate, backed by Git for version
 control, and intended to be part of a FLOSS design suite that includes
 
-- [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox like
-  system that will automatically check in and push files in project
-  directly to a shared git repo
-
-- [Magic Mockup](https://github.com/garrett/magicmockup) - a
-  coffeescript/javascript you can insert into an SVG of mockups to
-  enable interactive, click-through mockups ([see a demo
-  here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
-  )
-
-- [Inkscape](http://inkscape.org) is our preferred design tool of choice
+&#42; [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox
+like system that will automatically check in and push files in project
+directly to a shared git repo &#42; [Magic
+Mockup](https://github.com/garrett/magicmockup) - a
+coffeescript/javascript you can insert into an SVG of mockups to enable
+interactive, click-through mockups ([see a demo
+here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
+) &#42; [Inkscape](http://inkscape.org) is our preferred design tool of
+choice
 
 Last year, a successful GSoC took Glitter Gallery from a prototype to a
 fully featured web app, but there are still plenty of features to be
 added, and improvements to be made. Some things that still need work:
 
-- Transitioning to test-driven development, which means writing unit and
-  integration tests for all of the components
-
-- Better design suite integration, which could mean better support for
-  local editing with SparkleShare; Inkscape integration through an
-  extension; and/or support for creating and sharing interactive SVGs
-  with Magic Mockup
-
-- UI improvements - the current UI is functional and pretty nice
-  looking, but it could be more responsive and polished
-
-- Better commenting - the current commenting system is basic, and
-  there's lots of ways it could be improved, including thread support,
-  pingback support, the ability to reference a specific region of a
-  design in a comment
-
-- Issue tracking - allow the designer to track requested changes as
-  issues
-
-- More social features - such as the ability to follow a
-  file/project/user, an activity feed, private messaging, easy sharing
-  outside the application
-
-- Your own ideas
+&#42; Transitioning to test-driven development, which means writing unit
+and integration tests for all of the components &#42; Better design
+suite integration, which could mean better support for local editing
+with SparkleShare; Inkscape integration through an extension; and/or
+support for creating and sharing interactive SVGs with Magic Mockup
+&#42; UI improvements - the current UI is functional and pretty nice
+looking, but it could be more responsive and polished &#42; Better
+commenting - the current commenting system is basic, and there's lots of
+ways it could be improved, including thread support, pingback support,
+the ability to reference a specific region of a design in a comment
+&#42; Issue tracking - allow the designer to track requested changes as
+issues &#42; More social features - such as the ability to follow a
+file/project/user, an activity feed, private messaging, easy sharing
+outside the application &#42; Your own ideas
 
 *Knowledge prerequisite:* git, Ruby on Rails, front-end (HTML/CSS/JS)
 development, design experience would be great but optional
@@ -9888,7 +8472,7 @@ panels, 100% compatible with fedora, and redhat enterprise Linux.
 written in python.
 
 the control panel will be able to create domains and automatically setup
-apache, postfix, dovecot, mysql, postgresql bind etc...​
+apache, postfix, dovecot, mysql, postgresql bind etc&#8230;
 
 *Knowledge prerequisite:* apache, postfix, dovecot, mysql, postgresql,
 proftpd, bind
@@ -9927,7 +8511,7 @@ much as possible.
 
 ### Collaboration projects with other organizations
 
-- TBA
+&#42; TBA
 
 ### Muon -- KDE package management
 
@@ -10099,14 +8683,10 @@ in Eclipse.
 
 The plugin should:
 
-- implement Java model(s) for XMvn configuration
-
-- allow reading and writing model(s) as XML files
-
-- implement configuration editor providing raw XML view and one or more
-  high-level views
-
-- allow converting configuration to sequence of RPM macro calls
+&#42; implement Java model(s) for XMvn configuration &#42; allow reading
+and writing model(s) as XML files &#42; implement configuration editor
+providing raw XML view and one or more high-level views &#42; allow
+converting configuration to sequence of RPM macro calls
 
 XMvn plugin should integrate with Eclipse Linux Tools and/or Fedora
 Packager for Eclipse where possible (adding commands in perspectives,
@@ -10169,7 +8749,7 @@ providing an integration between NetworkManager and Desktop environments
 so that a user can create network profiles for each network
 location(connection) providing appropriate settings like proxy settings
 which is the main proposed setting here. NetworkManager can have a
-\"Network Location\" concept: for wireless networks, usually the name of
+\'Network Location\' concept: for wireless networks, usually the name of
 the network (ESSID) is usually enough. For wired connections, DHCP
 servers can and usually do provide network's domain name, which can be
 used as the name of the location. It is nice if a user can associate
@@ -10210,13 +8790,13 @@ to make it all work. And then there are the bugs.
 The goal of this project is to assemble a toolchain (a recommended
 collection of software available in the Fedora repositories) and write a
 comprehensive tutorial for how to create an professional-looking
-screencast. That may included chasing down & fixing bugs in the existing
-tools, discovering new tools and getting them packaged and learning
-about techniques in the environment around the computer, such as how to
-select & setup a microphone or how to draft a good speaking script. One
-possible task in the project is to add sound recording support to the
-Gnome 3 desktop recorder. Currently, the desktop recorder only grabs the
-video of the screen.
+screencast. That may included chasing down &amp; fixing bugs in the
+existing tools, discovering new tools and getting them packaged and
+learning about techniques in the environment around the computer, such
+as how to select &amp; setup a microphone or how to draft a good
+speaking script. One possible task in the project is to add sound
+recording support to the Gnome 3 desktop recorder. Currently, the
+desktop recorder only grabs the video of the screen.
 
 The student will get support and advice from the Fedora Videos team
 since they are trying to learn how to create these screencasts.
@@ -10245,20 +8825,15 @@ the user interface has not seen too much love.
 
 Currently available interfaces for users are:
 
-- Too Ressource Consuming
-
-- Too Overloaded or
-
-- Too Feature Poor
-
-- Not Customizable With Reasonable Effort
+&#42; Too Ressource Consuming &#42; Too Overloaded or &#42; Too Feature
+Poor &#42; Not Customizable With Reasonable Effort
 
 The E17 Desktop Shell, developed as part of the [Enlightenment
 Project](http://www.enlightenment.org), is a perfect match. It provides
 a rich interface, whilst consuming very little ressources. The
 Enlightenment Foundation Libraries, on which E17 is built upon, were
 chosen as Foundation Block of Tizen, the MeeGo successor backed by
-Samsung and Intel. If things work out, E17 will be the first \"real\"
+Samsung and Intel. If things work out, E17 will be the first \'real\'
 Desktop Shell for Wayland.
 
 Though it already provides [special
@@ -10322,7 +8897,7 @@ Currently, there are a host of single-purpose methods for storing and
 retrieving NoSQL data, which are difficult to access from legacy
 applications. Creating a NoSQL translator for GlusterFS would help
 mitigate this problem and give developers more options for storing and
-accessing \"big data\" in a way that is accessible via a variety of
+accessing \'big data\' in a way that is accessible via a variety of
 standard toolkits and protocols.
 
 *Knowledge prerequisite:* C, GlusterFS internals
@@ -10406,77 +8981,59 @@ Debnath](https://fedoraproject.org/wiki/User:Rtnpro)
 
 *Notes:* Features that I am looking to target:
 
-\* User management/FAS integration\
-\* Un-linerize the workflow.\
-\* Default wallpaper/Hostname/user-password/root-password\
-\* Custom repos/RPMs\
-\* Home directory content\
-\* Search Packages\
-\* Image type: ISO, virt image, raw disk
+&#96;&#42; User management/FAS integration&#96;\
+&#96;&#42; Un-linerize the workflow.&#96;\
+&#96;&#42; Default wallpaper/Hostname/user-password/root-password&#96;\
+&#96;&#42; Custom repos/RPMs&#96;\
+&#96;&#42; Home directory content&#96;\
+&#96;&#42; Search Packages&#96;\
+&#96;&#42; Image type: ISO, virt image, raw disk&#96;
 
 Code at <https://github.com/shreyankg/Dorrie>, fork and send pull
 request, if you are interested to contribute.
 
 #### Fedpkg: Chain-builds for non-Rawhide branches
 
-- Status: Proposed
-
-- Summary of idea: Contribute to the fedpkg project, enabling the
-  building of a series of interdependent packages in a single action for
-  released Fedora branches
-
-- Knowledge Prerequisite: Python, Fedora Packaging
-
-- Skill Level: Low - Medium
-
-- Contacts: [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:sgallagh)
-
-- Mentor(s): [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:sgallagh) (Backup)
-
-- Notes: <https://fedorahosted.org/fedpkg/ticket/6>
+&#42; Status: Proposed &#42; Summary of idea: Contribute to the fedpkg
+project, enabling the building of a series of interdependent packages in
+a single action for released Fedora branches &#42; Knowledge
+Prerequisite: Python, Fedora Packaging &#42; Skill Level: Low - Medium
+&#42; Contacts: [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:sgallagh) &#42;
+Mentor(s): [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:sgallagh) (Backup) &#42;
+Notes: <https://fedorahosted.org/fedpkg/ticket/6>
 
 #### Financial IS for Fedora project (cont.)
 
-- Status: Proposed
+&#42; Status: Proposed &#42; Summary of idea: There is a need of an
+information system where it can be used with in the project to track and
+analyse the financial activities. It may be a customization of a open
+source solution or a solution from scratch.
 
-- Summary of idea: There is a need of an information system where it can
-  be used with in the project to track and analyse the financial
-  activities. It may be a customization of a open source solution or a
-  solution from scratch.
+&#42; Skill Level: Medium
 
-- Skill Level: Medium
-
-- Mentor : [Charindu
-  Thiwanka](https://fedoraproject.org/wiki/User:Charindu100) - Technical
-
-- Co-Mentor(s): [Buddhike
-  Kurera](https://fedoraproject.org/wiki/User:Bckurera) - Functional
-
-- Notes: knowledge in PHP is required. MVC design pattern
+&#42; Mentor : [Charindu
+Thiwanka](https://fedoraproject.org/wiki/User:Charindu100) - Technical
+&#42; Co-Mentor(s): [Buddhike
+Kurera](https://fedoraproject.org/wiki/User:Bckurera) - Functional &#42;
+Notes: knowledge in PHP is required. MVC design pattern
 
 ### Linux system services
 
 #### Implement a battery of unit tests for SSSD
 
-- Status: Proposed
-
-- Summary of idea: The purpose of this project is to develop a suite of
-  unit tests for the SSSD. The unit tests would leverage mock objects to
-  be able to exercise code that is otherwise only ever reachable when
-  the SSSD is connected to the network. Contributing the set of unit
-  tests to the SSSD would greatly improve its stability long-term and
-  would help raise confidence when pushing new SSSD versions into Fedora
-  or other distributions.
-
-- Knowledge prerequisite: C programming
-
-- Skill level: intermediate to high
-
-- Contacts: [Jakub Hrozek](https://fedoraproject.org/wiki/User:jhrozek)
-
-- Mentor(s): [Jakub Hrozek](https://fedoraproject.org/wiki/User:jhrozek)
+&#42; Status: Proposed &#42; Summary of idea: The purpose of this
+project is to develop a suite of unit tests for the SSSD. The unit tests
+would leverage mock objects to be able to exercise code that is
+otherwise only ever reachable when the SSSD is connected to the network.
+Contributing the set of unit tests to the SSSD would greatly improve its
+stability long-term and would help raise confidence when pushing new
+SSSD versions into Fedora or other distributions. &#42; Knowledge
+prerequisite: C programming &#42; Skill level: intermediate to high
+&#42; Contacts: [Jakub
+Hrozek](https://fedoraproject.org/wiki/User:jhrozek) &#42; Mentor(s):
+[Jakub Hrozek](https://fedoraproject.org/wiki/User:jhrozek)
 
 ### Improving Fedora packaging
 
@@ -10504,8 +9061,8 @@ The benefit of this method is:
 issues that can arise. Also, read the extensive blog post on [my
 blog](http://execat.blogspot.in/2012/03/aur-clone-for-fedora.html).
 
-Analogy: This is a lot like \"having your own library\" vs \"getting a
-book from a bookstore\". If you refer a book often, you'd keep it in
+Analogy: This is a lot like \'having your own library\' vs \'getting a
+book from a bookstore\'. If you refer a book often, you'd keep it in
 your library. This would occupy space and consume resources. Otherwise,
 you'd just pull out a separate paper with instructions about the
 bookstore to find the book, and fetch the book from the store. Though
@@ -10531,7 +9088,7 @@ For Fedora I'm envisioning a Maven extension that makes sure only
 sanctioned components are used during the build (without putting a
 burden on the packager). This will allow developers who are not on
 Fedora to also build with this extension and thus verify (and fix)
-issues which are the result of \"Fedora packaging\".
+issues which are the result of \'Fedora packaging\'.
 
 A prototype can be viewed at [Maven FOSS Repository
 Extension](https://github.com/fmvn/foss-maven).
@@ -10546,7 +9103,7 @@ Extension](https://github.com/fmvn/foss-maven).
 *Mentor(s):* [Carlo de Wolf](http://community.jboss.org/people/wolfc),
 [Mikolaj Izdebski](https://fedoraproject.org/wiki/User:Mizdebsk)
 
-*Notes:* You can find us at irc.freenode.net #fedora-java: wolfc and
+*Notes:* You can find us at irc.freenode.net &#35;fedora-java: wolfc and
 mizdebsk
 
 ### Fedora Spins and remixes
@@ -10629,10 +9186,10 @@ Following criterion should be fulfilled on or before the application
 deadline unless otherwise specifically noted.
 
 1.  [Create a FAS
-    account](https://fedoraproject.org/wiki/GSOC_Guide_students#Set_up_an_account)
+    account](https://fedoraproject.org/wiki/GSOC_Guide_students&#35;Set_up_an_account)
 
 2.  [Join with fedora-summer-coding mailing
-    list](https://fedoraproject.org/wiki/GSOC_Guide_students#Start_communicating)
+    list](https://fedoraproject.org/wiki/GSOC_Guide_students&#35;Start_communicating)
 
 3.  Submit application on
     [Google-Melange](https://google-melange.appspot.com/gsoc/proposal/submit/google/gsoc2014/fedora)
@@ -10640,7 +9197,7 @@ deadline unless otherwise specifically noted.
 4.  [Application is
     filled](https://fedoraproject.org/wiki/GSOC_2013/Student_Application_Template/Common)
     and available on Fedora Wiki - [How to fill the
-    application](https://fedoraproject.org/wiki/GSOC_Guide_students#Create_your_Application)
+    application](https://fedoraproject.org/wiki/GSOC_Guide_students&#35;Create_your_Application)
 
 5.  CV highlighting your activities with Information Technology
 
@@ -10655,22 +9212,24 @@ deadline unless otherwise specifically noted.
     (eg: Exams in university, internships, vacations..etc)
 
 \'\'\'Please note - \'\'\' email your CV, Recommendation and Detailed
-plan to Org Admins, **bckurera AT fedoraproject DOT org** for any
+plan to Org Admins, &#42;bckurera AT fedoraproject DOT org&#42; for any
 inquiry please use the above email address and feel free to CC your
 mentor if required (recommended).
 
-**Important** - We understand that you need some time to contact a
+&#42;Important&#42; - We understand that you need some time to contact a
 person and get a recommendation, therefore if it seems like getting
 delayed please send us the rest of the documents and email the
 recommendation later.
 
-**Bare mind** - You are required to add your project proposal to wiki,
-therefore proceed with the application process as quickly as possible.
+&#42;Bare mind&#42; - You are required to add your project proposal to
+wiki, therefore proceed with the application process as quickly as
+possible.
 
-**We do not accept any document after Google student application
+&#42;We do not accept any document after Google student application
 deadline, all entries make after the deadline is ignored unless you have
 not informed to Org Admins! However if you have any difficulty to meet
-this requirement please let us know in advance (before the deadline).**
+this requirement please let us know in advance (before the
+deadline).&#42;
 
 Once you have completed above steps and email those documents, Org
 admins will peer-review your application set and you will be contacted
@@ -10681,7 +9240,7 @@ hours in this period.
 
 ## FAQ
 
-- Why should I let program administrators know about my application?
+&#42; Why should I let program administrators know about my application?
 
 We would like to keep the pages clean and structured therefore once you
 have created your application let us know the link. We go through your
@@ -10689,27 +9248,29 @@ application and let you know if further action is required. If
 everything looks ok, will send you the link so that you can add your
 proposal as per the template in that link.
 
-- **What about details of my project?**
+&#42; &#42;What about details of my project?&#42;
 
 You will be asked and given a link to update information about your
 project idea once you have completed the above mentioned process.
 
-- **Why recommendation is required?**
+&#42; &#42;Why recommendation is required?&#42;
 
 This gives us an information about your reliability, we need you to
 complete the project with mentioned goals and with in the time period.
 
-- **I am a Fedora project contributor, do I need a recommendation?**
+&#42; &#42;I am a Fedora project contributor, do I need a
+recommendation?&#42;
 
 Yes, since we maintain equal opportunity environment the process is
 common for all.
 
-- **What are the file formats that I can use?**
+&#42; &#42;What are the file formats that I can use?&#42;
 
 You are encourage to use .pdf as much as possible, if not a Open Format
 can be used.
 
-- **What is meant by a \"Recommendation\", how should it looks like?**
+&#42; &#42;What is meant by a \'Recommendation\', how should it looks
+like?&#42;
 
 It is good to have a recommendation from a person who knows you well,
 recommending that you suites to this program. May be you worked with him
@@ -10719,29 +9280,30 @@ Free Software Project then we would like to hear about that from some
 one from the project who see your great contribution. That can be
 considered as a recommendation.
 
-- **I dont get a reply from Org Admins after sending documents, is it
-  normal?**
+&#42; &#42;I dont get a reply from Org Admins after sending documents,
+is it normal?&#42;
 
 You should get a reply with in 24 hours, if not please immediately
 contact Org Admin.
 
-- **What should be included in my CV?**
+&#42; &#42;What should be included in my CV?&#42;
 
 It should be decided by you. Good to include each and every important
 thing that make you a suitable candidate and add values. if you want to
 know how to create an effective CV, please google.
 
-- **What is the need of a detailed plan of my activities?**
+&#42; &#42;What is the need of a detailed plan of my activities?&#42;
 
 It is important to get an idea about your free time and arrange things
 at the early stage. Therefore this is really important and try to make
 it accurate as much as possible.
 
-- **Why should I email the documents?**
+&#42; &#42;Why should I email the documents?&#42;
 
 It is for your own privacy. If you would like to make the public please
-feel free to do so and send us the links instead. \*\* 2013 = Google
-Summer of Code 2013
+feel free to do so and send us the links instead.
+
+&#42;&#42; 2013 = Google Summer of Code 2013
 
 ![Gsoc 2013 logo.png](Gsoc-2013-logo.png.jpg)
 
@@ -10771,22 +9333,13 @@ to contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real world large codebases.
-
-- Collaborate with real engineers and other professional experts.
-
-- Contribute to something meaningful while learning and earning student
-  value.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Possibly attract attention that gets you an internship or job after
-  graduation.
-
-- Create life time connections.
+&#42; Work with real world large codebases. &#42; Collaborate with real
+engineers and other professional experts. &#42; Contribute to something
+meaningful while learning and earning student value. &#42; Learn tools
+and processes that are just like what you are going to use if you work
+in technology after graduation. &#42; Make friends and contacts around
+the globe. &#42; Possibly attract attention that gets you an internship
+or job after graduation. &#42; Create life time connections.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -10853,23 +9406,23 @@ students\' idea page and pick one as per your interest.
 
 ### How to work with students {#how-to-work-with-students}
 
-- One way is to provide an idea for students to work on. This idea might
-  be very well planned out, in which case you may need a high-level of
-  contact with the student to get it implemented correctly.
+&#42; One way is to provide an idea for students to work on. This idea
+might be very well planned out, in which case you may need a high-level
+of contact with the student to get it implemented correctly.
 
-- It is harder to find success where you are completely certain of how
-  an idea needs to be implemented; finding a student with the skills and
-  interest to implement a specific solution is a lot harder than finding
-  a student with enough skills to respond to a use case need.
+&#42; It is harder to find success where you are completely certain of
+how an idea needs to be implemented; finding a student with the skills
+and interest to implement a specific solution is a lot harder than
+finding a student with enough skills to respond to a use case need.
 
-- Where you can have looser ideas, you may be able to find a student who
-  works as a sort-of intern who can implement a solution to a use case
-  you have. In past experiences, students going after a use case are
-  more likely to get somewhere with self-direction.
+&#42; Where you can have looser ideas, you may be able to find a student
+who works as a sort-of intern who can implement a solution to a use case
+you have. In past experiences, students going after a use case are more
+likely to get somewhere with self-direction.
 
-- You may also want to work with a student who brings an idea to your
-  sub-project. This requires a different level of communication
-  throughout the project, but can be the most rewarding.
+&#42; You may also want to work with a student who brings an idea to
+your sub-project. This requires a different level of communication
+throughout the project, but can be the most rewarding.
 
 ### Mentor responsibilities {#mentor-responsibilities}
 
@@ -10879,13 +9432,10 @@ JBoss.org, or another).
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstream.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not, which affects payment.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstream. &#42; Be the final, accountable person for deciding if the
+student is successful or not, which affects payment.
 
 ### List of Mentors {#list-of-mentors}
 
@@ -10899,13 +9449,14 @@ List](https://fedoraproject.org/wiki/GSOC_2013/Registered_Mentors_List)
 
 ## Communication {#communication}
 
-**Mailing List (GSOC related) :**
+&#42;Mailing List (GSOC related) :&#42;
 [summer-coding](https://lists.fedoraproject.org/admin/lists/summer-coding@lists.fedoraproject.org/)\
-**Mailing List (Technical) :**
+&#42;Mailing List (Technical) :&#42;
 [devel](https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/)\
-**IRC :** Channel -
-[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-or [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
+&#42;IRC :&#42; Channel -
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
 on Freenode
 
 ## Time Line (Student version) {#time-line-student-version}
@@ -10913,70 +9464,55 @@ on Freenode
 Reference : [Full
 timeline](http://www.google-melange.com/gsoc/events/google/gsoc2013)
 
-- April 8: 19:00 UTC List of accepted mentoring organizations published
-  on the Google Summer of Code 2013 site.
-
-- April 9 - 21: Would-be student participants discuss application ideas
-  with mentoring organizations.
-
-- April 22: 19:00 UTC Student application period opens.
-
-- May 3: 19:00 UTC Student application deadline.
+&#42; April 8: 19:00 UTC List of accepted mentoring organizations
+published on the Google Summer of Code 2013 site. &#42; April 9 - 21:
+Would-be student participants discuss application ideas with mentoring
+organizations. &#42; April 22: 19:00 UTC Student application period
+opens. &#42; May 3: 19:00 UTC Student application deadline.
 
 Interim Period: Mentoring organizations review and rank student
 proposals; where necessary, mentoring organizations may request further
 proposal detail from the student applicant.
 
-- May 6: Mentoring organizations should have requested slots via their
-  profile in Melange by this point.
-
-- May 8: Slot allocations published to mentoring organizations
+&#42; May 6: Mentoring organizations should have requested slots via
+their profile in Melange by this point. &#42; May 8: Slot allocations
+published to mentoring organizations
 
 Interim Period: Slot allocation trades happen amongst organizations.
 Mentoring organizations review and rank student proposals; where
 necessary, mentoring organizations may request further proposal detail
 from the student applicant.
 
-- May 27: 19:00 UTC Accepted student proposals announced on the Google
-  Summer of Code 2013 site.
+&#42; May 27: 19:00 UTC Accepted student proposals announced on the
+Google Summer of Code 2013 site.
 
 Community Bonding Period: Students get to know mentors, read
 documentation, get up to speed to begin working on their projects.
 
-- June 17: Students begin coding for their Google Summer of Code
-  projects;
+&#42; June 17: Students begin coding for their Google Summer of Code
+projects;
 
 Google begins issuing initial student payments provided tax forms are on
 file and students are in good standing with their communities. Work
 Period: Mentors give students a helping hand and guidance on their
 projects.
 
-- July 29: 19:00 UTC Mentors and students can begin submitting mid-term
-  evaluations.
-
-- August 2: 19:00 UTC Mid-term evaluations deadline;
-
-- Work Period: Mentors give students a helping hand and guidance on
-  their projects.
-
-- September 16: Suggested \'pencils down\' date. Take a week to scrub
-  code, write tests, improve documentation, etc.
-
-- September 23: 19:00 UTC Firm \'pencils down\' date. Mentors, students
-  and organization administrators can begin submitting final evaluations
-  to Google.
-
-- September 27: 19:00 UTC Final evaluation deadline
+&#42; July 29: 19:00 UTC Mentors and students can begin submitting
+mid-term evaluations. &#42; August 2: 19:00 UTC Mid-term evaluations
+deadline; &#42; Work Period: Mentors give students a helping hand and
+guidance on their projects. &#42; September 16: Suggested \'pencils
+down\' date. Take a week to scrub code, write tests, improve
+documentation, etc. &#42; September 23: 19:00 UTC Firm \'pencils down\'
+date. Mentors, students and organization administrators can begin
+submitting final evaluations to Google. &#42; September 27: 19:00 UTC
+Final evaluation deadline
 
 Google begins issuing student and mentoring organization payments
 provided forms and evaluations are on file.
 
-- September 27: Students can begin submitting required code samples to
-  Google
-
-- October 1: Final results of Google Summer of Code 2013 announced
-
-- October 19 & 20: Mentor Summit at Google
+&#42; September 27: Students can begin submitting required code samples
+to Google &#42; October 1: Final results of Google Summer of Code 2013
+announced &#42; October 19 &amp; 20: Mentor Summit at Google
 
 ## Organization Application
 
@@ -10984,8 +9520,8 @@ provided forms and evaluations are on file.
 
 ## Ideas Page {#ideas-page}
 
-**Status :** Open for Ideas\
-**Link :** [ideas](ideas.xml)
+&#42;Status :&#42; Open for Ideas\
+&#42;Link :&#42; [ideas](ideas.xml)
 
 We encourage students to provide creative yet useful ideas towards the
 Fedora project as well. Please use [Student
@@ -11005,8 +9541,9 @@ once the idea is picked by a mentor.
 
 4.  [IRC](https://fedoraproject.org/wiki/Communicate/IRCHowTo)
 
-5.  [Development](https://fedoraproject.org/wiki/Development) = Ideas:
-    Google Summer of Code 2013
+5.  [Development](https://fedoraproject.org/wiki/Development)
+
+# Ideas: Google Summer of Code 2013 {#_ideas_google_summer_of_code_2013}
 
 Find an idea you like? Want to propose your own? See the Getting Started
 Guide with GSoC:
@@ -11026,8 +9563,8 @@ this page for any related clarification. If you are new to The Fedora
 project, following material would help you to get started. Further
 please sign-up with the [Fedora Account
 System(FAS)](https://fedoraproject.org/wiki/FAS) if you are willing to
-continue with the Fedora project. `#fedora-devel`, IRC channel can be
-used to get instant support.
+continue with the Fedora project. &#96;&#35;fedora-devel&#96;, IRC
+channel can be used to get instant support.
 
 1.  [The Foundation](https://fedoraproject.org/wiki/Foundation)
 
@@ -11075,8 +9612,8 @@ Please add your idea as follows.
 
 *Notes:*
 
-**!!!The draft was changed slightly, please add required field as
-required!!!**
+&#42;!!!The draft was changed slightly, please add required field as
+required!!!&#42;
 
 ## Idea list for GSoC 2013
 
@@ -11131,8 +9668,8 @@ Karapetsas](https://fedoraproject.org/wiki/User:Stefanok), stevezesch2
 
 ### Collaboration projects with Geeklog project
 
-Please note that only **one** of the following Geeklog projects will be
-accepted under the Fedora umbrella!
+Please note that only &#42;one&#42; of the following Geeklog projects
+will be accepted under the Fedora umbrella!
 
 #### Geeklog: Install Script Refinements
 
@@ -11230,7 +9767,7 @@ providing an integration between NetworkManager and Desktop environments
 so that a user can create network profiles for each network
 location(connection) providing appropriate settings like proxy settings
 which is the main proposed setting here. NetworkManager can have a
-\"Network Location\" concept: for wireless networks, usually the name of
+\'Network Location\' concept: for wireless networks, usually the name of
 the network (ESSID) is usually enough. For wired connections, DHCP
 servers can and usually do provide network's domain name, which can be
 used as the name of the location. It is nice if a user can associate
@@ -11261,7 +9798,7 @@ panels, 100% compatible with fedora, and redhat enterprise Linux.
 written in python.
 
 the control panel will be able to create domains and automatically setup
-apache, postfix, dovecot, mysql, postgresql bind etc...​
+apache, postfix, dovecot, mysql, postgresql bind etc&#8230;
 
 *Knowledge prerequisite:* apache, postfix, dovecot, mysql, postgresql,
 proftpd, bind
@@ -11295,13 +9832,13 @@ to make it all work. And then there are the bugs.
 The goal of this project is to assemble a toolchain (a recommended
 collection of software available in the Fedora repositories) and write a
 comprehensive tutorial for how to create an professional-looking
-screencast. That may included chasing down & fixing bugs in the existing
-tools, discovering new tools and getting them packaged and learning
-about techniques in the environment around the computer, such as how to
-select & setup a microphone or how to draft a good speaking script. One
-possible task in the project is to add sound recording support to the
-Gnome 3 desktop recorder. Currently, the desktop recorder only grabs the
-video of the screen.
+screencast. That may included chasing down &amp; fixing bugs in the
+existing tools, discovering new tools and getting them packaged and
+learning about techniques in the environment around the computer, such
+as how to select &amp; setup a microphone or how to draft a good
+speaking script. One possible task in the project is to add sound
+recording support to the Gnome 3 desktop recorder. Currently, the
+desktop recorder only grabs the video of the screen.
 
 The student will get support and advice from the Fedora Videos team
 since they are trying to learn how to create these screencasts.
@@ -11330,20 +9867,15 @@ the user interface has not seen too much love.
 
 Currently available interfaces for users are:
 
-- Too Ressource Consuming
-
-- Too Overloaded or
-
-- Too Feature Poor
-
-- Not Customizable With Reasonable Effort
+&#42; Too Ressource Consuming &#42; Too Overloaded or &#42; Too Feature
+Poor &#42; Not Customizable With Reasonable Effort
 
 The E17 Desktop Shell, developed as part of the [Enlightenment
 Project](http://www.enlightenment.org), is a perfect match. It provides
 a rich interface, whilst consuming very little ressources. The
 Enlightenment Foundation Libraries, on which E17 is built upon, were
 chosen as Foundation Block of Tizen, the MeeGo successor backed by
-Samsung and Intel. If things work out, E17 will be the first \"real\"
+Samsung and Intel. If things work out, E17 will be the first \'real\'
 Desktop Shell for Wayland.
 
 Though it already provides [special
@@ -11407,7 +9939,7 @@ Currently, there are a host of single-purpose methods for storing and
 retrieving NoSQL data, which are difficult to access from legacy
 applications. Creating a NoSQL translator for GlusterFS would help
 mitigate this problem and give developers more options for storing and
-accessing \"big data\" in a way that is accessible via a variety of
+accessing \'big data\' in a way that is accessible via a variety of
 standard toolkits and protocols.
 
 *Knowledge prerequisite:* C, GlusterFS internals
@@ -11480,24 +10012,20 @@ on their design work. With this project, we'd like to make progress
 towards fixing that. We have some disparate ideas / tools that we'd like
 to be integrated:
 
-- [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox like
-  system that will automatically check in and push files in project
-  directly to a shared git repo
-
-- [Magic Mockup](https://github.com/garrett/magicmockup) - a
-  coffeescript/javascript you can insert into an SVG of mockups to
-  enable interactive, click-through mockups ([see a demo
-  here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
-
-- [Design Hub](http://blog.linuxgrrl.com/category/design-hub/) - an idea
-  and a ruby on rails prototype of a web front end that could
-  potentially serve as a front end to git repos with design assets
-  **and** serve as well as a front end to magic mockup mockups in said
-  repos
-
-- [Inkscape](http://inkscape.org) is our preferred design tool of
-  choice; it would be great if it had some GUI integration with Magic
-  Mockup, Sparkleshare, and Design Hub
+&#42; [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox
+like system that will automatically check in and push files in project
+directly to a shared git repo &#42; [Magic
+Mockup](https://github.com/garrett/magicmockup) - a
+coffeescript/javascript you can insert into an SVG of mockups to enable
+interactive, click-through mockups ([see a demo
+here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
+&#42; [Design Hub](http://blog.linuxgrrl.com/category/design-hub/) - an
+idea and a ruby on rails prototype of a web front end that could
+potentially serve as a front end to git repos with design assets
+&#42;and&#42; serve as well as a front end to magic mockup mockups in
+said repos &#42; [Inkscape](http://inkscape.org) is our preferred design
+tool of choice; it would be great if it had some GUI integration with
+Magic Mockup, Sparkleshare, and Design Hub
 
 *Knowledge prerequisite:* Ruby on Rails, web development, some UI design
 chops *Skill level:* Intermediate *Contacts:* edirsh at redhat dot com
@@ -11537,7 +10065,7 @@ and EPEL (if possible).
 
 Git has fundamentally improved the way that developers share code. The
 barrier to sharing code has virtually been eliminated. We are also
-seeing the emergence of a new dynamic called \"Social Coding\". There's
+seeing the emergence of a new dynamic called \'Social Coding\'. There's
 no better example of this than Github.
 
 Creating an environment to foster social coding, and a low barrier to
@@ -11592,84 +10120,63 @@ Debnath](https://fedoraproject.org/wiki/User:Rtnpro)
 
 *Notes:* Features that I am looking to target:
 
-\* User management/FAS integration\
-\* Un-linerize the workflow.\
-\* Default wallpaper/Hostname/user-password/root-password\
-\* Custom repos/RPMs\
-\* Home directory content\
-\* Search Packages\
-\* Image type: ISO, virt image, raw disk
+&#96;&#42; User management/FAS integration&#96;\
+&#96;&#42; Un-linerize the workflow.&#96;\
+&#96;&#42; Default wallpaper/Hostname/user-password/root-password&#96;\
+&#96;&#42; Custom repos/RPMs&#96;\
+&#96;&#42; Home directory content&#96;\
+&#96;&#42; Search Packages&#96;\
+&#96;&#42; Image type: ISO, virt image, raw disk&#96;
 
 Code at <https://github.com/shreyankg/Dorrie>, fork and send pull
 request, if you are interested to contribute.
 
 #### Fedpkg: Chain-builds for non-Rawhide branches {#fedpkg-chain-builds-for-non-rawhide-branches}
 
-- Status: Proposed
-
-- Summary of idea: Contribute to the fedpkg project, enabling the
-  building of a series of interdependent packages in a single action for
-  released Fedora branches
-
-- Knowledge Prerequisite: Python, Fedora Packaging
-
-- Skill Level: Low - Medium
-
-- Contacts: [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:sgallagh)
-
-- Mentor(s): [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:sgallagh) (Backup)
-
-- Notes: <https://fedorahosted.org/fedpkg/ticket/6>
+&#42; Status: Proposed &#42; Summary of idea: Contribute to the fedpkg
+project, enabling the building of a series of interdependent packages in
+a single action for released Fedora branches &#42; Knowledge
+Prerequisite: Python, Fedora Packaging &#42; Skill Level: Low - Medium
+&#42; Contacts: [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:sgallagh) &#42;
+Mentor(s): [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:sgallagh) (Backup) &#42;
+Notes: <https://fedorahosted.org/fedpkg/ticket/6>
 
 #### Financial IS for Fedora project
 
-- Status: Proposed
+&#42; Status: Proposed &#42; Summary of idea: There is a need of an
+information system where it can be used with in the project to track and
+analyse the finacial activities. It may be a customiztion of a open
+source solution or a solution from scratch. &#42; Skill Level: Medium
 
-- Summary of idea: There is a need of an information system where it can
-  be used with in the project to track and analyse the finacial
-  activities. It may be a customiztion of a open source solution or a
-  solution from scratch.
-
-- Skill Level: Medium
-
-- Mentor : [Charindu
-  Thiwanka](https://fedoraproject.org/wiki/User:Charindu100) - Technical
-
-- Co-Mentor(s): [Buddhike
-  Kurera](https://fedoraproject.org/wiki/User:Bckurera) - Functional
-
-- Notes: knowledge in PHP is required. MVC design pattern
+&#42; Mentor : [Charindu
+Thiwanka](https://fedoraproject.org/wiki/User:Charindu100) - Technical
+&#42; Co-Mentor(s): [Buddhike
+Kurera](https://fedoraproject.org/wiki/User:Bckurera) - Functional &#42;
+Notes: knowledge in PHP is required. MVC design pattern
 
 #### Event management system for Fedora
 
-- Status: Proposed
-
-- Summary of idea: Fedora contributors organize lot of events. We need a
-  system to manage them. This sounds like a project management utility.
-  You can either build from scratch or customize an available free
-  software. This can be used to small event and as well as large event
-  like FUDcons. The main advantage to use such system is to organize
-  tasks and manage the cost. If you are interested contact me with a
-  proposal.
-
-- Skill Level: Medium
-
-- Contacts: [Buddhike
-  Kurera](https://fedoraproject.org/wiki/User:Bckurera)
-
-- Mentor(s): [Buddhike
-  Kurera](https://fedoraproject.org/wiki/User:Bckurera))
-
-- Notes: knowledge in PHP is required. MVC design pattern, creativity
+&#42; Status: Proposed &#42; Summary of idea: Fedora contributors
+organize lot of events. We need a system to manage them. This sounds
+like a project management utility. You can either build from scratch or
+customize an available free software. This can be used to small event
+and as well as large event like FUDcons. The main advantage to use such
+system is to organize tasks and manage the cost. If you are interested
+contact me with a proposal. &#42; Skill Level: Medium &#42; Contacts:
+[Buddhike Kurera](https://fedoraproject.org/wiki/User:Bckurera) &#42;
+Mentor(s): [Buddhike
+Kurera](https://fedoraproject.org/wiki/User:Bckurera)) &#42; Notes:
+knowledge in PHP is required. MVC design pattern, creativity
 
 #### Darkserver improvement
 
-- Status: Proposed
+&#42; Status: Proposed
 
-- Summary of idea: [Darkserver](http://darkserver.fedoraproject.org/)
-  now only supports primary koji instance of Fedora. We need support
+&#42; Summary of idea:
+[Darkserver](http://darkserver.fedoraproject.org/) now only supports
+primary koji instance of Fedora. We need support
 
 other secondary architectures and distributions. Different workers
 should use different job queues and they all should work independently.
@@ -11677,39 +10184,34 @@ The current admin commands also need proper upgrade to handle different
 resources to import from. The code also needs to be rebased so that it
 becomes more test friendly.
 
-- Knowledge prerequisite: Python, Django
+&#42; Knowledge prerequisite: Python, Django
 
-- Skill level: high
+&#42; Skill level: high
 
-- Contacts: kushal AT fedoraproject.org
+&#42; Contacts: kushal AT fedoraproject.org
 
-- Mentor(s): [Kushal Das](https://fedoraproject.org/wiki/User:Kushal)
+&#42; Mentor(s): [Kushal
+Das](https://fedoraproject.org/wiki/User:Kushal)
 
-- Notes: Join the [mailing
-  list](https://lists.fedorahosted.org/mailman/listinfo/darkserver) and
-  also #dgplug on freenode.
+&#42; Notes: Join the [mailing
+list](https://lists.fedorahosted.org/mailman/listinfo/darkserver) and
+also &#35;dgplug on freenode.
 
 ### Linux system services {#linux-system-services}
 
 #### Implement a battery of unit tests for SSSD {#implement-a-battery-of-unit-tests-for-sssd}
 
-- Status: Proposed
-
-- Summary of idea: The purpose of this project is to develop a suite of
-  unit tests for the SSSD. The unit tests would leverage mock objects to
-  be able to exercise code that is otherwise only ever reachable when
-  the SSSD is connected to the network. Contributing the set of unit
-  tests to the SSSD would greatly improve its stability long-term and
-  would help raise confidence when pushing new SSSD versions into Fedora
-  or other distributions.
-
-- Knowledge prerequisite: C programming
-
-- Skill level: intermediate to high
-
-- Contacts: [Jakub Hrozek](https://fedoraproject.org/wiki/User:jhrozek)
-
-- Mentor(s): [Jakub Hrozek](https://fedoraproject.org/wiki/User:jhrozek)
+&#42; Status: Proposed &#42; Summary of idea: The purpose of this
+project is to develop a suite of unit tests for the SSSD. The unit tests
+would leverage mock objects to be able to exercise code that is
+otherwise only ever reachable when the SSSD is connected to the network.
+Contributing the set of unit tests to the SSSD would greatly improve its
+stability long-term and would help raise confidence when pushing new
+SSSD versions into Fedora or other distributions. &#42; Knowledge
+prerequisite: C programming &#42; Skill level: intermediate to high
+&#42; Contacts: [Jakub
+Hrozek](https://fedoraproject.org/wiki/User:jhrozek) &#42; Mentor(s):
+[Jakub Hrozek](https://fedoraproject.org/wiki/User:jhrozek)
 
 ### Improving Fedora packaging {#improving-fedora-packaging}
 
@@ -11737,8 +10239,8 @@ The benefit of this method is:
 issues that can arise. Also, read the extensive blog post on [my
 blog](http://execat.blogspot.in/2012/03/aur-clone-for-fedora.html).
 
-Analogy: This is a lot like \"having your own library\" vs \"getting a
-book from a bookstore\". If you refer a book often, you'd keep it in
+Analogy: This is a lot like \'having your own library\' vs \'getting a
+book from a bookstore\'. If you refer a book often, you'd keep it in
 your library. This would occupy space and consume resources. Otherwise,
 you'd just pull out a separate paper with instructions about the
 bookstore to find the book, and fetch the book from the store. Though
@@ -11764,7 +10266,7 @@ For Fedora I'm envisioning a Maven extension that makes sure only
 sanctioned components are used during the build (without putting a
 burden on the packager). This will allow developers who are not on
 Fedora to also build with this extension and thus verify (and fix)
-issues which are the result of \"Fedora packaging\".
+issues which are the result of \'Fedora packaging\'.
 
 A prototype can be viewed at [Maven FOSS Repository
 Extension](https://github.com/fmvn/foss-maven).
@@ -11779,7 +10281,7 @@ User:Mizdebsk\[Mikolaj Izdebski\]
 *Mentor(s):* [Carlo de Wolf](http://community.jboss.org/people/wolfc),
 User:Mizdebsk\[Mikolaj Izdebski\]
 
-*Notes:* You can find us at irc.freenode.net #fedora-java: wolfc and
+*Notes:* You can find us at irc.freenode.net &#35;fedora-java: wolfc and
 mizdebsk
 
 ### Fedora Spins and remixes {#fedora-spins-and-remixes}
@@ -11888,23 +10390,13 @@ release or could be pulled into the release past a code freeze. While
 the app itself already exists, there are many features which we would
 like to see implemented including (but not limited to):
 
-- Creating a RESTful API
-
-- Tracking contents of TC/RC spins
-
-- migrating css to zurb foundation 4
-
-- search functionality
-
-- improve the update sync process
-
-- implement CI tools (make-ish file that runs pylint, tests etc.)
-
-- integrate email (on error, on proposal, other thoughts ...​)
-
-- integrate fedbus (blocker X proposed, accepted, rejected)
-
-- fix the admin interface so that it actually works
+&#42; Creating a RESTful API &#42; Tracking contents of TC/RC spins
+&#42; migrating css to zurb foundation 4 &#42; search functionality
+&#42; improve the update sync process &#42; implement CI tools (make-ish
+file that runs pylint, tests etc.) &#42; integrate email (on error, on
+proposal, other thoughts &#8230;) &#42; integrate fedbus (blocker X
+proposed, accepted, rejected) &#42; fix the admin interface so that it
+actually works
 
 *Knowledge prerequisite:* Some python experience is required, the app is
 written with Flask so some experiehce with that would be helpful
@@ -11928,20 +10420,11 @@ distributing image building tasks got started.
 
 Possible project components:
 
-- side repository management
-
-- better integration with bodhi and working based on updates instead of
-  just package envrs
-
-- tree replication
-
-- integration with blockerbugs app
-
-- deltaiso creation
-
-- zsync for downloads
-
-- integration with koji's new livecd scratch builds
+&#42; side repository management &#42; better integration with bodhi and
+working based on updates instead of just package envrs &#42; tree
+replication &#42; integration with blockerbugs app &#42; deltaiso
+creation &#42; zsync for downloads &#42; integration with koji's new
+livecd scratch builds
 
 *Knowledge prerequisite:* Some python experience is required,
 familiarity with Fedora's ISO build tools would be preferred
@@ -11966,10 +10449,10 @@ followed.
 ## Process {#process}
 
 1.  [Create a FAS
-    account](https://fedoraproject.org/wiki/GSOC_Guide_students#Set_up_an_account)
+    account](https://fedoraproject.org/wiki/GSOC_Guide_students&#35;Set_up_an_account)
 
 2.  [Join with fedora-summer-coding mailing
-    list](https://fedoraproject.org/wiki/GSOC_Guide_students#Start_communicating)
+    list](https://fedoraproject.org/wiki/GSOC_Guide_students&#35;Start_communicating)
 
 3.  Submit application on
     [Google-Melange](https://google-melange.appspot.com/gsoc/proposal/submit/google/gsoc2013/fedora)
@@ -11977,7 +10460,7 @@ followed.
 4.  [Application is
     filled](https://fedoraproject.org/wiki/GSOC_2013/Student_Application_Template/Common)
     and available on Fedora Wiki - [How to fill the
-    application](https://fedoraproject.org/wiki/GSOC_Guide_students#Create_your_Application)
+    application](https://fedoraproject.org/wiki/GSOC_Guide_students&#35;Create_your_Application)
 
 5.  CV highlighting your activities with Information Technology
 
@@ -11992,22 +10475,24 @@ followed.
     (eg: Exams in university, internships, vacations..etc)
 
 \'\'\'Please note - \'\'\' email your CV, Recommendation and Detailed
-plan to Org Admins, **bckurera AT fedoraproject DOT org** for any
+plan to Org Admins, &#42;bckurera AT fedoraproject DOT org&#42; for any
 inquiry please use the above email address and feel free to CC your
 mentor if required (recommended).
 
-**Important** - We understand that you need some time to contact a
+&#42;Important&#42; - We understand that you need some time to contact a
 person and get a recommendation, therefore if it seems like getting
 delayed please send us the rest of the documents and email the
 recommendation later.
 
-**Bare mind** - You are required to add your project proposal to wiki,
-therefore proceed with the application process as quickly as possible.
+&#42;Bare mind&#42; - You are required to add your project proposal to
+wiki, therefore proceed with the application process as quickly as
+possible.
 
-**We do not accept any document after Google student application
+&#42;We do not accept any document after Google student application
 deadline, all entries make after the deadline is ignored unless you have
 not informed to Org Admins! However if you have any difficulty to meet
-this requirement please let us know in advance (before the deadline).**
+this requirement please let us know in advance (before the
+deadline).&#42;
 
 Once you have completed above steps and email those documents, Org
 admins will peer-review your application set and you will be contacted
@@ -12018,27 +10503,29 @@ hours in this period.
 
 ## FAQ {#faq}
 
-- **What about details of my project?**
+&#42; &#42;What about details of my project?&#42;
 
 You will be asked and given a link to update information about your
 project idea once you have completed the above mentioned process.
 
-- **Why recommendation is required?**
+&#42; &#42;Why recommendation is required?&#42;
 
 This gives us an information about your reliability, we need you to
 complete the project with mentioned goals and with in the time period.
 
-- **I am a Fedora project contributor, do I need a recommendation?**
+&#42; &#42;I am a Fedora project contributor, do I need a
+recommendation?&#42;
 
 Yes, since we maintain equal opportunity environment the process is
 common for all.
 
-- **What are the file formats that I can use?**
+&#42; &#42;What are the file formats that I can use?&#42;
 
 You are encourage to use .pdf as much as possible, if not a Open Format
 can be used.
 
-- **What is meant by a \"Recommendation\", how should it looks like?**
+&#42; &#42;What is meant by a \'Recommendation\', how should it looks
+like?&#42;
 
 It is good to have a recommendation from a person who knows you well,
 recommending that you suites to this program. May be you worked with him
@@ -12048,29 +10535,30 @@ Free Software Project then we would like to hear about that from some
 one from the project who see your great contribution. That can be
 considered as a recommendation.
 
-- **I dont get a reply from Org Admins after sending documents, is it
-  normal?**
+&#42; &#42;I dont get a reply from Org Admins after sending documents,
+is it normal?&#42;
 
 You should get a reply with in 24 hours, if not please immediately
 contact Org Admin.
 
-- **What should be included in my CV?**
+&#42; &#42;What should be included in my CV?&#42;
 
 It should be decided by you. Good to include each and every important
 thing that make you a suitable candidate and add values. if you want to
 know how to create an effective CV, please google.
 
-- **What is the need of a detailed plan of my activities?**
+&#42; &#42;What is the need of a detailed plan of my activities?&#42;
 
 It is important to get an idea about your free time and arrange things
 at the early stage. Therefore this is really important and try to make
 it accurate as much as possible.
 
-- **Why should I email the documents?**
+&#42; &#42;Why should I email the documents?&#42;
 
 It is for your own privacy. If you would like to make the public please
-feel free to do so and send us the links instead. \*\* 2012 = Google
-Summer of Code 2012
+feel free to do so and send us the links instead.
+
+&#42;&#42; 2012 = Google Summer of Code 2012
 
 ![](Gsoc-2012-logo.png)
 
@@ -12099,22 +10587,13 @@ to contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real world large codebases.
-
-- Collaborate with real engineers and other professional experts.
-
-- Contribute to something meaningful while learning and earning student
-  value.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Possibly attract attention that gets you an internship or job after
-  graduation.
-
-- Create life time connections.
+&#42; Work with real world large codebases. &#42; Collaborate with real
+engineers and other professional experts. &#42; Contribute to something
+meaningful while learning and earning student value. &#42; Learn tools
+and processes that are just like what you are going to use if you work
+in technology after graduation. &#42; Make friends and contacts around
+the globe. &#42; Possibly attract attention that gets you an internship
+or job after graduation. &#42; Create life time connections.
 
 ### Why work with Fedora? {#why-work-with-fedora}
 
@@ -12190,23 +10669,23 @@ students\' idea page and pick one as per your interest.
 
 ### How to work with students {#how-to-work-with-students}
 
-- One way is to provide an idea for students to work on. This idea might
-  be very well planned out, in which case you may need a high-level of
-  contact with the student to get it implemented correctly.
+&#42; One way is to provide an idea for students to work on. This idea
+might be very well planned out, in which case you may need a high-level
+of contact with the student to get it implemented correctly.
 
-- It is harder to find success where you are completely certain of how
-  an idea needs to be implemented; finding a student with the skills and
-  interest to implement a specific solution is a lot harder than finding
-  a student with enough skills to respond to a use case need.
+&#42; It is harder to find success where you are completely certain of
+how an idea needs to be implemented; finding a student with the skills
+and interest to implement a specific solution is a lot harder than
+finding a student with enough skills to respond to a use case need.
 
-- Where you can have looser ideas, you may be able to find a student who
-  works as a sort-of intern who can implement a solution to a use case
-  you have. In past experiences, students going after a use case are
-  more likely to get somewhere with self-direction.
+&#42; Where you can have looser ideas, you may be able to find a student
+who works as a sort-of intern who can implement a solution to a use case
+you have. In past experiences, students going after a use case are more
+likely to get somewhere with self-direction.
 
-- You may also want to work with a student who brings an idea to your
-  sub-project. This requires a different level of communication
-  throughout the project, but can be the most rewarding.
+&#42; You may also want to work with a student who brings an idea to
+your sub-project. This requires a different level of communication
+throughout the project, but can be the most rewarding.
 
 ### Mentor responsibilities {#mentor-responsibilities}
 
@@ -12216,50 +10695,31 @@ JBoss.org, or another).
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora.
-
-- Helping students communicate with the overall project and any
-  upstreams.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not, which affects payment.
+&#42; Being an interface for an identified sub-project or SIG in Fedora.
+&#42; Helping students communicate with the overall project and any
+upstreams. &#42; Be the final, accountable person for deciding if the
+student is successful or not, which affects payment.
 
 ### List of Mentors {#list-of-mentors}
 
 Please feel free to contact mentors to clarify the related matters.
 
-- [Hedayat Vatankhah](https://fedoraproject.org/wiki/User:Hedayat)
-
-- [Mo Morsi](https://fedoraproject.org/wiki/User:Mmorsi)
-
-- [Dennis Gilmore](https://fedoraproject.org/wiki/User:Ausil)
-
-- [Toshio kuratomi](https://fedoraproject.org/wiki/User:toshio)
-
-- [Kevin Fenzi](https://fedoraproject.org/wiki/User:Kevin)
-
-- [Buddhike Kurera](https://fedoraproject.org/wiki/User:Bckurera)
-
-- [Mo Duffy](https://fedoraproject.org/wiki/User:Duffy)
-
-- [Emily Dirsh](https://fedoraproject.org/wiki/User:Emichan)
-
-- [Jkeating (at) fedoraproject (dot)
-  org](https://fedoraproject.org/wiki/User:jkeating)
-
-- [María \"tatica\"](https://fedoraproject.org/wiki/User:Tatica)
-
-- [Peter Tibor Borsa](https://fedoraproject.org/wiki/User:Asrob)
-
-- [Brendan Jones](https://fedoraproject.org/wiki/User:bsjones)
-
-- [Stanislav Ochotnický](https://fedoraproject.org/wiki/User:Sochotni)
-
-- [Tim Niemueller](https://fedoraproject.org/wiki/User:Timn)
-
-- [ Peng Tao](https://fedoraproject.org/wiki/User:Bergwolf)
-
-- [ Tim Flink](https://fedoraproject.org/wiki/User:Tflink)
+&#42; [Hedayat Vatankhah](https://fedoraproject.org/wiki/User:Hedayat)
+&#42; [Mo Morsi](https://fedoraproject.org/wiki/User:Mmorsi) &#42;
+[Dennis Gilmore](https://fedoraproject.org/wiki/User:Ausil) &#42;
+[Toshio kuratomi](https://fedoraproject.org/wiki/User:toshio) &#42;
+[Kevin Fenzi](https://fedoraproject.org/wiki/User:Kevin) &#42; [Buddhike
+Kurera](https://fedoraproject.org/wiki/User:Bckurera) &#42; [Mo
+Duffy](https://fedoraproject.org/wiki/User:Duffy) &#42; [Emily
+Dirsh](https://fedoraproject.org/wiki/User:Emichan) &#42; [Jkeating (at)
+fedoraproject (dot) org](https://fedoraproject.org/wiki/User:jkeating)
+&#42; [María \'tatica\'](https://fedoraproject.org/wiki/User:Tatica)
+&#42; [Peter Tibor Borsa](https://fedoraproject.org/wiki/User:Asrob)
+&#42; [Brendan Jones](https://fedoraproject.org/wiki/User:bsjones) &#42;
+[Stanislav Ochotnický](https://fedoraproject.org/wiki/User:Sochotni)
+&#42; [Tim Niemueller](https://fedoraproject.org/wiki/User:Timn) &#42; [
+Peng Tao](https://fedoraproject.org/wiki/User:Bergwolf) &#42; [ Tim
+Flink](https://fedoraproject.org/wiki/User:Tflink)
 
 #### List of registered members {#list-of-registered-members}
 
@@ -12271,88 +10731,74 @@ list](https://fedoraproject.org/wiki/GSOC_2012/Registered_Mentors_Registered_men
 
 ## Communication {#communication}
 
-**Mailing List (GSOC related) :**
+&#42;Mailing List (GSOC related) :&#42;
 <https://admin.fedoraproject.org/mailman/listinfo/summer-coding>\
-**Mailing List (Technical) :**
+&#42;Mailing List (Technical) :&#42;
 <http://lists.fedoraproject.org/mailman/listinfo/devel>\
-**IRC :** Channel -
-[#fedora-summer-coding](https://webchat.freenode.net/?channels=#fedora-summer-coding)
-or [#fedora-devel](https://webchat.freenode.net/?channels=#fedora-devel)
+&#42;IRC :&#42; Channel -
+[&#35;fedora-summer-coding](https://webchat.freenode.net/?channels=&#35;fedora-summer-coding)
+or
+[&#35;fedora-devel](https://webchat.freenode.net/?channels=&#35;fedora-devel)
 on Freenode
 
 ## Time Line
 
 Reference : [official
-timeline](http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/faqs#timeline)
+timeline](http://www.google-melange.com/document/show/gsoc_program/google/gsoc2012/faqs&#35;timeline)
 
-- March 9: Mentoring organization application deadline.
-
-- March 12-15: Google program administrators review organization
-  applications.
-
-- March 16: List of accepted mentoring organizations published on the
-  Google Summer of Code 2012 site.
-
-- March 17-25: Would-be student participants discuss application ideas
-  with mentoring organizations.
-
-- March 26: Student application period opens.
-
-- April 6: Student application deadline.
+&#42; March 9: Mentoring organization application deadline. &#42; March
+12-15: Google program administrators review organization applications.
+&#42; March 16: List of accepted mentoring organizations published on
+the Google Summer of Code 2012 site. &#42; March 17-25: Would-be student
+participants discuss application ideas with mentoring organizations.
+&#42; March 26: Student application period opens. &#42; April 6: Student
+application deadline.
 
 Interim Period: Mentoring organizations review and rank student
 proposals; where necessary, mentoring organizations may request further
 proposal detail from the student applicant.
 
-- April 20: All mentors must be signed up and all student proposals
-  matched with a mentor. Student ranking/scoring deadline.
-
-- April 23: Accepted student proposals announced on the Google Summer of
-  Code 2012 site.
+&#42; April 20: All mentors must be signed up and all student proposals
+matched with a mentor. Student ranking/scoring deadline. &#42; April 23:
+Accepted student proposals announced on the Google Summer of Code 2012
+site.
 
 Community Bonding Period: Students get to know mentors, read
 documentation, get up to speed to begin working on their projects.
 
-- May 21: Students begin coding for their Google Summer of Code
-  projects;
+&#42; May 21: Students begin coding for their Google Summer of Code
+projects;
 
 Interim Period: Mentors give students a helping hand and guidance on
 their projects.
 
-- July 9: Mentors and students can begin submitting mid-term
-  evaluations.
-
-- July 13: Mid-term evaluations deadline;
+&#42; July 9: Mentors and students can begin submitting mid-term
+evaluations. &#42; July 13: Mid-term evaluations deadline;
 
 Google begins issuing mid-term student payments provided passing student
 survey is on file. Interim Period: Mentors give students a helping hand
 and guidance on their projects.
 
-- August 13: Suggested \'pencils down\' date. Take a week to scrub code,
-  write tests, improve documentation, etc.
+&#42; August 13: Suggested \'pencils down\' date. Take a week to scrub
+code, write tests, improve documentation, etc. &#42; August 20: Mentors,
+students and organization administrators can begin submitting final
+evaluations to Google.
 
-- August 20: Mentors, students and organization administrators can begin
-  submitting final evaluations to Google.
-
-- August 24: Final evaluation deadline
-
-- August 27: Final results of Google Summer of Code 2012 announced
-
-- August 31: Students can begin submitting required code samples to
-  Google
-
-- October 20 - 21: Mentor Summit at Google.
+&#42; August 24: Final evaluation deadline &#42; August 27: Final
+results of Google Summer of Code 2012 announced &#42; August 31:
+Students can begin submitting required code samples to Google &#42;
+October 20 - 21: Mentor Summit at Google.
 
 ## Organization Application {#organization-application}
 
-**Status :** Submitted\
-**Link :**
+&#42;Status :&#42; Submitted\
+&#42;Link :&#42;
 [application](https://fedoraproject.org/wiki/GSoC_2012_org_application)
 
 ## Ideas Page {#ideas-page}
 
-**Status :** Open for Ideas\
-**Link :** [ideas](ideas.xml)
+&#42;Status :&#42; Open for Ideas\
+&#42;Link :&#42; [ideas](ideas.xml)
 
 We encourage students to provide creative yet useful ideas towards the
 Fedora project as well. Please use [Student
@@ -12371,9 +10817,12 @@ once the idea is picked by a mentor.
 
 4.  [IRC](https://fedoraproject.org/wiki/Communicate/IRCHowTo)
 
-5.  [Development](https://fedoraproject.org/wiki/Development) = Ideas:
-    Google Summer of Code 2012 Find an idea you like? Want to propose
-    your own? See the Getting Started Guide with GSoC:
+5.  [Development](https://fedoraproject.org/wiki/Development)
+
+# Ideas: Google Summer of Code 2012 {#_ideas_google_summer_of_code_2012}
+
+Find an idea you like? Want to propose your own? See the Getting Started
+Guide with GSoC:
 
 [Information](index.html)
 
@@ -12390,8 +10839,8 @@ this page for any related clarification. If you are new to The Fedora
 project, following material would help you to get started. Further
 please sign-up with the [Fedora Account
 System(FAS)](https://fedoraproject.org/wiki/FAS) if you are willing to
-continue with the Fedora project. `#fedora-devel`, IRC channel can be
-used to get instant support. 1. [The
+continue with the Fedora project. &#96;&#35;fedora-devel&#96;, IRC
+channel can be used to get instant support. 1. [The
 Foundation](https://fedoraproject.org/wiki/Foundation) 2. [Fedora
 Documentation](http://docs.fedoraproject.org/en-US/index.html) 3.
 [IRC](https://fedoraproject.org/wiki/Communicate/IRCHowTo) 4. [Fedora
@@ -12438,8 +10887,8 @@ Please add your idea as follows.
 
 *Notes:*
 
-**!!!The draft was changed slightly, please add required field as
-required!!!**
+&#42;!!!The draft was changed slightly, please add required field as
+required!!!&#42;
 
 ## Idea list for GSoC 2012
 
@@ -12461,7 +10910,7 @@ providing an integration between NetworkManager and Desktop environments
 so that a user can create network profiles for each network
 location(connection) providing appropriate settings like proxy settings
 which is the main proposed setting here. NetworkManager can have a
-\"Network Location\" concept: for wireless networks, usually the name of
+\'Network Location\' concept: for wireless networks, usually the name of
 the network (ESSID) is usually enough. For wired connections, DHCP
 servers can and usually do provide network's domain name, which can be
 used as the name of the location. It is nice if a user can associate
@@ -12525,7 +10974,7 @@ panels, 100% compatible with fedora, and redhat enterprise Linux.
 written in python.
 
 the control panel will be able to create domains and automatically setup
-apache, postfix, dovecot, mysql, postgresql bind etc...​
+apache, postfix, dovecot, mysql, postgresql bind etc&#8230;
 
 *Knowledge prerequisite:* apache, postfix, dovecot, mysql, postgresql,
 proftpd, bind
@@ -12560,13 +11009,13 @@ to make it all work. And then there are the bugs.
 The goal of this project is to assemble a toolchain (a recommended
 collection of software available in the Fedora repositories) and write a
 comprehensive tutorial for how to create an professional-looking
-screencast. That may included chasing down & fixing bugs in the existing
-tools, discovering new tools and getting them packaged and learning
-about techniques in the environment around the computer, such as how to
-select & setup a microphone or how to draft a good speaking script. One
-possible task in the project is to add sound recording support to the
-Gnome 3 desktop recorder. Currently, the desktop recorder only grabs the
-video of the screen.
+screencast. That may included chasing down &amp; fixing bugs in the
+existing tools, discovering new tools and getting them packaged and
+learning about techniques in the environment around the computer, such
+as how to select &amp; setup a microphone or how to draft a good
+speaking script. One possible task in the project is to add sound
+recording support to the Gnome 3 desktop recorder. Currently, the
+desktop recorder only grabs the video of the screen.
 
 The student will get support and advice from the Fedora Videos team
 since they are trying to learn how to create these screencasts.
@@ -12595,20 +11044,15 @@ the user interface has not seen too much love.
 
 Currently available interfaces for users are:
 
-- Too Ressource Consuming
-
-- Too Overloaded or
-
-- Too Feature Poor
-
-- Not Customizable With Reasonable Effort
+&#42; Too Ressource Consuming &#42; Too Overloaded or &#42; Too Feature
+Poor &#42; Not Customizable With Reasonable Effort
 
 The E17 Desktop Shell, developed as part of the [Enlightenment
 Project](http://www.enlightenment.org), is a perfect match. It provides
 a rich interface, whilst consuming very little ressources. The
 Enlightenment Foundation Libraries, on which E17 is built upon, were
 chosen as Foundation Block of Tizen, the MeeGo successor backed by
-Samsung and Intel. If things work out, E17 will be the first \"real\"
+Samsung and Intel. If things work out, E17 will be the first \'real\'
 Desktop Shell for Wayland.
 
 Though it already provides [special
@@ -12672,7 +11116,7 @@ Currently, there are a host of single-purpose methods for storing and
 retrieving NoSQL data, which are difficult to access from legacy
 applications. Creating a NoSQL translator for GlusterFS would help
 mitigate this problem and give developers more options for storing and
-accessing \"big data\" in a way that is accessible via a variety of
+accessing \'big data\' in a way that is accessible via a variety of
 standard toolkits and protocols.
 
 *Knowledge prerequisite:* C, GlusterFS internals
@@ -12718,7 +11162,7 @@ close-to-open semantics.
 
 *Summary of idea:* Surveys are important to increase the quality of a
 service, and it is true for the Fedora project as well.(discussions
-[1](http://meetbot.fedoraproject.org/fedora-meeting/2011-12-24/apac.2011-12-24-04.00.log.html#l-310))
+[1](http://meetbot.fedoraproject.org/fedora-meeting/2011-12-24/apac.2011-12-24-04.00.log.html&#35;l-310))
 In this project it is supposed to implement a survey infrastructure
 facility so that the contributors can use for various activities as per
 the need.
@@ -12755,24 +11199,20 @@ on their design work. With this project, we'd like to make progress
 towards fixing that. We have some disparate ideas / tools that we'd like
 to be integrated:
 
-- [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox like
-  system that will automatically check in and push files in project
-  directly to a shared git repo
-
-- [Magic Mockup](https://github.com/garrett/magicmockup) - a
-  coffeescript/javascript you can insert into an SVG of mockups to
-  enable interactive, click-through mockups ([see a demo
-  here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
-
-- [Design Hub](http://blog.linuxgrrl.com/category/design-hub/) - an idea
-  and a ruby on rails prototype of a web front end that could
-  potentially serve as a front end to git repos with design assets
-  **and** serve as well as a front end to magic mockup mockups in said
-  repos
-
-- [Inkscape](http://inkscape.org) is our preferred design tool of
-  choice; it would be great if it had some GUI integration with Magic
-  Mockup, Sparkleshare, and Design Hub
+&#42; [Sparkleshare](http://sparkleshare.org) - a git-backed, Dropbox
+like system that will automatically check in and push files in project
+directly to a shared git repo &#42; [Magic
+Mockup](https://github.com/garrett/magicmockup) - a
+coffeescript/javascript you can insert into an SVG of mockups to enable
+interactive, click-through mockups ([see a demo
+here](http://blog.linuxgrrl.com/2011/08/12/interactive-svg-mockups-with-inkscape-javascript/)
+&#42; [Design Hub](http://blog.linuxgrrl.com/category/design-hub/) - an
+idea and a ruby on rails prototype of a web front end that could
+potentially serve as a front end to git repos with design assets
+&#42;and&#42; serve as well as a front end to magic mockup mockups in
+said repos &#42; [Inkscape](http://inkscape.org) is our preferred design
+tool of choice; it would be great if it had some GUI integration with
+Magic Mockup, Sparkleshare, and Design Hub
 
 *Knowledge prerequisite:* Ruby on Rails, web development, some UI design
 chops
@@ -12821,11 +11261,11 @@ at the wiki, Insight_use_cases_for_calendar
 
 Contacts: [Paul W.
 Frields](https://fedoraproject.org/wiki/User:Pfrields), [Clint
-Savage](https://fedoraproject.org/wiki/User:Herlo) & [Insight
+Savage](https://fedoraproject.org/wiki/User:Herlo) &amp; [Insight
 Team](https://fedoraproject.org/wiki/Insight)
 
 Mentor(s): [María
-\"tatica\"](https://fedoraproject.org/wiki/User:Tatica), [Peter Tibor
+\'tatica\'](https://fedoraproject.org/wiki/User:Tatica), [Peter Tibor
 Borsa](https://fedoraproject.org/wiki/User:Asrob) and *Back-up Mentor :*
 [Buddhika Kurera](https://fedoraproject.org/wiki/User:Bckurera)
 
@@ -12848,7 +11288,7 @@ Frields](https://fedoraproject.org/wiki/User:Pfrields)
 
 Mentor(s): [Peter Tibor
 Borsa](https://fedoraproject.org/wiki/User:Asrob), [María
-\"tatica\"](https://fedoraproject.org/wiki/User:Tatica) and *Back-up
+\'tatica\'](https://fedoraproject.org/wiki/User:Tatica) and *Back-up
 Mentor :* [Buddhika
 Kurera](https://fedoraproject.org/wiki/User:Bckurera)
 
@@ -12917,7 +11357,7 @@ end for git repositories at \[fedorahosted.org\].
 
 Git has fundamentally improved the way that developers share code. The
 barrier to sharing code has virtually been eliminated. We are also
-seeing the emergence of a new dynamic called \"Social Coding\". There's
+seeing the emergence of a new dynamic called \'Social Coding\'. There's
 no better example of this than Github.
 
 Creating an environment to foster social coding, and a low barrier to
@@ -12980,13 +11420,13 @@ Debnath](https://fedoraproject.org/wiki/User:Rtnpro)
 
 *Notes:* Features that I am looking to target:
 
-\* User management/FAS integration\
-\* Un-linerize the workflow.\
-\* Default wallpaper/Hostname/user-password/root-password\
-\* Custom repos/RPMs\
-\* Home directory content\
-\* Search Packages\
-\* Image type: ISO, virt image, raw disk
+&#96;&#42; User management/FAS integration&#96;\
+&#96;&#42; Un-linerize the workflow.&#96;\
+&#96;&#42; Default wallpaper/Hostname/user-password/root-password&#96;\
+&#96;&#42; Custom repos/RPMs&#96;\
+&#96;&#42; Home directory content&#96;\
+&#96;&#42; Search Packages&#96;\
+&#96;&#42; Image type: ISO, virt image, raw disk&#96;
 
 Code at <https://github.com/shreyankg/Dorrie>, fork and send pull
 request, if you are interested to contribute.
@@ -13020,9 +11460,9 @@ Kurera](https://fedoraproject.org/wiki/User:Bckurera)
 their public interfaces from time to time. This is normal, but currently
 it is very hard to guess effect an update of library to new version will
 have on rest of the system. What is needed is a tool that would be able
-to tell us that \"With update of package java-library to version 2.0,
+to tell us that \'With update of package java-library to version 2.0,
 function X(b) has been removed. This function is used in package
-java-app\". There are already a few open-source projects that can do
+java-app\'. There are already a few open-source projects that can do
 some of the analysis needed. This would be of interest to whole Java
 world I believe and would enable safer and easier updates. To get an
 idea of similar projects see [Java API compliance
@@ -13068,8 +11508,8 @@ The benefit of this method is:
 issues that can arise. Also, read the extensive blog post on [my
 blog](http://execat.blogspot.in/2012/03/aur-clone-for-fedora.html).
 
-Analogy: This is a lot like \"having your own library\" vs \"getting a
-book from a bookstore\". If you refer a book often, you'd keep it in
+Analogy: This is a lot like \'having your own library\' vs \'getting a
+book from a bookstore\'. If you refer a book often, you'd keep it in
 your library. This would occupy space and consume resources. Otherwise,
 you'd just pull out a separate paper with instructions about the
 bookstore to find the book, and fetch the book from the store. Though
@@ -13095,7 +11535,7 @@ For Fedora I'm envisioning a Maven extension that makes sure only
 sanctioned components are used during the build (without putting a
 burden on the packager). This will allow developers who are not on
 Fedora to also build with this extension and thus verify (and fix)
-issues which are the result of \"Fedora packaging\".
+issues which are the result of \'Fedora packaging\'.
 
 A prototype can be viewed at [Fedora Maven
 Extension](https://github.com/wolfc/fedora-maven).
@@ -13108,7 +11548,7 @@ Extension](https://github.com/wolfc/fedora-maven).
 
 *Mentor(s):* [Carlo de Wolf](http://community.jboss.org/people/wolfc)
 
-*Notes:* You can find me at irc.freenode.net #fedora-java wolfc
+*Notes:* You can find me at irc.freenode.net &#35;fedora-java wolfc
 
 ### Fedora Spins and remixes {#fedora-spins-and-remixes}
 
@@ -13129,24 +11569,15 @@ We are looking for one or two candidates to assist us in the complete
 development cycle of this project. Tasks may include (but not limited
 to):
 
-- packaging open source audio projects
-
-- porting certain packages from the PlanetCCRMA repository into Fedora
-
-- working/communicating with the Fedora Audio community to determine the
-  final make-up of the spin
-
-- help coordinate pushing the spin through the Spins Review process
-
-- creating/testing kickstart files
-
-- developing small applications/scripts to help solve hardware and audio
-  system configuration requirements
-
-- communicating with Fedora Audio SIG, Fedora Desktop team and other
-  Fedora teams
-
-- organizing QA testcases and test days
+&#42; packaging open source audio projects &#42; porting certain
+packages from the PlanetCCRMA repository into Fedora &#42;
+working/communicating with the Fedora Audio community to determine the
+final make-up of the spin &#42; help coordinate pushing the spin through
+the Spins Review process &#42; creating/testing kickstart files &#42;
+developing small applications/scripts to help solve hardware and audio
+system configuration requirements &#42; communicating with Fedora Audio
+SIG, Fedora Desktop team and other Fedora teams &#42; organizing QA
+testcases and test days
 
 Ideally, interested candidates will have a passion for Music/Audio
 Production. Basic scripting knowledge and the ability to compile
@@ -13316,8 +11747,8 @@ here](http://blog.tirfa.com/gooey-karma)
 *Summary of idea:* During the testing of Fedora releases, test images
 are often useful as smoke tests before full TC/RC composes, as baselines
 for specific test days or for automated installation testing in AutoQA.
-The idea is to make an **on-demand** Web-based build service (similar to
-[Open Suse Build Service](https://build.opensuse.org/) and
+The idea is to make an &#42;on-demand&#42; Web-based build service
+(similar to [Open Suse Build Service](https://build.opensuse.org/) and
 [Slax](http://www.slax.org/build.php)) which users/developers can use to
 make custom Fedora based distributions. The service would be capable of
 building and hosting images (boot iso, installation DVDs and live
@@ -13341,51 +11772,59 @@ also have a RESTful API (or similar).
 
 # Student application template: Google Sumer of Code 2012 {#_student_application_template_google_sumer_of_code_2012}
 
-    === Contact Information ===
+&#8230;.
 
-    Email Address:
-    Telephone:
-    Blog URL:
-    Freenode IRC Nick:
+## Contact Information {#_contact_information}
 
-    NOTE: We require all students to blog about the progress of their project time to time.
+Email Address: Telephone: Blog URL: Freenode IRC Nick:
 
-    You are strongly encouraged to register on the Freenode network and participate in our
-    IRC channels.  For more information and other instructions, see:
+:::: note
+::: title
+:::
 
-    https://fedoraproject.org/wiki/GSOC_2012
+We require all students to blog about the progress of their project time
+to time.
+::::
 
-    Please answer following questions.
+You are strongly encouraged to register on the Freenode network and
+participate in our IRC channels. For more information and other
+instructions, see:
 
-    === Why do you want to work with the Fedora Project? ===
+<https://fedoraproject.org/wiki/GSOC_2012>
 
-    === Do you have any past involvement with the Fedora project or with any another open
-    source project as a contributor (if possible please add some references as well)? ===
+Please answer following questions.
 
-    === Did you participate with the past GSoC programs, if so which years, which organizations? ===
+## Why do you want to work with the Fedora Project? {#_why_do_you_want_to_work_with_the_fedora_project}
 
-    === Will you continue contributing/ supporting the Fedora project after the GSoC 2012
-    program, if yes, which team(s)/area(s), you are interested with? ===
+## Do you have any past involvement with the Fedora project or with any another open {#_do_you_have_any_past_involvement_with_the_fedora_project_or_with_any_another_open}
 
-    === Why should we choose you over the other applicants? ===
+source project as a contributor (if possible please add some references
+as well)? ===
 
-    === Proposal Description ===
+## Did you participate with the past GSoC programs, if so which years, which organizations? {#_did_you_participate_with_the_past_gsoc_programs_if_so_which_years_which_organizations}
 
-    Please describe your proposal in detail.  Include:
+## Will you continue contributing/ supporting the Fedora project after the GSoC 2012 {#_will_you_continue_contributing_supporting_the_fedora_project_after_the_gsoc_2012}
 
-    * An overview of your proposal
-    * The need you believe it fulfills
-    * Any relevant experience you have
-    * How do you intend to implement your proposal
-    * Final deliverable of the proposal at the end of the period
-    * A rough timeline for your progress
-    * Any other details you feel we should consider
+program, if yes, which team(s)/area(s), you are interested with? ===
 
+## Why should we choose you over the other applicants? {#_why_should_we_choose_you_over_the_other_applicants}
 
-    === Have you communicated with a potential mentor?  If so, who? ===
+## Proposal Description {#_proposal_description}
 
-- 2011 = Ideas: Google Summer of Code 2011 Find an idea you like? Want
-  to propose your own? See our Getting Started Guide:
+Please describe your proposal in detail. Include:
+
+&#42; An overview of your proposal &#42; The need you believe it
+fulfills &#42; Any relevant experience you have &#42; How do you intend
+to implement your proposal &#42; Final deliverable of the proposal at
+the end of the period &#42; A rough timeline for your progress &#42; Any
+other details you feel we should consider
+
+## Have you communicated with a potential mentor? If so, who? {#_have_you_communicated_with_a_potential_mentor_if_so_who}
+
+&#8230;.
+
+&#42;&#42; 2011 = Ideas: Google Summer of Code 2011 Find an idea you
+like? Want to propose your own? See our Getting Started Guide:
 
 <http://groups.google.com/group/redhat-summer/web/gsoc-getting-started>
 
@@ -13420,7 +11859,7 @@ location whenever he moves between networks. This idea is about
 providing an integration between NetworkManager and Desktop environments
 so that a user can create network profiles for each network location
 providing appropriate settings like proxy settings which is the main
-proposed setting here. NetworkManager can have a \"Network Location\"
+proposed setting here. NetworkManager can have a \'Network Location\'
 concept: for wireless networks, usually the name of the network (ESSID)
 is usually enough. For wired connections, DHCP servers can and usually
 do provide network's domain name, which can be used as the name of the
@@ -13523,14 +11962,11 @@ These include bodhi, mirrormanager, packagedb, elections, fas, smolt.
 systems. In addition to porting to TG2 (see above), several enhancements
 would be welcome:
 
-- Simplify creation of new MirrorManager instances (non-Fedora users,
-  such as CentOS)
-
-- Simplify selection of mirrors within Cloud Providers on granularity
-  other than netblocks and ASNs
-
-- Other items on the [TODO
-  list](http://git.fedorahosted.org/git/mirrormanager?p=mirrormanager;a=blob;f=TODO;hb=HEAD)
+&#42; Simplify creation of new MirrorManager instances (non-Fedora
+users, such as CentOS) &#42; Simplify selection of mirrors within Cloud
+Providers on granularity other than netblocks and ASNs &#42; Other items
+on the [TODO
+list](http://git.fedorahosted.org/git/mirrormanager?p=mirrormanager;a=blob;f=TODO;hb=HEAD)
 
 *Contacts:* [Matt Domsch](https://fedoraproject.org/wiki/User:mdomsch)
 
@@ -13566,8 +12002,8 @@ do not require copyright assignment I'd consider using it
 *Summary of Idea:* when users need a buildroot override they can manage
 it all themselves.
 
-For this I see 2 parts: cli integration into fedpkg i.e. \"fedpkg
-override\" and a server to talk to, track overrides, and do the actual
+For this I see 2 parts: cli integration into fedpkg i.e. \'fedpkg
+override\' and a server to talk to, track overrides, and do the actual
 tagging and untagging -possible work flow: allow developer to specify a
 life for the override, defaulting to 24 hours: the server would then do
 the tag in koji and at the end of its life untag it I could see having a
@@ -13577,7 +12013,7 @@ web app to see the current overrides, allow requests, extensions etc
 
 *Mentor(s):* [Dennis Gilmore](https://fedoraproject.org/wiki/User:Ausil)
 
-### `mw` enhancements
+### &#96;mw&#96; enhancements {#mw-enhancements}
 
 *Status:* Proposed
 
@@ -13616,11 +12052,11 @@ Fedora.
 
 ### Integrating Fuzzing-based instruments in quality assurance tools
 
-*Summary of idea:* Generate fuzzing testcases from the existing \"make
-test\", which is generally only as good as the package maintainer placed
+*Summary of idea:* Generate fuzzing testcases from the existing \'make
+test\', which is generally only as good as the package maintainer placed
 effort into this Extending the range of testcases in a generic way
 contributes to an enhanced scope of quality and security testing of
-software. Key implementation technique is providing mock \"fuzzing\"
+software. Key implementation technique is providing mock \'fuzzing\'
 devices and transparent in-process instrumentation (fuzzing loops) the
 turn-around time and bug discovery rate will improve. Transparent
 integration in build tools (like rpm-build macros) lower the entry
@@ -13652,37 +12088,28 @@ support, we expect most benefit for rpm-based distros.
 These coding projects are lower-level services that benefit Fedora and
 other Linux distributions.
 
-### `NIS` support in `SSSD`
+### &#96;NIS&#96; support in &#96;SSSD&#96; {#nis-support-in-sssd}
 
-- *Status:* Proposed
+&#42; *Status:* Proposed &#42; *Summary of idea:* Currently, the System
+Security Services Daemon supports only LDAP for network user identity.
+Support for NIS identities has been requested several times by
+end-users. &#42; *Contacts:* [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:Sgallagh) &#42;
+*Mentor(s):* [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:Sgallagh)
 
-- *Summary of idea:* Currently, the System Security Services Daemon
-  supports only LDAP for network user identity. Support for NIS
-  identities has been requested several times by end-users.
+### &#96;SUDO&#96; support in &#96;SSSD&#96; {#sudo-support-in-sssd}
 
-- *Contacts:* [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:Sgallagh)
-
-- *Mentor(s):* [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:Sgallagh)
-
-### `SUDO` support in `SSSD`
-
-- *Status:* Proposed
-
-- *Summary of idea:* Sudo 1.8.0 will support a plugin interface for sudo
-  authorization decisions. It would be excellent for SSSD to provide
-  such a plugin to provide cached access to sudo information stored in
-  the sudo LDAP schema. This would make it easier to maintain
-  centralized sudo rules that also function while offline.
-
-- *Contacts:* [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:Sgallagh)
-
-- *Mentor(s):* [Stephen
-  Gallagher](https://fedoraproject.org/wiki/User:Sgallagh)
-
-- *Notes:* <http://www.sudo.ws/sudo_plugin.man.html>
+&#42; *Status:* Proposed &#42; *Summary of idea:* Sudo 1.8.0 will
+support a plugin interface for sudo authorization decisions. It would be
+excellent for SSSD to provide such a plugin to provide cached access to
+sudo information stored in the sudo LDAP schema. This would make it
+easier to maintain centralized sudo rules that also function while
+offline. &#42; *Contacts:* [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:Sgallagh) &#42;
+*Mentor(s):* [Stephen
+Gallagher](https://fedoraproject.org/wiki/User:Sgallagh) &#42; *Notes:*
+<http://www.sudo.ws/sudo_plugin.man.html>
 
 ## Improving Fedora packaging {#improving-fedora-packaging}
 
@@ -13697,8 +12124,8 @@ users and contributors.
 *Summary of idea:* Currently when building with maven locally, all spec
 files need to specify build dependencies manually. Java libraries and
 maven plugins should have something like
-\"Provide(groupId:artifactId:version:format)\" so that \"yum install
-org.apache.velocity:velocity\" will correctly find and install velocity
+\'Provide(groupId:artifactId:version:format)\' so that \'yum install
+org.apache.velocity:velocity\' will correctly find and install velocity
 package. Second part of this project can be creating maven plugin asking
 you to install via PackageKit the package that provides the dependency.
 
@@ -13931,12 +12358,12 @@ not yet in Fedora
 (<http://www.aeolusproject.org/page/Packages_Missing_From_Fedora>)
 
 *Contacts:* [ Chris Lalancette
-\<<clalance@redhat.com>\>](https://fedoraproject.org/wiki/User:clalance)
+&lt;<clalance@redhat.com>&gt;](https://fedoraproject.org/wiki/User:clalance)
 
 *Mentor(s):* [ Chris Lalancette
-\<<clalance@redhat.com>\>](https://fedoraproject.org/wiki/User:clalance)
+&lt;<clalance@redhat.com>&gt;](https://fedoraproject.org/wiki/User:clalance)
 
-- 2010 = Google Summer of Code 2010
+&#42;&#42; 2010 = Google Summer of Code 2010
 
 The Fedora Summer Coding program connects students, mentors,
 sub-projects, and sponsors to provide coding opportunities as summer
@@ -13978,24 +12405,15 @@ to contribute to a living project.
 
 Working in FOSS gives you a chance to:
 
-- Work with real world large codebases.
-
-- Collaborate with real engineers and other professional experts.
-
-- Contribute to something meaningful while learning and earning student
-  value.
-
-- Learn tools and processes that are just like what you are going to use
-  if you work in technology after graduation.
-
-- Make friends and contacts around the globe.
-
-- Possibly attract attention that gets you an internship or job after
-  graduation.
-
-- Earn while you learn. We are planning to sponsor \$5000 for full
-  projects and \$2500 for half projects. Check out Summer_Coding_FAQ for
-  more details.
+&#42; Work with real world large codebases. &#42; Collaborate with real
+engineers and other professional experts. &#42; Contribute to something
+meaningful while learning and earning student value. &#42; Learn tools
+and processes that are just like what you are going to use if you work
+in technology after graduation. &#42; Make friends and contacts around
+the globe. &#42; Possibly attract attention that gets you an internship
+or job after graduation. &#42; Earn while you learn. We are planning to
+sponsor \$5000 for full projects and \$2500 for half projects. Check out
+Summer_Coding_FAQ for more details.
 
 ### Why work with Fedora and JBoss.org?
 
@@ -14025,11 +12443,9 @@ your way around and figuring things out.
 Mentors and sub-projects have put up sections on the [Summer Coding 2010
 ideas](ideas.xml) page. There you can find:
 
-- Full ideas that you might want to start on;
-
-- Suggestions and use cases, to help you make up your own idea;
-
-- Links to the sub-project/upstream where you can learn more.
+&#42; Full ideas that you might want to start on; &#42; Suggestions and
+use cases, to help you make up your own idea; &#42; Links to the
+sub-project/upstream where you can learn more.
 
 For example, if you are interested in doing something for the [RHQ
 Project](http://rhq-project.org), there is a link to an ideas page on
@@ -14151,14 +12567,10 @@ JBoss.org, or another).
 
 Your responsibilities include:
 
-- Being an interface for an identified sub-project or SIG in Fedora or
-  JBoss.org.
-
-- Helping students communicate with the overall project and any
-  upstreams.
-
-- Be the final, accountable person for deciding if the student is
-  successful or not, which affects payment.
+&#42; Being an interface for an identified sub-project or SIG in Fedora
+or JBoss.org. &#42; Helping students communicate with the overall
+project and any upstreams. &#42; Be the final, accountable person for
+deciding if the student is successful or not, which affects payment.
 
 ### Are you committed to working with all parties?
 
@@ -14174,22 +12586,15 @@ work with the student and other project members.
 Sub-projects are teams working on discrete parts of the Fedora Project
 or JBoss.org. For example:
 
-- Fedora Infrastructure
-
-- RHQ
-
-- Fedora Docs Team
-
-- Drools
-
-- Fedora Website Team
+&#42; Fedora Infrastructure &#42; RHQ &#42; Fedora Docs Team &#42;
+Drools &#42; Fedora Website Team
 
 ### Timeline for sub-projects
 
 ### Step-by-step for sub-projects
 
 [Summer Coding 2010 step-by-step for
-sub-projects](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_sub-projects)
+sub-projects](https://fedoraproject.org/wiki/Summer_Coding_2010&#35;Step-by-step_for_sub-projects)
 
 ### Working with students and the Summer Coding program
 
@@ -14227,35 +12632,28 @@ to share) with students (those with time, passion, and skills to share.)
 ### Step-by-step for sponsors
 
 [Summer Coding 2010 step-by-step for
-sponsors](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_sponsors)
+sponsors](https://fedoraproject.org/wiki/Summer_Coding_2010&#35;Step-by-step_for_sponsors)
 
 ### Why you should be a sponsor?
 
 What do you get out of it?
 
-- Positively impact FOSS projects.
-
-- Get your brand in front of smart students who want to work on FOSS.
-
-- Potentially end up [hiring great developers through the
-  program](https://fedoraproject.org/wiki/GSoC_report_2009#Recruiting_new_Red_Hat_associates).
-
-- Work on a community program that demonstrates how open source business
-  is done.
-
-- See something you'd like coded be completed.
-
-- Other positive brand associations.
+&#42; Positively impact FOSS projects. &#42; Get your brand in front of
+smart students who want to work on FOSS. &#42; Potentially end up
+[hiring great developers through the
+program](https://fedoraproject.org/wiki/GSoC_report_2009&#35;Recruiting_new_Red_Hat_associates).
+&#42; Work on a community program that demonstrates how open source
+business is done. &#42; See something you'd like coded be completed.
+&#42; Other positive brand associations.
 
 ### What you need to do
 
 We need to start talking, soon.
 
-- Open by default on the discuss list -
-  <http://lists.fedoraproject.org/mailman/listinfo/summer-coding-discuss>
-
-- Private via direct email to project leadership - [Karsten
-  Wade](https://fedoraproject.org/wiki/User:Quaid), ...​
+&#42; Open by default on the discuss list -
+<http://lists.fedoraproject.org/mailman/listinfo/summer-coding-discuss>
+&#42; Private via direct email to project leadership - [Karsten
+Wade](https://fedoraproject.org/wiki/User:Quaid), &#8230;
 
 What are the resources you can supply?
 
@@ -14290,7 +12688,7 @@ Generic.](http://blog.melchua.com/2010/03/04/summer-of-code-swimchart-now-with-m
 ### Step-by-step for upstreams
 
 [Summer Coding 2010 step-by-step for
-upstreams](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_upstreams)
+upstreams](https://fedoraproject.org/wiki/Summer_Coding_2010&#35;Step-by-step_for_upstreams)
 
 ### Has a student brought a project idea to you?
 
@@ -14338,19 +12736,19 @@ Campus Ambassadors should then guide new contributors in helping them
 get set up with mentors and helping submit their Summer Coding proposal.
 \[edit\] Campus Ambassadors - what
 
-\* Students can have a quality intern-like experience working with Fedora/JBoss.org.+
-o Money! Code! Fame! Success! Community!\
-\* Sub-projects in JBoss.org and Fedora are ready to work with students.\
-\* This is right in your pocket, you can run with Summer Coding participation and make your school very successful.\
-\* You can make more students successful by being an additional mentor for students through the process.\
-\* Do you know someone at the university/college who wants to talk about partnering with Fedora Summer Coding?
+&#96;   &#42; Students can have a quality intern-like experience working with Fedora/JBoss.org.&#96;\
+&#96;         o Money! Code! Fame! Success! Community! &#96;\
+&#96;   &#42; Sub-projects in JBoss.org and Fedora are ready to work with students.&#96;\
+&#96;   &#42; This is right in your pocket, you can run with Summer Coding participation and make your school very successful.&#96;\
+&#96;   &#42; You can make more students successful by being an additional mentor for students through the process.&#96;\
+&#96;   &#42; Do you know someone at the university/college who wants to talk about partnering with Fedora Summer Coding? &#96;
 
 ### Timeline for Campus Ambassadors
 
 ### Step-by-step for Campus Ambassadors
 
 [Summer Coding 2010 step-by-step for Campus
-Ambassadors](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_Campus_Ambassadors)
+Ambassadors](https://fedoraproject.org/wiki/Summer_Coding_2010&#35;Step-by-step_for_Campus_Ambassadors)
 
 ## You want to help organize
 
@@ -14365,7 +12763,7 @@ Ambassadors](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_
 ### Step-by-step for Fedora community
 
 [Summer Coding 2010 step-by-step for Fedora
-community](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_Fedora_community)
+community](https://fedoraproject.org/wiki/Summer_Coding_2010&#35;Step-by-step_for_Fedora_community)
 
 ## You are a member of the JBoss.org community
 
@@ -14374,7 +12772,7 @@ community](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_Fe
 ### Step-by-step for JBoss.org community
 
 [Summer Coding 2010 step-by-step for JBoss.org
-community](https://fedoraproject.org/wiki/Summer_Coding_2010#Step-by-step_for_JBoss.org_community)
+community](https://fedoraproject.org/wiki/Summer_Coding_2010&#35;Step-by-step_for_JBoss.org_community)
 
 # Ideas: Google Summer of Code 2010 {#_ideas_google_summer_of_code_2010}
 
@@ -14416,7 +12814,7 @@ Looking for JBoss.org ideas?
 
 ## RHQ
 
-*Status:* \"Idea\"
+*Status:* \'Idea\'
 
 *Summary of idea:* Add features to the [libyahoo2 messaging protocol
 library](http://libyahoo2.sourceforge.net)
@@ -14429,11 +12827,7 @@ Poyarekar](https://fedoraproject.org/wiki/User:Siddhesh)
 
 *Notes:* A brief list of features that are currently needed:
 
-- Webcam support
-
-- Voice support
-
-- Yahoo! Chat room support
+&#42; Webcam support &#42; Voice support &#42; Yahoo! Chat room support
 
 ## KDE Netbook Spin
 
@@ -14442,11 +12836,11 @@ Poyarekar](https://fedoraproject.org/wiki/User:Siddhesh)
 *Summary of idea:* The creation of an official KDE Netbook Edition Spin
 for Fedora 14
 
-*Contacts:* Ryan Rix \< rrix fedoraproject.org \>, rrix on
-irc.freenode.net/#fedora-kde
+*Contacts:* Ryan Rix &lt; rrix fedoraproject.org &gt;, rrix on
+irc.freenode.net/&#35;fedora-kde
 
-*Mentor(s):* Ryan Rix rrix on irc.freenode.net/#fedora-kde, Jaroslav
-Reznik jreznik on irc.freenode.net/#fedora-kde
+*Mentor(s):* Ryan Rix rrix on irc.freenode.net/&#35;fedora-kde, Jaroslav
+Reznik jreznik on irc.freenode.net/&#35;fedora-kde
 
 ## Welcome Wizard
 
@@ -14462,7 +12856,8 @@ McGrath](https://fedoraproject.org/wiki/User:Mmcgrath)
 *Notes:* Right now when new users sign up for an account, they have NO
 idea what to do next. One common thing is applying for a bunch of
 seemingly random groups, then trying to ssh to fedorapeople. Then just
-having your applications sit there...​ forever never getting approved.
+having your applications sit there&#8230; forever never getting
+approved.
 
 I'd like for the account system to have a simple wizard interface (via a
 plugin), welcomes users, explains how Fedora works and explains how to
@@ -14524,7 +12919,7 @@ Additional filters would also be a great asset.
 *Mentor(s):* [Tomáš Bžatek](https://fedoraproject.org/wiki/User:tbzatek)
 
 *Notes:* See upstream bug
-<https://bugzilla.gnome.org/show_bug.cgi?id=612725#c6> for details
+<https://bugzilla.gnome.org/show_bug.cgi?id=612725&#35;c6> for details
 
 ## CHASM
 
@@ -14541,8 +12936,8 @@ Additional filters would also be a great asset.
 *Notes:* CHASM, the Cryptographic-Hash-Algorithm-Secured Mirroring
 solution, is a project that is to help alleviate a lot of the pains that
 mirrors have in organizing and verifying their content. The project can
-be thought of as a stateful `rsync` daemon in some respects, and solves
-a problem that kernel.org and a number of other large mirroring
+be thought of as a stateful &#96;rsync&#96; daemon in some respects, and
+solves a problem that kernel.org and a number of other large mirroring
 infrastructures have been looking into for several years now. This is
 ultimately a project that will be used by a greater portion of the
 larger mirroring infrastructures and as such has a lot of need for high
@@ -14554,16 +12949,16 @@ performance and good design.
 
 *Summary of idea:* The proposed work is to write the GTK GUI for Digital
 Gate Compiler (DGC) to use the latest GTK+ 2.0 API. This is Fedora
-Electronic Lab ticket #73:
+Electronic Lab ticket &#35;73:
 <https://fedorahosted.org/fedora-electronic-lab/ticket/73>
 
 *Contact:* [ Shakthi
-Kannan](https://fedoraproject.org/wiki/User:Shakthimaan) , \"mbuf\" at
-irc.freenode.net/#fedora-india
+Kannan](https://fedoraproject.org/wiki/User:Shakthimaan) , \'mbuf\' at
+irc.freenode.net/&#35;fedora-india
 
 *Mentor(s):* [ Shakthi
-Kannan](https://fedoraproject.org/wiki/User:Shakthimaan) , \"mbuf\" at
-irc.freenode.net/#fedora-india
+Kannan](https://fedoraproject.org/wiki/User:Shakthimaan) , \'mbuf\' at
+irc.freenode.net/&#35;fedora-india
 
 *Notes:*
 
@@ -14583,19 +12978,11 @@ The main page for this idea is
 
 *Notes:* Ideas are
 
-- ISPN-272 Recover from transaction failures
-
-- ISPN-127 Ability to bring up/take down nodes based on SLAs
-
-- ISPN-374 Add event handling to HotRod
-
-- ISPN-57 Support Google App Engine
-
-- ISPN-200 Distributed queries
-
-- ISPN-262 Geographically distributed data grid
-
-- ISPN-263 Handle MERGE events to deal with split brains
+&#42; ISPN-272 Recover from transaction failures &#42; ISPN-127 Ability
+to bring up/take down nodes based on SLAs &#42; ISPN-374 Add event
+handling to HotRod &#42; ISPN-57 Support Google App Engine &#42;
+ISPN-200 Distributed queries &#42; ISPN-262 Geographically distributed
+data grid &#42; ISPN-263 Handle MERGE events to deal with split brains
 
 Please check details at the Student/Contributor Projects with Infinispan
 wiki page at
@@ -14617,18 +13004,11 @@ The main page for this idea is
 
 *Notes:* Ideas are
 
-- JBoss ESB integration with CDI
-
-- Errai (GWT) integration with CDI
-
-- Errai (GWT) integration with CDI events
-
-- Errai (GWT) integration with Seam Security
-
-- Extensible project management tooling environment (based on Maven and
-  Maven Archetypes)
-
-- Conversations with remote EJBs
+&#42; JBoss ESB integration with CDI &#42; Errai (GWT) integration with
+CDI &#42; Errai (GWT) integration with CDI events &#42; Errai (GWT)
+integration with Seam Security &#42; Extensible project management
+tooling environment (based on Maven and Maven Archetypes) &#42;
+Conversations with remote EJBs
 
 Please check details at the Student Projects wiki page at
 <http://seamframework.org/Community/StudentProjects>
@@ -14641,7 +13021,7 @@ Please check details at the Student Projects wiki page at
 
 *Contacts:* [Shreyank
 Gupta](https://fedoraproject.org/wiki/User:Shreyankg) , Shrink on
-irc.freenode.net/#fedora-india
+irc.freenode.net/&#35;fedora-india
 
 *Mentor(s):* [Shreyank
 Gupta](https://fedoraproject.org/wiki/User:Shreyankg)
@@ -14652,17 +13032,14 @@ automated.
 
 ## Kronikarz - Simple Tool for Desktop Backup / Restore
 
-*Status:* \"Idea\"
+*Status:* \'Idea\'
 
 *Summary of idea:* Handy graphical tool for archiving settings of
 desktop applications. This tool will be useful for users who:
 
-- want to simply backup / restore look-and-feel and settings of desktop
-  applications;
-
-- frequently migrate from one distribution to another;
-
-- have more then one device and want to sync settings.
+&#42; want to simply backup / restore look-and-feel and settings of
+desktop applications; &#42; frequently migrate from one distribution to
+another; &#42; have more then one device and want to sync settings.
 
 *Contacts:* [Alexei Panov](https://fedoraproject.org/wiki/User:Elemc)
 
@@ -14674,23 +13051,16 @@ and enable support for certain application.
 
 Proposed features:
 
-- Easy search and select installed applications for backup / restore /
-  sync
-
-- Can work as application or as daemon
-
-- Has scheduler and backup / restore / sync settings (archive type,
-  passwords, compression rate, additive/solid, etc.)
-
-- Custom selection of applications for archiving (one, group, all, etc.)
-
-- Restoring data from archive with tracking of current application,
-  nonexistent on target machine applications should be reinstalled from
-  PackageKit
-
-- Including user selected files in archive for restoring on target
-  machine (possibly searching and automatic including configuration
-  files or files of specified types).
+&#42; Easy search and select installed applications for backup / restore
+/ sync &#42; Can work as application or as daemon &#42; Has scheduler
+and backup / restore / sync settings (archive type, passwords,
+compression rate, additive/solid, etc.) &#42; Custom selection of
+applications for archiving (one, group, all, etc.) &#42; Restoring data
+from archive with tracking of current application, nonexistent on target
+machine applications should be reinstalled from PackageKit &#42;
+Including user selected files in archive for restoring on target machine
+(possibly searching and automatic including configuration files or files
+of specified types).
 
 ## Unified Mobile Sync
 
@@ -14710,25 +13080,16 @@ Vasyukov](https://fedoraproject.org/wiki/User:Anganar)
 
 *Notes:* Proposed features:
 
-- Synchronization of contacts and calendar (required), tasks and
-  messages (desired)
-
-- Support for popular mobile devices, simple extensibility for new
-  gadgets via plugins
-
-- Support for popular desktop applications, simple extensibility for
-  other via plugins
-
-- Simple graphical synchronization tuning tool -- what to synchronize,
-  scheduling, rules (filters, conflict resolution, etc.)
-
-- Enabling mobile device backup and restore
-
-- Desirably running not only on Linux, but also on Windows and MacOS
-  (TBD)
-
-- Think about future integration with open source collaboration suites
-  and unified communication systems.
+&#42; Synchronization of contacts and calendar (required), tasks and
+messages (desired) &#42; Support for popular mobile devices, simple
+extensibility for new gadgets via plugins &#42; Support for popular
+desktop applications, simple extensibility for other via plugins &#42;
+Simple graphical synchronization tuning tool -- what to synchronize,
+scheduling, rules (filters, conflict resolution, etc.) &#42; Enabling
+mobile device backup and restore &#42; Desirably running not only on
+Linux, but also on Windows and MacOS (TBD) &#42; Think about future
+integration with open source collaboration suites and unified
+communication systems.
 
 *Current state*
 
@@ -14742,44 +13103,44 @@ implementation.
 
 The tasks for current stage:
 
-- Find out how to upload/download to/from popular mobile devices
-  (Android, iPhone, Symbian, PalmOS, Win Mobile, BB, etc) contacts,
-  messages, calendars, todos, media content, etc. It includes studying
-  what data is accessible, in what format we are to process it, what
-  protocols-libraries-APIs should be used. As a result we should get
-  clear understanding what and how can be synced for different devices.
-  This task will require gathering and reading tons of technical
-  documentation and writing code to check if documentation is really
-  true. I can not predict what programming languages, libraries,
-  standards and protocols you will encounter.
+&#42; Find out how to upload/download to/from popular mobile devices
+(Android, iPhone, Symbian, PalmOS, Win Mobile, BB, etc) contacts,
+messages, calendars, todos, media content, etc. It includes studying
+what data is accessible, in what format we are to process it, what
+protocols-libraries-APIs should be used. As a result we should get clear
+understanding what and how can be synced for different devices. This
+task will require gathering and reading tons of technical documentation
+and writing code to check if documentation is really true. I can not
+predict what programming languages, libraries, standards and protocols
+you will encounter.
 
-- Find out how to upload/download to/from popular desktop apps
-  (Evolution, Thunderbird, KDE PIM, Outlook, etc) contacts, messages,
-  calendars, todos, media content, etc. Once again, it includes studing
-  what is accessible, in what format, via which channels. As a result we
-  should get clear understanding what and how can be synced with
-  different apps. This task will require, similarly with the previous
-  one, reading documentation and writing tests. Once again, I can not
-  predict what programming languages, libraries, standards and protocols
-  you will encounter.
+&#42; Find out how to upload/download to/from popular desktop apps
+(Evolution, Thunderbird, KDE PIM, Outlook, etc) contacts, messages,
+calendars, todos, media content, etc. Once again, it includes studing
+what is accessible, in what format, via which channels. As a result we
+should get clear understanding what and how can be synced with different
+apps. This task will require, similarly with the previous one, reading
+documentation and writing tests. Once again, I can not predict what
+programming languages, libraries, standards and protocols you will
+encounter.
 
-- Find out how to integrate mobile sync into current system
-  infrastructure for Linux desktop (dbus, udev, PackageKit, etc) and,
-  probably, Windows desktop (???). This task will require very good
-  knowledge of system design.
+&#42; Find out how to integrate mobile sync into current system
+infrastructure for Linux desktop (dbus, udev, PackageKit, etc) and,
+probably, Windows desktop (???). This task will require very good
+knowledge of system design.
 
-- Prepare concept of GUI application and implement the first version
-  (with placeholders instead of real sync plugins). This task will
-  require knowledge of cross-platform programming with Python or C/C++
-  and GTK/Qt/etc. Knowledge of GUI design and usability will be a big
-  advantage.
+&#42; Prepare concept of GUI application and implement the first version
+(with placeholders instead of real sync plugins). This task will require
+knowledge of cross-platform programming with Python or C/C++ and
+GTK/Qt/etc. Knowledge of GUI design and usability will be a big
+advantage.
 
-- Prepare the architecture based on the results of tasks #1-4. The
-  architecture should meet the requirements \[1\]. Determine tasks for
-  complete UMS implementation.
+&#42; Prepare the architecture based on the results of tasks &#35;1-4.
+The architecture should meet the requirements \[1\]. Determine tasks for
+complete UMS implementation.
 
-From my point of view each of the tasks #1-4 will require few
-person-months. Task #5 will be solved collaboratively.
+From my point of view each of the tasks &#35;1-4 will require few
+person-months. Task &#35;5 will be solved collaboratively.
 
 ## KDE fingerprint support for various components
 
@@ -14787,17 +13148,17 @@ person-months. Task #5 will be solved collaboratively.
 
 *Summary of idea:* The aim of this project is to finish fingerprint
 support for various KDE core components and package it for Fedora. The
-current code supports KDM login & KDE locking and sits in KDE SVN
+current code supports KDM login &amp; KDE locking and sits in KDE SVN
 playground. Support to other KDE componenets have to be done - Polkit
 KDE auth. agent, kdesu etc. Code should be accepted by upstream and
 should go through KDE review to be shipped in official KDE SC releases.
 
 *Contacts:* [Jaroslav
 Reznik](https://fedoraproject.org/wiki/JaroslavReznik)
-\<<jreznik@redhat.com>\>
+&lt;<jreznik@redhat.com>&gt;
 
 *Mentor(s):* [Jaroslav
-Reznik](https://fedoraproject.org/wiki/JaroslavReznik) & KDE SIG
+Reznik](https://fedoraproject.org/wiki/JaroslavReznik) &amp; KDE SIG
 
 ## KDE Usability recording tool
 
@@ -14809,9 +13170,9 @@ need to record:
 
 The three most notable are the screen of the user being tested
 
-- An external camera source
+&#42; An external camera source
 
-- An external microphone
+&#42; An external microphone
 
 These must be compressed and multiplexed together, compressed. The tool
 must be able to open these files, export them to other more conventional
@@ -14819,13 +13180,13 @@ types, i.e. an OGG simply of the users screen.
 
 *Contacts:* [Jaroslav
 Reznik](https://fedoraproject.org/wiki/JaroslavReznik)
-\<<jreznik@redhat.com>\>, [Lukas
+&lt;<jreznik@redhat.com>&gt;, [Lukas
 Tinkl](https://fedoraproject.org/wiki/User:Ltinkl?rd=LukasTinkl)
-\<<ltinkl@redhat.com>\>
+&lt;<ltinkl@redhat.com>&gt;
 
 *Mentor(s):* [Jaroslav
 Reznik](https://fedoraproject.org/wiki/JaroslavReznik), [Lukas
-Tinkl](https://fedoraproject.org/wiki/User:Ltinkl?rd=LukasTinkl) &
+Tinkl](https://fedoraproject.org/wiki/User:Ltinkl?rd=LukasTinkl) &amp;
 mentor @ university
 
 *Notes:* for FIT BUT/FI MUNI students only
@@ -14864,7 +13225,7 @@ And so on.
 
 CUPS provides a unified framework for all drivers to report marker
 levels in the same way, viewed and queried from a single user interface.
-The same interface can be used for other \"special\" functions such as
+The same interface can be used for other \'special\' functions such as
 cleaning/aligning the print heads, printing a self-test page, etc. We
 just need the printer drivers to conform to this way of doing things.
 
@@ -14947,7 +13308,7 @@ The preliminary tasks are to:
 
 ## Libyahoo2
 
-*Status:* \"Idea\"
+*Status:* \'Idea\'
 
 *Summary of idea:* Add features to the [libyahoo2 messaging protocol
 library](http://libyahoo2.sourceforge.net)
@@ -14960,11 +13321,7 @@ Poyarekar](https://fedoraproject.org/wiki/User:Siddhesh)
 
 *Notes:* A brief list of features that are currently needed:
 
-- Webcam support
-
-- Voice support
-
-- Yahoo! Chat room support
+&#42; Webcam support &#42; Voice support &#42; Yahoo! Chat room support
 
 ## Fedora Musicians\' Guide
 
@@ -15020,7 +13377,7 @@ Gupta](https://fedoraproject.org/wiki/User:shreyankg)
 
 ## Universal Build-ID
 
-*Status:* \"Idea\"
+*Status:* \'Idea\'
 
 *Summary of idea:* Extend the Build-ID support to make it more
 universally usable.
@@ -15071,68 +13428,61 @@ This schedule is ready for [Summer Coding 2010](index.html). Join the
 list](http://lists.fedoraproject.org/mailman/listinfo/summer-coding-discuss)
 and/or watch this page to be updated about schedule changes.
 
-*Start dates* are emphasized and **deadlines** are in bold emphasis for
-student items.
+*Start dates* are emphasized and &#42;deadlines&#42; are in bold
+emphasis for student items.
 
-- April
+&#42; April
 
-  :: *7 April - Students can begin submitting applications*
+\+ :: *7 April - Students can begin submitting applications* &#42; May
 
-- May
+\+ :: Whole month - students, mentors, and sub-projects get to know each
+other
 
-  :: Whole month - students, mentors, and sub-projects get to know each
-  other
+\+ 13 May - Mentors need to finish idea pages
 
-  13 May - Mentors need to finish idea pages
+\+ &#42;20 May - Students applications + proposals need to be in&#42;
 
-  **20 May - Students applications + proposals need to be in**
+\+ 21 May - Sponsors must pledge funding by this point
 
-  21 May - Sponsors must pledge funding by this point
+\+ 24 May - Organizers finalize how many applications will be accepted
 
-  24 May - Organizers finalize how many applications will be accepted
+\+ 27 May - Mentors + admins finalize rank-ordered list
 
-  27 May - Mentors + admins finalize rank-ordered list
+\+ *28 May - Students informed yes/no about application* &#42; June
 
-  *28 May - Students informed yes/no about application*
+\+ :: Whole month - code, interact
 
-- June
+\+ *01 June - Project begins (depending on proposal)*
 
-  :: Whole month - code, interact
+&#42; July
 
-  *01 June - Project begins (depending on proposal)*
+\+ :: *05 July - Midterm evaluations period begins*
 
-- July
+\+ *05 July - Student midterm deadline for evaluation (first, soft
+deadline)*
 
-  :: *05 July - Midterm evaluations period begins*
+\+ &#42;08 July - Student midterm deadline for evaluation (final
+deadline)&#42;
 
-  *05 July - Student midterm deadline for evaluation (first, soft
-  deadline)*
+\+ *12 July - Midterm evaluations due from mentors* &#42; August
 
-  **08 July - Student midterm deadline for evaluation (final deadline)**
+\+ :: &#42;09 August - Project coding completes&#42;
 
-  *12 July - Midterm evaluations due from mentors*
+\+ &#42;16 August - Students final report, code snapshot, and
+evaluations due&#42;
 
-- August
+\+ 20 August - Mentor evaluations due for students
 
-  :: **09 August - Project coding completes**
+\+ 23 August - Final evaluations due back to students
 
-  **16 August - Students final report, code snapshot, and evaluations
-  due**
+\+ 25 August - Mentor, sub-project evaluations of the Summer Coding
+program requested &#42; September
 
-  20 August - Mentor evaluations due for students
+\+ :: 01 September - Sponsors receive report from organizers
 
-  23 August - Final evaluations due back to students
+\+ 06 September - Sponsors release and deliver funds (proposed date)
 
-  25 August - Mentor, sub-project evaluations of the Summer Coding
-  program requested
-
-- September
-
-  :: 01 September - Sponsors receive report from organizers
-
-  06 September - Sponsors release and deliver funds (proposed date)
-
-  - 2009 = Ideas: Google Summer of Code 2009
+&#42;&#42; 2009 = Ideas: Google Summer of Code 2009
 
 Find an idea you like? Want to propose your own? See our Getting Started
 Guide:
@@ -15199,7 +13549,7 @@ kernel.org, Fedora, Debian, CPAN, etc. \'\'\' n *Contacts:* WarrenTogami
 
 *Notes:*
 
-- <https://fedorahosted.org/InstantMirror/>
+&#42; <https://fedorahosted.org/InstantMirror/>
 
 ## Packages End User UI
 
@@ -15224,16 +13574,14 @@ packages are in Fedora.
 
 We also want to add a few features that aren't in other systems.
 
-- The ability to filter these as applications instead of packages,
-
-- Letting end users comment on the applications to help other end users
-
-- Letting end users tag the packages with keywords to make searching
-  easier
+&#42; The ability to filter these as applications instead of packages,
+&#42; Letting end users comment on the applications to help other end
+users &#42; Letting end users tag the packages with keywords to make
+searching easier
 
 More details here:
 
-- <https://fedorahosted.org/packagedb/wiki/EndUserUI>
+&#42; <https://fedorahosted.org/packagedb/wiki/EndUserUI>
 
 ## New Developer UI for the PackageDB
 
@@ -15258,7 +13606,7 @@ acls much easier.
 
 More details here:
 
-- <https://fedorahosted.org/packagedb/wiki/NewDevUI>
+&#42; <https://fedorahosted.org/packagedb/wiki/NewDevUI>
 
 ## Robotics LiveCD with Simulator Environment
 
@@ -15297,29 +13645,18 @@ SIG](https://fedoraproject.org/wiki/SIGs/Robotics).
 *Notes:* Spacewalk is an open source Linux systems management solution.
 It allows you to:
 
-- Inventory your systems (hardware and software information)
-
-- Install and update software on your systems
-
-- Collect and distribute your custom software packages into manageable
-  groups
-
-- Provision (Kickstart) your systems
-
-- Manage and deploy configuration files to your systems
-
-- Monitor your systems
-
-- Provision virtual guests
-
-- Start/stop/configure virtual guests
+&#42; Inventory your systems (hardware and software information) &#42;
+Install and update software on your systems &#42; Collect and distribute
+your custom software packages into manageable groups &#42; Provision
+(Kickstart) your systems &#42; Manage and deploy configuration files to
+your systems &#42; Monitor your systems &#42; Provision virtual guests
+&#42; Start/stop/configure virtual guests
 
 Currently Spacewalk works only with Oracle, which is why enabling it to
 work with PostgreSQL would be a great project.
 
-- <https://fedorahosted.org/spacewalk/wiki/PostgreSqlProject>
-
-- <https://fedorahosted.org/spacewalk/>
+&#42; <https://fedorahosted.org/spacewalk/wiki/PostgreSqlProject> &#42;
+<https://fedorahosted.org/spacewalk/>
 
 ## Fedora Feature
 
@@ -15359,14 +13696,10 @@ review request about problems expressed.
 
 At least the following problems are addressed:
 
-- Layout of app-install metadata and application icons inside of
-  repository,
-
-- Pregenerating of app-install metadata and icons,
-
-- Change app-install to download metadata from repository,
-
-- Learn app-install to download icons on demand.
+&#42; Layout of app-install metadata and application icons inside of
+repository, &#42; Pregenerating of app-install metadata and icons, &#42;
+Change app-install to download metadata from repository, &#42; Learn
+app-install to download icons on demand.
 
 ## EKG
 
@@ -15396,15 +13729,8 @@ attempting to find ways to show a lot of information at a glance.
 
 You will get to work with the following technologies:
 
-- Python
-
-- HTML
-
-- Javascript
-
-- SQLAlchemy
-
-- Python templating languages
+&#42; Python &#42; HTML &#42; Javascript &#42; SQLAlchemy &#42; Python
+templating languages
 
 Students should bring some of their own ideas to table when submitting
 proposals. This may be a very good project for a student with interests
@@ -15471,9 +13797,9 @@ Lutterkort](https://fedoraproject.org/wiki/User:Lutter)
 The iptables config is a scary file, especially when programs need to
 modify it, since making a change often requires that the program
 understands what a chain does in its entirety. It would be much better
-to have a tool that can answer questions like \"What does chain X do to
-packets that look like this ?\" and \"Modify chain X to
-ACCEPT/DROP/REJECT packets that look like this\" in a way that avoids
+to have a tool that can answer questions like \'What does chain X do to
+packets that look like this ?\' and \'Modify chain X to
+ACCEPT/DROP/REJECT packets that look like this\' in a way that avoids
 redundant rules. Solutions to these are described in a few research
 papers.
 
@@ -15500,14 +13826,16 @@ Primary task will be to create an independent GUI based app to browse
 the history. In future one can patch the major file managers for this
 feature.
 
-- 2008 = Ideas for Student Projects for 2008
+&#42;&#42; 2008
+
+# Ideas for Student Projects for 2008
 
 This page gathers all the ideas and pointers/references for the 2008
 intern and Summer coding programs.
 
 +-----------------------------------------------------------------------+
-| **If you see an idea here you want to learn about or hack on, contact |
-| the people associated with the idea.**                                |
+| &#42;If you see an idea here you want to learn about or hack on,      |
+| contact the people associated with the idea.&#42;                     |
 +-----------------------------------------------------------------------+
 
 JBoss.org project ideas are found here:
@@ -15563,29 +13891,23 @@ and allow them to give feedback/enhanced information about a package.
 
 *Design Requirements:*
 
-- This must integrate with the PackageDB. Therefore it will be a piece
-  of a larger TurboGears application. Knowledge of TurboGears and python
-  is not required but a willingness to program in them is :-)
-
-- It is meant to be task and application oriented rather than package
-  oriented. The aim is to answer questions like \"What application will
-  let me make drawings?\" \"Is there a python library for formatting
-  documentation?\" \"I don't like \"deluge\" but I need something that
-  does a similar thing?\"
-
-- We already have package information in several sources. We want to
-  avoid duplicating information where possible but for efficiency we may
-  need to pull some of the data into our database.
-
-- The interface should link back and forth with the existing PackageDB
-  but it is not simply another view of the data. Additional data will be
-  involved.
-
-- Allowing the user to contribute to the knowledge about the package is
-  a goal.
+&#42; This must integrate with the PackageDB. Therefore it will be a
+piece of a larger TurboGears application. Knowledge of TurboGears and
+python is not required but a willingness to program in them is :-) &#42;
+It is meant to be task and application oriented rather than package
+oriented. The aim is to answer questions like \'What application will
+let me make drawings?\' \'Is there a python library for formatting
+documentation?\' \'I don't like \'deluge\' but I need something that
+does a similar thing?\' &#42; We already have package information in
+several sources. We want to avoid duplicating information where possible
+but for efficiency we may need to pull some of the data into our
+database. &#42; The interface should link back and forth with the
+existing PackageDB but it is not simply another view of the data.
+Additional data will be involved. &#42; Allowing the user to contribute
+to the knowledge about the package is a goal.
 
 A mockup of what a page could look like is in the [MyFedora
-proposal](https://fedoraproject.org/wiki/MyFedora?action=AttachFile&do=get&target=info-mockup.png)
+proposal](https://fedoraproject.org/wiki/MyFedora?action=AttachFile&amp;do=get&amp;target=info-mockup.png)
 . Note that the header information is MyFedora UI rather than PackageDB
 Ui and we'd want to be describing gimp as an application rather than
 gimp as a package.
@@ -15628,7 +13950,7 @@ automatically on startup to the first n physical audio output ports
 which facilitates trivial use of the program.
 
 BastienNocera: we use PulseAudio by default in Fedora, and I don't
-really see the point of using Jack if we use PulseAudio for \"normal\"
+really see the point of using Jack if we use PulseAudio for \'normal\'
 users (most users won't be changing that default). You're better off
 pushing this request to an Audacity SoC project.
 
@@ -15636,11 +13958,11 @@ pushing this request to an Audacity SoC project.
 
 *Status:*
 
-- *Being worked on by User:bombshelter13\[Gregory Masseau\]
-  (<gjmasseau@learn.senecac.on.ca>)*
+&#42; *Being worked on by User:bombshelter13\[Gregory Masseau\]
+(<gjmasseau@learn.senecac.on.ca>)*
 
-- *Being worked on by User:miltonpaiva\[Milton Paiva\]
-  (<mpaivaneto@learn.senecac.on.ca>)*
+&#42; *Being worked on by User:miltonpaiva\[Milton Paiva\]
+(<mpaivaneto@learn.senecac.on.ca>)*
 
 *Summary of idea:* Func is a network applications framework that allows
 for powerful remote manipulation and scripting of very large numbers of
@@ -15778,18 +14100,12 @@ logger script to collect the boot information from the /proc interface.
 It also uses a parser to extract information in a non-standardized
 format. It would be nice to:
 
-- extend bootchart to collect information using SystemTap instead.
-
-- code the boot information in XML format.
-
-- explore additional metrics that would make bootchart more useful, i.e.
-  finding out the working set size at various points of the boot
-  process, etc.
-
-- test bootchart on Fedora 8/9/rawhide dom0/domU/kvm/etc.
-
-- propose (and possibly implement) suggestions on how we can improve the
-  boot process.
+&#42; extend bootchart to collect information using SystemTap instead.
+&#42; code the boot information in XML format. &#42; explore additional
+metrics that would make bootchart more useful, i.e. finding out the
+working set size at various points of the boot process, etc. &#42; test
+bootchart on Fedora 8/9/rawhide dom0/domU/kvm/etc. &#42; propose (and
+possibly implement) suggestions on how we can improve the boot process.
 
 *Skills needed:* Strong background in Operating Systems. Familiarity
 with Python, Java/JAXP, XML and C programming. Some experience in kernel
@@ -15833,22 +14149,20 @@ script to get hold of futex locks. We write a XML configuration file,
 specify the output format of the script, and then display the
 graphs/statistics.
 
-    program         locks
-    app1            #245    #######
-    app2            #23     ###
-    app3            #423    ##############
+&#8230;. program locks app1 &#35;245 &#35;&#35;&#35;&#35;&#35;&#35;&#35;
+app2 &#35;23 &#35;&#35;&#35; app3 &#35;423
+&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;&#35;
+&#8230;.
 
 Another example, we want to monitor I/O activities in the system, we
 take an existing script, modify it to display output for the
 visualization tool. We write a XML configuration file, specify how the
 output is like, and then display the statistics:
 
-    program         reads          writes
-    app1            234            23
-    app2            123            2333
-    /--------\
-    app1 _/----\___/          |------------------
-    app2 -------------\_______/--------\_____
+&#8230;. program reads writes app1 234 23 app2 123 2333
+/\-\-\-\-\-\-\--\\ app1 */\-\-\--\_\_*/
+\|\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-- app2
+\-\-\-\-\-\-\-\-\-\-\-\--\_\_*\_*/\-\-\-\-\-\-\--*\_\_\_* &#8230;.
 
 *Skills needed:* Strong background in Operating Systems. Familiarity
 with Python/GTK+, and C programming. Some experience in kernel internals
@@ -15874,11 +14188,11 @@ use, and expand on existing use cases. This task would involve reviewing
 [APTonCD](http://aptoncd.sourceforge.net/) for ideas and ways to do
 things better.
 
-This would possibly involve using avahi for client→client transfers, and
-would have to deal with the trust issues that arise from this. It would
-also involve generating offline packs for automatic install or automatic
-update. ServicePack CD's could be shipped on magazine covers with
-updates to all the typical fedora applications for people without
+This would possibly involve using avahi for client-&gt;client transfers,
+and would have to deal with the trust issues that arise from this. It
+would also involve generating offline packs for automatic install or
+automatic update. ServicePack CD's could be shipped on magazine covers
+with updates to all the typical fedora applications for people without
 inexpensive network access. This could be investigated further.
 
 *Contacts:* RichardHughes, richard_at_hughsie_dot_com
@@ -15940,8 +14254,8 @@ Comment on Diva
 also look at video demos of Diva Project:
 [6](http://www.archive.org/details/DivaLinuxVideoEditorDemo01)
 [7](http://www.archive.org/details/DivaLinuxVideoEditorDemo02)
-[8](http://www.youtube.com/watch?v=22qz_VWrzFo&fmt=6)
-[9](http://www.youtube.com/watch?v=JB1NF-tB9Lk&fmt=6)
+[8](http://www.youtube.com/watch?v=22qz_VWrzFo&amp;fmt=6)
+[9](http://www.youtube.com/watch?v=JB1NF-tB9Lk&amp;fmt=6)
 
 ## Fedora WebInstall
 
@@ -15967,30 +14281,30 @@ website's respectively.
 
 *Status:* *Proposed*
 
-*Summary of idea:* ILA is \"Sanskrit\" word meaning \"Terrestrial\"...​
-The Idea is to integrate all computers reachable (via any kind of
-network, internet to be most obvious) into a parallel web which is
-reachable by a single click or shortcut...​
+*Summary of idea:* ILA is \'Sanskrit\' word meaning
+\'Terrestrial\'&#8230; The Idea is to integrate all computers reachable
+(via any kind of network, internet to be most obvious) into a parallel
+web which is reachable by a single click or shortcut&#8230;
 
-let me put the last line as first...​ \"A parallel web which doesn't
-depends on a central service provider for any of its functions...​ the
-core part of the node functionality is loaded with the desktop\" so
+let me put the last line as first&#8230; \'A parallel web which doesn't
+depends on a central service provider for any of its functions&#8230;
+the core part of the node functionality is loaded with the desktop\' so
 every computer online/lan is capable of being a node depending on the
 modules activated
 
-Its modular so that new features can be made available...​
+Its modular so that new features can be made available&#8230;
 
-The architecture, language, implementation are open to discussion...​ I
-have a few ideas but most relevant thing to write here would be
+The architecture, language, implementation are open to discussion&#8230;
+I have a few ideas but most relevant thing to write here would be
 use-cases which will make the objectives of the project clear..
 
 \\1. A User is stuck on some problem he just clicks a shortcut to make
 visible the desktop application goes to query tab and fills the question
-then hits \'Ask\'...​ now all the other computers (reachable) who have
-selected i-want-to-answer-this-type-of-questions (which is optional)
-will be shown a popup on the desktop...​ all the answers that are sent
-are then shown on the system where they originated. \[much better then a
-search algorithm you are getting reply from real people\]
+then hits \'Ask\'&#8230; now all the other computers (reachable) who
+have selected i-want-to-answer-this-type-of-questions (which is
+optional) will be shown a popup on the desktop&#8230; all the answers
+that are sent are then shown on the system where they originated. \[much
+better then a search algorithm you are getting reply from real people\]
 
 \\1. Can be used for file sharing \[no need to explain just like any
 good P2P\]
@@ -15999,22 +14313,22 @@ good P2P\]
 attachable modules like the above two such as
 Distributed-CPU-Utilization applications (like SETI), Instant messenger,
 feeds collector, news (users can add news and everyone can see it in
-diff categories)...​ \[use your imagination\]
+diff categories)&#8230; \[use your imagination\]
 
 \\1. The only requirement to use a feature or service is just network
 reachability. no dependence on any central service provider
 
-First Issue that I see is...​ It \"Should\" be usable...​ (still its an
-abstract statement :-) ) Although I would like it to run on Fedora and
-other Distros, porting to any plateforms should be possible Idea is
-still in abstract form is \"Remove dependence on centrally controlled
-systems...​integrate this functionality in the OS\" so that new kind of
-apps/tools/featuers can be created.
+First Issue that I see is&#8230; It \'Should\' be usable&#8230; (still
+its an abstract statement :-) ) Although I would like it to run on
+Fedora and other Distros, porting to any plateforms should be possible
+Idea is still in abstract form is \'Remove dependence on centrally
+controlled systems&#8230;integrate this functionality in the OS\' so
+that new kind of apps/tools/featuers can be created.
 
 *Contacts:* Added by SiddharthUpmanyu, If you want to take this project
 contact me at siddharth AT techbugs DOT org.
 
-## Transifex ideas (#transifex)
+## Transifex ideas (&#35;transifex) {#transifex-ideas-transifex}
 
 The following are some ideas on Transifex that came up. Feel free to
 contact DimitrisGlezos for more info and/or extend them with new points
@@ -16026,7 +14340,7 @@ DimitrisGlezos right away.
 You might also want to take a look at [
 L10N/Tools/Plans](https://fedoraproject.org/wiki/L10N/Tools/Plans) .
 
-## Transifex: Clients, APIs and RPCs (#tx_client)
+## Transifex: Clients, APIs and RPCs (&#35;tx_client) {#transifex-clients-apis-and-rpcs-tx_client}
 
 *Status:* *Proposed*
 
@@ -16044,22 +14358,14 @@ DimitrisGlezos
 
 *Notes:*
 
-- Duplication of website functionality
+&#42; Duplication of website functionality &#42; Damned Lies
+interaction? (eg. &#96;tx get-file anaconda el.po&#96;) &#42; How can we
+make login work? &#42; Security a challenge &#42; Hook-up with Pootle as
+a use-case scenario? &#42; If the server has plugins enabled, how is
+this going to be implemented here? (Interaction with student working on
+extensions might be needed) &#42; (&#8230;more ideas?)
 
-- Damned Lies interaction? (eg. `tx get-file anaconda el.po`)
-
-- How can we make login work?
-
-- Security a challenge
-
-- Hook-up with Pootle as a use-case scenario?
-
-- If the server has plugins enabled, how is this going to be implemented
-  here? (Interaction with student working on extensions might be needed)
-
-- (...​more ideas?)
-
-## Transifex: Extension engine (#tx_ext)
+## Transifex: Extension engine (&#35;tx_ext) {#transifex-extension-engine-tx_ext}
 
 *Status:* *Proposed*
 
@@ -16076,16 +14382,13 @@ DimitrisGlezos
 
 *Notes:*
 
-- Student might need to work with the student working on the client to
-  discuss how the client can be extended to implement these plugins.
+&#42; Student might need to work with the student working on the client
+to discuss how the client can be extended to implement these plugins.
+&#42; Metrics will be needed to see how good the refactoring was, and
+what opportunities it will provide --- these metrics would be good to be
+mentioned in the application itself. &#42; (&#8230;more ideas?)
 
-- Metrics will be needed to see how good the refactoring was, and what
-  opportunities it will provide --- these metrics would be good to be
-  mentioned in the application itself.
-
-- (...​more ideas?)
-
-## Transifex: Permission and authorization layer (#tx_perm)
+## Transifex: Permission and authorization layer (&#35;tx_perm) {#transifex-permission-and-authorization-layer-tx_perm}
 
 *Status:* *Proposed*
 
@@ -16095,26 +14398,21 @@ Add user/authorization/permission layer on top of Transifex, to improve
 the workflow Transifex creates by identifying key user groups and
 implementing functionality for each one.
 
-- Developers, administrators, language leaders, editors, translators,
-  anonymous users: They all have different things to do in Transifex
+&#42; Developers, administrators, language leaders, editors,
+translators, anonymous users: They all have different things to do in
+Transifex &#42; Add OpenID support &#42; Introduce string, release,
+translation freezes that influence what some users can do &#42;
+Fine-grain permissions in Tx: Language maintainers, approvals by
+proj/lang/branch, etc. Who owns what, who controls what. Add ability to
+\'hold\' and \'release\' a project/branch, like in elvis. &#42;
+Requirement for this idea is to work with the creators of Vertimus. This
+idea might (or might not) have common ground with Vertimus, and we need
+to make sure that either Tx can interoperate with Vertimus, or that the
+V folks know what we are working on and see how we can work together
+(note: Vertimus is written in PHP, but some interest has been raised for
+finding ways to work with Tx).
 
-- Add OpenID support
-
-- Introduce string, release, translation freezes that influence what
-  some users can do
-
-- Fine-grain permissions in Tx: Language maintainers, approvals by
-  proj/lang/branch, etc. Who owns what, who controls what. Add ability
-  to \"hold\" and \"release\" a project/branch, like in elvis.
-
-- Requirement for this idea is to work with the creators of Vertimus.
-  This idea might (or might not) have common ground with Vertimus, and
-  we need to make sure that either Tx can interoperate with Vertimus, or
-  that the V folks know what we are working on and see how we can work
-  together (note: Vertimus is written in PHP, but some interest has been
-  raised for finding ways to work with Tx).
-
-## Transifex: Add async repo support (#tx_async)
+## Transifex: Add async repo support (&#35;tx_async) {#transifex-add-async-repo-support-tx_async}
 
 *Status:* *Proposed*
 
@@ -16139,7 +14437,7 @@ Idea: Split files into multiple chunks and submit them all together?
 
 DimitrisGlezos
 
-## Transifex's Submissions revisited (#tx_submissions)
+## Transifex's Submissions revisited (&#35;tx_submissions) {#transifexs-submissions-revisited-tx_submissions}
 
 *Status:* *Proposed*
 
@@ -16159,7 +14457,7 @@ submit their translations directly from their terminal.
 revisited](https://fedoraproject.org/wiki/ChristosTrochalakis/GSoC/Tx-Submissions)
 )
 
-## Transifex: Tx Committer service (#tx_committer)
+## Transifex: Tx Committer service (&#35;tx_committer) {#transifex-tx-committer-service-tx_committer}
 
 *Status:* *Proposed*
 
@@ -16171,24 +14469,18 @@ we'd like to have the commit service run as a different user. An
 advantage of this is that any repo can run this committer and control
 the submissions instead of giving SSH access to a downstream project.
 
-- Split committer into a different component
-
-- Move commit code outside transifex/ and into transifex-committer/
-
-- Practically, have it behave as a different application. First, we
-  could communicate with it via an API and then via JSON to have it
-  remotely.
-
-- Use-cases: projects behind a firewall, upsteam projects not wanting to
-  give SSH access, etc.
-
-- Work with SELinux a plus.
+&#42; Split committer into a different component &#42; Move commit code
+outside transifex/ and into transifex-committer/ &#42; Practically, have
+it behave as a different application. First, we could communicate with
+it via an API and then via JSON to have it remotely. &#42; Use-cases:
+projects behind a firewall, upsteam projects not wanting to give SSH
+access, etc. &#42; Work with SELinux a plus.
 
 *Contacts:*
 
 DimitrisGlezos
 
-## Transifex: Server-federated architecture (#tx_federated)
+## Transifex: Server-federated architecture (&#35;tx_federated) {#transifex-server-federated-architecture-tx_federated}
 
 *Status:* *Proposed*
 
@@ -16200,23 +14492,19 @@ to share stuff, like users, translation statistics and maybe
 submissions. Eg. a Fedora user could submit something to the Debian
 server, which will wait the approval of a Debian language leader.
 
-- For a single Tx instance to scale well, one might want to split its
-  functionality into (say) el.fooTx.org, pt.fooTx.org, etc.
-
-- This splitting/joining requires something like a server to server
-  architecture/protocol and the ability to aggregate and delegate stuff
-  on both sides
-
-- Some projects might want to have their own Tx instance which contains
-  internal projects, not publicly visible. At the same time, they might
-  have public projects wanting to freely receive translations, but also
-  they might want to allow their internal translators to use this
-  instance as a gateway to all other Tx servers.
-
-- Minimizing the independence between the scattered Tx instances (ie.
-  building bridges between the Tx \"islands\") will bring the whole
-  \"community bridging\" idea of Transifex to a whole new level. This is
-  the goal we want to reach in the long term.
+&#42; For a single Tx instance to scale well, one might want to split
+its functionality into (say) el.fooTx.org, pt.fooTx.org, etc. &#42; This
+splitting/joining requires something like a server to server
+architecture/protocol and the ability to aggregate and delegate stuff on
+both sides &#42; Some projects might want to have their own Tx instance
+which contains internal projects, not publicly visible. At the same
+time, they might have public projects wanting to freely receive
+translations, but also they might want to allow their internal
+translators to use this instance as a gateway to all other Tx servers.
+&#42; Minimizing the independence between the scattered Tx instances
+(ie. building bridges between the Tx \'islands\') will bring the whole
+\'community bridging\' idea of Transifex to a whole new level. This is
+the goal we want to reach in the long term.
 
 The most important aspect of this idea is architecture design. The
 student will need to have a very good image of content and translation
@@ -16227,7 +14515,7 @@ Also, most likely the student will want to discuss a lot with the main
 Transifex developers. Fluent English is probably an important asset for
 someone applying for this idea.
 
-## Transifex: Usability and efficiency enhancements (#tx_enhancement)
+## Transifex: Usability and efficiency enhancements (&#35;tx_enhancement) {#transifex-usability-and-efficiency-enhancements-tx_enhancement}
 
 *Status:* *Proposed*
 
@@ -16249,17 +14537,14 @@ DiegoZacarao, DimitrisGlezos
 
 *Notes:*
 
-- Add i18n support.
-
-- Add user friendly interface to handle modules and repos.
-
-- Should we merge the two modules lists of t.fp.o?
-
-- Make all relevant interactions of application be called using Ajax.
+&#42; Add i18n support. &#42; Add user friendly interface to handle
+modules and repos. &#42; Should we merge the two modules lists of
+t.fp.o? &#42; Make all relevant interactions of application be called
+using Ajax.
 
 PS: The idea is based on what I'm able to work on.
 
-## Transifex: Online editing, integration of Pootle (#tx_pootle)
+## Transifex: Online editing, integration of Pootle (&#35;tx_pootle) {#transifex-online-editing-integration-of-pootle-tx_pootle}
 
 *Status:* *Proposed*
 
@@ -16280,15 +14565,12 @@ around traditional, VCS-centric translations, which would like to use a
 web-based translation for some modules. Here are some details about what
 could be done:
 
-- Add necessary configuration options in Pootle to use Transifex for
-  certain tasks and particular modules.
-
-- Abstract what is needed to retain compatibility with the traditional
-  way of handling files in Pootle.
-
-- Extend Transifex in a way that accepts submissions without the web
-  interface (might need some discussion with the student working on the
-  Command Line Interface).
+&#42; Add necessary configuration options in Pootle to use Transifex for
+certain tasks and particular modules. &#42; Abstract what is needed to
+retain compatibility with the traditional way of handling files in
+Pootle. &#42; Extend Transifex in a way that accepts submissions without
+the web interface (might need some discussion with the student working
+on the Command Line Interface).
 
 *Contacts:*
 
@@ -16296,17 +14578,14 @@ NilsPhilippsen, DimitrisGlezos
 
 *Notes:*
 
-- Edit translations directly in Transifex (or in a seamless, integrated
-  way with Tx), operating on individual messages.
-
-- Compare pootle to locally running PO editors (e.g. kbabel,
-  gtranslator, poedit), check if essential functionality is missing and
-  eventually implement it (e.g. does it display eventually included
-  source code comments which help translating the message, cf.
-  \"xgettext \--add-comments ...​\").
-
-- Evaluate whether certain Pootle functionality (e.g. translation
-  suggestions) is needed or can be disabled for Transifex.
+&#42; Edit translations directly in Transifex (or in a seamless,
+integrated way with Tx), operating on individual messages. &#42; Compare
+pootle to locally running PO editors (e.g. kbabel, gtranslator, poedit),
+check if essential functionality is missing and eventually implement it
+(e.g. does it display eventually included source code comments which
+help translating the message, cf. \'xgettext \--add-comments &#8230;\').
+&#42; Evaluate whether certain Pootle functionality (e.g. translation
+suggestions) is needed or can be disabled for Transifex.
 
 ## Smolt: Pretty Web 2.0 Interfaces
 
@@ -16328,14 +14607,11 @@ factoids, they do not help out people looking for detailed information.
 This also does not inform people about any known issues about their
 machine. Two classic examples of what we are looking for are these:
 
-- Joe wants to know how many machines running Fedora 9 Betas have
-  SELinux enabled
-
-- Fred needs to know that there is new eratta for his soundcard, perhaps
-  we can make sound work on his new machine finally!
-
-- Tim's machine works perfectly, how can he tell us this, so that we can
-  mark our stamp of approval
+&#42; Joe wants to know how many machines running Fedora 9 Betas have
+SELinux enabled &#42; Fred needs to know that there is new eratta for
+his soundcard, perhaps we can make sound work on his new machine
+finally! &#42; Tim's machine works perfectly, how can he tell us this,
+so that we can mark our stamp of approval
 
 These are only guidelines of the things we are looking for. This project
 is very open ended, and you can do what you feel like. New Ideas are
@@ -16351,17 +14627,13 @@ just Python is a plus..
 
 *Contacts:*
 
-- YaakovNemoy
-
-- MikeMcGrath
+&#42; YaakovNemoy &#42; MikeMcGrath
 
 *Notes:*
 
-- Create a good web interface to access data from the server
-
-- Make Smolt more helpful to the end user
-
-- If you like buzzwords, this project is very Web 2.0 oriented.
+&#42; Create a good web interface to access data from the server &#42;
+Make Smolt more helpful to the end user &#42; If you like buzzwords,
+this project is very Web 2.0 oriented.
 
 ## Election Software
 
@@ -16407,9 +14679,9 @@ won't have to select apps one by one in the package chooser \'\'
 
 *Notes:*
 
-- 2007
+&#42;&#42; 2007
 
-- 2006 = Google Summer of Code 2006
+&#42;&#42; 2006 = Google Summer of Code 2006
 
 The Fedora Project participated in the second Summer of Code event and
 mentored 5 students throughought the summer as they completed their
@@ -16419,7 +14691,8 @@ proposals:
 ## Selected Projects
 
 +----------------------+----------------------+-----------------------+
-| **Project Summary**  | **Student**          | **Mentor**            |
+| &#42;Project         | &#42;Student&#42;    | &#42;Mentor&#42;      |
+| Summary&#42;         |                      |                       |
 +======================+======================+=======================+
 | [ MoinMoin DocBook   | MikkoVirkkilä        | KarstenWade           |
 | XML Conversion       |                      |                       |
@@ -16452,7 +14725,7 @@ proposals:
 | rg/wiki/IvanBarrera) |                      |                       |
 +----------------------+----------------------+-----------------------+
 
-- 2005 = Google Summer of Code 2005
+&#42;&#42; 2005 = Google Summer of Code 2005
 
 The Fedora Project was happy to participate in
 [Google's](http://code.google.com/) [Summer of
@@ -16463,58 +14736,54 @@ organization.
 
 ## Selected Projects {#selected-projects}
 
-- Behdad Esfahbod \<<behdad@cs.toronto.edu>\> - intelligent readahead
-  daemon [project page](http://sourceforge.net/projects/preload)
-  [proposal](http://www.cs.toronto.edu/~behdad/blog/preload.txt)
+&#42; Behdad Esfahbod &lt;<behdad@cs.toronto.edu>&gt; - intelligent
+readahead daemon [project page](http://sourceforge.net/projects/preload)
+[proposal](http://www.cs.toronto.edu/~behdad/blog/preload.txt)
 
-- Ljudmila Korjukina \<<lrs@inbox.ru>\> - packetsim [project
-  page](http://sourceforge.net/projects/iptview/)
+&#42; Ljudmila Korjukina &lt;<lrs@inbox.ru>&gt; - packetsim [project
+page](http://sourceforge.net/projects/iptview/)
 
-- Praveenkumar Ponnusamy \<<ps.praveenkr@gmail.com>\> - global bash
-  history [project
-  page](https://sourceforge.net/projects/bash-gchistory/)
+&#42; Praveenkumar Ponnusamy &lt;<ps.praveenkr@gmail.com>&gt; - global
+bash history [project
+page](https://sourceforge.net/projects/bash-gchistory/)
 
-- Ulisses Furquim \<<ulissesf@gmail.com>\> - pylibparted [project
-  page](http://pylibparted.tigris.org/)
+&#42; Ulisses Furquim &lt;<ulissesf@gmail.com>&gt; - pylibparted
+[project page](http://pylibparted.tigris.org/)
 
-- Darko Ilic \<<darko.ilic@gmail.com>\> - \[wiki:Self:Kadischi
-  Kadischi\] (live CD generator)
+&#42; Darko Ilic &lt;<darko.ilic@gmail.com>&gt; - \[wiki:Self:Kadischi
+Kadischi\] (live CD generator)
 
-- Pedro Fernandes Macedo \<<pmacedo@dcc.ufmg.br>\> - smart mirror
-  selection [project
-  page](http://www.sourceforge.net/projects/mirrorselect)
+&#42; Pedro Fernandes Macedo &lt;<pmacedo@dcc.ufmg.br>&gt; - smart
+mirror selection [project
+page](http://www.sourceforge.net/projects/mirrorselect)
 
-- Wieland Gmeiner \<<e8607062@student.tuwien.ac.at>\> - setting process
-  rlimits [proposal and
-  patches](http://stud4.tuwien.ac.at/~e8607062/studies/soc/)
+&#42; Wieland Gmeiner &lt;<e8607062@student.tuwien.ac.at>&gt; - setting
+process rlimits [proposal and
+patches](http://stud4.tuwien.ac.at/~e8607062/studies/soc/)
 
-- Dave Arter \<<davea@sucs.org>\> - user backups (work in progress is at
-  <https://sucs.org/~davea/trac/>)
+&#42; Dave Arter &lt;<davea@sucs.org>&gt; - user backups (work in
+progress is at <https://sucs.org/~davea/trac/>)
 
-- Mateusz Berezecki \<<mateuszb@gmail.com>\> - atheros driver:
-  <http://www.ath-driver.org/>
+&#42; Mateusz Berezecki &lt;<mateuszb@gmail.com>&gt; - atheros driver:
+<http://www.ath-driver.org/>
 
-- Adrian Bunk \<<bunk@stusta.de>\> - Fedora Directory Server auto\*-ing
-  [project page](http://www.fs.tum.de/~bunk/fds/) or [SourceForge
-  page](http://sourceforge.net/projects/fds-build/)
+&#42; Adrian Bunk &lt;<bunk@stusta.de>&gt; - Fedora Directory Server
+auto&#42;-ing [project page](http://www.fs.tum.de/~bunk/fds/) or
+[SourceForge page](http://sourceforge.net/projects/fds-build/)
 
-- Camron T. Lacy \<<clacy@ctltechnologies.net>\> -
-  system-config-securitylevel [Sourceforge
-  page](http://www.sourceforge.net/projects/securitylevel)
+&#42; Camron T. Lacy &lt;<clacy@ctltechnologies.net>&gt; -
+system-config-securitylevel [Sourceforge
+page](http://www.sourceforge.net/projects/securitylevel)
 
-- Vikram Aggarwal \<<vikrama@gmail.com>\> - install coverage testing
-  [project page](http://sourceforge.net/projects/pootypedia/)
+&#42; Vikram Aggarwal &lt;<vikrama@gmail.com>&gt; - install coverage
+testing [project page](http://sourceforge.net/projects/pootypedia/)
 
-- Google Code In
+&#42; Google Code In &#42;&#42; 2018 Google-CodeIn 2018 Task List
 
-  - 2018 Google-CodeIn 2018 Task List
+    This page highlights \&#42;Fedora community mentored tasks for https://codein.withgoogle.com/[GCI]\&#42;.
 
-<!-- -->
-
-    This page highlights *Fedora community mentored tasks for https://codein.withgoogle.com/[GCI]*.
-
-    * We are looking out for more volunteers and mentors
-    * If you want to volunteer please ping bexelbie@redhat.com or sumantro@redhat.com
+    \&#42; We are looking out for more volunteers and mentors
+    \&#42; If you want to volunteer please ping bexelbie@redhat.com or sumantro@redhat.com
     ===========
     === What's GCI?
 
@@ -16528,19 +14797,19 @@ organization.
 
     === Current Mentors
 
-    * Anna
-    * Amitosh
-    * Sumantro
-    * Abhishek
+    \&#42; Anna
+    \&#42; Amitosh
+    \&#42; Sumantro
+    \&#42; Abhishek
 
     === Org Admins
-    * Bex
-    * Martin
+    \&#42; Bex
+    \&#42; Martin
 
 
     === Task List
     .Coding
-    [options="header"]
+    [options='header']
     |=======================
     |Topic              |Mentor     |Description
     |Search archives    | Anna      |Add a search bar to the archives page to be able to search for messages and users
@@ -16551,7 +14820,7 @@ organization.
     |=======================
 
     .Design
-    [options="header"]
+    [options='header']
     |=======================
     |Topic |Mentor     |Description
     |Badges for Fedora Happiness Packets|Anna |Work with the Design team to come up with a badge for Fedora Happiness Packets
@@ -16561,7 +14830,7 @@ organization.
     |=======================
 
     .Documentation
-    [options="header"]
+    [options='header']
     |=======================
     |Topic|Mentor      |Description
     |Update Website Content  |Anna   |Update content in FAQ, Start page and other page of Happiness Packets
@@ -16576,13 +14845,13 @@ organization.
     |=======================
 
     .Outreach
-    [options="header"]
+    [options='header']
     |=======================
     |Topic|Mentors   |Description
     |Host a Fedora Classroom on any topic   |Sumantro    |
     |Host a Fedora Classroom and talk about ansible  |Sumantro  |
     |Host an event in your region,learn about advocate and ambassdors|Sumantro    |
-    |Lean about Fedora D&I    |Kanika/Amita/Someone-from-D&I|
+    |Lean about Fedora D\&amp;I    |Kanika/Amita/Someone-from-D\&amp;I|
     |Host a Release Party|Sumantro|
     |Host a FAD|Sumantro|
     |=======================
@@ -16590,7 +14859,7 @@ organization.
 
 
     .QA
-    [options="header"]
+    [options='header']
     |=======================
     |Topic|  Mentor    |Description
     |Test Fedora Kernel   |Sumantro   |
@@ -16602,8 +14871,10 @@ organization.
     |Test Virtualization on Fedora|Sumantro|
     |=======================
 
-    * Google Season of Docs
-    ** 2019
+
+
+    \&#42; Google Season of Docs
+    \&#42;\&#42; 2019
     = Google Season of Docs 2019
 
     ////
@@ -16657,9 +14928,9 @@ organization.
 
     If you are new to the Fedora Project, the following material will help you to get started:
 
-    * link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
-    * link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
-    * link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
+    \&#42; link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
+    \&#42; link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
+    \&#42; link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
 
     [[timeline]]
     == Timeline
@@ -16669,11 +14940,11 @@ organization.
     [[communication]]
     == Communication
 
-    * *Mailing List (GSoD-Related):* link:https://lists.fedoraproject.org/admin/lists/mentored-projects@lists.fedoraproject.org/[mentored-projects@lists.fedoraproject.org]
-    * *Mailing List (Technical):* link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
-    * *IRC:* link:https://webchat.freenode.net/?channels=#fedora-summer-coding[#fedora-summer-coding] or link:https://webchat.freenode.net/?channels=#fedora-devel[#fedora-devel] on Freenode
+    \&#42; \&#42;Mailing List (GSoD-Related):\&#42; link:https://lists.fedoraproject.org/admin/lists/mentored-projects@lists.fedoraproject.org/[mentored-projects@lists.fedoraproject.org]
+    \&#42; \&#42;Mailing List (Technical):\&#42; link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
+    \&#42; \&#42;IRC:\&#42; link:https://webchat.freenode.net/?channels=\&#35;fedora-summer-coding[\&#35;fedora-summer-coding] or link:https://webchat.freenode.net/?channels=\&#35;fedora-devel[\&#35;fedora-devel] on Freenode
     Note: We deliberately share this IRC channel with other similar projects.
-    * *Mailing List (GSoD-Administrators):* link:https://lists.fedoraproject.org/admin/lists/mentored-projects-admin@lists.fedoraproject.org/[mentored-projects-admin@lists.fedoraproject.org]
+    \&#42; \&#42;Mailing List (GSoD-Administrators):\&#42; link:https://lists.fedoraproject.org/admin/lists/mentored-projects-admin@lists.fedoraproject.org/[mentored-projects-admin@lists.fedoraproject.org]
 
     [[administration]]
     == Administration
@@ -16682,6 +14953,8 @@ organization.
 
     1. link:https://fedoraproject.org/wiki/User:Bex[Brian (bex) Exelbierd] (Primary)
     2. link:https://fedoraproject.org/wiki/User:Sumantrom[Sumantro Mukherjee] (Secondary)
+
+
     = Google Season of Docs Ideas
 
     ////
@@ -16693,8 +14966,8 @@ organization.
     If you are looking forward to participating in xref:gsod/2019/index.adoc[Google Season of Docs with Fedora], please feel free to browse this idea list.
     There may be additional ideas added during the application period.
 
-    **Now please go read the xref:gsod/2019/index.adoc#what-can-i-do-today[What Can I do Today] section of the main page.
-    This has the answers to your questions and tells you how to apply**
+    \&#42;\&#42;Now please go read the xref:gsod/2019/index.adoc\&#35;what-can-i-do-today[What Can I do Today] section of the main page.
+    This has the answers to your questions and tells you how to apply\&#42;\&#42;
 
     Do not hesitate to contact the mentors or org admins listed on this page for any questions or clarification.
 
@@ -16703,33 +14976,35 @@ organization.
     The following contributors are available to provide general help and
     support for the GSoD program.
 
-    * link:https://fedoraproject.org/wiki/user/Pbokoc[Petr Bokoč]: Professional Technical Writer with Red Hat focused on Fedora and other community documentation.
-    * Shaun McCance: Upstream Documentation focused Community Human with extensive experience in Gnome and other communities.
-    * link:https://fedoraproject.org/wiki/User:Bex[Brian (bex) Exelbierd]: The Fedora Community Action and Impact Coordinator who has worked as a technical writer and has experience with our documentation build system, development, and Linux.  He is also a co-administrator for this program.
-    * link:https://fedoraproject.org/wiki/User:Sumantrom[Sumantro Mukherjee]: Co-administrator for this program with extensive experience in new contributor onboarding, development, and Linux.
+    \&#42; link:https://fedoraproject.org/wiki/user/Pbokoc[Petr Bokoč]: Professional Technical Writer with Red Hat focused on Fedora and other community documentation.
+    \&#42; Shaun McCance: Upstream Documentation focused Community Human with extensive experience in Gnome and other communities.
+    \&#42; link:https://fedoraproject.org/wiki/User:Bex[Brian (bex) Exelbierd]: The Fedora Community Action and Impact Coordinator who has worked as a technical writer and has experience with our documentation build system, development, and Linux.  He is also a co-administrator for this program.
+    \&#42; link:https://fedoraproject.org/wiki/User:Sumantrom[Sumantro Mukherjee]: Co-administrator for this program with extensive experience in new contributor onboarding, development, and Linux.
 
     == Idea list
     The list is subjected to changes as the program proceeds.
 
-    * Refactor the Fedora Installation Guide to provide an improved user experience or a more accessible information architecture.
+    \&#42; Refactor the Fedora Installation Guide to provide an improved user experience or a more accessible information architecture.
     This document could be split by Edition (Workstation, Server, etc.) to focus on the needs of that target audience.
     Text should be shared where possible to make ongoing maintenance easier.
 
-    * Update and republish our old Network Guide (and other guides) that haven’t been updated for the latest releases.
+    \&#42; Update and republish our old Network Guide (and other guides) that haven’t been updated for the latest releases.
     These guides are currently unpublished and need some love.
 
-    * Review, update and add new Quick Docs documentation at https://docs.fedoraproject.org/en-US/quick-docs/.
+    \&#42; Review, update and add new Quick Docs documentation at https://docs.fedoraproject.org/en-US/quick-docs/.
 
-    * Consolidate and update the various Documentation Contributor Guides to reflect our latest infrastructure for publishing and submission.
-    ** https://docs.fedoraproject.org/en-US/fedora-docs/contributing/
-    ** https://pagure.io/documentation-guide/tree/master
-    ** https://pagure.io/fedora-docs/documentation-guide/tree/master
-    ** https://pagure.io/fedora-docs/documentation-contributors-guide/tree/master
+    \&#42; Consolidate and update the various Documentation Contributor Guides to reflect our latest infrastructure for publishing and submission.
+    \&#42;\&#42; https://docs.fedoraproject.org/en-US/fedora-docs/contributing/
+    \&#42;\&#42; https://pagure.io/documentation-guide/tree/master
+    \&#42;\&#42; https://pagure.io/fedora-docs/documentation-guide/tree/master
+    \&#42;\&#42; https://pagure.io/fedora-docs/documentation-contributors-guide/tree/master
 
-    * Update and enhance current contributor documentation, including developing ASCIIDoc markup guidelines and providing a set of ASCIIDoc snippets for common text editors (Atom, Vim, Emacs, Gedit).
+    \&#42; Update and enhance current contributor documentation, including developing ASCIIDoc markup guidelines and providing a set of ASCIIDoc snippets for common text editors (Atom, Vim, Emacs, Gedit).
 
-    * Create a documentation set aimed at users completely new to Linux and Fedora in particular, focusing on describing alternatives to software commonly used on other operating systems (such as web browsers, productivity suites, video/music players, image/video editing software…), and concepts such as package management and updates.
-    ** 2020
+    \&#42; Create a documentation set aimed at users completely new to Linux and Fedora in particular, focusing on describing alternatives to software commonly used on other operating systems (such as web browsers, productivity suites, video/music players, image/video editing software…), and concepts such as package management and updates.
+
+
+    \&#42;\&#42; 2020
     = Google Season of Docs 2020
 
 
@@ -16754,7 +15029,7 @@ organization.
     Fedora is still in the process of applying to be a mentoring organization.
     Today there is nothing we can do except wait until Google makes a decision.
 
-    Today you should read through the xref:gsod/2020/ideas.adoc#_ideas[ideas list] and see what interests you.
+    Today you should read through the xref:gsod/2020/ideas.adoc\&#35;_ideas[ideas list] and see what interests you.
     You can also start a conversation with our mentors about your own idea.
 
     [[writer-information]]
@@ -16780,9 +15055,9 @@ organization.
 
     If you are new to the Fedora Project, the following material will help you to get started:
 
-    * link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
-    * link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
-    * link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
+    \&#42; link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
+    \&#42; link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
+    \&#42; link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
 
     [[timeline]]
     == Timeline
@@ -16792,12 +15067,12 @@ organization.
     [[communication]]
     == Communication
 
-    * *Mailing List (GSoD-Related):* link:https://lists.fedoraproject.org/admin/lists/mentored-projects@lists.fedoraproject.org/[mentored-projects@lists.fedoraproject.org]
-    * *Mailing List (Technical):* link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
-    * *Mailing List (Documentation):* link:https://lists.fedoraproject.org/admin/lists/docs.lists.fedoraproject.org/[docs@lists.fedoraproject.org]
-    * *IRC:* link:https://webchat.freenode.net/?channels=#fedora-summer-coding[#fedora-summer-coding] or link:https://webchat.freenode.net/?channels=#fedora-devel[#fedora-devel] on Freenode
+    \&#42; \&#42;Mailing List (GSoD-Related):\&#42; link:https://lists.fedoraproject.org/admin/lists/mentored-projects@lists.fedoraproject.org/[mentored-projects@lists.fedoraproject.org]
+    \&#42; \&#42;Mailing List (Technical):\&#42; link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
+    \&#42; \&#42;Mailing List (Documentation):\&#42; link:https://lists.fedoraproject.org/admin/lists/docs.lists.fedoraproject.org/[docs@lists.fedoraproject.org]
+    \&#42; \&#42;IRC:\&#42; link:https://webchat.freenode.net/?channels=\&#35;fedora-summer-coding[\&#35;fedora-summer-coding] or link:https://webchat.freenode.net/?channels=\&#35;fedora-devel[\&#35;fedora-devel] on Freenode
     Note: We deliberately share this IRC channel with other similar projects.
-    * *Mailing List (GSoD-Administrators):* link:https://lists.fedoraproject.org/admin/lists/mentored-projects-admin@lists.fedoraproject.org/[mentored-projects-admin@lists.fedoraproject.org]
+    \&#42; \&#42;Mailing List (GSoD-Administrators):\&#42; link:https://lists.fedoraproject.org/admin/lists/mentored-projects-admin@lists.fedoraproject.org/[mentored-projects-admin@lists.fedoraproject.org]
 
     [[administration]]
     == Administration
@@ -16806,6 +15081,8 @@ organization.
 
     1. link:https://fedoraproject.org/wiki/User:[Sumantro Mukherjee] (Primary)
     2. link:https://fedoraproject.org/wiki/User:riecatnor[Marie Nordin] (Secondary)
+
+
     = Google Season of Docs Ideas
 
 
@@ -16816,8 +15093,8 @@ organization.
     If you are looking forward to participating in xref:gsod/2020/index.adoc[Google Season of Docs with Fedora], please feel free to browse this idea list.
     There may be additional ideas added during the application period.
 
-    **Now please go read the xref:gsod/2020/index.adoc#what-can-i-do-today[What Can I do Today] section of the main page.
-    This has the answers to your questions and tells you how to apply**
+    \&#42;\&#42;Now please go read the xref:gsod/2020/index.adoc\&#35;what-can-i-do-today[What Can I do Today] section of the main page.
+    This has the answers to your questions and tells you how to apply\&#42;\&#42;
 
     Do not hesitate to contact the mentors or org admins listed on this page for any questions or clarification.
 
@@ -16826,37 +15103,37 @@ organization.
     The following people are available to provide general help and
     support for the GSoD program.
 
-    * link:https://fedoraproject.org/wiki/user/Pbokoc[Petr Bokoč]: Technical Writer with Red Hat, focused on Fedora and other community documentation.
+    \&#42; link:https://fedoraproject.org/wiki/user/Pbokoc[Petr Bokoč]: Technical Writer with Red Hat, focused on Fedora and other community documentation.
     - Email: pbokoc@redhat.com
-    - IRC nick: pbokoc on freenode (#fedora-docs)
+    - IRC nick: pbokoc on freenode (\&#35;fedora-docs)
     - Mailing list: https://lists.fedoraproject.org/archives/list/docs@lists.fedoraproject.org/
-    * link:https://twitter.com/shaunm[Shaun McCance]: Upstream Documentation focused Community Human with extensive experience in Gnome and other communities. He is general mentor for the Fedora GSoD and will be heping folks with onboarding and getting started with Technical Writing.
+    \&#42; link:https://twitter.com/shaunm[Shaun McCance]: Upstream Documentation focused Community Human with extensive experience in Gnome and other communities. He is general mentor for the Fedora GSoD and will be heping folks with onboarding and getting started with Technical Writing.
     - Email: shaunm@redhat.com
-    * link:https://fedoraproject.org/wiki/User:riecatnor[Marie Nordin]: Marie Nordin is the Fedora Project's Community Action and Impact Coordinator(FCAIC), stepping into the role in fall of 2019. She is a long term contributor to Fedora, beginning in 2013 with an Outreachy internship for Fedora Badges design. Marie is a member of the Fedora Design team and the lead design maintainer of Fedora Badges. Over the years she has created 100's of designs for Fedora and mentored many new design contributors.She is the Co-admin for the GSoD this year.
+    \&#42; link:https://fedoraproject.org/wiki/User:riecatnor[Marie Nordin]: Marie Nordin is the Fedora Project's Community Action and Impact Coordinator(FCAIC), stepping into the role in fall of 2019. She is a long term contributor to Fedora, beginning in 2013 with an Outreachy internship for Fedora Badges design. Marie is a member of the Fedora Design team and the lead design maintainer of Fedora Badges. Over the years she has created 100's of designs for Fedora and mentored many new design contributors.She is the Co-admin for the GSoD this year.
     - Email: mnordin@redhat.com
     - IRC: riecatnor on freenode
-    * link:https://fedoraproject.org/wiki/User:Sumantrom[Sumantro Mukherjee]: Administrator for this program with extensive experience in new contributor onboarding, development, and Linux. Admin for GCI and GSoC for Fedora Project for last couple of years and open source contributor for 6 odd years. Loves to onbaording new contributors to Open Source and mentor.
+    \&#42; link:https://fedoraproject.org/wiki/User:Sumantrom[Sumantro Mukherjee]: Administrator for this program with extensive experience in new contributor onboarding, development, and Linux. Admin for GCI and GSoC for Fedora Project for last couple of years and open source contributor for 6 odd years. Loves to onbaording new contributors to Open Source and mentor.
     - Email: sumantro@redhat.com
-    - IRC: sumantrom on freenode (#fedora-join, #fedora-qa, #fedora-summer-coding ,#fedora-docs)
-    * link:https://github.com/ffmancera[Fernando]: Fernando,is a Software Engineer at Red Hat working mainly in the nmstate project developing new features and fixing bugs. He has also done some work in Linux kernel and Tor project on his spare time.
+    - IRC: sumantrom on freenode (\&#35;fedora-join, \&#35;fedora-qa, \&#35;fedora-summer-coding ,\&#35;fedora-docs)
+    \&#42; link:https://github.com/ffmancera[Fernando]: Fernando,is a Software Engineer at Red Hat working mainly in the nmstate project developing new features and fixing bugs. He has also done some work in Linux kernel and Tor project on his spare time.
     - Email: ferferna@redhat.com
-    - IRC: ffmancera on freenode (#nmstate)
+    - IRC: ffmancera on freenode (\&#35;nmstate)
     - Mailing List: https://lists.fedorahosted.org/admin/lists/nmstate-devel.lists.fedorahosted.org
-    * Antonio Cardace: Antonio Cardace,Software Engineer at Red Hat working on NetworkManager.
+    \&#42; Antonio Cardace: Antonio Cardace,Software Engineer at Red Hat working on NetworkManager.
     - Email: acardace@redhat.com
-    - IRC: acardace on freenode (#nm)
+    - IRC: acardace on freenode (\&#35;nm)
     - Mailing List : networkmanager-list@gnome.org
-    * Thomas Haller: Thomas Haller is an active member in the upstream NetworkManager community and working for Red Hat.
+    \&#42; Thomas Haller: Thomas Haller is an active member in the upstream NetworkManager community and working for Red Hat.
     - Email: thaller@redhat.com
-    * link:https://fedoraproject.org/wiki/User:Till[Till Maas] : Till is long time Fedora contributor and Red Hatter working on nmstate. He has contributed to various parts of the project and currently is a part of the Fedora Council.
+    \&#42; link:https://fedoraproject.org/wiki/User:Till[Till Maas] : Till is long time Fedora contributor and Red Hatter working on nmstate. He has contributed to various parts of the project and currently is a part of the Fedora Council.
     - Email: till@redhat.com
-    - IRC:  tyll on Freenode (#fedora-releng, #fedora-admin, #fedora-apps, #fedora-devel, #epel, #nmstate)
+    - IRC:  tyll on Freenode (\&#35;fedora-releng, \&#35;fedora-admin, \&#35;fedora-apps, \&#35;fedora-devel, \&#35;epel, \&#35;nmstate)
     - Mailing List: https://lists.fedorahosted.org/admin/lists/nmstate-devel.lists.fedorahosted.org
 
     == Projects
 
 
-    [cols="15a,85a"]
+    [cols='15a,85a']
     |===
 
     |Network Manager
@@ -16879,57 +15156,59 @@ organization.
 
     == Ideas
 
-    [cols="20%a,30%a,50%a",options="header"]
+    [cols='20%a,30%a,50%a',options='header']
     |===
     | Projects             | Mentors          | Tasks
-    | Network Manager               |* Antonio Cardace (acardace@redhat.com)
-    * Thomas Haller (thaller@redhat.com)
-    * Beniamino Galvani (bgalvani@redhat.com)  |
-    * Write new content, explaining certain aspects of how NetworkManager works. In particular, a high level overview of how NetworkManager works and `howtos`.
-    * Reorganize and restructure the content on our Github Pages and Documentation
-    ** Better link to useful resources (e.g. distributions specific NetworkManager pages, our documentation, or useful blog articles).
-    * Our manual pages are maintained along with NetworkManager’s source code.
-    ** Several of these manual pages are written in `docbook`. They are fine in principle, but could benefit from review and improvements.
-    ** New manual pages should be added. For example to describe `“nm-cloud-setup”` tool or `“NetworkManager-wait-online”`. Also, dispatcher scripts are currently described in `“man NetworkManager”`. This should get its own manual page `“NetworkManager-dispatcher”`.
-    * The `“nm-settings”` manual page is generated, mostly based on `gtk-doc` comments using self-written scripts. We currently have the manuals `“nm-settings”`, `“nm-settings-keyfile”` and `“nm-settings-ifcfg-rh”`, which cover different aspects of the properties that can be configured in a `NetworkManager` profile. In reality, there are really 4 aspects (which are related and often similar):
-    ** `dbus`: how is the setting encoded on D-Bus (man nm-settings)
-    ** `nmcli`: how is this setting represented in nmcli (partly documented in man nmcli)
-    ** `keyfile`: how is the setting persisted in keyfile format (man nm-settings-keyfile)
-    ** `Ifcfg-rh`: how is the setting persisted in ifcfg-rh format (man nm-settings-ifcfg-rh)
-    * This should be better structured by having 4 manual pages “nm-settings-dbus”, “nm-settings-nmcli”, “nm-settings-keyfile”, and “nm-settings-ifcfg-rh”. This requires changes to the tooling so that we generate more suitable manuals. It also requires adjustment of the documentation, so that it fits the aspects better.
-    * The D-Bus API reference gets generated from the introspection D-Bus description in XML. This is probably the part that requires the least amount of work, but should also be reviewed whether there can be anything improved.
-    * Improve NetworkManager’s README file in our git as this is also a good starting point for contributors.
+    | Network Manager               |\&#42; Antonio Cardace (acardace@redhat.com)
+    \&#42; Thomas Haller (thaller@redhat.com)
+    \&#42; Beniamino Galvani (bgalvani@redhat.com)  |
+    \&#42; Write new content, explaining certain aspects of how NetworkManager works. In particular, a high level overview of how NetworkManager works and \&#96;howtos\&#96;.
+    \&#42; Reorganize and restructure the content on our Github Pages and Documentation
+    \&#42;\&#42; Better link to useful resources (e.g. distributions specific NetworkManager pages, our documentation, or useful blog articles).
+    \&#42; Our manual pages are maintained along with NetworkManager’s source code.
+    \&#42;\&#42; Several of these manual pages are written in \&#96;docbook\&#96;. They are fine in principle, but could benefit from review and improvements.
+    \&#42;\&#42; New manual pages should be added. For example to describe \&#96;“nm-cloud-setup”\&#96; tool or \&#96;“NetworkManager-wait-online”\&#96;. Also, dispatcher scripts are currently described in \&#96;“man NetworkManager”\&#96;. This should get its own manual page \&#96;“NetworkManager-dispatcher”\&#96;.
+    \&#42; The \&#96;“nm-settings”\&#96; manual page is generated, mostly based on \&#96;gtk-doc\&#96; comments using self-written scripts. We currently have the manuals \&#96;“nm-settings”\&#96;, \&#96;“nm-settings-keyfile”\&#96; and \&#96;“nm-settings-ifcfg-rh”\&#96;, which cover different aspects of the properties that can be configured in a \&#96;NetworkManager\&#96; profile. In reality, there are really 4 aspects (which are related and often similar):
+    \&#42;\&#42; \&#96;dbus\&#96;: how is the setting encoded on D-Bus (man nm-settings)
+    \&#42;\&#42; \&#96;nmcli\&#96;: how is this setting represented in nmcli (partly documented in man nmcli)
+    \&#42;\&#42; \&#96;keyfile\&#96;: how is the setting persisted in keyfile format (man nm-settings-keyfile)
+    \&#42;\&#42; \&#96;Ifcfg-rh\&#96;: how is the setting persisted in ifcfg-rh format (man nm-settings-ifcfg-rh)
+    \&#42; This should be better structured by having 4 manual pages “nm-settings-dbus”, “nm-settings-nmcli”, “nm-settings-keyfile”, and “nm-settings-ifcfg-rh”. This requires changes to the tooling so that we generate more suitable manuals. It also requires adjustment of the documentation, so that it fits the aspects better.
+    \&#42; The D-Bus API reference gets generated from the introspection D-Bus description in XML. This is probably the part that requires the least amount of work, but should also be reviewed whether there can be anything improved.
+    \&#42; Improve NetworkManager’s README file in our git as this is also a good starting point for contributors.
 
-    | Nmstate | * Fernando Fernando Mancera (ferferna@redhat.com)
-    * Till Maas (till@redhat.com)| * Nmstate’s documentation currently does not contain a getting started guide. We’d like the technical writer to create a complete guide on how to start using nmstate.
-    ** Create detailed usage examples using the different features that nmstare supports
-    ** This getting started would be added to our link:https://www.nmstate.io/[official webpage] generated from this link:https://github.com/nmstate/nmstate.github.io[git repository]
-    * Nmstate’s API documentation is currently allocated in the official webpage. The current API documentation is outdated and lacking details. We’d like the technical writer to update and complete the current API documentation
+    | Nmstate | \&#42; Fernando Fernando Mancera (ferferna@redhat.com)
+    \&#42; Till Maas (till@redhat.com)| \&#42; Nmstate’s documentation currently does not contain a getting started guide. We’d like the technical writer to create a complete guide on how to start using nmstate.
+    \&#42;\&#42; Create detailed usage examples using the different features that nmstare supports
+    \&#42;\&#42; This getting started would be added to our link:https://www.nmstate.io/[official webpage] generated from this link:https://github.com/nmstate/nmstate.github.io[git repository]
+    \&#42; Nmstate’s API documentation is currently allocated in the official webpage. The current API documentation is outdated and lacking details. We’d like the technical writer to update and complete the current API documentation
     This documentation is generated from this link:https://github.com/nmstate/nmstate.github.io[git] repository
 
-    |Fedora Docs|  * Petr Bokoc (pbokoc@redhat.com)
-    * Sumantro Mukherjee (sumantro@redhat.com)|* Update and refactor the Fedora Installation Guide
+    |Fedora Docs|  \&#42; Petr Bokoc (pbokoc@redhat.com)
+    \&#42; Sumantro Mukherjee (sumantro@redhat.com)|\&#42; Update and refactor the Fedora Installation Guide
 
-    ** The current link:https://docs.fedoraproject.org/en-US/fedora/f32/install-guide/[Fedora Installation Guide], while adequate, has been converted from a different publishing toolchain a few years ago and never updated to take advantage of the new, modular toolchain, Antora, that the Fedora Documentation Project currently uses. Additionally, parts of the Installation Guide are also being used inside the graphical installer to provide built-in help, however, at present time the installer is forced to use old, pre-conversion sources.
+    \&#42;\&#42; The current link:https://docs.fedoraproject.org/en-US/fedora/f32/install-guide/[Fedora Installation Guide], while adequate, has been converted from a different publishing toolchain a few years ago and never updated to take advantage of the new, modular toolchain, Antora, that the Fedora Documentation Project currently uses. Additionally, parts of the Installation Guide are also being used inside the graphical installer to provide built-in help, however, at present time the installer is forced to use old, pre-conversion sources.
     +
     We would like to fix all issues described above. A writer working on this project would be expected to:
     +
-    ** Modularize the guide so that it functions as a set of standalone modules and leverages the advantages of Antora, instead of the current hierarchical structure. This involves restructing the source file structure and updating all internal references (xrefs).
+    \&#42;\&#42; Modularize the guide so that it functions as a set of standalone modules and leverages the advantages of Antora, instead of the current hierarchical structure. This involves restructing the source file structure and updating all internal references (xrefs).
     +
-    ** Work with the installer development team to ensure that the Installation Guide can be used as sources for the installer built-in help. People both in the Fedora Documentation Project as well as in the installer development team have prior experience with doing this, and will be able to provide help.
+    \&#42;\&#42; Work with the installer development team to ensure that the Installation Guide can be used as sources for the installer built-in help. People both in the Fedora Documentation Project as well as in the installer development team have prior experience with doing this, and will be able to provide help.
 
-    * Develop a set of documentation showcasing Fedora's features
+    \&#42; Develop a set of documentation showcasing Fedora's features
     +
-    ** Fedora Documentation is missing a set of docs aimed at people considering switching to Linux and Fedora in particular from other operating systems, notably MS Windows. We would like to create documentation that showcases Fedora's features relevant to a home user's general use cases, such as web browsing, multimedia creation and editing, video playback, etc.
+    \&#42;\&#42; Fedora Documentation is missing a set of docs aimed at people considering switching to Linux and Fedora in particular from other operating systems, notably MS Windows. We would like to create documentation that showcases Fedora's features relevant to a home user's general use cases, such as web browsing, multimedia creation and editing, video playback, etc.
     +
-    ** A writer working on creating such a doc set would be expected to work with various stakeholders in the Fedora Project such as the Mindshare Committee and project leadership, identify personas and their specific use cases, and then create documentation covering these use cases.
+    \&#42;\&#42; A writer working on creating such a doc set would be expected to work with various stakeholders in the Fedora Project such as the Mindshare Committee and project leadership, identify personas and their specific use cases, and then create documentation covering these use cases.
 
     Fedora documentation is written using the link:http://asciidoc.org/[ASCIIDoc markup language]. Sources are stored in git, and they are published using link:https://antora.org/[Antora]. Familiarity with any of these tools, as well as basic scripting, is preferred but not necessary.
 
     |===
 
-    * Outreachy
-    ** 2020
+
+
+    \&#42; Outreachy
+    \&#42;\&#42; 2020
     == Outreachy
 
     NOTE: Fedora is participating in the link:https://www.outreachy.org/[Outreachy]
@@ -16937,7 +15216,7 @@ organization.
 
     === What is Outreachy
 
-    image::outreachy_logo.png[float="right"]
+    image::outreachy_logo.png[float='right']
     Outreachy is an internship program for people from group underrepresented in free and open source software, including women internationally and underrepresented people of color in the U.S. Our goal is to increase participation in Fedora. Please see the link:https://www.outreachy.org/apply/[main page with program details] for the general information, such as timeline, background information, eligibility, requirements, and the application form.
 
 
@@ -16959,23 +15238,23 @@ organization.
 
     Working in FOSS gives you a chance to:
 
-    * Work with real-world, large codebases.
-    * Collaborate with real engineers and other professionals.
-    * Contribute to something meaningful while learning and earning.
-    * Learn tools and processes that are just like what you are going to use
+    \&#42; Work with real-world, large codebases.
+    \&#42; Collaborate with real engineers and other professionals.
+    \&#42; Contribute to something meaningful while learning and earning.
+    \&#42; Learn tools and processes that are just like what you are going to use
     if you work in technology after graduation.
-    * Make friends and contacts around the globe.
-    * Attract attention that can lead to an internship or job after
+    \&#42; Make friends and contacts around the globe.
+    \&#42; Attract attention that can lead to an internship or job after
     graduation.
-    * Create lifetime connections and associations.
+    \&#42; Create lifetime connections and associations.
 
     If you are new to the Fedora Project, the following material will help
     you to get started.
 
-    * link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
-    * link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
-    * link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
-    * link:https://fedoraproject.org/wiki/Development[Information about Development in Fedora]
+    \&#42; link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
+    \&#42; link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
+    \&#42; link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
+    \&#42; link:https://fedoraproject.org/wiki/Development[Information about Development in Fedora]
 
     === Student Responsibilities
 
@@ -16984,14 +15263,14 @@ organization.
 
     Your responsibilities include:
 
-    * Communicating early and often with your mentor.
-    * Blogging every week about what you're learning, how you're doing,
+    \&#42; Communicating early and often with your mentor.
+    \&#42; Blogging every week about what you're learning, how you're doing,
     challenges and successes. This is key way to keep the entire Fedora
     Community informed.
-    * Working with your mentor on realistic achievable milestones that
+    \&#42; Working with your mentor on realistic achievable milestones that
     provide for regular deliverables and feedback.
-    * Attending the brief student calls, as announced
-    * Being accountable for your success and your actions
+    \&#42; Attending the brief student calls, as announced
+    \&#42; Being accountable for your success and your actions
 
     === mentor-information
 
@@ -17014,7 +15293,7 @@ organization.
     a student with enough skills to respond to a use case need. Also,
     students learn more when they help design and guide the project. In
     other words, provide guidance and direction but let the student do
-    some of the "driving."
+    some of the 'driving.'
 
     3. Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -17023,22 +15302,22 @@ organization.
 
     4. Who can help you?  Try to find a second mentor for the project.
 
-    If you're interested in working with a student on a specific project you should post your idea to the https://pagure.io/mentored-projects/issues[Mentored Projects Issue Tracker].  Your issue should be tagged *Outreachy* and use the *Outreachy - Proposed Project* template.  We strongly encourage you to find a second person to help with mentoring and to solicit feedback on your proposal
+    If you're interested in working with a student on a specific project you should post your idea to the https://pagure.io/mentored-projects/issues[Mentored Projects Issue Tracker].  Your issue should be tagged \&#42;Outreachy\&#42; and use the \&#42;Outreachy - Proposed Project\&#42; template.  We strongly encourage you to find a second person to help with mentoring and to solicit feedback on your proposal
 
 
     === Can I be a Mentor Without a Project?
 
     Yes!  You can either:
 
-    * Work with a student who brings an idea to your sub-project. This
+    \&#42; Work with a student who brings an idea to your sub-project. This
     requires a different level of communication throughout the project,
     but can be the most rewarding.
 
-    * Be a general mentor.  This is a person who works with all students
+    \&#42; Be a general mentor.  This is a person who works with all students
     regardless of their project.  To become a general mentor please open
     an issue in the https://pagure.io/mentored-projects/issues[Mentored
     Projects Issue Tracker] offering your help.  Please tag the issue with
-    the *Outreachy* tag.
+    the \&#42;Outreachy\&#42; tag.
 
     === mentor-responsibilities
 
@@ -17047,29 +15326,29 @@ organization.
 
     Your responsibilities include:
 
-    * Being an interface for an identified sub-project or SIG in Fedora.
-    * Helping students communicate with the overall project and any
+    \&#42; Being an interface for an identified sub-project or SIG in Fedora.
+    \&#42; Helping students communicate with the overall project and any
     upstream.
-    * Helping the student plan realistic achievable milestones that provide
+    \&#42; Helping the student plan realistic achievable milestones that provide
     for regular deliverables and feedback.
-    * Regular communication with your student. This means you must be
+    \&#42; Regular communication with your student. This means you must be
     regularly available for the entire project. If you take a holiday you
     need to know early and help your student be ready for your brief
     absence.
-    * Attending a brief mentors call, as scheduled.
-    * Be the final, accountable person for deciding if the student is
+    \&#42; Attending a brief mentors call, as scheduled.
+    \&#42; Be the final, accountable person for deciding if the student is
     successful or not. This is responsibility akin to being a professor or
     boss.
 
 
-    * Read about mentor and their responsiblity in the
-    link:https://www.outreachy.org/mentor/#mentor[Outreachy mentor page]
+    \&#42; Read about mentor and their responsiblity in the
+    link:https://www.outreachy.org/mentor/\&#35;mentor[Outreachy mentor page]
 
     === communication
 
-    * *Mailing List (Outreachy):*
-    * *Mailing List (devel list):* link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
-    * *IRC:* link:https://webchat.freenode.net/?channels=#fedora-outreachy[#fedora-outreachy] or link:https://webchat.freenode.net/?channels=#fedora-devel[#fedora-devel] on Freenode
+    \&#42; \&#42;Mailing List (Outreachy):\&#42;
+    \&#42; \&#42;Mailing List (devel list):\&#42; link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
+    \&#42; \&#42;IRC:\&#42; link:https://webchat.freenode.net/?channels=\&#35;fedora-outreachy[\&#35;fedora-outreachy] or link:https://webchat.freenode.net/?channels=\&#35;fedora-devel[\&#35;fedora-devel] on Freenode
 
     === administration
 
@@ -17078,6 +15357,8 @@ organization.
     the Outreachy list.
 
     1. link:https://fedoraproject.org/wiki/User:riecatnor[Marie Nordin]
+
+
     == Ideas
 
     NOTE: Fedora is participating in the link:https://www.outreachy.org/[Outreachy]
@@ -17097,9 +15378,9 @@ organization.
     == Idea list
     NOTE: Ideas are subject to change as additional mentors are onboarded.
 
-    * <<Create a GraphQL API for Bodhi>>
-    * <<Fedora Badges Back-end Engineering>>
-    * <<Fedora Design Internship>>
+    \&#42; \&lt;\&lt;Create a GraphQL API for Bodhi\&gt;\&gt;
+    \&#42; \&lt;\&lt;Fedora Badges Back-end Engineering\&gt;\&gt;
+    \&#42; \&lt;\&lt;Fedora Design Internship\&gt;\&gt;
 
     === Create a GraphQL API for Bodhi
 
@@ -17108,21 +15389,21 @@ organization.
     ==== Sample plan of work for the 12 week internship.
 
     Week 1-4:
-    * Update the development environment with the python graphene library
-    * Add a new graphql service which routes to /graphql and returns a simple string "Hello World"
-    * Write tests for that service.
-    * Integrate graphene to the graphql service. The /graphql endpoints should now accept a graphql query and return the same simple string "Hello World".
-    * Update the tests
-    * Update environment and dependencies to introduce graphene-sqlalchemy.
-    * Use the graphene sqlalchemy library to generate the graphql schema for the Release class.
-    * Add a graphql query handler for the Releases.
+    \&#42; Update the development environment with the python graphene library
+    \&#42; Add a new graphql service which routes to /graphql and returns a simple string 'Hello World'
+    \&#42; Write tests for that service.
+    \&#42; Integrate graphene to the graphql service. The /graphql endpoints should now accept a graphql query and return the same simple string 'Hello World'.
+    \&#42; Update the tests
+    \&#42; Update environment and dependencies to introduce graphene-sqlalchemy.
+    \&#42; Use the graphene sqlalchemy library to generate the graphql schema for the Release class.
+    \&#42; Add a graphql query handler for the Releases.
 
     Week 5-12:
-    * Work and Desing the graphql schema. Analyse the dependencies between the different object and how this will be reflected in the graphql tree.
-    * I don't expect much coding during this week, this should be used as a foundation for the following work.
-    * Implement the graphql schema. Focusing first on the queries since this does not require any authentication.
-    * Users should be able to query for releases, updates, builds, overrides, packages, users, comments.
-    * If times allow then we can look at the implementation of the mutation (creating, updating resources). The first step to this is to have authentication and authorization in place.
+    \&#42; Work and Desing the graphql schema. Analyse the dependencies between the different object and how this will be reflected in the graphql tree.
+    \&#42; I don't expect much coding during this week, this should be used as a foundation for the following work.
+    \&#42; Implement the graphql schema. Focusing first on the queries since this does not require any authentication.
+    \&#42; Users should be able to query for releases, updates, builds, overrides, packages, users, comments.
+    \&#42; If times allow then we can look at the implementation of the mutation (creating, updating resources). The first step to this is to have authentication and authorization in place.
 
     ===  Fedora Badges Back-end Engineering
 
@@ -17133,33 +15414,33 @@ organization.
     ==== Sample plan of work for the 12 week internship.
 
     Week 1-3:
-    * Research badgr-server / create development environment
-    * Add a test badge
-    * FAS integration (see Sign-In Configuration)
-    * Locally in dev environment
-    * https://iddev.fedorainfracloud.org
+    \&#42; Research badgr-server / create development environment
+    \&#42; Add a test badge
+    \&#42; FAS integration (see Sign-In Configuration)
+    \&#42; Locally in dev environment
+    \&#42; https://iddev.fedorainfracloud.org
 
     Week 4-7:
-    * Containerizing badgr-server for Communishift (see PR #110, PR #212)
-    * python/django
-    * mysql
-    * memcached
-    * amqp broker (e.g. RabbitMQ)
-    * [research] Figuring out the best way to align local development practices with production deployment (docker-compose? minishift?)
-    * Migrate old badges data to new database (postgresql -> mysql)
+    \&#42; Containerizing badgr-server for Communishift (see PR \&#35;110, PR \&#35;212)
+    \&#42; python/django
+    \&#42; mysql
+    \&#42; memcached
+    \&#42; amqp broker (e.g. RabbitMQ)
+    \&#42; [research] Figuring out the best way to align local development practices with production deployment (docker-compose? minishift?)
+    \&#42; Migrate old badges data to new database (postgresql -\&gt; mysql)
 
     Week 7-9:
-    * Migrate old badges data to new database (postgresql -> mysql)
-    * Fedora-messaging middleware
-    * Python?
-    * Writing unit tests with Pytest
-    * Containerization / running in communityshift
-    * Deployment documentation, SOP (!!!)
-    * How to add a new badge
-    * How to upgrade the version
+    \&#42; Migrate old badges data to new database (postgresql -\&gt; mysql)
+    \&#42; Fedora-messaging middleware
+    \&#42; Python?
+    \&#42; Writing unit tests with Pytest
+    \&#42; Containerization / running in communityshift
+    \&#42; Deployment documentation, SOP (!!!)
+    \&#42; How to add a new badge
+    \&#42; How to upgrade the version
 
     Week 10-12:
-    * Fedora-messaging middleware
+    \&#42; Fedora-messaging middleware
 
     ===  Fedora Design Internship
     The Fedora Design Team is Fedora's in-house design agency. We provide artwork,
@@ -17168,23 +15449,25 @@ organization.
     ==== Sample plan of work for the 12 week internship.
 
     Week 1-4:
-    * Draft Fedora Budget Quarterly and Yearly Reports designs
-    * Incorporate feedback into budget designs and complete. Begin to solicit and gather information from teams on accomplishments made in 2019.
-    * Organize info coming in from teams. Begin drafting infographics to highlight these accomplishments. Begin to solicit artwork, designs, photography, content, for Fedora Zine.
-    * Start working on a handout for events specified by Contributor Recruitment Initiative. Refine infographics for team accomplishments, continue to solicit info/gather/organize.
+    \&#42; Draft Fedora Budget Quarterly and Yearly Reports designs
+    \&#42; Incorporate feedback into budget designs and complete. Begin to solicit and gather information from teams on accomplishments made in 2019.
+    \&#42; Organize info coming in from teams. Begin drafting infographics to highlight these accomplishments. Begin to solicit artwork, designs, photography, content, for Fedora Zine.
+    \&#42; Start working on a handout for events specified by Contributor Recruitment Initiative. Refine infographics for team accomplishments, continue to solicit info/gather/organize.
 
     Week 5-8:
-    * Incorporate feedback into handout for CRI. Complete infographics for team accomplishments.
-    * Begin drafting Fedora Zine, using a lot of the same team accomplishments that have been gathered already and assets that have been solicited.
-    * Incorporate feedback into Fedora Zine. Start working on assets for Flock 2020: game night stickers/handouts, tshirt, badges, and whatever else is left to do.
-    * Incorporate feedback into Fedora Zine. Incorporate feedback into Flock assets. Start picking up Fedora Badges tickets to get familiar with the aesthetic.
+    \&#42; Incorporate feedback into handout for CRI. Complete infographics for team accomplishments.
+    \&#42; Begin drafting Fedora Zine, using a lot of the same team accomplishments that have been gathered already and assets that have been solicited.
+    \&#42; Incorporate feedback into Fedora Zine. Start working on assets for Flock 2020: game night stickers/handouts, tshirt, badges, and whatever else is left to do.
+    \&#42; Incorporate feedback into Fedora Zine. Incorporate feedback into Flock assets. Start picking up Fedora Badges tickets to get familiar with the aesthetic.
 
     Week 9-12:
-    * Identify all the Fedora Badges that need to be reviewed/improved. Finalize Flock assets.
-    * Final push to finalize Fedora Zine. Familiarize yourself with Fedora Badges Style guide. Work on badges that have been identified as needing improvement.
-    * Identify and document things that need to be updated in the style guide, begin to incorporate them into an updated draft. Work on badge designs that need improvement/new ideas.
-    * Incorporate improvements and finalize new version of Badges style Guide. Finalize any leftover designs/projects/follow ups that need to be done.
-    ** 2021
+    \&#42; Identify all the Fedora Badges that need to be reviewed/improved. Finalize Flock assets.
+    \&#42; Final push to finalize Fedora Zine. Familiarize yourself with Fedora Badges Style guide. Work on badges that have been identified as needing improvement.
+    \&#42; Identify and document things that need to be updated in the style guide, begin to incorporate them into an updated draft. Work on badge designs that need improvement/new ideas.
+    \&#42; Incorporate improvements and finalize new version of Badges style Guide. Finalize any leftover designs/projects/follow ups that need to be done.
+
+
+    \&#42;\&#42; 2021
     == Outreachy
 
     NOTE: Fedora is participating in the link:https://www.outreachy.org/[Outreachy]
@@ -17192,7 +15475,7 @@ organization.
 
     === What is Outreachy
 
-    image::outreachy_logo.png[float="right"]
+    image::outreachy_logo.png[float='right']
     Outreachy is an internship program for people from group underrepresented in free and open source software, including women internationally and underrepresented people of color in the U.S. Our goal is to increase participation in Fedora. Please see the link:https://www.outreachy.org/apply/[main page with program details] for the general information, such as timeline, background information, eligibility, requirements, and the application form.
 
     This page contains information about Fedora's participation Outreachy. Please feel free to contact us via the mailing list below for clarifications and more information. You can also use the IRC channel.
@@ -17213,23 +15496,23 @@ organization.
 
     Working in FOSS gives you a chance to:
 
-    * Work with real-world, large codebases.
-    * Collaborate with real engineers and other professionals.
-    * Contribute to something meaningful while learning and earning.
-    * Learn tools and processes that are just like what you are going to use
+    \&#42; Work with real-world, large codebases.
+    \&#42; Collaborate with real engineers and other professionals.
+    \&#42; Contribute to something meaningful while learning and earning.
+    \&#42; Learn tools and processes that are just like what you are going to use
     if you work in technology after graduation.
-    * Make friends and contacts around the globe.
-    * Attract attention that can lead to an internship or job after
+    \&#42; Make friends and contacts around the globe.
+    \&#42; Attract attention that can lead to an internship or job after
     graduation.
-    * Create lifetime connections and associations.
+    \&#42; Create lifetime connections and associations.
 
     If you are new to the Fedora Project, the following material will help
     you to get started.
 
-    * link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
-    * link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
-    * link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
-    * link:https://fedoraproject.org/wiki/Development[Information about Development in Fedora]
+    \&#42; link:https://docs.fedoraproject.org/fedora-project/project/fedora-overview.html[Fedora Project Overview]
+    \&#42; link:https://docs.fedoraproject.org[Fedora Technical and Community Documentation]
+    \&#42; link:https://fedoraproject.org/wiki/How_to_use_IRC[How to use IRC]
+    \&#42; link:https://fedoraproject.org/wiki/Development[Information about Development in Fedora]
 
     === Student Responsibilities
 
@@ -17238,14 +15521,14 @@ organization.
 
     Your responsibilities include:
 
-    * Communicating early and often with your mentor.
-    * Blogging every week about what you're learning, how you're doing,
+    \&#42; Communicating early and often with your mentor.
+    \&#42; Blogging every week about what you're learning, how you're doing,
     challenges and successes. This is key way to keep the entire Fedora
     Community informed.
-    * Working with your mentor on realistic achievable milestones that
+    \&#42; Working with your mentor on realistic achievable milestones that
     provide for regular deliverables and feedback.
-    * Attending the brief student calls, as announced
-    * Being accountable for your success and your actions
+    \&#42; Attending the brief student calls, as announced
+    \&#42; Being accountable for your success and your actions
 
     === Mentor Information
 
@@ -17268,7 +15551,7 @@ organization.
     a student with enough skills to respond to a use case need. Also,
     students learn more when they help design and guide the project. In
     other words, provide guidance and direction but let the student do
-    some of the "driving."
+    some of the 'driving.'
 
     3. Where you can have looser ideas, you may be able to find a student
     who works as a sort-of intern who can implement a solution to a use
@@ -17277,21 +15560,21 @@ organization.
 
     4. Who can help you?  Try to find a second mentor for the project.
 
-    If you're interested in working with a student on a specific project you should post your idea to the https://pagure.io/mentored-projects/issues[Mentored Projects Issue Tracker].  Your issue should be tagged *Outreachy* and use the *Outreachy - Proposed Project* template.  We strongly encourage you to find a second person to help with mentoring and to solicit feedback on your proposal
+    If you're interested in working with a student on a specific project you should post your idea to the https://pagure.io/mentored-projects/issues[Mentored Projects Issue Tracker].  Your issue should be tagged \&#42;Outreachy\&#42; and use the \&#42;Outreachy - Proposed Project\&#42; template.  We strongly encourage you to find a second person to help with mentoring and to solicit feedback on your proposal
 
     === Can I be a Mentor Without a Project?
 
     Yes! You can either:
 
-    * Work with a student who brings an idea to your sub-project. This
+    \&#42; Work with a student who brings an idea to your sub-project. This
     requires a different level of communication throughout the project,
     but can be the most rewarding.
 
-    * Be a general mentor.  This is a person who works with all students
+    \&#42; Be a general mentor.  This is a person who works with all students
     regardless of their project.  To become a general mentor please open
     an issue in the https://pagure.io/mentored-projects/issues[Mentored
     Projects Issue Tracker] offering your help.  Please ask for tagging
-    the issue with the *Outreachy* label.
+    the issue with the \&#42;Outreachy\&#42; label.
 
     === Mentor Responsibilities
 
@@ -17300,35 +15583,35 @@ organization.
 
     Your responsibilities include:
 
-    * Being an interface for an identified sub-project or SIG in Fedora.
-    * Helping students communicate with the overall project and any
+    \&#42; Being an interface for an identified sub-project or SIG in Fedora.
+    \&#42; Helping students communicate with the overall project and any
     upstream.
-    * Helping the student plan realistic achievable milestones that provide
+    \&#42; Helping the student plan realistic achievable milestones that provide
     for regular deliverables and feedback.
-    * Regular communication with your student. This means you must be
+    \&#42; Regular communication with your student. This means you must be
     regularly available for the entire project. If you take a holiday you
     need to know early and help your student be ready for your brief
     absence.
-    * Attending a brief mentors call, as scheduled.
-    * Be the final, accountable person for deciding if the student is
+    \&#42; Attending a brief mentors call, as scheduled.
+    \&#42; Be the final, accountable person for deciding if the student is
     successful or not. This is responsibility akin to being a professor or
     boss.
 
-    * Read about mentor and their responsiblity in the
-    link:https://www.outreachy.org/mentor/#mentor[Outreachy mentor page]
+    \&#42; Read about mentor and their responsiblity in the
+    link:https://www.outreachy.org/mentor/\&#35;mentor[Outreachy mentor page]
 
     === General Mentors
 
     The general mentors for this round of Outreachy are
 
-    * link:https://fedoraproject.org/wiki/User:T0xic0der[Akashdeep Dhar] (FAS/IRC: `t0xic0der`)
-    * link:https://fedoraproject.org/wiki/User:Mobrien[Mark O' Brien] (FAS/IRC: `mobrien`)
+    \&#42; link:https://fedoraproject.org/wiki/User:T0xic0der[Akashdeep Dhar] (FAS/IRC: \&#96;t0xic0der\&#96;)
+    \&#42; link:https://fedoraproject.org/wiki/User:Mobrien[Mark O' Brien] (FAS/IRC: \&#96;mobrien\&#96;)
 
     === Communication
 
-    * *Mailing List (Outreachy):*
-    * *Mailing List (devel list):* link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
-    * *IRC:* link:https://webchat.freenode.net/?channels=#fedora-outreachy[#fedora-outreachy] or link:https://webchat.freenode.net/?channels=#fedora-devel[#fedora-devel] on Freenode
+    \&#42; \&#42;Mailing List (Outreachy):\&#42;
+    \&#42; \&#42;Mailing List (devel list):\&#42; link:https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel@lists.fedoraproject.org]
+    \&#42; \&#42;IRC:\&#42; link:https://webchat.freenode.net/?channels=\&#35;fedora-outreachy[\&#35;fedora-outreachy] or link:https://webchat.freenode.net/?channels=\&#35;fedora-devel[\&#35;fedora-devel] on Freenode
 
     === Administration
 
@@ -17337,6 +15620,8 @@ organization.
     the Outreachy list.
 
     1. link:https://fedoraproject.org/wiki/User:riecatnor[Marie Nordin]
+
+
     == Ideas
 
     NOTE: Fedora is participating in the link:https://www.outreachy.org/[Outreachy]
@@ -17356,95 +15641,95 @@ organization.
     == Idea list
     NOTE: Ideas are subject to change as additional mentors are onboarded.
 
-    * <<Develop Designs for the Fedora Community Outreach Revamp>>
-    * <<Improve Fedora QA Dashboard>>
-    * <<Improve Fedora\'s automated community metrics>>
-    * <<Support repo overrides in rpm-ostree>>
+    \&#42; \&lt;\&lt;Develop Designs for the Fedora Community Outreach Revamp\&gt;\&gt;
+    \&#42; \&lt;\&lt;Improve Fedora QA Dashboard\&gt;\&gt;
+    \&#42; \&lt;\&lt;Improve Fedora\'s automated community metrics\&gt;\&gt;
+    \&#42; \&lt;\&lt;Support repo overrides in rpm-ostree\&gt;\&gt;
 
     === Develop Designs for the Fedora Community Outreach Revamp
 
-    Back to <<Idea list>>
+    Back to \&lt;\&lt;Idea list\&gt;\&gt;
 
-    The Fedora Design Team is Fedora's in-house design agency. We provide artwork, user experience, usability, and general design services to the Fedora project. This internship will focus on the development & design of assets for the Revamp, including team logos, promotional materials, badges, and swag.
+    The Fedora Design Team is Fedora's in-house design agency. We provide artwork, user experience, usability, and general design services to the Fedora project. This internship will focus on the development \&amp; design of assets for the Revamp, including team logos, promotional materials, badges, and swag.
 
     ==== Sample plan of work for the 12 week internship.
 
-    . **Week 1**:
-    * Design and get approval on sub-team logos. Learn about the Community Outreach Revamp. Meet with the Revamp co-leads.
-    . **Week 2**:
-    * Start on layout for Role Handbook pages. Blog post to community blog.
-    . **Week 3**:
-    * Work on layout for role handbooks and begin badges.
-    . **Week 4**:
-    * Complete layout for role handbooks, and start making versions for each role. Continue work on badges.
-    . **Week 5**:
-    * Revisions on role handbook pages. Continue work on badges. Meet with the Revamp co-leads.
-    . **Week 6**:
-    * Finish up badges & role handbook pages. Blog post to community blog.
-    . **Week 7**:
-    * Begin swag designs & drafting marketing plan.
-    . **Week 8**:
-    * Revise swag designs. Incorporate feedback into marketing plan, and begin sketching ideas.
-    . **Week 9**:
-    * Finalize swag designs. Begin to create assets for marketing plan such as social media posts, blog posts, HDYF? videos. Meet with the Revamp co-leads.
-    . **Week 10**:
-    * Work on assets for marketing plan, and start to publish as produced. Create some one of designs for CommOps docs page.
-    . **Week 11**:
-    * Work on marketing plan assets & revise designs for CommOps page.
-    . **Week 12**:
-    * Finalize and upload all work. Continue publishing marketing materials. Blog post to community blog.
+    . \&#42;\&#42;Week 1\&#42;\&#42;:
+    \&#42; Design and get approval on sub-team logos. Learn about the Community Outreach Revamp. Meet with the Revamp co-leads.
+    . \&#42;\&#42;Week 2\&#42;\&#42;:
+    \&#42; Start on layout for Role Handbook pages. Blog post to community blog.
+    . \&#42;\&#42;Week 3\&#42;\&#42;:
+    \&#42; Work on layout for role handbooks and begin badges.
+    . \&#42;\&#42;Week 4\&#42;\&#42;:
+    \&#42; Complete layout for role handbooks, and start making versions for each role. Continue work on badges.
+    . \&#42;\&#42;Week 5\&#42;\&#42;:
+    \&#42; Revisions on role handbook pages. Continue work on badges. Meet with the Revamp co-leads.
+    . \&#42;\&#42;Week 6\&#42;\&#42;:
+    \&#42; Finish up badges \&amp; role handbook pages. Blog post to community blog.
+    . \&#42;\&#42;Week 7\&#42;\&#42;:
+    \&#42; Begin swag designs \&amp; drafting marketing plan.
+    . \&#42;\&#42;Week 8\&#42;\&#42;:
+    \&#42; Revise swag designs. Incorporate feedback into marketing plan, and begin sketching ideas.
+    . \&#42;\&#42;Week 9\&#42;\&#42;:
+    \&#42; Finalize swag designs. Begin to create assets for marketing plan such as social media posts, blog posts, HDYF? videos. Meet with the Revamp co-leads.
+    . \&#42;\&#42;Week 10\&#42;\&#42;:
+    \&#42; Work on assets for marketing plan, and start to publish as produced. Create some one of designs for CommOps docs page.
+    . \&#42;\&#42;Week 11\&#42;\&#42;:
+    \&#42; Work on marketing plan assets \&amp; revise designs for CommOps page.
+    . \&#42;\&#42;Week 12\&#42;\&#42;:
+    \&#42; Finalize and upload all work. Continue publishing marketing materials. Blog post to community blog.
 
     === Improve Fedora QA Dashboard
 
-    Back to <<Idea list>>
+    Back to \&lt;\&lt;Idea list\&gt;\&gt;
 
     Fedora QA dashboard is an idea of a web application that would be the landing page for QA related activities. The current state, as we see it, is that we have tons of helpful documents, tools, and processes, but these are scattered, or sometimes hard to reach/understand without some preliminary knowledge. We identified this as the major obstacle in bootstrapping new members of the community. Goal for this project is making the learning curve less steep. We have basic PoC, that could serve as a base to build from, or an inspiration for a rework.
 
     ==== Sample plan of work for the 12 week internship.
 
-    . **Week 1**
-    * Create final design from provided mock up ideas
-    * Getting feedback from Fedora QA team
-    * Design changes based on feedback
+    . \&#42;\&#42;Week 1\&#42;\&#42;
+    \&#42; Create final design from provided mock up ideas
+    \&#42; Getting feedback from Fedora QA team
+    \&#42; Design changes based on feedback
 
-    . **Week 2**
-    * Project structure and components based on final design
-    * Coding (crating a component one at a time, e.g.
-    * Fedora schedule, blocker summary, contributing guide, ...)
+    . \&#42;\&#42;Week 2\&#42;\&#42;
+    \&#42; Project structure and components based on final design
+    \&#42; Coding (crating a component one at a time, e.g.
+    \&#42; Fedora schedule, blocker summary, contributing guide, \&#8230;)
 
-    . **Week 3**
-    * Coding
+    . \&#42;\&#42;Week 3\&#42;\&#42;
+    \&#42; Coding
 
-    . **Week 4**
-    * Coding (components are "done", they work individually, but don't necessarily form an app)
+    . \&#42;\&#42;Week 4\&#42;\&#42;
+    \&#42; Coding (components are 'done', they work individually, but don't necessarily form an app)
 
-    . **Week 5**
-    * Coding (putting components together to form an app)
-    * Fedora community blog post
-    * Getting feedback from "general public"
+    . \&#42;\&#42;Week 5\&#42;\&#42;
+    \&#42; Coding (putting components together to form an app)
+    \&#42; Fedora community blog post
+    \&#42; Getting feedback from 'general public'
 
-    . **Week 6**
-    * Changes based on feedback
-    * Coding
+    . \&#42;\&#42;Week 6\&#42;\&#42;
+    \&#42; Changes based on feedback
+    \&#42; Coding
 
-    . **Week 7**
-    * Coding (from now on, the app generally represents final design from week 1)
-    * Getting feedback from Fedora QA team
+    . \&#42;\&#42;Week 7\&#42;\&#42;
+    \&#42; Coding (from now on, the app generally represents final design from week 1)
+    \&#42; Getting feedback from Fedora QA team
 
-    . **Week 8**
-    * Changes based on feedback
-    * Coding
+    . \&#42;\&#42;Week 8\&#42;\&#42;
+    \&#42; Changes based on feedback
+    \&#42; Coding
 
-    . **Week 9**
-    * Coding and finalizing
+    . \&#42;\&#42;Week 9\&#42;\&#42;
+    \&#42; Coding and finalizing
 
-    . **Week 10**
-    * Final touches and deployment
-    * Fedora community blog post
+    . \&#42;\&#42;Week 10\&#42;\&#42;
+    \&#42; Final touches and deployment
+    \&#42; Fedora community blog post
 
     === Improve Fedora\'s automated community metrics
 
-    Back to <<Idea list>>
+    Back to \&lt;\&lt;Idea list\&gt;\&gt;
 
     Many activities in Fedora generate activity on the Fedora Message bus. (More about this here: https://communityblog.fedoraproject.org/moving-from-fedmsg-to-fedora-messaging/). These messages can be used to measure and graph community engagement.
 
@@ -17465,126 +15750,690 @@ organization.
 
     ==== Sample plan of work for the 12 week internship.
 
-    . **Week 1**:
-    * Familiarity with concepts
-    . **Week 2**:
-    * Local instance of existing code
-    . **Week 3**:
-    * Adding new data sources
-    . **Week 4**:
-    * Code cleanup and refactoring
-    . **Week 5-6**:
-    * Porting to theoretical new datagrepper replacement
-    . **Week 7**:
-    * More code cleanup and refactoring
-    . **Week 8**:
-    * Deploy to somewhere in Fedora infrastructure for manual testing
-    . **Week 9**:
-    * Automate daily or weekly updates
-    . **Week 10-11**:
-    * Explore new things to graph and present
-    . **Week 12**:
-    * Make the graphs and reports pretty
+    . \&#42;\&#42;Week 1\&#42;\&#42;:
+    \&#42; Familiarity with concepts
+    . \&#42;\&#42;Week 2\&#42;\&#42;:
+    \&#42; Local instance of existing code
+    . \&#42;\&#42;Week 3\&#42;\&#42;:
+    \&#42; Adding new data sources
+    . \&#42;\&#42;Week 4\&#42;\&#42;:
+    \&#42; Code cleanup and refactoring
+    . \&#42;\&#42;Week 5-6\&#42;\&#42;:
+    \&#42; Porting to theoretical new datagrepper replacement
+    . \&#42;\&#42;Week 7\&#42;\&#42;:
+    \&#42; More code cleanup and refactoring
+    . \&#42;\&#42;Week 8\&#42;\&#42;:
+    \&#42; Deploy to somewhere in Fedora infrastructure for manual testing
+    . \&#42;\&#42;Week 9\&#42;\&#42;:
+    \&#42; Automate daily or weekly updates
+    . \&#42;\&#42;Week 10-11\&#42;\&#42;:
+    \&#42; Explore new things to graph and present
+    . \&#42;\&#42;Week 12\&#42;\&#42;:
+    \&#42; Make the graphs and reports pretty
 
     === Support repo overrides in rpm-ostree
 
-    Back to <<Idea list>>
+    Back to \&lt;\&lt;Idea list\&gt;\&gt;
 
     Today, rpm-ostree support overrides from locally downloaded RPM files. For example:
 
-    ```
+    \&#96;\&#96;\&#96;
     rpm-ostree override replace kernel.rpm
-    ```
+    \&#96;\&#96;\&#96;
 
     This works great, but is limiting. There are many situations where one would rather have an RPM override from yum repos, the same way one would usually simply yum install on a traditional system.
 
     We want to teach rpm-ostree this ability. The command-line UX would be similar, for example:
 
-    ```
+    \&#96;\&#96;\&#96;
     rpm-ostree override replace kernel
-    ```
+    \&#96;\&#96;\&#96;
 
     Except that rpm-ostree would look for the specified package(s) in enabled yum repos.
 
     ==== Sample plan of work for the 12 week internship.
 
-    . **Week 1-2**:
-    * Ramp up and set up developer environment.
-    . **Week 3-4**:
-    * Finalize approach of implementation.
-    . **Week 5-9**:
-    * Work on implementation, iterate based on feedback from mentors.
-    . **Week 10-12**:
-    * Stretch goals based on interest. Some ideas include better overrides integration with COPR, Bodhi, and/or Koji, and writing a fedmag blog post about the new feature.Week 1-2: Ramp up and set up developer environment.
+    . \&#42;\&#42;Week 1-2\&#42;\&#42;:
+    \&#42; Ramp up and set up developer environment.
+    . \&#42;\&#42;Week 3-4\&#42;\&#42;:
+    \&#42; Finalize approach of implementation.
+    . \&#42;\&#42;Week 5-9\&#42;\&#42;:
+    \&#42; Work on implementation, iterate based on feedback from mentors.
+    . \&#42;\&#42;Week 10-12\&#42;\&#42;:
+    \&#42; Stretch goals based on interest. Some ideas include better overrides integration with COPR, Bodhi, and/or Koji, and writing a fedmag blog post about the new feature.Week 1-2: Ramp up and set up developer environment.
+
+
     == Outreachy
 
     NOTE: Fedora regularly participates as one of the mentoring organizations for link:https://www.outreachy.org/[Outreachy].
 
     === What is Outreachy
 
-    image::outreachy_logo.png[float="right"]
+    image::outreachy_logo.png[float='right']
     Outreachy is an internship program for people from group underrepresented in free and open source software, including women internationally and underrepresented people of color in the U.S. Our goal is to increase participation in Fedora. Please see the link:https://www.outreachy.org/apply/[main page with program details] for the general information, such as timeline, background information, eligibility, requirements, and the application form.
 
     This page contains answers to the frequently asked questions regarding participating as an Outreachy candidate with Fedora. Please feel free to reach out to us via the mailing list below if you have concerns/questions which are not listed here and for more clarifications. You can also communicate via the IRC channel.
 
     === Frequently Asked Questions
 
-    1. **Where do I start?** +
+    1. \&#42;\&#42;Where do I start?\&#42;\&#42; +
     Read the project description on the link:https://www.outreachy.org/[Outreachy website] thoroughly. Make a Fedora Account, join the Outreachy mailing list, Fedora's Outreachy communication channels, and project communication channels. You can introduce yourself on the mailing list or in channel.
 
-    2. **How do I make a Fedora Account?** +
-    Detailed instructions on creating a Fedora Account found link:https://docs.fedoraproject.org/en-US/fedora-accounts/user/#newaccounts[here].
+    2. \&#42;\&#42;How do I make a Fedora Account?\&#42;\&#42; +
+    Detailed instructions on creating a Fedora Account found link:https://docs.fedoraproject.org/en-US/fedora-accounts/user/\&#35;newaccounts[here].
 
-    3. **How do I get in touch with the mentor for the project?** +
+    3. \&#42;\&#42;How do I get in touch with the mentor for the project?\&#42;\&#42; +
     Check the project description on the link:https://www.outreachy.org/[Outreachy website] to see details on communication mentors and contact information.
 
-    4. **Where should I reach out to should I have questions?** +
+    4. \&#42;\&#42;Where should I reach out to should I have questions?\&#42;\&#42; +
     The best places to ask questions you may have are the public project channels and Fedora's link:https://lists.fedoraproject.org/admin/lists/outreachy.lists.fedoraproject.org/[Outreachy mailing list]. Often you will get an answer faster if you ask on the public communication channels, rather than waiting for a mentor to answer your email. Applicants often have similar questions, so asking them in a public place helps everyone out. For public project channel information check project the project description on the link:https://www.outreachy.org/[Outreachy website]. If you have questions after communicating in these channels, then reach out to the mentor through direct message or email.
     If you need assistance and have exhausted all other avenues of communication, you can reach out to the Fedora Project Outreachy Coordinators. The coordinators are currently link:mailto:mnordin@redhat.com[Marie Nordin] and link:mailto:siddharthvipul1@fedoraproject.org[Vipul Siddharth].
 
-    5. **Where are the announcements related to Outreachy made?** +
+    5. \&#42;\&#42;Where are the announcements related to Outreachy made?\&#42;\&#42; +
     Outreachy related announcements will be published on Fedora's Outreachy mailing list.
 
-    6. **What is the review procedure for the project progress?** +
+    6. \&#42;\&#42;What is the review procedure for the project progress?\&#42;\&#42; +
     The review procedure will differ according to the project and mentor.
 
-    7. **What is Pagure?** +
+    7. \&#42;\&#42;What is Pagure?\&#42;\&#42; +
     Pagure is our own in-house Git-centered source code management forge. It is incredibly lightweight and based on PyGit2.
 
     === FAQ specific to Fedora Design Outreachy projects
 
-    1. **How can I get the Fedora logo?** +
-    Email link:mailto:logo@fedoraproject.org[logo@fedoraproject.org] following the instructions found link:https://fedoraproject.org/wiki/Logo#Can_I_use_this_logo.3F[here] and note that you are an Outreachy applicant.
+    1. \&#42;\&#42;How can I get the Fedora logo?\&#42;\&#42; +
+    Email link:mailto:logo@fedoraproject.org[logo@fedoraproject.org] following the instructions found link:https://fedoraproject.org/wiki/Logo\&#35;Can_I_use_this_logo.3F[here] and note that you are an Outreachy applicant.
 
-    2. **What graphics are okay to use?** +
+    2. \&#42;\&#42;What graphics are okay to use?\&#42;\&#42; +
     The best options are to use graphics made by the Fedora Design Team or original graphics made by yourself.You can use artwork that is licensed Creative Commons(there are a couple variations of this license), but the specifics of the license will apply for each piece of art you use.For example, if it requires attribution, you would need to include their name in the design.
 
-    3. **What software do I need to use for the application period?** +
+    3. \&#42;\&#42;What software do I need to use for the application period?\&#42;\&#42; +
     It is okay to use whatever software you are most comfortable with during the application period.This is not how the Fedora Design Team usually works, this is a special instance so that applicants can show off their developed skillsets.
 
-    4. **What software do I need to use if selected for the internship?** +
+    4. \&#42;\&#42;What software do I need to use if selected for the internship?\&#42;\&#42; +
     You will be required to use free software for the duration of the internship, such as Inkscape and GIMP.Your mentor will help guide you in learning any new pieces of software.
 
-    5. **Can I work on the same tickets as other people/applicants?** +
+    5. \&#42;\&#42;Can I work on the same tickets as other people/applicants?\&#42;\&#42; +
     Yes, absolutely.Collaboration with the Design Team and other applicants is encouraged.
 
-    6. **How can I find Fedora design materials to work with?** +
-    There are a couple places you can find Fedora design materials.The link:https://pagure.io/design/issues[fedora-design] repo on Pagure contains a lot of historical work.There is a dropdown on the left hand side that says "XX Open Issues", click that dropdown and set to "XX Open & Closed Issues" to see a complete list of tickets.You can then search under the "Filter" dropdown.The same applies to the https://pagure.io/fedora-badges/issues[fedora-badges] repo on Pagure.
+    6. \&#42;\&#42;How can I find Fedora design materials to work with?\&#42;\&#42; +
+    There are a couple places you can find Fedora design materials.The link:https://pagure.io/design/issues[fedora-design] repo on Pagure contains a lot of historical work.There is a dropdown on the left hand side that says 'XX Open Issues', click that dropdown and set to 'XX Open \&amp; Closed Issues' to see a complete list of tickets.You can then search under the 'Filter' dropdown.The same applies to the https://pagure.io/fedora-badges/issues[fedora-badges] repo on Pagure.
 
-    7. **How many tickets should I work on at the same time?**
+    7. \&#42;\&#42;How many tickets should I work on at the same time?\&#42;\&#42;
     - Fedora Design Internship: Please limit yourself to 2 design queue tickets. You can work on a third if it is a Fedora Badges ticket. Although we appreciate the enthusiasm of our applicants, we also only have a certain capacity to provide reviews. This helps to ensure that applicants are receiving reviews equally and at regular intervals.
     - Fedora Badges Internship: Please limit yourself to 3 badge queue tickets. Once you complete a ticket, you are welcome to take up another.
 
-    8. **Some of the source file links on the Design & Pages repo gives me an error. What should I do?**
+    8. \&#42;\&#42;Some of the source file links on the Design \&amp; Pages repo gives me an error. What should I do?\&#42;\&#42;
     This is a known error with Pagure caused by a migration from Trac to Pagure. But, no worries! There is a fix. Files that have that issue will look like this, with two identical comments.
 
-    image::outreachy_FAQ_1.png[float="right"]
+    image::outreachy_FAQ_1.png[float='right']
     One of the links for the image files will give you the following error page. This link is no longer good.
 
-    image::outreachy_FAQ_2.png[float="right"]
+    image::outreachy_FAQ_2.png[float='right']
     You will see a second comment with another link with the same file name, and it should give you this error page. This is the one we want to work with. Simply remove “files/” from the URL and hit enter.
 
-    image::outreachy_FAQ_3.png[float="right"]
+    image::outreachy_FAQ_3.png[float='right']
     This is what the page should look like, you can right click and “Save”.
 
-    image::outreachy_FAQ_4.png[float="right"]
+    image::outreachy_FAQ_4.png[float='right']
+
+
+    \&#42; Handbooks
+    = Tools of the Trade
+    :page-authors: {author}, {author_2}, {author_3}
+    Smera Goel; Fernando Fernandez Mancera; Justin W. Flory
+    // Article content last reviewed and verified by a human on…
+    2024-07-16
+
+    The purpose of this page is to introduce you to the essential, basic tools that all Fedora interns and mentors commonly use.
+    Some of these are universal and you will absolutely encounter as a Fedora intern.
+    Other tools will be used at varying levels depending on your specific project and mentor.
+    Use this as a place to get started with setting up your Fedora toolbox.
+
+    [[fas]]
+    == Fedora Accounts System (FAS)
+
+    The Fedora Account System, or FAS for short, is the underpinning of all the digital infrastructure in Fedora.
+    Think of it like your passport to start your Fedora adventure.
+    If you have not yet created an account, do so now. Once your account is created, complete the following steps:
+
+    . \&#42;Fill your profile out completely\&#42;.
+    Name, Matrix ID, time zone, GitHub/GitLab usernames, etc.
+    If you have SSH or GPG keys, you can also add them.
+    . \&#42;Set a profile picture using https://www.libravatar.org/[Libravatar]\&#42;.
+    Log in with the https://www.libravatar.org/openid/login/[OpenID option].
+    To log in with OpenID, use the following identifier below in the Libravatar login page.
+    You will be redirected to a FAS login screen. Add and confirm your personal email once you log in.
+    .. \&#96;my-username.id.fedoraproject.org\&#96; (example: \&#96;jflory7.id.fedoraproject.org\&#96;)
+    . \&#42;Sign the Fedora Project Contributor Agreement\&#42;.
+    You can find this in the Agreements tab of the Settings menu.
+    Ask a mentor if you have questions about the agreement and what it means for your contributions.
+
+
+    [[wiki]]
+    == Fedora Wiki
+
+    The https://fedoraproject.org/wiki/Fedora_Project_Wiki[Fedora Wiki] is a common tool used for collaboration.
+    Think of it as a whiteboard space for scratch notes or for short-term documentation.
+    We often use the Fedora Wiki as a planning tool for virtual events, like the https://fedoraproject.org/wiki/Fedora_Linux_40_Release_Party_Schedule[F40 Release Party wiki page].
+
+    However, \&#42;first, you need to create your userpage\&#42;.
+    Wiki userpages are like biography pages to know more about a Fedora contributor.
+    This is a good place to be more detailed about your background, what you do in Fedora, and how people can get in touch with you.
+    See an example userpage https://fedoraproject.org/wiki/User:Jflory7[here].
+    You will need to write your userpage using https://www.mediawiki.org/wiki/Help:Formatting[MediaWiki markup].
+    Create your userpage by clicking on your username in the dropdown menu after logging in (see below).
+
+    image:ROOT:handbooks/interns-wiki-userpage.png[tmp]
+
+
+    [[gitlab]]
+    == GitLab
+
+    https://gitlab.com/[GitLab.com] is a common tool used to track tasks, update progress, and plan future work.
+    Check with your mentor if you will use GitLab.com regularly during your internship.
+    If you have not already, create a GitLab.com account.
+    Once you have a GitLab account, link your FAS account to GitLab using ✨ https://gitlab.com/groups/fedora/-/saml/sso[this magic link] ✨.
+
+    [IMPORTANT]
+    ====
+    Sign in to GitLab FIRST before linking your FAS account with the magic link.
+    If you are not logged into GitLab.com and link your FAS account, you will end up with two accounts.
+    It is not easy to merge two accounts into one later.
+    ====
+
+
+    [[chat]]
+    == Fedora Chat
+
+    https://chat.fedoraproject.org/[Fedora Chat] is our primary chat tool used in Fedora.
+    Fedora Chat is a hosted Matrix homeserver linked to FAS logins.
+    However, if you already have a Matrix account, you can use your own Matrix account without creating a Fedora-specific Matrix account.
+    It is up to you whether you want to use a Fedora-hosted Matrix account or use an account hosted somewhere else.
+    You can use a \&#96;:matrix.org\&#96; account and use features in the Element X client, which is not currently supported with Fedora-hosted Matrix accounts.
+    However, sometimes people prefer to use a Fedora-hosted Matrix account to keep work and personal activities separate.
+
+    \&#42;If you want a Fedora-hosted Matrix account\&#42;:
+    Use FAS to create an account at https://chat.fedoraproject.org[chat.fedoraproject.org].
+    Let a mentor know once you have an account so you can be invited to any rooms needed for the internship.
+
+    \&#42;If you are using another Matrix account\&#42;:
+    Join the Fedora Space at (https://matrix.to/\&#35;/\&#35;fedora-space:fedoraproject.org[\&#35;fedora-space:fedoraproject.org]) if you are not already a member.
+    Ask your mentor(s) to invite you to any internship-specific rooms, if you are not yet invited.
+
+
+    [[discussion]]
+    == Fedora Discussion
+
+    https://discussion.fedoraproject.org/[Fedora Discussion] is an online web forum powered by a tool called Discourse.
+    Create an account and https://discussion.fedoraproject.org/my/preferences/profile[fill in your profile].
+    Write a self-introduction in the https://discussion.fedoraproject.org/tags/c/project/7/mentored-projects-team[Fedora Mentored PRojects tag].
+
+
+    = Accepted Interns Handbook
+    :page-authors: {author}, {author_2}, {author_3}, {author_4}
+    Smera Goel; Fernando Fernandez Mancera; Justin W. Flory; Jona Azizaj,
+    // Article content last reviewed and verified by a human on…
+    2024-07-16
+
+    Congratulations on being accepted as an intern with Fedora!
+    You are now a part of a vibrant community and an integral part of advancing free and open source software.
+    This handbook is designed to be your guide, helping you navigate your role, responsibilities and the community at large.
+
+    In Fedora, a project doesn’t exist in isolation.
+    It is a part of a big ecosystem that thrives on the collaboration between numerous community members, who bring a diverse range of perspectives and expertise to the table.
+    Your role extends beyond the specific tasks of your project.
+    As you immerse yourself in your project, remember the bigger picture: each contribution you make enriches the Fedora ecosystem, and by extension, the wider world of open source.
+
+
+    [[started]]
+    == Getting Started
+
+    Here are some suggestions on how you can set yourself up for a successful internship:
+
+    [[hello]]
+    === Hello world!
+
+    It is always nice to introduce yourself to the Fedora community.
+    Introduce yourself as the project intern on Fedora Discussion, Fedora Chat, and the appropriate mailing lists.
+
+    Not sure how to introduce yourself?
+    Here is a good place to start:
+
+    \&#42; Name, location/time zone, any prior open source or Linux experience
+    \&#42; Something you are excited to do or support during your internship
+    \&#42; Something you are looking forward to learning more about during your internship
+    \&#42; Where to get in touch with you in Fedora's communication platforms (e.g. Discussion, Matrix, email, etc.)
+
+    [[adapting]]
+    === Adapting to Open Source Culture
+
+    Open source has a very unique culture, that is different from a more corporate structure that many interns often expect.
+    You can talk to your mentor to learn the norms and expectations of the open-source community to help you acclimatize better, including how to respectfully contribute to discussions, submit work, and respect the community guidelines.
+    Familiarizing yourself with the ways to receive and provide constructive feedback within your project team and the wider community is also an essential skill for both personal and professional growth.
+
+    [[tools]]
+    === Tools of the Trade
+
+    There are some tools that we often use in Fedora for account management, documentation, project management, and communication.
+    In a remote setup like this, we rely on these tools a lot, so it is important that you familiarize yourself with these tools.
+    You can find a xref:tools.adoc[comprehensive documentation here].
+
+    [[rhythm]]
+    === Establish a rhythm with your mentors!
+
+    Mentorship is a key ingredient for a successful internship.
+    Think of your mentor as your personal guide in the community: someone who’s been there, done that, and probably got a T-Shirt for it.
+    Here’s how to make the most of it:
+
+    \&#42; \&#42;Schedule regular check-ins\&#42;:
+    Work with your mentor to schedule regular meetings that work for everyone’s time zones.
+    \&#42; \&#42;Prepare for your meetings\&#42;:
+    Joining your mentor meetings without preparation is like going to a potluck without a dish.
+    You might get some goodies, but you will not be contributing much to the feast.
+    Come prepared with updates, questions, and topics you want advice on.
+    \&#42; \&#42;Be open and honest\&#42;:
+    Transparency with your mentor is key.
+    Struggling with a bug, feeling overwhelmed, or something isn’t working?
+    Bring it up.
+    Do not think of your mentor as your manager, but rather as your ally, there to support you in your open source journey.
+    \&#42; \&#42;Give and take feedback\&#42;:
+    Feedback is the breakfast of champions!
+    Be receptive to feedback, even if it is not always what you want to hear.
+    And do not forget to give your mentor feedback.
+    They will also appreciate knowing what works and what does not.
+    \&#42; \&#42;Celebrate wins together\&#42;:
+    Do not forget to celebrate your wins, no matter how small.
+    Your mentor is your cheerleader, ready with a virtual high-five for every victory.
+
+
+    [[making]]
+    == Making the most of your internship
+
+    Work with your mentor to set clear, achievable goals.
+    You can use frameworks like SMART - Specific, Measurable, Achievable, Relevant, and Time-bound - to help you.
+    Regularly review and adjust these goals.
+
+    [[goals]]
+    === Setting goals
+
+    Networking is an important part of career growth.
+    We encourage you to engage with the broader Fedora community through forums, mailing lists and various events.
+    You can also ask your mentor to support you and make introductions.
+
+    [[career]]
+    === Career development
+
+    Your internship will focus on a specific project(s) and tasks.
+    However, internships are also learning opportunities for you to grow and develop in your career.
+    Outside of project work, your mentor(s) plays an important role in supporting you in your development goals and skill development.
+    As you start your internship, reflect on areas that you would like to grow and develop in.
+    Are there technical skills that you would like to improve?
+    Do you want to learn more about git, a programming language, or a particular framework?
+    What about soft skills?
+    Are you confident in delivering a presentation and collaborating with a diverse group of stakeholders across multiple teams?
+    These are good questions to reflect on, and ultimately can only be answered by you!
+
+    Work your mentor as a partner in your career development goals, and make sure you communicate these development goals to your mentor, so that you can partner on them together and have a successful internship that both contributes to your specific project and also strengthens your portfolio as a working professional in the open source space.
+
+    [[reflect]]
+    === Reflect and share
+
+    Document your journey and share it through blog posts or talks, and contribute back to the community.
+    Reflecting on your experiences can provide valuable insights for future interns.
+    Here are some examples of works like this by past interns:
+
+    \&#42; https://rolandixor.pro/blog/2024/04/outreachy-internship[Outreachy Internship] by Roland Taylor (@rolandxior)
+    \&#42; https://smera.notion.site/Outreachy-The-Fedora-Project-6919e20d745f4b18850200909f190c0b[Outreachy: The Fedora Project] by Smera Goel (@smeragoel)
+
+    Outreachy encourages blogging as a way to do this, providing specific prompts to guide your posts.
+    These blog posts not only document your journey, but also connect you with the broader open source community.
+    They are also helpful for future applicants, just like you may have come across when you were an applicant.
+    For more details on the blogging schedule and prompts, you can refer to the Outreachy Internship Guide.
+
+    [[events]]
+    === Fedora Events
+
+    Ask your mentor about upcoming events and meetings.
+    Participating in these gatherings, whether online or in-person, can enhance your understanding of the project and expand your professional network as well.
+
+
+    [[beyond]]
+    == Beyond the Internship \&amp; Continuing Contributions
+
+    It is always a bittersweet experience when your internship ends, but the good thing about open source is that you can always stick around.
+    Many interns continue to contribute as community members, mentors and project leaders.
+    Talk with your mentor about how you can stay involved and continue to be a part of the community!
+
+    [[offboarding]]
+    === Off-boarding best practices
+
+    For an effective off-boarding process:
+
+    \&#42; \&#42;Document Everything\&#42;:
+    Ensure all work, including code and processes, is thoroughly documented.
+    \&#42; \&#42;Feedback\&#42;:
+    Share feedback with your mentor and team to discuss improvements and your overall internship experience
+    \&#42; \&#42;Network\&#42;:
+    Keep contact details for team members and plan to stay connected through professional networks.
+    \&#42; \&#42;Files and deliverables\&#42;:
+    Make sure all files and deliverables are shared with your mentor.
+
+
+    = Mentors Hanbook
+    :page-authors: {author}, {author_2}, {author_3}, {author_4}
+    Smera Goel; Fernando Fernandez Mancera; Justin W. Flory; Jona Azizaj,
+    // Article content last reviewed and verified by a human on…
+    2024-07-16
+
+    Welcome to the Fedora Project Mentor Handbook, a guide designed to equip mentors with the tools, resources, and best practices needed to support contributors within the Fedora community.
+    Whether you're an experienced contributor looking to give back or a newcomer eager to support others on their journey, this handbook will provide you with the knowledge and strategies needed for your mentorship role.
+
+    [[understanding]]
+    == Understanding Mentorship
+
+    Becoming a mentor implies taking on additional responsibilities within your organization instead of reducing your workload.
+    It's crucial for the organization to understand that mentees are typically inexperienced contributors who may require support and direction to effectively accomplish their tasks.
+    As a mentor, you'll be investing time and effort into guiding these individuals, helping them navigate challenges, and empowering them to grow within the organization.
+    This commitment to mentorship not only benefits the mentees but also contributes to the overall success and sustainability of the organization by fostering a culture of learning and development.
+
+    [[communication]]
+    === Communication and culture tips
+
+    \&#42;Open Communication:\&#42;
+
+    \&#42; Encourage transparent and respectful communication between mentors and mentees.
+    \&#42; Actively listen to mentees' perspectives and concerns without interruptions.
+    \&#42; Provide constructive feedback that is specific, actionable, and supportive.
+
+    \&#42;Cultural Sensitivity:\&#42;
+
+    \&#42; Respect and celebrate diversity in backgrounds, cultures, and experiences.
+    \&#42; Be mindful of language and behaviors that may unintentionally exclude or offend individuals from different cultural backgrounds.
+    \&#42; Foster an inclusive environment where everyone feels valued and respected regardless of cultural differences.
+
+    By prioritizing open communication and cultural sensitivity, mentors can create a welcoming and supportive environment that promotes effective collaboration and growth within the Outreachy program.
+
+    [[started]]
+    == Getting Started
+
+    [[quick]]
+    === Quick start
+
+    1. Work with your project team to identify a project that can be achieved by a junior contributor in 2-3 months.
+    2. Propose your project idea in the Fedora Mentored Projects repository.
+    Use the provided issue template.
+    3. Receive feedback from Mentored Project coordinators and respond to questions.
+    4. If approved by Fedora coordinators:
+    Submit your project into the program-specific portal, e.g. Outreachy or GSoC websites.
+    5. Begin preparing applicant tasks in advance of the contribution phase start date.
+
+    [[improving]]
+    === How is the project improving Fedora?
+
+    To join in, the Fedora Project needs to know how mentorship will help the community and the Project as a whole.
+    Understanding these benefits helps us design the program to meet everyone's needs.
+    When proposing a project, make sure to address how this project fits in with Fedora’s philosophies.
+
+    [[many]]
+    === How many mentors are going to participate?
+
+    Taking part in the program with only one mentor can present challenges, which is why we advise having at least one other person willing to help out.
+    The other person can be a co-mentor, general mentor or a team member who understands the project and is willing to cover in case the primary mentor isn’t available, for example, during vacations or unplanned absences.
+    Having access to a diverse range of mentors (e.g. different cultures, different time zones, etc.) can provide a broader perspective and offer different areas of expertise.
+    This approach not only enhances the mentorship experience but also increases the likelihood of success.
+
+    [[timeline]]
+    === What is the timeline expected for the mentees
+
+    Setting a clear timeline for the mentee is important in mentorship.
+    When both the mentor and mentee know what to expect and when, they can work better together.
+    This helps avoid confusion and makes sure everyone's on the same page.
+    Plus, having a timeline lets us see how things are going, figure out what needs improving, and celebrate successes.
+    It makes the whole mentorship experience better for everyone involved.
+
+    For Outreachy, applicants are advised to contact a project mentor to propose a timeline for the project.
+    This is a question asked to all applicants in their final Outreachy applications.
+    Knowing an approximate timeline will make navigating these questions toward the end of the application period easier.
+
+    [[application]]
+    == Application Period
+
+    [[onboarding]]
+    === Onboarding material
+
+    It's beneficial to have onboarding resources ready for candidates during the application phase.
+    These resources will provide guidance on comprehending the project's scope, contributing effectively, locating suitable initial tasks, and communicating with mentors.
+
+    [[mentorship]]
+    == Mentorship Period
+
+    [[introductions]]
+    === Introductions
+
+    Ask the mentee to introduce themselves in the following places (and any other project-specific places):
+
+    \&#42; https://discussion.fedoraproject.org/tags/c/project/7/mentored-projects-team[\&#35;mentored-projects] on Fedora Discussion
+    \&#42; https://matrix.to/\&#35;/\&#35;commops:fedoraproject.org[\&#35;commops:fedoraproject.org] on Fedora Chat/Matrix
+    \&#42; https://matrix.to/\&#35;/\&#35;devel:fedoraproject.org[\&#35;devel:fedoraproject.org] on Fedora Chat/Matrix
+    \&#42; https://matrix.to/\&#35;/\&#35;council:fedoraproject.org[\&#35;council:fedoraproject.org] on Fedora Chat/Matrix
+    \&#42; https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/[devel@lists.fp.o]
+
+    [[frequency]]
+    === Communicating frequency
+
+    \&#42;Regular Check-ins:\&#42;
+
+    \&#42; Plan weekly or bi-weekly meetings to discuss progress and goals.
+    \&#42; Adjust frequency based on project needs and mentee preferences.
+
+    \&#42;Availability:\&#42;
+
+    \&#42; Be reachable during agreed-upon working hours.
+    \&#42; Respond promptly to messages and emails within a reasonable timeframe.
+
+    \&#42;Ad Hoc Communication:\&#42;
+
+    \&#42; Encourage quick questions or updates via chat or email outside of scheduled meetings.
+    \&#42; Stay open to informal check-ins based on mentee needs.
+
+    \&#42;Documentation:\&#42;
+
+    \&#42; Keep notes of discussions and decisions for reference.
+    \&#42; Share helpful resources and documentation to support mentee learning and project progress.
+
+    [[wrapping]]
+    == Wrapping Up
+
+    [[handling]]
+    === Handling over the project
+
+    \&#42; Do not wait until the last day for merging things and getting changes landed.
+    \&#42; Try to wrap significant work before the mentee’s last week.
+    \&#42; Spend some time with the mentee to review their work, summarize and advocate their accomplishments.
+    \&#42; It’s nice to keep in touch with the mentee after the internship ends.
+    It can help with contributor retention and also lead to new projects in the future.
+    \&#42; Talk to your mentee about their future plans, both project-related or career-related.
+    \&#42; Introduce the idea that the mentee can continue contributing to the project after the internship, but they might need to reevaluate how much time and commitment they can give as a volunteer.
+    \&#42; Discuss the idea of periodic check-in calls after their internship, e.g. monthly, quarterly, or any other cadence that works best for both parties.
+
+    [[helping]]
+    === Helping the mentee to continue contributing
+
+    \&#42; If the project can continue accepting contributions, talk about what continuing on the project might look like.
+    \&#42; If the project cannot accept more contributions or is integrated into something larger, talk about what other options there are to contribute to Fedora.
+    \&#42; Encourage the mentee to participate in virtual events, like Release Parties, Week of Diversity, Appreciation Week, etc.
+
+
+    = Program Coordinator Handbook
+    :page-authors: {author}, {author_2}, {author_3}, {author_4}
+    Smera Goel; Fernando Fernandez Mancera; Justin W. Flory; Jona Azizaj
+    // Article content last reviewed and verified by a human on…
+    2024-11-18
+
+    Coordinators play an important role in the facilitation and execution of Fedora Mentored Projects programs.
+    Coordinators are the points-of-contact between Fedora community interns and mentors, and administrators of the Mentored Projects programs we participate in.
+    Coordinators are responsible for overseeing applications to the programs we participate in, applying to new programs, guiding Fedora mentors to propose projects for the programs, and being a neutral group for conflict resolution during the course of an internship.
+    Additionally, coordinators play an important role in promoting and advocating for intern success, with key participation in major Fedora community events like Flock to Fedora and the Fedora Mentor Summit.
+
+    This handbook describes the various key responsibilities of Fedora Mentored Project coordinators and gives more background to how coordinators support intern success in the Fedora community.
+
+
+    [[responsibilities]]
+    == Key responsibilities
+
+    [[apply-existing]]
+    === Applying to existing programs we participate in
+
+    [[apply-new]]
+    === Applying to new programs we are not participating in
+
+    [[program-template]]
+    ==== New program issue template
+
+    ----
+    \&lt;!-- Thank you for your interest in proposing a new program for Fedora to participate in. This issue template is your first step in initiating a proposal under consideration by the community.
+
+    This issue template is specifically for proposing new mentorship programs similar to Outreachy or Google Summer of Code.
+
+    This GitLab issue is the primary place to get feedback and requests on your program proposal. The issue is meant to be public, to allow for community feedback and participation. --\&gt;
+
+    \&#35;\&#35; About You
+
+    \&lt;!-- These questions help us understand more about you and your involvement with Fedora. --\&gt;
+
+    \&#42; \&#42;\&#42;Name\&#42;\&#42;:
+
+    \&#42; \&#42;\&#42;FAS Username\&#42;\&#42;:
+
+    \&#42; \&#42;\&#42;Your role in Fedora\&#42;\&#42; (2-3 sentences):
+
+
+    \&#35;\&#35; About the Program
+
+    \&lt;!-- These questions help us understand more about the proposed program. --\&gt;
+
+    \&#42; \&#42;\&#42;Program Name\&#42;\&#42;:
+
+    \&#42; \&#42;\&#42;Program Website\&#42;\&#42;:
+
+    \&#42; \&#42;\&#42;Program Overview\&#42;\&#42; (2-3 sentences):
+
+    \&#42; \&#42;\&#42;Program Objectives\&#42;\&#42;:
+
+    \&#42; \&#42;\&#42;Program Duration\&#42;\&#42;:
+
+    \&#42; \&#42;\&#42;Historical Context\&#42;\&#42;:
+    - How long has the program been running?
+    - Past successes or notable outcomes.
+
+
+    \&#35;\&#35; Program Rationale
+
+    \&#42; \&#42;\&#42;Why Should Fedora Participate?\&#42;\&#42;:
+    - Benefits to Fedora and its community.
+    - Alignment with Fedora's mission and goals.
+
+
+    \&#35;\&#35; Project Requirements
+
+    \&#42; \&#42;\&#42;Mentor Commitments\&#42;\&#42;:
+    - Details on mentor responsibilities and time commitments.
+
+    \&#42; \&#42;\&#42;Time Required\&#42;\&#42;:
+    - Estimated total time investment for mentors and contributors.
+
+    \&#42; \&#42;\&#42;Budget Needs\&#42;\&#42;:
+    - Estimated costs and potential funding sources.
+
+
+    \&#35;\&#35; Program Proposal Submission
+
+    \&#42; \&#42;\&#42;Proposal Details\&#42;\&#42;:
+    - How do you propose to implement this program within Fedora?
+    - Project ideas and their feasibility for Fedora's participation.
+
+    \&#42; \&#42;\&#42;Community Engagement\&#42;\&#42;:
+    - How do you plan to engage the Fedora community in this program?
+
+
+    \&#35;\&#35; Additional Information
+
+    \&#42; \&#42;\&#42;Is there anything else we should know when reviewing your proposal?\&#42;\&#42;:
+
+    \&lt;!-- DO NOT EDIT BELOW THIS LINE! --\&gt;
+
+    /labels ~'?::needs review' ~'category::mentorship programs'
+    ----
+
+    [[guidance-mentors]]
+    == Guidance to Fedora mentors proposing projects
+
+    Fedora Mentored Projects coordinators guide Fedora contributors in becoming project mentors and proposing projects for the programs Fedora participates in.
+    Coordinators play an important role in reviewing and approving all project proposals in the community, as well as allocating funding for different projects in the community.
+    As part of this responsibility, coordinators provide advice and guidance to Fedora community mentors on crafting the perfect proposal proposal for an intern project.
+
+    Coordinators accept project proposals as public issues on the https://gitlab.com/fedora/mentoring/home[Mentoring Working Group Home] repository on GitLab.
+    This is the main tool that coordinators should engage and follow up with mentors who propose projects for upcoming Mentored Projects rounds.
+
+    [[build-team]]
+    === Build a team around the project
+
+    Before proposing a project, your project needs a team!
+    The best Fedora Mentored Projects are ones where there is a wide net of support.
+    Although there should be one, individual mentor who is directly responsible for the project and the intern(s), there should be a bigger team that supports the project.
+    This way, there is less burden on an individual mentor, in case the mentor needs to take time away from the project, planned or unplanned.
+    So, the main ingredient for a successful Fedora Mentored Project is a team to support the project, so the burden is shared beyond one, single person.
+    Anyone who has participated in a Fedora Mentored Project program like Outreachy knows it can be a lot to handle on your own!
+
+    [[propose-project]]
+    === How to propose a Fedora Mentored Project
+
+    There are a few steps to proposing a Fedora Mentored Project:
+
+    . Mentor(s) propose a project to Fedora Mentored Projects coordinators.
+    . Coordinators and invited reviewers review project proposals and give feedback to mentors on their project proposals.
+    Mentors have a brief time period to revise their proposals.
+    . Coordinators give an approval or rejection of project proposals for an upcoming Fedora Mentored Projects rounds.
+    If approved, a project proposal becomes a Fedora Mentored Project and will run in the next round of a program.
+    If rejected, a project proposal will not receive an intern allocation but the mentors are invited to submit and apply again in a future round.
+
+    [[proposal-faq]]
+    === Common project proposal questions
+
+    Coordinators often consider the following questions when reviewing project proposals from community mentors:
+
+    \&#42; Does the project have adequate staffing?
+    \&#42; Are there enough tasks for the intern to do?
+    \&#42; Is there too much for an intern to do?
+    \&#42; What formal and informal mentors are available to the intern?
+    \&#42; Is there a high probability of the internship deliverables being deployed and/or used in the community?
+    \&#42; What is the real-world applicability of the project proposal?
+    Does it solve an important problem or provide a useful function for the community?
+    \&#42; Are there opportunities for the intern to network and collaborate with Fedora contributors in other parts of the community?
+
+
+    [[best-practices]]
+    == Coordinator best practices and conflict resolution
+
+    Sometimes, coordinators are asked to help in difficult situations and to mediate conflicts.
+    Although this scenario is uncommon and Fedora generally has a high completion rate for Fedora Mentored Projects, sometimes difficult situations arise and conflicts must be resolved.
+    Coordinators play an important role as mediators in conflicts, whether this is between program administrators and project mentors, or project mentors and interns.
+    Because every scenario is unique and different, there is not a fixed set of rules about how to solve conflicts when they arise.
+    Coordinators should use their best judgment and the context available to make the best decision possible for our interns, our mentors, and our community.
+    However, instead of a fixed set of rules, there are general best practices and important considerations when stepping into this conflict mediation role as a Fedora Mentored Projects coordinator.
+
+    [[going-well]]
+    === When things are going well
+
+    [[not-going-well]]
+    === When things are not going well
+
+
+    [[intern-success]]
+    == Promoting \&amp; advocating for intern success
+
+    [[flock-showcase]]
+    === Mentored Projects showcase @ Flock
+
+    [[flock-mentor-summit]]
+    === Flock Mentor Summit: Supported by Mentored Project coordinators

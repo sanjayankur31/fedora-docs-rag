@@ -1,8 +1,7 @@
 # Architecture {#_architecture}
 
-- [Map of critical services](map_critical_services.xml)
-
-- [List of our services](services.xml)
+&#42; [Map of critical services](map_critical_services.xml) &#42; [List
+of our services](services.xml)
 
 # Tooling {#_tooling}
 
@@ -17,39 +16,38 @@ See [Developer Guide](developer_guide:index.xml) for good practices
 regarding development work for Fedora Infrastructure.
 
 And see [Sysadmin Guide](sysadmin_guide:index.xml) for good practices
-regarding sysadmin work for Fedora Infrastructure. = Working with Fedora
-Infrastructure
+regarding sysadmin work for Fedora Infrastructure.
+
+# Working with Fedora Infrastructure {#_working_with_fedora_infrastructure}
 
 This document explains how to efficiently work with the Fedora
 Infrastructure team. Your close attention to this document will help
 both you and us do the work you are asking us to do.
 
-# Our Workflow {#_our_workflow}
+## Our Workflow {#_our_workflow}
 
-## Security related issues {#_security_related_issues}
+### Security related issues {#_security_related_issues}
 
 Is your issue/problem related to security of an application or service
 we run?
 
-- send an email to <infra-security@fedoraproject.org>
+&#42; send an email to <infra-security@fedoraproject.org>
 
-## Emergency/Authentication issues {#_emergencyauthentication_issues}
+### Emergency/Authentication issues {#_emergencyauthentication_issues}
 
 Is your issue/problem urgent? (An important service is down, you need a
 change asap) or is your issue/problem such that you cannot file a ticket
 (authentication, no account, ticketing system down)
 
-- Login to a matrix account. join the #admin:fedoraproject.org channel.
-  say \'!oncall\' and explain the issue or problem to the oncall person.
+&#42; Login to a matrix account. join the &#35;admin:fedoraproject.org
+channel. say \'!oncall\' and explain the issue or problem to the oncall
+person.
 
-- If no one is available there:
+&#42; If no one is available there: &#42;&#42; If you cannot
+authenticate to <https://forge.fedoraproject.org/>, send an email to
+<admin@fedoraproject.org> &#42;&#42; Otherwise: go to next step.
 
-  - If you cannot authenticate to <https://forge.fedoraproject.org/>,
-    send an email to <admin@fedoraproject.org>
-
-  - Otherwise: go to next step.
-
-## Ticket tracking {#_ticket_tracking}
+### Ticket tracking {#_ticket_tracking}
 
 By default, the infrastructure team tracks its work in tickets at:
 <https://forge.fedoraproject.org/infra/tickets/issues/>. If you need
@@ -59,63 +57,56 @@ much information as you think is needed to process this request.
 
 Once created your ticket will follow the following flow:
 
-<figure id="img-ticket-flow">
-<img src="daily_process.png" alt="750" />
-<figcaption>Daily Process Ticket Flow</figcaption>
-</figure>
+:::: formalpara
+::: title
+Daily Process Ticket Flow
+:::
+
+\[&#35;img-ticket-flow\]
+::::
+
+![750](daily_process.png)
 
 A few notes:
 
-- Make sure to note if there is a deadline or if this issue blocks you.
+&#42; Make sure to note if there is a deadline or if this issue blocks
+you. &#42; We review tickets during the two stand ups we hold Monday
+through Thursday (one more Europe timezone friendly and one more US
+timezone friendly). &#42; There is no need to ping team members or
+notify us about the newly filed ticket.
 
-- We review tickets during the two stand ups we hold Monday through
-  Thursday (one more Europe timezone friendly and one more US timezone
-  friendly).
+&#42; Your ticket will be triaged by a team member and moved to a new
+state: &#42;&#42; A Gain and Pain levels will be added to the ticket,
+these are used by the team member to prioritize their work. (You can
+find the definition of each level in the
+[glossary](https://docs.fedoraproject.org/en-US/cpe/glossary/).)
+&#42;&#42; If it's moved to *Waiting on asignee* it's waiting for a team
+member to start working on it. &#42;&#42; If it's moved to *Waiting on
+reporter* it means that you need to answer questions posed in the ticket
+before it can be worked on. &#42;&#42; If the ticket is closed with
+*initiative*, see [New Initiative
+Workflow](https://docs.fedoraproject.org/en-US/cpe/initiatives/).
+&#42;&#42; If the ticket is otherwise closed, it will be with a
+explanation from a team member.
 
-- There is no need to ping team members or notify us about the newly
-  filed ticket.
+&#42; If you have an update to your issue/task or want to know when it
+might be worked on: &#42;&#42; comment in the ticket adding that
+information or asking for time frame.
 
-- Your ticket will be triaged by a team member and moved to a new state:
+&#42; When someone is available, your ticket will be assigned to someone
+to work on. &#42;&#42; Watch for progress reports/ticket being marked
+done.
 
-  - A Gain and Pain levels will be added to the ticket, these are used
-    by the team member to prioritize their work. (You can find the
-    definition of each level in the
-    [glossary](https://docs.fedoraproject.org/en-US/cpe/glossary/).)
+&#42; If the work is not fully completed as required, please re-open the
+ticket and indicate this. &#42;&#42; Go back to the previous step for
+additional work.
 
-  - If it's moved to *Waiting on asignee* it's waiting for a team member
-    to start working on it.
-
-  - If it's moved to *Waiting on reporter* it means that you need to
-    answer questions posed in the ticket before it can be worked on.
-
-  - If the ticket is closed with *initiative*, see [New Initiative
-    Workflow](https://docs.fedoraproject.org/en-US/cpe/initiatives/).
-
-  - If the ticket is otherwise closed, it will be with a explanation
-    from a team member.
-
-- If you have an update to your issue/task or want to know when it might
-  be worked on:
-
-  - comment in the ticket adding that information or asking for time
-    frame.
-
-- When someone is available, your ticket will be assigned to someone to
-  work on.
-
-  - Watch for progress reports/ticket being marked done.
-
-- If the work is not fully completed as required, please re-open the
-  ticket and indicate this.
-
-  - Go back to the previous step for additional work.
-
-# The \"Oncall\" Role in Our Team {#_the_oncall_role_in_our_team}
+## The \'Oncall\' Role in Our Team {#_the_oncall_role_in_our_team}
 
 One team member is always designated "oncall". The assigned person
 changes every week. You can find who the currently assigned person is on
-matrix by using `!oncall` in any of our various matrix channels, such as
-`#admin:fedoraproject.org`
+matrix by using &#96;!oncall&#96; in any of our various matrix channels,
+such as &#96;&#35;admin:fedoraproject.org&#96;
 
 When available, this person:
 
@@ -130,14 +121,14 @@ When available, this person:
 3.  Triages incoming tickets for urgent items that need work outside of
     normal triage process.
 
-# Initiatives {#_initiatives}
+## Initiatives {#_initiatives}
 
 All tasks involving new applications, major deployments, major
 development work or the like will be asked to follow the [New Initiative
 Workflow](https://docs.fedoraproject.org/en-US/cpe/initiatives/). It
 will then be scoped and prioritized from there.
 
-# General Ticket Considerations {#_general_ticket_considerations}
+## General Ticket Considerations {#_general_ticket_considerations}
 
 Please provide as much information as you can in your ticket to avoid
 back and forth for information. If you know your issue is going to cause
@@ -145,12 +136,10 @@ a lot of discussion, start a mailing list or discussion thread for that.
 
 Make sure your ticket:
 
-- Explains the problem or issue you are having, with URLs where possible
-  to the services or applications involved.
-
-- Tells us how important or urgent this is to you.
-
-- Includes any error messages or output you see.
+&#42; Explains the problem or issue you are having, with URLs where
+possible to the services or applications involved. &#42; Tells us how
+important or urgent this is to you. &#42; Includes any error messages or
+output you see.
 
 It is your responsibility as ticket reporter to follow your ticket,
 provide information that is asked for, and keep us aware of any urgency
@@ -171,7 +160,7 @@ otherwise we reserve the right to close the ticket (knowing that you can
 always re-open it or open a new one if the issue persists or
 re-appeared).
 
-# Matrix {#_matrix}
+## Matrix {#_matrix}
 
 Matrix is a great way to communicate, but please do not ping team
 members directly. Instead, update your ticket with any new information
@@ -179,7 +168,7 @@ you have and when the team member(s) working on that issue have
 time/availability, they may contact you on matrix for more interactive
 debugging/testing.
 
-# Direct emails {#_direct_emails}
+## Direct emails {#_direct_emails}
 
 E-mail is also a great communication method, but if you mail work items
 or information to one person directly, they cannot easily hand off the
@@ -188,7 +177,7 @@ others could perhaps have already solved it, etc). So, please avoid
 direct emails and instead update tickets with any information you want
 to add.
 
-# RFC 1149 {#_rfc_1149}
+## RFC 1149 {#_rfc_1149}
 
 [Pigeons are too slow](https://tools.ietf.org/html/rfc1149) for most
 work items, and require facilities (e.g. dovecots) that most team
@@ -198,8 +187,9 @@ single team member has the same problems as using matrix or email for
 the same purpose, which means tickets are still the correct way to
 report problems.
 
-In other words, please don't send us any birds. = Join the Fedora
-Infrastructure
+In other words, please don't send us any birds.
+
+# Join the Fedora Infrastructure {#_join_the_fedora_infrastructure}
 
 Fedora is known for creating and using new technologies. The
 Infrastructure team helps build many of these new technologies and uses
@@ -211,183 +201,129 @@ looking for smart, dedicated system administrators and developers to
 help maintain our systems and write code. The Fedora Infrastructure team
 is a perfect way to give back to the community! So what are you waiting
 for? Take a look at our [Getting Started
-Page](https://fedoraproject.org/wiki/Infrastructure/GettingStarted)! =
-Getting Started with Infrastructure
+Page](https://fedoraproject.org/wiki/Infrastructure/GettingStarted)!
 
-# Help Wanted! {#_help_wanted}
+# Getting Started with Infrastructure {#_getting_started_with_infrastructure}
+
+## Help Wanted! {#_help_wanted}
 
 We're always looking for dedicated and energetic people to join the fun
 times in the Fedora Infrastructure team. What fun stuff will you do to
 support and grow the Fedora community?
 
-- You will help design and implement highly available and fault-tolerant
-  systems
-
-- Fix system issues for grateful Fedora developers
-
-- Maintain the servers that make the Fedora Project possible
-
-- Create and maintain custom tools and applications to automate systems
-  maintenance
-
-- Create and maintain tools and applications to enhance and grow the
-  Fedora community
+&#42; You will help design and implement highly available and
+fault-tolerant systems &#42; Fix system issues for grateful Fedora
+developers &#42; Maintain the servers that make the Fedora Project
+possible &#42; Create and maintain custom tools and applications to
+automate systems maintenance &#42; Create and maintain tools and
+applications to enhance and grow the Fedora community
 
 The skills you should possess or be willing to learn to do this work
 include:
 
-- Being polite
-
-- Being patient
-
-- How to help fellow hackers
-
-- How to write systems administration scripts
-
-- How to write web applications
-
-  - We primarily use Python, SQL, and associated technologies
-
-  - Other equivalent technologies are welcome
-
-  - We can especially use skills in this area or folks that are willing
-    to learn
-
-- How the Fedora Project works \"behind the scenes\"
+&#42; Being polite &#42; Being patient &#42; How to help fellow hackers
+&#42; How to write systems administration scripts &#42; How to write web
+applications &#42;&#42; We primarily use Python, SQL, and associated
+technologies &#42;&#42; Other equivalent technologies are welcome
+&#42;&#42; We can especially use skills in this area or folks that are
+willing to learn &#42; How the Fedora Project works \'behind the
+scenes\'
 
 It would be great if
 
-- You have previous systems admin experience
+&#42; You have previous systems admin experience &#42; Have access to
+your own testing machines &#42;&#42; Our resources are limited,
+especially for testing! &#42; Work in other areas of Fedora like
+packaging or documentation
 
-- Have access to your own testing machines
-
-  - Our resources are limited, especially for testing!
-
-- Work in other areas of Fedora like packaging or documentation
-
-# Getting Started {#_getting_started}
+## Getting Started {#_getting_started}
 
 See below for a list of steps or head down to the [Quick
-Start](gettingstarted.xml#_quickstart) section if you just want to
+Start](gettingstarted.adoc&#35;_quickstart) section if you just want to
 submit a single change or fix.
 
-# First steps {#_first_steps}
+## First steps {#_first_steps}
 
-- First you will need to read through and understand [how to be a
-  successful
-  contributor](https://docs.fedoraproject.org/en-US/fedora-join/contribute/successful-contributor/).
+&#42; First you will need to read through and understand [how to be a
+successful
+contributor](https://docs.fedoraproject.org/en-US/fedora-join/contribute/successful-contributor/).
+&#42; Next you will need to create a [Fedora
+Account](https://docs.fedoraproject.org/en-US/fedora-accounts/user/):
+&#42;&#42; This account will be used for just about everything you do as
+a member of the Fedora Community &#42;&#42; You will need it to sign the
+[FPCA](https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement)
+which is required to contribute to the Fedora Community &#42;&#42; You
+will need it to login to various systems associated with the
+Infrastructure Group &#42;&#42; You will need it to upload code changes,
+make changes to this wiki and etc. &#42; After you have created your
+account and signed the FPCA, you should then subscribe to the [Fedora
+Infrastructure Mailing
+List](https://lists.fedoraproject.org/admin/lists/infrastructure.lists.fedoraproject.org/)
+and you should check the [Infrastructure tag at Fedora
+Discussion](https://discussion.fedoraproject.org/tags/c/project/7/infrastructure-team).
+&#42;&#42; This is the mailing list you will use to send your
+introduction email to the Fedora Infrastructure Team as well as
+communicate with other team members on a regular basis. &#42;&#42; When
+you are ready to send a \[introduction to the
+group\](mailto:infrastructure@lists.fedoraproject.org), &#42;&#42; your
+subject should be \'Meeting Agenda Item: Introduction *Your Name*\'. The
+message body should include: &#42;&#42;&#42; Your Matrix handle
+&#42;&#42;&#42;&#42; [Fedora's Matrix instance at
+chat.fedoraproject.org](https://fedoramagazine.org/join-the-conversation/)
+&#42;&#42;&#42; What skills you have to offer and which you would like
+to learn. This can include&#8230; &#42;&#42;&#42;&#42; Programming
+languages you are familiar with or have used &#42;&#42;&#42;&#42;
+Systems administration skills, certifications, and technologies you have
+or have used (or wish to learn) &#42;&#42;&#42;&#42; Any associations
+you have (e.g. local hackerspace/makerspace, Linux User Groups,
+employer, etc.) &#42;&#42; What you want to learn &#42;&#42;&#42; What
+you would like to work on and quite possibly which [outstanding
+issues](http://pagure.io/fedora-infrastructure/issues) you would like to
+help resolve &#42;&#42; Any initial questions you have for the team
+&#42;&#42;&#42; Look at the [Fedora Infrastructure Best
+Practices](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/)
+document &#42;&#42;&#42; Be patient, as sometimes folks are busy and
+might not reply to your email quickly. You may get a faster response on
+Matrix. &#42;&#42;&#42; join the &#35;admin:fedoraproject.org channel on
+matrix and attend the next matrix meeting. &#42;&#42;&#42; Watch [some
+videos](http://fedoramagazine.org/?p=642) intended to introduce new
+contributors to the team.
 
-- Next you will need to create a [Fedora
-  Account](https://docs.fedoraproject.org/en-US/fedora-accounts/user/):
-
-  - This account will be used for just about everything you do as a
-    member of the Fedora Community
-
-  - You will need it to sign the
-    [FPCA](https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement)
-    which is required to contribute to the Fedora Community
-
-  - You will need it to login to various systems associated with the
-    Infrastructure Group
-
-  - You will need it to upload code changes, make changes to this wiki
-    and etc.
-
-- After you have created your account and signed the FPCA, you should
-  then subscribe to the [Fedora Infrastructure Mailing
-  List](https://lists.fedoraproject.org/admin/lists/infrastructure.lists.fedoraproject.org/)
-  and you should check the [Infrastructure tag at Fedora
-  Discussion](https://discussion.fedoraproject.org/tags/c/project/7/infrastructure-team).
-
-  - This is the mailing list you will use to send your introduction
-    email to the Fedora Infrastructure Team as well as communicate with
-    other team members on a regular basis.
-
-  - When you are ready to send a \[introduction to the
-    group\](mailto:infrastructure@lists.fedoraproject.org),
-
-  - your subject should be \'Meeting Agenda Item: Introduction *Your
-    Name*\'. The message body should include:
-
-    - Your Matrix handle
-
-      - [Fedora's Matrix instance at
-        chat.fedoraproject.org](https://fedoramagazine.org/join-the-conversation/)
-
-    - What skills you have to offer and which you would like to learn.
-      This can include...​
-
-      - Programming languages you are familiar with or have used
-
-      - Systems administration skills, certifications, and technologies
-        you have or have used (or wish to learn)
-
-      - Any associations you have (e.g. local hackerspace/makerspace,
-        Linux User Groups, employer, etc.)
-
-  - What you want to learn
-
-    - What you would like to work on and quite possibly which
-      [outstanding
-      issues](http://pagure.io/fedora-infrastructure/issues) you would
-      like to help resolve
-
-  - Any initial questions you have for the team
-
-    - Look at the [Fedora Infrastructure Best
-      Practices](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/)
-      document
-
-    - Be patient, as sometimes folks are busy and might not reply to
-      your email quickly. You may get a faster response on Matrix.
-
-    - join the #admin:fedoraproject.org channel on matrix and attend the
-      next matrix meeting.
-
-    - Watch [some videos](http://fedoramagazine.org/?p=642) intended to
-      introduce new contributors to the team.
-
-# What is next? {#_what_is_next}
+## What is next? {#_what_is_next}
 
 After you've completed the steps outlined in the [First steps
-section](gettingstarted.xml#_first_steps) you should:
+section](gettingstarted.adoc&#35;_first_steps) you should:
 
-- Regularly attend the [Weekly
-  Meetings](https://fedoraproject.org/wiki/Infrastructure/Meetings) on
-  Matrix and be sure to introduce yourself the first time you attend.
-  There is a section at the start of the meeting where you can give a
-  short introduction of yourself to the rest of the team.
-
-- Take some time to learn about the
-  [services]()<https://docs.fedoraproject.org/en-US/infra/map_critical_services/>
-  the Fedora Infrastructure Group develops, deploys and maintains.
-
-- Ask about joining the [Fedora Infrastructure
-  Apprentice](apprentice.xml) (fi-apprentice) group.
-
-- Read up on
-  [SOPs](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/#_standard_operating_procedures)
-  you find interesting. These are a good point of reference for hosts
-  related to an app. They give an overview of how things work for that
-  app.
-
-- Idle in matrix and chime in with questions or offers to help when you
-  see an interesting problem being discussed.
+&#42; Regularly attend the [Weekly
+Meetings](https://fedoraproject.org/wiki/Infrastructure/Meetings) on
+Matrix and be sure to introduce yourself the first time you attend.
+There is a section at the start of the meeting where you can give a
+short introduction of yourself to the rest of the team. &#42; Take some
+time to learn about the
+[services]()<https://docs.fedoraproject.org/en-US/infra/map_critical_services/>
+the Fedora Infrastructure Group develops, deploys and maintains. &#42;
+Ask about joining the [Fedora Infrastructure Apprentice](apprentice.xml)
+(fi-apprentice) group. &#42; Read up on
+[SOPs](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/&#35;_standard_operating_procedures)
+you find interesting. These are a good point of reference for hosts
+related to an app. They give an overview of how things work for that
+app. &#42; Idle in matrix and chime in with questions or offers to help
+when you see an interesting problem being discussed.
 
 If you don't have the time to be involved on a regular basis at this
 point, please feel free to watch over things and report bugs and RFEs as
 you see fit. Showing interest now is a great way to make it easier to
 join the team's activities later!
 
-# QuickStart {#_quickstart}
+## QuickStart {#_quickstart}
 
-- If you just want to make a single change or fix a single issue, then
-  just jump right in at attach a patch for it to the existing issue, or
-  post a patch to the mailing list. Note that we still would like you to
-  create an account and sign the FPCA so we can properly license your
-  contributions.
+&#42; If you just want to make a single change or fix a single issue,
+then just jump right in at attach a patch for it to the existing issue,
+or post a patch to the mailing list. Note that we still would like you
+to create an account and sign the FPCA so we can properly license your
+contributions.
 
-# How the team works {#_how_the_team_works}
+## How the team works {#_how_the_team_works}
 
 The Fedora Infrastructure Group consists of volunteers and Red Hat
 employees. Our preferred method of communication is matrix though we
@@ -407,10 +343,9 @@ about the access and privileges, instead, try and solve problems and
 prove that you will be around and reliable over time and you will be
 setup with what you need to do that work. Since we are a small team we
 don't usually have the cycles to do full time mentoring of new
-contributors, so you will be expected to be a \"self-starter\" and able
+contributors, so you will be expected to be a \'self-starter\' and able
 to gather information on your own. We are happy to answer questions when
-you get stuck. :infra-matrix:
-[https://matrix.to/#/#admin:fedoraproject.org](https://matrix.to/#/#admin:fedoraproject.org)
+you get stuck.
 
 # Infrastructure Apprentice {#_infrastructure_apprentice}
 
@@ -432,14 +367,14 @@ via the bastion.fedoraproject.org machine and from there to each
 machine. See the [SSH Access Infrastructure
 SOP](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/sshaccess/)
 for more info. You can see a list of hosts that allow apprentice access
-by using:
-`./scripts/hosts_with_var_set -i inventory/ -o ipa_client_shell_groups=fi-apprentice`
-from an ansible repo checkout (see below).
+by using: &#96;./scripts/hosts_with_var_set -i inventory/ -o
+ipa_client_shell_groups=fi-apprentice&#96; from an ansible repo checkout
+(see below).
 
 ## Nagios alerts {#_nagios_alerts}
 
 This group does NOT get Nagios alerts. If you would like to see them you
-can join the #fedora-noc channel, adjust your [FMN notifications
+can join the &#35;fedora-noc channel, adjust your [FMN notifications
 settings](https://apps.fedoraproject.org/notifications) or watch the
 Nagios web interface at: <https://admin.fedoraproject.org/nagios/> and
 <https://nagios-external.fedoraproject.org/nagios/>
@@ -462,28 +397,27 @@ There's a few items we need help with ongoing and apprentices are
 encouraged to work on these items and provide patches and ask questions,
 etc. The current list:
 
-- Update group variables in ansible for CSI standards for machines that
-  don't have any listed. See:
-  <https://docs.fedoraproject.org/en-US/Community_Services_Infrastructure/1/html/Security_Policy/index.html>
-  for information on CSI, and look at the ansible repo under
-  inventory/group_vars/ for groups without CSI information. Patches
-  adding this information for groups can be sent to the infrastructure
-  list to be reviewed and applied. Please refer to [standards for
-  documenting CSI
-  variables](https://fedoraproject.org/wiki/Standards_for_documenting_CSI_variables)
-  before submitting patches for ansible.
+&#42; Update group variables in ansible for CSI standards for machines
+that don't have any listed. See:
+<https://docs.fedoraproject.org/en-US/Community_Services_Infrastructure/1/html/Security_Policy/index.html>
+for information on CSI, and look at the ansible repo under
+inventory/group_vars/ for groups without CSI information. Patches adding
+this information for groups can be sent to the infrastructure list to be
+reviewed and applied. Please refer to [standards for documenting CSI
+variables](https://fedoraproject.org/wiki/Standards_for_documenting_CSI_variables)
+before submitting patches for ansible.
 
-- Our docs aren't all using the same template. See the
-  [docs](https://forge.fedoraproject.org/infra/docs) repo and propose
-  patches to update documents to use the same templates as the rest.
+&#42; Our docs aren't all using the same template. See the
+[docs](https://forge.fedoraproject.org/infra/docs) repo and propose
+patches to update documents to use the same templates as the rest.
 
-- Look over our logs on log01.rdu3.fedoraproject.org in /var/log/merged/
-  and track down issues and propose solutions to them. Be sure to
-  discuss in meeting or in a issue whatever you find.
+&#42; Look over our logs on log01.rdu3.fedoraproject.org in
+/var/log/merged/ and track down issues and propose solutions to them. Be
+sure to discuss in meeting or in a issue whatever you find.
 
 ## Working on a ticket workflow {#_working_on_a_ticket_workflow}
 
-- Pick a ticket
+&#42; Pick a ticket
 
 Look in <https://forge.fedoraproject.org/infra/tickets/issues> for a
 ticket that looks interesting to you. If the ticket is already assigned,
@@ -497,10 +431,10 @@ will discuss it there and close it or rework it as needed. You can add
 to the next meeting agenda at the [fedora-infra
 board](https://board.net/p/fedora-infra).
 
-- Make patch for fix from git ansible repo
+&#42; Make patch for fix from git ansible repo
 
 Most any task will require changes to ansible. You can check this out on
-batcave01.rdu3.fedoraproject.org (just \"git clone /git/ansible\" there)
+batcave01.rdu3.fedoraproject.org (just \'git clone /git/ansible\' there)
 and make edits to your local copy. Then you can create a PR with your
 changes into <https://pagure.io/fedora-infra/ansible>
 
@@ -509,57 +443,62 @@ changes into <https://pagure.io/fedora-infra/ansible>
 The primary way the infrastructure team communicates is Matrix. Here's a
 few tips to best communicate with the rest of the team:
 
-- Feel free to ask questions when you think of them/run into them, but
-  don't expect everyone to drop what they are doing and answer right
-  then. Please be patient.
+&#42; Feel free to ask questions when you think of them/run into them,
+but don't expect everyone to drop what they are doing and answer right
+then. Please be patient.
 
-- Try to avoid private messages to specific team members. Instead ask
-  your questions in [Fedora Infrastructure Team\"]({infra-matrix}) and
-  [\"Fedora Network Operation
-  Center\"](https://chat.fedoraproject.org/#/room/#noc:fedoraproject.org)
-  on Matrix if at all possible. This allows anyone to help you out and
-  also other folks to see the answer and peer review the answers you
-  get.
+&#42; Try to avoid private messages to specific team members. Instead
+ask your questions in [Fedora Infrastructure
+Team\'](https://matrix.to/&#35;/&#35;admin:fedoraproject.org) and
+[\'Fedora Network Operation
+Center\'](https://chat.fedoraproject.org/&#35;/room/&#35;noc:fedoraproject.org)
+on Matrix if at all possible. This allows anyone to help you out and
+also other folks to see the answer and peer review the answers you get.
 
-- Try and assume best intentions on past decisions. There is often a
-  reason for something being setup the way it is or there's some history
-  behind it. \"Have we considered switching from foo to bar?\" is great,
-  \"Why are you using foo! bar is better, we should switch to it right
-  now\" is not.
+&#42; Try and assume best intentions on past decisions. There is often a
+reason for something being setup the way it is or there's some history
+behind it. \'Have we considered switching from foo to bar?\' is great,
+\'Why are you using foo! bar is better, we should switch to it right
+now\' is not.
 
-- Keep in mind many of the infrastructure folks are busy, so do try and
-  avoid \'pinging\' them unless there's a specific need or you know they
-  are active in channel. Many people have a matrix \'trigger\' that
-  notifies them when someone mentions their nick.
+&#42; Keep in mind many of the infrastructure folks are busy, so do try
+and avoid \'pinging\' them unless there's a specific need or you know
+they are active in channel. Many people have a matrix \'trigger\' that
+notifies them when someone mentions their nick.
 
-- Being active in Matrix and asking questions is a great way to find out
-  how things are setup and gain more trust.
+&#42; Being active in Matrix and asking questions is a great way to find
+out how things are setup and gain more trust.
 
-- Watching discussion in Matrix can often lead to some topic or area you
-  might be interested in helping out with. If so, please feel free to
-  chime in in channel that you would be interested in helping out and
-  ask how you could do so.
+&#42; Watching discussion in Matrix can often lead to some topic or area
+you might be interested in helping out with. If so, please feel free to
+chime in in channel that you would be interested in helping out and ask
+how you could do so.
 
 ## Further information {#_further_information}
 
-For further information on this group, please ask in #fedora-admin on
-irc.libera.chat, the [Fedora Infrastructure Matrix room]({infra-matrix})
-and/or the fedora infrastructure [mailing
-list](index.xml#_mailing_list).
+For further information on this group, please ask in &#35;fedora-admin
+on irc.libera.chat, the [Fedora Infrastructure Matrix
+room](https://matrix.to/&#35;/&#35;admin:fedoraproject.org) and/or the
+fedora infrastructure [mailing list](index.adoc&#35;_mailing_list).
 
-Ansible documentation is available at <http://docs.ansible.com/>. = Map
-of critical services
+Ansible documentation is available at <http://docs.ansible.com/>.
+
+# Map of critical services {#_map_of_critical_services}
 
 This document provides readers with a map of all critical services
 hosted by Fedora infra and their relationship with each other. It also
 contains a description of each app and reason why it's considered
 critical.
 
-<figure id="img-critical-map">
-<img src="fedora_infra_diagram.drawio.svg"
-alt="fedora infra diagram.drawio" />
-<figcaption>Map of critical services</figcaption>
-</figure>
+:::: formalpara
+::: title
+Map of critical services
+:::
+
+\[&#35;img-critical-map\]
+::::
+
+![fedora infra diagram.drawio](fedora_infra_diagram.drawio.svg)
 
 ## Metadata providers {#_metadata_providers}
 
@@ -591,14 +530,14 @@ alt="fedora infra diagram.drawio" />
 | Name            | Description     | Why it's        | Hostname        |
 |                 |                 | critical?       |                 |
 +=================+=================+=================+=================+
-| [Na             | Nagios is used  | Nagios is       | `n              |
-| gios](https://w | by Fedora       | essential for   | oc01.rdu3.fedor |
-| ww.nagios.org/) | Infrastructure  | monitoring      | aproject.org` - |
+| [Na             | Nagios is used  | Nagios is       | &#96;noc01      |
+| gios](https://w | by Fedora       | essential for   | .rdu3.fedorapro |
+| ww.nagios.org/) | Infrastructure  | monitoring      | ject.org&#96; - |
 |                 | to watch the    | infrastructure  | internal        |
-|                 | state of all    | and without it  | `noc02.fedor    |
-|                 | the hardware we | Fedora infra    | aproject.org` - |
-|                 | have available  | team will be in | external        |
-|                 | in Fedora       | dark.           |                 |
+|                 | state of all    | and without it  | &#96;           |
+|                 | the hardware we | Fedora infra    | noc02.fedorapro |
+|                 | have available  | team will be in | ject.org&#96; - |
+|                 | in Fedora       | dark.           | external        |
 |                 | infrastructure. |                 |                 |
 |                 | It alerts       |                 |                 |
 |                 | members of      |                 |                 |
@@ -638,9 +577,9 @@ alt="fedora infra diagram.drawio" />
 |                 | tasks based on  |                 |                 |
 |                 | those messages. |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [mirror_fro     | Mirror from     | Ansible         | `bat            |
-| m_pagure](https | Pagure is a     | repository      | cave01.rdu3.fed |
-| ://pagure.io/fe | service that is | containing all  | oraproject.org` |
+| [mirror_fro     | Mirror from     | Ansible         | &#96;batcave    |
+| m_pagure](https | Pagure is a     | repository      | 01.rdu3.fedorap |
+| ://pagure.io/fe | service that is | containing all  | roject.org&#96; |
 | dora-infra/mirr | mirroring git   | deployment      |                 |
 | or_from_pagure) | repositories    | playbooks for   |                 |
 |                 | to/from pagure  | Fedora          |                 |
@@ -677,22 +616,22 @@ alt="fedora infra diagram.drawio" />
 |                 | Authentication  |                 |                 |
 |                 | Server (FAS).   |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [IPA](https://w | FreeIPA is an   | Without FreeIPA | `ipa01.rdu3.fed |
-| ww.freeipa.org/ | identity        | nobody would be | oraproject.org` |
-| page/Main_Page) | management      | able to         | `ipa02.rdu3.fed |
-|                 | service which   | authenticate    | oraproject.org` |
-|                 | handles         | with any Fedora | `ipa03.rdu3.fed |
-|                 | authentication  | service.        | oraproject.org` |
-|                 | of Fedora users |                 |                 |
-|                 | in Fedora       |                 |                 |
-|                 | ecosystem.      |                 |                 |
+| [IPA](https://w | FreeIPA is an   | Without FreeIPA | &#96;ipa        |
+| ww.freeipa.org/ | identity        | nobody would be | 01.rdu3.fedorap |
+| page/Main_Page) | management      | able to         | roject.org&#96; |
+|                 | service which   | authenticate    | &#96;ipa        |
+|                 | handles         | with any Fedora | 02.rdu3.fedorap |
+|                 | authentication  | service.        | roject.org&#96; |
+|                 | of Fedora users |                 | &#96;ipa        |
+|                 | in Fedora       |                 | 03.rdu3.fedorap |
+|                 | ecosystem.      |                 | roject.org&#96; |
 +-----------------+-----------------+-----------------+-----------------+
-| [Ipsilon]       | Ipsilon is      | Without Ipsilon | `ips            |
-| (https://ipsilo | handling Single | SSO in Fedora   | ilon01.rdu3.fed |
-| n-project.org/) | Sign-On (SSO)   | wouldn't work.  | oraproject.org` |
-|                 | in Fedora       | Plenty of web   | `ips            |
-|                 | ecosystem.      | apps in Fedora  | ilon02.rdu3.fed |
-|                 |                 | using SSO as a  | oraproject.org` |
+| [Ipsilon]       | Ipsilon is      | Without Ipsilon | &#96;ipsilon    |
+| (https://ipsilo | handling Single | SSO in Fedora   | 01.rdu3.fedorap |
+| n-project.org/) | Sign-On (SSO)   | wouldn't work.  | roject.org&#96; |
+|                 | in Fedora       | Plenty of web   | &#96;ipsilon    |
+|                 | ecosystem.      | apps in Fedora  | 02.rdu3.fedorap |
+|                 |                 | using SSO as a  | roject.org&#96; |
 |                 |                 | main            |                 |
 |                 |                 | authentication  |                 |
 |                 |                 | system.         |                 |
@@ -780,15 +719,15 @@ alt="fedora infra diagram.drawio" />
 |                 | the results in  | Fedora CI       |                 |
 |                 | resultsdb.      | unusable.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [Koji           | Koji builders   | Without koji    | `b              |
-| buil            | are machines of | builders no     | uildvm-{x86,a64 |
-| ders](https://p | various         | artifact could  | ,ppc64le,a32}-{ |
-| agure.io/koji/) | architectures   | be built.       | 01-XX}.rdu3.fed |
-|                 | used by Koji to |                 | oraproject.org` |
-|                 | build the       |                 | `               |
-|                 | artifacts.      |                 | buildvm-s390x-{ |
-|                 |                 |                 | 01-XX}.s390.fed |
-|                 |                 |                 | oraproject.org` |
+| [Koji           | Koji builders   | Without koji    | &#96;build      |
+| buil            | are machines of | builders no     | vm-{x86,a64,ppc |
+| ders](https://p | various         | artifact could  | 64le,a32}-{01-X |
+| agure.io/koji/) | architectures   | be built.       | X}.rdu3.fedorap |
+|                 | used by Koji to |                 | roject.org&#96; |
+|                 | build the       |                 | &#96;buil       |
+|                 | artifacts.      |                 | dvm-s390x-{01-X |
+|                 |                 |                 | X}.s390.fedorap |
+|                 |                 |                 | roject.org&#96; |
 +-----------------+-----------------+-----------------+-----------------+
 | [greenwave      | Greenwave is a  | Without         | Hosted in       |
 | ](https://pagur | component that  | Greenwave the   | OpenShift       |
@@ -798,37 +737,37 @@ alt="fedora infra diagram.drawio" />
 |                 | not.            | for gating      |                 |
 |                 |                 | approval.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [               | Koji is a build | Without Koji we | `koji           |
-| Koji](https://p | system handling | wouldn't be     | 0{1-2}.rdu3.fed |
-| agure.io/koji/) | artifact        | able to build   | oraproject.org` |
+| [               | Koji is a build | Without Koji we | &#96;koji0{1-   |
+| Koji](https://p | system handling | wouldn't be     | 2}.rdu3.fedorap |
+| agure.io/koji/) | artifact        | able to build   | roject.org&#96; |
 |                 | building.       | any artifact.   |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [               | Bodhi is a      | Without Bodhi   | `bodhi-bac      |
-| Bodhi](https:// | system that     | packagers       | kend01.rdu3.fed |
-| github.com/fedo | manages package | couldn't submit | oraproject.org` |
-| ra-infra/bodhi) | updates for     | new updates for |                 |
+| [               | Bodhi is a      | Without Bodhi   | &#9             |
+| Bodhi](https:// | system that     | packagers       | 6;bodhi-backend |
+| github.com/fedo | manages package | couldn't submit | 01.rdu3.fedorap |
+| ra-infra/bodhi) | updates for     | new updates for | roject.org&#96; |
 |                 | Fedora          | existing        |                 |
 |                 | distribution.   | packages.       |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [ro             | Fedora          | Without         | `sign-br        |
-| bosignatory](ht | messaging       | Robosignatory   | idge01.rdu3.fed |
-| tps://pagure.io | consumer that   | no artifact     | oraproject.org` |
-| /robosignatory) | automatically   | would be        |                 |
+| [ro             | Fedora          | Without         | &               |
+| bosignatory](ht | messaging       | Robosignatory   | #96;sign-bridge |
+| tps://pagure.io | consumer that   | no artifact     | 01.rdu3.fedorap |
+| /robosignatory) | automatically   | would be        | roject.org&#96; |
 |                 | signs           | automatically   |                 |
 |                 | artifacts.      | signed.         |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [tag2dis        | Koji plugin     | Without         | `koji           |
-| trepo](https:// | that            | tag2distrepo    | 0{1-2}.rdu3.fed |
-| pagure.io/relen | automatically   | packagers       | oraproject.org` |
+| [tag2dis        | Koji plugin     | Without         | &#96;koji0{1-   |
+| trepo](https:// | that            | tag2distrepo    | 2}.rdu3.fedorap |
+| pagure.io/relen | automatically   | packagers       | roject.org&#96; |
 | g/tag2distrepo) | generates dist  | wouldn't be     |                 |
 |                 | repositories on | able to create  |                 |
 |                 | tag operations. | repositories on |                 |
 |                 |                 | specific tag.   |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [s              | Component that  | Without sigul   | `sign-br        |
-| igul](https://p | does signing of | nothing in      | idge01.rdu3.fed |
-| agure.io/sigul) | the artifacts.  | Fedora could be | oraproject.org` |
-|                 | Called by       | signed.         |                 |
+| [s              | Component that  | Without sigul   | &               |
+| igul](https://p | does signing of | nothing in      | #96;sign-bridge |
+| agure.io/sigul) | the artifacts.  | Fedora could be | 01.rdu3.fedorap |
+|                 | Called by       | signed.         | roject.org&#96; |
 |                 | robosignatory.  |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
 | [Kosc           | Koschei is a    | Without Koschei | Hosted in       |
@@ -846,9 +785,9 @@ alt="fedora infra diagram.drawio" />
 |                 | some time       |                 |                 |
 |                 | elapse.         |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [pagure         | Pagure-dist-git | Without         | `               |
-| -dist-git](http | is a plugin for | pagure-dist-git | pkgs01.rdu3.fed |
-| s://pagure.io/p | Pagure which    | there wouldn't  | oraproject.org` |
+| [pagure         | Pagure-dist-git | Without         | &#96;pkgs       |
+| -dist-git](http | is a plugin for | pagure-dist-git | 01.rdu3.fedorap |
+| s://pagure.io/p | Pagure which    | there wouldn't  | roject.org&#96; |
 | agure-dist-git) | forms the base  | be any web      |                 |
 |                 | for web         | interface for   |                 |
 |                 | interface of    | dist-git for    |                 |
@@ -873,10 +812,10 @@ alt="fedora infra diagram.drawio" />
 | Name            | Description     | Why it's        | Hostname        |
 |                 |                 | critical?       |                 |
 +=================+=================+=================+=================+
-| [Rabbit         | RabbitMQ is a   | Without it the  | `rabbitmq       |
-| MQ](https://www | message broker  | messages will   | 0{1-3}.rdu3.fed |
-| .rabbitmq.com/) | used by fedora  | not be          | oraproject.org` |
-|                 | messaging. It   | delivered and   |                 |
+| [Rabbit         | RabbitMQ is a   | Without it the  | &#              |
+| MQ](https://www | message broker  | messages will   | 96;rabbitmq0{1- |
+| .rabbitmq.com/) | used by fedora  | not be          | 3}.rdu3.fedorap |
+|                 | messaging. It   | delivered and   | roject.org&#96; |
 |                 | assures that    | most of the     |                 |
 |                 | the message is  | infra will stop |                 |
 |                 | delivered from  | working.        |                 |
@@ -909,26 +848,26 @@ alt="fedora infra diagram.drawio" />
 | Name            | Description     | Why it's        | Hostname        |
 |                 |                 | critical?       |                 |
 +=================+=================+=================+=================+
-| [Mailman3](h    | GNU Mailman 3   | Without         | `mai            |
-| ttps://wiki.lis | is a set of     | Mailman3        | lman01.rdu3.fed |
-| t.org/Mailman3) | apps used by    | mailing lists   | oraproject.org` |
+| [Mailman3](h    | GNU Mailman 3   | Without         | &#96;mailman    |
+| ttps://wiki.lis | is a set of     | Mailman3        | 01.rdu3.fedorap |
+| t.org/Mailman3) | apps used by    | mailing lists   | roject.org&#96; |
 |                 | Fedora to       | and archives    |                 |
 |                 | manage all      | wouldn't work.  |                 |
 |                 | their mailing   |                 |                 |
 |                 | lists.          |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [Pag            | Pagure is a git | Without pagure  | `pagure02.fed   |
-| ure](https://pa | forge used by   | most of the     | oraproject.org` |
-| gure.io/pagure) | Fedora project. | projects git    |                 |
+| [Pag            | Pagure is a git | Without pagure  | &#96;p          |
+| ure](https://pa | forge used by   | most of the     | agure02.fedorap |
+| gure.io/pagure) | Fedora project. | projects git    | roject.org&#96; |
 |                 | It is a main    | repositories    |                 |
 |                 | component of    | and issue       |                 |
 |                 | Fedora dist-git | trackers in     |                 |
 |                 | as well.        | Fedora are not  |                 |
 |                 |                 | available.      |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [wik            | Mediawiki is    | Without wiki    | `wiki           |
-| i](https://www. | used by Fedora  | Fedora wiki     | 0{1-2}.rdu3.fed |
-| mediawiki.org/) | as their choice | pages wouldn't  | oraproject.org` |
+| [wik            | Mediawiki is    | Without wiki    | &#96;wiki0{1-   |
+| i](https://www. | used by Fedora  | Fedora wiki     | 2}.rdu3.fedorap |
+| mediawiki.org/) | as their choice | pages wouldn't  | roject.org&#96; |
 |                 | of              | run.            |                 |
 |                 | Wikipedia-like  |                 |                 |
 |                 | web server.     |                 |                 |
@@ -938,13 +877,13 @@ alt="fedora infra diagram.drawio" />
 |                 | tps://fedorapro |                 |                 |
 |                 | ject.org/wiki). |                 |                 |
 +-----------------+-----------------+-----------------+-----------------+
-| [FMN](https:    | FMN (FedMSG     | Without FMN no  | `notifs         |
-| //github.com/fe | Notifications)  | notifications   | -web01.rdu3.fed |
-| dora-infra/fmn) | is an           | will be sent in | oraproject.org` |
-|                 | application     | Fedora Infra.   | `notifs-bac     |
-|                 | listening for   |                 | kend01.rdu3.fed |
-|                 | messages in     |                 | oraproject.org` |
-|                 | Fedora infra    |                 |                 |
+| [FMN](https:    | FMN (FedMSG     | Without FMN no  | &#96;notifs-web |
+| //github.com/fe | Notifications)  | notifications   | 01.rdu3.fedorap |
+| dora-infra/fmn) | is an           | will be sent in | roject.org&#96; |
+|                 | application     | Fedora Infra.   | &#96            |
+|                 | listening for   |                 | ;notifs-backend |
+|                 | messages in     |                 | 01.rdu3.fedorap |
+|                 | Fedora infra    |                 | roject.org&#96; |
 |                 | and based on    |                 |                 |
 |                 | the message     |                 |                 |
 |                 | sends           |                 |                 |
@@ -960,18 +899,22 @@ alt="fedora infra diagram.drawio" />
 | Name            | Description     | Why it's        | Hostname        |
 |                 |                 | critical?       |                 |
 +=================+=================+=================+=================+
-| [p              | Pungi is a tool | Without pungi   | `compose-       |
-| ungi](https://p | that creates    | it would be     | x86-01.rdu3.fed |
-| agure.io/pungi) | composes of     | much harder to  | oraproject.org` |
-|                 | Fedora. It      | create composes | `compose-bran   |
-|                 | makes sure that | of Fedora.      | ched01.rdu3.fed |
-|                 | all required    |                 | oraproject.org` |
-|                 | packages are    |                 | `compose-raw    |
-|                 | included in the |                 | hide01.rdu3.fed |
-|                 | compose and the |                 | oraproject.org` |
-|                 | compose is      |                 | `compose        |
-|                 | available after |                 | -iot01.rdu3.fed |
-|                 | finishing.      |                 | oraproject.org` |
+| [p              | Pungi is a tool | Without pungi   | &#              |
+| ungi](https://p | that creates    | it would be     | 96;compose-x86- |
+| agure.io/pungi) | composes of     | much harder to  | 01.rdu3.fedorap |
+|                 | Fedora. It      | create composes | roject.org&#96; |
+|                 | makes sure that | of Fedora.      | &#96;c          |
+|                 | all required    |                 | ompose-branched |
+|                 | packages are    |                 | 01.rdu3.fedorap |
+|                 | included in the |                 | roject.org&#96; |
+|                 | compose and the |                 | &#96;           |
+|                 | compose is      |                 | compose-rawhide |
+|                 | available after |                 | 01.rdu3.fedorap |
+|                 | finishing.      |                 | roject.org&#96; |
+|                 |                 |                 | &               |
+|                 |                 |                 | #96;compose-iot |
+|                 |                 |                 | 01.rdu3.fedorap |
+|                 |                 |                 | roject.org&#96; |
 +-----------------+-----------------+-----------------+-----------------+
 | [mi             | Mirrormanager   | Without it      | Hosted in       |
 | rrormanager](ht | is used to      | Fedora infra    | OpenShift       |
@@ -1004,9 +947,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -1019,9 +961,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community}
 
@@ -1039,25 +980,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation}
+## Content &amp; documentation {#_content_amp_documentation}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -1074,7 +1014,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -1091,18 +1032,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -1117,7 +1058,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -1125,7 +1066,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -1134,23 +1076,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization}
 
@@ -1175,20 +1116,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -1196,15 +1136,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -1214,18 +1153,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa}
 
@@ -1237,7 +1175,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -1248,7 +1186,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -1258,9 +1196,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -1269,17 +1206,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc}
 
@@ -1291,17 +1227,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -1309,13 +1245,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -1325,9 +1260,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -1336,9 +1270,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -1349,9 +1284,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -1359,8 +1293,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_2}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -1377,9 +1312,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -1392,9 +1326,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_2}
 
@@ -1412,25 +1345,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_2}
+## Content &amp; documentation {#_content_amp_documentation_2}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -1447,7 +1379,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -1464,18 +1397,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -1490,7 +1423,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -1498,7 +1431,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -1507,23 +1441,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_2}
 
@@ -1548,20 +1481,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -1569,15 +1501,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -1587,18 +1518,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_2}
 
@@ -1610,7 +1540,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -1621,7 +1551,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -1631,9 +1561,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -1642,17 +1571,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_2}
 
@@ -1664,17 +1592,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -1682,13 +1610,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -1698,9 +1625,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -1709,9 +1635,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -1722,9 +1649,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -1732,8 +1658,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_3}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -1750,9 +1677,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -1765,9 +1691,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_3}
 
@@ -1785,25 +1710,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_3}
+## Content &amp; documentation {#_content_amp_documentation_3}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -1820,7 +1744,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -1837,18 +1762,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -1863,7 +1788,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -1871,7 +1796,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -1880,23 +1806,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_3}
 
@@ -1921,20 +1846,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -1942,15 +1866,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -1960,18 +1883,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_3}
 
@@ -1983,7 +1905,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -1994,7 +1916,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -2004,9 +1926,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -2015,17 +1936,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_3}
 
@@ -2037,17 +1957,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -2055,13 +1975,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -2071,9 +1990,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -2082,9 +2000,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -2095,9 +2014,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -2105,8 +2023,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_4}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -2123,9 +2042,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -2138,9 +2056,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_4}
 
@@ -2158,25 +2075,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_4}
+## Content &amp; documentation {#_content_amp_documentation_4}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -2193,7 +2109,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -2210,18 +2127,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -2236,7 +2153,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -2244,7 +2161,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -2253,23 +2171,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_4}
 
@@ -2294,20 +2211,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -2315,15 +2231,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -2333,18 +2248,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_4}
 
@@ -2356,7 +2270,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -2367,7 +2281,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -2377,9 +2291,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -2388,17 +2301,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_4}
 
@@ -2410,17 +2322,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -2428,13 +2340,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -2444,9 +2355,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -2455,9 +2365,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -2468,9 +2379,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -2478,8 +2388,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_5}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -2496,9 +2407,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -2511,9 +2421,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_5}
 
@@ -2531,25 +2440,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_5}
+## Content &amp; documentation {#_content_amp_documentation_5}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -2566,7 +2474,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -2583,18 +2492,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -2609,7 +2518,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -2617,7 +2526,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -2626,23 +2536,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_5}
 
@@ -2667,20 +2576,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -2688,15 +2596,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -2706,18 +2613,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_5}
 
@@ -2729,7 +2635,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -2740,7 +2646,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -2750,9 +2656,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -2761,17 +2666,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_5}
 
@@ -2783,17 +2687,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -2801,13 +2705,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -2817,9 +2720,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -2828,9 +2730,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -2841,9 +2744,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -2851,8 +2753,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_6}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -2869,9 +2772,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -2884,9 +2786,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_6}
 
@@ -2904,25 +2805,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_6}
+## Content &amp; documentation {#_content_amp_documentation_6}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -2939,7 +2839,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -2956,18 +2857,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -2982,7 +2883,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -2990,7 +2891,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -2999,23 +2901,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_6}
 
@@ -3040,20 +2941,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -3061,15 +2961,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -3079,18 +2978,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_6}
 
@@ -3102,7 +3000,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -3113,7 +3011,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -3123,9 +3021,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -3134,17 +3031,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_6}
 
@@ -3156,17 +3052,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -3174,13 +3070,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -3190,9 +3085,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -3201,9 +3095,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -3214,9 +3109,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -3224,8 +3118,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_7}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -3242,9 +3137,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -3257,9 +3151,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_7}
 
@@ -3277,25 +3170,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_7}
+## Content &amp; documentation {#_content_amp_documentation_7}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -3312,7 +3204,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -3329,18 +3222,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -3355,7 +3248,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -3363,7 +3256,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -3372,23 +3266,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_7}
 
@@ -3413,20 +3306,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -3434,15 +3326,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -3452,18 +3343,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_7}
 
@@ -3475,7 +3365,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -3486,7 +3376,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -3496,9 +3386,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -3507,17 +3396,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_7}
 
@@ -3529,17 +3417,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -3547,13 +3435,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -3563,9 +3450,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -3574,9 +3460,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -3587,9 +3474,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -3597,8 +3483,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo) = Fedora
-      services
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Fedora services {#_fedora_services_8}
 
 This document describes the services ran by the Fedora Infrastructure
 (note that they may be maintained by other people or team).
@@ -3615,9 +3502,8 @@ Accounts [accounts.fp.o](https://accounts.fedoraproject.org/)
     Registering an account there is one of the first things to do if you
     plan to work on Fedora.
 
-    - [Sources](https://github.com/fedora-infra/noggin)
-
-    - [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/fedora-infra/noggin) &#42;
+    [Documentation](https://noggin-aaa.readthedocs.io/en/latest/)
 
 Fedora People [fedorapeople.org](https://fedorapeople.org/)
 
@@ -3630,9 +3516,8 @@ Notifications [apps.fp.o/notifications](https://apps.fedoraproject.org/notificat
 :   Centrally managed preferences for Fedora notifications via email or
     matrix
 
-    - [Sources](https://github.com/fedora-infra/fmn)
-
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
 ## Community {#_community_8}
 
@@ -3650,25 +3535,24 @@ AskNot [whatcanidoforfedora.org](https://whatcanidoforfedora.org/)
     site is a starting place for brand new contributors to help them
     figure out where they can hop on board!
 
-    - [Sources](https://github.com/fedora-infra/asknot-ng)
+    &#42; [Sources](https://github.com/fedora-infra/asknot-ng)
 
 Badges [badges.fp.o](https://badges.fedoraproject.org)
 
 :   Achievement system for Fedora contributors, awarding *badges* based
     on activity in the community.
 
-    - [Sources](https://github.com/fedora-infra/tahrir)
+    &#42; [Sources](https://github.com/fedora-infra/tahrir)
 
 Fedora Planet [fedoraplanet.org](http://fedoraplanet.org/)
 
 :   Feed aggregating the blogs of the community members that opted in,
     to share their opinion to a broader audience.
 
-    - [Sources](https://github.com/fedora-infra/fmn)
+    &#42; [Sources](https://github.com/fedora-infra/fmn) &#42;
+    [Documentation](https://fmn.readthedocs.io/en/stable/)
 
-    - [Documentation](https://fmn.readthedocs.io/en/stable/)
-
-## Content & documentation {#_content_documentation_8}
+## Content &amp; documentation {#_content_amp_documentation_8}
 
 Tools for wordsmiths --- the apps that store and archive the troves of
 content that Fedora authors produce.
@@ -3685,7 +3569,8 @@ Magazine [fedoramagazine.org](https://fedoramagazine.org/)
 :   Fedora Magazine is a WordPress-based site which delivers all the
     news of the Fedora Community.
 
-    - [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
+    &#42;
+    [Documentation](https://docs.fedoraproject.org/en-US/fedora-magazine/)
 
 Wiki [fp.o/wiki](https://fedoraproject.org/wiki)
 
@@ -3702,18 +3587,18 @@ Bugzilla [bugzilla.rh.com](https://bugzilla.redhat.com/)
 :   Bug tracker shared with and run by Red Hat, used to track issues
     with the Fedora packages.
 
-    - [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
+    &#42;
+    [Documentation](https://bugzilla.redhat.com/docs/en/html/index.html)
 
 Calendar [calendar.fp.o](https://calendar.fedoraproject.org/)
 
-:   The Fedora Calendar (or **fedocal**), you might have already
+:   The Fedora Calendar (or &#42;fedocal&#42;), you might have already
     guessed, is a public calendar service. You can create your own
     calendar, or subscribe to others. Want to be kept abrest of
     releases, freezes, and events? This is the tool for you.
 
-    - [Sources](https://pagure.io/fedocal/)
-
-    - [Documentation](https://fedocal.readthedocs.io/en/latest/)
+    &#42; [Sources](https://pagure.io/fedocal/) &#42;
+    [Documentation](https://fedocal.readthedocs.io/en/latest/)
 
 Discussion [discussion.fp.o](https://discussion.fedoraproject.org/)
 
@@ -3728,7 +3613,7 @@ Elections [elections.fp.o](https://elections.fedoraproject.org/)
     community; it is one of the things you can do to influence the
     development of Fedora.
 
-    - [Sources](https://pagure.io/elections/)
+    &#42; [Sources](https://pagure.io/elections/)
 
 Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
 
@@ -3736,7 +3621,8 @@ Mailing lists [lists.fp.o](https://lists.fedoraproject.org/)
     are lists for generic topics and lists more dedicated to a specific
     topic, there is for sure one for you.
 
-    - [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
+    &#42;
+    [Documentation](https://docs.mailman3.org/projects/hyperkitty/en/latest/)
 
 Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
 
@@ -3745,23 +3631,22 @@ Meetbot [meetbot.fp.o](https://meetbot.fedoraproject.org/)
     many and varied functions is logging matrix meetings, the archives
     of which you can find here.
 
-    - [Sources](https://github.com/fedora-infra/mote)
+    &#42; [Sources](https://github.com/fedora-infra/mote)
 
 Nuancier [apps.fp.o/nuancier](https://apps.fedoraproject.org/nuancier)
 
 :   Nuancier is a simple voting application for the supplementary
     wallpapers included in Fedora.
 
-    - [Sources](https://github.com/fedora-infra/nuancier/)
-
-    - [Documentation](https://nuancier.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/nuancier/) &#42;
+    [Documentation](https://nuancier.rtfd.org/)
 
 Paste [paste.centos.o](https://paste.centos.org/)
 
 :   Pastebin server, which can easily be used from the command line with
     [fpaste](https://apps.fedoraproject.org/packages/fpaste).
 
-    - [Sources](https://github.com/claudehohl/Stikked)
+    &#42; [Sources](https://github.com/claudehohl/Stikked)
 
 ## Localization {#_localization_8}
 
@@ -3786,20 +3671,19 @@ Bodhi [bodhi.fp.o](https://bodhi.fedoraproject.org/)
 :   The tool you will use to push your packages to the Fedora
     repositories as an update, first an update to be tested (repository:
     updates-testing) then a stable update (repository: updates).
-    Behold --- the **Magic Cabbage**.
+    Behold --- the &#42;Magic Cabbage&#42;.
 
-    - [Sources](https://github.com/fedora-infra/bodhi)
-
-    - [Documentation](https://bodhi.fedoraproject.org/docs)
+    &#42; [Sources](https://github.com/fedora-infra/bodhi) &#42;
+    [Documentation](https://bodhi.fedoraproject.org/docs)
 
 COPR [copr.fedorainfracloud.org](https://copr.fedorainfracloud.org/)
 
 :   Copr is an easy-to-use automatic build system providing a package
-    repository as its output. You can make your **own** repositories!
+    repository as its output. You can make your &#42;&#42;own&#42;&#42;
+    repositories!
 
-    - [Sources](https://pagure.io/copr/copr)
-
-    - [Documentation](https://docs.pagure.org/copr.copr/)
+    &#42; [Sources](https://pagure.io/copr/copr) &#42;
+    [Documentation](https://docs.pagure.org/copr.copr/)
 
 Koji [koji.fp.o](https://koji.fedoraproject.org/)
 
@@ -3807,15 +3691,14 @@ Koji [koji.fp.o](https://koji.fedoraproject.org/)
     project. It uses Mock to create chroot environments to perform
     builds that are both safe and trusted.
 
-    - [Sources](https://pagure.io/koji)
-
-    - [Documentation](https://docs.pagure.org/koji/)
+    &#42; [Sources](https://pagure.io/koji) &#42;
+    [Documentation](https://docs.pagure.org/koji/)
 
 MBS UI [re.github.ui/mbs-ui](https://release-engineering.github.io/mbs-ui/)
 
 :   Web interface atop the Fedora Module Build Service.
 
-    - [Sources](https://github.com/release-engineering/mbs-ui)
+    &#42; [Sources](https://github.com/release-engineering/mbs-ui)
 
 Packages [packages.fp.o](https://packages.fedoraproject.org/)
 
@@ -3825,18 +3708,17 @@ Packages [packages.fp.o](https://packages.fedoraproject.org/)
     applied, what bugs have been reported against them. All these kind
     of questions can be answered here.
 
-    - [Sources](https://pagure.io/fedora-packages-static)
+    &#42; [Sources](https://pagure.io/fedora-packages-static)
 
 SCM [src.fp.o](https://src.fedoraproject.org/)
 
-:   Ever wonder **exactly** what is in the new release of a Fedora
-    package? This is where the change histories of all the packages in
-    Fedora for every release of Fedora (and EPEL) are kept.. forever! A
-    gold mine.
+:   Ever wonder &#42;&#42;exactly&#42;&#42; what is in the new release
+    of a Fedora package? This is where the change histories of all the
+    packages in Fedora for every release of Fedora (and EPEL) are kept..
+    forever! A gold mine.
 
-    - [Sources](https://pagure.io/pagure-dist-git)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure-dist-git) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 ## QA {#_qa_8}
 
@@ -3848,7 +3730,7 @@ Blocker Bugs [qa.fp.o/blockerbugs](https://qa.fedoraproject.org/blockerbugs)
 :   The Fedora Blocker Bug Tracker tracks release blocking bugs and
     related updates in Fedora releases currently under development.
 
-    - [Sources](https://pagure.io/fedora-qa/blockerbugs)
+    &#42; [Sources](https://pagure.io/fedora-qa/blockerbugs)
 
 Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
 
@@ -3859,7 +3741,7 @@ Kerneltest [apps.fp.o/kerneltest](https://apps.fedoraproject.org/kerneltest)
     tricky driver issues, your assistance here would be much
     appreciated.
 
-    - [Sources](https://pagure.io/kernel-tests)
+    &#42; [Sources](https://pagure.io/kernel-tests)
 
 Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
 
@@ -3869,9 +3751,8 @@ Koschei [apps.fp.o/koschei](https://apps.fedoraproject.org/koschei/)
     failures early and provide relevant information to narrow down the
     cause.
 
-    - [Sources](https://github.com/fedora-infra/koschei)
-
-    - [Documentation](https://fedoraproject.org/wiki/Koschei)
+    &#42; [Sources](https://github.com/fedora-infra/koschei) &#42;
+    [Documentation](https://fedoraproject.org/wiki/Koschei)
 
 Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
 
@@ -3880,17 +3761,16 @@ Retrace [retrace.fp.o](https://retrace.fedoraproject.org/)
     problems users are hitting the most, and allows you to filter them
     by Fedora release, associate, or component.
 
-    - [Sources](https://github.com/abrt/abrt)
-
-    - [Documentation](https://abrt.readthedocs.io/en/latest/)
+    &#42; [Sources](https://github.com/abrt/abrt) &#42;
+    [Documentation](https://abrt.readthedocs.io/en/latest/)
 
 Review Status [fp.o/PackageReviewStatus](https://fedoraproject.org/PackageReviewStatus/)
 
 :   These pages contain periodically generated reports with information
-    on the current state of all Fedora **package review tickets** --- a
-    super useful window on bugzilla.
+    on the current state of all Fedora &#42;package review
+    tickets&#42; --- a super useful window on bugzilla.
 
-    - [Sources](https://pagure.io/Fedora-Infra/review_stats)
+    &#42; [Sources](https://pagure.io/Fedora-Infra/review_stats)
 
 ## Misc {#_misc_8}
 
@@ -3902,17 +3782,17 @@ DataGrepper [apps.fp.o/datagrepper](https://apps.fedoraproject.org/datagrepper/)
     can use it to dig into the history of the [fedora
     messaging](https://fedora-messaging.readthedocs.io/) message bus.
     You can grab events by username, by package, by message source, by
-    topic...​ you name it.
+    topic&#8230; you name it.
 
-    - [Sources](https://github.com/fedora-infra/datagrepper)
+    &#42; [Sources](https://github.com/fedora-infra/datagrepper)
 
 mdapi [mdapi.fp.o](https://mdapi.fedoraproject.org/)
 
 :   Small API exposing the metadata contained in different RPM
     repositories.
 
-    - [Sources (mdapi v4 -
-      \"Metasource\")](https://github.com/fedora-infra/mdapi)
+    &#42; [Sources (mdapi v4 -
+    \'Metasource\')](https://github.com/fedora-infra/mdapi)
 
 MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
 
@@ -3920,13 +3800,12 @@ MirrorManager [mirrormanager.fp.o](https://mirrormanager.fedoraproject.org/)
     not be possible without the donations of time, disk space, and
     bandwidth by hundreds of volunteer system administrators and their
     companies or institutions. Your fast download experience is made
-    possible by these donations. The list on the **MirrorManager** site
-    is dynamically generated every hour, listing only up-to-date
+    possible by these donations. The list on the &#42;MirrorManager&#42;
+    site is dynamically generated every hour, listing only up-to-date
     mirrors.
 
-    - [Sources](https://github.com/fedora-infra/mirrormanager2/)
-
-    - [Documentation](http://mirrormanager.rtfd.org/)
+    &#42; [Sources](https://github.com/fedora-infra/mirrormanager2/)
+    &#42; [Documentation](http://mirrormanager.rtfd.org/)
 
 Pagure [pagure.io](https://pagure.io/)
 
@@ -3936,9 +3815,8 @@ Pagure [pagure.io](https://pagure.io/)
     community of contributors by allowing them to fork your projects and
     contribute to it via the now-popular pull-request mechanism.
 
-    - [Sources](https://pagure.io/pagure)
-
-    - [Documentation](https://docs.pagure.org/pagure/usage/index.html)
+    &#42; [Sources](https://pagure.io/pagure) &#42;
+    [Documentation](https://docs.pagure.org/pagure/usage/index.html)
 
 PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
 
@@ -3947,9 +3825,10 @@ PDC [pdc.fp.o](https://pdc.fedoraproject.org/)
     processes and artifacts which are required to support automation of
     release engineering workflows.
 
-    - [Sources](https://github.com/product-definition-center/product-definition-center)
-
-    - [Documentation](https://product-definition-center.github.io/product-definition-center/)
+    &#42;
+    [Sources](https://github.com/product-definition-center/product-definition-center)
+    &#42;
+    [Documentation](https://product-definition-center.github.io/product-definition-center/)
 
 Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
 
@@ -3960,9 +3839,8 @@ Release Monitoring [release-monitoring.org](https://release-monitoring.org/)
     for filing bugs, attempting to automatically build packages, perform
     some preliminary QA checks, etc..
 
-    - [Sources](https://github.com/fedora-infra/anitya)
-
-    - [Documentation](https://anitya.readthedocs.io/en/stable/)
+    &#42; [Sources](https://github.com/fedora-infra/anitya) &#42;
+    [Documentation](https://anitya.readthedocs.io/en/stable/)
 
 Status [status.fp.o](https://status.fedoraproject.org/)
 
@@ -3970,8 +3848,9 @@ Status [status.fp.o](https://status.fedoraproject.org/)
     strikes our datacenter(s)). Sorry about that. You can use this
     website to check the status.
 
-    - [Sources](https://github.com/fedora-infra/statusfpo)
-      :experimental: :toc: = Service Level Expectations
+    &#42; [Sources](https://github.com/fedora-infra/statusfpo)
+
+# Service Level Expectations {#_service_level_expectations}
 
 The infrastructure team does not have any formal agreement or contract
 regarding the availability of its different services. However, we do try
@@ -3994,129 +3873,114 @@ on the availability of staff.
 
 ### Fedora Infrastructure to Community {#_fedora_infrastructure_to_community}
 
-- To have staff present and available in appropriate communication
-  channels to answer questions during primary hours.
-
-- Interact with community members with respect and courtesy.
-
-- Work with community members to get accurate and thorough documentation
-  of incidents, problems, or feature requests.
-
-- Resolve reported problems as soon as acknowledged if possible.
-
-- Clearly communicate estimated resolution times.
-
-- Move items which can not be resolved within a reasonable time to
-  future feature requests or close out.
+&#42; To have staff present and available in appropriate communication
+channels to answer questions during primary hours. &#42; Interact with
+community members with respect and courtesy. &#42; Work with community
+members to get accurate and thorough documentation of incidents,
+problems, or feature requests. &#42; Resolve reported problems as soon
+as acknowledged if possible. &#42; Clearly communicate estimated
+resolution times. &#42; Move items which can not be resolved within a
+reasonable time to future feature requests or close out.
 
 ### Community Members to Fedora Infrastructure {#_community_members_to_fedora_infrastructure}
 
-- Provide full and detailed reports of the problem or requested service.
-
-- Provide clear and complete contact information and times when
-  available.
-
-- Leave alternative contacts who can also be available in case of
-  vacation or other emergencies.
-
-- When contacted by Fedora IT, respond back within 5 business days.
+&#42; Provide full and detailed reports of the problem or requested
+service. &#42; Provide clear and complete contact information and times
+when available. &#42; Leave alternative contacts who can also be
+available in case of vacation or other emergencies. &#42; When contacted
+by Fedora IT, respond back within 5 business days.
 
 ### Fedora Infrastructure to Fedora Infrastructure {#_fedora_infrastructure_to_fedora_infrastructure}
 
-- Have a clear schedule of reachable hours.
-
-- Set and take regular vacation time to be rested.
-
-- Rotate through days on-call in matrix and tickets.
-
-- If adding a new service, be available outside of normal business hours
-  to help debug problems.
-
-- Follow procedures and checklists when adding or updating services.
-
-- Help with regular audits of the documentation
+&#42; Have a clear schedule of reachable hours. &#42; Set and take
+regular vacation time to be rested. &#42; Rotate through days on-call in
+matrix and tickets. &#42; If adding a new service, be available outside
+of normal business hours to help debug problems. &#42; Follow procedures
+and checklists when adding or updating services. &#42; Help with regular
+audits of the documentation
 
 ## Definition of Service Priorities {#_definition_of_service_priorities}
 
 The general design of service priorities is that of concentric circles,
 where items rely on services in their own circle or a circle below them.
 
-1.  **Critical** services are ones which Fedora Infrastructure will work
-    to be available 24x7 with a 52 week coverage if an unplanned outage
-    occurs. Services will be configured to be highly available with an
-    estimated planned/unplanned uptime of 95%. Response time should be
-    within 1 hour during business hours. Outside business hours this
-    will be addressed when the Fedora infra staff is available.
+1.  &#42;Critical&#42; services are ones which Fedora Infrastructure
+    will work to be available 24x7 with a 52 week coverage if an
+    unplanned outage occurs. Services will be configured to be highly
+    available with an estimated planned/unplanned uptime of 95%.
+    Response time should be within 1 hour during business hours. Outside
+    business hours this will be addressed when the Fedora infra staff is
+    available.
 
-2.  **Important** services are ones which Fedora Infrastructure will
-    work to be available 24x7 with a 50 week coverage. Response time
-    should be within a day during business days. Outside business days
-    this will be addressed when the Fedora infra staff is available.
+2.  &#42;Important&#42; services are ones which Fedora Infrastructure
+    will work to be available 24x7 with a 50 week coverage. Response
+    time should be within a day during business days. Outside business
+    days this will be addressed when the Fedora infra staff is
+    available.
 
-3.  **Normal** services are ones which Fedora Infrastructure will work
-    to be available during primary work hours. Problems outside of these
-    hours will be looked at as people are available. The services may be
-    available outside of these but are of a lower priority than
+3.  &#42;Normal&#42; services are ones which Fedora Infrastructure will
+    work to be available during primary work hours. Problems outside of
+    these hours will be looked at as people are available. The services
+    may be available outside of these but are of a lower priority than
     important services.
 
-4.  **Low priority** services are ones which are not critical or
+4.  &#42;Low priority&#42; services are ones which are not critical or
     important for the primary function of Fedora Infrastructure. They
     will be worked on and looked at during primary business hours.
 
-5.  **Third Party** services are ones which Fedora Infrastructure has
-    outsourced tools and services to. Uptimes, service hours, and
+5.  &#42;Third Party&#42; services are ones which Fedora Infrastructure
+    has outsourced tools and services to. Uptimes, service hours, and
     coverage are dictated by the third party. Depending on the type of
     problem, Fedora Infrastructure will act as an intermediary, or in
     the case of tools like retrace and COPR, direct the user to talk
     with the service owners.
 
-6.  **Deprecated** services are ones which Fedora Infrastructure are no
-    longer putting resources into. This may be because the project has
-    completed its mission, the upstream software is dead, or the
-    original reasons for the service no longer exists. Problems with
+6.  &#42;Deprecated&#42; services are ones which Fedora Infrastructure
+    are no longer putting resources into. This may be because the
+    project has completed its mission, the upstream software is dead, or
+    the original reasons for the service no longer exists. Problems with
     these services will be looked at during primary business hours.
-    Responses may be mostly \"Will Not Fix\".
+    Responses may be mostly \'Will Not Fix\'.
 
 ## Limitations on Support {#_limitations_on_support}
 
-- Some services that are associated with Fedora are provided by third
-  parties. Changes and outages which affect them are outside the control
-  of Fedora Infrastructure.
-
-- Fedora Infrastructure will prioritize issues and requests that affect
-  multiple people or teams over a smaller group or individual.
-
-- Fedora Infrastructure has limited budget and hours. Requests and
-  features will be prioritized to fit within those.
-
-- Fedora Infrastructure is bound by the laws and regulations of the
-  United States of America. This means that certain requests, changes
-  and problems are outside the ability of members to deal with.
+&#42; Some services that are associated with Fedora are provided by
+third parties. Changes and outages which affect them are outside the
+control of Fedora Infrastructure. &#42; Fedora Infrastructure will
+prioritize issues and requests that affect multiple people or teams over
+a smaller group or individual. &#42; Fedora Infrastructure has limited
+budget and hours. Requests and features will be prioritized to fit
+within those. &#42; Fedora Infrastructure is bound by the laws and
+regulations of the United States of America. This means that certain
+requests, changes and problems are outside the ability of members to
+deal with.
 
 ## Glossary {#_glossary}
 
-- **Planned outage**: A planned outage is one that is announced
-  sufficiently ahead of time to allow most users to plan around it.
+&#42; &#42;&#42;Planned outage&#42;&#42;: A planned outage is one that
+is announced sufficiently ahead of time to allow most users to plan
+around it.
 
-- **Unplanned outage**: An outage that occurs suddenly without proper
-  allowance for users to plan around it.
+&#42; &#42;&#42;Unplanned outage&#42;&#42;: An outage that occurs
+suddenly without proper allowance for users to plan around it.
 
-- **Scheduled outage**: An outage which has been scheduled to occur, but
-  may not have been announced with enough time for users to plan around
-  it.
+&#42; &#42;&#42;Scheduled outage&#42;&#42;: An outage which has been
+scheduled to occur, but may not have been announced with enough time for
+users to plan around it.
 
-- **High Availability**: Systems are available during specified
-  operating hours with any unplanned outages \'masked\' by other tools.
+&#42; &#42;&#42;High Availability&#42;&#42;: Systems are available
+during specified operating hours with any unplanned outages \'masked\'
+by other tools.
 
-- **Continuous Operations**: Systems are available 24 hours a day, 7
-  days a week, with no scheduled outages. Unplanned outages are possible
-  during this time.
+&#42; &#42;&#42;Continuous Operations&#42;&#42;: Systems are available
+24 hours a day, 7 days a week, with no scheduled outages. Unplanned
+outages are possible during this time.
 
-- **Continuous Availability**: Systems or applications are available
-  24x7 with no planned or unplanned outages. This is a combination of
-  high availability and continuous operations.
+&#42; &#42;&#42;Continuous Availability&#42;&#42;: Systems or
+applications are available 24x7 with no planned or unplanned outages.
+This is a combination of high availability and continuous operations.
 
-- **Level of availability**:
+&#42; &#42;&#42;Level of availability&#42;&#42;:
 
 +-----------------------------------+-----------------------------------+
 | Percentage                        | Max outage time per day           |
@@ -4130,251 +3994,128 @@ where items rely on services in their own circle or a circle below them.
 | 99.9%                             | 1.4 minutes                       |
 +-----------------------------------+-----------------------------------+
 
-- **Committed Hours of Availability**: Hours that an organization will
-  have staff available to help deal with issues with systems, services,
-  and applications. Also known as \"Regular Business Hours\"
+&#42; &#42;&#42;Committed Hours of Availability&#42;&#42;: Hours that an
+organization will have staff available to help deal with issues with
+systems, services, and applications. Also known as \'Regular Business
+Hours\'
 
-- **Outage Hours**: Total number of hours of outage considered normal
-  for calculating achieved availability.
+&#42; &#42;&#42;Outage Hours&#42;&#42;: Total number of hours of outage
+considered normal for calculating achieved availability.
 
-- **Response Time**: The time between the users notification of the
-  problem and when the help desk will begin to work on that problem.
+&#42; &#42;&#42;Response Time&#42;&#42;: The time between the users
+notification of the problem and when the help desk will begin to work on
+that problem.
 
-- **Resolution Update**: The frequency of updates to tickets
+&#42; &#42;&#42;Resolution Update&#42;&#42;: The frequency of updates to
+tickets
 
 ## Estimated Time of Resolution: {#_estimated_time_of_resolution}
 
 By priority Levels:
 
-- **Emergency**: Problems which are site wide, and affect the core
-  functions of the project. These problems are priority and should be
-  solved as soon as possible. Estimated time of resolution is within
-  hours.
+&#42; &#42;&#42;Emergency&#42;&#42;: Problems which are site wide, and
+affect the core functions of the project. These problems are priority
+and should be solved as soon as possible. Estimated time of resolution
+is within hours.
 
-- **Urgent**: Problems which affect multiple functions and groups in the
-  project. These problems will be solved when there is no emergency
-  going on. Estimated time of resolution is within a day.
+&#42; &#42;&#42;Urgent&#42;&#42;: Problems which affect multiple
+functions and groups in the project. These problems will be solved when
+there is no emergency going on. Estimated time of resolution is within a
+day.
 
-- **Normal**: Problems which affect a single user from performing needed
-  duties. These problems will be looked at when staff is available.
-  Estimated time resolution is within a week.
+&#42; &#42;&#42;Normal&#42;&#42;: Problems which affect a single user
+from performing needed duties. These problems will be looked at when
+staff is available. Estimated time resolution is within a week.
 
-- **Low**: A request for service, instruction, information that has no
-  immediate impact on services. Those problems are lowest priority.
-  Estimated time of resolution is within a month. :experimental: :toc: =
-  Services SLE
+&#42; &#42;&#42;Low&#42;&#42;: A request for service, instruction,
+information that has no immediate impact on services. Those problems are
+lowest priority. Estimated time of resolution is within a month.
+
+# Services SLE {#_services_sle}
 
 Here is the list of our services per SLE level. For memory these levels
 are presented in our [SLE Documentation](sle.xml).
 
 ## Critical {#_critical}
 
-- Authentication/authorization (Ipsilon) <https://id.fedoraproject.org>
-
-- Backups
-
-- Bastion
-
-- Configuration Management (ansible)
-
-- DHCP/PXE
-
-- DNS
-
-- HAProxy <https://admin.fedoraproject.org/haproxy/proxy01>
-
-- IPA <http://id.fedoraproject.org/ipa>
-
-- Source control (git)
+&#42; Authentication/authorization (Ipsilon)
+<https://id.fedoraproject.org> &#42; Backups &#42; Bastion &#42;
+Configuration Management (ansible) &#42; DHCP/PXE &#42; DNS &#42;
+HAProxy <https://admin.fedoraproject.org/haproxy/proxy01> &#42; IPA
+<http://id.fedoraproject.org/ipa> &#42; Source control (git)
 
 ## Important {#_important}
 
-- Authentication/Authorization (FAS)
-  <https://accounts.fedoraproject.org>
-
-- Autosign
-
-- Bodhi <https://bodhi.fedoraproject.org>
-
-- Buildhosts
-
-- Composer
-
-- Container registry <https://registry.fedoraproject.org/>
-
-- Downloads <https://dl.fedoraproject.org/>
-
-- Email gateway `bastion.fedoraproject.org`
-
-- FASJSON <http://fasjson.fedoraproject.org/>
-
-- FedImg
-
-- Fedora Messaging
-
-- Fedora Souce code <https://src.fedoraproject.org/>
-
-- Greenwave
-
-- Koji <https://koji.fedoraproject.org/>
-
-- Logging
-
-- MDApi <https://apps.fedoraproject.org/mdapi/>
-
-- Monitor gating
-
-- Messaging bridges
-
-- MirrorManager <https://mirrormanager.fedoraproject.org/>
-
-- MySQL databases
-
-- Nagios <https://nagios.fedoraproject.org>
-
-- ODCS
-
-- OpenShift
-
-- OpenVPN
-
-- Postgres databases
-
-- Product Definition Center <https://pdc.fedoraproject.org/>
-
-- ResultsDB
-
-- ResultsDB CI listener
-
-- Toddlers
+&#42; Authentication/Authorization (FAS)
+<https://accounts.fedoraproject.org> &#42; Autosign &#42; Bodhi
+<https://bodhi.fedoraproject.org> &#42; Buildhosts &#42; Composer &#42;
+Container registry <https://registry.fedoraproject.org/> &#42; Downloads
+<https://dl.fedoraproject.org/> &#42; Email gateway
+&#96;bastion.fedoraproject.org&#96; &#42; FASJSON
+<http://fasjson.fedoraproject.org/> &#42; FedImg &#42; Fedora Messaging
+&#42; Fedora Souce code <https://src.fedoraproject.org/> &#42; Greenwave
+&#42; Koji <https://koji.fedoraproject.org/> &#42; Logging &#42; MDApi
+<https://apps.fedoraproject.org/mdapi/> &#42; Monitor gating &#42;
+Messaging bridges &#42; MirrorManager
+<https://mirrormanager.fedoraproject.org/> &#42; MySQL databases &#42;
+Nagios <https://nagios.fedoraproject.org> &#42; ODCS &#42; OpenShift
+&#42; OpenVPN &#42; Postgres databases &#42; Product Definition Center
+<https://pdc.fedoraproject.org/> &#42; ResultsDB &#42; ResultsDB CI
+listener &#42; Toddlers
 
 ## Normal {#_normal}
 
-- CertGetter
-
-- Datagrepper <https://apps.fedoraproject.org/datagrepper/>
-
-- Docsbuilding
-
-- Docstranslation
-
-- Documentation <https://docs.fedoraproject.org/>
-
-- FAS2Discourse
-
-- GeoIP <https://geoip.fedoraproject.org/>
-
-- Ipsilon website
-
-- Kerneltest <https://apps.fedoraproject.org/kerneltest>
-
-- Koschei
-
-- Mailing Lists <https://lists.fedoraproject.org>
-
-- MBS <https://mbs.fedoraproject.org/>
-
-- MemCached
-
-- Notifications <https://notifications.fedoraproject.org/>
-
-- OSBS <https://osbs.fedoraproject.org/>
-
-- Pagure <https://pagure.io>
-
-- rpmautospec
-
-- WaiverDB <http://waiverdb.fedoraproject.org/>
-
-- Wiki <https://fedoraproject.org/wiki/Fedora_Project_Wiki>
+&#42; CertGetter &#42; Datagrepper
+<https://apps.fedoraproject.org/datagrepper/> &#42; Docsbuilding &#42;
+Docstranslation &#42; Documentation <https://docs.fedoraproject.org/>
+&#42; FAS2Discourse &#42; GeoIP <https://geoip.fedoraproject.org/> &#42;
+Ipsilon website &#42; Kerneltest
+<https://apps.fedoraproject.org/kerneltest> &#42; Koschei &#42; Mailing
+Lists <https://lists.fedoraproject.org> &#42; MBS
+<https://mbs.fedoraproject.org/> &#42; MemCached &#42; Notifications
+<https://notifications.fedoraproject.org/> &#42; OSBS
+<https://osbs.fedoraproject.org/> &#42; Pagure <https://pagure.io> &#42;
+rpmautospec &#42; WaiverDB <http://waiverdb.fedoraproject.org/> &#42;
+Wiki <https://fedoraproject.org/wiki/Fedora_Project_Wiki>
 
 ## Low {#_low}
 
-- Asknot <http://whatcanidoforfedora.org/>
-
-- Badges <https://badges.fedoraproject.org/>
-
-- Blocker Bugs <https://qa.fedoraproject.org/blockerbugs/>
-
-- bugzilla2fedmsg
-
-- Datanommer
-
-- Discourse2fedmsg
-
-- Elections <https://apps.fedoraproject.org/#Elections>
-
-- FedoCal <https://apps.fedoraproject.org/#FedoCal>
-
-- Fedora People <https://fedorapeople.org/>
-
-- Meetbot <https://apps.fedoraproject.org/#Meetbot>
-
-- Packager dashboard <https://packager-dashboard.fedoraproject.org/>
-
-- Packages <https://packages.fedoraproject.org/>
-
-- Release monitoring (Anitya) <https://release-monitoring.org/>
-
-- Release monitoring (the-new-hotness)
-
-- Review Status <https://fedoraproject.org/PackageReviewStatus/>
-
-- The Planet <https://fedoraplanet.org/>
-
-- Torrents <https://torrent.fedoraproject.org/>
-
-- Websites building
+&#42; Asknot <http://whatcanidoforfedora.org/> &#42; Badges
+<https://badges.fedoraproject.org/> &#42; Blocker Bugs
+<https://qa.fedoraproject.org/blockerbugs/> &#42; bugzilla2fedmsg &#42;
+Datanommer &#42; Discourse2fedmsg &#42; Elections
+<https://apps.fedoraproject.org/&#35;Elections> &#42; FedoCal
+<https://apps.fedoraproject.org/&#35;FedoCal> &#42; Fedora People
+<https://fedorapeople.org/> &#42; Meetbot
+<https://apps.fedoraproject.org/&#35;Meetbot> &#42; Packager dashboard
+<https://packager-dashboard.fedoraproject.org/> &#42; Packages
+<https://packages.fedoraproject.org/> &#42; Release monitoring (Anitya)
+<https://release-monitoring.org/> &#42; Release monitoring
+(the-new-hotness) &#42; Review Status
+<https://fedoraproject.org/PackageReviewStatus/> &#42; The Planet
+<https://fedoraplanet.org/> &#42; Torrents
+<https://torrent.fedoraproject.org/> &#42; Websites building
 
 ## Third Party {#_third_party}
 
 Outside of Fedora Infrastructure to fix.
 
-- Bugzilla <https://bugzilla.redhat.com/>
+&#42; Bugzilla <https://bugzilla.redhat.com/> &#42; COPR
+<https://copr.fedorainfracloud.org/> &#42; CoreOS CI &#42; CoreOS
+Cincinnati &#42; CoreOS Koji tagger &#42; CoreOS OSTree importer &#42;
+Discussions <https://discussion.fedoraproject.org/> &#42; Fedora CoreOS
+pipeline &#42; Fedora Magazine <https://fedoramagazine.org/> &#42;
+Fedora Community Blog <https://communityblog.fedoraproject.org/> &#42;
+Fedora OSTree Pruner &#42; Flatpak Indexer &#42; Libera.chat IRC
+<https://libera.chat/> &#42; Matrix <https://chat.fedoraproject.org/>
+&#42; Message tagging service &#42; Network connectivity to RDU3,
+RDU2-CC &#42; OpenQA &#42; Paste <https://paste.fedoraproject.org/>
+&#42; Retrace <https://retrace.fedoraproject.org> &#42; Status
+<https://status.fedoraproject.org> &#42; TestDays
+<https://testdays.fedoraproject.org/> &#42; TranStats
+<https://transtats.fedoraproject.org/> &#42; Zezere
 
-- COPR <https://copr.fedorainfracloud.org/>
-
-- CoreOS CI
-
-- CoreOS Cincinnati
-
-- CoreOS Koji tagger
-
-- CoreOS OSTree importer
-
-- Discussions <https://discussion.fedoraproject.org/>
-
-- Fedora CoreOS pipeline
-
-- Fedora Magazine <https://fedoramagazine.org/>
-
-- Fedora Community Blog <https://communityblog.fedoraproject.org/>
-
-- Fedora OSTree Pruner
-
-- Flatpak Indexer
-
-- Libera.chat IRC <https://libera.chat/>
-
-- Matrix <https://chat.fedoraproject.org/>
-
-- Message tagging service
-
-- Network connectivity to RDU3, RDU2-CC
-
-- OpenQA
-
-- Paste <https://paste.fedoraproject.org/>
-
-- Retrace <https://retrace.fedoraproject.org>
-
-- Status <https://status.fedoraproject.org>
-
-- TestDays <https://testdays.fedoraproject.org/>
-
-- TranStats <https://transtats.fedoraproject.org/>
-
-- Zezere = User guide Communishift
+# User guide Communishift {#_user_guide_communishift}
 
 The Communishift is a community
 [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift)
@@ -4385,8 +4126,8 @@ for Fedora related projects.
 
 To request a new namespace in Communishift go to [Fedora Infrastructure
 ticket tracker](https://forge.fedoraproject.org/infra/tickets/issues),
-open a new issue and use `communishift` template (look at the `Types`
-field).
+open a new issue and use &#96;communishift&#96; template (look at the
+&#96;Types&#96; field).
 
 If you need any help with your OpenShift project, please refer to
 official [OpenShift
@@ -4394,11 +4135,7 @@ documentation](https://docs.openshift.com/dedicated/welcome/index.html).
 
 With the namespace provided you will get following default resources:
 
-- 1 CPU
-
-- 1 Gi Memory (2 Gi limit)
-
-- 5 Gi persistent storage
+&#42; 1 CPU &#42; 1 Gi Memory (2 Gi limit) &#42; 5 Gi persistent storage
 
 :::: note
 ::: title

@@ -8,13 +8,13 @@ The first thing you probably want to do is get plugged in to all the right sourc
 There are six steps you can take to get up to speed with Quality efforts (in rough order of precedence):
 
 
-* Create a https://docs.fedoraproject.org/en-US/fedora-accounts[Fedora account^]
-* Subscribe to the https://lists.fedoraproject.org/archives/list/test@lists.fedoraproject.org/[test^] mailing list
-* https://fedoraproject.org/wiki/QA/Join#self-introduction[Introduce yourself^] to the team!
-* Create a https://bugzilla.redhat.com/createaccount.cgi[Bugzilla Account^]
-* Join our link:pass:[https://chat.fedoraproject.org/#/room/#quality:fedoraproject.org][&#35;quality:fedoraproject.org^] Matrix room through https://chat.fedoraproject.org/[Fedora Chat^] (or link:https://matrix.to/#/#quality:fedoraproject.org[other clients^])
-* Subscribe to the https://discussion.fedoraproject.org/tag/quality-team[quality-team^] tag at https://discussion.fedoraproject.org/[Fedora Discussion^]
-* https://fedoraproject.org/wiki/QA/Join#onboarding-call[Attend the onboarding call^]
+\&#42; Create a https://docs.fedoraproject.org/en-US/fedora-accounts[Fedora account^]
+\&#42; Subscribe to the https://lists.fedoraproject.org/archives/list/test@lists.fedoraproject.org/[test^] mailing list
+\&#42; https://fedoraproject.org/wiki/QA/Join\&#35;self-introduction[Introduce yourself^] to the team!
+\&#42; Create a https://bugzilla.redhat.com/createaccount.cgi[Bugzilla Account^]
+\&#42; Join our link:pass:[https://chat.fedoraproject.org/\&#35;/room/\&#35;quality:fedoraproject.org][\&amp;\&#35;35;quality:fedoraproject.org^] Matrix room through https://chat.fedoraproject.org/[Fedora Chat^] (or link:https://matrix.to/\&#35;/\&#35;quality:fedoraproject.org[other clients^])
+\&#42; Subscribe to the https://discussion.fedoraproject.org/tag/quality-team[quality-team^] tag at https://discussion.fedoraproject.org/[Fedora Discussion^]
+\&#42; https://fedoraproject.org/wiki/QA/Join\&#35;onboarding-call[Attend the onboarding call^]
 
 == What are you looking to do?
 
@@ -23,23 +23,26 @@ Whether you are looking to test a https://fedoraproject.org/wiki/Releases[stable
 
 === If you want to:
 
-* Work on an upcoming stable release
-- https://fedoraproject.org/wiki/QA/Join#release-validation[Release Validation Testing^]
-- https://fedoraproject.org/wiki/QA:Updates_Testing#What_to_test.2C_testing.2C_and_reporting_results[Updates Testing^]
+\&#42; Work on an upcoming stable release
+- https://fedoraproject.org/wiki/QA/Join\&#35;release-validation[Release Validation Testing^]
+- https://fedoraproject.org/wiki/QA:Updates_Testing\&#35;What_to_test.2C_testing.2C_and_reporting_results[Updates Testing^]
 
-* Work on testing new package updates
-- https://fedoraproject.org/wiki/QA:Updates_Testing#What_to_test.2C_testing.2C_and_reporting_results[Updates Testing^]
+\&#42; Work on testing new package updates
+- https://fedoraproject.org/wiki/QA:Updates_Testing\&#35;What_to_test.2C_testing.2C_and_reporting_results[Updates Testing^]
 - https://fedoraproject.org/wiki/Fedora_Easy_Karma[Fedora Easy Karma^]
 
-* I want to do something else!
-- https://fedoraproject.org/wiki/QA/Join#test-days[Join a Test Day^]
-- https://fedoraproject.org/wiki/QA/Join#create-testcases[Create Test Cases^]
-- https://fedoraproject.org/wiki/QA/Join#develop-tools[Develop Tools^]
-- https://fedoraproject.org/wiki/QA/Join#triage[Triage Bugs^]
+\&#42; I want to do something else!
+- https://fedoraproject.org/wiki/QA/Join\&#35;test-days[Join a Test Day^]
+- https://fedoraproject.org/wiki/QA/Join\&#35;create-testcases[Create Test Cases^]
+- https://fedoraproject.org/wiki/QA/Join\&#35;develop-tools[Develop Tools^]
+- https://fedoraproject.org/wiki/QA/Join\&#35;triage[Triage Bugs^]
 
-For all of those tasks, it would be good to have some familiarity with our Bugzilla instance. A lot of contribution to Fedora Quality comes through bug reports. All you need is a http://bugzilla.redhat.com/[Bugzilla^] account: https://bugzilla.redhat.com/createaccount.cgi[create your account^]. Please make sure that the email addresses for your Fedora account and the Bugzilla account are the same. Our https://fedoraproject.org/wiki/BugsAndFeatureRequests[bug reporting practices^] provide some good background for filing bugs. If you want to discuss the bugs before reporting, QA members can be found on https://fedoraproject.org/wiki/QA#Communicate[several channels^]. Experienced Quality members are more than happy to act as mentors for new members to help them get started.
+For all of those tasks, it would be good to have some familiarity with our Bugzilla instance. A lot of contribution to Fedora Quality comes through bug reports. All you need is a http://bugzilla.redhat.com/[Bugzilla^] account: https://bugzilla.redhat.com/createaccount.cgi[create your account^]. Please make sure that the email addresses for your Fedora account and the Bugzilla account are the same. Our https://fedoraproject.org/wiki/BugsAndFeatureRequests[bug reporting practices^] provide some good background for filing bugs. If you want to discuss the bugs before reporting, QA members can be found on https://fedoraproject.org/wiki/QA\&#35;Communicate[several channels^]. Experienced Quality members are more than happy to act as mentors for new members to help them get started.
 There is no requirement of programming knowledge. However, being familiar with Fedora and Linux in general will be extremely useful.
 
 == More information
 
 If you haven't found here what you were looking for, try to visit our https://fedoraproject.org/wiki/QA[Fedora Quality wiki page] to see more information about our team and activities.
+
+
+

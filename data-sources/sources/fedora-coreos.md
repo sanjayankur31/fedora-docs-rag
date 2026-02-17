@@ -2,14 +2,15 @@
 
 ## Streams {#_streams}
 
-There are three Fedora CoreOS (FCOS) update streams available: `stable`,
-`testing`, and `next`. In general, you will want to use `stable`, but it
-is recommended to run some machines on `testing` and `next` as well and
-provide feedback.
+There are three Fedora CoreOS (FCOS) update streams available:
+&#96;stable&#96;, &#96;testing&#96;, and &#96;next&#96;. In general, you
+will want to use &#96;stable&#96;, but it is recommended to run some
+machines on &#96;testing&#96; and &#96;next&#96; as well and provide
+feedback.
 
 Each stream has a canonical URL representing its current state in JSON
-format, known as \"stream metadata\". For example, the stream metadata
-URL for `stable` is:
+format, known as \'stream metadata\'. For example, the stream metadata
+URL for &#96;stable&#96; is:
 <https://builds.coreos.fedoraproject.org/streams/stable.json>
 
 For automating Fedora CoreOS installations, it is expected that you will
@@ -49,11 +50,11 @@ A more complete example that allows customization is described in
 Once the VM has finished booting, its IP addresses will appear on the
 console. By design, there are no hard-coded default credentials.
 
-If you set up an [SSH key](authentication.xml) for the default `core`
-user, you can SSH into the VM and explore the OS:
+If you set up an [SSH key](authentication.xml) for the default
+&#96;core&#96; user, you can SSH into the VM and explore the OS:
 
-``` bash
-ssh core@<ip address>
+``` _bash
+ssh core@\&lt;ip address\&gt;
 ```
 
 # Getting in touch {#_getting_in_touch}
@@ -67,16 +68,18 @@ Bugs can be reported to the [Fedora CoreOS
 Tracker](https://github.com/coreos/fedora-coreos-tracker).
 
 For live questions, feel free to reach out in the
-[#coreos:fedoraproject.org room on
-Matrix](https://chat.fedoraproject.org/#/room/#coreos:fedoraproject.org).
+[&#35;coreos:fedoraproject.org room on
+Matrix](https://chat.fedoraproject.org/&#35;/room/&#35;coreos:fedoraproject.org).
 
 For doubts and longer discussions related to Fedora CoreOS, a
 [forum](https://discussion.fedoraproject.org/tag/coreos) and a [mailing
 list](https://lists.fedoraproject.org/archives/list/coreos@lists.fedoraproject.org/)
-are available. \* Provisioning Machines = Stream metadata
+are available.
+
+&#42; Provisioning Machines = Stream metadata
 
 Metadata about Fedora CoreOS is available in a custom JSON format,
-called \"stream metadata\". For maintaining automation, it is expected
+called \'stream metadata\'. For maintaining automation, it is expected
 that you will interact with this stream metadata.
 
 The format is stable, and intended to be relatively self-documenting.
@@ -85,17 +88,18 @@ navigating to the URL will render the JSON in an easy-to-read form.
 
 # Canonical URL {#_canonical_url}
 
-The URL for the `stable` stream is:
+The URL for the &#96;stable&#96; stream is:
 <https://builds.coreos.fedoraproject.org/streams/stable.json> You can
-similarly replace `stable` here with other available [Update
+similarly replace &#96;stable&#96; here with other available [Update
 Streams](update-streams.xml).
 
 # Using coreos-installer to download {#_using_coreos_installer_to_download}
 
-The `coreos-installer` tool has built-in support for fetching artifacts:
+The &#96;coreos-installer&#96; tool has built-in support for fetching
+artifacts:
 
-``` bash
-STREAM="stable"
+``` _bash
+STREAM='stable'
 coreos-installer download --decompress -s $STREAM -p openstack -f qcow2.xz
 ```
 
@@ -104,18 +108,19 @@ coreos-installer download --decompress -s $STREAM -p openstack -f qcow2.xz
 There is an official
 [coreos/stream-metadata-go](https://github.com/coreos/stream-metadata-go)
 library for software written in the Go programming language. The
-`README.md` file in that repository contains a link to example code.
+&#96;README.md&#96; file in that repository contains a link to example
+code.
 
 # Example: Script ec2 CLI {#_example_script_ec2_cli}
 
-Fetch the latest `x86_64` AMI in `us-west-1` and use it to launch an
-instance:
+Fetch the latest &#96;x86_64&#96; AMI in &#96;us-west-1&#96; and use it
+to launch an instance:
 
-``` bash
-$ AMI=$(curl -sSL https://builds.coreos.fedoraproject.org/streams/stable.json | jq -r '.architectures.x86_64.images.aws.regions["us-west-1"].image')
-$ echo "${AMI}"
+``` _bash
+$ AMI=$(curl -sSL https://builds.coreos.fedoraproject.org/streams/stable.json | jq -r '.architectures.x86_64.images.aws.regions['us-west-1'].image')
+$ echo '${AMI}'
 ami-021238084bf8c95ff
-$ aws ec2 run-instances --region us-west-1 --image-id "${AMI}" ...
+$ aws ec2 run-instances --region us-west-1 --image-id '${AMI}' \&#8230;
 ```
 
 # Installing CoreOS on Bare Metal {#_installing_coreos_on_bare_metal}
@@ -123,17 +128,14 @@ $ aws ec2 run-instances --region us-west-1 --image-id "${AMI}" ...
 This guide provides instructions to install Fedora CoreOS to bare metal.
 Three options are available:
 
-- Installing from live ISO
-
-- Installing from PXE
-
-- Installing from the container
+&#42; Installing from live ISO &#42; Installing from PXE &#42;
+Installing from the container
 
 ## Prerequisite {#_prerequisite}
 
 Before installing FCOS, you must have an Ignition configuration file and
-host it somewhere (e.g. using `python3 -m http.server`). If you do not
-have one, see [Producing an Ignition File](producing-ign.xml).
+host it somewhere (e.g. using &#96;python3 -m http.server&#96;). If you
+do not have one, see [Producing an Ignition File](producing-ign.xml).
 
 :::: note
 ::: title
@@ -152,7 +154,7 @@ To install FCOS onto bare metal using the live ISO interactively, follow
 these steps:
 
 - Download the latest ISO image from the [download
-  page](https://fedoraproject.org/coreos/download/?stream=stable#baremetal)
+  page](https://fedoraproject.org/coreos/download/?stream=stable&#35;baremetal)
   or with podman (see
   [documentation](https://coreos.github.io/coreos-installer/cmd/download/)
   for options):
@@ -162,8 +164,8 @@ these steps:
     podman run --security-opt label=disable --pull=always --rm -v .:/data -w /data \
     quay.io/coreos/coreos-installer:release download -s stable -p metal -f iso
 
-Note this is just using `coreos-installer` as a tool to download the
-ISO.
+Note this is just using &#96;coreos-installer&#96; as a tool to download
+the ISO.
 
 :::: note
 ::: title
@@ -173,15 +175,15 @@ You can boot the live ISO in either legacy BIOS or UEFI mode, regardless
 of what mode the OS will use once installed.
 ::::
 
-- Burn the ISO to disk. On Linux and macOS, you can use `dd`. On
-  Windows, you can use [Rufus](https://rufus.ie/) in \"DD Image\" mode.
+- Burn the ISO to disk. On Linux and macOS, you can use &#96;dd&#96;. On
+  Windows, you can use [Rufus](https://rufus.ie/) in \'DD Image\' mode.
 
 - Boot it on the target system. The ISO is capable of bringing up a
   fully functioning FCOS system purely from memory (i.e. without using
   any disk storage). Once booted, you will have access to a bash command
   prompt.
 
-- You can now run `coreos-installer`:
+- You can now run &#96;coreos-installer&#96;:
 
 <!-- -->
 
@@ -189,9 +191,9 @@ of what mode the OS will use once installed.
     --ignition-url https://example.com/example.ign
 
 Once the installation is complete, you can reboot the system using
-`sudo reboot`. After rebooting, the first boot process begins. It is at
-this time that Ignition ingests the configuration file and provisions
-the system as specified.
+&#96;sudo reboot&#96;. After rebooting, the first boot process begins.
+It is at this time that Ignition ingests the configuration file and
+provisions the system as specified.
 
 For more advanced ISO installs, including automation, see below. For
 more about the live ISO image, see the [live image
@@ -201,8 +203,8 @@ reference](live-reference.xml).
 ::: title
 :::
 
-Check out `coreos-installer install --help` for more options on how to
-install Fedora CoreOS.
+Check out &#96;coreos-installer install \--help&#96; for more options on
+how to install Fedora CoreOS.
 ::::
 
 ## Installing from the network {#_installing_from_the_network}
@@ -212,9 +214,9 @@ install Fedora CoreOS.
 :::
 
 Booting the live PXE image requires at least 2 GiB of RAM with the
-`coreos.live.rootfs_url` kernel argument, and 4 GiB otherwise. You can
-install in either legacy boot (BIOS) mode or in UEFI mode, regardless of
-what mode the OS will use once installed.
+&#96;coreos.live.rootfs_url&#96; kernel argument, and 4 GiB otherwise.
+You can install in either legacy boot (BIOS) mode or in UEFI mode,
+regardless of what mode the OS will use once installed.
 ::::
 
 ### Installing from PXE {#_installing_from_pxe}
@@ -228,8 +230,8 @@ To install from PXE, follow these steps:
     podman run --security-opt label=disable --pull=always --rm -v .:/data -w /data \
     quay.io/coreos/coreos-installer:release download -f pxe
 
-- Follow this example `pxelinux.cfg` for booting the installer images
-  with PXELINUX:
+- Follow this example &#96;pxelinux.cfg&#96; for booting the installer
+  images with PXELINUX:
 
 <!-- -->
 
@@ -243,11 +245,11 @@ To install from PXE, follow these steps:
 
 For more details on how to use this information, see this [blog
 post](https://dustymabe.com/2019/01/04/easy-pxe-boot-testing-with-only-http-using-ipxe-and-libvirt/)
-for testing a PXE installation via a local VM and `libvirt`. For other
-supported kernel command-line options, see the [coreos-installer
-docs](https://coreos.github.io/coreos-installer/getting-started/#kernel-command-line-options-for-coreos-installer-running-as-a-service),
-but note that `coreos-installer pxe customize` (see below) is more
-flexible. For more about the live PXE image, see the [live image
+for testing a PXE installation via a local VM and &#96;libvirt&#96;. For
+other supported kernel command-line options, see the [coreos-installer
+docs](https://coreos.github.io/coreos-installer/getting-started/&#35;kernel-command-line-options-for-coreos-installer-running-as-a-service),
+but note that &#96;coreos-installer pxe customize&#96; (see below) is
+more flexible. For more about the live PXE image, see the [live image
 reference](live-reference.xml).
 
 ### Installing from iPXE {#_installing_from_ipxe}
@@ -258,9 +260,9 @@ to fetch and load FCOS artifacts.
 The example below shows how to load those directly from Fedora
 infrastructure. For performance and reliability reasons it is
 recommended to mirror them on the local infrastructure, and then tweak
-the `BASEURL` as needed.
+the &#96;BASEURL&#96; as needed.
 
-    #!ipxe
+    \#!ipxe
 
     set STREAM stable
     set VERSION {stable-version}
@@ -276,37 +278,39 @@ the `BASEURL` as needed.
 
 For other supported kernel command-line options, see the
 [coreos-installer
-docs](https://coreos.github.io/coreos-installer/getting-started/#kernel-command-line-options-for-coreos-installer-running-as-a-service),
-but note that `coreos-installer pxe customize` (see below) is more
-flexible. For more about the live PXE image, see the [live image
+docs](https://coreos.github.io/coreos-installer/getting-started/&#35;kernel-command-line-options-for-coreos-installer-running-as-a-service),
+but note that &#96;coreos-installer pxe customize&#96; (see below) is
+more flexible. For more about the live PXE image, see the [live image
 reference](live-reference.xml).
 
 ## Installing from the container {#_installing_from_the_container}
 
-You can use the `coreos-installer`
+You can use the &#96;coreos-installer&#96;
 [container](https://quay.io/repository/coreos/coreos-installer) from an
 existing system to install to an attached block device. For example
-(substitute `docker` for `podman` if needed):
+(substitute &#96;docker&#96; for &#96;podman&#96; if needed):
 
-``` bash
+``` _bash
 sudo podman run --pull=always --privileged --rm \
 -v /dev:/dev -v /run/udev:/run/udev -v .:/data -w /data \
 quay.io/coreos/coreos-installer:release \
 install /dev/vdb -i config.ign
 ```
 
-In this example, `coreos-installer` will download the latest stable FCOS
-metal image and install it onto `/dev/vdb`. It will then inject the
-Ignition file `config.ign` in the current directory into the image. Use
-`--help` to see all the available options.
+In this example, &#96;coreos-installer&#96; will download the latest
+stable FCOS metal image and install it onto &#96;/dev/vdb&#96;. It will
+then inject the Ignition file &#96;config.ign&#96; in the current
+directory into the image. Use &#96;\--help&#96; to see all the available
+options.
 
 ## Downloading and mirroring the metal image {#_downloading_and_mirroring_the_metal_image}
 
 Sometimes, it's necessary to download the metal image ahead of time and
-then have it passed locally to `coreos-installer` for installation. You
-can download the metal image directly from the [FCOS download
-page](https://fedoraproject.org/coreos/download/?stream=stable#baremetal),
-or you can use `coreos-installer download`.
+then have it passed locally to &#96;coreos-installer&#96; for
+installation. You can download the metal image directly from the [FCOS
+download
+page](https://fedoraproject.org/coreos/download/?stream=stable&#35;baremetal),
+or you can use &#96;coreos-installer download&#96;.
 
 :::: tip
 ::: title
@@ -316,15 +320,15 @@ When installing via the live ISO or PXE, there is no need to download
 the metal image. It is already part of those environments.
 ::::
 
-There are two metal images: one for 512b-sector disks (labeled \"Raw\"
-on the download page), and one for 4k-sector native disks (labeled \"Raw
-(4K Native)\"). Unless you know to be targeting a 4k native disk, use
+There are two metal images: one for 512b-sector disks (labeled \'Raw\'
+on the download page), and one for 4k-sector native disks (labeled \'Raw
+(4K Native)\'). Unless you know to be targeting a 4k native disk, use
 the 512b one, which is the most common. See [this
-page](https://en.wikipedia.org/wiki/Advanced_Format#4K_native) for more
-information.
+page](https://en.wikipedia.org/wiki/Advanced_Format&#35;4K_native) for
+more information.
 
-To download the 4kn native metal image with `coreos-installer download`,
-use the `--format 4k.raw.xz` switch.
+To download the 4kn native metal image with &#96;coreos-installer
+download&#96;, use the &#96;\--format 4k.raw.xz&#96; switch.
 
 :::: note
 ::: title
@@ -335,41 +339,40 @@ and UEFI booting.
 ::::
 
 When you're finally ready to install FCOS, you can point it at your
-downloaded image using
-`coreos-installer install --image-url <LOCAL_MIRROR>` or
-`coreos-installer --image-file <PATH>`.
+downloaded image using &#96;coreos-installer install \--image-url
+&lt;LOCAL_MIRROR&gt;&#96; or &#96;coreos-installer \--image-file
+&lt;PATH&gt;&#96;.
 
 ## Customizing installation {#_customizing_installation}
 
-The `coreos-installer iso customize` and
-`coreos-installer pxe customize` commands can be used to create
-customized ISO and PXE images with site-specific configuration,
-including the ability to perform unattended installations of Fedora
-CoreOS.
+The &#96;coreos-installer iso customize&#96; and &#96;coreos-installer
+pxe customize&#96; commands can be used to create customized ISO and PXE
+images with site-specific configuration, including the ability to
+perform unattended installations of Fedora CoreOS.
 
 :::: note
 ::: title
 :::
 
-When booting an image created with `coreos-installer pxe customize`, the
-PXE or iPXE kernel command line must include the arguments
-`ignition.firstboot ignition.platform.id=metal`. If running in a virtual
-machine, replace `metal` with the [platform
+When booting an image created with &#96;coreos-installer pxe
+customize&#96;, the PXE or iPXE kernel command line must include the
+arguments &#96;ignition.firstboot ignition.platform.id=metal&#96;. If
+running in a virtual machine, replace &#96;metal&#96; with the [platform
 ID](https://coreos.github.io/ignition/supported-platforms/) for your
-platform, such as `qemu` or `vmware`.
+platform, such as &#96;qemu&#96; or &#96;vmware&#96;.
 ::::
 
 For example:
 
 ``` bash
-# Create customized.iso which:
-# - Automatically installs to /dev/sda
-# - Provisions the installed system with config.ign
-# - Configures the installed GRUB and kernel to use a primary graphical
-#   and secondary serial console
-# - Uses network configuration from static-ip.nmconnection
-# - Trusts HTTPS certificates signed by ca.pem
-# - Runs post.sh after installing
+\# Create customized.iso which:
+\# - Automatically installs to /dev/sda
+\# - Provisions the installed system with config.ign
+\# - Configures the installed GRUB and kernel to use a primary graphical
+\#   and secondary serial console
+\# - Uses network configuration from static-ip.nmconnection
+\# - Trusts HTTPS certificates signed by ca.pem
+\# - Runs post.sh after installing
 coreos-installer iso customize \
 --dest-device /dev/sda \
 --dest-ignition config.ign \
@@ -379,7 +382,7 @@ coreos-installer iso customize \
 --ignition-ca ca.pem \
 --post-install post.sh \
 -o custom.iso fedora-coreos-{stable-version}-live.x86_64.iso
-# Same, but create a customized PXE initramfs image
+\# Same, but create a customized PXE initramfs image
 coreos-installer pxe customize \
 --dest-device /dev/sda \
 --dest-ignition config.ign \
@@ -392,27 +395,29 @@ coreos-installer pxe customize \
 ```
 
 For details on available customizations, see the [coreos-installer
-documentation](https://coreos.github.io/coreos-installer/customizing-install/#customize-options).
+documentation](https://coreos.github.io/coreos-installer/customizing-install/&#35;customize-options).
 
 ### ISO installation on diverse hardware {#_iso_installation_on_diverse_hardware}
 
 Commonly bare metal systems will have a diversity of hardware - some
-systems may have NVMe drives `/dev/nvme*`, whereas others have
-`/dev/sd*` for example. You will almost certainly have to template the
-value of `/dev/sda` above.
+systems may have NVMe drives &#96;/dev/nvme&#42;&#96;, whereas others
+have &#96;/dev/sd&#42;&#96; for example. You will almost certainly have
+to template the value of &#96;/dev/sda&#96; above.
 
-A useful approach is to script generating a per-machine `.iso`. If you
-have a hardware database (whether a text file in git or relational
-database) then it will work to generate a per-machine `target-dell.ign`
-and `target-hp.ign` for example, and specify that to `--dest-ignition`
-alongside the appropriate `--dest-device` to generate
-`fedora-coreos-install-dell.iso` and `fedora-coreos-install-hp.iso`.
+A useful approach is to script generating a per-machine &#96;.iso&#96;.
+If you have a hardware database (whether a text file in git or
+relational database) then it will work to generate a per-machine
+&#96;target-dell.ign&#96; and &#96;target-hp.ign&#96; for example, and
+specify that to &#96;\--dest-ignition&#96; alongside the appropriate
+&#96;\--dest-device&#96; to generate
+&#96;fedora-coreos-install-dell.iso&#96; and
+&#96;fedora-coreos-install-hp.iso&#96;.
 
 Alternatively, instead of generating per-machine ISOs, you can have a
-`--pre-install` script run a privileged container which inspects the
-target system and writes an appropriate [installer
-config](https://coreos.github.io/coreos-installer/customizing-install/#config-file-format)
-to `/etc/coreos/installer.d`.
+&#96;\--pre-install&#96; script run a privileged container which
+inspects the target system and writes an appropriate [installer
+config](https://coreos.github.io/coreos-installer/customizing-install/&#35;config-file-format)
+to &#96;/etc/coreos/installer.d&#96;.
 
 ### Installing on iSCSI {#_installing_on_iscsi}
 
@@ -427,7 +432,7 @@ kernel arguments.
     sudo iscsiadm -m discovery -t st -p 10.0.0.1
     sudo iscsiadm -m node -T iqn.2023-10.coreos.target.vm:coreos -l
 
-- Append the necessary kargs when running `coreos-installer`:
+- Append the necessary kargs when running &#96;coreos-installer&#96;:
 
 :::: formalpara
 ::: title
@@ -439,13 +444,13 @@ can be passed through iBFT. These could be supplied with an iPXE boot
 script for example:
 ::::
 
-``` bash
-#!ipxe
+``` _bash
+\&#35;!ipxe
 set initiator-iqn iqn.2023-11.coreos.diskless:testsetup
 sanboot iscsi:10.0.0.1::::iqn.2023-10.coreos.target.vm:coreos
 ```
 
-``` bash
+``` _bash
 sudo coreos-installer install \
 /dev/disk/by-path/ip-10.0.0.1\:3260-iscsi-iqn.2023-10.coreos.target.vm\:coreos-lun-0 \
 --append-karg rd.iscsi.firmware=1 --append-karg ip=ibft \
@@ -458,7 +463,7 @@ sudo coreos-installer install \
 Installing to an iSCSI target with manual configuration
 :::
 
-``` bash
+``` _bash
 sudo coreos-installer install \
 /dev/disk/by-path/ip-10.0.0.1\:3260-iscsi-iqn.2023-10.coreos.target.vm\:coreos-lun-0 \
 --append-karg rd.iscsi.initiator=iqn.2024-02.com.yourorg.name:lun0 \
@@ -468,17 +473,17 @@ sudo coreos-installer install \
 ```
 ::::
 
-All this can also be set using `coreos-installer iso customize` or
-`coreos-installer pxe customize`. (See \"Customizing installation\"
-section above).
+All this can also be set using &#96;coreos-installer iso customize&#96;
+or &#96;coreos-installer pxe customize&#96;. (See \'Customizing
+installation\' section above).
 
 For example using iBFT:
 
 ``` bash
-# Create customized.iso which:
-# - Automatically mounts iSCSI target using mount-iscsi.sh
-# - Provisions the installed system with config.ign
-# - Configures the installed system to use iBFT
+\# Create customized.iso which:
+\# - Automatically mounts iSCSI target using mount-iscsi.sh
+\# - Provisions the installed system with config.ign
+\# - Configures the installed system to use iBFT
 coreos-installer iso customize \
 --pre-install mount-iscsi.sh \
 --dest-device /dev/disk/by-path/ip-10.0.0.1\:3260-iscsi-iqn.2023-10.coreos.target.vm\:coreos-lun-0 \
@@ -488,9 +493,10 @@ coreos-installer iso customize \
 -o custom.iso fedora-coreos-{stable-version}-live.x86_64.iso
 ```
 
-The `--pre-install` flag is used to run a script with `iscsiadm`
-commands, `--dest-device` targets the mounted disk and then
-`--dest-karg-append` add the necessary kargs.
+The &#96;\--pre-install&#96; flag is used to run a script with
+&#96;iscsiadm&#96; commands, &#96;\--dest-device&#96; targets the
+mounted disk and then &#96;\--dest-karg-append&#96; add the necessary
+kargs.
 
 ## Reinstalling Fedora CoreOS {#_reinstalling_fedora_coreos}
 
@@ -501,28 +507,30 @@ CoreOS on the same machine via the live environment.
 
 The installer does not completely scrub the target disk. Thanks to
 Ignition's [filesystem-reuse
-semantics](https://coreos.github.io/ignition/operator-notes#filesystem-reuse-semantics),
+semantics](https://coreos.github.io/ignition/operator-notes&#35;filesystem-reuse-semantics),
 if you apply a config with the exact same partition and filesystem
 settings as the first install, all previously stored data in additional
 partitions will still be available. This can be useful for persisting
-e.g. `/var/lib/containers` or `/var/home` between reinstalls. There are
-some restrictions, however. See the [Using persistent
-state](live-booting.xml#_using_persistent_state) section for more
-information. You will also want to ensure the root filesystem is a fixed
-number at least 8 GiB as described in [Configuring Storage](storage.xml)
-so that data partitions are not accidentally overwritten.
+e.g. &#96;/var/lib/containers&#96; or &#96;/var/home&#96; between
+reinstalls. There are some restrictions, however. See the [Using
+persistent state](live-booting.adoc&#35;_using_persistent_state) section
+for more information. You will also want to ensure the root filesystem
+is a fixed number at least 8 GiB as described in [Configuring
+Storage](storage.xml) so that data partitions are not accidentally
+overwritten.
 
 ### Destination drive {#_destination_drive}
 
-Fedora CoreOS requires that only a single filesystem labeled `boot`
-exists. If multiple such filesystems are found on the first boot,
-provisioning will error out as a fail-safe. If reinstalling Fedora
-CoreOS on a different disk than the previous installation, make sure to
-wipe the previous disk using e.g. `wipefs`. For example, if reinstalling
-to `/dev/sdb`, but `/dev/sda` still contains the previous installation
-of FCOS, use `wipefs -a /dev/sda` in the installation environment. =
-Running Fedora CoreOS directly from RAM :page-aliases:
-live-booting-ipxe.adoc
+Fedora CoreOS requires that only a single filesystem labeled
+&#96;boot&#96; exists. If multiple such filesystems are found on the
+first boot, provisioning will error out as a fail-safe. If reinstalling
+Fedora CoreOS on a different disk than the previous installation, make
+sure to wipe the previous disk using e.g. &#96;wipefs&#96;. For example,
+if reinstalling to &#96;/dev/sdb&#96;, but &#96;/dev/sda&#96; still
+contains the previous installation of FCOS, use &#96;wipefs -a
+/dev/sda&#96; in the installation environment.
+
+# Running Fedora CoreOS directly from RAM {#_running_fedora_coreos_directly_from_ram}
 
 The Fedora CoreOS live environment is a fully functional copy of Fedora
 CoreOS. It can provision itself via Ignition, execute containers, and so
@@ -542,8 +550,8 @@ File](producing-ign.xml).
 
 If you're booting from PXE or iPXE, you must host the Ignition config on
 a reachable HTTP(S) or TFTP server. Booting the live PXE image requires
-at least 2 GiB of RAM with the `coreos.live.rootfs_url` kernel argument,
-and 4 GiB otherwise.
+at least 2 GiB of RAM with the &#96;coreos.live.rootfs_url&#96; kernel
+argument, and 4 GiB otherwise.
 
 ## Booting via ISO {#_booting_via_iso}
 
@@ -560,18 +568,18 @@ To boot from the ISO image, follow these steps:
   quay.io/coreos/coreos-installer:release download -f iso
   ```
 
-- Use `coreos-installer iso customize` to customize the ISO for your
-  needs. In this example we assume an Ignition config exists in a file
-  `config.ign`. We also add the optional `coreos.liveiso.fromram` kernel
-  argument to the live boot.
+- Use &#96;coreos-installer iso customize&#96; to customize the ISO for
+  your needs. In this example we assume an Ignition config exists in a
+  file &#96;config.ign&#96;. We also add the optional
+  &#96;coreos.liveiso.fromram&#96; kernel argument to the live boot.
 
   :::: note
   ::: title
   :::
 
-  The `coreos.liveiso.fromram` is optional and is used in cases where
-  you want to have no references to the booted media (ISO) once the
-  system is up and running. This enables use cases like removing the
+  The &#96;coreos.liveiso.fromram&#96; is optional and is used in cases
+  where you want to have no references to the booted media (ISO) once
+  the system is up and running. This enables use cases like removing the
   media after boot or rewriting the disk the booted media is on, but
   does require more memory.
   ::::
@@ -584,8 +592,8 @@ To boot from the ISO image, follow these steps:
   -o customized.iso fedora-coreos-{stable-version}-live.x86_64.iso
   ```
 
-- Burn the ISO to disk. On Linux and macOS, you can use `dd`. On
-  Windows, you can use [Rufus](https://rufus.ie/) in \"DD Image\" mode.
+- Burn the ISO to disk. On Linux and macOS, you can use &#96;dd&#96;. On
+  Windows, you can use [Rufus](https://rufus.ie/) in \'DD Image\' mode.
 
 - Boot it on the target system.
 
@@ -600,8 +608,8 @@ To boot from PXE, follow these steps:
     podman run --security-opt label=disable --pull=always --rm -v .:/data -w /data \
     quay.io/coreos/coreos-installer:release download -f pxe
 
-- Follow this example `pxelinux.cfg` for booting the installer images
-  with PXELINUX and running Ignition:
+- Follow this example &#96;pxelinux.cfg&#96; for booting the installer
+  images with PXELINUX and running Ignition:
 
 <!-- -->
 
@@ -621,9 +629,9 @@ to fetch and load FCOS artifacts.
 The example below shows how to load those directly from Fedora
 infrastructure. For performance and reliability reasons it is
 recommended to mirror them on the local infrastructure, and then tweak
-the `BASEURL` as needed.
+the &#96;BASEURL&#96; as needed.
 
-    #!ipxe
+    \#!ipxe
 
     set STREAM stable
     set VERSION {stable-version}
@@ -642,7 +650,7 @@ By default, the Fedora CoreOS live environment does not store any state
 on disk, and is reprovisioned from scratch on every boot. However, you
 may choose to store some persistent state (such as container images) in
 a filesystem that persists across reboots. For example, here's a Butane
-config that configures a persistent `/var`:
+config that configures a persistent &#96;/var&#96;:
 
 ``` yaml
 variant: fcos
@@ -669,23 +677,24 @@ first boot and preserved on subsequent boots.
 
 In particular, note the following guidelines:
 
-- Avoid setting `wipe_filesystem` or `wipe_volume` for
-  [filesystems](https://coreos.github.io/ignition/operator-notes/#filesystem-reuse-semantics)
+- Avoid setting &#96;wipe_filesystem&#96; or &#96;wipe_volume&#96; for
+  [filesystems](https://coreos.github.io/ignition/operator-notes/&#35;filesystem-reuse-semantics)
   or LUKS volumes that you intend to reuse. (You can safely set
-  `wipe_table` or `wipe_partition_entry` when reusing a disk, since
-  those don't modify the contents of a
-  [partition](https://coreos.github.io/ignition/operator-notes/#partition-reuse-semantics).)
+  &#96;wipe_table&#96; or &#96;wipe_partition_entry&#96; when reusing a
+  disk, since those don't modify the contents of a
+  [partition](https://coreos.github.io/ignition/operator-notes/&#35;partition-reuse-semantics).)
 
-- When reusing LUKS volumes, you must configure a `key_file`. Ignition
-  cannot reuse Clevis-backed LUKS volumes.
+- When reusing LUKS volumes, you must configure a &#96;key_file&#96;.
+  Ignition cannot reuse Clevis-backed LUKS volumes.
 
 - Avoid writing persistent data to RAID volumes, since Ignition cannot
   reuse those.
 
-- When writing files in persistent storage, set `overwrite` to `true` to
-  avoid Ignition failures when reusing a filesystem that already has the
-  file. Avoid using the `append` directive for persistent files, since
-  the append operation will occur on every boot.
+- When writing files in persistent storage, set &#96;overwrite&#96; to
+  &#96;true&#96; to avoid Ignition failures when reusing a filesystem
+  that already has the file. Avoid using the &#96;append&#96; directive
+  for persistent files, since the append operation will occur on every
+  boot.
 
 ## Update process {#_update_process}
 
@@ -700,7 +709,9 @@ rebooted in order to start running the new FCOS version.
 
 For ISO-booted systems, the ISO image used to boot the live environment
 should be periodically refreshed, and the instance rebooted to update
-the running OS. = Provisioning Fedora CoreOS on Alibaba Cloud (Aliyun)
+the running OS.
+
+# Provisioning Fedora CoreOS on Alibaba Cloud (Aliyun) {#_provisioning_fedora_coreos_on_alibaba_cloud_aliyun}
 
 This guide shows how to provision new Fedora CoreOS (FCOS) nodes on
 Alibaba Cloud. Fedora currently does not publish Fedora CoreOS images
@@ -718,8 +729,8 @@ one, see [Producing an Ignition File](producing-ign.xml).
 ::: title
 :::
 
-Fedora CoreOS has a default `core` user that can be used to explore the
-OS. If you want to use it, finalize its
+Fedora CoreOS has a default &#96;core&#96; user that can be used to
+explore the OS. If you want to use it, finalize its
 [configuration](authentication.xml) by providing e.g. an SSH key.
 ::::
 
@@ -728,7 +739,7 @@ the [Afterburn support](https://coreos.github.io/afterburn/platforms/).
 
 You also need to have access to an Alibaba Cloud account and [activated
 Object Storage Service
-(OSS)](https://www.alibabacloud.com/help/doc-detail/31884.htm?spm=a2c63.p38356.879954.10.3d1264baRYHfmB#task-njz-hf4-tdb).
+(OSS)](https://www.alibabacloud.com/help/doc-detail/31884.htm?spm=a2c63.p38356.879954.10.3d1264baRYHfmB&#35;task-njz-hf4-tdb).
 The examples below use the [Alibaba Cloud
 CLI](https://www.alibabacloud.com/help/product/29991.htm) and
 [jq](https://stedolan.github.io/jq/) as a command-line JSON processor.
@@ -739,14 +750,14 @@ Fedora CoreOS is designed to be updated automatically, with different
 schedules per stream. Once you have picked the relevant stream,
 download, verify, and decompress the latest Alibaba Cloud image:
 
-``` bash
-STREAM="stable"
+``` _bash
+STREAM='stable'
 coreos-installer download --decompress -s $STREAM -p aliyun -f qcow2.xz
 ```
 
 Alternatively, you can manually download an Alibaba Cloud image from the
 [download
-page](https://fedoraproject.org/coreos/download/?stream=stable#cloud_images).
+page](https://fedoraproject.org/coreos/download/?stream=stable&#35;cloud_images).
 Verify the download, following the instructions on that page, and
 decompress it.
 
@@ -760,11 +771,11 @@ decompress it.
     Example creating Alibaba Cloud OSS (Object Storage Service) bucket
     :::
 
-    ``` bash
-    REGION="ap-southeast-1"
-    BUCKET_NAME="my-bucket"
-    BUCKET_URL="oss://${BUCKET_NAME}"
-    aliyun oss mb "${BUCKET_URL}" --region="${REGION}" --acl=private
+    ``` _bash
+    REGION='ap-southeast-1'
+    BUCKET_NAME='my-bucket'
+    BUCKET_URL='oss://${BUCKET_NAME}'
+    aliyun oss mb '${BUCKET_URL}' --region='${REGION}' --acl=private
     ```
     ::::
 
@@ -775,12 +786,12 @@ decompress it.
     Example uploading FCOS to an Alibaba Cloud OSS bucket
     :::
 
-    ``` bash
-    DOWNLOADED_IMAGE="./image.qcow2"
-    IMAGE_NAME="my-fcos-image"
-    IMAGE_BLOB="${IMAGE_NAME}.qcow2"
-    aliyun oss cp "${DOWNLOADED_IMAGE}" "${BUCKET_URL}/${IMAGE_BLOB}" \
-    --region="${REGION}" --acl=private
+    ``` _bash
+    DOWNLOADED_IMAGE='./image.qcow2'
+    IMAGE_NAME='my-fcos-image'
+    IMAGE_BLOB='${IMAGE_NAME}.qcow2'
+    aliyun oss cp '${DOWNLOADED_IMAGE}' '${BUCKET_URL}/${IMAGE_BLOB}' \
+    --region='${REGION}' --acl=private
     ```
     ::::
 
@@ -791,12 +802,12 @@ decompress it.
     Example importing FCOS to Alibaba Cloud ECS
     :::
 
-    ``` bash
+    ``` _bash
     TASK_ID=$(aliyun ecs ImportImage \
-    --region="${REGION}" \
-    --DiskDeviceMapping.1.OSSBucket="${BUCKET_NAME}" \
-    --DiskDeviceMapping.1.OSSObject="${IMAGE_BLOB}" \
-    --ImageName="${IMAGE_NAME}" \
+    --region='${REGION}' \
+    --DiskDeviceMapping.1.OSSBucket='${BUCKET_NAME}' \
+    --DiskDeviceMapping.1.OSSObject='${IMAGE_BLOB}' \
+    --ImageName='${IMAGE_NAME}' \
     | jq --raw-output .TaskId)
     ```
     ::::
@@ -808,8 +819,8 @@ decompress it.
     Example waiting with a timeout equal to one hour
     :::
 
-    ``` bash
-    aliyun ecs DescribeTasks --region="${REGION}" --TaskIds="${TASK_ID}" \
+    ``` _bash
+    aliyun ecs DescribeTasks --region='${REGION}' --TaskIds='${TASK_ID}' \
     --waiter expr='TaskSet.Task[0].TaskStatus' to=Finished timeout=3600
     ```
     ::::
@@ -821,8 +832,8 @@ decompress it.
     Example determining id of the imported FCOS image
     :::
 
-    ``` bash
-    IMAGE_ID=$(aliyun ecs DescribeImages --region="${REGION}" --ImageName="${IMAGE_NAME}" \
+    ``` _bash
+    IMAGE_ID=$(aliyun ecs DescribeImages --region='${REGION}' --ImageName='${IMAGE_NAME}' \
     | jq --raw-output .Images.Image[0].ImageId)
     ```
     ::::
@@ -834,8 +845,8 @@ decompress it.
     Example deleting uploaded blob
     :::
 
-    ``` bash
-    aliyun oss rm "${BUCKET_URL}/${IMAGE_BLOB}" --region "${REGION}"
+    ``` _bash
+    aliyun oss rm '${BUCKET_URL}/${IMAGE_BLOB}' --region '${REGION}'
     ```
     ::::
 
@@ -852,11 +863,11 @@ create one with the following steps.
     Example creating a new VPC
     :::
 
-    ``` bash
-    VPC_CIDR="172.16.0.0/12"
-    VPC_NAME="fcos-test"
-    VPC_ID=$(aliyun vpc CreateVpc --region="${REGION}" \
-    --CidrBlock="${VPC_CIDR}" --VpcName="${VPC_NAME}" \
+    ``` _bash
+    VPC_CIDR='172.16.0.0/12'
+    VPC_NAME='fcos-test'
+    VPC_ID=$(aliyun vpc CreateVpc --region='${REGION}' \
+    --CidrBlock='${VPC_CIDR}' --VpcName='${VPC_NAME}' \
     | jq --raw-output .VpcId)
     ```
     ::::
@@ -869,7 +880,7 @@ create one with the following steps.
     :::
 
     ``` bash
-    ZONE_ID=$(aliyun ecs DescribeZones --region="${REGION}" \
+    ZONE_ID=$(aliyun ecs DescribeZones --region='${REGION}' \
     | jq --raw-output .Zones.Zone[0].ZoneId)
     ```
     ::::
@@ -881,15 +892,15 @@ create one with the following steps.
     Example creating a new VSwitch
     :::
 
-    ``` bash
-    VSWITCH_CIDR="172.16.0.0/16"
-    VSWITCH_NAME="${VPC_NAME}"
+    ``` _bash
+    VSWITCH_CIDR='172.16.0.0/16'
+    VSWITCH_NAME='${VPC_NAME}'
     VSWITCH_ID=$(aliyun vpc CreateVSwitch \
-    --region="${REGION}" \
-    --CidrBlock="${VSWITCH_CIDR}" \
-    --VpcId="${VPC_ID}" \
-    --VSwitchName="${VSWITCH_NAME}" \
-    --ZoneId="${ZONE_ID}" \
+    --region='${REGION}' \
+    --CidrBlock='${VSWITCH_CIDR}' \
+    --VpcId='${VPC_ID}' \
+    --VSwitchName='${VSWITCH_NAME}' \
+    --ZoneId='${ZONE_ID}' \
     | jq --raw-output .VSwitchId)
     ```
     ::::
@@ -903,12 +914,12 @@ create one with the following steps.
     Example uploading an SSH public key
     :::
 
-    ``` bash
-    KEY_PAIR_NAME="fcos-key"
-    PUBLIC_KEY_PATH="<Please fill the path to your public key>"
-    PUBLIC_KEY_BODY=$(cat "${PUBLIC_KEY_PATH}")
-    aliyun ecs ImportKeyPair --region="${REGION}" \
-    --KeyPairName="${KEY_PAIR_NAME}" --PublicKeyBody="${PUBLIC_KEY_BODY}"
+    ``` _bash
+    KEY_PAIR_NAME='fcos-key'
+    PUBLIC_KEY_PATH='\&lt;Please fill the path to your public key\&gt;'
+    PUBLIC_KEY_BODY=$(cat '${PUBLIC_KEY_PATH}')
+    aliyun ecs ImportKeyPair --region='${REGION}' \
+    --KeyPairName='${KEY_PAIR_NAME}' --PublicKeyBody='${PUBLIC_KEY_BODY}'
     ```
     ::::
 
@@ -919,19 +930,19 @@ create one with the following steps.
     Example creating ECS instance
     :::
 
-    ``` bash
-    INSTANCE_NAME="my-fcos-vm"
-    INSTANCE_TYPE="ecs.t6-c1m1.large"
+    ``` _bash
+    INSTANCE_NAME='my-fcos-vm'
+    INSTANCE_TYPE='ecs.t6-c1m1.large'
     INSTANCE_ID=$(aliyun ecs CreateInstance \
-    --region="${REGION}" \
-    --KeyPairName="${KEY_PAIR_NAME}" \
-    --ImageId="${IMAGE_ID}" \
-    --InstanceName="${INSTANCE_NAME}" \
-    --InstanceType="${INSTANCE_TYPE}" \
+    --region='${REGION}' \
+    --KeyPairName='${KEY_PAIR_NAME}' \
+    --ImageId='${IMAGE_ID}' \
+    --InstanceName='${INSTANCE_NAME}' \
+    --InstanceType='${INSTANCE_TYPE}' \
     --InternetChargeType=PayByTraffic \
     --InternetMaxBandwidthIn=5 \
     --InternetMaxBandwidthOut=5 \
-    --VSwitchId="${VSWITCH_ID}" \
+    --VSwitchId='${VSWITCH_ID}' \
     | jq --raw-output .InstanceId)
     ```
     ::::
@@ -940,9 +951,9 @@ create one with the following steps.
 ::: title
 :::
 
-If the command fails with the error message \"The specified parameter
-SystemDisk.Category is not valid.\", resolve this issue by adding the
-parameter `--SystemDisk.Category=cloud_essd` to the command.
+If the command fails with the error message \'The specified parameter
+SystemDisk.Category is not valid.\', resolve this issue by adding the
+parameter &#96;\--SystemDisk.Category=cloud_essd&#96; to the command.
 ::::
 
 1.  Allocate a public IPv4 address for the previously created instance
@@ -952,9 +963,9 @@ parameter `--SystemDisk.Category=cloud_essd` to the command.
     Example allocating a public IP address
     :::
 
-    ``` bash
+    ``` _bash
     PUBLIC_IP=$(aliyun ecs AllocatePublicIpAddress \
-    --region="${REGION}" --InstanceId="${INSTANCE_ID}" \
+    --region='${REGION}' --InstanceId='${INSTANCE_ID}' \
     | jq --raw-output .IpAddress)
     ```
     ::::
@@ -966,8 +977,8 @@ parameter `--SystemDisk.Category=cloud_essd` to the command.
     Example starting an instance
     :::
 
-    ``` bash
-    aliyun ecs StartInstance --region="${REGION}" --InstanceId="${INSTANCE_ID}"
+    ``` _bash
+    aliyun ecs StartInstance --region='${REGION}' --InstanceId='${INSTANCE_ID}'
     ```
     ::::
 
@@ -978,8 +989,8 @@ parameter `--SystemDisk.Category=cloud_essd` to the command.
     Example waiting and determining the public IP address
     :::
 
-    ``` bash
-    aliyun ecs DescribeInstanceStatus --InstanceId.1="$INSTANCE_ID" --region="${REGION}" \
+    ``` _bash
+    aliyun ecs DescribeInstanceStatus --InstanceId.1='$INSTANCE_ID' --region='${REGION}' \
     --waiter expr='InstanceStatuses.InstanceStatus[0].Status' to=Running timeout=600
     ```
     ::::
@@ -991,16 +1002,17 @@ parameter `--SystemDisk.Category=cloud_essd` to the command.
     Example connecting
     :::
 
-    ``` bash
-    ssh core@"${PUBLIC_IP}"
+    ``` _bash
+    ssh core@'${PUBLIC_IP}'
     ```
     ::::
 
 You can start a customized instance with your Ignition file by adding
-the parameter
-`--UserData=$(cat <Path to your Ignition config> | base64 -w0)` to the
-`aliyun ecs CreateInstance` command that creates a new instance. =
-Provisioning Fedora CoreOS on Amazon Web Services
+the parameter &#96;\--UserData=\$(cat &lt;Path to your Ignition
+config&gt; \| base64 -w0)&#96; to the &#96;aliyun ecs
+CreateInstance&#96; command that creates a new instance.
+
+# Provisioning Fedora CoreOS on Amazon Web Services {#_provisioning_fedora_coreos_on_amazon_web_services}
 
 This guide shows how to provision new Fedora CoreOS (FCOS) instances on
 the Amazon Web Services (AWS) cloud platform.
@@ -1015,8 +1027,8 @@ one, see [Producing an Ignition File](producing-ign.xml).
 ::: title
 :::
 
-Fedora CoreOS has a default `core` user that can be used to explore the
-OS. If you want to use it, finalize its
+Fedora CoreOS has a default &#96;core&#96; user that can be used to
+explore the OS. If you want to use it, finalize its
 [configuration](authentication.xml) by providing e.g. an SSH key.
 ::::
 
@@ -1035,17 +1047,17 @@ separately installed and configured beforehand.
 
 In order to launch a customized FCOS instance, a valid Ignition
 configuration must be passed as its [user
-data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html#instancedata-add-user-data)
-at creation time. You can use the same command from the [Minimal
-Example](#_minimal_example) but add
-`--user-data file://path/to/config.ign` argument:
+data](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html&#35;instancedata-add-user-data)
+at creation time. You can use the same command from the
+xref:&#35;\_minimal_example\[\] but add &#96;\--user-data
+<file://path/to/config.ign&#96>; argument:
 
 :::: note
 ::: title
 :::
 
-The SSH key for the `core` user is supplied via Afterburn in this
-example as well.
+The SSH key for the &#96;core&#96; user is supplied via Afterburn in
+this example as well.
 ::::
 
 :::: formalpara
@@ -1055,14 +1067,14 @@ Launching and customizing a new instance
 
 ``` bash
 NAME='instance1'
-SSHKEY='my-key'     # the name of your SSH key: `aws ec2 describe-key-pairs`
-IMAGE='ami-xxx'     # the AMI ID found on the download page
-DISK='20'           # the size of the hard disk
-REGION='us-east-1'  # the target region
-TYPE='m5.large'     # the instance type
-SUBNET='subnet-xxx' # the subnet: `aws ec2 describe-subnets`
-SECURITY_GROUPS='sg-xx' # the security group `aws ec2 describe-security-groups`
-USERDATA='/path/to/config.ign' # path to your Ignition config
+SSHKEY='my-key'     \&#35; the name of your SSH key: \&#96;aws ec2 describe-key-pairs\&#96;
+IMAGE='ami-xxx'     \&#35; the AMI ID found on the download page
+DISK='20'           \&#35; the size of the hard disk
+REGION='us-east-1'  \&#35; the target region
+TYPE='m5.large'     \&#35; the instance type
+SUBNET='subnet-xxx' \&#35; the subnet: \&#96;aws ec2 describe-subnets\&#96;
+SECURITY_GROUPS='sg-xx' \&#35; the security group \&#96;aws ec2 describe-security-groups\&#96;
+USERDATA='/path/to/config.ign' \&#35; path to your Ignition config
 aws ec2 run-instances                     \
 --region $REGION                      \
 --image-id $IMAGE                     \
@@ -1070,9 +1082,9 @@ aws ec2 run-instances                     \
 --key-name $SSHKEY                    \
 --subnet-id $SUBNET                   \
 --security-group-ids $SECURITY_GROUPS \
---user-data "file://${USERDATA}"      \
---tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${NAME}}]" \
---block-device-mappings "VirtualName=/dev/xvda,DeviceName=/dev/xvda,Ebs={VolumeSize=${DISK}}"
+--user-data 'file://${USERDATA}'      \
+--tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=${NAME}}]' \
+--block-device-mappings 'VirtualName=/dev/xvda,DeviceName=/dev/xvda,Ebs={VolumeSize=${DISK}}'
 ```
 ::::
 
@@ -1089,8 +1101,8 @@ logic as systemd service units in the Ignition configuration.
 ::: title
 :::
 
-You can find out the instance's assigned IP by running
-`aws ec2 describe-instances`
+You can find out the instance's assigned IP by running &#96;aws ec2
+describe-instances&#96;
 ::::
 
 You now should be able to SSH into the instance using the associated IP
@@ -1101,8 +1113,8 @@ address.
 Example connecting
 :::
 
-``` bash
-ssh core@<ip address>
+``` _bash
+ssh core@\&lt;ip address\&gt;
 ```
 ::::
 
@@ -1117,7 +1129,7 @@ config to a S3 bucket, as the following steps show:
 Create a new s3 bucket
 :::
 
-``` bash
+``` _bash
 NAME='instance1'
 aws s3 mb s3://$NAME-infra
 ```
@@ -1128,9 +1140,9 @@ aws s3 mb s3://$NAME-infra
 Upload the Ignition file
 :::
 
-``` bash
+``` _bash
 NAME='instance1'
-CONFIG='/path/to/config.ign' # path to your Ignition config
+CONFIG='/path/to/config.ign' \&#35; path to your Ignition config
 aws s3 cp $CONFIG s3://$NAME-infra/bootstrap.ign
 ```
 ::::
@@ -1142,7 +1154,7 @@ You can verify the file has been correctly uploaded:
 List files in the bucket
 :::
 
-``` bash
+``` _bash
 NAME='instance1'
 aws s3 ls s3://$NAME-infra/
 ```
@@ -1170,14 +1182,14 @@ source: s3://instance1-infra/bootstrap.ign
 Format the remote Ignition file to json format
 :::
 
-``` bash
+``` _bash
 butane -p config.bu -o config.ign
 ```
 ::::
 
-You need to create a role that includes `s3:GetObject` permission, and
-attach it to the instance profile. See [role creation
-document](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html#roles-creatingrole-service-cli)
+You need to create a role that includes &#96;s3:GetObject&#96;
+permission, and attach it to the instance profile. See [role creation
+document](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-service.html&#35;roles-creatingrole-service-cli)
 for more information.
 
 :::: formalpara
@@ -1186,35 +1198,35 @@ Create the instance profile
 :::
 
 ``` bash
-cat <<EOF >trustpolicyforec2.json
+cat \&lt;\&lt;EOF \&gt;trustpolicyforec2.json
 {
-"Version": "2012-10-17",
-"Statement": {
-"Effect": "Allow",
-"Principal": {"Service": "ec2.amazonaws.com"},
-"Action": "sts:AssumeRole"
+'Version': '2012-10-17',
+'Statement': {
+'Effect': 'Allow',
+'Principal': {'Service': 'ec2.amazonaws.com'},
+'Action': 'sts:AssumeRole'
 }
 }
 EOF
 
-# Create the role and attach the trust policy that allows EC2 to assume this role.
-ROLE_NAME="my-role"
+\&#35; Create the role and attach the trust policy that allows EC2 to assume this role.
+ROLE_NAME='my-role'
 aws iam create-role --role-name ${ROLE_NAME} --assume-role-policy-document file://trustpolicyforec2.json
 
-# Attach the AWS managed policy named AmazonS3ReadOnlyAccess to the role
+\&#35; Attach the AWS managed policy named AmazonS3ReadOnlyAccess to the role
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess --role-name ${ROLE_NAME}
 
-# Create the instance profile required by EC2 to contain the role
-PROFILE="my-instance-profile"
+\&#35; Create the instance profile required by EC2 to contain the role
+PROFILE='my-instance-profile'
 aws iam create-instance-profile --instance-profile-name ${PROFILE}
 
-# Finally, add the role to the instance profile
+\&#35; Finally, add the role to the instance profile
 aws iam add-role-to-instance-profile --instance-profile-name ${PROFILE} --role-name ${ROLE_NAME}
 ```
 ::::
 
 To launch the instance, need to attach the created profile. From the
-command-line, use `--iam-instance-profile`.
+command-line, use &#96;\--iam-instance-profile&#96;.
 
 :::: formalpara
 ::: title
@@ -1224,15 +1236,15 @@ a S3 bucket
 
 ``` bash
 NAME='instance1'
-SSHKEY='my-key'          # the name of your SSH key: `aws ec2 describe-key-pairs`
-IMAGE='ami-xxx'          # the AMI ID found on the download page
-DISK='20'                # the size of the hard disk
-REGION='us-east-1'       # the target region
-TYPE='m5.large'          # the instance type
-SUBNET='subnet-xxx'      # the subnet: `aws ec2 describe-subnets`
-SECURITY_GROUPS='sg-xxx' # the security group `aws ec2 describe-security-groups`
-USERDATA='/path/to/config.ign' # path to your Ignition config
-PROFILE='xxx-profile'    # the name of an IAM instance profile `aws iam list-instance-profiles`
+SSHKEY='my-key'          \&#35; the name of your SSH key: \&#96;aws ec2 describe-key-pairs\&#96;
+IMAGE='ami-xxx'          \&#35; the AMI ID found on the download page
+DISK='20'                \&#35; the size of the hard disk
+REGION='us-east-1'       \&#35; the target region
+TYPE='m5.large'          \&#35; the instance type
+SUBNET='subnet-xxx'      \&#35; the subnet: \&#96;aws ec2 describe-subnets\&#96;
+SECURITY_GROUPS='sg-xxx' \&#35; the security group \&#96;aws ec2 describe-security-groups\&#96;
+USERDATA='/path/to/config.ign' \&#35; path to your Ignition config
+PROFILE='xxx-profile'    \&#35; the name of an IAM instance profile \&#96;aws iam list-instance-profiles\&#96;
 aws ec2 run-instances                     \
 --region $REGION                      \
 --image-id $IMAGE                     \
@@ -1240,16 +1252,16 @@ aws ec2 run-instances                     \
 --key-name $SSHKEY                    \
 --subnet-id $SUBNET                   \
 --security-group-ids $SECURITY_GROUPS \
---user-data "file://${USERDATA}"      \
+--user-data 'file://${USERDATA}'      \
 --iam-instance-profile Name=${PROFILE}     \
---tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${NAME}}]" \
---block-device-mappings "VirtualName=/dev/xvda,DeviceName=/dev/xvda,Ebs={VolumeSize=${DISK}}"
+--tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=${NAME}}]' \
+--block-device-mappings 'VirtualName=/dev/xvda,DeviceName=/dev/xvda,Ebs={VolumeSize=${DISK}}'
 ```
 ::::
 
 Once the first boot is completed, make sure to delete the configuration
-as it may contain sensitive data. See [Configuration
-cleanup](#_configuration_cleanup).
+as it may contain sensitive data. See
+xref:&#35;\_configuration_cleanup\[\].
 
 ## Configuration cleanup {#_configuration_cleanup}
 
@@ -1258,7 +1270,7 @@ store it into a S3 bucket and have a minimal configuration in user-data.
 Once the instance has completed the first boot, clear the S3 bucket as
 any process or container running on the instance could access it. See
 the [Ignition
-documentation](https://coreos.github.io/ignition/operator-notes/#secrets)
+documentation](https://coreos.github.io/ignition/operator-notes/&#35;secrets)
 for more advice on secret management.
 
 :::: formalpara
@@ -1290,8 +1302,10 @@ aws s3 rb s3://$NAME-infra
 :::
 
 The instance's user data cannot be modified without stopping the
-instance. = Provisioning Fedora CoreOS on Azure
+instance.
 ::::
+
+# Provisioning Fedora CoreOS on Azure {#_provisioning_fedora_coreos_on_azure}
 
 This guide shows how to provision new Fedora CoreOS (FCOS) nodes on
 Azure. Fedora currently does not publish Fedora CoreOS images within
@@ -1317,8 +1331,8 @@ one, see [Producing an Ignition File](producing-ign.xml).
 ::: title
 :::
 
-Fedora CoreOS has a default `core` user that can be used to explore the
-OS. If you want to use it, finalize its
+Fedora CoreOS has a default &#96;core&#96; user that can be used to
+explore the OS. If you want to use it, finalize its
 [configuration](authentication.xml) by providing e.g. an SSH key.
 ::::
 
@@ -1335,14 +1349,14 @@ Fedora CoreOS is designed to be updated automatically, with different
 schedules per stream. Once you have picked the relevant stream,
 download, verify, and decompress the latest Azure image:
 
-``` bash
-STREAM="stable"
+``` _bash
+STREAM='stable'
 coreos-installer download --decompress -s $STREAM -p azure -f vhd.xz
 ```
 
 Alternatively, you can manually download an Azure image from the
 [download
-page](https://fedoraproject.org/coreos/download/?stream=stable#cloud_images).
+page](https://fedoraproject.org/coreos/download/?stream=stable&#35;cloud_images).
 Verify the download, following the instructions on that page, and
 decompress it.
 
@@ -1355,19 +1369,19 @@ decompress it.
     Example creating Azure resources
     :::
 
-    ``` bash
-    az_region="westus2"
-    az_resource_group="my-group"
-    az_storage_account="mystorageacct"
-    az_container="my-container"
-    # Create resource group
-    az group create -l "${az_region}" -n "${az_resource_group}"
-    # Create storage account for uploading FCOS image
-    az storage account create -g "${az_resource_group}" -n "${az_storage_account}"
-    # Retrieve connection string for storage account
-    cs=$(az storage account show-connection-string -n "${az_storage_account}" -g "${az_resource_group}" | jq -r .connectionString)
-    # Create storage container for uploading FCOS image
-    az storage container create --connection-string "${cs}" -n "${az_container}"
+    ``` _bash
+    az_region='westus2'
+    az_resource_group='my-group'
+    az_storage_account='mystorageacct'
+    az_container='my-container'
+    \&#35; Create resource group
+    az group create -l '${az_region}' -n '${az_resource_group}'
+    \&#35; Create storage account for uploading FCOS image
+    az storage account create -g '${az_resource_group}' -n '${az_storage_account}'
+    \&#35; Retrieve connection string for storage account
+    cs=$(az storage account show-connection-string -n '${az_storage_account}' -g '${az_resource_group}' | jq -r .connectionString)
+    \&#35; Create storage container for uploading FCOS image
+    az storage container create --connection-string '${cs}' -n '${az_container}'
     ```
     ::::
 
@@ -1378,16 +1392,16 @@ decompress it.
     Example creating Azure image
     :::
 
-    ``` bash
-    downloaded_image_file="./image.vhd"
-    az_image_name="my-fcos-image"
-    az_image_blob="${az_image_name}.vhd"
-    # Upload image blob
-    az storage blob upload --connection-string "${cs}" -c "${az_container}" -f "${downloaded_image_file}" -n "${az_image_blob}"
-    # Create the image
-    az image create -n "${az_image_name}" -g "${az_resource_group}" --source "https://${az_storage_account}.blob.core.windows.net/${az_container}/${az_image_blob}" --location "${az_region}" --os-type Linux
-    # Delete the uploaded blob
-    az storage blob delete --connection-string "$cs" -c "${az_container}" -n "${az_image_blob}"
+    ``` _bash
+    downloaded_image_file='./image.vhd'
+    az_image_name='my-fcos-image'
+    az_image_blob='${az_image_name}.vhd'
+    \&#35; Upload image blob
+    az storage blob upload --connection-string '${cs}' -c '${az_container}' -f '${downloaded_image_file}' -n '${az_image_blob}'
+    \&#35; Create the image
+    az image create -n '${az_image_name}' -g '${az_resource_group}' --source 'https://${az_storage_account}.blob.core.windows.net/${az_container}/${az_image_blob}' --location '${az_region}' --os-type Linux
+    \&#35; Delete the uploaded blob
+    az storage blob delete --connection-string '$cs' -c '${az_container}' -n '${az_image_blob}'
     ```
     ::::
 
@@ -1395,19 +1409,19 @@ decompress it.
 
 1.  Launch a VM. Your Ignition configuration can be passed to the VM as
     custom data, or you can skip passing custom data if you just want
-    SSH access. Your SSH public key from `~/.ssh` will automatically be
-    added to the VM. This provides an easy way to test out FCOS without
-    first creating an Ignition config.
+    SSH access. Your SSH public key from &#96;\~/.ssh&#96; will
+    automatically be added to the VM. This provides an easy way to test
+    out FCOS without first creating an Ignition config.
 
     :::: formalpara
     ::: title
     Example launching Azure image
     :::
 
-    ``` bash
-    az_vm_name="my-fcos-vm"
-    ignition_path="./config.ign"
-    az vm create -n "${az_vm_name}" -g "${az_resource_group}" --image "${az_image_name}" --admin-username core --custom-data "$(cat ${ignition_path})"
+    ``` _bash
+    az_vm_name='my-fcos-vm'
+    ignition_path='./config.ign'
+    az vm create -n '${az_vm_name}' -g '${az_resource_group}' --image '${az_image_name}' --admin-username core --custom-data '$(cat ${ignition_path})'
     ```
     ::::
 
@@ -1419,8 +1433,8 @@ decompress it.
     Example connecting
     :::
 
-    ``` bash
-    ssh core@<ip address>
+    ``` _bash
+    ssh core@\&lt;ip address\&gt;
     ```
     ::::
 
@@ -1433,9 +1447,9 @@ decompress it.
     Define your variables
     :::
 
-    ``` bash
+    ``` _bash
     az_vm_name=my-fcos-vm
-    ignition_path="./config.ign"
+    ignition_path='./config.ign'
     az_blob_ignition_path=./privateConfig.ign
     az_blob_ignition_file_name=privateConfig.ign
     ```
@@ -1446,8 +1460,8 @@ decompress it.
     Upload your ign file to Azure blob storage
     :::
 
-    ``` bash
-    az storage blob upload --connection-string "${cs}" -c "${az_blob_ignition_file_name}" -f  "${az_blob_ignition_path}" -n "${ignition_file_name}"
+    ``` _bash
+    az storage blob upload --connection-string '${cs}' -c '${az_blob_ignition_file_name}' -f  '${az_blob_ignition_path}' -n '${ignition_file_name}'
     ```
     ::::
 
@@ -1459,18 +1473,18 @@ decompress it.
     :::
 
     The source field should have a value similar to
-    `https://${az_storage_account}.blob.core.windows.net/${az_image_blob}/${az_blob_ignition_file_name}`
+    &#96;[https://\${az_storage_account}.blob.core.windows.net/\${az_image_blob}/\${az_blob_ignition_file_name}&#96](https://${az_storage_account}.blob.core.windows.net/${az_image_blob}/${az_blob_ignition_file_name}&#96);
     ::::
 
 3.  Create an identity and give it proper access to your storage
     account:
 
-    ``` bash
-    az identity create --name "${az_vm_name}-identity" --resource-group "${az_resource_group}"
-    identity_principal_id=$(az identity show --name "${az_vm_name}-identity" --resource-group "${az_resource_group}" --query principalId -o tsv)
-    identity_id=$(az identity show --name "${az_vm_name}-identity" --resource-group "${az_resource_group}" --query id -o tsv)
+    ``` _bash
+    az identity create --name '${az_vm_name}-identity' --resource-group '${az_resource_group}'
+    identity_principal_id=$(az identity show --name '${az_vm_name}-identity' --resource-group '${az_resource_group}' --query principalId -o tsv)
+    identity_id=$(az identity show --name '${az_vm_name}-identity' --resource-group '${az_resource_group}' --query id -o tsv)
 
-    az role assignment create --assignee "${identity_principal_id}" --role "Storage Blob Data Contributor" --scope /subscriptions/${subscription_id}/resourceGroups/${az_resource_group}/providers/Microsoft.Storage/storageAccounts/${az_storage_account}
+    az role assignment create --assignee '${identity_principal_id}' --role 'Storage Blob Data Contributor' --scope /subscriptions/${subscription_id}/resourceGroups/${az_resource_group}/providers/Microsoft.Storage/storageAccounts/${az_storage_account}
     ```
 
     :::: formalpara
@@ -1478,8 +1492,8 @@ decompress it.
     Create the VM passing the new identity
     :::
 
-    ``` bash
-    az vm create -n "${az_vm_name}" -g "${az_resource_group}" --image "${az_image_name}" --admin-username core --custom-data "$(cat ${ignition_path})" --assign-identity "${identity_id}"
+    ``` _bash
+    az vm create -n '${az_vm_name}' -g '${az_resource_group}' --image '${az_image_name}' --admin-username core --custom-data '$(cat ${ignition_path})' --assign-identity '${identity_id}'
     ```
     ::::
 
@@ -1491,7 +1505,7 @@ decompress it.
 
 Support for Confidential Computing is a work in progress in Fedora
 CoreOS. See the [issue
-#1719](https://github.com/coreos/fedora-coreos-tracker/issues/1719).
+&#35;1719](https://github.com/coreos/fedora-coreos-tracker/issues/1719).
 ::::
 
 :::: note
@@ -1511,17 +1525,17 @@ Gallery](https://learn.microsoft.com/en-us/azure/virtual-machines/azure-compute-
 Example creating a gallery image that supports confidential computing
 :::
 
-``` bash
-# Create an image gallery
-gallery_name="mygallery"
-az sig create --resource-group "${az_resource_group}" --gallery-name "${gallery_name}"
+``` _bash
+\&#35; Create an image gallery
+gallery_name='mygallery'
+az sig create --resource-group '${az_resource_group}' --gallery-name '${gallery_name}'
 
-# Create a gallery image definition
-gallery_image_definition="mygallery-def"
+\&#35; Create a gallery image definition
+gallery_image_definition='mygallery-def'
 az sig image-definition create \
---resource-group "${az_resource_group}" \
---gallery-name "${gallery_name}" \
---gallery-image-definition "${gallery_image_definition}" \
+--resource-group '${az_resource_group}' \
+--gallery-name '${gallery_name}' \
+--gallery-image-definition '${gallery_image_definition}' \
 --publisher azure \
 --offer example \
 --sku standard \
@@ -1529,17 +1543,17 @@ az sig image-definition create \
 --os-type Linux \
 --hyper-v-generation V2
 
-# Get the source VHD URI of OS disk
+\&#35; Get the source VHD URI of OS disk
 os_vhd_storage_account=$(az storage account list -g ${az_resource_group} | jq -r .[].id)
 
-# Create a new image version
-gallery_image_version="1.0.0"
+\&#35; Create a new image version
+gallery_image_version='1.0.0'
 az sig image-version create \
---resource-group "${az_resource_group}" \
---gallery-name "${gallery_name}" \
---gallery-image-definition "${gallery_image_definition}" \
---gallery-image-version "${gallery_image_version}" \
---os-vhd-storage-account "${os_vhd_storage_account}" \
+--resource-group '${az_resource_group}' \
+--gallery-name '${gallery_name}' \
+--gallery-image-definition '${gallery_image_definition}' \
+--gallery-image-version '${gallery_image_version}' \
+--os-vhd-storage-account '${os_vhd_storage_account}' \
 --os-vhd-uri https://${az_storage_account}.blob.core.windows.net/${az_container}/${az_image_blob}
 ```
 ::::
@@ -1549,33 +1563,33 @@ confidential compute type and use a [machine
 type](https://learn.microsoft.com/en-us/azure/confidential-computing/virtual-machine-options)
 that supports confidential computing.
 
-From the command-line, use `--security-type ConfidentialVM` and
-`--size`.
+From the command-line, use &#96;\--security-type ConfidentialVM&#96; and
+&#96;\--size&#96;.
 
 :::: formalpara
 ::: title
 Example launching a Confidential VM instance
 :::
 
-``` bash
-vm_name="my-fcos-cvm"
-ignition_path="./config.ign"
+``` _bash
+vm_name='my-fcos-cvm'
+ignition_path='./config.ign'
 
-# Specify a size that supports confidential computing (using AMD SEV-SNP for example)
-vm_size="Standard_DC2as_v5"
+\&#35; Specify a size that supports confidential computing (using AMD SEV-SNP for example)
+vm_size='Standard_DC2as_v5'
 
-# Get gallery image id
-gallery_image_id=$(az sig image-version show --gallery-image-definition "${gallery_image_definition}" --gallery-image-version "${gallery_image_version}" --gallery-name "${gallery_name}" --resource-group $az_resource_group | jq -r .id)
+\&#35; Get gallery image id
+gallery_image_id=$(az sig image-version show --gallery-image-definition '${gallery_image_definition}' --gallery-image-version '${gallery_image_version}' --gallery-name '${gallery_name}' --resource-group $az_resource_group | jq -r .id)
 
-# Create a VM with confidential computing enabled using the gallery image and an ignition config as custom-data
+\&#35; Create a VM with confidential computing enabled using the gallery image and an ignition config as custom-data
 az vm create \
---name "${vm_name}" \
+--name '${vm_name}' \
 --resource-group $az_resource_group \
---size "${vm_size}" \
---image "${gallery_image_id}" \
+--size '${vm_size}' \
+--image '${gallery_image_id}' \
 --admin-username core \
 --generate-ssh-keys \
---custom-data "$(cat ${ignition_path})" \
+--custom-data '$(cat ${ignition_path})' \
 --enable-vtpm true \
 --public-ip-sku Standard \
 --security-type ConfidentialVM \
@@ -1588,8 +1602,8 @@ az vm create \
 ::: title
 :::
 
-We pass parameter `--enable-secure-boot true` to enable Secure Boot. Use
-`false` to disable secure boot.
+We pass parameter &#96;\--enable-secure-boot true&#96; to enable Secure
+Boot. Use &#96;false&#96; to disable secure boot.
 ::::
 
 :::: note
@@ -1597,7 +1611,7 @@ We pass parameter `--enable-secure-boot true` to enable Secure Boot. Use
 :::
 
 To get the full console log, append the parameter
-`--boot-diagnostics-storage ${az_storage_account}`.
+&#96;\--boot-diagnostics-storage \${az_storage_account}&#96;.
 ::::
 
 :::: formalpara
@@ -1605,34 +1619,34 @@ To get the full console log, append the parameter
 Example Confidential VM Boot Verification
 :::
 
-``` bash
-ssh core@<ip address>
-# Confirm the VM is using `AMD SEV-SNP` confidential type
+``` _bash
+ssh core@\&lt;ip address\&gt;
+\&#35; Confirm the VM is using \&#96;AMD SEV-SNP\&#96; confidential type
 sudo systemd-detect-virt --cvm
 sev-snp
 
-# Confirm the VM is using `Intel TDX` confidential type
+\&#35; Confirm the VM is using \&#96;Intel TDX\&#96; confidential type
 sudo systemd-detect-virt --cvm
 tdx
 ```
 ::::
 
-Note: Another way to confirm is looking at \"Group B\" and see that it
-ends with 2 (`HV_ISOLATION_TYPE_SNP`), or ends with 3
-(`HV_ISOLATION_TYPE_TDX`).
+Note: Another way to confirm is looking at \'Group B\' and see that it
+ends with 2 (&#96;HV_ISOLATION_TYPE_SNP&#96;), or ends with 3
+(&#96;HV_ISOLATION_TYPE_TDX&#96;).
 
 :::: formalpara
 ::: title
 Example Confidential VM Boot Verification by checking dmesg log
 :::
 
-``` bash
-# `AMD SEV-SNP` confidential type
-dmesg | grep "Hyper-V: Isolation Config"
+``` _bash
+\&#35; \&#96;AMD SEV-SNP\&#96; confidential type
+dmesg | grep 'Hyper-V: Isolation Config'
 [    0.000000] Hyper-V: Isolation Config: Group A 0x1, Group B 0xba2
 
-# `Intel TDX` confidential type
-dmesg | grep "Hyper-V: Isolation Config"
+\&#35; \&#96;Intel TDX\&#96; confidential type
+dmesg | grep 'Hyper-V: Isolation Config'
 [    0.000000] Hyper-V: Isolation Config: Group A 0x1, Group B 0xbe3
 ```
 ::::
@@ -1655,8 +1669,8 @@ one, see [Producing an Ignition File](producing-ign.xml).
 ::: title
 :::
 
-Fedora CoreOS has a default `core` user that can be used to explore the
-OS. If you want to use it, finalize its
+Fedora CoreOS has a default &#96;core&#96; user that can be used to
+explore the OS. If you want to use it, finalize its
 [configuration](authentication.xml) by providing e.g. an SSH key.
 ::::
 
@@ -1675,7 +1689,7 @@ schedules per stream.
 
 1.  Once you have picked the relevant stream, find the corresponding
     DigitalOcean image on the [download
-    page](https://fedoraproject.org/coreos/download/?stream=stable#cloud_images)
+    page](https://fedoraproject.org/coreos/download/?stream=stable&#35;cloud_images)
     and copy the URL of the Download link.
 
 2.  Create the custom image:
@@ -1685,10 +1699,10 @@ schedules per stream.
     Example uploading FCOS to a DigitalOcean custom image
     :::
 
-    ``` bash
-    doctl compute image create my-fcos-image --region sfo2 --image-url <download-url>
-    # Wait for image creation to finish
-    while ! doctl compute image list-user --output json | jq -c '.[] | select(.name=="my-fcos-image")' | grep available; do sleep 5; done
+    ``` _bash
+    doctl compute image create my-fcos-image --region sfo2 --image-url \&lt;download-url\&gt;
+    \&#35; Wait for image creation to finish
+    while ! doctl compute image list-user --output json | jq -c '.[] | select(.name=='my-fcos-image')' | grep available; do sleep 5; done
     ```
     ::::
 
@@ -1707,14 +1721,14 @@ platform load.
     Example uploading an SSH key to DigitalOcean
     :::
 
-    ``` bash
-    doctl compute ssh-key create my-key --public-key "$(cat ~/.ssh/id_rsa.pub)"
+    ``` _bash
+    doctl compute ssh-key create my-key --public-key '$(cat ~/.ssh/id_rsa.pub)'
     ```
     ::::
 
 2.  Launch a droplet. Your Ignition configuration can be passed to the
     VM as its [user
-    data](https://docs.digitalocean.com/products/droplets/how-to/provide-user-data/#about-user-data),
+    data](https://docs.digitalocean.com/products/droplets/how-to/provide-user-data/&#35;about-user-data),
     or you can skip passing user data if you just want SSH access. This
     provides an easy way to test out FCOS without first creating an
     Ignition config.
@@ -1729,10 +1743,10 @@ platform load.
     configuration file
     :::
 
-    ``` bash
+    ``` _bash
     image_id=$(doctl compute image list-user | grep my-fcos-image | cut -f1 -d ' ')
     key_id=$(doctl compute ssh-key list | grep my-key | cut -f1 -d ' ')
-    doctl compute droplet create my-fcos-droplet --image "${image_id}" --region sfo2 --size s-2vcpu-2gb --user-data-file <ignition-config-path> --ssh-keys "${key_id}" --wait
+    doctl compute droplet create my-fcos-droplet --image '${image_id}' --region sfo2 --size s-2vcpu-2gb --user-data-file \&lt;ignition-config-path\&gt; --ssh-keys '${key_id}' --wait
     ```
     ::::
 
@@ -1740,8 +1754,8 @@ platform load.
     ::: title
     :::
 
-    While the DigitalOcean documentation mentions `cloud-init` and
-    scripts, FCOS does not support cloud-init or the ability to run
+    While the DigitalOcean documentation mentions &#96;cloud-init&#96;
+    and scripts, FCOS does not support cloud-init or the ability to run
     scripts from user-data. It accepts only Ignition configuration
     files.
     ::::
@@ -1754,12 +1768,12 @@ platform load.
     Example connecting
     :::
 
-    ``` bash
-    ssh core@<ip address>
+    ``` _bash
+    ssh core@\&lt;ip address\&gt;
     ```
     ::::
 
-    = Provisioning Fedora CoreOS on Exoscale
+# Provisioning Fedora CoreOS on Exoscale {#_provisioning_fedora_coreos_on_exoscale}
 
 This guide shows how to provision new Fedora CoreOS (FCOS) instances on
 [Exoscale](https://exoscale.com) Cloud Hosting.
@@ -1774,8 +1788,8 @@ not have one, see [Producing an Ignition File](producing-ign.xml).
 ::: title
 :::
 
-Fedora CoreOS has a default `core` user that can be used to explore the
-OS. If you want to use it, finalize its
+Fedora CoreOS has a default &#96;core&#96; user that can be used to
+explore the OS. If you want to use it, finalize its
 [configuration](authentication.xml) by providing e.g. an SSH key.
 ::::
 
@@ -1794,7 +1808,7 @@ You also need to have access to an Exoscale account.
 Exoscale offers official FCOS templates, but they are currently out of
 date. For now, we recommend creating your own template. Track progress
 on fixing this in
-[#1166](https://github.com/coreos/fedora-coreos-tracker/issues/1166).
+[&#35;1166](https://github.com/coreos/fedora-coreos-tracker/issues/1166).
 ::::
 
 Exoscale provides [Custom
@@ -1808,18 +1822,18 @@ Download and decompress the QCOW2 image with
 [coreos-installer](https://github.com/coreos/coreos-installer)
 :::
 
-``` bash
-STREAM="stable"
+``` _bash
+STREAM='stable'
 coreos-installer download -d -s $STREAM -p exoscale -f qcow2.xz
 ```
 ::::
 
 Alternatively, QCOW2 images can be downloaded from the [download
-page](https://fedoraproject.org/coreos/download/?stream=stable#cloud_images)
+page](https://fedoraproject.org/coreos/download/?stream=stable&#35;cloud_images)
 and manually decompressed.
 
 Next you can [Register a Custom
-Template](https://community.exoscale.com/documentation/compute/custom-templates/#register-a-custom-template).
+Template](https://community.exoscale.com/documentation/compute/custom-templates/&#35;register-a-custom-template).
 This can be done from the [Web
 Portal](https://portal.exoscale.com/compute/templates/add) or the
 [Exoscale
@@ -1834,26 +1848,26 @@ Exoscale to host the image.
 Upload to Object Storage and create Custom Template
 :::
 
-``` bash
-# Set the version and calculate the checksum
-FCOS_VERSION='...'
-FILE="fedora-coreos-${FCOS_VERSION}-exoscale.x86_64.qcow2"
-CHECKSUM=$(md5sum "${FILE}" | cut -d " " -f 1)
+``` _bash
+\&#35; Set the version and calculate the checksum
+FCOS_VERSION='\&#8230;'
+FILE='fedora-coreos-${FCOS_VERSION}-exoscale.x86_64.qcow2'
+CHECKSUM=$(md5sum '${FILE}' | cut -d ' ' -f 1)
 
-# Upload to object storage
+\&#35; Upload to object storage
 BUCKET='newbucket'
-exo storage mb "sos://${BUCKET}"
-exo storage upload --acl public-read "${FILE}" "sos://${BUCKET}/image-import/"
+exo storage mb 'sos://${BUCKET}'
+exo storage upload --acl public-read '${FILE}' 'sos://${BUCKET}/image-import/'
 
-# Create the template using given URL and CHECKSUM
-URL=$(exo storage show "sos://${BUCKET}/image-import/${FILE}" --output-template "{{.URL}}")
-TEMPLATE="fedora-coreos-${FCOS_VERSION}"
+\&#35; Create the template using given URL and CHECKSUM
+URL=$(exo storage show 'sos://${BUCKET}/image-import/${FILE}' --output-template '{{.URL}}')
+TEMPLATE='fedora-coreos-${FCOS_VERSION}'
 exo compute instance-template register --boot-mode=uefi $TEMPLATE $URL $CHECKSUM
 ```
 ::::
 
-You can then view the template using
-`exo compute instance-template show --visibility=private $TEMPLATE`.
+You can then view the template using &#96;exo compute instance-template
+show \--visibility=private \$TEMPLATE&#96;.
 
 ## Launching a VM instance {#_launching_a_vm_instance_2}
 
@@ -1875,8 +1889,8 @@ Exoscale CLI.
 ::: title
 :::
 
-Do not use the `--cloud-init-compress` argument to the CLI. It causes
-the Ignition config to be passed compressed to the instance and
+Do not use the &#96;\--cloud-init-compress&#96; argument to the CLI. It
+causes the Ignition config to be passed compressed to the instance and
 [Ignition doesn't tolerate
 that](https://github.com/coreos/fedora-coreos-tracker/issues/1160).
 ::::
@@ -1886,7 +1900,7 @@ that](https://github.com/coreos/fedora-coreos-tracker/issues/1160).
 Add your ssh-key
 :::
 
-``` bash
+``` _bash
 exo compute ssh-key register key-name /path/to/key
 ```
 ::::
@@ -1896,18 +1910,18 @@ exo compute ssh-key register key-name /path/to/key
 Launching a new instance with Exoscale CLI
 :::
 
-``` bash
+``` _bash
 NAME='worker'
 TYPE='standard.medium'
-DISK='10' # in GiB
+DISK='10' \&#35; in GiB
 SSHKEY='key-name'
-TEMPLATE=$TEMPLATE # template name set above
-exo compute instance create "${NAME}" \
+TEMPLATE=$TEMPLATE \&#35; template name set above
+exo compute instance create '${NAME}' \
 --disk-size $DISK \
---ssh-key "${SSHKEY}" \
+--ssh-key '${SSHKEY}' \
 --template $TEMPLATE \
 --template-visibility private \
---cloud-init "path/to/ignition-file.ign"
+--cloud-init 'path/to/ignition-file.ign'
 ```
 ::::
 
@@ -1916,16 +1930,16 @@ exo compute instance create "${NAME}" \
 :::
 
 If just SSH access is desired and no further customization is required,
-you don't need to pass any Ignition file and can omit the `--cloud-init`
-argument.
+you don't need to pass any Ignition file and can omit the
+&#96;\--cloud-init&#96; argument.
 ::::
 
 :::: tip
 ::: title
 :::
 
-You can find out the instance's assigned IP by running
-`exo compute instance show "${NAME}"`
+You can find out the instance's assigned IP by running &#96;exo compute
+instance show \'\${NAME}\'&#96;
 ::::
 
 You now should be able to SSH into the instance using the associated IP
@@ -1936,8 +1950,8 @@ address.
 Example connecting
 :::
 
-``` bash
-ssh core@<ip address>
+``` _bash
+ssh core@\&lt;ip address\&gt;
 ```
 ::::
 
@@ -1956,8 +1970,8 @@ one, see [Producing an Ignition File](producing-ign.xml).
 ::: title
 :::
 
-Fedora CoreOS has a default `core` user that can be used to explore the
-OS. If you want to use it, finalize its
+Fedora CoreOS has a default &#96;core&#96; user that can be used to
+explore the OS. If you want to use it, finalize its
 [configuration](authentication.xml) by providing e.g. an SSH key.
 ::::
 
@@ -1973,15 +1987,12 @@ which must be separately installed and configured beforehand.
 Fedora CoreOS is designed to be updated automatically, with different
 schedules per stream.
 
-FCOS images are published under the `fedora-coreos-cloud` project and
-further organized into image families, tracking the corresponding
-stream:
+FCOS images are published under the &#96;fedora-coreos-cloud&#96;
+project and further organized into image families, tracking the
+corresponding stream:
 
-- `fedora-coreos-stable`
-
-- `fedora-coreos-testing`
-
-- `fedora-coreos-next`
+&#42; &#96;fedora-coreos-stable&#96; &#42;
+&#96;fedora-coreos-testing&#96; &#42; &#96;fedora-coreos-next&#96;
 
 Before proceeding, check the details of each [update
 stream](update-streams.xml) and pick the one most suited for your use
@@ -1994,10 +2005,10 @@ You can inspect the current state of an image family as follows:
 Inspecting an image family
 :::
 
-``` bash
+``` _bash
 STREAM='stable'
 gcloud compute images describe-from-family \
---project "fedora-coreos-cloud" "fedora-coreos-${STREAM}"
+--project 'fedora-coreos-cloud' 'fedora-coreos-${STREAM}'
 ```
 ::::
 
@@ -2017,8 +2028,9 @@ creating an Ignition config.
 :::
 
 Currently, we don't support logging in using SSH through the GCP web
-console, using the `gcloud compute ssh` CLI method or OS Login. See
-[fedora-coreos-tracker#648](https://github.com/coreos/fedora-coreos-tracker/issues/648)
+console, using the &#96;gcloud compute ssh&#96; CLI method or OS Login.
+See
+[fedora-coreos-tracker&#35;648](https://github.com/coreos/fedora-coreos-tracker/issues/648)
 for more information.
 ::::
 
@@ -2027,14 +2039,14 @@ for more information.
 Launching a new instance
 :::
 
-``` bash
+``` _bash
 STREAM='stable'
 NAME='fcos-node01'
 ZONE='us-central1-a'
 gcloud compute instances create              \
---image-project "fedora-coreos-cloud"    \
---image-family "fedora-coreos-${STREAM}" \
---zone "${ZONE}" "${NAME}"
+--image-project 'fedora-coreos-cloud'    \
+--image-family 'fedora-coreos-${STREAM}' \
+--zone '${ZONE}' '${NAME}'
 ```
 ::::
 
@@ -2042,8 +2054,8 @@ gcloud compute instances create              \
 ::: title
 :::
 
-You can find out the instance's assigned IP by running
-`gcloud compute instances list`
+You can find out the instance's assigned IP by running &#96;gcloud
+compute instances list&#96;
 ::::
 
 You now should be able to SSH into the instance using the associated IP
@@ -2054,31 +2066,32 @@ address.
 Example connecting
 :::
 
-``` bash
-ssh core@<ip address>
+``` _bash
+ssh core@\&lt;ip address\&gt;
 ```
 ::::
 
 In order to launch a customized FCOS instance, a valid Ignition
-configuration must be passed as metadata under the `user-data` key at
-creation time. In the web console, this is available under the
-Management section. From the command-line, use `--metadata-from-file`:
+configuration must be passed as metadata under the &#96;user-data&#96;
+key at creation time. In the web console, this is available under the
+Management section. From the command-line, use
+&#96;\--metadata-from-file&#96;:
 
 :::: formalpara
 ::: title
 Launching and customizing a new instance
 :::
 
-``` bash
+``` _bash
 STREAM='stable'
 NAME='fcos-node01'
 ZONE='us-central1-a'
 CONFIG='example.ign'
 gcloud compute instances create                \
---image-project "fedora-coreos-cloud"      \
---image-family "fedora-coreos-${STREAM}"   \
---metadata-from-file "user-data=${CONFIG}" \
---zone "${ZONE}" "${NAME}"
+--image-project 'fedora-coreos-cloud'      \
+--image-family 'fedora-coreos-${STREAM}'   \
+--metadata-from-file 'user-data=${CONFIG}' \
+--zone '${ZONE}' '${NAME}'
 ```
 ::::
 
@@ -2090,8 +2103,8 @@ By design, [startup
 scripts](https://cloud.google.com/compute/docs/startupscript) are not
 supported on FCOS. Instead, it is recommended to encode any startup
 logic as systemd service units in the Ignition configuration. Again,
-note you need to use the `user-data` key for Ignition; it will also not
-work to paste Ignition into this field in the web console.
+note you need to use the &#96;user-data&#96; key for Ignition; it will
+also not work to paste Ignition into this field in the web console.
 ::::
 
 ## Launch a Confidential VM {#_launch_a_confidential_vm}
@@ -2102,7 +2115,7 @@ work to paste Ignition into this field in the web console.
 
 Support for Confidential Computing is a work in progress in Fedora
 CoreOS. See the [issue
-#1719](https://github.com/coreos/fedora-coreos-tracker/issues/1719).
+&#35;1719](https://github.com/coreos/fedora-coreos-tracker/issues/1719).
 ::::
 
 :::: note
@@ -2118,50 +2131,52 @@ confidential compute type and use a [machine
 type](https://cloud.google.com/confidential-computing/confidential-vm/docs/supported-configurations)
 that supports confidential compute.
 
-From the command-line, use `--confidential-compute-type` and
-`--machine-type`.
+From the command-line, use &#96;\--confidential-compute-type&#96; and
+&#96;\--machine-type&#96;.
 
 :::: formalpara
 ::: title
-Launching a confidential instance using confidential type `AMD SEV_SNP`
+Launching a confidential instance using confidential type &#96;AMD
+SEV_SNP&#96;
 :::
 
-``` bash
+``` _bash
 STREAM='stable'
 NAME='fcos-cvm-node01'
 ZONE='us-central1-a'
 CONFIG='example.ign'
 MACHINE_TYPE='n2d-standard-2'
 gcloud compute instances create                \
---image-project "fedora-coreos-cloud"      \
---image-family "fedora-coreos-${STREAM}"   \
---metadata-from-file "user-data=${CONFIG}" \
---confidential-compute-type "SEV_SNP"      \
---machine-type "${MACHINE_TYPE}"           \
+--image-project 'fedora-coreos-cloud'      \
+--image-family 'fedora-coreos-${STREAM}'   \
+--metadata-from-file 'user-data=${CONFIG}' \
+--confidential-compute-type 'SEV_SNP'      \
+--machine-type '${MACHINE_TYPE}'           \
 --maintenance-policy terminate             \
---zone "${ZONE}" "${NAME}"
+--zone '${ZONE}' '${NAME}'
 ```
 ::::
 
 :::: formalpara
 ::: title
-Launching a confidential instance using confidential type `Intel TDX`
+Launching a confidential instance using confidential type &#96;Intel
+TDX&#96;
 :::
 
-``` bash
+``` _bash
 STREAM='stable'
 NAME='fcos-cvm-node01'
 ZONE='us-central1-a'
 CONFIG='example.ign'
 MACHINE_TYPE='c3-standard-4'
 gcloud compute instances create                \
---image-project "fedora-coreos-cloud"      \
---image-family "fedora-coreos-${STREAM}"   \
---metadata-from-file "user-data=${CONFIG}" \
---confidential-compute-type "TDX"      \
---machine-type "${MACHINE_TYPE}"           \
+--image-project 'fedora-coreos-cloud'      \
+--image-family 'fedora-coreos-${STREAM}'   \
+--metadata-from-file 'user-data=${CONFIG}' \
+--confidential-compute-type 'TDX'      \
+--machine-type '${MACHINE_TYPE}'           \
 --maintenance-policy terminate             \
---zone "${ZONE}" "${NAME}"
+--zone '${ZONE}' '${NAME}'
 ```
 ::::
 
@@ -2170,16 +2185,18 @@ gcloud compute instances create                \
 Example Confidential VM Boot Verification
 :::
 
-``` bash
-ssh core@<ip address>
-# Confirm the VM is using `AMD SEV-SNP` confidential type
+``` _bash
+ssh core@\&lt;ip address\&gt;
+\&#35; Confirm the VM is using \&#96;AMD SEV-SNP\&#96; confidential type
 sudo systemd-detect-virt --cvm
 sev-snp
 
-# Confirm the VM is using `Intel TDX` confidential type
+\&#35; Confirm the VM is using \&#96;Intel TDX\&#96; confidential type
 sudo systemd-detect-virt --cvm
 tdx
 ---
+
+
 = Provisioning Fedora CoreOS on Hetzner
 
 This guide shows how to provision new Fedora CoreOS (FCOS) nodes on Hetzner.
@@ -2187,10 +2204,10 @@ Fedora CoreOS is currently not available as an option in the operating system se
 Thus you must first download the Fedora CoreOS disk image for Hetzner, then create a snapshot from it in your Hetzner account using the https://github.com/apricote/hcloud-upload-image[hcloud-upload-image] tool, and finally create your servers from this snapshot.
 
 IMPORTANT: Support for Fedora CoreOS on Hetzner is considered emerging, in that it does not yet offer an optimized user experience and relies on tools not officially supported by Hetzner.
-See https://github.com/coreos/fedora-coreos-tracker/issues/1324[issue #1324] for more details.
+See https://github.com/coreos/fedora-coreos-tracker/issues/1324[issue \&#35;1324] for more details.
 
 IMPORTANT: The https://github.com/apricote/hcloud-upload-image[hcloud-upload-image] tool is not an official Hetzner Cloud product and Hetzner Cloud does not provide support for it.
-Alternatively, you can also use the official https://github.com/hetznercloud/packer-plugin-hcloud[packer-plugin-hcloud] to install the image via `coreos-installer`.
+Alternatively, you can also use the official https://github.com/hetznercloud/packer-plugin-hcloud[packer-plugin-hcloud] to install the image via \&#96;coreos-installer\&#96;.
 
 IMPORTANT: In order to create a snapshot, the https://github.com/apricote/hcloud-upload-image[hcloud-upload-image] tool will provision a small server and boot it in rescue mode.
 As this server is short lived, the cost should be very limited.
@@ -2203,7 +2220,7 @@ You may delete this snapshot once the server has been provisioned.
 Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations.
 If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS.
+NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS.
 If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
 If you do not want to use Ignition to get started, you can make use of the https://coreos.github.io/afterburn/platforms/[Afterburn support] and only configure SSH keys.
@@ -2215,13 +2232,13 @@ The examples below use the https://github.com/hetznercloud/cli[hcloud] command-l
 
 Fedora CoreOS is designed to be updated automatically, with different schedules per stream. Once you have picked the relevant stream, download and verify the latest Hetzner image:
 
-[source, bash]
+[source,_bash]
 ```
 ::::
 
-ARCH=\"x86_64\" \# or \"aarch64\" STREAM=\"stable\" \# or \"testing\",
-\"next\" coreos-installer download -s \"\$STREAM\" -p hetzner -a
-\"\$ARCH\" -f raw.xz
+ARCH=\'x86_64\' &#35; or \'aarch64\' STREAM=\'stable\' &#35; or
+\'testing\', \'next\' coreos-installer download -s \'\$STREAM\' -p
+hetzner -a \'\$ARCH\' -f raw.xz
 
     NOTE: Both x86_64 and aarch64 architectures are supported on Hetzner.
 
@@ -2230,25 +2247,25 @@ ARCH=\"x86_64\" \# or \"aarch64\" STREAM=\"stable\" \# or \"testing\",
 
     == Creating a snapshot
 
-    . Use the `hcloud-upload-image` to create a snapshot from this image:
+    . Use the \&#96;hcloud-upload-image\&#96; to create a snapshot from this image:
     +
-    [source, bash]
+    [source,_bash]
 
-IMAGE_NAME=\"fedora-coreos-41.20250213.0-hetzner.x86_64.raw.xz\" export
-HCLOUD_TOKEN=\"\<your token\>\" STREAM=\"stable\" \# or \"testing\",
-\"next\" HETZNER_ARCH=\"x86\" \# or \"arm\"
+IMAGE_NAME=\'fedora-coreos-41.20250213.0-hetzner.x86_64.raw.xz\' export
+HCLOUD_TOKEN=\'&lt;your token&gt;\' STREAM=\'stable\' &#35; or
+\'testing\', \'next\' HETZNER_ARCH=\'x86\' &#35; or \'arm\'
 
-hcloud-upload-image upload \\ \--architecture \"\$HETZNER_ARCH\" \\
-\--compression xz \\ \--image-path \"\$IMAGE_NAME\" \\ \--labels
-os=fedora-coreos,channel=\"\$STREAM\" \\ \--description \"Fedora CoreOS
-(\$STREAM, \$ARCH)\"
+hcloud-upload-image upload \\ \--architecture \'\$HETZNER_ARCH\' \\
+\--compression xz \\ \--image-path \'\$IMAGE_NAME\' \\ \--labels
+os=fedora-coreos,channel=\'\$STREAM\' \\ \--description \'Fedora CoreOS
+(\$STREAM, \$ARCH)\'
 
     +
-    NOTE: The `hcloud-upload-image` tool uses different names for architectures (`x86_64` -> `x86`, `aarch64` -> `arm`).
+    NOTE: The \&#96;hcloud-upload-image\&#96; tool uses different names for architectures (\&#96;x86_64\&#96; -\&gt; \&#96;x86\&#96;, \&#96;aarch64\&#96; -\&gt; \&#96;arm\&#96;).
     +
     . Wait for the process to complete and validate that you have a snapshot:
     +
-    [source, bash]
+    [source,_bash]
 
 hcloud image list \--type=snapshot \--selector=os=fedora-coreos
 
@@ -2257,39 +2274,39 @@ hcloud image list \--type=snapshot \--selector=os=fedora-coreos
     . If you don't already have an SSH key uploaded to Hetzner, you may upload one:
     +
     .Example uploading an SSH key to Hetzner
-    [source, bash]
+    [source,_bash]
 
-SSH_PUBKEY=\"ssh-ed25519 ...​\" SSH_KEY_NAME=\"fedora-coreos-hetzner\"
-hcloud ssh-key create \--name \"\$SSH_KEY_NAME\" \--public-key
-\"\$SSH_PUBKEY\"
+SSH_PUBKEY=\'ssh-ed25519 &#8230;\'
+SSH_KEY_NAME=\'fedora-coreos-hetzner\' hcloud ssh-key create \--name
+\'\$SSH_KEY_NAME\' \--public-key \'\$SSH_PUBKEY\'
 
     +
     . Launch a server. Your Ignition configuration can be passed to the VM as its user data, or you can skip passing user data if you just want SSH access.
     This provides an easy way to test out FCOS without first creating an Ignition config.
     +
     .Example launching FCOS on Hetzner using an Ignition configuration file and SSH key
-    [source, bash]
+    [source,_bash]
 
-IMAGE_ID=\"\$(hcloud image list \\ \--type=snapshot \\
+IMAGE_ID=\'\$(hcloud image list \\ \--type=snapshot \\
 \--selector=os=fedora-coreos \\ \--output json \\ \| jq -r
-\'.\[0\].id\')\" SSH_KEY_NAME=\"fedora-coreos-hetzner\" \# See: hcloud
-ssh-key list DATACENTER=\"fsn1-dc14\" \# See: hcloud datacenter list
-TYPE=\"cx22\" \# See: hcloud server-type list
-NAME=\"fedora-coreos-test\" IGNITION_CONFIG=\"./config.ign\" hcloud
-server create \\ \--name \"\$NAME\" \\ \--type \"\$TYPE\" \\
-\--datacenter \"\$DATACENTER\" \\ \--image \"\$IMAGE_ID\" \\ \--ssh-key
-\"\$SSH_KEY_NAME\" \\ \--user-data-from-file \"\$IGNITION_CONFIG\"
+\'.\[0\].id\')\' SSH_KEY_NAME=\'fedora-coreos-hetzner\' &#35; See:
+hcloud ssh-key list DATACENTER=\'fsn1-dc14\' &#35; See: hcloud
+datacenter list TYPE=\'cx22\' &#35; See: hcloud server-type list
+NAME=\'fedora-coreos-test\' IGNITION_CONFIG=\'./config.ign\' hcloud
+server create \\ \--name \'\$NAME\' \\ \--type \'\$TYPE\' \\
+\--datacenter \'\$DATACENTER\' \\ \--image \'\$IMAGE_ID\' \\ \--ssh-key
+\'\$SSH_KEY_NAME\' \\ \--user-data-from-file \'\$IGNITION_CONFIG\'
 
     +
-    NOTE: While the Hetzner documentation and website mentions `cloud-init` and "cloud config", FCOS does not support cloud-init.
+    NOTE: While the Hetzner documentation and website mentions \&#96;cloud-init\&#96; and 'cloud config', FCOS does not support cloud-init.
     It accepts only Ignition configuration files.
 
     . You now should be able to SSH into the instance using the associated IP address.
     +
     .Example connecting
-    [source, bash]
+    [source,_bash]
 
-ssh core@\"\$(hcloud server ip \"\$NAME\")\"
+ssh core@\'\$(hcloud server ip \'\$NAME\')\'
 
     = Provisioning Fedora CoreOS on Microsoft Hyper-V
 
@@ -2299,7 +2316,7 @@ ssh core@\"\$(hcloud server ip \"\$NAME\")\"
 
     You must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    You will also need a small utility from https://github.com/containers/libhvee[libhvee] called `kvpctl`. It attaches your Ignition config to your virtual machine. Precompiled binaries can be found on the project's https://github.com/containers/libhvee/releases[releases page].
+    You will also need a small utility from https://github.com/containers/libhvee[libhvee] called \&#96;kvpctl\&#96;. It attaches your Ignition config to your virtual machine. Precompiled binaries can be found on the project's https://github.com/containers/libhvee/releases[releases page].
 
     === Downloading the disk image
 
@@ -2313,7 +2330,7 @@ ssh core@\"\$(hcloud server ip \"\$NAME\")\"
 
     image::hyperv-select-server.png[Hyper-V server list]
 
-    Then click _Virtual Switch Manager..._ in the _Actions_ panel:
+    Then click _Virtual Switch Manager\&#8230;_ in the _Actions_ panel:
 
     image::hyperv-actions.png[Hyper-V Manager Actions panel]
 
@@ -2323,13 +2340,13 @@ ssh core@\"\$(hcloud server ip \"\$NAME\")\"
 
     === Creating a virtual machine
 
-    In the Actions panel of Hyper-V Manager, click _New_, then _Virtual Machine..._:
+    In the Actions panel of Hyper-V Manager, click _New_, then _Virtual Machine\&#8230;_:
 
     image::hyperv-new.png[Hyper-V Manager]
 
     This will launch the _New Virtual Machine Wizard_. When completing the wizard, note the following settings:
 
-    . If you select a Generation 2 virtual machine, see <<Configuring Secure Boot>>.
+    . If you select a Generation 2 virtual machine, see \&lt;\&lt;Configuring Secure Boot\&gt;\&gt;.
     . When prompted to configure networking, select the virtual switch you created earlier.
     . When prompted to connect a virtual hard disk, select _Use an existing virtual disk_ and specify the disk image you downloaded earlier:
 
@@ -2339,30 +2356,25 @@ ssh core@\"\$(hcloud server ip \"\$NAME\")\"
 
     Before starting your virtual machine for the first time, you must attach your Ignition config containing the customizations you want to apply to Fedora CoreOS.
 
-    On Hyper-V, the Ignition config is presented to the hypervisor in parts. Ignition reads the parts and reassembles them into a single config. You can use the `kvpctl add-ign` subcommand to create these parts and attach them to the virtual machine. The syntax for the command is as follows:
+    On Hyper-V, the Ignition config is presented to the hypervisor in parts. Ignition reads the parts and reassembles them into a single config. You can use the \&#96;kvpctl add-ign\&#96; subcommand to create these parts and attach them to the virtual machine. The syntax for the command is as follows:
 
-    [source, powershell]
+    [source,_powershell]
 
 :::: formalpara
 ::: title
-\\kvpctl.exe \<name_of_vm\> add-ign \<path_to_ign_file\>
+\\kvpctl.exe &lt;name_of_vm&gt; add-ign &lt;path_to_ign_file&gt;
 :::
 
     For example:
 
-    [source, console]
+    [source,_console]
 ::::
 
-> :::: formalpara
-> ::: title
-> \\kvpctl.exe myvm add-ign C:\\Users\\joe\\myvm.ign
-> :::
->
-> added key: ignition.config.0 added key: ignition.config.1 added key:
-> ignition.config.2 added key: ignition.config.3 added key:
-> ignition.config.4 added key: ignition.config.5 added key:
-> ignition.config.6
-> ::::
+&gt; .\\kvpctl.exe myvm add-ign C:\\Users\\joe\\myvm.ign added key:
+ignition.config.0 added key: ignition.config.1 added key:
+ignition.config.2 added key: ignition.config.3 added key:
+ignition.config.4 added key: ignition.config.5 added key:
+ignition.config.6
 
     === Starting the VM
 
@@ -2370,42 +2382,39 @@ ssh core@\"\$(hcloud server ip \"\$NAME\")\"
 
     === Viewing the key-value pairs assigned to your virtual machine
 
-    You can view the key-value pairs assigned to your machine with the `kvpctl get` subcommand. You can only get key-value pairs when the virtual machine is running.
+    You can view the key-value pairs assigned to your machine with the \&#96;kvpctl get\&#96; subcommand. You can only get key-value pairs when the virtual machine is running.
 
-    [source, powershell]
+    [source,_powershell]
 
 :::: formalpara
 ::: title
-\\kvpctl.exe \<name_of_vm\> get
+\\kvpctl.exe &lt;name_of_vm&gt; get
 :::
 
     For example:
 
-    [source, console]
+    [source,_console]
 ::::
 
-> :::: formalpara
-> ::: title
-> \\kvpctl.exe myvm get
-> :::
->
-> ignition.config.3 = th\":\"/etc/containers/registries.conf...​\"
-> ignition.config.4 = ,\"contents\":{\"source\":\"data:,makeste...​\"
-> ignition.config.5 = nabled\":false,\"mask\":true,\"name\":\"do...​\"
-> ignition.config.6 = service\\n\\n\[Service\]\\nExecStart=/usr...​\"
-> ignition.config.0 = {\"ignition\":{\"config\":{\"replace\":{\"v...​\"
-> ignition.config.1 = default.target.wants\",\"user\":{\"name\"...​\"
-> ignition.config.2 = \"user\":{\"name\":\"root\"},\"contents\":{\"...​\"
-> ::::
+&gt; .\\kvpctl.exe myvm get ignition.config.3 =
+th\':\'/etc/containers/registries.conf&#8230;\' ignition.config.4 =
+,\'contents\':{\'source\':\'data:,makeste&#8230;\' ignition.config.5 =
+nabled\':false,\'mask\':true,\'name\':\'do&#8230;\' ignition.config.6 =
+service\\n\\n\[Service\]\\nExecStart=/usr&#8230;\' ignition.config.0 =
+{\'ignition\':{\'config\':{\'replace\':{\'v&#8230;\' ignition.config.1 =
+default.target.wants\',\'user\':{\'name\'&#8230;\' ignition.config.2 =
+\'user\':{\'name\':\'root\'},\'contents\':{\'&#8230;\'
 
     === Configuring Secure Boot
 
     If you configure a Generation 2 virtual machine, Fedora CoreOS will not successfully boot until you change the Secure Boot template to _Microsoft UEFI Certificate Authority_. You can do this in the _Security_ tab of the virtual machine's Settings dialog:
 
     image::hyperv-secure-boot.png[Virtual machine Secure Boot settings]
+
+
     = Provisioning Fedora CoreOS on IBM Cloud
 
-    This guide shows how to provision new Fedora CoreOS (FCOS) instances in IBM Cloud for either the `x86_64` or `s390x` architectures.
+    This guide shows how to provision new Fedora CoreOS (FCOS) instances in IBM Cloud for either the \&#96;x86_64\&#96; or \&#96;s390x\&#96; architectures.
 
     NOTE: FCOS does not support https://cloud.ibm.com/docs/cloud-infrastructure?topic=cloud-infrastructure-compare-infrastructure[IBM Cloud Classic Infrastructure].
 
@@ -2413,79 +2422,80 @@ ssh core@\"\$(hcloud server ip \"\$NAME\")\"
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     If you do not want to use Ignition to get started, you can make use of the https://coreos.github.io/afterburn/platforms/[Afterburn support].
 
-    You also need to have access to an https://cloud.ibm.com/login[IBM Cloud account]. The examples below use the https://cloud.ibm.com/docs/cli?topic=cli-getting-started[`ibmcloud`] command-line tool, which must be separately installed and configured beforehand.
-    Follow the directions at https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli to install the ibmcloud CLI. You'll need both the `cloud-object-storage` and `infrastructure-service` plugins installed. This can be done with:
+    You also need to have access to an https://cloud.ibm.com/login[IBM Cloud account]. The examples below use the https://cloud.ibm.com/docs/cli?topic=cli-getting-started[\&#96;ibmcloud\&#96;] command-line tool, which must be separately installed and configured beforehand.
+    Follow the directions at https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli to install the ibmcloud CLI. You'll need both the \&#96;cloud-object-storage\&#96; and \&#96;infrastructure-service\&#96; plugins installed. This can be done with:
 
-    * `ibmcloud plugin install cloud-object-storage`
-    * `ibmcloud plugin install infrastructure-service`
+    \&#42; \&#96;ibmcloud plugin install cloud-object-storage\&#96;
+    \&#42; \&#96;ibmcloud plugin install infrastructure-service\&#96;
 
-    After you've logged in using `ibmcloud login` you can set a target region:
+    After you've logged in using \&#96;ibmcloud login\&#96; you can set a target region:
 
     .Target a specific region
-    [source, bash]
+    [source,_bash]
 
-REGION=\'us-east\' \# run `ibmcloud regions` to view options ibmcloud
-target -r \$REGION
+REGION=\'us-east\' &#35; run &#96;ibmcloud regions&#96; to view options
+ibmcloud target -r \$REGION
 
     .Target a specific resource group
-    [source, bash]
+    [source,_bash]
 
 RESOURCE_GROUP=\'my-resource-group\' ibmcloud resource group-create
-\$RESOURCE_GROUP \# Create the resource group if it doesn't exist
+\$RESOURCE_GROUP &#35; Create the resource group if it doesn't exist
 ibmcloud target -g \$RESOURCE_GROUP
 
     There are also several other pieces that need to be in place, like a VPC, SSH keys, networks, permissions, etc. Unfortunately, this guide is not a comprehensive IBM Cloud guide. If you are new to IBM Cloud please familiarize yourself using https://cloud.ibm.com/docs/vpc?topic=vpc-getting-started[the documentation for IBM Cloud VPC networks] first.
 
     === Creating an Image
 
-    The following sets of commands will show you how to download the most recent image for a stream, upload it to cloud storage, and then create the cloud image in IBM Cloud. It is worth noting that Fedora CoreOS comes in three streams, with different update schedules per stream. These steps show the `stable` stream as an example, but can be used for other streams too.
+    The following sets of commands will show you how to download the most recent image for a stream, upload it to cloud storage, and then create the cloud image in IBM Cloud. It is worth noting that Fedora CoreOS comes in three streams, with different update schedules per stream. These steps show the \&#96;stable\&#96; stream as an example, but can be used for other streams too.
 
 
     .Fetch the latest image suitable for your target stream (or https://fedoraproject.org/coreos/download/[download and verify] it from the web).
-    [source, bash]
+    [source,_bash]
 
-STREAM=\'stable\' ARCH=\'x86_64\' \# or \'s390x\' coreos-installer
+STREAM=\'stable\' ARCH=\'x86_64\' &#35; or \'s390x\' coreos-installer
 download -s \$STREAM -a \$ARCH -p ibmcloud -f qcow2.xz \--decompress
 
     .Create a Service Account for uploading and an Authorization Policy to allow creating images from the uploaded objects.
-    [source, bash]
+    [source,_bash]
 
 BUCKET=\'my-unique-bucket\' ibmcloud resource service-instance-create
-\"\${BUCKET}-service-instance\" cloud-object-storage standard global
+\'\${BUCKET}-service-instance\' cloud-object-storage standard global
 
-SERVICE_INSTANCE_ID=\'25df0db0-89a4-4cb8-900f-ed8b44259f80\' \# from
+SERVICE_INSTANCE_ID=\'25df0db0-89a4-4cb8-900f-ed8b44259f80\' &#35; from
 just created service account ibmcloud iam authorization-policy-create is
 \--source-resource-type image cloud-object-storage Reader
 \--target-service-instance-id \$SERVICE_INSTANCE_ID
 
     .Upload the fetched image file to IBM Cloud Object Storage.
-    [source, bash]
+    [source,_bash]
 
-FCOS_VERSION=\'...​\'
-FILE=\"fedora-coreos-\${FCOS_VERSION}-ibmcloud.\${ARCH}.qcow2\" ibmcloud
+FCOS_VERSION=\'&#8230;\'
+FILE=\'fedora-coreos-\${FCOS_VERSION}-ibmcloud.\${ARCH}.qcow2\' ibmcloud
 cos create-bucket \--bucket \$BUCKET \--ibm-service-instance-id
 \$SERVICE_INSTANCE_ID ibmcloud cos upload \--bucket=\$BUCKET
-\--key=\"\${FILE}\" \--file=\"\${FILE}\"
+\--key=\'\${FILE}\' \--file=\'\${FILE}\'
 
     .Create the image from the storage object.
-    [source, bash]
+    [source,_bash]
 
-IMAGE=\${FILE:0:-6} \# pull off .qcow2 IMAGE=\${IMAGE//\[.\_\]/-} \#
-replace . and \_ with - \[ \$ARCH == \'x86_64\' \] &&
-OSNAME=\'fedora-coreos-stable-amd64\' \[ \$ARCH == \'s390x\' \] &&
-OSNAME=\'red-8-s390x-byol\' ibmcloud is image-create \"\${IMAGE}\"
-\--file \"cos://\${REGION}/\${BUCKET}/\${FILE}\" \--os-name \$OSNAME
+IMAGE=\${FILE:0:-6} &#35; pull off .qcow2 IMAGE=\${IMAGE//\[.\_\]/-}
+&#35; replace . and \_ with - \[ \$ARCH == \'x86_64\' \] &amp;&amp;
+OSNAME=\'fedora-coreos-stable-amd64\' \[ \$ARCH == \'s390x\' \]
+&amp;&amp; OSNAME=\'red-8-s390x-byol\' ibmcloud is image-create
+\'\${IMAGE}\' \--file \'cos://\${REGION}/\${BUCKET}/\${FILE}\'
+\--os-name \$OSNAME
 
-    NOTE: For `s390x` we use `--os-name=red-8-s390x-byol` (a RHEL 8 profile) here because there is not currently a `fedora-coreos-stable-s390x` profile to use.
+    NOTE: For \&#96;s390x\&#96; we use \&#96;--os-name=red-8-s390x-byol\&#96; (a RHEL 8 profile) here because there is not currently a \&#96;fedora-coreos-stable-s390x\&#96; profile to use.
 
-    You'll have to wait for the image creation process to finish and go from `pending` to `available` before you can use the image. Monitor with the following command:
+    You'll have to wait for the image creation process to finish and go from \&#96;pending\&#96; to \&#96;available\&#96; before you can use the image. Monitor with the following command:
 
     .Monitor image creation progress by viewing the images in your account
-    [source, bash]
+    [source,_bash]
 
 ibmcloud is images \--visibility private \--status pending,available
 
@@ -2493,32 +2503,32 @@ ibmcloud is images \--visibility private \--status pending,available
 
     Now that you have an image created in your account you can launch a VM instance. You'll have to specify several pieces of information in the command. Embedded in the example below are tips for how to grab that information before launching an instance.
 
-    You'll also need the Ignition config you created earlier. Here it is represented in the example command as `@example.ign`, which indicates a file in the current directory named `example.ign`. The @ is required before the path to the Ignition file.
+    You'll also need the Ignition config you created earlier. Here it is represented in the example command as \&#96;@example.ign\&#96;, which indicates a file in the current directory named \&#96;example.ign\&#96;. The @ is required before the path to the Ignition file.
 
     .Launching a VM instance
-    [source, bash]
+    [source,_bash]
 
-INSTANCE_NAME=\'instance1\' ZONE=\"\${REGION}-1\" \# view more with
-`ibmcloud is zones` PROFILE=\'bx2-2x8\' \# view more with
-`ibmcloud is instance-profiles`
-VPC=\'r014-c9c65cc4-cfd3-44de-ad54-865aac182ea1\' \# `ibmcloud is vpcs`
-IMAGE=\'r014-1823b4cf-9c63-499e-8a27-b771be714ad8\' \#
-`ibmcloud is images --visibility private`
-SUBNET=\'0777-bf99cbf4-bc82-4c46-895a-5b7304201182\' \#
-`ibmcloud is subnets`
-SSHKEY=\'r014-b44c37d0-5c21-4c2b-aba2-438a5b0a228d\' \#
-`ibmcloud is keys` ibmcloud is instance-create \$INSTANCE_NAME \$VPC
-\$ZONE \$PROFILE \$SUBNET \\ \--allow-ip-spoofing=true \--image \$IMAGE
-\--keys \$SSHKEY \--user-data \@example.ign
+INSTANCE_NAME=\'instance1\' ZONE=\'\${REGION}-1\' &#35; view more with
+&#96;ibmcloud is zones&#96; PROFILE=\'bx2-2x8\' &#35; view more with
+&#96;ibmcloud is instance-profiles&#96;
+VPC=\'r014-c9c65cc4-cfd3-44de-ad54-865aac182ea1\' &#35; &#96;ibmcloud is
+vpcs&#96; IMAGE=\'r014-1823b4cf-9c63-499e-8a27-b771be714ad8\' &#35;
+&#96;ibmcloud is images \--visibility private&#96;
+SUBNET=\'0777-bf99cbf4-bc82-4c46-895a-5b7304201182\' &#35; &#96;ibmcloud
+is subnets&#96; SSHKEY=\'r014-b44c37d0-5c21-4c2b-aba2-438a5b0a228d\'
+&#35; &#96;ibmcloud is keys&#96; ibmcloud is instance-create
+\$INSTANCE_NAME \$VPC \$ZONE \$PROFILE \$SUBNET \\
+\--allow-ip-spoofing=true \--image \$IMAGE \--keys \$SSHKEY \--user-data
+\@example.ign
 
-    TIP: If needed you may have to first create a subnet with a command like `ibmcloud is subnet-create my-subnet $VPC --ipv4-address-count 256 --zone $ZONE`.
+    TIP: If needed you may have to first create a subnet with a command like \&#96;ibmcloud is subnet-create my-subnet $VPC --ipv4-address-count 256 --zone $ZONE\&#96;.
 
-    WARNING: Make sure you choose an appropriate instance type based on your architecture. For example, you may want to use `bz2-2x8` instead of `bx2-2x8` above if you are targeting `s390x`.
+    WARNING: Make sure you choose an appropriate instance type based on your architecture. For example, you may want to use \&#96;bz2-2x8\&#96; instead of \&#96;bx2-2x8\&#96; above if you are targeting \&#96;s390x\&#96;.
 
     Next, if you'd like to SSH into the instance from outside IBM Cloud, you can assign a public IP to the instance:
 
     .Create and Assign a Floating IP
-    [source, bash]
+    [source,_bash]
 
 FIP_NAME=\'floating-ip-1\' ibmcloud is floating-ip-reserve \$FIP_NAME
 \--zone=\$ZONE VNIC=\$(ibmcloud is instance \$INSTANCE_NAME \--output
@@ -2529,9 +2539,9 @@ virtual-network-interface-floating-ip-add \$VNIC \$FIP_NAME
     And you now should be able to SSH into the instance using the IP address associated with the floating IP.
 
     .Example connecting
-    [source, bash]
+    [source,_bash]
 
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
     = Provisioning Fedora CoreOS on KubeVirt
 
@@ -2549,33 +2559,33 @@ ssh core@\<ip address\>
 
     The image for each stream can directly be referenced from the official registry:
 
-    - `quay.io/fedora/fedora-coreos-kubevirt:stable`
-    - `quay.io/fedora/fedora-coreos-kubevirt:testing`
-    - `quay.io/fedora/fedora-coreos-kubevirt:next`
+    - \&#96;quay.io/fedora/fedora-coreos-kubevirt:stable\&#96;
+    - \&#96;quay.io/fedora/fedora-coreos-kubevirt:testing\&#96;
+    - \&#96;quay.io/fedora/fedora-coreos-kubevirt:next\&#96;
 
     == Creating an Ignition config secret
 
-    There are various ways to expose userdata to Kubevirt VMs that are covered in the https://kubevirt.io/user-guide/virtual_machines/startup_scripts/#startup-scripts[KubeVirt user guide]. In this example we'll use the Ignition config stored in local file `example.ign` to create a secret named `ignition-payload`. We'll then use this secret when defining our virtual machine in the examples below.
+    There are various ways to expose userdata to Kubevirt VMs that are covered in the https://kubevirt.io/user-guide/virtual_machines/startup_scripts/\&#35;startup-scripts[KubeVirt user guide]. In this example we'll use the Ignition config stored in local file \&#96;example.ign\&#96; to create a secret named \&#96;ignition-payload\&#96;. We'll then use this secret when defining our virtual machine in the examples below.
 
     .Creating the secret
-    [source, bash]
+    [source,_bash]
 
 kubectl create secret generic ignition-payload
 \--from-file=userdata=example.ign
 
-    NOTE: If the user prefers, they can use `oc` instead of `kubectl` in the commands throughout this guide.
+    NOTE: If the user prefers, they can use \&#96;oc\&#96; instead of \&#96;kubectl\&#96; in the commands throughout this guide.
 
 
     == Launching a virtual machine
 
-    Given the `quay.io/fedora/fedora-coreos-kubevirt` images you can create a VM definition and combine that with the Ignition secret reference to launch a virtual machine.
+    Given the \&#96;quay.io/fedora/fedora-coreos-kubevirt\&#96; images you can create a VM definition and combine that with the Ignition secret reference to launch a virtual machine.
 
     .Launching a VM instance referencing the secret
-    [source, bash]
+    [source,_bash]
 
-STREAM=\"stable\" \# or \"testing\" or \"next\" cat \<\<END \> vm.yaml
-\-\-- apiVersion: kubevirt.io/v1 kind: VirtualMachine metadata: name:
-my-fcos spec: runStrategy: Always template: spec: domain: devices:
+STREAM=\'stable\' &#35; or \'testing\' or \'next\' cat &lt;&lt;END &gt;
+vm.yaml \-\-- apiVersion: kubevirt.io/v1 kind: VirtualMachine metadata:
+name: my-fcos spec: runStrategy: Always template: spec: domain: devices:
 disks: - name: containerdisk disk: bus: virtio - name: cloudinitdisk
 disk: bus: virtio rng: {} resources: requests: memory: 2048M volumes: -
 name: containerdisk containerDisk: image:
@@ -2584,10 +2594,10 @@ Always - name: cloudinitdisk cloudInitConfigDrive: secretRef: name:
 ignition-payload END kubectl create -f vm.yaml
 
     Now you should be able to SSH into the instance. If you didn't change the defaults, the
-    username is `core`.
+    username is \&#96;core\&#96;.
 
-    .Accessing the VM instance using https://kubevirt.io/user-guide/operations/virtctl_client_tool/[`virtctl`] via ssh
-    [source, bash]
+    .Accessing the VM instance using https://kubevirt.io/user-guide/operations/virtctl_client_tool/[\&#96;virtctl\&#96;] via ssh
+    [source,_bash]
 
 virtctl ssh core@my-fcos
 
@@ -2597,17 +2607,17 @@ virtctl ssh core@my-fcos
 
     The positive to this approach is that the machine behaves much more like a traditional virtual machine. The drawback is that the cluster needs to offer Block PV storage and not all clusters may do that.
 
-    NOTE: You may have to specify a `storageClassName` parameter in the `spec.dataVolumeTemplates.spec.storage` section of the config if your cluster doesn't offer a default. See the https://kubevirt.io/api-reference/v1.0.0/definitions.html#_v1beta1_storagespec[API docs].
+    NOTE: You may have to specify a \&#96;storageClassName\&#96; parameter in the \&#96;spec.dataVolumeTemplates.spec.storage\&#96; section of the config if your cluster doesn't offer a default. See the https://kubevirt.io/api-reference/v1.0.0/definitions.html\&#35;_v1beta1_storagespec[API docs].
 
     .Launching a VM with persistent storage
-    [source, bash]
+    [source,_bash]
 
-STREAM=\"stable\" \# or \"testing\" or \"next\" DISK=10 cat \<\<END \>
-vm.yaml \-\-- apiVersion: kubevirt.io/v1 kind: VirtualMachine metadata:
-name: my-fcos spec: runStrategy: Always dataVolumeTemplates: - metadata:
-name: fcos-os-disk-volume spec: source: registry: url:
-docker://quay.io/fedora/fedora-coreos-kubevirt:\${STREAM} storage:
-volumeMode: Block resources: requests: storage: \${DISK}Gi
+STREAM=\'stable\' &#35; or \'testing\' or \'next\' DISK=10 cat
+&lt;&lt;END &gt; vm.yaml \-\-- apiVersion: kubevirt.io/v1 kind:
+VirtualMachine metadata: name: my-fcos spec: runStrategy: Always
+dataVolumeTemplates: - metadata: name: fcos-os-disk-volume spec: source:
+registry: url: docker://quay.io/fedora/fedora-coreos-kubevirt:\${STREAM}
+storage: volumeMode: Block resources: requests: storage: \${DISK}Gi
 accessModes: - ReadWriteOnce template: spec: domain: devices: disks: -
 name: fcos-os-disk disk: bus: virtio - name: cloudinitdisk disk: bus:
 virtio rng: {} resources: requests: memory: 2048M volumes: - name:
@@ -2615,16 +2625,16 @@ fcos-os-disk dataVolume: name: fcos-os-disk-volume - name: cloudinitdisk
 cloudInitConfigDrive: secretRef: name: ignition-payload END kubectl
 create -f vm.yaml
 
-    NOTE: The data volume import into the PVC from the container registry may take some time. You can monitor the import by watching the logs of the `importer-fcos-os-disk-volume` pod.
+    NOTE: The data volume import into the PVC from the container registry may take some time. You can monitor the import by watching the logs of the \&#96;importer-fcos-os-disk-volume\&#96; pod.
 
-    After the machine is up you can connect to it using `virtctl` as shown in the previous example.
+    After the machine is up you can connect to it using \&#96;virtctl\&#96; as shown in the previous example.
 
     == Mirroring the image for use in private registries
 
-    If a private registry in air-gapped installations is used, the image can be mirrored to that registry using https://github.com/containers/skopeo[`skopeo`].
+    If a private registry in air-gapped installations is used, the image can be mirrored to that registry using https://github.com/containers/skopeo[\&#96;skopeo\&#96;].
 
     .Mirroring a stable stream FCOS image
-    [source, bash]
+    [source,_bash]
 
 skopeo copy docker://quay.io/fedora/fedora-coreos-kubevirt:stable
 docker://myregistry.io/myorg/fedora-coreos-kubevirt:stable
@@ -2637,13 +2647,15 @@ docker://myregistry.io/myorg/fedora-coreos-kubevirt:stable
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
-    You also need to have access to a host machine with `libvirt`. The examples below use the `virt-install` command-line tool, which must be separately installed beforehand.
+    You also need to have access to a host machine with \&#96;libvirt\&#96;. The examples below use the \&#96;virt-install\&#96; command-line tool, which must be separately installed beforehand.
 
-    TIP: If running on a host with SELinux enabled (use the `sestatus` command to check SELinux status), make sure your OS image and Ignition file are labeled as `svirt_home_t`. You can do this by placing them under `~/.local/share/libvirt/images/` or running `chcon -t svirt_home_t /path/to/file`.
+    TIP: If running on a host with SELinux enabled (use the \&#96;sestatus\&#96; command to check SELinux status), make sure your OS image and Ignition file are labeled as \&#96;svirt_home_t\&#96;. You can do this by placing them under \&#96;~/.local/share/libvirt/images/\&#96; or running \&#96;chcon -t svirt_home_t /path/to/file\&#96;.
 
     == Launching a VM instance
+
+
 
     = Provisioning Fedora CoreOS on AppleHV
 
@@ -2684,15 +2696,15 @@ sudo port install vfkit
 
     Vfkit is not a stateful virtual machine framework. You simply need to run the vfkit binary to start a virtual machine. The following command line will launch a VM with:
 
-    * 2 virtual CPUs
-    * 2 GB of memory
-    * a network device that will receive an IP address from vfkit
-    * a GUI console with keyboard and mouse support
+    \&#42; 2 virtual CPUs
+    \&#42; 2 GB of memory
+    \&#42; a network device that will receive an IP address from vfkit
+    \&#42; a GUI console with keyboard and mouse support
 
     .Launching FCOS with Vfkit
-    [source, bash]
+    [source,_bash]
 
-IGNITION_CONFIG=\"/path/to/example.ign\" IMAGE=\"/path/to/image.raw\"
+IGNITION_CONFIG=\'/path/to/example.ign\' IMAGE=\'/path/to/image.raw\'
 
 vfkit \--cpus 2 \--memory 2048 \\ \--bootloader
 efi,variable-store=efi-variable-store,create \\ \--device
@@ -2707,9 +2719,9 @@ virtio-input,pointing \\ \--device virtio-gpu,width=800,height=600 \\
 
     image::vfkit.png[Vfkit GUI]
 
-    When FCOS is completed booting, you will see the IP address of the VM displayed in the GUI window.  Vfkit will lease an address in the `192.168.64.0/24` network.  At this point, you can either choose to login or SSH to the VM.  Unlike some other virtualization providers, you can SSH to the virtual machine from the host.
+    When FCOS is completed booting, you will see the IP address of the VM displayed in the GUI window.  Vfkit will lease an address in the \&#96;192.168.64.0/24\&#96; network.  At this point, you can either choose to login or SSH to the VM.  Unlike some other virtualization providers, you can SSH to the virtual machine from the host.
 
-    [source, bash]
+    [source,_bash]
 
 ssh core@192.168.64.5
 
@@ -2721,90 +2733,92 @@ ssh core@192.168.64.5
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
-    You also need to have access to a Nutanix Prism Central subscription. The examples below use the `curl` command to access Nutanix Prism Central APIs.
+    You also need to have access to a Nutanix Prism Central subscription. The examples below use the \&#96;curl\&#96; command to access Nutanix Prism Central APIs.
 
     == Uploading an image to Nutanix AHV
 
     Fedora CoreOS is designed to be updated automatically, with different schedules per stream. Once you have picked the relevant stream, use the Nutanix Prism Central API to upload the latest image to Nutanix:
 
-    [source, bash]
+    [source,_bash]
 
-STREAM=stable IMAGE_NAME=\<name of image to create\> API_HOST=\<Prism
-Central hostname\> API_USERNAME=\<username\> API_PASSWORD=\<password\>
+STREAM=stable IMAGE_NAME=&lt;name of image to create&gt;
+API_HOST=&lt;Prism Central hostname&gt; API_USERNAME=&lt;username&gt;
+API_PASSWORD=&lt;password&gt;
 
 URL=\$(curl
 [https://builds.coreos.fedoraproject.org/streams/\${STREAM}.json](https://builds.coreos.fedoraproject.org/streams/${STREAM}.json)
 \| \\ jq -r
 .architectures.x86_64.artifacts.nutanix.formats.qcow2.disk.location)
-ENCODED_CREDS=\"\$(echo -n \"\${API_USERNAME}:\${API_PASSWORD}\" \|
-base64)\"
+ENCODED_CREDS=\'\$(echo -n \'\${API_USERNAME}:\${API_PASSWORD}\' \|
+base64)\'
 
-curl -X POST \--header \"Content-Type: application/json\" \\ \--header
-\"Accept: application/json\" \\ \--header \"Authorization: Basic
-\${ENCODED_CREDS}\" \\
-\"https://\${API_HOST}:9440/api/nutanix/v3/images\" \\ -d @- \<\< EOF {
-\"spec\": { \"name\": \"\${IMAGE_NAME}\", \"resources\": {
-\"image_type\": \"ISO_IMAGE\", \"source_uri\": \"\${URL}\",
-\"architecture\": \"X86_64\", \"source_options\": {
-\"allow_insecure_connection\": false } }, \"description\": \"string\" },
-\"api_version\": \"3.1.0\", \"metadata\": { \"use_categories_mapping\":
-false, \"kind\": \"image\", \"spec_version\": 0, \"categories_mapping\":
-{}, \"should_force_translate\": true, \"entity_version\": \"string\",
-\"categories\": {}, \"name\": \"string\" } } EOF
+curl -X POST \--header \'Content-Type: application/json\' \\ \--header
+\'Accept: application/json\' \\ \--header \'Authorization: Basic
+\${ENCODED_CREDS}\' \\
+\'https://\${API_HOST}:9440/api/nutanix/v3/images\' \\ -d @- &lt;&lt;
+EOF { \'spec\': { \'name\': \'\${IMAGE_NAME}\', \'resources\': {
+\'image_type\': \'ISO_IMAGE\', \'source_uri\': \'\${URL}\',
+\'architecture\': \'X86_64\', \'source_options\': {
+\'allow_insecure_connection\': false } }, \'description\': \'string\' },
+\'api_version\': \'3.1.0\', \'metadata\': { \'use_categories_mapping\':
+false, \'kind\': \'image\', \'spec_version\': 0, \'categories_mapping\':
+{}, \'should_force_translate\': true, \'entity_version\': \'string\',
+\'categories\': {}, \'name\': \'string\' } } EOF
 
     == Launching a VM instance
 
-    You can provision an FCOS instance using the Nutanix Prism Central web portal or via the Prism Central API with `curl`. Ignition configuration can be passed to the VM as a "cloud-init custom script". For example, to launch a VM using the API:
+    You can provision an FCOS instance using the Nutanix Prism Central web portal or via the Prism Central API with \&#96;curl\&#96;. Ignition configuration can be passed to the VM as a 'cloud-init custom script'. For example, to launch a VM using the API:
 
-    [source, bash]
+    [source,_bash]
 
-API_HOST=\<Prism Central hostname\> API_USERNAME=\<username\>
-API_PASSWORD=\<password\> CLUSTER_REFERENCE_NAME=\<name of cluster to
-use\> CLUSTER_REFERENCE_UUID=\<uuid of cluster to use\>
-SUBNET_REFERENCE_NAME=\<name of subnet to use\>
-SUBNET_REFERENCE_UUID=\<uuid of subnet to use\> VM_NAME=\<name of VM to
-create\> IGNITION_CONFIG=config.ign IMAGE_NAME=\<name of image\>
+API_HOST=&lt;Prism Central hostname&gt; API_USERNAME=&lt;username&gt;
+API_PASSWORD=&lt;password&gt; CLUSTER_REFERENCE_NAME=&lt;name of cluster
+to use&gt; CLUSTER_REFERENCE_UUID=&lt;uuid of cluster to use&gt;
+SUBNET_REFERENCE_NAME=&lt;name of subnet to use&gt;
+SUBNET_REFERENCE_UUID=&lt;uuid of subnet to use&gt; VM_NAME=&lt;name of
+VM to create&gt; IGNITION_CONFIG=config.ign IMAGE_NAME=&lt;name of
+image&gt;
 
-ENCODED_CONFIG=\"\$(cat \${IGNITION_CONFIG} \| base64 -w 0)\"
-ENCODED_CREDS=\"\$(echo -n \"\${API_USERNAME}:\${API_PASSWORD}\" \|
-base64)\" IMAGE_ID=\$(curl -X POST \--header \"Content-Type:
-application/json\" \\ \--header \"Accept: application/json\" \\
-\--header \"Authorization: Basic \${ENCODED_CREDS}\" \\
-\"https://\${API_HOST}:9440/api/nutanix/v3/images/list\" -d \'{
-\"kind\": \"image\",\"filter\": \"\", \"length\": 30, \"offset\": 0}\'
-\| \\ jq -r \'.entities\[\] \| select(.spec.name == \"\${IMAGE_NAME}\")
+ENCODED_CONFIG=\'\$(cat \${IGNITION_CONFIG} \| base64 -w 0)\'
+ENCODED_CREDS=\'\$(echo -n \'\${API_USERNAME}:\${API_PASSWORD}\' \|
+base64)\' IMAGE_ID=\$(curl -X POST \--header \'Content-Type:
+application/json\' \\ \--header \'Accept: application/json\' \\
+\--header \'Authorization: Basic \${ENCODED_CREDS}\' \\
+\'https://\${API_HOST}:9440/api/nutanix/v3/images/list\' -d \'{
+\'kind\': \'image\',\'filter\': \'\', \'length\': 30, \'offset\': 0}\'
+\| \\ jq -r \'.entities\[\] \| select(.spec.name == \'\${IMAGE_NAME}\')
 \| .metadata.uuid\')
 
-curl -X POST \--header \"Content-Type: application/json\" \\ \--header
-\"Accept: application/json\" \\ \--header \"Authorization: Basic
-\${ENCODED_CREDS}\" \\ \"https://\${API_HOST}:9440/api/nutanix/v3/vms\"
-\\ -d @- \<\< EOF { \"spec\": { \"name\": \"\${VM_NAME}\",
-\"resources\": { \"power_state\": \"ON\", \"num_vcpus_per_socket\": 1,
-\"num_sockets\": 1, \"memory_size_mib\": 16384, \"disk_list\": \[ {
-\"disk_size_mib\": 32768, \"device_properties\": { \"device_type\":
-\"DISK\", \"disk_address\": { \"device_index\": 0, \"adapter_type\":
-\"SCSI\" } }, \"data_source_reference\": { \"kind\": \"image\",
-\"uuid\": \"\${IMAGE_ID}\" } } \], \"nic_list\": \[ { \"nic_type\":
-\"NORMAL_NIC\", \"is_connected\": true, \"ip_endpoint_list\": \[ {
-\"ip_type\": \"DHCP\" } \], \"subnet_reference\": { \"kind\":
-\"subnet\", \"name\": \"\${SUBNET_REFERENCE_NAME}\", \"uuid\":
-\"\${SUBNET_REFERENCE_UUID}\" } } \], \"guest_tools\": {
-\"nutanix_guest_tools\": { \"state\": \"ENABLED\", \"iso_mount_state\":
-\"MOUNTED\" } }, \"guest_customization\": { \"cloud_init\": {
-\"user_data\": \"\${ENCODED_CONFIG}\" }, \"is_overridable\": false } },
-\"cluster_reference\": { \"kind\": \"cluster\", \"name\":
-\"\${CLUSTER_REFERENCE_NAME}\", \"uuid\": \"\${CLUSTER_REFERENCE_UUID}\"
-} }, \"api_version\": \"3.1.0\", \"metadata\": { \"kind\": \"vm\" } }
+curl -X POST \--header \'Content-Type: application/json\' \\ \--header
+\'Accept: application/json\' \\ \--header \'Authorization: Basic
+\${ENCODED_CREDS}\' \\ \'https://\${API_HOST}:9440/api/nutanix/v3/vms\'
+\\ -d @- &lt;&lt; EOF { \'spec\': { \'name\': \'\${VM_NAME}\',
+\'resources\': { \'power_state\': \'ON\', \'num_vcpus_per_socket\': 1,
+\'num_sockets\': 1, \'memory_size_mib\': 16384, \'disk_list\': \[ {
+\'disk_size_mib\': 32768, \'device_properties\': { \'device_type\':
+\'DISK\', \'disk_address\': { \'device_index\': 0, \'adapter_type\':
+\'SCSI\' } }, \'data_source_reference\': { \'kind\': \'image\',
+\'uuid\': \'\${IMAGE_ID}\' } } \], \'nic_list\': \[ { \'nic_type\':
+\'NORMAL_NIC\', \'is_connected\': true, \'ip_endpoint_list\': \[ {
+\'ip_type\': \'DHCP\' } \], \'subnet_reference\': { \'kind\':
+\'subnet\', \'name\': \'\${SUBNET_REFERENCE_NAME}\', \'uuid\':
+\'\${SUBNET_REFERENCE_UUID}\' } } \], \'guest_tools\': {
+\'nutanix_guest_tools\': { \'state\': \'ENABLED\', \'iso_mount_state\':
+\'MOUNTED\' } }, \'guest_customization\': { \'cloud_init\': {
+\'user_data\': \'\${ENCODED_CONFIG}\' }, \'is_overridable\': false } },
+\'cluster_reference\': { \'kind\': \'cluster\', \'name\':
+\'\${CLUSTER_REFERENCE_NAME}\', \'uuid\': \'\${CLUSTER_REFERENCE_UUID}\'
+} }, \'api_version\': \'3.1.0\', \'metadata\': { \'kind\': \'vm\' } }
 EOF
 
     You now should be able to SSH into the instance using the associated IP address.
 
     .Example connecting
-    [source, bash]
+    [source,_bash]
 
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
     = Provisioning Fedora CoreOS on OpenStack
 
@@ -2817,14 +2831,14 @@ ssh core@\<ip address\>
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     If you do not want to use Ignition to get started, you can make use of the https://coreos.github.io/afterburn/platforms/[Afterburn support].
 
     You also need to have access to an OpenStack environment and a functioning
-    https://docs.openstack.org/python-designateclient/latest/user/shell-v2.html[`openstack` CLI].
+    https://docs.openstack.org/python-designateclient/latest/user/shell-v2.html[\&#96;openstack\&#96; CLI].
     Typically, you'll https://docs.openstack.org/python-openstackclient/latest/configuration/index.html[configure the client]
-    by using a `clouds.yaml` file or via environment variables. If you're starting from scratch, this
+    by using a \&#96;clouds.yaml\&#96; file or via environment variables. If you're starting from scratch, this
     environment may need networks, SSH key pairs, security groups, etc.. set up. Please consult the
     https://docs.openstack.org/[OpenStack Documentation] to learn more.
 
@@ -2836,58 +2850,58 @@ ssh core@\<ip address\>
 
     NOTE: For more information on FCOS stream offerings see xref:update-streams.adoc[Update Streams].
 
-    [source, bash]
+    [source,_bash]
 
-STREAM=\"stable\" coreos-installer download \--decompress -s \$STREAM -p
+STREAM=\'stable\' coreos-installer download \--decompress -s \$STREAM -p
 openstack -f qcow2.xz
 
     Alternatively, you can manually download an OpenStack image from the
-    https://fedoraproject.org/coreos/download/?stream=stable#cloud_images[download page].
+    https://fedoraproject.org/coreos/download/?stream=stable\&#35;cloud_images[download page].
     Verify the download, following the instructions on that page, and decompress it.
 
     == Uploading the Image to OpenStack
 
     .Create the FCOS image in OpenStack
-    [source, bash]
+    [source,_bash]
 
 FILE=fedora-coreos-XX.XXXXXXXX.X.X-openstack.x86_64.qcow2
-IMAGE=\${FILE:0:-6} \# pull off .qcow2 openstack image create
+IMAGE=\${FILE:0:-6} &#35; pull off .qcow2 openstack image create
 \--disk-format=qcow2 \--min-disk=10 \--min-ram=2 \--progress
-\--file=\"\${FILE}\" \"\${IMAGE}\"
+\--file=\'\${FILE}\' \'\${IMAGE}\'
 
-    NOTE: If you're uploading an `aarch64` disk image then add `--property architecture=aarch64`.
+    NOTE: If you're uploading an \&#96;aarch64\&#96; disk image then add \&#96;--property architecture=aarch64\&#96;.
 
     .Monitor image creation progress by listing the image
-    [source, bash]
+    [source,_bash]
 
-openstack image list \--name=\"\${IMAGE}\"
+openstack image list \--name=\'\${IMAGE}\'
 
-    Once the image is listed as `active`, it's ready to be used.
+    Once the image is listed as \&#96;active\&#96;, it's ready to be used.
 
     == Launching a VM instance
 
     Now that you have an image created in your account you can launch a VM
     instance. You’ll have to specify several pieces of information in the
-    command, such as instance flavor, network information, SSH key, etc...
+    command, such as instance flavor, network information, SSH key, etc\&#8230;
 
     You'll also need the Ignition config you created earlier. Here it is
-    represented in the example command as `./example.ign`, which indicates
-    a file in the current directory named `example.ign`.
+    represented in the example command as \&#96;./example.ign\&#96;, which indicates
+    a file in the current directory named \&#96;example.ign\&#96;.
 
     .Launching a VM instance
-    [source, bash]
+    [source,_bash]
 
-OPENSTACK_NETWORK=\"private\" OPENSTACK_KEYPAIR=\"mykeypair\" \#
-optional OPENSTACK_FLAVOR=\"v1-standard-2\" INSTANCE_NAME=\"myinstance\"
-\# choose a name openstack server create \\
-\--key-name=\"\${OPENSTACK_KEYPAIR}\" \\ \--network=\$OPENSTACK_NETWORK
-\\ \--flavor=\$OPENSTACK_FLAVOR \\ \--image=\"\${IMAGE}\" \\
-\--user-data ./example.ign \\ \"\${INSTANCE_NAME}\"
+OPENSTACK_NETWORK=\'private\' OPENSTACK_KEYPAIR=\'mykeypair\' &#35;
+optional OPENSTACK_FLAVOR=\'v1-standard-2\' INSTANCE_NAME=\'myinstance\'
+&#35; choose a name openstack server create \\
+\--key-name=\'\${OPENSTACK_KEYPAIR}\' \\ \--network=\$OPENSTACK_NETWORK
+\\ \--flavor=\$OPENSTACK_FLAVOR \\ \--image=\'\${IMAGE}\' \\
+\--user-data ./example.ign \\ \'\${INSTANCE_NAME}\'
 
-    NOTE: Specifying `--key-name` is optional if you provide an SSH key in your Ignition config.
+    NOTE: Specifying \&#96;--key-name\&#96; is optional if you provide an SSH key in your Ignition config.
 
-    TIP: Monitor progress of the instance creation with `openstack server show "${INSTANCE_NAME}"`.
-    You can also use the `--wait` parameter when calling `openstack server create` to block
+    TIP: Monitor progress of the instance creation with \&#96;openstack server show '${INSTANCE_NAME}'\&#96;.
+    You can also use the \&#96;--wait\&#96; parameter when calling \&#96;openstack server create\&#96; to block
     until the instance is active.
 
     Next, if the instance's network isn't externally facing and you'd like to SSH
@@ -2895,20 +2909,20 @@ optional OPENSTACK_FLAVOR=\"v1-standard-2\" INSTANCE_NAME=\"myinstance\"
     IP to the instance:
 
     .Create and Assign a Floating IP
-    [source, bash]
+    [source,_bash]
 
 OPENSTACK_NETWORK=public openstack floating ip create
 \$OPENSTACK_NETWORK
 
-FLOATING_IP=1.1.1.1 \# from just created floating IP openstack server
-add floating ip \"\${INSTANCE_NAME}\" \$FLOATING_IP
+FLOATING_IP=1.1.1.1 &#35; from just created floating IP openstack server
+add floating ip \'\${INSTANCE_NAME}\' \$FLOATING_IP
 
     You now should be able to SSH into the instance using the floating IP address.
 
     .Example connecting
-    [source, bash]
+    [source,_bash]
 
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
     = Provisioning Fedora CoreOS on Oracle Cloud Infrastructure (OCI)
 
@@ -2921,7 +2935,7 @@ ssh core@\<ip address\>
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations.
     If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS.
     If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     If you do not want to use Ignition to get started, you can make use of the https://coreos.github.io/afterburn/platforms/[Afterburn support].
@@ -2930,97 +2944,97 @@ ssh core@\<ip address\>
     The examples below use the https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm[oci] command-line tool and https://stedolan.github.io/jq/[jq] as a command-line JSON processor.
 
     IMPORTANT: This guide currently only covers Virtual Machine shapes and not Bare Metal ones.
-    See https://github.com/coreos/fedora-coreos-tracker/issues/414#issuecomment-1795808614[issue #414] for details.
+    See https://github.com/coreos/fedora-coreos-tracker/issues/414\&#35;issuecomment-1795808614[issue \&#35;414] for details.
 
     == Downloading an Oracle Cloud Infrastructure image
 
     Fedora CoreOS is designed to be updated automatically, with different schedules per stream.
     Once you have picked the relevant stream, download, verify and decompress the latest Oracle Cloud Infrastructure image:
 
-    [source, bash]
+    [source,_bash]
 
-ARCH=\"x86_64\" \# or \"aarch64\" STREAM=\"stable\" \# or \"testing\",
-\"next\" coreos-installer download -s \$STREAM -a \$ARCH -p oraclecloud
--f qcow2.xz \--decompress
+ARCH=\'x86_64\' &#35; or \'aarch64\' STREAM=\'stable\' &#35; or
+\'testing\', \'next\' coreos-installer download -s \$STREAM -a \$ARCH -p
+oraclecloud -f qcow2.xz \--decompress
 
     NOTE: Both x86_64 and aarch64 architectures are supported on Oracle Cloud Infrastructure.
 
-    Alternatively, you can manually download an Oracle Cloud Infrastructure image from the https://fedoraproject.org/coreos/download/?stream=stable#cloud_images[download page].
+    Alternatively, you can manually download an Oracle Cloud Infrastructure image from the https://fedoraproject.org/coreos/download/?stream=stable\&#35;cloud_images[download page].
 
     == Uploading the image to Oracle Cloud Infrastructure
 
     Identify the ID of your root compartment.
 
     .Listing the compartments in your tenancy.
-    [source, bash]
+    [source,_bash]
 
-oci iam compartment list ROOT_COMPARTMENT_ID=\<root_compartment_id\>
+oci iam compartment list ROOT_COMPARTMENT_ID=&lt;root_compartment_id&gt;
 
     NOTE: The root compartment OCID is the same as your tenancy OCID. You can find
-    this information in your CLI configuration at `~/.oci/config` or in the
+    this information in your CLI configuration at \&#96;~/.oci/config\&#96; or in the
     https://cloud.oracle.com/tenancy[Cloud Console].
 
     If you only have one tenant/root compartment you can use the following command to get that information more easily.
 
     .Set root compartment id based on the first compartment in list.
-    [source, bash]
+    [source,_bash]
 
 ROOT_COMPARTMENT_ID=\$(oci iam compartment list \| jq \--raw-output
-\'.data\[0\].\"compartment-id\"\')
+\'.data\[0\].\'compartment-id\'\')
 
     .Create a new compartment for testing.
-    [source, bash]
+    [source,_bash]
 
 COMPARTMENT_ID=\$(oci iam compartment create \\ \--name
 fedora-coreos-test \\ \--compartment-id \$ROOT_COMPARTMENT_ID \\
-\--description \"Fedora CoreOS compartment\" \\ \| jq -r \'.data.id\')
+\--description \'Fedora CoreOS compartment\' \\ \| jq -r \'.data.id\')
 
     .Create a storage bucket for the image upload.
-    [source, bash]
+    [source,_bash]
 
-BUCKET_NAME=\"fedora-coreos\" oci os bucket create \--compartment-id
+BUCKET_NAME=\'fedora-coreos\' oci os bucket create \--compartment-id
 \$COMPARTMENT_ID \--name \$BUCKET_NAME
 
     .Upload the image to the storage bucket.
-    [source, bash]
+    [source,_bash]
 
-FCOS_VERSION=\'...​\'
-IMAGE_NAME=\"fedora-coreos-\${FCOS_VERSION}-oraclecloud.\${ARCH}.qcow2\"
-FILE_PATH=\"./\${IMAGE_NAME}\" oci os object put \--bucket-name
+FCOS_VERSION=\'&#8230;\'
+IMAGE_NAME=\'fedora-coreos-\${FCOS_VERSION}-oraclecloud.\${ARCH}.qcow2\'
+FILE_PATH=\'./\${IMAGE_NAME}\' oci os object put \--bucket-name
 \$BUCKET_NAME \--file \$FILE_PATH
 
     .View the object in the bucket.
-    [source, bash]
+    [source,_bash]
 
 oci os object list -bn \$BUCKET_NAME
 
     .Import the image as a custom image and remember its ID.
-    [source, bash]
+    [source,_bash]
 
 NAMESPACE=\$(oci os ns get \| jq -r \'.data\') IMAGE_ID=\$(oci compute
 image import from-object \\ \--compartment-id \$COMPARTMENT_ID \\
 \--namespace \$NAMESPACE \\ \--bucket-name \$BUCKET_NAME \\ \--name
-\$IMAGE_NAME \\ \--display-name \"Fedora CoreOS \$FCOS_VERSION \$ARCH\"
+\$IMAGE_NAME \\ \--display-name \'Fedora CoreOS \$FCOS_VERSION \$ARCH\'
 \\ \--launch-mode PARAVIRTUALIZED \\ \--source-image-type QCOW2 \\
-\--operating-system \"Linux\" \\ \| jq -r \'.data.id\')
+\--operating-system \'Linux\' \\ \| jq -r \'.data.id\')
 
     Wait until the import is completed.
 
     .Loop until the image becomes available.
-    [source, bash]
+    [source,_bash]
 
 while true; do state=\$(oci compute image get \--image-id \$IMAGE_ID \|
-jq -r \'.data.\"lifecycle-state\"\') echo \"\$(date): \$state\" \[
-\"\$state\" == \"AVAILABLE\" \] && break \|\| sleep 30 done
+jq -r \'.data.\'lifecycle-state\'\') echo \'\$(date): \$state\' \[
+\'\$state\' == \'AVAILABLE\' \] &amp;&amp; break \|\| sleep 30 done
 
     The image needs to be configured so the platform knows what it is
-    capable of. Here we'll pull the default version `1.2` capability set
+    capable of. Here we'll pull the default version \&#96;1.2\&#96; capability set
     and configure some additional ones. Note that some of these are
     architecture specific, but don't hurt because they also have to be
     opted in at runtime anyway.
 
     .Configure additional image capabilities.
-    [source, bash]
+    [source,_bash]
 
 GLOBAL_CAP_ID=\$( oci compute global-image-capability-schema list \--all
 \| jq -r \'.data\[0\].id\') GLOBAL_CAP_VERSION_NAME=\$( oci compute
@@ -3031,54 +3045,50 @@ global-image-capability-schema-version list \--all \\
 oci compute image-capability-schema create \\
 \--global-image-capability-schema-version-name \$GLOBAL_CAP_VERSION_NAME
 \\ \--compartment-id \$COMPARTMENT_ID \--image-id \$IMAGE_ID
-\--schema-data \'{ \"Compute.AMD_SecureEncryptedVirtualization\": {
-\"default-value\": true, \"descriptor-type\": \"boolean\", \"source\":
-\"IMAGE\" }, \"Compute.SecureBoot\": { \"default-value\": true,
-\"descriptor-type\": \"boolean\", \"source\": \"IMAGE\" },
-\"Storage.Iscsi.MultipathDeviceSupported\": { \"default-value\": true,
-\"descriptor-type\": \"boolean\", \"source\": \"IMAGE\" } }\'
+\--schema-data \'{ \'Compute.AMD_SecureEncryptedVirtualization\': {
+\'default-value\': true, \'descriptor-type\': \'boolean\', \'source\':
+\'IMAGE\' }, \'Compute.SecureBoot\': { \'default-value\': true,
+\'descriptor-type\': \'boolean\', \'source\': \'IMAGE\' },
+\'Storage.Iscsi.MultipathDeviceSupported\': { \'default-value\': true,
+\'descriptor-type\': \'boolean\', \'source\': \'IMAGE\' } }\'
 
     Now we can mark the image as compatible with appropriate VM https://docs.oracle.com/en-us/iaas/Content/Compute/References/computeshapes.htm[shapes].
 
     .Remove default compatible shapes.
-    [source, bash]
+    [source,_bash]
 
 oci compute image-shape-compatibility-entry \\ list \--image-id
 \$IMAGE_ID \| jq -r \'.data\[\].shape\' \| while read shape; do \[\[
-\"\$shape\" =\~ Generic \]\] && continue \# Can't remove Generic shapes
-echo \"Removing \$shape from \$IMAGE_ID\" oci compute
+\'\$shape\' =\~ Generic \]\] &amp;&amp; continue &#35; Can't remove
+Generic shapes echo \'Removing \$shape from \$IMAGE_ID\' oci compute
 image-shape-compatibility-entry remove \\ \--force \--image-id
-\$IMAGE_ID \--shape-name \"\${shape}\" done
+\$IMAGE_ID \--shape-name \'\${shape}\' done
 
     .Mark as compatible with appropriate VM shapes.
-    [source, bash]
+    [source,_bash]
 
 shapes_info=\$(oci compute shape list \--compartment-id \$COMPARTMENT_ID
 \| jq -r \'.data\[\]\')
 
-# Limit to VM shapes only {#_limit_to_vm_shapes_only}
+&#35; Limit to VM shapes only &#35;
+<https://github.com/coreos/fedora-coreos-tracker/issues/414&#35;issuecomment-1795808614>
+vm_shapes_info=\$(jq -r \'select(.shape \| select(startswith(\'VM\')))\'
+&lt;&lt;&lt; \'\$shapes_info\')
 
-# <https://github.com/coreos/fedora-coreos-tracker/issues/414#issuecomment-1795808614> {#_httpsgithub_comcoreosfedora_coreos_trackerissues414issuecomment_1795808614}
+&#35; Determine x86_64 and aarch64 shapes amd64_shape_ids=\$(jq -r
+\'select(.\'processor-description\' \| contains(\'AMD\', \'Intel\')) \|
+.shape\' &lt;&lt;&lt; \'\$vm_shapes_info\') arm64_shape_ids=\$(jq -r
+\'select(.\'processor-description\' \| contains(\'Ampere\')) \| .shape\'
+&lt;&lt;&lt; \'\$vm_shapes_info\')
 
-vm_shapes_info=\$(jq -r \'select(.shape \| select(startswith(\"VM\")))\'
-\<\<\< \"\$shapes_info\")
-
-# Determine x86_64 and aarch64 shapes {#_determine_x86_64_and_aarch64_shapes}
-
-amd64_shape_ids=\$(jq -r \'select(.\"processor-description\" \|
-contains(\"AMD\", \"Intel\")) \| .shape\' \<\<\< \"\$vm_shapes_info\")
-arm64_shape_ids=\$(jq -r \'select(.\"processor-description\" \|
-contains(\"Ampere\")) \| .shape\' \<\<\< \"\$vm_shapes_info\")
-
-# Apply the appropriate shapes to the IMAGE {#_apply_the_appropriate_shapes_to_the_image}
-
-\[ \"\$ARCH\" == \"x86_64\" \] && shape_ids=\"\$amd64_shape_ids\" \[
-\"\$ARCH\" == \"aarch64\" \] && shape_ids=\"\$arm64_shape_ids\" for
-shape in \$shape_ids; do oci compute image-shape-compatibility-entry add
-\\ \--image-id \$IMAGE_ID \--shape-name \"\${shape}\" done
+&#35; Apply the appropriate shapes to the IMAGE \[ \'\$ARCH\' ==
+\'x86_64\' \] &amp;&amp; shape_ids=\'\$amd64_shape_ids\' \[ \'\$ARCH\'
+== \'aarch64\' \] &amp;&amp; shape_ids=\'\$arm64_shape_ids\' for shape
+in \$shape_ids; do oci compute image-shape-compatibility-entry add \\
+\--image-id \$IMAGE_ID \--shape-name \'\${shape}\' done
 
     .List all the compatible shapes for an image.
-    [source, bash]
+    [source,_bash]
 
 oci compute image-shape-compatibility-entry list \--image-id \$IMAGE_ID
 \| jq -r \'.data\[\].shape\'
@@ -3086,116 +3096,116 @@ oci compute image-shape-compatibility-entry list \--image-id \$IMAGE_ID
     == Launching an instance
 
     .Create a Virtual Cloud Network.
-    [source, bash]
+    [source,_bash]
 
 NETWORK_ID=\$(oci network vcn create \\ \--compartment-id
-\$COMPARTMENT_ID \\ \--display-name \"fedora-coreos-network\" \\
-\--cidr-blocks \'\[\"10.0.0.0/16\"\]\' \\ \--dns-label \"myfcos\" \\
+\$COMPARTMENT_ID \\ \--display-name \'fedora-coreos-network\' \\
+\--cidr-blocks \'\[\'10.0.0.0/16\'\]\' \\ \--dns-label \'myfcos\' \\
 \--wait-for-state AVAILABLE \| jq -r \'.data.id\')
 
     .Create a Subnet.
-    [source, bash]
+    [source,_bash]
 
 SUBNET_ID=\$(oci network subnet create \\ \--compartment-id
-\$COMPARTMENT_ID \\ \--display-name \"fedora-coreos-subnet\" \\
-\--cidr-block \"10.0.0.0/24\" \\ \--vcn-id \$NETWORK_ID \\ \--dns-label
-\"subnet1\" \\ \--wait-for-state AVAILABLE \| jq -r \'.data.id\')
+\$COMPARTMENT_ID \\ \--display-name \'fedora-coreos-subnet\' \\
+\--cidr-block \'10.0.0.0/24\' \\ \--vcn-id \$NETWORK_ID \\ \--dns-label
+\'subnet1\' \\ \--wait-for-state AVAILABLE \| jq -r \'.data.id\')
 
     .Create an Internet Gateway.
-    [source, bash]
+    [source,_bash]
 
 GATEWAY_ID=\$(oci network internet-gateway create \\ \--compartment-id
-\$COMPARTMENT_ID \\ \--display-name \"fedora-coreos-gateway\" \\
+\$COMPARTMENT_ID \\ \--display-name \'fedora-coreos-gateway\' \\
 \--vcn-id \$NETWORK_ID \\ \--is-enabled true \| jq -r \'.data.id\')
 
     .Add a Rule to the Route Table.
-    [source, bash]
+    [source,_bash]
 
 ROUTE_TABLE_ID=\$(oci network route-table list \\ \--compartment-id
 \$COMPARTMENT_ID \\ \--vcn-id \$NETWORK_ID \| jq -r \'.data\[0\].id\')
 
 oci network route-table update \\ \--rt-id \$ROUTE_TABLE_ID \\ \--force
 \--route-rules \\
-\'\[{\"cidrBlock\":\"0.0.0.0/0\",\"networkEntityId\":\"\'\"\${GATEWAY_ID}\"\'\"}\]\'
+\'\[{\'cidrBlock\':\'0.0.0.0/0\',\'networkEntityId\':\'\'\'\${GATEWAY_ID}\'\'\'}\]\'
 
     You can now choose an availability domain or just set it to be the
     first one in the region.
 
     .Pick an availability domain.
-    [source, bash]
+    [source,_bash]
 
 AVAILABILITY_DOMAIN=\$(oci iam availability-domain list \| jq -r
 \'.data\[0\].name\')
 
-    NOTE: View all possible domains with `oci iam availability-domain list`.
+    NOTE: View all possible domains with \&#96;oci iam availability-domain list\&#96;.
 
     Now we can launch an instance. If you just want SSH access you can
     skip providing an Ignition configuration to the instance.
 
     .Launching an instance without an Ignition configuration.
-    [source, bash]
+    [source,_bash]
 
-NAME=fedora-coreos SHAPE=VM.Standard.E5.Flex \# or VM.Standard.A1.Flex
-for aarch64 SSHKEYS=\"/path/to/authorized_keys\" \# path to
-authorized_keys file
+NAME=fedora-coreos SHAPE=VM.Standard.E5.Flex &#35; or
+VM.Standard.A1.Flex for aarch64 SSHKEYS=\'/path/to/authorized_keys\'
+&#35; path to authorized_keys file
 
 INSTANCE_ID=\$(oci compute instance launch \\ \--compartment-id
 \$COMPARTMENT_ID \\ \--availability-domain \$AVAILABILITY_DOMAIN \\
 \--display-name \$NAME \\ \--image-id \$IMAGE_ID \\ \--shape \$SHAPE \\
-\--shape-config \'{\"ocpus\": \'2\', \"memoryInGBs\": \'4\'}\' \\
+\--shape-config \'{\'ocpus\': \'2\', \'memoryInGBs\': \'4\'}\' \\
 \--subnet-id \$SUBNET_ID \\ \--assign-public-ip true \\
 \--ssh-authorized-keys-file \$SSHKEYS \\ \--wait-for-state TERMINATED \\
 \--wait-for-state RUNNING \| jq -r \'.data.id\')
 
-    NOTE: The free tier eligible `VM.Standard.E2.1.Micro` shape has less
+    NOTE: The free tier eligible \&#96;VM.Standard.E2.1.Micro\&#96; shape has less
     than the recommended amount of memory for Fedora CoreOS to run.
     For a free tier eligible instance it is recommended to use the ARM
-    based `VM.Standard.A1.Flex` shape.
+    based \&#96;VM.Standard.A1.Flex\&#96; shape.
 
     .Launching an instance with customizations and an Ignition configuration.
-    [source, bash]
+    [source,_bash]
 
-NAME=fedora-coreos SHAPE=VM.Standard.E5.Flex \# or VM.Standard.A1.Flex
-for aarch64 DISK=50 \# size of boot volume in GBs OCPUS=2 \# number of
-allocated OCPUs MEMORY=4 \# size of memory in GBs
-INSTANCE_HOSTNAME=mycoreos \# hostname for the instance
-USERDATA=\"/path/to/config.ign\" \# path to your Ignition config \# that
-sets a ssh key
+NAME=fedora-coreos SHAPE=VM.Standard.E5.Flex &#35; or
+VM.Standard.A1.Flex for aarch64 DISK=50 &#35; size of boot volume in GBs
+OCPUS=2 &#35; number of allocated OCPUs MEMORY=4 &#35; size of memory in
+GBs INSTANCE_HOSTNAME=mycoreos &#35; hostname for the instance
+USERDATA=\'/path/to/config.ign\' &#35; path to your Ignition config
+&#35; that sets a ssh key
 
 INSTANCE_ID=\$(oci compute instance launch \\ \--compartment-id
 \$COMPARTMENT_ID \\ \--availability-domain \$AVAILABILITY_DOMAIN \\
 \--display-name \$NAME \\ \--image-id \$IMAGE_ID \\ \--shape \$SHAPE \\
-\--shape-config \\ \'{\"ocpus\": \'\${OCPUS}\', \"memoryInGBs\":
+\--shape-config \\ \'{\'ocpus\': \'\${OCPUS}\', \'memoryInGBs\':
 \'\${MEMORY}\'}\' \\ \--subnet-id \$SUBNET_ID \\ \--assign-public-ip
 true \\ \--hostname-label \$INSTANCE_HOSTNAME \\
 \--boot-volume-size-in-gbs \$DISK \\ \--user-data-file \$USERDATA \\
 \--wait-for-state TERMINATED \\ \--wait-for-state RUNNING \| jq -r
 \'.data.id\')
 
-    NOTE: While the Oracle Cloud Infrastructure documentation mentions `cloud-init`,
+    NOTE: While the Oracle Cloud Infrastructure documentation mentions \&#96;cloud-init\&#96;,
     Fedora CoreOS does not support cloud-init. It accepts only Ignition configuration
     files. When using the https://cloud.oracle.com[Cloud Console], an Ignition
-    configuration can be placed into "Cloud-init script" field.
+    configuration can be placed into 'Cloud-init script' field.
 
     NOTE: To enable SecureBoot you can pass additional config via
-    `--platform-config '{"type": "AMD_VM", "isSecureBootEnabled": true}'` or
-    `--platform-config '{"type": "INTEL_VM", "isSecureBootEnabled": true}'` or
+    \&#96;--platform-config '{'type': 'AMD_VM', 'isSecureBootEnabled': true}'\&#96; or
+    \&#96;--platform-config '{'type': 'INTEL_VM', 'isSecureBootEnabled': true}'\&#96; or
     depending on the processor type of your instance. Enabling Secureboot
     isn't currently possible for ARM instances.
 
     .Get the public IP address of the instance.
-    [source, bash]
+    [source,_bash]
 
 PUBLIC_IP=\$(oci compute instance list-vnics \--instance-id
-\$INSTANCE_ID \| jq -r \'.data\[0\].\"public-ip\"\') echo \"The instance
-public IPV4 is: \$PUBLIC_IP\"
+\$INSTANCE_ID \| jq -r \'.data\[0\].\'public-ip\'\') echo \'The instance
+public IPV4 is: \$PUBLIC_IP\'
 
     You now should be able to SSH into the instance using the associated IP address.
 
     .SSH into the running instance.
-    [source, bash]
+    [source,_bash]
 
-ssh \"core@\${PUBLIC_IP}\"
+ssh \'core@\${PUBLIC_IP}\'
 
     = Provisioning Fedora CoreOS on Proxmox VE
 
@@ -3203,7 +3213,7 @@ ssh \"core@\${PUBLIC_IP}\"
 
     Before provisioning an FCOS machine on Proxmox VE, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    You also need to have access to a https://www.proxmox.com[Proxmox Virtual Environment] (VE) cluster or standalone server with administrative privileges to create VMs and storage configurations. All of the commands will be run as the `root` user on the Proxmox VE host.
+    You also need to have access to a https://www.proxmox.com[Proxmox Virtual Environment] (VE) cluster or standalone server with administrative privileges to create VMs and storage configurations. All of the commands will be run as the \&#96;root\&#96; user on the Proxmox VE host.
 
     == Setting up Proxmox VE Storage
 
@@ -3225,11 +3235,11 @@ mkdir -p /var/coreos
 
 pvesm add dir coreos \--path /var/coreos \--content images,snippets
 
-    This command creates a new storage location named `coreos` that Proxmox VE can use for storing disk images and configuration snippets (including Ignition files). For more details on Proxmox VE storage configuration, see the https://pve.proxmox.com/wiki/Storage[Proxmox VE Storage documentation].
+    This command creates a new storage location named \&#96;coreos\&#96; that Proxmox VE can use for storing disk images and configuration snippets (including Ignition files). For more details on Proxmox VE storage configuration, see the https://pve.proxmox.com/wiki/Storage[Proxmox VE Storage documentation].
 
     == Downloading Fedora CoreOS Images
 
-    Fedora CoreOS provides pre-built images specifically optimized for Proxmox VE. You can download these images using either the `coreos-installer` binary or via a container.
+    Fedora CoreOS provides pre-built images specifically optimized for Proxmox VE. You can download these images using either the \&#96;coreos-installer\&#96; binary or via a container.
 
     === Fetching the QCOW2 image
 
@@ -3237,14 +3247,14 @@ pvesm add dir coreos \--path /var/coreos \--content images,snippets
 
     [source,bash]
 
-STREAM=\"stable\" \# as an installed binary: coreos-installer download
--s \$STREAM -p proxmoxve -f qcow2.xz \--decompress -C /var/coreos \# or
-as a container: podman run \--pull=always \--rm -v
-\"/var/coreos/images:/data\" -w /data \\
+STREAM=\'stable\' &#35; as an installed binary: coreos-installer
+download -s \$STREAM -p proxmoxve -f qcow2.xz \--decompress -C
+/var/coreos &#35; or as a container: podman run \--pull=always \--rm -v
+\'/var/coreos/images:/data\' -w /data \\
 quay.io/coreos/coreos-installer:release download -s \$STREAM -p
 proxmoxve -f qcow2.xz \--decompress
 
-    Both methods will download the latest Fedora CoreOS image for the specified stream (`stable`, `testing`, or `next`) in QCOW2 format, optimized for Proxmox VE. It will store the image in the `/var/coreos/images` directory.
+    Both methods will download the latest Fedora CoreOS image for the specified stream (\&#96;stable\&#96;, \&#96;testing\&#96;, or \&#96;next\&#96;) in QCOW2 format, optimized for Proxmox VE. It will store the image in the \&#96;/var/coreos/images\&#96; directory.
 
     == Preparing Ignition Configuration
 
@@ -3252,9 +3262,8 @@ proxmoxve -f qcow2.xz \--decompress
 
     [source,bash]
 
-# Upload your ignition to /var/coreos/config.ign {#_upload_your_ignition_to_varcoreosconfig_ign}
-
-scp /path/to/your/config.ign
+&#35; Upload your ignition to /var/coreos/config.ign scp
+/path/to/your/config.ign
 root@proxmoxve-host:/var/coreos/snippets/config.ign
 
     == Setting up a new VM
@@ -3273,14 +3282,14 @@ IGN=config.ign STORAGE=local-lvm CPU=2 MEMORY=2048 DISK_SIZE=90G
 
     Adjust these variables according to your requirements:
 
-    * `VM_ID`: Unique VM identifier in Proxmox VE
-    * `NAME`: The name for the VM
-    * `QCOW`: Filename of the downloaded FCOS image
-    * `IGN`: Filename of your Ignition configuration
-    * `STORAGE`: Target storage pool for the VM disk
-    * `CPU`: Number of CPU cores to allocate
-    * `MEMORY`: RAM allocation in MB
-    * `DISK_SIZE`: Additional disk space to allocate
+    \&#42; \&#96;VM_ID\&#96;: Unique VM identifier in Proxmox VE
+    \&#42; \&#96;NAME\&#96;: The name for the VM
+    \&#42; \&#96;QCOW\&#96;: Filename of the downloaded FCOS image
+    \&#42; \&#96;IGN\&#96;: Filename of your Ignition configuration
+    \&#42; \&#96;STORAGE\&#96;: Target storage pool for the VM disk
+    \&#42; \&#96;CPU\&#96;: Number of CPU cores to allocate
+    \&#42; \&#96;MEMORY\&#96;: RAM allocation in MB
+    \&#42; \&#96;DISK_SIZE\&#96;: Additional disk space to allocate
 
     === Creating and Configuring the VM
 
@@ -3288,39 +3297,30 @@ IGN=config.ign STORAGE=local-lvm CPU=2 MEMORY=2048 DISK_SIZE=90G
 
     [source,bash]
 
-# Create the initial VM configuration {#_create_the_initial_vm_configuration}
+&#35; Create the initial VM configuration qm create \${VM_ID} \--name
+\${NAME} \--cores \${CPU} \--memory \${MEMORY} \\ \--net0
+virtio,bridge=vmbr0 \--scsihw virtio-scsi-pci
 
-qm create \${VM_ID} \--name \${NAME} \--cores \${CPU} \--memory
-\${MEMORY} \\ \--net0 virtio,bridge=vmbr0 \--scsihw virtio-scsi-pci
+&#35; Import the FCOS image as the primary disk qm set \${VM_ID}
+\--scsi0 \'\${STORAGE}:0,import-from=/var/coreos/images/\${QCOW}\'
 
-# Import the FCOS image as the primary disk {#_import_the_fcos_image_as_the_primary_disk}
+&#35; Resize the disk to provide additional space qm resize \${VM_ID}
+scsi0 +\${DISK_SIZE}
 
-qm set \${VM_ID} \--scsi0
-\"\${STORAGE}:0,import-from=/var/coreos/images/\${QCOW}\"
+&#35; Add cloud-init drive for configuration delivery qm set \${VM_ID}
+\--ide2 \${STORAGE}:cloudinit
 
-# Resize the disk to provide additional space {#_resize_the_disk_to_provide_additional_space}
+&#35; Set boot order to use the imported disk qm set \${VM_ID} \--boot
+order=scsi0
 
-qm resize \${VM_ID} scsi0 +\${DISK_SIZE}
+&#35; Configure serial console for better compatibility qm set \${VM_ID}
+\--serial0 socket \--vga serial0
 
-# Add cloud-init drive for configuration delivery {#_add_cloud_init_drive_for_configuration_delivery}
+&#35; Configure Ignition file delivery via cloud-init qm set \${VM_ID}
+\--cicustom vendor=coreos:snippets/\${IGN}
 
-qm set \${VM_ID} \--ide2 \${STORAGE}:cloudinit
-
-# Set boot order to use the imported disk {#_set_boot_order_to_use_the_imported_disk}
-
-qm set \${VM_ID} \--boot order=scsi0
-
-# Configure serial console for better compatibility {#_configure_serial_console_for_better_compatibility}
-
-qm set \${VM_ID} \--serial0 socket \--vga serial0
-
-# Configure Ignition file delivery via cloud-init {#_configure_ignition_file_delivery_via_cloud_init}
-
-qm set \${VM_ID} \--cicustom vendor=coreos:snippets/\${IGN}
-
-# Disable automatic upgrades during provisioning {#_disable_automatic_upgrades_during_provisioning}
-
-qm set \${VM_ID} \--ciupgrade 0
+&#35; Disable automatic upgrades during provisioning qm set \${VM_ID}
+\--ciupgrade 0
 
     == Network Configuration
 
@@ -3334,10 +3334,9 @@ qm set \${VM_ID} \--ciupgrade 0
 
     [source,bash]
 
-# For static IP address {#_for_static_ip_address}
-
-IP=\"192.168.1.100\" IP_CIDR=\"\${IP}/24\" GATEWAY=\"192.168.1.1\" qm
-set \${VM_ID} \--ipconfig0 ip=\${IP_CIDR},gw=\${GATEWAY}
+&#35; For static IP address IP=\'192.168.1.100\' IP_CIDR=\'\${IP}/24\'
+GATEWAY=\'192.168.1.1\' qm set \${VM_ID} \--ipconfig0
+ip=\${IP_CIDR},gw=\${GATEWAY}
 
     Replace the IP addresses with values appropriate for your network configuration.
 
@@ -3349,9 +3348,7 @@ set \${VM_ID} \--ipconfig0 ip=\${IP_CIDR},gw=\${GATEWAY}
 
     [source,bash]
 
-# Start and wait for the VM to start {#_start_and_wait_for_the_vm_to_start}
-
-qm start \${VM_ID}
+&#35; Start and wait for the VM to start qm start \${VM_ID}
 
     === Exploring the OS
 
@@ -3359,15 +3356,13 @@ qm start \${VM_ID}
 
     [source,bash]
 
-# Access the VM console from the host {#_access_the_vm_console_from_the_host}
+&#35; Access the VM console from the host qm terminal \${VM_ID}
 
-qm terminal \${VM_ID}
+    If you set up an xref:authentication.adoc[SSH key] for the default \&#96;core\&#96; user, you can SSH into the VM via the IP address:
 
-    If you set up an xref:authentication.adoc[SSH key] for the default `core` user, you can SSH into the VM via the IP address:
+    [source,_bash]
 
-    [source, bash]
-
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
     == Clean up
 
@@ -3375,18 +3370,16 @@ ssh core@\<ip address\>
 
     [source,bash]
 
-# Stop the VM {#_stop_the_vm}
+&#35; Stop the VM qm stop \${VM_ID}
 
-qm stop \${VM_ID}
-
-# Remove the VM and its associated storage {#_remove_the_vm_and_its_associated_storage}
-
-qm destroy \${VM_ID}
+&#35; Remove the VM and its associated storage qm destroy \${VM_ID}
 
     == Links
 
-    * Consider using Proxmox VE's built-in https://pve.proxmox.com/wiki/Backup_and_Restore[backup functionality] for important VMs
-    * Monitor VM performance and resource usage through https://pve.proxmox.com/wiki/Proxmox_VE_Administration_Guide[Proxmox VE monitoring tools]
+    \&#42; Consider using Proxmox VE's built-in https://pve.proxmox.com/wiki/Backup_and_Restore[backup functionality] for important VMs
+    \&#42; Monitor VM performance and resource usage through https://pve.proxmox.com/wiki/Proxmox_VE_Administration_Guide[Proxmox VE monitoring tools]
+
+
     = Provisioning Fedora CoreOS on QEMU
 
     This guide shows how to provision new Fedora CoreOS (FCOS) instances on a bare https://www.qemu.org/[QEMU] hypervisor.
@@ -3395,55 +3388,53 @@ qm destroy \${VM_ID}
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
-    You also need to have access to a host machine with https://www.linux-kvm.org/page/Main_Page[KVM] support. The examples below use the `qemu-kvm` command-line tool, which must be separately installed beforehand.
+    You also need to have access to a host machine with https://www.linux-kvm.org/page/Main_Page[KVM] support. The examples below use the \&#96;qemu-kvm\&#96; command-line tool, which must be separately installed beforehand.
 
-    TIP: If running with SELinux enabled, make sure your OS image and Ignition file are labeled as `svirt_home_t`, for example by placing them under `~/.local/share/libvirt/images/`.
+    TIP: If running with SELinux enabled, make sure your OS image and Ignition file are labeled as \&#96;svirt_home_t\&#96;, for example by placing them under \&#96;~/.local/share/libvirt/images/\&#96;.
 
     == Booting a new VM on QEMU
 
-    This section shows how to boot a new VM on QEMU. Based on the platform, the Ignition file is passed to the VM, which sets the `opt/com.coreos/config` key in the QEMU firmware configuration device.
+    This section shows how to boot a new VM on QEMU. Based on the platform, the Ignition file is passed to the VM, which sets the \&#96;opt/com.coreos/config\&#96; key in the QEMU firmware configuration device.
 
-    You can use `-snapshot` to make `qemu-kvm` allocate temporary storage for the VM, or `qemu-img create` to first create a layered qcow2.
+    You can use \&#96;-snapshot\&#96; to make \&#96;qemu-kvm\&#96; allocate temporary storage for the VM, or \&#96;qemu-img create\&#96; to first create a layered qcow2.
 
     === Fetching the QCOW2 image
 
     Fetch the latest image suitable for your target stream (or https://fedoraproject.org/coreos/download/[download and verify] it from the web).
 
-    [source, bash]
+    [source,_bash]
 
-STREAM=\"stable\" coreos-installer download -s \$STREAM -p qemu -f
+STREAM=\'stable\' coreos-installer download -s \$STREAM -p qemu -f
 qcow2.xz \--decompress -C \~/.local/share/libvirt/images/
 
     === Setting up a new VM
 
-    Launch the new VM using `qemu-kvm`.
+    Launch the new VM using \&#96;qemu-kvm\&#96;.
 
     In snapshot mode, all changes that are performed live after boot are discarded once the machine is powered off.
     If you need to persist your changes, it is recommended to set up a dedicated persistent disk first.
 
     .Launching FCOS with QEMU (temporary storage)
-    [source, bash]
+    [source,_bash]
 
-IGNITION_CONFIG=\"/path/to/example.ign\" IMAGE=\"/path/to/image.qcow2\"
-\# for x86/aarch64: IGNITION_DEVICE_ARG=\"-fw_cfg
-name=opt/com.coreos/config,file=\${IGNITION_CONFIG}\"
+IGNITION_CONFIG=\'/path/to/example.ign\' IMAGE=\'/path/to/image.qcow2\'
+&#35; for x86/aarch64: IGNITION_DEVICE_ARG=\'-fw_cfg
+name=opt/com.coreos/config,file=\${IGNITION_CONFIG}\'
 
-# for s390x/ppc64le: {#_for_s390xppc64le}
-
-IGNITION_DEVICE_ARG=\"-drive
+&#35; for s390x/ppc64le: IGNITION_DEVICE_ARG=\'-drive
 file=\${IGNITION_CONFIG},if=none,format=raw,readonly=on,id=ignition
--device virtio-blk,serial=ignition,drive=ignition\"
+-device virtio-blk,serial=ignition,drive=ignition\'
 
 qemu-kvm -m 2048 -cpu host -nographic -snapshot \\ -drive
-\"if=virtio,file=\${IMAGE}\" \${IGNITION_DEVICE_ARG} \\ -nic
+\'if=virtio,file=\${IMAGE}\' \${IGNITION_DEVICE_ARG} \\ -nic
 user,model=virtio,hostfwd=tcp::2222-:22
 
     .Launching FCOS with QEMU (persistent storage)
-    [source, bash]
+    [source,_bash]
 
-qemu-img create -f qcow2 -F qcow2 -b \"\${IMAGE}\" my-fcos-vm.qcow2
+qemu-img create -f qcow2 -F qcow2 -b \'\${IMAGE}\' my-fcos-vm.qcow2
 qemu-kvm -m 2048 -cpu host -nographic \\ -drive
 if=virtio,file=my-fcos-vm.qcow2 \${IGNITION_DEVICE_ARG} \\ -nic
 user,model=virtio,hostfwd=tcp::2222-:22
@@ -3452,87 +3443,88 @@ user,model=virtio,hostfwd=tcp::2222-:22
 
     With QEMU usermode networking, the assigned IP address is not reachable from the host.
 
-    The examples above use `hostfwd` to selectively forward the SSH port on the guest machine to the local host (port 2222).
+    The examples above use \&#96;hostfwd\&#96; to selectively forward the SSH port on the guest machine to the local host (port 2222).
 
-    If you set up an xref:authentication.adoc[SSH key] for the default `core` user, you can SSH into the VM via the forwarded port:
+    If you set up an xref:authentication.adoc[SSH key] for the default \&#96;core\&#96; user, you can SSH into the VM via the forwarded port:
 
-    [source, bash]
+    [source,_bash]
 
 ssh -p 2222 core@localhost
 
     = Provisioning Fedora CoreOS on the Raspberry Pi 4
 
-    Fedora CoreOS produces 64-bit ARM (`aarch64`) artifacts. These images can be used as the Operating System for the Raspberry Pi 4 device. Before trying to get FCOS up and running on your Raspberry Pi 4 you'll want to xref:#_updating_eeprom_on_raspberry_pi_4[Update the EEPROM] to the latest version and choose how you want to boot the Raspberry Pi 4. There are two options:
+    Fedora CoreOS produces 64-bit ARM (\&#96;aarch64\&#96;) artifacts. These images can be used as the Operating System for the Raspberry Pi 4 device. Before trying to get FCOS up and running on your Raspberry Pi 4 you'll want to xref:\&#35;_updating_eeprom_on_raspberry_pi_4[Update the EEPROM] to the latest version and choose how you want to boot the Raspberry Pi 4. There are two options:
 
-    - xref:#_installing_fcos_and_booting_via_u_boot[Installing FCOS and Booting via U-Boot]
-    - xref:#_installing_fcos_and_booting_via_edk2[Installing FCOS and Booting via EDK2]
+    - xref:\&#35;_installing_fcos_and_booting_via_u_boot[Installing FCOS and Booting via U-Boot]
+    - xref:\&#35;_installing_fcos_and_booting_via_edk2[Installing FCOS and Booting via EDK2]
 
     U-Boot is the way the Raspberry Pi 4 has traditionally been booted. The https://github.com/pftf/RPi4/[EDK2 Firmware] is an effort to provide a layer that will make RPi4 SystemReady ES (SBBR compliant) similar to most larger 64-bit ARM servers.
 
     == Updating EEPROM on Raspberry Pi 4
 
-    The Raspberry Pi 4 uses an EEPROM to boot the system. The EEPROM/Firmware in the past https://github.com/raspberrypi/rpi-eeprom/blob/master/firmware-2711/release-notes.md#2021-10-04---add-support-for-gpt-fat16-and-increase-usb-timeouts---beta[had problems reading a FAT16 EFI partition], which https://github.com/coreos/fedora-coreos-tracker/issues/993[FCOS uses]. For the best experience getting FCOS to run on the RPi4 please update the EEPROM to the latest version. To check if you have the latest version you can go to the https://github.com/raspberrypi/rpi-eeprom/releases[raspberrypi/rpi-eeprom releases page] and make sure the version reported by your Raspberry Pi on boot is from around the same date as the last release.
+    The Raspberry Pi 4 uses an EEPROM to boot the system. The EEPROM/Firmware in the past https://github.com/raspberrypi/rpi-eeprom/blob/master/firmware-2711/release-notes.md\&#35;2021-10-04---add-support-for-gpt-fat16-and-increase-usb-timeouts---beta[had problems reading a FAT16 EFI partition], which https://github.com/coreos/fedora-coreos-tracker/issues/993[FCOS uses]. For the best experience getting FCOS to run on the RPi4 please update the EEPROM to the latest version. To check if you have the latest version you can go to the https://github.com/raspberrypi/rpi-eeprom/releases[raspberrypi/rpi-eeprom releases page] and make sure the version reported by your Raspberry Pi on boot is from around the same date as the last release.
 
-    The https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#bootloader_update_stable[Raspberry Pi Documentation] recommends using the Raspberry Pi Imager for creating a boot disk that can be used to update the EEPROM. If you're on a flavor of Fedora Linux the Raspberry Pi Imager is packaged up and available in the repositories. You can install it with:
+    The https://www.raspberrypi.com/documentation/computers/raspberry-pi.html\&#35;bootloader_update_stable[Raspberry Pi Documentation] recommends using the Raspberry Pi Imager for creating a boot disk that can be used to update the EEPROM. If you're on a flavor of Fedora Linux the Raspberry Pi Imager is packaged up and available in the repositories. You can install it with:
 
-    [source, bash]
+    [source,_bash]
 
 dnf install rpi-imager
 
-    NOTE: You can successfully use `rpi-imager` from inside a https://containertoolbx.org/[Toolbx container].
+    NOTE: You can successfully use \&#96;rpi-imager\&#96; from inside a https://containertoolbx.org/[Toolbx container].
 
     If not on Fedora Linux you'll need to follow the documentation for obtaining the imager.
 
-    Once you have the imager up and running (on Fedora you can run it with `rpi-imager` on the command line), you'll see the imager application load:
+    Once you have the imager up and running (on Fedora you can run it with \&#96;rpi-imager\&#96; on the command line), you'll see the imager application load:
 
-    image::raspberry-pi-imager.png["Raspberry Pi Imager Application"]
+    image::raspberry-pi-imager.png['Raspberry Pi Imager Application']
 
-    At this point you can follow https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#bootloader_update_stable[the documentation] for how to create the disk and then update your Raspberry Pi 4.
+    At this point you can follow https://www.raspberrypi.com/documentation/computers/raspberry-pi.html\&#35;bootloader_update_stable[the documentation] for how to create the disk and then update your Raspberry Pi 4.
 
     == Installing FCOS and Booting via U-Boot
 
-    To run FCOS on a Raspberry Pi 4 via U-Boot the SD card or USB disk needs to be prepared on another system and then the disk moved to the RPi4. After writing FCOS to the disk a few more files will need to be copied in place on the EFI partition of the FCOS disk. Check out the https://www.raspberrypi.com/documentation/computers/configuration.html#boot-folder-contents[Raspberry Pi Documentation] to read more about what these files are for.
+    To run FCOS on a Raspberry Pi 4 via U-Boot the SD card or USB disk needs to be prepared on another system and then the disk moved to the RPi4. After writing FCOS to the disk a few more files will need to be copied in place on the EFI partition of the FCOS disk. Check out the https://www.raspberrypi.com/documentation/computers/configuration.html\&#35;boot-folder-contents[Raspberry Pi Documentation] to read more about what these files are for.
 
-    In this case we can grab these files from the `uboot-images-armv8`, `bcm2711-firmware`, `bcm283x-firmware`, `bcm283x-overlays` RPMs from the Fedora Linux repositories. First download them and store them in a temporary directory on your system:
+    In this case we can grab these files from the \&#96;uboot-images-armv8\&#96;, \&#96;bcm2711-firmware\&#96;, \&#96;bcm283x-firmware\&#96;, \&#96;bcm283x-overlays\&#96; RPMs from the Fedora Linux repositories. First download them and store them in a temporary directory on your system:
 
-    [source, bash]
+    [source,_bash]
 
-RELEASE=43 \# The target Fedora Release. Use the same one that current
-FCOS is based on. mkdir -p /tmp/RPi4boot/boot/efi/ dnf download
+RELEASE=43 &#35; The target Fedora Release. Use the same one that
+current FCOS is based on. mkdir -p /tmp/RPi4boot/boot/efi/ dnf download
 \--resolve \--releasever=\$RELEASE \--forcearch=aarch64
 \--destdir=/tmp/RPi4boot/ uboot-images-armv8 bcm283x-firmware
 bcm283x-overlays
 
-    Now extract the contents of the RPMs and copy the proper `u-boot.bin` for the RPi4 into place:
+    Now extract the contents of the RPMs and copy the proper \&#96;u-boot.bin\&#96; for the RPi4 into place:
 
-    WARNING: The following commands to extract the contents of the RPMs, the use of `coreos-installer`, and copying of the files to the ESP partition should be done from outside a Toolbx container. The `root` user in the container maps to a different user ID (UID) than the `root` (`UID=0`) user on the host. Attempting to run some of these commands in the container and some of these commands on the host can result in permission errors or ownership errors and may impact your ability to successfully install Fedora CoreOS.
+    WARNING: The following commands to extract the contents of the RPMs, the use of \&#96;coreos-installer\&#96;, and copying of the files to the ESP partition should be done from outside a Toolbx container. The \&#96;root\&#96; user in the container maps to a different user ID (UID) than the \&#96;root\&#96; (\&#96;UID=0\&#96;) user on the host. Attempting to run some of these commands in the container and some of these commands on the host can result in permission errors or ownership errors and may impact your ability to successfully install Fedora CoreOS.
 
-    NOTE: On Arch Linux it's recommended to install `rpm-tools` instead of `rpmextract`, so RPMs are decompressed automatically. If you don't want to or can't do that, you have to pipe the output of `rpm2cpio` through the correct decompressor, e.g. `zstd -d`.
+    NOTE: On Arch Linux it's recommended to install \&#96;rpm-tools\&#96; instead of \&#96;rpmextract\&#96;, so RPMs are decompressed automatically. If you don't want to or can't do that, you have to pipe the output of \&#96;rpm2cpio\&#96; through the correct decompressor, e.g. \&#96;zstd -d\&#96;.
 
-    [source, bash]
+    [source,_bash]
 
-for rpm in /tmp/RPi4boot/\*rpm; do rpm2cpio \$rpm \| cpio -idv -D
+for rpm in /tmp/RPi4boot/&#42;rpm; do rpm2cpio \$rpm \| cpio -idv -D
 /tmp/RPi4boot/; done mv
 /tmp/RPi4boot/usr/share/uboot/rpi_arm64/u-boot.bin
 /tmp/RPi4boot/boot/efi/rpi-u-boot.bin
 
-    Run `coreos-installer` to install to the target disk. There are https://coreos.github.io/coreos-installer/getting-started/[various ways] to run `coreos-installer` and install to a target disk. We won't cover them all here, but this workflow most closely mirrors the xref:bare-metal.adoc#_installing_from_the_container["Installing from the container"] documentation.
+    Run \&#96;coreos-installer\&#96; to install to the target disk. There are https://coreos.github.io/coreos-installer/getting-started/[various ways] to run \&#96;coreos-installer\&#96; and install to a target disk. We won't cover them all here, but this workflow most closely mirrors the xref:bare-metal.adoc\&#35;_installing_from_the_container['Installing from the container'] documentation.
 
-    [source, bash]
+    [source,_bash]
 
-FCOSDISK=/dev/sdX STREAM=stable \# or `next` or `testing` sudo
-coreos-installer install -a aarch64 -s \$STREAM -i config.ign \$FCOSDISK
+FCOSDISK=/dev/sdX STREAM=stable &#35; or &#96;next&#96; or
+&#96;testing&#96; sudo coreos-installer install -a aarch64 -s \$STREAM
+-i config.ign \$FCOSDISK
 
-    NOTE: Make sure you provide an xref:producing-ign.adoc[Ignition config] when you run `coreos-installer`.
+    NOTE: Make sure you provide an xref:producing-ign.adoc[Ignition config] when you run \&#96;coreos-installer\&#96;.
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     Now mount the ESP partition and copy the files over:
 
-    [source, bash]
+    [source,_bash]
 
 FCOSEFIPARTITION=\$(lsblk \$FCOSDISK -J -oLABEL,PATH \| jq -r
-\'.blockdevices\[\] \| select(.label == \"EFI-SYSTEM\") \| .path\')
+\'.blockdevices\[\] \| select(.label == \'EFI-SYSTEM\') \| .path\')
 mkdir /tmp/FCOSEFIpart sudo mount \$FCOSEFIPARTITION /tmp/FCOSEFIpart
 sudo rsync -avh \--ignore-existing \--chown 0:0 \\
 /tmp/RPi4boot/boot/efi/ /tmp/FCOSEFIpart/ sudo umount \$FCOSEFIPARTITION
@@ -3548,10 +3540,10 @@ sudo rsync -avh \--ignore-existing \--chown 0:0 \\
 
     You can write the firmware to a disk (USB or SD card) and then boot/install FCOS as you would on any bare metal server. However, the firmware files need to be on an SD card or USB disk and will take up either the SD card slot or a USB slot. Depending on your needs this may be acceptable or not. Depending on the answer you have a few options:
 
-    - Separate Firmware Disk (aka "separate disk mode")
-    - Combined Fedora CoreOS + EDK2 Firmware Disk (aka "combined disk mode")
+    - Separate Firmware Disk (aka 'separate disk mode')
+    - Combined Fedora CoreOS + EDK2 Firmware Disk (aka 'combined disk mode')
 
-    These options are covered in the following sections. Regardless of which option you choose you'll want to consider if you need to either xref:#_edk2_firmware_changing_the_3g_limit[Change the 3G RAM limit] or xref:#_edk2_firmware_gpio_via_devicetree[Enable DeviceTree Boot].
+    These options are covered in the following sections. Regardless of which option you choose you'll want to consider if you need to either xref:\&#35;_edk2_firmware_changing_the_3g_limit[Change the 3G RAM limit] or xref:\&#35;_edk2_firmware_gpio_via_devicetree[Enable DeviceTree Boot].
 
 
     === EDK2: Separate Firmware Disk Mode
@@ -3560,9 +3552,9 @@ sudo rsync -avh \--ignore-existing \--chown 0:0 \\
 
     To create a disk (SD or USB) with the firmware on it you can do something like:
 
-    [source, bash]
+    [source,_bash]
 
-VERSION=v1.50 \# use latest one from
+VERSION=v1.50 &#35; use latest one from
 <https://github.com/pftf/RPi4/releases> UEFIDISK=/dev/sdX sudo mkfs.vfat
 \$UEFIDISK mkdir /tmp/UEFIdisk sudo mount \$UEFIDISK /tmp/UEFIdisk pushd
 /tmp/UEFIdisk sudo curl -LO
@@ -3587,13 +3579,13 @@ RPi4_UEFI_Firmware\_\${VERSION}.zip popd sudo umount /tmp/UEFIdisk
 
     ==== EDK2: Combined Disk Mode Direct Install
 
-    When performing a direct install, meaning you boot (via the EDK2 firmware) into the Fedora CoreOS live environment (ISO or PXE) and run `coreos-installer`, you can mount the EFI partition (2nd partition) of the installed FCOS disk after the installation is complete and copy the EDK2 firmware files over:
+    When performing a direct install, meaning you boot (via the EDK2 firmware) into the Fedora CoreOS live environment (ISO or PXE) and run \&#96;coreos-installer\&#96;, you can mount the EFI partition (2nd partition) of the installed FCOS disk after the installation is complete and copy the EDK2 firmware files over:
 
-    [source, bash]
+    [source,_bash]
 
 UEFIDISK=/dev/mmcblkX or /dev/sdX FCOSDISK=/dev/sdY
 FCOSEFIPARTITION=\$(lsblk \$FCOSDISK -J -oLABEL,PATH \| jq -r
-\'.blockdevices\[\] \| select(.label == \"EFI-SYSTEM\") \| .path\')
+\'.blockdevices\[\] \| select(.label == \'EFI-SYSTEM\') \| .path\')
 mkdir /tmp/mnt{1,2} sudo mount \$UEFIDISK /tmp/mnt1 sudo mount
 \$FCOSEFIPARTITION /tmp/mnt2 sudo rsync -avh /tmp/mnt1/ /tmp/mnt2/ sudo
 umount /tmp/mnt1 /tmp/mnt2
@@ -3604,23 +3596,24 @@ umount /tmp/mnt1 /tmp/mnt2
 
     ==== EDK2: Combined Disk Mode Alternate Machine Disk Preparation
 
-    When preparing the RPi4 disk from an alternate machine (i.e. creating the disk from your laptop) then you can mount the 2nd partition **after** running `coreos-installer` and pull down the EDK2 firmware files.
+    When preparing the RPi4 disk from an alternate machine (i.e. creating the disk from your laptop) then you can mount the 2nd partition \&#42;\&#42;after\&#42;\&#42; running \&#96;coreos-installer\&#96; and pull down the EDK2 firmware files.
 
-    First, run `coreos-installer` to install to the target disk:
+    First, run \&#96;coreos-installer\&#96; to install to the target disk:
 
-    [source, bash]
+    [source,_bash]
 
-FCOSDISK=/dev/sdX STREAM=\"stable\" \# or `next` or `testing` sudo
-coreos-installer install -a aarch64 -s \$STREAM -i config.ign \$FCOSDISK
+FCOSDISK=/dev/sdX STREAM=\'stable\' &#35; or &#96;next&#96; or
+&#96;testing&#96; sudo coreos-installer install -a aarch64 -s \$STREAM
+-i config.ign \$FCOSDISK
 
     Now you can mount the 2nd partition and pull down the EDK2 firmware files:
 
-    [source, bash]
+    [source,_bash]
 
 FCOSEFIPARTITION=\$(lsblk \$FCOSDISK -J -oLABEL,PATH \| jq -r
-\'.blockdevices\[\] \| select(.label == \"EFI-SYSTEM\") \| .path\')
+\'.blockdevices\[\] \| select(.label == \'EFI-SYSTEM\') \| .path\')
 mkdir /tmp/FCOSEFIpart sudo mount \$FCOSEFIPARTITION /tmp/FCOSEFIpart
-pushd /tmp/FCOSEFIpart VERSION=v1.50 \# use latest one from
+pushd /tmp/FCOSEFIpart VERSION=v1.50 &#35; use latest one from
 <https://github.com/pftf/RPi4/releases> sudo curl -LO
 [https://github.com/pftf/RPi4/releases/download/\${VERSION}/RPi4_UEFI_Firmware\_\${VERSION}.zip](https://github.com/pftf/RPi4/releases/download/${VERSION}/RPi4_UEFI_Firmware_${VERSION}.zip)
 sudo unzip RPi4_UEFI_Firmware\_\${VERSION}.zip sudo rm
@@ -3634,26 +3627,29 @@ RPi4_UEFI_Firmware\_\${VERSION}.zip popd sudo umount /tmp/FCOSEFIpart
 
     If you have a Pi4 with more than 3G of memory you'll most likely want to disable the 3G memory limitation. In the EDK2 firmware menu go to
 
-    - `Device Manager` -> `Raspberry Pi Configuration` -> `Advanced Configuration` -> `Limit RAM to 3GB` -> `Disabled`
-    - `F10` to save -> `Y` to confirm
-    - `Esc` to top level menu and select `reset` to cycle the system.
+    - \&#96;Device Manager\&#96; -\&gt; \&#96;Raspberry Pi Configuration\&#96; -\&gt; \&#96;Advanced Configuration\&#96; -\&gt; \&#96;Limit RAM to 3GB\&#96; -\&gt; \&#96;Disabled\&#96;
+    - \&#96;F10\&#96; to save -\&gt; \&#96;Y\&#96; to confirm
+    - \&#96;Esc\&#96; to top level menu and select \&#96;reset\&#96; to cycle the system.
 
     === EDK2 Firmware: GPIO via DeviceTree
 
     With the EDK2 Firmware in ACPI mode (the default) you won't get access to GPIO (i.e. no Pi HATs will work). To get access to GPIO pins you'll need to change the setting to DeviceTree mode in the EDK2 menus.
 
-    - `Device Manager` -> `Raspberry Pi Configuration` -> `Advanced Configuration` -> `System Table Selection` -> `DeviceTree`
-    - `F10` to save -> `Y` to confirm
-    - `Esc` to top level menu and select `reset` to cycle the system.
+    - \&#96;Device Manager\&#96; -\&gt; \&#96;Raspberry Pi Configuration\&#96; -\&gt; \&#96;Advanced Configuration\&#96; -\&gt; \&#96;System Table Selection\&#96; -\&gt; \&#96;DeviceTree\&#96;
+    - \&#96;F10\&#96; to save -\&gt; \&#96;Y\&#96; to confirm
+    - \&#96;Esc\&#96; to top level menu and select \&#96;reset\&#96; to cycle the system.
 
-    After boot you should see entries under `/proc/device-tree/` and also see `/dev/gpiochip1` and `/dev/gpiochip2`:
+    After boot you should see entries under \&#96;/proc/device-tree/\&#96; and also see \&#96;/dev/gpiochip1\&#96; and \&#96;/dev/gpiochip2\&#96;:
 
-    [source, bash]
+    [source,_bash]
 
 \[core@localhost \~\]\$ ls /proc/device-tree/ \| wc -l 35
-\[core@localhost \~\]\$ ls /dev/gpiochip\* /dev/gpiochip0 /dev/gpiochip1
+\[core@localhost \~\]\$ ls /dev/gpiochip&#42; /dev/gpiochip0
+/dev/gpiochip1
 
-    TIP: You can interface with GPIO from userspace using `libgpiod` and associated bindings or tools.
+    TIP: You can interface with GPIO from userspace using \&#96;libgpiod\&#96; and associated bindings or tools.
+
+
     = Provisioning Fedora CoreOS on VirtualBox
 
     This guide shows how to provision new Fedora CoreOS (FCOS) nodes on the VirtualBox hypervisor.
@@ -3662,47 +3658,47 @@ RPi4_UEFI_Firmware\_\${VERSION}.zip popd sudo umount /tmp/FCOSEFIpart
 
     Before importing an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     === Downloading the OVA
 
     Fedora CoreOS is designed to be updated automatically, with different schedules per stream.
     Once you have picked the relevant stream, you can download the latest OVA:
 
-    [source, bash]
+    [source,_bash]
 
-STREAM=\"stable\" coreos-installer download -s \$STREAM -p virtualbox -f
+STREAM=\'stable\' coreos-installer download -s \$STREAM -p virtualbox -f
 ova
 
-    Alternatively, OVA images can be manually downloaded from the https://fedoraproject.org/coreos/download/?stream=stable#baremetal[download page].
+    Alternatively, OVA images can be manually downloaded from the https://fedoraproject.org/coreos/download/?stream=stable\&#35;baremetal[download page].
 
     == Booting a new VM on VirtualBox
 
-    You can set up a VirtualBox virtual machine through the GUI or via the https://www.virtualbox.org/manual/UserManual.html#vboxmanage[`VBoxManage` CLI]. This guide will use the CLI for setting up the VM.
+    You can set up a VirtualBox virtual machine through the GUI or via the https://www.virtualbox.org/manual/UserManual.html\&#35;vboxmanage[\&#96;VBoxManage\&#96; CLI]. This guide will use the CLI for setting up the VM.
 
     === Importing the OVA
 
-    To import the OVA, use `VBoxManage import`:
+    To import the OVA, use \&#96;VBoxManage import\&#96;:
 
-    [source, bash, subs="attributes"]
+    [source,_bash,_subs='attributes']
 
-VM_NAME=my-instance VBoxManage import \--vsys 0 \--vmname \"\$VM_NAME\"
+VM_NAME=my-instance VBoxManage import \--vsys 0 \--vmname \'\$VM_NAME\'
 fedora-coreos-{stable-version}-virtualbox.x86_64.ova
 
     === Setting the Ignition config
 
-    Ignition reads its configuration from the `/Ignition/Config` https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/guestadd-guestprops.html[guest property] of the virtual machine. At present, guest properties can only be set from the host command line, and not via the GUI. To set the Ignition config for a VM:
+    Ignition reads its configuration from the \&#96;/Ignition/Config\&#96; https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/guestadd-guestprops.html[guest property] of the virtual machine. At present, guest properties can only be set from the host command line, and not via the GUI. To set the Ignition config for a VM:
 
-    [source, bash]
+    [source,_bash]
 
-IGN_PATH=\"/path/to/config.ign\" VM_NAME=my-instance VBoxManage
-guestproperty set \"\$VM_NAME\" /Ignition/Config \"\$(cat \$IGN_PATH)\"
+IGN_PATH=\'/path/to/config.ign\' VM_NAME=my-instance VBoxManage
+guestproperty set \'\$VM_NAME\' /Ignition/Config \'\$(cat \$IGN_PATH)\'
 
     ==== Ignition config size limitations
 
-    The length of the `/Ignition/Config` guestinfo property is constrained by the maximum length of a command line on your host operating system. The OS-specific limits are approximately:
+    The length of the \&#96;/Ignition/Config\&#96; guestinfo property is constrained by the maximum length of a command line on your host operating system. The OS-specific limits are approximately:
 
-    [cols="1,1"]
+    [cols='1,1']
     |===
     |OS
     |Limit
@@ -3720,83 +3716,85 @@ guestproperty set \"\$VM_NAME\" /Ignition/Config \"\$(cat \$IGN_PATH)\"
     . Upload your Ignition config to an HTTPS server.
     . xref:remote-ign.adoc[Create a Butane pointer config] that specifies the URL of your full Ignition config:
     +
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} ignition: config:
 replace: source: <https://example.com/config.ign>
 
     . Use xref:producing-ign.adoc[Butane] to convert the Butane config to an Ignition config.
-    . Set the `/Ignition/Config` guest property to the contents of the pointer Ignition config, following the instructions in <<_setting_the_ignition_config>>.
+    . Set the \&#96;/Ignition/Config\&#96; guest property to the contents of the pointer Ignition config, following the instructions in \&lt;\&lt;_setting_the_ignition_config\&gt;\&gt;.
 
     === Configuring networking
 
-    By default, the VM will use https://www.virtualbox.org/manual/UserManual.html#networkingmodes[NAT networking]. This will share the IP address of your host. Alternatively, if you want the VM to use a different IP address than your host, you can set the VM's network adapter to "Bridged networking".
+    By default, the VM will use https://www.virtualbox.org/manual/UserManual.html\&#35;networkingmodes[NAT networking]. This will share the IP address of your host. Alternatively, if you want the VM to use a different IP address than your host, you can set the VM's network adapter to 'Bridged networking'.
 
     ==== NAT networking
 
     By default, NAT networking does not allow inbound connections to the VM. To allow inbound SSH connections, you can forward connections to e.g. port 2222 on the host to the SSH server in the VM:
 
-    [source, bash]
+    [source,_bash]
 
-VM_NAME=my-instance VBoxManage modifyvm \"\$VM_NAME\" \--natpf1
-\"guestssh,tcp,,2222,,22\"
+VM_NAME=my-instance VBoxManage modifyvm \'\$VM_NAME\' \--natpf1
+\'guestssh,tcp,,2222,,22\'
 
     After booting the VM, you can SSH to the VM from your host:
 
-    [source, bash]
+    [source,_bash]
 
 ssh core@localhost -p 2222
 
     ==== Bridged networking
 
-    If you want the VM to use a different IP address than your host, you can set the VM's network adapter to "Bridged networking".
+    If you want the VM to use a different IP address than your host, you can set the VM's network adapter to 'Bridged networking'.
 
     . Determine the network adapter that should be bridged to the VM. To get the name of your host's default network adapter, you can run:
     +
-    [source, bash]
+    [source,_bash]
 
-ip route ls default \| grep -Po \'(?⇐ dev )(\\S+)\'
+ip route ls default \| grep -Po \'(?&lt;= dev )(\\S+)\'
 
     . Modify the VM's network adapter settings:
     +
-    [source, bash]
+    [source,_bash]
 
 VM_NAME=my-instance ADAPTER=adapter-name VBoxManage modifyvm
-\"\$VM_NAME\" \--nic1 bridged \--bridgeadapter1 \"\$ADAPTER\"
+\'\$VM_NAME\' \--nic1 bridged \--bridgeadapter1 \'\$ADAPTER\'
 
     === Starting the VM
 
     You can now boot the VM you have configured:
 
-    [source, bash]
+    [source,_bash]
 
-VM_NAME=my-instance VBoxManage startvm \"\$VM_NAME\"
+VM_NAME=my-instance VBoxManage startvm \'\$VM_NAME\'
 
     == Troubleshooting first-boot problems
 
-    You may encounter problems with your Ignition config that require access to the console log messages which appear during the first boot. To obtain a copy of the console log you can attach a https://www.virtualbox.org/manual/UserManual.html#serialports[serial device] to the VM before booting.
+    You may encounter problems with your Ignition config that require access to the console log messages which appear during the first boot. To obtain a copy of the console log you can attach a https://www.virtualbox.org/manual/UserManual.html\&#35;serialports[serial device] to the VM before booting.
 
     To attach a serial device to a powered-off VM:
 
-    [source, bash]
+    [source,_bash]
 
 VM_NAME=my-instance VM_LOG=\$(realpath .)/\$VM_NAME.log VBoxManage
-modifyvm \"\$VM_NAME\" \--uart1 0x3F8 4 VBoxManage modifyvm
-\"\$VM_NAME\" \--uartmode1 file \"\$VM_LOG\"
+modifyvm \'\$VM_NAME\' \--uart1 0x3F8 4 VBoxManage modifyvm
+\'\$VM_NAME\' \--uartmode1 file \'\$VM_LOG\'
 
     When you power on the VM, console output will be logged to the file you specified.
+
+
     = Provisioning Fedora CoreOS on VMware
 
     This guide shows how to provision new Fedora CoreOS (FCOS) nodes on the VMware hypervisor.
 
-    NOTE: Fedora CoreOS supports VMware ESXi &ge; 7.0, VMware Workstation &ge; 16, and VMware Fusion &ge; 12. It may be possible to
-    xref:provisioning-vmware.adoc#_modifying_ovf_metadata[modify the metadata of the OVF] to run in older VMware products, but compatibility and supportability cannot be guaranteed.
+    NOTE: Fedora CoreOS supports VMware ESXi \&amp;ge; 7.0, VMware Workstation \&amp;ge; 16, and VMware Fusion \&amp;ge; 12. It may be possible to
+    xref:provisioning-vmware.adoc\&#35;_modifying_ovf_metadata[modify the metadata of the OVF] to run in older VMware products, but compatibility and supportability cannot be guaranteed.
 
     == Prerequisites
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     You also need to have access to a working VMware infrastructure, supporting VMs with at least hardware version 13.
     The examples below use the https://github.com/vmware/govmomi/blob/v0.29.0/govc/README.md[govc] command-line tool for remote vSphere provisioning and the https://code.vmware.com/web/tool/4.4.0/ovf[ovftool] for local Workstation or Fusion provisioning.
@@ -3806,58 +3804,58 @@ modifyvm \"\$VM_NAME\" \--uart1 0x3F8 4 VBoxManage modifyvm
     Fedora CoreOS is designed to be updated automatically, with different schedules per stream.
     Once you have picked the relevant stream, you can download the latest OVA:
 
-    [source, bash]
+    [source,_bash]
 
-STREAM=\"stable\" coreos-installer download -s \$STREAM -p vmware -f ova
+STREAM=\'stable\' coreos-installer download -s \$STREAM -p vmware -f ova
 
-    Alternatively, OVA images can be manually downloaded from the https://fedoraproject.org/coreos/download/?stream=stable#baremetal[download page].
+    Alternatively, OVA images can be manually downloaded from the https://fedoraproject.org/coreos/download/?stream=stable\&#35;baremetal[download page].
 
     === Encoding Ignition configuration
 
-    For the `vmware` provider, Ignition requires two "guestinfo" fields to be present when the VM is first booted:
+    For the \&#96;vmware\&#96; provider, Ignition requires two 'guestinfo' fields to be present when the VM is first booted:
 
-    * `guestinfo.ignition.config.data.encoding`: the encoding of the Ignition configuration.
-    * `guestinfo.ignition.config.data`: the content of the Ignition configuration, encoded according to the format above.
+    \&#42; \&#96;guestinfo.ignition.config.data.encoding\&#96;: the encoding of the Ignition configuration.
+    \&#42; \&#96;guestinfo.ignition.config.data\&#96;: the content of the Ignition configuration, encoded according to the format above.
 
-    For maximum compatibility, it is recommended to use `base64` encoding and to prepare the Ignition configuration as such:
+    For maximum compatibility, it is recommended to use \&#96;base64\&#96; encoding and to prepare the Ignition configuration as such:
 
-    [source, bash]
+    [source,_bash]
 
 CONFIG_ENCODING=\'base64\' CONFIG_ENCODED=\$(base64 -w0 example.ign)
 
-    An alternative to plain `base64` encoding is `gzip+base64` as described in the https://coreos.github.io/ignition/supported-platforms/[Ignition supported platforms]. This is especially useful when submitting the Ignition config via `govc` as an _inline_ argument. In that case the encoded config is limited to slightly under 128 KiB on Linux, 256 KiB on macOS, and 32 KiB on Windows (8 KiB if using `cmd.exe` or PowerShell). If your config is larger than that limit, you may be able to submit it inline after compressing it with `gzip`.
+    An alternative to plain \&#96;base64\&#96; encoding is \&#96;gzip+base64\&#96; as described in the https://coreos.github.io/ignition/supported-platforms/[Ignition supported platforms]. This is especially useful when submitting the Ignition config via \&#96;govc\&#96; as an _inline_ argument. In that case the encoded config is limited to slightly under 128 KiB on Linux, 256 KiB on macOS, and 32 KiB on Windows (8 KiB if using \&#96;cmd.exe\&#96; or PowerShell). If your config is larger than that limit, you may be able to submit it inline after compressing it with \&#96;gzip\&#96;.
 
-    [source, bash]
+    [source,_bash]
 
 CONFIG_ENCODING=\'gzip+base64\' CONFIG_ENCODED=\$(gzip -9c example.ign
 \| base64 -w0 -)
 
-    If your generated Ignition configuration is still too large, you will encounter an `Argument list too long` error or similar. The solution to that problem depends on whether you are working with vSphere or Workstation/Fusion.
+    If your generated Ignition configuration is still too large, you will encounter an \&#96;Argument list too long\&#96; error or similar. The solution to that problem depends on whether you are working with vSphere or Workstation/Fusion.
 
-    For vSphere, instead of inlining the configuration file within your shell, `govc` allows you to specify a path to a local file with the https://github.com/vmware/govmomi/blob/main/govc/USAGE.md#vmchange[`vm.change`]-command and will handle reading and writing it internally, circumventing any shell limitations.
+    For vSphere, instead of inlining the configuration file within your shell, \&#96;govc\&#96; allows you to specify a path to a local file with the https://github.com/vmware/govmomi/blob/main/govc/USAGE.md\&#35;vmchange[\&#96;vm.change\&#96;]-command and will handle reading and writing it internally, circumventing any shell limitations.
 
-    [source, bash]
+    [source,_bash]
 
-CONFIG_ENCODING=\"gzip+base64\" CONFIG_FILE=\"example.ign\"
-CONFIG_FILE_ENCODED=\"\${CONFIG_FILE}.gz.b64\"
+CONFIG_ENCODING=\'gzip+base64\' CONFIG_FILE=\'example.ign\'
+CONFIG_FILE_ENCODED=\'\${CONFIG_FILE}.gz.b64\'
 
-gzip -9c \"\${CONFIG_FILE}\" \| base64 -w0 - \>
-\"\${CONFIG_FILE_ENCODED}\"
+gzip -9c \'\${CONFIG_FILE}\' \| base64 -w0 - &gt;
+\'\${CONFIG_FILE_ENCODED}\'
 
-govc vm.change -vm \"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\" govc
-vm.change -vm \"\${VM_NAME}\" -f
-\"guestinfo.ignition.config.data=\${CONFIG_FILE_ENCODED}\" \# using `-f`
-with a file path instead of `-e`
+govc vm.change -vm \'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\' govc
+vm.change -vm \'\${VM_NAME}\' -f
+\'guestinfo.ignition.config.data=\${CONFIG_FILE_ENCODED}\' &#35; using
+&#96;-f&#96; with a file path instead of &#96;-e&#96;
 
-    NOTE: Using `gzip` for this solution is optional and primarily used for consistent examples.
+    NOTE: Using \&#96;gzip\&#96; for this solution is optional and primarily used for consistent examples.
 
-    In the case of Workstation/Fusion, or as a last resort in general, there is the option to use a configuration file. Instead of setting an environment variable containing your Ignition configuration, create an `ovftool` compatible configuration file in the directory you are invoking from like so:
+    In the case of Workstation/Fusion, or as a last resort in general, there is the option to use a configuration file. Instead of setting an environment variable containing your Ignition configuration, create an \&#96;ovftool\&#96; compatible configuration file in the directory you are invoking from like so:
 
-    [source, bash]
+    [source,_bash]
 
-echo \"extraConfig:guestinfo.ignition.config.data=\$(base64 -w0
-example.ign)\" \> ovftool.cfg
+echo \'extraConfig:guestinfo.ignition.config.data=\$(base64 -w0
+example.ign)\' &gt; ovftool.cfg
 
     == Booting a new VM on Workstation or Fusion
 
@@ -3867,87 +3865,87 @@ example.ign)\" \> ovftool.cfg
 
     The downloaded OVA has to be imported into the Workstation or Fusion library locally. At the same time the Ignition has to be provided for it to be applied to the VM.
 
-    [source, bash]
+    [source,_bash]
 
 VM_NAME=\'fcos-node01\'
 FCOS_OVA=\'./ova-templates/fedora-coreos-31.20200210.3.0-vmware.x86_64.ova\'
-LIBRARY=\"\$HOME/Virtual Machines.localized\" ovftool \\
-\--powerOffTarget \\ \--name=\"\${VM_NAME}\" \\ \--allowExtraConfig \\
-\--extraConfig:guestinfo.ignition.config.data.encoding=\"\${CONFIG_ENCODING}\"
-\\ \--extraConfig:guestinfo.ignition.config.data=\"\${CONFIG_ENCODED}\"
-\\ \"\${FCOS_OVA}\" \"\${LIBRARY}\"
+LIBRARY=\'\$HOME/Virtual Machines.localized\' ovftool \\
+\--powerOffTarget \\ \--name=\'\${VM_NAME}\' \\ \--allowExtraConfig \\
+\--extraConfig:guestinfo.ignition.config.data.encoding=\'\${CONFIG_ENCODING}\'
+\\ \--extraConfig:guestinfo.ignition.config.data=\'\${CONFIG_ENCODED}\'
+\\ \'\${FCOS_OVA}\' \'\${LIBRARY}\'
 
-    Afterwards you can refresh the list of VMs in the Workstation or Fusion UI and the new `fcos-node01` VM should appear ready for booting. Its hardware configuration can be further customized at this point, and then powered-up.
+    Afterwards you can refresh the list of VMs in the Workstation or Fusion UI and the new \&#96;fcos-node01\&#96; VM should appear ready for booting. Its hardware configuration can be further customized at this point, and then powered-up.
 
-    If you set up an xref:authentication.adoc[SSH key] for the default `core` user, you can SSH into the VM and explore the OS:
+    If you set up an xref:authentication.adoc[SSH key] for the default \&#96;core\&#96; user, you can SSH into the VM and explore the OS:
 
-    [source, bash]
+    [source,_bash]
 
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
     == Booting a new VM on vSphere
 
     This section shows how to use vSphere facilities to configure and run VMs from the command-line. Similar steps can be performed via the graphical UI too.
 
-    TIP: While the examples below use `govc session.login` to authenticate, you can also use environment variables to provide credentials. Check the https://github.com/vmware/govmomi/tree/main/govc#usage[official documentation] for details.
+    TIP: While the examples below use \&#96;govc session.login\&#96; to authenticate, you can also use environment variables to provide credentials. Check the https://github.com/vmware/govmomi/tree/main/govc\&#35;usage[official documentation] for details.
 
     === Setting up a new VM
 
     You can now deploy a new VM, starting from the OVA and the encoded Ignition configuration:
 
-    [source, bash]
+    [source,_bash]
 
 FCOS_OVA=\'./ova-templates/fedora-coreos-31.20200210.3.0-vmware.x86_64.ova\'
 VM_NAME=\'fcos-node01\' govc session.login -u \'user:password@host\'
 govc import.ova -name \${VM_NAME} \${FCOS_OVA} govc vm.change -vm
-\"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\" govc
-vm.change -vm \"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data=\${CONFIG_ENCODED}\"
+\'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\' govc
+vm.change -vm \'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data=\${CONFIG_ENCODED}\'
 
-    A new `fcos-node01` VM is now available for booting. Its hardware configuration can be further customized at this point, and then powered-up:
+    A new \&#96;fcos-node01\&#96; VM is now available for booting. Its hardware configuration can be further customized at this point, and then powered-up:
 
-    [source, bash]
+    [source,_bash]
 
-govc vm.info -e \"\${VM_NAME}\" govc vm.power -on \"\${VM_NAME}\"
+govc vm.info -e \'\${VM_NAME}\' govc vm.power -on \'\${VM_NAME}\'
 
-    If you set up an xref:authentication.adoc[SSH key] for the default `core` user, you can SSH into the VM and explore the OS:
+    If you set up an xref:authentication.adoc[SSH key] for the default \&#96;core\&#96; user, you can SSH into the VM and explore the OS:
 
-    [source, bash]
+    [source,_bash]
 
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
     === Using the OVA from the vSphere library
 
     In case you want to spawn multiple, different VMs based on the same base image you can import it into the vSphere library for easy reuse:
 
-    [source, bash]
+    [source,_bash]
 
 FCOS_OVA=\'./ova-templates/fedora-coreos-31.20200210.3.0-vmware.x86_64.ova\'
 LIBRARY=\'fcos-images\' TEMPLATE_NAME=\'fcos-31.20200210.3.0\' govc
 session.login -u \'user:password@host\' govc library.create
-\"\${LIBRARY}\" govc library.import -n \"\${TEMPLATE_NAME}\"
-\"\${LIBRARY}\" \"\${FCOS_OVA}\"
+\'\${LIBRARY}\' govc library.import -n \'\${TEMPLATE_NAME}\'
+\'\${LIBRARY}\' \'\${FCOS_OVA}\'
 
-    Creating a new instance can now be done using the `govc library.deploy` command:
+    Creating a new instance can now be done using the \&#96;govc library.deploy\&#96; command:
 
-    [source, bash]
+    [source,_bash]
 
 VM_NAME=\'fcos-node01\' govc library.deploy
-\"\${LIBRARY}/\${TEMPLATE_NAME}\" \"\${VM_NAME}\" govc vm.change -vm
-\"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\" govc
-vm.change -vm \"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data=\${CONFIG_ENCODED}\"
+\'\${LIBRARY}/\${TEMPLATE_NAME}\' \'\${VM_NAME}\' govc vm.change -vm
+\'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\' govc
+vm.change -vm \'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data=\${CONFIG_ENCODED}\'
 
     Note: If the vCenter has multiple datacenters and datastores, you must specify them explicitly:
-    [source, bash]
+    [source,_bash]
 
-# Get resource pool using `$ govc find / -type ResourcePool` {#_get_resource_pool_using_govc_find_type_resourcepool}
-
-RESOURCE_POOL=\"/Datacenter6.5/host/Cluster6.5/Resources\"
-DATASTORE=\"datastore-129\" govc library.deploy -pool=\${RESOURCE_POOL}
--ds=\${DATASTORE} \"\${LIBRARY}/\${TEMPLATE_NAME}\" \"\${VM_NAME}\"
+&#35; Get resource pool using &#96;\$ govc find / -type
+ResourcePool&#96;
+RESOURCE_POOL=\'/Datacenter6.5/host/Cluster6.5/Resources\'
+DATASTORE=\'datastore-129\' govc library.deploy -pool=\${RESOURCE_POOL}
+-ds=\${DATASTORE} \'\${LIBRARY}/\${TEMPLATE_NAME}\' \'\${VM_NAME}\'
 
     === First-boot networking and Ignition
 
@@ -3955,27 +3953,27 @@ DATASTORE=\"datastore-129\" govc library.deploy -pool=\${RESOURCE_POOL}
     For this reason, on first-boot FCOS instances try to perform network autoconfiguration via DHCP.
 
     If your VMware setup employs static network configuration instead, you can override this automatic DHCP setup with your own custom configuration.
-    Custom networking command-line `ip=` parameter can be configured via guestinfo properties as shown below, before booting a VM for the first time.
+    Custom networking command-line \&#96;ip=\&#96; parameter can be configured via guestinfo properties as shown below, before booting a VM for the first time.
 
-    The provisioning flow follows the usual steps, plus an additional `guestinfo.afterburn.initrd.network-kargs` entry.
+    The provisioning flow follows the usual steps, plus an additional \&#96;guestinfo.afterburn.initrd.network-kargs\&#96; entry.
 
-    NOTE: if you are using a provisioning method other than `govc`, make sure that the guestinfo attribute is provisioned in the VM's Advanced Configuration Parameters (also known as `ExtraConfig`). Some management tools may default to a vApp Property instead, which does not work in this scenario.
+    NOTE: if you are using a provisioning method other than \&#96;govc\&#96;, make sure that the guestinfo attribute is provisioned in the VM's Advanced Configuration Parameters (also known as \&#96;ExtraConfig\&#96;). Some management tools may default to a vApp Property instead, which does not work in this scenario.
 
-    [source, bash]
+    [source,_bash]
 
 VM_NAME=\'fcos-node02\' IFACE=\'ens192\'
-IPCFG=\"ip=192.0.2.42::192.0.2.1:255.255.255.0:\${VM_NAME}:\${IFACE}:off\"
+IPCFG=\'ip=192.0.2.42::192.0.2.1:255.255.255.0:\${VM_NAME}:\${IFACE}:off\'
 
-govc library.deploy \"\${LIBRARY}/\${TEMPLATE_NAME}\" \"\${VM_NAME}\"
-govc vm.change -vm \"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\" govc
-vm.change -vm \"\${VM_NAME}\" -e
-\"guestinfo.ignition.config.data=\${CONFIG_ENCODED}\" govc vm.change -vm
-\"\${VM_NAME}\" -e
-\"guestinfo.afterburn.initrd.network-kargs=\${IPCFG}\" govc vm.info -e
-\"\${VM_NAME}\" govc vm.power -on \"\${VM_NAME}\"
+govc library.deploy \'\${LIBRARY}/\${TEMPLATE_NAME}\' \'\${VM_NAME}\'
+govc vm.change -vm \'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data.encoding=\${CONFIG_ENCODING}\' govc
+vm.change -vm \'\${VM_NAME}\' -e
+\'guestinfo.ignition.config.data=\${CONFIG_ENCODED}\' govc vm.change -vm
+\'\${VM_NAME}\' -e
+\'guestinfo.afterburn.initrd.network-kargs=\${IPCFG}\' govc vm.info -e
+\'\${VM_NAME}\' govc vm.power -on \'\${VM_NAME}\'
 
-    The full syntax of the `ip=` parameter is documented in https://www.man7.org/linux/man-pages/man7/dracut.cmdline.7.html[Dracut manpages].
+    The full syntax of the \&#96;ip=\&#96; parameter is documented in https://www.man7.org/linux/man-pages/man7/dracut.cmdline.7.html[Dracut manpages].
 
     For further information on first-boot networking, see https://coreos.github.io/afterburn/usage/initrd-network-cmdline/[Afterburn documentation].
 
@@ -3983,16 +3981,16 @@ vm.change -vm \"\${VM_NAME}\" -e
 
     You may encounter problems with your Ignition configuration that require access to the system log which appears during first-boot. To make a copy of the system log you can attach a serial device to the VM before booting. vSphere as well as Workstation and Fusion allow this and will save the output to a file of your choice.
 
-    To attach a serial device, modify the hardware settings of the powered off VM and add a `Serial Port`. Select the destination and name of the file to be created. Afterwards power on the VM. When encountering an error, check the file you initially specified - it should contain a copy of the system log.
+    To attach a serial device, modify the hardware settings of the powered off VM and add a \&#96;Serial Port\&#96;. Select the destination and name of the file to be created. Afterwards power on the VM. When encountering an error, check the file you initially specified - it should contain a copy of the system log.
 
-    The serial device can also be added to the VM via `govc` as described in the https://github.com/vmware/govmomi/blob/master/govc/USAGE.md#deviceserialconnect[official usage documentation]:
+    The serial device can also be added to the VM via \&#96;govc\&#96; as described in the https://github.com/vmware/govmomi/blob/master/govc/USAGE.md\&#35;deviceserialconnect[official usage documentation]:
 
-    [source, bash]
+    [source,_bash]
 
 VM_NAME=\'fcos-node01\'
 
-govc device.serial.add -vm \"\${VM_NAME}\" govc device.serial.connect
--vm \"\${VM_NAME}\" \"\[datastore\] \${VM_NAME}/console.log\"
+govc device.serial.add -vm \'\${VM_NAME}\' govc device.serial.connect
+-vm \'\${VM_NAME}\' \'\[datastore\] \${VM_NAME}/console.log\'
 
     == Modifying OVF metadata
 
@@ -4009,34 +4007,34 @@ govc device.serial.add -vm \"\${VM_NAME}\" govc device.serial.connect
     However, you can modify the image's OVF metadata to specify an older
     virtual hardware version.
 
-    The VMware OVA is a tarball that contains the files `disk.vmdk` and
-    `coreos.ovf`. In order to edit the metadata used by FCOS as a guest VM, you
+    The VMware OVA is a tarball that contains the files \&#96;disk.vmdk\&#96; and
+    \&#96;coreos.ovf\&#96;. In order to edit the metadata used by FCOS as a guest VM, you
     should untar the OVA artifact, edit the OVF file, then create a new OVA file.
 
-    The example commands below change the OVF hardware version from the preconfigured value to hardware version `13`.
+    The example commands below change the OVF hardware version from the preconfigured value to hardware version \&#96;13\&#96;.
 
     NOTE: The defaults in the OVF are subject to change.
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 tar -xvf fedora-coreos-{stable-version}-vmware.x86_64.ova sed -iE
-\'s/vmx-\[0-9\]\*/vmx-13/\' coreos.ovf tar -H posix -cvf
+\'s/vmx-\[0-9\]&#42;/vmx-13/\' coreos.ovf tar -H posix -cvf
 fedora-coreos-{stable-version}-vmware-vmx-13.x86_64.ova coreos.ovf
 disk.vmdk
 
     = Provisioning Fedora CoreOS on Vultr
 
-    This guide shows how to provision new Fedora CoreOS (FCOS) nodes on Vultr. Vultr publishes FCOS images, but they are out of date, so **we do not recommend using the standard Vultr images**. Instead, a current FCOS release can be uploaded as a https://www.vultr.com/docs/requirements-for-uploading-an-os-iso-to-vultr[custom image].
+    This guide shows how to provision new Fedora CoreOS (FCOS) nodes on Vultr. Vultr publishes FCOS images, but they are out of date, so \&#42;\&#42;we do not recommend using the standard Vultr images\&#42;\&#42;. Instead, a current FCOS release can be uploaded as a https://www.vultr.com/docs/requirements-for-uploading-an-os-iso-to-vultr[custom image].
 
     == Prerequisites
 
     Before provisioning an FCOS machine, you must have an Ignition configuration file containing your customizations. If you do not have one, see xref:producing-ign.adoc[Producing an Ignition File].
 
-    NOTE: Fedora CoreOS has a default `core` user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
+    NOTE: Fedora CoreOS has a default \&#96;core\&#96; user that can be used to explore the OS. If you want to use it, finalize its xref:authentication.adoc[configuration] by providing e.g. an SSH key.
 
     If you do not want to use Ignition to get started, you can make use of the https://coreos.github.io/afterburn/platforms/[Afterburn support].
 
-    You also need to have access to a Vultr account. The examples below use the https://github.com/vultr/vultr-cli[vultr-cli] and https://s3tools.org/s3cmd[s3cmd] command-line tools. Both of these tools are available in Fedora and can be installed via `sudo dnf install vultr-cli s3cmd`.
+    You also need to have access to a Vultr account. The examples below use the https://github.com/vultr/vultr-cli[vultr-cli] and https://s3tools.org/s3cmd[s3cmd] command-line tools. Both of these tools are available in Fedora and can be installed via \&#96;sudo dnf install vultr-cli s3cmd\&#96;.
 
     == Using a custom snapshot
 
@@ -4044,60 +4042,60 @@ disk.vmdk
 
     These steps show how to download an FCOS image and upload it to an existing storage bucket, in order to create a snapshot from that.
 
-    See https://www.vultr.com/docs/vultr-object-storage[Vultr documentation] for further details on how to create a bucket and configure `s3cmd` to use it.
+    See https://www.vultr.com/docs/vultr-object-storage[Vultr documentation] for further details on how to create a bucket and configure \&#96;s3cmd\&#96; to use it.
 
     === Creating a snapshot
 
-    Fedora CoreOS comes in three streams, with different update schedules per stream. These steps show the `stable` stream as an example, but can be used for other streams too.
+    Fedora CoreOS comes in three streams, with different update schedules per stream. These steps show the \&#96;stable\&#96; stream as an example, but can be used for other streams too.
 
     . Fetch the latest image suitable for your target stream (or https://fedoraproject.org/coreos/download/[download and verify] it from the web).
     +
-    [source, bash]
+    [source,_bash]
 
 STREAM=\'stable\' coreos-installer download -s \$STREAM -p vultr -f
 raw.xz \--decompress
 
     . https://www.vultr.com/docs/how-to-use-s3cmd-with-vultr-object-storage[Use s3cmd to upload] the raw image to your bucket, and note its public URL.
     +
-    [source, bash]
+    [source,_bash]
 
-BUCKET=\'my-bucket\' FCOS_VERSION=\'...​\' s3cmd put \--acl-public
-\"fedora-coreos-\${FCOS_VERSION}-vultr.x86_64.raw\" \"s3://\${BUCKET}/\"
+BUCKET=\'my-bucket\' FCOS_VERSION=\'&#8230;\' s3cmd put \--acl-public
+\'fedora-coreos-\${FCOS_VERSION}-vultr.x86_64.raw\' \'s3://\${BUCKET}/\'
 
     . Create the snapshot from your object URL, and note its ID.
     +
-    [source, bash]
+    [source,_bash]
 
-IMAGE_URL=\'https://...​\' VULTR_API_KEY=\'\<token\>\' vultr-cli snapshot
-create-url -u \"\${IMAGE_URL}\"
+IMAGE_URL=\'https://&#8230;\' VULTR_API_KEY=\'&lt;token&gt;\' vultr-cli
+snapshot create-url -u \'\${IMAGE_URL}\'
 
-    NOTE: You'll need to wait for the snapshot to finish processing before using it. Monitor with `*vultr-cli snapshot list*`.
+    NOTE: You'll need to wait for the snapshot to finish processing before using it. Monitor with \&#96;\&#42;vultr-cli snapshot list\&#42;\&#96;.
 
     === Launching an instance from a snapshot
 
     You can now create an FCOS Vultr instance using the snapshot ID above.
 
-    This example creates a 2 vCPU, 4GB RAM instance named `instance1` in the New Jersey region. Use `vultr-cli regions list` and `vultr-cli plans list` for other options.
+    This example creates a 2 vCPU, 4GB RAM instance named \&#96;instance1\&#96; in the New Jersey region. Use \&#96;vultr-cli regions list\&#96; and \&#96;vultr-cli plans list\&#96; for other options.
 
-    [source, bash]
+    [source,_bash]
 
-NAME=\'instance1\' SNAPSHOT_ID=\'...​\' REGION=\'ewr\'
-PLAN=\'vc2-2c-4gb\' vultr-cli instance create \--region \"\${REGION}\"
-\--plan \"\${PLAN}\" \\ \--snapshot \"\${SNAPSHOT_ID}\" \--label
-\"\${NAME}\" \--host \"\${NAME}\" \\ \--userdata \"\$(cat example.ign)\"
+NAME=\'instance1\' SNAPSHOT_ID=\'&#8230;\' REGION=\'ewr\'
+PLAN=\'vc2-2c-4gb\' vultr-cli instance create \--region \'\${REGION}\'
+\--plan \'\${PLAN}\' \\ \--snapshot \'\${SNAPSHOT_ID}\' \--label
+\'\${NAME}\' \--host \'\${NAME}\' \\ \--userdata \'\$(cat example.ign)\'
 
-    NOTE: While the Vultr documentation mentions `cloud-init` and scripts, FCOS does not support `cloud-init` or the ability to run scripts from user-data. It accepts only Ignition configuration files.
+    NOTE: While the Vultr documentation mentions \&#96;cloud-init\&#96; and scripts, FCOS does not support \&#96;cloud-init\&#96; or the ability to run scripts from user-data. It accepts only Ignition configuration files.
 
-    TIP: You can find out the instance's assigned IP by running `vultr-cli instance list`.
+    TIP: You can find out the instance's assigned IP by running \&#96;vultr-cli instance list\&#96;.
 
     You now should be able to SSH into the instance using the associated IP address.
 
     .Example connecting
-    [source, bash]
+    [source,_bash]
 
-ssh core@\<ip address\>
+ssh core@&lt;ip address&gt;
 
-    * System Configuration
+    \&#42; System Configuration
     = Producing an Ignition Config
 
     == Ignition overview
@@ -4115,7 +4113,7 @@ ssh core@\<ip address\>
 
     During the transpilation process, Butane verifies the syntax of the YAML file, which can catch errors before you use it to launch the FCOS system.
 
-    Once you have an Ignition (`.ign`) file, you can use it to boot an FCOS system in a VM or install it on bare metal.
+    Once you have an Ignition (\&#96;.ign\&#96;) file, you can use it to boot an FCOS system in a VM or install it on bare metal.
 
     TIP: Try to plan your configuration with the full set of customization details before provisioning a Fedora CoreOS instance. But don't worry if you forgot something as you can fix the configuration and re-deploy the instance from a fresh image.
 
@@ -4125,7 +4123,7 @@ ssh core@\<ip address\>
 
     NOTE: Unless otherwise noted, new releases of Butane are backwards compatible with old releases.
 
-    === Via a container with `podman` or `docker`
+    === Via a container with \&#96;podman\&#96; or \&#96;docker\&#96;
 
     You can get Butane from a container hosted on https://quay.io/[quay.io]:
 
@@ -4133,7 +4131,7 @@ ssh core@\<ip address\>
 
 podman pull quay.io/coreos/butane:release
 
-    NOTE: The `release` tag tracks the most recent release, and the `latest` tag tracks the Git development branch.
+    NOTE: The \&#96;release\&#96; tag tracks the most recent release, and the \&#96;latest\&#96; tag tracks the Git development branch.
 
     Run Butane either by using standard input and standard output or by using files:
 
@@ -4141,21 +4139,21 @@ podman pull quay.io/coreos/butane:release
     [source,bash]
 
 podman run \--interactive \--rm quay.io/coreos/butane:release \\
-\--pretty \--strict \< your_config.bu \> transpiled_config.ign
+\--pretty \--strict &lt; your_config.bu &gt; transpiled_config.ign
 
     .Example running Butane using a file as input and standard output
     [source,bash]
 
 podman run \--interactive \--rm \--security-opt label=disable \\
-\--volume \"\${PWD}:/pwd\" \--workdir /pwd quay.io/coreos/butane:release
-\\ \--pretty \--strict your_config.bu \> transpiled_config.ign
+\--volume \'\${PWD}:/pwd\' \--workdir /pwd quay.io/coreos/butane:release
+\\ \--pretty \--strict your_config.bu &gt; transpiled_config.ign
 
     To make it simpler to type, you may also add the following alias to your shell configuration:
 
     [source,bash]
 
 alias butane=\'podman run \--rm \--interactive \\ \--security-opt
-label=disable \\ \--volume \"\${PWD}:/pwd\" \--workdir /pwd \\
+label=disable \\ \--volume \'\${PWD}:/pwd\' \--workdir /pwd \\
 quay.io/coreos/butane:release\'
 
     NOTE: Those examples use podman, but you can use docker in a similar manner.
@@ -4255,7 +4253,7 @@ gpg \--verify butane-x86_64-pc-windows-gnu.exe.asc
 
     == Example
 
-    Create a basic Ignition config that modifies the default Fedora CoreOS user `core` to allow this user to log in with an SSH key.
+    Create a basic Ignition config that modifies the default Fedora CoreOS user \&#96;core\&#96; to allow this user to log in with an SSH key.
 
     The overall steps are as follows:
 
@@ -4265,7 +4263,7 @@ gpg \--verify butane-x86_64-pc-windows-gnu.exe.asc
 
     === Prerequisite
 
-    This example uses a pair of SSH public and private keys. If you don't already have it, you can https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/system_administrators_guide/index#sec-SSH[generate an SSH key pair].
+    This example uses a pair of SSH public and private keys. If you don't already have it, you can https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/system_administrators_guide/index\&#35;sec-SSH[generate an SSH key pair].
 
     The SSH public key will be provisioned to the Fedora CoreOS machine (via Ignition). The SSH private key needs to be available to your user on the local workstation, in order to remotely authenticate yourself over SSH.
 
@@ -4273,21 +4271,21 @@ gpg \--verify butane-x86_64-pc-windows-gnu.exe.asc
 
     . Copy the following example into a text editor:
     +
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
-name: core ssh_authorized_keys: - ssh-rsa AAAA...​
+name: core ssh_authorized_keys: - ssh-rsa AAAA&#8230;
 
     +
-    . Replace the above line starting with `ssh-rsa` with the contents of your SSH public key file.
+    . Replace the above line starting with \&#96;ssh-rsa\&#96; with the contents of your SSH public key file.
     +
-    . Save the file with the name `example.bu`.
+    . Save the file with the name \&#96;example.bu\&#96;.
 
     TIP: YAML files must have consistent indentation. Although Butane checks for syntax errors, ensure that the indentation matches the above example. Overall, the Butane configs must conform to Butane's https://coreos.github.io/butane/specs/[configuration specification] format.
 
-    TIP: If you use VS Code with the https://github.com/redhat-developer/vscode-yaml[Red Hat Yaml extension] you can associate `*.bu` files to `yaml` in the `files.associations` setting and get help/auto completion.
+    TIP: If you use VS Code with the https://github.com/redhat-developer/vscode-yaml[Red Hat Yaml extension] you can associate \&#96;\&#42;.bu\&#96; files to \&#96;yaml\&#96; in the \&#96;files.associations\&#96; setting and get help/auto completion.
 
-    TIP: You may also set a login password for the console (password authentication over SSH is disabled). See https://docs.fedoraproject.org/en-US/fedora-coreos/authentication/#_using_password_authentication[Using Password Authentication].
+    TIP: You may also set a login password for the console (password authentication over SSH is disabled). See https://docs.fedoraproject.org/en-US/fedora-coreos/authentication/\&#35;_using_password_authentication[Using Password Authentication].
 
     === Using Butane
 
@@ -4295,13 +4293,15 @@ name: core ssh_authorized_keys: - ssh-rsa AAAA...​
     +
     [source,bash]
 
-butane \--pretty \--strict example.bu \> example.ign
+butane \--pretty \--strict example.bu &gt; example.ign
 
     +
-    . Use the `example.ign` file to xref:getting-started.adoc[boot Fedora CoreOS].
+    . Use the \&#96;example.ign\&#96; file to xref:getting-started.adoc[boot Fedora CoreOS].
 
-    NOTE: If using Butane on Windows, `> example.ign` will create an UTF-16 encoded Ignition file. This can prevent Fedora CoreOS from booting properly. Use `--output example.ign` instead.
-    ** link:https://coreos.github.io/butane/specs/[Butane Specification]
+    NOTE: If using Butane on Windows, \&#96;\&gt; example.ign\&#96; will create an UTF-16 encoded Ignition file. This can prevent Fedora CoreOS from booting properly. Use \&#96;--output example.ign\&#96; instead.
+
+
+    \&#42;\&#42; link:https://coreos.github.io/butane/specs/[Butane Specification]
     = Using a remote Ignition config
 
     With Ignition, you are not limited to the configuration provided locally to a system and can retrieve other Ignition configs from a remote source. Those configs will then either replace or be merged into the existing config.
@@ -4311,36 +4311,36 @@ butane \--pretty \--strict example.bu \> example.ign
     The following examples show how to retrieve an Ignition file from a remote source. They are both set to replace the current configuration with a remote Ignition file.
 
     .Retrieving a remote Ignition file via HTTPS
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} ignition: config:
 replace: source: <https://example.com/sample.ign>
 
     .Retrieving a remote Ignition file via HTTPS with a custom certificate authority
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} ignition: config:
 replace: source: <https://example.com/sample.ign> security: tls:
 certificate_authorities: - source: <https://example.com/source1>
 
-    NOTE: The certificate authorities listed here are not automatically added to the host filesystem. They are solely used by Ignition itself when fetching over `https`. If you'd like to also install them on the host filesystem, include them as usual under the `storage.files` array.
+    NOTE: The certificate authorities listed here are not automatically added to the host filesystem. They are solely used by Ignition itself when fetching over \&#96;https\&#96;. If you'd like to also install them on the host filesystem, include them as usual under the \&#96;storage.files\&#96; array.
 
-    In some cases, if you need to merge a local configuration and one or several remote ones, you can use `merge` rather than `replace` in a Butane config.
+    In some cases, if you need to merge a local configuration and one or several remote ones, you can use \&#96;merge\&#96; rather than \&#96;replace\&#96; in a Butane config.
 
     .Retrieving a remote Ignition file via HTTPS and merging it with the current config
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} ignition: config:
 merge: - source: <https://example.com/sample.ign> passwd: users: - name:
 core ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh...​
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh&#8230;
 
     Retrieving remote Ignition files via plain HTTP is also possible as shown below.
 
     WARNING: Retrieving a remote Ignition config via HTTP exposes the contents of the config to anyone monitoring network traffic. When using HTTP, it is advisable to use the verification option to ensure the contents haven't been tampered with.
 
     .Retrieving a remote Ignition file via HTTP
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} ignition: config:
 replace: source: <http://example.com/sample.ign> verification: hash:
@@ -4349,7 +4349,7 @@ sha512-e2bb19fdbc3604f511b13d66f4c675f011a63dd967b97e2fe4f5d50bf6cb224e902182221
     If you need to retrieve a remote Ignition file but have no direct access to the remote host, you can specify a proxy for plain HTTP and/or HTTPS. You can also specify hosts that should be excluded from proxying.
 
     .Retrieving a remote Ignition file via a proxy
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} ignition: config:
 merge: - source: <https://example.com/sample.ign> - source:
@@ -4358,63 +4358,64 @@ merge: - source: <https://example.com/sample.ign> - source:
 
     = Configuring Storage
 
-    Fedora CoreOS ships with a simple default storage layout: the root partition is the last one and expands to take the full size of the disk. Apart from the boot partition, all data is stored on the root partition. See the xref:#_disk_layout[Disk layout section] for more details.
+    Fedora CoreOS ships with a simple default storage layout: the root partition is the last one and expands to take the full size of the disk. Apart from the boot partition, all data is stored on the root partition. See the xref:\&#35;_disk_layout[Disk layout section] for more details.
 
     Below, we provide examples of various ways you can customize this.
 
     [NOTE]
     ====
-    *Fedora CoreOS requires the root filesystem to be at least 8 GiB.* For practical reasons, disk images for some platforms ship with a smaller root filesystem, which by default automatically expands to fill all available disk space. If you add additional partitions after the root filesystem, you must make sure to explicitly resize the root partition as shown below so that it is at least 8 GiB.
+    \&#42;Fedora CoreOS requires the root filesystem to be at least 8 GiB.\&#42; For practical reasons, disk images for some platforms ship with a smaller root filesystem, which by default automatically expands to fill all available disk space. If you add additional partitions after the root filesystem, you must make sure to explicitly resize the root partition as shown below so that it is at least 8 GiB.
 
     Currently, if the root filesystem is smaller than 8 GiB, a warning is emitted on login. Starting from June 2021, if the root filesystem is smaller than 8 GiB and is followed by another partition, Fedora CoreOS will refuse to boot. For more details, see https://github.com/coreos/fedora-coreos-tracker/issues/586[this bug].
     ====
 
     == Referencing block devices from Ignition
 
-    Many of the examples below will reference a block device, such as `/dev/vda`. The name of the available block devices depends on the underlying infrastructure (bare metal vs cloud), and often the specific instance type. For example in AWS, some instance types have NVMe drives (`/dev/nvme*`), others use `/dev/xvda*`.
+    Many of the examples below will reference a block device, such as \&#96;/dev/vda\&#96;. The name of the available block devices depends on the underlying infrastructure (bare metal vs cloud), and often the specific instance type. For example in AWS, some instance types have NVMe drives (\&#96;/dev/nvme\&#42;\&#96;), others use \&#96;/dev/xvda\&#42;\&#96;.
 
-    If your disk configuration is simple and uses the same disk the OS was booted from then the `/dev/disk/by-id/coreos-boot-disk` link can be used to conveniently refer to that device. This link is only available during provisioning for the purpose of making it easy to refer to the same disk the OS was booted from.
+    If your disk configuration is simple and uses the same disk the OS was booted from then the \&#96;/dev/disk/by-id/coreos-boot-disk\&#96; link can be used to conveniently refer to that device. This link is only available during provisioning for the purpose of making it easy to refer to the same disk the OS was booted from.
 
-    If you need to access other disks, you can boot a single machine with an Ignition configuration with only SSH access, and then inspect the block devices via e.g. the `lsblk` command.
+    If you need to access other disks, you can boot a single machine with an Ignition configuration with only SSH access, and then inspect the block devices via e.g. the \&#96;lsblk\&#96; command.
 
-    For physical hardware, it is recommended to reference devices via the `/dev/disk/by-id/` or `/dev/disk/by-path` links.
+    For physical hardware, it is recommended to reference devices via the \&#96;/dev/disk/by-id/\&#96; or \&#96;/dev/disk/by-path\&#96; links.
 
     == Setting up separate /var mounts
 
-    Here's an example Butane config to set up `/var` on a separate partition on the same primary disk:
+    Here's an example Butane config to set up \&#96;/var\&#96; on a separate partition on the same primary disk:
 
     .Adding a /var partition to the primary disk
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
-variant: fcos version: {butane-latest-stable-spec} storage: disks: - \#
-The link to the block device the OS was booted from. device:
-/dev/disk/by-id/coreos-boot-disk \# We do not want to wipe the partition
-table since this is the primary \# device. wipe_table: false
-partitions: - number: 4 label: root \# Allocate at least 8 GiB to the
-rootfs. See NOTE above about this. size_mib: 8192 resize: true -
-size_mib: 0 \# We assign a descriptive label to the partition. This is
-important \# for referring to it in a device-agnostic way in other parts
-of the \# configuration. label: var filesystems: - path: /var device:
-/dev/disk/by-partlabel/var \# We can select the filesystem we'd like.
-format: ext4 \# Ask Butane to generate a mount unit for us so that this
-filesystem \# gets mounted in the real root. with_mount_unit: true
+variant: fcos version: {butane-latest-stable-spec} storage: disks: -
+&#35; The link to the block device the OS was booted from. device:
+/dev/disk/by-id/coreos-boot-disk &#35; We do not want to wipe the
+partition table since this is the primary &#35; device. wipe_table:
+false partitions: - number: 4 label: root &#35; Allocate at least 8 GiB
+to the rootfs. See NOTE above about this. size_mib: 8192 resize: true -
+size_mib: 0 &#35; We assign a descriptive label to the partition. This
+is important &#35; for referring to it in a device-agnostic way in other
+parts of the &#35; configuration. label: var filesystems: - path: /var
+device: /dev/disk/by-partlabel/var &#35; We can select the filesystem
+we'd like. format: ext4 &#35; Ask Butane to generate a mount unit for us
+so that this filesystem &#35; gets mounted in the real root.
+with_mount_unit: true
 
-    You can of course mount only a subset of `/var` into a separate partition. For example, to mount `/var/lib/containers`:
+    You can of course mount only a subset of \&#96;/var\&#96; into a separate partition. For example, to mount \&#96;/var/lib/containers\&#96;:
 
     .Adding a /var/lib/containers partition to the primary disk
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: disks: -
 device: /dev/disk/by-id/coreos-boot-disk wipe_table: false partitions: -
-number: 4 label: root \# Allocate at least 8 GiB to the rootfs. See NOTE
-above about this. size_mib: 8192 resize: true - size_mib: 0 label:
+number: 4 label: root &#35; Allocate at least 8 GiB to the rootfs. See
+NOTE above about this. size_mib: 8192 resize: true - size_mib: 0 label:
 containers filesystems: - path: /var/lib/containers device:
 /dev/disk/by-partlabel/containers format: xfs with_mount_unit: true
 
-    Alternatively, you can also mount storage from a separate disk. For example, here we mount `/var/log` from a partition on `/dev/vdb`:
+    Alternatively, you can also mount storage from a separate disk. For example, here we mount \&#96;/var/log\&#96; from a partition on \&#96;/dev/vdb\&#96;:
 
     .Adding /var/log from a secondary disk
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: disks: -
 device: /dev/vdb wipe_table: false partitions: - size_mib: 0 start_mib:
@@ -4424,31 +4425,32 @@ device: /dev/vdb wipe_table: false partitions: - size_mib: 0 start_mib:
     .Defining a disk with multiple partitions
     In this example, we wipe the disk and create two new partitions.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
-variant: fcos version: {butane-latest-stable-spec} storage: disks: - \#
-Mandatory. We use the World-Wide Number ID of the drive to ensure \#
-uniqueness. device: /dev/disk/by-id/wwn-0x50014e2eb507fcdf \# This
-ensures that the partition table is re-created, along with all \# the
-partitions. wipe_table: true partitions: \# The first partition (slot
-number 1) is 32 GiB and starts at the \# beginning of the device. Its
-type_guid identifies it as a Linux \# swap partition. - label: part1
-number: 1 size_mib: 32768 start_mib: 0 type_guid:
-0657fd6d-a4ab-43c4-84e5-0933c84b4f4f \# The second partition (implicit
-slot number 2) will be placed after \# partition 1 and will occupy the
-rest of the available space. \# Since type_guid is not specified, it
-will be a Linux native \# partition. - label: part2
+variant: fcos version: {butane-latest-stable-spec} storage: disks: -
+&#35; Mandatory. We use the World-Wide Number ID of the drive to ensure
+&#35; uniqueness. device: /dev/disk/by-id/wwn-0x50014e2eb507fcdf &#35;
+This ensures that the partition table is re-created, along with all
+&#35; the partitions. wipe_table: true partitions: &#35; The first
+partition (slot number 1) is 32 GiB and starts at the &#35; beginning of
+the device. Its type_guid identifies it as a Linux &#35; swap
+partition. - label: part1 number: 1 size_mib: 32768 start_mib: 0
+type_guid: 0657fd6d-a4ab-43c4-84e5-0933c84b4f4f &#35; The second
+partition (implicit slot number 2) will be placed after &#35; partition
+1 and will occupy the rest of the available space. &#35; Since type_guid
+is not specified, it will be a Linux native &#35; partition. - label:
+part2
 
     == Reconfiguring the root filesystem
 
-    It is possible to reconfigure the root filesystem itself. You can use the path `/dev/disk/by-label/root` to refer to the original root partition. You must ensure that the new filesystem also has a label of `root`.
+    It is possible to reconfigure the root filesystem itself. You can use the path \&#96;/dev/disk/by-label/root\&#96; to refer to the original root partition. You must ensure that the new filesystem also has a label of \&#96;root\&#96;.
 
     NOTE: You must have at least 4 GiB of RAM for root reprovisioning to work.
 
     Here's an example of moving from xfs to ext4, but reusing the same partition on the primary disk:
 
     .Changing the root filesystem to ext4
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage:
 filesystems: - device: /dev/disk/by-partlabel/root wipe_filesystem: true
@@ -4457,19 +4459,19 @@ format: ext4 label: root
     Similarly to the previous section, you can also move the root filesystem entirely. Here, we're moving root to a RAID0 device:
 
     .Moving the root filesystem to RAID0
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: raid: -
 name: myroot level: raid0 devices: - /dev/disk/by-id/virtio-disk1 -
 /dev/disk/by-id/virtio-disk2 filesystems: - device: /dev/md/myroot
 format: xfs wipe_filesystem: true label: root
 
-    NOTE: You don't need the `path` or `with_mount_unit` keys; FCOS knows that the root partition is special and will figure out how to find it and mount it.
+    NOTE: You don't need the \&#96;path\&#96; or \&#96;with_mount_unit\&#96; keys; FCOS knows that the root partition is special and will figure out how to find it and mount it.
 
     If you want to replicate the boot disk across multiple drives for resiliency to drive failure, you need to mirror all the default partitions (root, boot, EFI System Partition, and bootloader code). There is special Butane config syntax for this:
 
     .Mirroring the boot disk onto two drives
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} boot_device: mirror:
 devices: - /dev/sda - /dev/sdb
@@ -4479,44 +4481,44 @@ devices: - /dev/sda - /dev/sdb
     This example demonstrates the process of creating the filesystem by defining and labeling the partitions, combining them into a RAID array, and formatting that array as ext4.
 
     .Defining a filesystem on a RAID storage device
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
-variant: fcos version: {butane-latest-stable-spec} storage: disks: \#
-This defines two partitions, each on its own disk. The disks are \#
+variant: fcos version: {butane-latest-stable-spec} storage: disks: &#35;
+This defines two partitions, each on its own disk. The disks are &#35;
 identified by their WWN. - device:
-/dev/disk/by-id/wwn-0x50014ee261e524e4 wipe_table: true partitions: - \#
-Each partition gets a human-readable label. label: \"raid.1.1\" \# Each
-partition is placed at the beginning of the disk and is 64 GiB \# long.
-number: 1 size_mib: 65536 start_mib: 0 - device:
+/dev/disk/by-id/wwn-0x50014ee261e524e4 wipe_table: true partitions: -
+&#35; Each partition gets a human-readable label. label: \'raid.1.1\'
+&#35; Each partition is placed at the beginning of the disk and is 64
+GiB &#35; long. number: 1 size_mib: 65536 start_mib: 0 - device:
 /dev/disk/by-id/wwn-0x50014ee0b8442cd3 wipe_table: true partitions: -
-label: \"raid.1.2\" number: 1 size_mib: 65536 start_mib: 0 \# We use the
-previously defined partitions as devices in a RAID1 md array. raid: -
-name: publicdata level: raid1 devices: -
-/dev/disk/by-partlabel/raid.1.1 - /dev/disk/by-partlabel/raid.1.2 \# The
-resulting md array is used to create an EXT4 filesystem. filesystems: -
-path: /var/publicdata device: /dev/md/publicdata format: ext4 label: PUB
-with_mount_unit: true
+label: \'raid.1.2\' number: 1 size_mib: 65536 start_mib: 0 &#35; We use
+the previously defined partitions as devices in a RAID1 md array.
+raid: - name: publicdata level: raid1 devices: -
+/dev/disk/by-partlabel/raid.1.1 - /dev/disk/by-partlabel/raid.1.2 &#35;
+The resulting md array is used to create an EXT4 filesystem.
+filesystems: - path: /var/publicdata device: /dev/md/publicdata format:
+ext4 label: PUB with_mount_unit: true
 
     == Encrypted storage (LUKS)
 
-    Here is an example to configure a LUKS device at `/var/lib/data`.
+    Here is an example to configure a LUKS device at \&#96;/var/lib/data\&#96;.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: luks: -
 name: data device: /dev/vdb filesystems: - path: /var/lib/data device:
 /dev/mapper/data format: xfs label: DATA with_mount_unit: true
 
-    The root filesystem can also be moved to LUKS. In that case, the LUKS device must be pinned by https://coreos.github.io/ignition/operator-notes/#clevis-based-devices[Clevis]. There are two primary pin types available: TPM2 and Tang (or a combination of those using Shamir Secret Sharing).
+    The root filesystem can also be moved to LUKS. In that case, the LUKS device must be pinned by https://coreos.github.io/ignition/operator-notes/\&#35;clevis-based-devices[Clevis]. There are two primary pin types available: TPM2 and Tang (or a combination of those using Shamir Secret Sharing).
 
-    CAUTION: TPM2 pinning just binds encryption to the physical machine in use. Make sure to understand its threat model before choosing between TPM2 and Tang pinning. For more information, see https://github.com/latchset/clevis/blob/master/src/pins/tpm2/clevis-encrypt-tpm2.1.adoc#threat-model[this section] of the Clevis TPM2 pin documentation.
+    CAUTION: TPM2 pinning just binds encryption to the physical machine in use. Make sure to understand its threat model before choosing between TPM2 and Tang pinning. For more information, see https://github.com/latchset/clevis/blob/master/src/pins/tpm2/clevis-encrypt-tpm2.1.adoc\&#35;threat-model[this section] of the Clevis TPM2 pin documentation.
 
     NOTE: You must have at least 4 GiB of RAM for root reprovisioning to work.
 
     There is simplified Butane config syntax for configuring root filesystem encryption and pinning. Here is an example of using it to create a TPM2-pinned encrypted root filesystem:
 
     .Encrypting the root filesystem with a TPM2 Clevis pin
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} boot_device: luks:
 tpm2: true
@@ -4524,42 +4526,42 @@ tpm2: true
     This is equivalent to the following expanded config:
 
     .Encrypting the root filesystem with a TPM2 Clevis pin without using boot_device
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: luks: -
 name: root label: luks-root device: /dev/disk/by-partlabel/root clevis:
 tpm2: true wipe_volume: true filesystems: - device: /dev/mapper/root
 format: xfs wipe_filesystem: true label: root
 
-    The expanded config doesn't include the `path` or `with_mount_unit` keys; FCOS knows that the root partition is special and will figure out how to find it and mount it.
+    The expanded config doesn't include the \&#96;path\&#96; or \&#96;with_mount_unit\&#96; keys; FCOS knows that the root partition is special and will figure out how to find it and mount it.
 
     This next example binds the root filesystem encryption to PCR 7 which corresponds to the https://uapi-group.org/specifications/specs/linux_tpm_pcr_registry/[UEFI Boot Component] used to track the Secure Boot certificate from memory. Therefore, updates to the UEFI firmware/certificates should not affect the value stored in PCR 7.
 
     NOTE: Binding for PCR 8 (UEFI Boot Component used to track commands and kernel command line) is not supported as the kernel command line changes with every OS update.
 
     .Encrypting the root filesystem with a TPM2 Clevis pin bound to PCR 7
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: luks: -
 name: root label: luks-root device: /dev/disk/by-partlabel/root clevis:
 custom: needs_network: false pin: tpm2 config:
-\'{\"pcr_bank\":\"sha1\",\"pcr_ids\":\"7\"}\' wipe_volume: true
+\'{\'pcr_bank\':\'sha1\',\'pcr_ids\':\'7\'}\' wipe_volume: true
 filesystems: - device: /dev/mapper/root format: xfs wipe_filesystem:
 true label: root
 
-    More documentation for the `config` fields can be found in the `clevis` man pages: `man clevis-encrypt-tpm2`
+    More documentation for the \&#96;config\&#96; fields can be found in the \&#96;clevis\&#96; man pages: \&#96;man clevis-encrypt-tpm2\&#96;
 
-    The following `clevis` command can be used to confirm that the root file system encryption is bound to PCR 7.
+    The following \&#96;clevis\&#96; command can be used to confirm that the root file system encryption is bound to PCR 7.
 
     [source,shell]
 
 \$ sudo clevis luks list -d /dev/disk/by-partlabel/root 1: tpm2
-\'{\"hash\":\"sha256\",\"key\":\"ecc\",\"pcr_bank\":\"sha1\",\"pcr_ids\":\"7\"}\'
+\'{\'hash\':\'sha256\',\'key\':\'ecc\',\'pcr_bank\':\'sha1\',\'pcr_ids\':\'7\'}\'
 
     Here is an example of the simplified config syntax with Tang:
 
     .Encrypting the root filesystem with a Tang Clevis pin
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} boot_device: luks:
 tang: - url: <http://192.168.122.1:80> thumbprint:
@@ -4569,37 +4571,37 @@ bV8aajlyN6sYqQ41lGqD4zlhe0E
 
     NOTE: For more information about setting up a Tang server, see https://github.com/latchset/tang[the upstream documentation].
 
-    You can configure both Tang and TPM2 pinning (including multiple Tang servers for redundancy). By default, only the TPM2 device or a single Tang server is needed to unlock the root filesystem. This can be changed using the `threshold` key:
+    You can configure both Tang and TPM2 pinning (including multiple Tang servers for redundancy). By default, only the TPM2 device or a single Tang server is needed to unlock the root filesystem. This can be changed using the \&#96;threshold\&#96; key:
 
     .Encrypting the root filesystem with both TPM2 and Tang pins
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} boot_device: luks:
 tang: - url: <http://192.168.122.1:80> thumbprint:
-bV8aajlyN6sYqQ41lGqD4zlhe0E tpm2: true \# this will allow rootfs
-unlocking only if both TPM2 and Tang pins are \# accessible and valid
+bV8aajlyN6sYqQ41lGqD4zlhe0E tpm2: true &#35; this will allow rootfs
+unlocking only if both TPM2 and Tang pins are &#35; accessible and valid
 threshold: 2
 
     == Sizing the root partition
 
-    If you use Ignition to reconfigure or move the root partition, that partition is not automatically grown on first boot (see related discussions in https://github.com/coreos/fedora-coreos-tracker/issues/570[this issue]). In the case of moving the root partition to a new disk (or multiple disks), you should set the desired partition size using the `size_mib` field. If reconfiguring the root filesystem in place, as in the LUKS example above, you can resize the existing partition using the `resize` field:
+    If you use Ignition to reconfigure or move the root partition, that partition is not automatically grown on first boot (see related discussions in https://github.com/coreos/fedora-coreos-tracker/issues/570[this issue]). In the case of moving the root partition to a new disk (or multiple disks), you should set the desired partition size using the \&#96;size_mib\&#96; field. If reconfiguring the root filesystem in place, as in the LUKS example above, you can resize the existing partition using the \&#96;resize\&#96; field:
 
     .Resizing the root partition to its maximum size
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: disks: -
 device: /dev/disk/by-id/coreos-boot-disk partitions: - label: root
-number: 4 \# 0 means to use all available space size_mib: 0 resize: true
-luks: - name: root device: /dev/disk/by-partlabel/root clevis: tpm2:
-true wipe_volume: true filesystems: - device: /dev/mapper/root format:
-xfs wipe_filesystem: true label: root
+number: 4 &#35; 0 means to use all available space size_mib: 0 resize:
+true luks: - name: root device: /dev/disk/by-partlabel/root clevis:
+tpm2: true wipe_volume: true filesystems: - device: /dev/mapper/root
+format: xfs wipe_filesystem: true label: root
 
     == Adding swap
 
-    This example creates a swap partition spanning all of the `sdb` device, creates a swap area on it, and creates a systemd swap unit so the swap area is enabled on boot.
+    This example creates a swap partition spanning all of the \&#96;sdb\&#96; device, creates a swap area on it, and creates a systemd swap unit so the swap area is enabled on boot.
 
     .Configuring a swap partition on a second disk
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: disks: -
 device: /dev/sdb wipe_table: true partitions: - number: 1 label: swap
@@ -4613,8 +4615,8 @@ wipe_filesystem: true with_mount_unit: true
     === Configuring NFS mounts
 
     .Creating a systemd unit to mount an NFS filesystem on boot.
-    NOTE: The `.mount` file must be named based on the path (e.g. `/var/mnt/data` = `var-mnt-data.mount`)
-    [source,yaml,subs="attributes"]
+    NOTE: The \&#96;.mount\&#96; file must be named based on the path (e.g. \&#96;/var/mnt/data\&#96; = \&#96;var-mnt-data.mount\&#96;)
+    [source,yaml,subs='attributes']
 
 variant: fcos version: 1.3.0 systemd: units: - name: var-mnt-data.mount
 enabled: true contents: \|
@@ -4626,7 +4628,7 @@ What=example.org:/data Where=/var/mnt/data Type=nfs4
 WantedBy=multi-user.target
 
     .Creating a systemd unit to mount an NFS filesystem when users access the mount point (automount)
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: 1.3.0 systemd: units: - name: var-mnt-data.mount
 contents: \|
@@ -4647,34 +4649,34 @@ WantedBy=multi-user.target
 
     == Advanced examples
 
-    This example configures a mirrored boot disk with a TPM2-encrypted root filesystem, overrides the sizes of the automatically-generated root partition replicas, and adds an encrypted mirrored `/var` partition which consumes the remainder of the disks.
+    This example configures a mirrored boot disk with a TPM2-encrypted root filesystem, overrides the sizes of the automatically-generated root partition replicas, and adds an encrypted mirrored \&#96;/var\&#96; partition which consumes the remainder of the disks.
 
     .Encrypted mirrored boot disk with separate /var
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} boot_device: luks:
 tpm2: true mirror: devices: - /dev/sda - /dev/sdb storage: disks: -
-device: /dev/sda partitions: \# Override size of root partition on first
-disk, via the label \# generated for boot_device.mirror - label: root-1
-size_mib: 10240 \# Add a new partition filling the remainder of the
-disk - label: var-1 - device: /dev/sdb partitions: \# Similarly for
-second disk - label: root-2 size_mib: 10240 - label: var-2 raid: - name:
-md-var level: raid1 devices: - /dev/disk/by-partlabel/var-1 -
-/dev/disk/by-partlabel/var-2 luks: - name: var device: /dev/md/md-var \#
-No key material is specified, so a random key will be generated \# and
-stored in the root filesystem filesystems: - device: /dev/mapper/var
-path: /var label: var format: xfs wipe_filesystem: true with_mount_unit:
-true
+device: /dev/sda partitions: &#35; Override size of root partition on
+first disk, via the label &#35; generated for boot_device.mirror -
+label: root-1 size_mib: 10240 &#35; Add a new partition filling the
+remainder of the disk - label: var-1 - device: /dev/sdb partitions:
+&#35; Similarly for second disk - label: root-2 size_mib: 10240 - label:
+var-2 raid: - name: md-var level: raid1 devices: -
+/dev/disk/by-partlabel/var-1 - /dev/disk/by-partlabel/var-2 luks: -
+name: var device: /dev/md/md-var &#35; No key material is specified, so
+a random key will be generated &#35; and stored in the root filesystem
+filesystems: - device: /dev/mapper/var path: /var label: var format: xfs
+wipe_filesystem: true with_mount_unit: true
 
     == Disk Layout
 
-    All Fedora CoreOS systems start with the same disk image which varies slightly between architectures based on what is needed for bootloading. On first boot the root filesystem is expanded to fill the rest of the disk. The disk image can be customized using Butane configs to repartition the disk and create/reformat filesystems. Bare metal installations are not different; the installer only copies the raw image to the target disk and injects the specified config into `/boot` for use on first boot.
+    All Fedora CoreOS systems start with the same disk image which varies slightly between architectures based on what is needed for bootloading. On first boot the root filesystem is expanded to fill the rest of the disk. The disk image can be customized using Butane configs to repartition the disk and create/reformat filesystems. Bare metal installations are not different; the installer only copies the raw image to the target disk and injects the specified config into \&#96;/boot\&#96; for use on first boot.
 
-    NOTE: See xref:#_reconfiguring_the_root_filesystem[Reconfiguring the root filesystem] for examples regarding the supported changes to the root partition.
+    NOTE: See xref:\&#35;_reconfiguring_the_root_filesystem[Reconfiguring the root filesystem] for examples regarding the supported changes to the root partition.
 
     === Partition Tables
 
-    Using partition numbers to refer to specific partitions is discouraged and labels or UUIDs should be used instead. Fedora CoreOS reserves the `boot`, `boot-<number>`, `root`, `root-<number>`, `BIOS-BOOT`, `bios-<number>`, `EFI-SYSTEM`, and `esp-<number>` labels, and the `md-boot` and `md-root` RAID device names. Creating partitions, filesystems, or RAID devices with those labels is not supported.
+    Using partition numbers to refer to specific partitions is discouraged and labels or UUIDs should be used instead. Fedora CoreOS reserves the \&#96;boot\&#96;, \&#96;boot-\&lt;number\&gt;\&#96;, \&#96;root\&#96;, \&#96;root-\&lt;number\&gt;\&#96;, \&#96;BIOS-BOOT\&#96;, \&#96;bios-\&lt;number\&gt;\&#96;, \&#96;EFI-SYSTEM\&#96;, and \&#96;esp-\&lt;number\&gt;\&#96; labels, and the \&#96;md-boot\&#96; and \&#96;md-root\&#96; RAID device names. Creating partitions, filesystems, or RAID devices with those labels is not supported.
 
     === x86_64 Partition Table
 
@@ -4695,59 +4697,61 @@ true
 
     == Mounted Filesystems
 
-    Fedora CoreOS uses OSTree, which is a system for managing multiple bootable operating system trees that share storage. Each operating system version is part of the `/` filesystem. All deployments share the same `/var` which can be on the same filesystem, or mounted separately.
+    Fedora CoreOS uses OSTree, which is a system for managing multiple bootable operating system trees that share storage. Each operating system version is part of the \&#96;/\&#96; filesystem. All deployments share the same \&#96;/var\&#96; which can be on the same filesystem, or mounted separately.
 
-    This shows the default mountpoints for a Fedora CoreOS system installed on a `/dev/vda` disk:
+    This shows the default mountpoints for a Fedora CoreOS system installed on a \&#96;/dev/vda\&#96; disk:
 
     .Default mountpoints on x86_64
     [source,bash]
 
-\$ findmnt \--real \# Some details are elided TARGET SOURCE FSTYPE
+\$ findmnt \--real &#35; Some details are elided TARGET SOURCE FSTYPE
 OPTIONS / /dev/vda4\[/ostree/deploy/fedora-coreos/deploy/\$hash\] xfs rw
 \|-/sysroot /dev/vda4 xfs ro \|-/etc
 /dev/vda4\[/ostree/deploy/fedora-coreos/deploy/\$hash/etc\] xfs rw
 \|-/usr /dev/vda4\[/ostree/deploy/fedora-coreos/deploy/\$hash/usr\] xfs
 ro \|-/var /dev/vda4\[/ostree/deploy/fedora-coreos/deploy/var\] xfs rw
-\`-/boot /dev/vda3 ext4 ro
+&#96;-/boot /dev/vda3 ext4 ro
 
-    The EFI System Partition was formerly mounted on `/boot/efi`, but this is no longer the case. On systems configured with boot device mirroring, there are independent EFI partitions on each constituent disk.
+    The EFI System Partition was formerly mounted on \&#96;/boot/efi\&#96;, but this is no longer the case. On systems configured with boot device mirroring, there are independent EFI partitions on each constituent disk.
 
-    === Immutable `/`, read only `/usr`
+    === Immutable \&#96;/\&#96;, read only \&#96;/usr\&#96;
 
-    As OSTree is used to manage all files belonging to the operating system, the `/` and `/usr` mountpoints are not writable. Any changes to the operating system should be applied via https://coreos.github.io/rpm-ostree/administrator-handbook/[`rpm-ostree`].
+    As OSTree is used to manage all files belonging to the operating system, the \&#96;/\&#96; and \&#96;/usr\&#96; mountpoints are not writable. Any changes to the operating system should be applied via https://coreos.github.io/rpm-ostree/administrator-handbook/[\&#96;rpm-ostree\&#96;].
 
-    Similarly, the `/boot` mountpoint is not writable, and the EFI System Partition is not mounted by default. These filesystems are managed by `rpm-ostree` and `bootupd`, and must not be directly modified by an administrator.
+    Similarly, the \&#96;/boot\&#96; mountpoint is not writable, and the EFI System Partition is not mounted by default. These filesystems are managed by \&#96;rpm-ostree\&#96; and \&#96;bootupd\&#96;, and must not be directly modified by an administrator.
 
-    Adding top level directories (i.e. `/foo`) is currently unsupported and disallowed by the immutable attribute.
+    Adding top level directories (i.e. \&#96;/foo\&#96;) is currently unsupported and disallowed by the immutable attribute.
 
-    The *real* `/` (as in the root of the filesystem in the `root` partition) is mounted readonly in `/sysroot` and must not be accessed or modified directly.
+    The \&#42;real\&#42; \&#96;/\&#96; (as in the root of the filesystem in the \&#96;root\&#96; partition) is mounted readonly in \&#96;/sysroot\&#96; and must not be accessed or modified directly.
 
-    === Configuration in `/etc` and state in `/var`
+    === Configuration in \&#96;/etc\&#96; and state in \&#96;/var\&#96;
 
-    The only supported writable locations are `/etc` and `/var`. `/etc` should contain only configuration files and is not expected to store data. All data must be kept under `/var` and will not be touched by system upgrades. Traditional places that might hold state (e.g. `/home`, or `/srv`) are symlinks to directories in `/var` (e.g. `/var/home` or `/var/srv`).
+    The only supported writable locations are \&#96;/etc\&#96; and \&#96;/var\&#96;. \&#96;/etc\&#96; should contain only configuration files and is not expected to store data. All data must be kept under \&#96;/var\&#96; and will not be touched by system upgrades. Traditional places that might hold state (e.g. \&#96;/home\&#96;, or \&#96;/srv\&#96;) are symlinks to directories in \&#96;/var\&#96; (e.g. \&#96;/var/home\&#96; or \&#96;/var/srv\&#96;).
 
     === Version selection and bootup
 
-    A GRUB menu entry is created for each version of Fedora CoreOS currently available on a system. This menu entry references an `ostree` deployment which consists of a Linux kernel, an initramfs and a hash linking to an `ostree` commit (passed via the `ostree=` kernel argument). During bootup, `ostree` will read this kernel argument to determine which deployment to use as the root filesystem. Each update or change to the system (package installation, addition of kernel arguments) creates a new deployment. This enables rolling back to a previous deployment if the update causes problems.
+    A GRUB menu entry is created for each version of Fedora CoreOS currently available on a system. This menu entry references an \&#96;ostree\&#96; deployment which consists of a Linux kernel, an initramfs and a hash linking to an \&#96;ostree\&#96; commit (passed via the \&#96;ostree=\&#96; kernel argument). During bootup, \&#96;ostree\&#96; will read this kernel argument to determine which deployment to use as the root filesystem. Each update or change to the system (package installation, addition of kernel arguments) creates a new deployment. This enables rolling back to a previous deployment if the update causes problems.
+
+
     = Managing Files, Directories and Links
 
     You can use Ignition to create, replace or update files, directories or links.
 
-    This example creates a directory with the default mode (set to `0755`: readable
-    and recurseable by all), and writable only by the owner (by default `root`).
+    This example creates a directory with the default mode (set to \&#96;0755\&#96;: readable
+    and recurseable by all), and writable only by the owner (by default \&#96;root\&#96;).
 
     .Example to create a directory with default ownership and permissions
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage:
 directories: - path: /opt/tools overwrite: true
 
-    This example creates a file named `/var/helloworld` with some content defined
-    in-line. It also sets the file mode to `0644` (readable by all, writable by the
-    owner) and sets ownership to `dnsmasq:dnsmasq`.
+    This example creates a file named \&#96;/var/helloworld\&#96; with some content defined
+    in-line. It also sets the file mode to \&#96;0644\&#96; (readable by all, writable by the
+    owner) and sets ownership to \&#96;dnsmasq:dnsmasq\&#96;.
 
     .Example to create a file with in-line content
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /var/helloworld overwrite: true contents: inline: Hello, world!
@@ -4757,11 +4761,11 @@ mode: 0644 user: name: dnsmasq group: name: dnsmasq
     this case, it fetches an HTTPS URL and expects the file to be compressed with
     gzip and will decompress it before writing it on the disk. The decompressed
     content is checked against the hash value specified in the config. The format
-    is `sha512-` followed by the 128 hex characters given by the sha512sum command.
+    is \&#96;sha512-\&#96; followed by the 128 hex characters given by the sha512sum command.
     The resulting file is made readable and executable by all.
 
     .Example to create a file from a remote source
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /opt/tools/transmogrifier overwrite: true contents: source:
@@ -4770,12 +4774,12 @@ verification: hash:
 sha512-00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 mode: 0555
 
-    This example creates a symbolic link in `/usr/local/bin` to a path in `/opt`.
+    This example creates a symbolic link in \&#96;/usr/local/bin\&#96; to a path in \&#96;/opt\&#96;.
     This is useful to let local processes invoke a program without altering their
     PATH environment variable.
 
     .Example to create a symbolic link
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: links: -
 path: /usr/local/bin/transmogrifier overwrite: true target:
@@ -4783,11 +4787,11 @@ path: /usr/local/bin/transmogrifier overwrite: true target:
 
     If you need a directory and some of its parents to be owned by a specific user,
     you currently have to explicitly list them in your Butane config. See
-    https://github.com/coreos/butane/issues/380[butane#380] for the tracking issue
+    https://github.com/coreos/butane/issues/380[butane\&#35;380] for the tracking issue
     in Butane for a future better syntax for this case.
 
     .Example to create directories with specific ownership
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage:
 directories: - path: /home/builder/.config user: name: builder group:
@@ -4807,26 +4811,26 @@ builder group: name: builder
 
     === Background
 
-    Unless xref:#_disabling_automatic_configuration_of_ethernet_devices[otherwise configured], Fedora CoreOS (FCOS) will attempt DHCP on every interface with a cable plugged in. However, if you need to use static addressing or more complex networking (vlans, bonds, bridges, teams, etc..), you can do so in a number of ways which are summarized below. Regardless of the way you choose to configure networking it all ends up as configuration for NetworkManager, which takes the form of NetworkManager keyfiles. More information on the keyfile format can be found https://networkmanager.dev/docs/api/latest/nm-settings-keyfile.html[here]. More information on the subsection options for keyfiles can be found https://networkmanager.dev/docs/api/latest/ref-settings.html[here].
+    Unless xref:\&#35;_disabling_automatic_configuration_of_ethernet_devices[otherwise configured], Fedora CoreOS (FCOS) will attempt DHCP on every interface with a cable plugged in. However, if you need to use static addressing or more complex networking (vlans, bonds, bridges, teams, etc..), you can do so in a number of ways which are summarized below. Regardless of the way you choose to configure networking it all ends up as configuration for NetworkManager, which takes the form of NetworkManager keyfiles. More information on the keyfile format can be found https://networkmanager.dev/docs/api/latest/nm-settings-keyfile.html[here]. More information on the subsection options for keyfiles can be found https://networkmanager.dev/docs/api/latest/ref-settings.html[here].
 
     === Configuration Options
 
     FCOS machines are primarily configured via Ignition, which runs from the initramfs on the machine's first boot. Depending on the platform the machine may need network access to retrieve remote resources; either the Ignition config itself, or remote resources specified inside the Ignition config.
 
-    NOTE: Networking will only be started in the initramfs if determined to be required, or if explicitly requested by the user with `*rd.neednet=1*`.
+    NOTE: Networking will only be started in the initramfs if determined to be required, or if explicitly requested by the user with \&#96;\&#42;rd.neednet=1\&#42;\&#96;.
 
     Whether or not a machine needs networking in the initramfs can dictate how a user will configure networking for the machine. The options for configuring networking for a machine are:
 
-    * via kernel arguments
-    ** these get processed by dracut modules in the initramfs on first boot
-    * via live image customization
-    ** by embedding network configuration in the live ISO or PXE image
-    * via `coreos-installer install --copy-network`
-    ** by propagating the installation environment networking configuration
-    * via Afterburn
-    ** by applying network configuration injected by various platforms
-    * via Ignition
-    ** by laying down files that NetworkManager then uses on startup
+    \&#42; via kernel arguments
+    \&#42;\&#42; these get processed by dracut modules in the initramfs on first boot
+    \&#42; via live image customization
+    \&#42;\&#42; by embedding network configuration in the live ISO or PXE image
+    \&#42; via \&#96;coreos-installer install --copy-network\&#96;
+    \&#42;\&#42; by propagating the installation environment networking configuration
+    \&#42; via Afterburn
+    \&#42;\&#42; by applying network configuration injected by various platforms
+    \&#42; via Ignition
+    \&#42;\&#42; by laying down files that NetworkManager then uses on startup
 
     NOTE: If you need networking connectivity to pull your Ignition configuration, or if your Ignition has remote references, you won't be able to provide your networking configuration via Ignition.
 
@@ -4841,46 +4845,46 @@ builder group: name: builder
 
     1. In the most generic form, you can stop an instance at the GRUB prompt on the first boot (Ignition boot) and add them to the existing set of kernel arguments.
 
-    2. For a bare metal install where you automate the installation via kernel arguments added, (i.e., `coreos.inst.install_dev=`), you can also append networking arguments there and they will apply to the install boot and also the first boot (Ignition boot) of the installed machine.
+    2. For a bare metal install where you automate the installation via kernel arguments added, (i.e., \&#96;coreos.inst.install_dev=\&#96;), you can also append networking arguments there and they will apply to the install boot and also the first boot (Ignition boot) of the installed machine.
 
     3. For a PXE boot you can add networking kernel arguments to your existing set of kernel arguments in your PXE configuration.
 
-    An example set of kernel arguments for statically configuring an IP address for `ens2` looks like:
+    An example set of kernel arguments for statically configuring an IP address for \&#96;ens2\&#96; looks like:
 
-    [source, bash]
+    [source,_bash]
 
 ip=10.10.10.10::10.10.10.1:255.255.255.0:myhostname:ens2:none:8.8.8.8
 
     The syntax is a bit hard to work with. An easy way to work with it is to write a small script that will fill in the items for you. For the example above, something like this should work:
 
-    [source, bash]
+    [source,_bash]
 
 ip=\'10.10.10.10\' gateway=\'10.10.10.1\' netmask=\'255.255.255.0\'
 hostname=\'myhostname\' interface=\'ens2\' nameserver=\'8.8.8.8\' echo
-\"ip=\${ip}::\${gateway}:\${netmask}:\${hostname}:\${interface}:none:\${nameserver}\"
+\'ip=\${ip}::\${gateway}:\${netmask}:\${hostname}:\${interface}:none:\${nameserver}\'
 
     ==== via live image customization
 
-    coreos-installer allows you to embed NetworkManager keyfiles directly in a live ISO or PXE image by using the `--network-keyfile` option to `coreos-installer iso customize` or `coreos-installer pxe customize`. The configuration is applied in the initramfs before Ignition runs. If you also use the `--installer-config` option or any of the `--dest-*` options to configure automatic installation, or the `--copy-network` option when installing manually, the network configuration will be forwarded to the installed system.
+    coreos-installer allows you to embed NetworkManager keyfiles directly in a live ISO or PXE image by using the \&#96;--network-keyfile\&#96; option to \&#96;coreos-installer iso customize\&#96; or \&#96;coreos-installer pxe customize\&#96;. The configuration is applied in the initramfs before Ignition runs. If you also use the \&#96;--installer-config\&#96; option or any of the \&#96;--dest-\&#42;\&#96; options to configure automatic installation, or the \&#96;--copy-network\&#96; option when installing manually, the network configuration will be forwarded to the installed system.
 
-    For more details on embedding network configuration in a live image, see the xref:live-reference.adoc#_passing_network_configuration_to_a_live_iso_or_pxe_system[live ISO/PXE image reference].
+    For more details on embedding network configuration in a live image, see the xref:live-reference.adoc\&#35;_passing_network_configuration_to_a_live_iso_or_pxe_system[live ISO/PXE image reference].
 
 
-    ==== via `coreos-installer install --copy-network`
+    ==== via \&#96;coreos-installer install --copy-network\&#96;
 
     For manual bare metal install workflows it may not be preferable to use dracut kernel arguments for configuring network:
 
     - the syntax is not very user-friendly
     - manipulating kernel arguments by grabbing the GRUB prompt can be challenging
 
-    The `--copy-network` option to `coreos-installer install` will copy the files from `/etc/NetworkManager/system-connections/` directory into the installed system. For an interactive install this allows the user to populate networking configuration in a variety of ways before doing the installation:
+    The \&#96;--copy-network\&#96; option to \&#96;coreos-installer install\&#96; will copy the files from \&#96;/etc/NetworkManager/system-connections/\&#96; directory into the installed system. For an interactive install this allows the user to populate networking configuration in a variety of ways before doing the installation:
 
-    - using the `nmcli` command
-    - using the `nmtui` TUI interface
+    - using the \&#96;nmcli\&#96; command
+    - using the \&#96;nmtui\&#96; TUI interface
     - writing files directly
     - using another tool of choice
 
-    It also allows the user to do hardware discovery on the node (i.e. "what are my interface names?"). For an example of this workflow see link:++https://dustymabe.com/2020/11/18/coreos-install-via-live-iso--copy-network/++[this demo] which shows it in detail.
+    It also allows the user to do hardware discovery on the node (i.e. 'what are my interface names?'). For an example of this workflow see link:++https://dustymabe.com/2020/11/18/coreos-install-via-live-iso--copy-network/++[this demo] which shows it in detail.
 
 
     ==== via Afterburn
@@ -4895,13 +4899,13 @@ hostname=\'myhostname\' interface=\'ens2\' nameserver=\'8.8.8.8\' echo
 
     WARNING: If you need networking to grab your Ignition config and your environment requires more complex networking than the default of DHCP to grab the Ignition config, then you'll need to use another method other than Ignition to configure the network.
 
-    Networking configuration can be performed by writing out files described in an Ignition config. These are https://networkmanager.dev/docs/api/latest/nm-settings-keyfile.html[NetworkManager keyfiles] that are written to `/etc/NetworkManager/system-connections/` that tell NetworkManager what to do.
+    Networking configuration can be performed by writing out files described in an Ignition config. These are https://networkmanager.dev/docs/api/latest/nm-settings-keyfile.html[NetworkManager keyfiles] that are written to \&#96;/etc/NetworkManager/system-connections/\&#96; that tell NetworkManager what to do.
 
     Any configuration provided via Ignition will be considered at a higher priority than any other method of configuring the Network for a Fedora CoreOS instance. If you specify Networking configuration via Ignition, try not to use other mechanisms to configure the network.
 
     An example https://docs.fedoraproject.org/en-US/fedora-coreos/producing-ign/[Butane] config for the same static networking example that we showed above is:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/ens2.nmconnection mode:
@@ -4918,7 +4922,7 @@ may-fail=false method=manual
 
     Examples in this section that use a static IP will assume these values unless otherwise stated:
 
-    [source, bash]
+    [source,_bash]
 
 ip=\'10.10.10.10\' gateway=\'10.10.10.1\' netmask=\'255.255.255.0\'
 prefix=\'24\' hostname=\'myhostname\' interface=\'ens2\'
@@ -4927,19 +4931,19 @@ bridgename=\'br0\' subnic1=\'ens2\' subnic2=\'ens3\' vlanid=\'100\'
 
     NOTE: FCOS uses https://www.freedesktop.org/wiki/Software/systemd/PredictableNetworkInterfaceNames/[predictable interface names] by https://lists.fedoraproject.org/archives/list/coreos-status@lists.fedoraproject.org/thread/6IPTZL57Z5NLBMPYMXNVSYAGLRFZBLIP/[default]. Please take care to use the correct interface name for your hardware.
 
-    === Generating NetworkManager Keyfiles using `nm-initrd-generator`
+    === Generating NetworkManager Keyfiles using \&#96;nm-initrd-generator\&#96;
 
     NetworkManager ships a tool, https://networkmanager.dev/docs/api/latest/nm-initrd-generator.html[nm-initrd-generator], that can generate keyfiles from dracut kernel argument syntax. This might be a good way to either convert from kernel arguments to keyfiles or to just quickly generate some keyfiles giving a small amount of input and then tweak some more detailed settings.
 
-    Here's an example of generating keyfiles for a bond via `nm-initrd-generator`:
+    Here's an example of generating keyfiles for a bond via \&#96;nm-initrd-generator\&#96;:
 
-    [source, bash]
+    [source,_bash]
 
-\$ kargs=\"ip=bond0:dhcp
-bond=bond0:ens2,ens3:mode=active-backup,miimon=100 nameserver=8.8.8.8\"
+\$ kargs=\'ip=bond0:dhcp
+bond=bond0:ens2,ens3:mode=active-backup,miimon=100 nameserver=8.8.8.8\'
 \$ /usr/libexec/nm-initrd-generator -s --- \$kargs
 
-- Connection \'bond0\' **\***
+&#42;&#42;&#42; Connection \'bond0\' &#42;&#42;&#42;
 
 id=bond0 uuid=643c17b5-b364-4137-b273-33f450a45476 type=bond
 interface-name=bond0 multi-connect=1 permissions=
@@ -4952,7 +4956,7 @@ dns=8.8.8.8; dns-search= may-fail=false method=auto
 
 addr-gen-mode=eui64 dns-search= method=auto
 
-- Connection \'ens3\' **\***
+&#42;&#42;&#42; Connection \'ens3\' &#42;&#42;&#42;
 
 id=ens3 uuid=b42cc917-fd87-47df-9ac2-34622ecddd8c type=ethernet
 interface-name=ens3 master=643c17b5-b364-4137-b273-33f450a45476
@@ -4960,7 +4964,7 @@ multi-connect=1 permissions= slave-type=bond
 
 mac-address-blacklist=
 
-- Connection \'ens2\' **\***
+&#42;&#42;&#42; Connection \'ens2\' &#42;&#42;&#42;
 
 id=ens2 uuid=e111bb4e-3ee3-4612-afc2-1d2dfff97671 type=ethernet
 interface-name=ens2 master=643c17b5-b364-4137-b273-33f450a45476
@@ -4968,7 +4972,7 @@ multi-connect=1 permissions= slave-type=bond
 
 mac-address-blacklist=
 
-    This run generates three keyfiles. One for `bond0`, one for `ens3`, and one for `ens2`. You can take the generated output, add more settings or tweak existing settings, and then deliver the files via Ignition.
+    This run generates three keyfiles. One for \&#96;bond0\&#96;, one for \&#96;ens3\&#96;, and one for \&#96;ens2\&#96;. You can take the generated output, add more settings or tweak existing settings, and then deliver the files via Ignition.
 
 
     === Configuring a Static IP
@@ -4976,19 +4980,19 @@ mac-address-blacklist=
     ==== Dracut Kernel Arguments
 
     .Template
-    [source, bash]
+    [source,_bash]
 
 ip=\${ip}::\${gateway}:\${netmask}:\${hostname}:\${interface}:none:\${nameserver}
 
     .Rendered
-    [source, bash]
+    [source,_bash]
 
 ip=10.10.10.10::10.10.10.1:255.255.255.0:myhostname:ens2:none:8.8.8.8
 
     ==== Butane config
 
     .Template
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/\${interface}.nmconnection
@@ -5000,7 +5004,7 @@ address1=\${ip}/\${prefix},\${gateway} dhcp-hostname=\${hostname}
 dns=\${nameserver}; dns-search= may-fail=false method=manual
 
     .Rendered
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/ens2.nmconnection mode:
@@ -5016,13 +5020,13 @@ dns-search= may-fail=false method=manual
     ==== Dracut Kernel Arguments
 
     .Template
-    [source, bash]
+    [source,_bash]
 
 ip=\${ip}::\${gateway}:\${netmask}:\${hostname}:\${bondname}:none:\${nameserver}
 bond=\${bondname}:\${subnic1},\${subnic2}:mode=active-backup,miimon=100
 
     .Rendered
-    [source, bash]
+    [source,_bash]
 
 ip=10.10.10.10::10.10.10.1:255.255.255.0:myhostname:bond0:none:8.8.8.8
 bond=bond0:ens2,ens3:mode=active-backup,miimon=100
@@ -5030,7 +5034,7 @@ bond=bond0:ens2,ens3:mode=active-backup,miimon=100
     ==== Butane config
 
     .Template
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/\${bondname}.nmconnection
@@ -5054,7 +5058,7 @@ id=\${bondname}-slave-\${subnic2} type=ethernet
 interface-name=\${subnic2} master=\${bondname} slave-type=bond
 
     .Rendered
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/bond0.nmconnection mode:
@@ -5082,19 +5086,19 @@ slave-type=bond
     ==== Dracut Kernel Arguments
 
     .Template
-    [source, bash]
+    [source,_bash]
 
 ip=\${bridgename}:dhcp bridge=\${bridgename}:\${subnic1},\${subnic2}
 
     .Rendered
-    [source, bash]
+    [source,_bash]
 
 ip=br0:dhcp bridge=br0:ens2,ens3
 
     ==== Butane config
 
     .Template
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/\${bridgename}.nmconnection
@@ -5119,7 +5123,7 @@ interface-name=\${subnic1} master=\${bridgename} slave-type=bridge
 <!-- -->
 
     .Rendered
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/br0.nmconnection mode: 0600
@@ -5148,19 +5152,19 @@ slave-type=bridge
     ==== Dracut Kernel Arguments
 
     .Template
-    [source, bash]
+    [source,_bash]
 
 ip=\${teamname}:dhcp team=\${teamname}:\${subnic1},\${subnic2}
 
     .Rendered
-    [source, bash]
+    [source,_bash]
 
 ip=team0:dhcp team=team0:ens2,ens3
 
     ==== Butane config
 
     .Template
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/\${teamname}.nmconnection
@@ -5168,8 +5172,8 @@ mode: 0600 contents: inline: \|
 
 id=\${teamname} type=team interface-name=\${teamname}
 
-config={\"runner\": {\"name\": \"activebackup\"}, \"link_watch\":
-{\"name\": \"ethtool\"}}
+config={\'runner\': {\'name\': \'activebackup\'}, \'link_watch\':
+{\'name\': \'ethtool\'}}
 
 dns-search= may-fail=false method=auto - path:
 /etc/NetworkManager/system-connections/\${teamname}-slave-\${subnic1}.nmconnection
@@ -5178,17 +5182,17 @@ mode: 0600 contents: inline: \|
 id=\${teamname}-slave-\${subnic1} type=ethernet
 interface-name=\${subnic1} master=\${teamname} slave-type=team
 
-config={\"prio\": 100} - path:
+config={\'prio\': 100} - path:
 /etc/NetworkManager/system-connections/\${teamname}-slave-\${subnic2}.nmconnection
 mode: 0600 contents: inline: \|
 
 id=\${teamname}-slave-\${subnic2} type=ethernet
 interface-name=\${subnic2} master=\${teamname} slave-type=team
 
-config={\"prio\": 100}
+config={\'prio\': 100}
 
     .Rendered
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/team0.nmconnection mode:
@@ -5196,8 +5200,8 @@ path: /etc/NetworkManager/system-connections/team0.nmconnection mode:
 
 id=team0 type=team interface-name=team0
 
-config={\"runner\": {\"name\": \"activebackup\"}, \"link_watch\":
-{\"name\": \"ethtool\"}}
+config={\'runner\': {\'name\': \'activebackup\'}, \'link_watch\':
+{\'name\': \'ethtool\'}}
 
 dns-search= may-fail=false method=auto - path:
 /etc/NetworkManager/system-connections/team0-slave-ens2.nmconnection
@@ -5206,27 +5210,27 @@ mode: 0600 contents: inline: \|
 id=team0-slave-ens2 type=ethernet interface-name=ens2 master=team0
 slave-type=team
 
-config={\"prio\": 100} - path:
+config={\'prio\': 100} - path:
 /etc/NetworkManager/system-connections/team0-slave-ens3.nmconnection
 mode: 0600 contents: inline: \|
 
 id=team0-slave-ens3 type=ethernet interface-name=ens3 master=team0
 slave-type=team
 
-config={\"prio\": 100}
+config={\'prio\': 100}
 
     === Configuring a Vlan (Static IP)
 
     ==== Dracut Kernel Arguments
 
     .Template
-    [source, bash]
+    [source,_bash]
 
 ip=\${ip}::\${gateway}:\${netmask}:\${hostname}:\${interface}.\${vlanid}:none:\${nameserver}
 vlan=\${interface}.\${vlanid}:\${interface}
 
     .Rendered
-    [source, bash]
+    [source,_bash]
 
 ip=10.10.10.10::10.10.10.1:255.255.255.0:myhostname:ens2.100:none:8.8.8.8
 vlan=ens2.100:ens2
@@ -5234,7 +5238,7 @@ vlan=ens2.100:ens2
     ==== Butane config
 
     .Template
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path:
@@ -5259,7 +5263,7 @@ dns-search= method=disabled
 addr-gen-mode=eui64 dns-search= method=disabled
 
     .Rendered
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/ens2.100.nmconnection mode:
@@ -5285,14 +5289,14 @@ addr-gen-mode=eui64 dns-search= method=disabled
     ==== Dracut Kernel Arguments
 
     .Template
-    [source, bash]
+    [source,_bash]
 
 ip=\${bondname}.\${vlanid}:dhcp
 bond=\${bondname}:\${subnic1},\${subnic2}:mode=active-backup,miimon=100
 vlan=\${bondname}.\${vlanid}:\${bondname}
 
     .Rendered
-    [source, bash]
+    [source,_bash]
 
 ip=bond0.100:dhcp bond=bond0:ens2,ens3:mode=active-backup,miimon=100
 vlan=bond0.100:bond0
@@ -5300,7 +5304,7 @@ vlan=bond0.100:bond0
     ==== Butane config
 
     .Template
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path:
@@ -5336,7 +5340,7 @@ id=\${bondname}-slave-\${subnic2} type=ethernet
 interface-name=\${subnic2} master=\${bondname} slave-type=bond
 
     .Rendered
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/system-connections/bond0.100.nmconnection
@@ -5374,17 +5378,18 @@ slave-type=bond
 
 
     .Disable NetworkManager autoconfiguration of ethernet devices
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/NetworkManager/conf.d/noauto.conf mode: 0644 contents:
 inline: \|
 
-# with no other matching connections. {#_with_no_other_matching_connections}
-
-no-auto-default=\*
+&#35; Do not do automatic (DHCP/SLAAC) configuration on ethernet devices
+&#35; with no other matching connections. no-auto-default=&#42;
 
     WARNING: If NetworkManager autoconfiguration of ethernet devices is disabled and no other network configuration is provided the system will boot without network access.
+
+
     = Enabling Wi-Fi
 
     The primary use for Fedora CoreOS has been driving server hardware in individual datacenters or cloud environments, which have high speed wired networking without the need for Wi-Fi enablement. Since there are many different types of wireless cards, link:https://github.com/coreos/fedora-coreos-tracker/issues/862[adding Wi-Fi enablement to Fedora CoreOS by default] would require many large firmware binaries to be installed for a non-standard use, which isn't ideal.
@@ -5393,10 +5398,10 @@ no-auto-default=\*
 
     == Adding Wi-Fi tools and firmware
 
-    Typically enabling Wi-Fi on Fedora CoreOS involves adding the `NetworkManager-wifi` package along with the firmware package that corresponds to the wireless card in your system. Here is a list of some of the wireless firmware packages in Fedora:
+    Typically enabling Wi-Fi on Fedora CoreOS involves adding the \&#96;NetworkManager-wifi\&#96; package along with the firmware package that corresponds to the wireless card in your system. Here is a list of some of the wireless firmware packages in Fedora:
 
     .Wi-Fi firmware packages in Fedora
-    [source, text]
+    [source,_text]
 
 atheros-firmware - Firmware for Qualcomm Atheros WiFi/Bluetooth adapters
 b43-fwcutter - Firmware extraction tool for Broadcom wireless driver
@@ -5415,7 +5420,7 @@ adapters atmel-firmware - Firmware for Atmel at76c50x wireless network
 chips zd1211-firmware - Firmware for wireless devices based on zd1211
 chipset
 
-    For example, if a system has a Qualcomm wireless card then adding the `NetworkManager-wifi` and `atheros-firmware` packages would sufficiently enable the system for connecting to Wi-Fi. You can try to inspect your wireless card to determine what driver you need by running `lspci` (provided by the `pciutils` package) xref:debugging-with-toolbox.adoc[inside a Toolbx container].
+    For example, if a system has a Qualcomm wireless card then adding the \&#96;NetworkManager-wifi\&#96; and \&#96;atheros-firmware\&#96; packages would sufficiently enable the system for connecting to Wi-Fi. You can try to inspect your wireless card to determine what driver you need by running \&#96;lspci\&#96; (provided by the \&#96;pciutils\&#96; package) xref:debugging-with-toolbox.adoc[inside a Toolbx container].
 
 
     == When installing Fedora CoreOS
@@ -5425,9 +5430,9 @@ chipset
     An example Butane config that combines the extension and network configuration is shown below.
 
     .Butane config for Wi-Fi enablement
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
-variant: fcos version: {butane-latest-stable-spec} systemd: units: \#
+variant: fcos version: {butane-latest-stable-spec} systemd: units: &#35;
 Enable Wi-Fi in NetworkManager for an Intel wireless card - name:
 rpm-ostree-install-wifi.service enabled: true contents: \|
 
@@ -5461,7 +5466,7 @@ method=auto
     If you have a system up already and want to add Wi-Fi capabilities (i.e. if you want to move it to a location without wired access) you can request the required packages.
 
     .Request NetworkManager-wifi and a specific Wi-Fi firmware
-    [source, text]
+    [source,_text]
 
 \$ sudo rpm-ostree install -y \--allow-inactive \\ NetworkManager-wifi
 iwlwifi-dvm-firmware
@@ -5478,34 +5483,38 @@ realtek-firmware \\ tiwilink-firmware \\ atmel-firmware \\
 zd1211-firmware
 
     Then reboot the system.
+
+
     = Kernel tunables (sysctl)
 
-    The Linux kernel offers a plethora of knobs under `/proc/sys` to control the availability of different features and tune performance parameters.
+    The Linux kernel offers a plethora of knobs under \&#96;/proc/sys\&#96; to control the availability of different features and tune performance parameters.
 
-    Values under `/proc/sys` can be changed directly at runtime, but such changes will not be persisted across reboots.
-    Persistent settings should be written under `/etc/sysctl.d/` during provisioning, in order to be applied on each boot.
+    Values under \&#96;/proc/sys\&#96; can be changed directly at runtime, but such changes will not be persisted across reboots.
+    Persistent settings should be written under \&#96;/etc/sysctl.d/\&#96; during provisioning, in order to be applied on each boot.
 
     As an example, the xref:producing-ign.adoc[Butane] snippet below shows how to disable _SysRq_ keys:
 
     .Example: configuring kernel tunable to disable SysRq keys
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/sysctl.d/90-sysrq.conf contents: inline: \| kernel.sysrq = 0
 
     Further details can be found in the systemd man pages https://www.freedesktop.org/software/systemd/man/sysctl.d.html[sysctl.d(5)] and https://www.freedesktop.org/software/systemd/man/systemd-sysctl.service.html[systemd-sysctl.service(8)].
+
+
     = Running Containers
 
     == Introduction
-    Fedora CoreOS ships with both the `docker` CLI tool (as provided via https://mobyproject.org/[Moby]) and https://podman.io[podman] installed. This page explains how to use systemd units to start and stop containers with podman.
+    Fedora CoreOS ships with both the \&#96;docker\&#96; CLI tool (as provided via https://mobyproject.org/[Moby]) and https://podman.io[podman] installed. This page explains how to use systemd units to start and stop containers with podman.
 
     == Example configuration
-    The following Butane config snippet configures the systemd `hello.service` to run https://www.busybox.net[busybox].
+    The following Butane config snippet configures the systemd \&#96;hello.service\&#96; to run https://www.busybox.net[busybox].
 
-    TIP: You may be able to use local file references to systemd units instead of inlining them. See xref:tutorial-services.adoc#_using_butanes__files_dir_parameter_to_embed_files[Using butane's `--files-dir` Parameter to Embed Files] for more information.
+    TIP: You may be able to use local file references to systemd units instead of inlining them. See xref:tutorial-services.adoc\&#35;_using_butanes__files_dir_parameter_to_embed_files[Using butane's \&#96;--files-dir\&#96; Parameter to Embed Files] for more information.
 
     .Example for running busybox using systemd and podman
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: hello.service enabled: true contents: \|
@@ -5516,16 +5525,16 @@ Wants=network-online.target
 TimeoutStartSec=0 ExecStartPre=-/bin/podman kill busybox1
 ExecStartPre=-/bin/podman rm busybox1 ExecStartPre=/bin/podman pull
 busybox ExecStart=/bin/podman run \--name busybox1 busybox /bin/sh -c
-\"trap \'exit 0\' INT TERM; while true; do echo Hello World; sleep 1;
-done\"
+\'trap \'exit 0\' INT TERM; while true; do echo Hello World; sleep 1;
+done\'
 
 WantedBy=multi-user.target
 
     .Example for running busybox using Podman Quadlet
 
-    https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html[Podman Quadlet] is functionality included in podman that allows starting containers via systemd using a systemd generator. The example below is the same `hello.service` that was previously shown but deployed via the Podman Quadlet functionality.
+    https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html[Podman Quadlet] is functionality included in podman that allows starting containers via systemd using a systemd generator. The example below is the same \&#96;hello.service\&#96; that was previously shown but deployed via the Podman Quadlet functionality.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/containers/systemd/hello.container contents: inline: \|
@@ -5533,8 +5542,8 @@ path: /etc/containers/systemd/hello.container contents: inline: \|
 Description=Hello Service Wants=network-online.target
 After=network-online.target
 
-ContainerName=busybox1 Image=docker.io/busybox Exec=/bin/sh -c \"trap
-\'exit 0\' INT TERM; while true; do echo Hello World; sleep 1; done\"
+ContainerName=busybox1 Image=docker.io/busybox Exec=/bin/sh -c \'trap
+\'exit 0\' INT TERM; while true; do echo Hello World; sleep 1; done\'
 
 WantedBy=multi-user.target
 
@@ -5543,7 +5552,7 @@ WantedBy=multi-user.target
     https://etcd.io[etcd] is not shipped as part of Fedora CoreOS. To use it, run it as a container, as shown below.
 
     .Butane config for setting up single node etcd
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: etcd-member.service enabled: true contents: \|
@@ -5566,20 +5575,22 @@ ExecStop=/bin/podman stop etcd
 WantedBy=multi-user.target
 
     === For more information
-    See the https://etcd.io/docs/latest/op-guide/container/#docker[etcd documentation] for more information on running etcd in containers and how to set up multi-node etcd.
+    See the https://etcd.io/docs/latest/op-guide/container/\&#35;docker[etcd documentation] for more information on running etcd in containers and how to set up multi-node etcd.
+
+
     = Configuring Users
 
     == Default User
 
-    By default, a privileged user named `core` is created on the Fedora CoreOS system, but it is not configured with a default password or SSH key. If you wish to use the `core` user, you must provide an Ignition config which includes a password and/or SSH key(s) for the `core` user. Alternatively you may create additional, new users via Ignition configs.
+    By default, a privileged user named \&#96;core\&#96; is created on the Fedora CoreOS system, but it is not configured with a default password or SSH key. If you wish to use the \&#96;core\&#96; user, you must provide an Ignition config which includes a password and/or SSH key(s) for the \&#96;core\&#96; user. Alternatively you may create additional, new users via Ignition configs.
 
     If you do not want to use Ignition to manage the default user's SSH key(s), you can make use of the https://coreos.github.io/afterburn/platforms/[Afterburn support] and provide an SSH key via your cloud provider.
 
     == Creating a New User
 
-    To create a new user (or users), add it to the `users` list of your Butane config. In the following example, the config creates two new usernames, but doesn't configure them to be especially useful.
+    To create a new user (or users), add it to the \&#96;users\&#96; list of your Butane config. In the following example, the config creates two new usernames, but doesn't configure them to be especially useful.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: jlebon - name: miabbott
@@ -5590,22 +5601,24 @@ name: jlebon - name: miabbott
 
     To configure an SSH key for a local user, you can use a Butane config:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh...​ - name: jlebon
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS...​ -
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW...​ - name: miabbott
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R...​
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh&#8230; - name: jlebon
+ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS&#8230; - ssh-ed25519
+AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW&#8230; - name: miabbott
+ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R&#8230;
 
     === Using File References to SSH Keys
 
     Depending on the configuration variant and version you use, you can use local file references to SSH public keys instead
     of inlining them.
-    The example from the xref:#_using_an_ssh_key[previous section] can thus be rewritten as follows:
+    The example from the xref:\&#35;_using_an_ssh_key[previous section] can thus be rewritten as follows:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys_local: - users/core/id_rsa.pub - name:
@@ -5613,128 +5626,134 @@ jlebon ssh_authorized_keys_local: - users/jlebon/id_rsa.pub -
 users/jlebon/id_ed25519.pub - name: miabbott
 ssh_authorized_keys_local: - users/miabbott/id_rsa.pub
 
-    You have to use `butane` with the `--files-dir` parameter to allow loading files from disk when converting to Ignition configurations for this to work.
+    You have to use \&#96;butane\&#96; with the \&#96;--files-dir\&#96; parameter to allow loading files from disk when converting to Ignition configurations for this to work.
 
     NOTE: Check the https://coreos.github.io/butane/specs/[Configuration specifications] for more details and which versions
     of your selected variant support it. Generally, each file may contain multiple SSH keys, one per line, and you may
-    additionally specify inline `ssh_authorized_keys` as well as long as the SSH keys are unique.
+    additionally specify inline \&#96;ssh_authorized_keys\&#96; as well as long as the SSH keys are unique.
 
     === SSH Key Locations
 
     https://man.openbsd.org/sshd_config[sshd] uses a https://github.com/coreos/ssh-key-dir[helper program], specified via
-    the `AuthorizedKeysCommand` directive, to read public keys from files in a user's `~/.ssh/authorized_keys.d` directory.
-    The `AuthorizedKeysCommand` is tried after the usual `AuthorizedKeysFile` files (defaulting to `~/.ssh/authorized_keys`)
-    and will not be executed if a matching key is found there. Key files in `~/.ssh/authorized_keys.d` are read in
+    the \&#96;AuthorizedKeysCommand\&#96; directive, to read public keys from files in a user's \&#96;~/.ssh/authorized_keys.d\&#96; directory.
+    The \&#96;AuthorizedKeysCommand\&#96; is tried after the usual \&#96;AuthorizedKeysFile\&#96; files (defaulting to \&#96;~/.ssh/authorized_keys\&#96;)
+    and will not be executed if a matching key is found there. Key files in \&#96;~/.ssh/authorized_keys.d\&#96; are read in
     alphabetical order, ignoring dotfiles.
 
-    Ignition writes configured SSH keys to `~/.ssh/authorized_keys.d/ignition`. On platforms where SSH keys can be configured at the platform level, such as AWS, Afterburn writes those keys to `~/.ssh/authorized_keys.d/afterburn`.
+    Ignition writes configured SSH keys to \&#96;~/.ssh/authorized_keys.d/ignition\&#96;. On platforms where SSH keys can be configured at the platform level, such as AWS, Afterburn writes those keys to \&#96;~/.ssh/authorized_keys.d/afterburn\&#96;.
 
-    To debug the reading of `~/.ssh/authorized_keys.d`, manually run the helper program and inspect its output:
+    To debug the reading of \&#96;~/.ssh/authorized_keys.d\&#96;, manually run the helper program and inspect its output:
 
     [source,bash]
 
 /usr/libexec/ssh-key-dir
 
-    To view and validate the effective configuration for sshd, two test modes (`-t`, `-T`) are available as documented on the https://man.openbsd.org/sshd[manual pages].
+    To view and validate the effective configuration for sshd, two test modes (\&#96;-t\&#96;, \&#96;-T\&#96;) are available as documented on the https://man.openbsd.org/sshd[manual pages].
 
     == Using Password Authentication
 
-    Fedora CoreOS ships with no default passwords. You can use a Butane config to set a password for a local user. Building on the previous example, we can configure the `password_hash` for one or more users:
+    Fedora CoreOS ships with no default passwords. You can use a Butane config to set a password for a local user. Building on the previous example, we can configure the \&#96;password_hash\&#96; for one or more users:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh...​ - name: jlebon
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS...​ -
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW...​ - name: miabbott
-password_hash: \$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A...​
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R...​
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh&#8230; - name: jlebon
+ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS&#8230; - ssh-ed25519
+AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW&#8230; - name: miabbott password_hash:
+\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A&#8230; ssh_authorized_keys: -
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R&#8230;
 
-    To generate a secure password hash, use `mkpasswd` from the `whois` package. Your Linux distro may ship a different `mkpasswd` implementation; you can ensure you're using the correct one by running it from a container:
+    To generate a secure password hash, use \&#96;mkpasswd\&#96; from the \&#96;whois\&#96; package. Your Linux distro may ship a different \&#96;mkpasswd\&#96; implementation; you can ensure you're using the correct one by running it from a container:
 
     [source]
 
 \$ podman run -ti \--rm quay.io/coreos/mkpasswd \--method=yescrypt
-Password: \$y\$j9T\$A0Y3wwVOKP69S.1K/zYGN.\$S596l11UGH3XjN...​
+Password: \$y\$j9T\$A0Y3wwVOKP69S.1K/zYGN.\$S596l11UGH3XjN&#8230;
 
-    The `yescrypt` hashing method is recommended for new passwords. For more details on hashing methods, see `man 5 crypt`.
+    The \&#96;yescrypt\&#96; hashing method is recommended for new passwords. For more details on hashing methods, see \&#96;man 5 crypt\&#96;.
 
-    The configured password will be accepted for local authentication at the console. By default, Fedora CoreOS does not allow <<_enabling_ssh_password_authentication,password authentication via SSH>>.
+    The configured password will be accepted for local authentication at the console. By default, Fedora CoreOS does not allow \&lt;\&lt;_enabling_ssh_password_authentication,password authentication via SSH\&gt;\&gt;.
 
     == Configuring Groups
 
-    Fedora CoreOS comes with a few groups configured by default: `root`, `adm`, `wheel`, `sudo`, `systemd-journal`, `docker`
+    Fedora CoreOS comes with a few groups configured by default: \&#96;root\&#96;, \&#96;adm\&#96;, \&#96;wheel\&#96;, \&#96;sudo\&#96;, \&#96;systemd-journal\&#96;, \&#96;docker\&#96;
 
     When configuring users via Butane configs, we can specify groups that the user(s) should be a part of.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh...​ - name: jlebon groups: - wheel
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS...​ -
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW...​ - name: miabbott
-groups: - docker - wheel password_hash:
-\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A...​ ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R...​
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh&#8230; - name: jlebon groups: -
+wheel ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS&#8230; - ssh-ed25519
+AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW&#8230; - name: miabbott groups: -
+docker - wheel password_hash:
+\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A&#8230; ssh_authorized_keys: -
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R&#8230;
 
     If a group does not exist, users should create them as part of the Butane config.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: groups: -
 name: engineering - name: marketing gid: 9000 users: - name: core
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh...​ -
-name: jlebon groups: - engineering - wheel ssh_authorized_keys: -
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS...​ - ssh-ed25519
-AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW...​ - name: miabbott groups: - docker -
-marketing - wheel password_hash:
-\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A...​ ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R...​
+ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh&#8230; - name: jlebon groups: -
+engineering - wheel ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS&#8230; - ssh-ed25519
+AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW&#8230; - name: miabbott groups: -
+docker - marketing - wheel password_hash:
+\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A&#8230; ssh_authorized_keys: -
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R&#8230;
 
     == Configuring Administrative Privileges
 
-    The easiest way for users to be granted administrative privileges is to have them added to the `sudo` and `wheel` groups as part of the Butane config.
+    The easiest way for users to be granted administrative privileges is to have them added to the \&#96;sudo\&#96; and \&#96;wheel\&#96; groups as part of the Butane config.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: groups: -
 name: engineering - name: marketing gid: 9000 users: - name: core
-ssh_authorized_keys: - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh...​ -
-name: jlebon groups: - engineering - wheel - sudo ssh_authorized_keys: -
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS...​ - ssh-ed25519
-AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW...​ - name: miabbott groups: - docker -
-marketing - wheel - sudo password_hash:
-\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A...​ ssh_authorized_keys: - ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R...​
+ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDHn2eh&#8230; - name: jlebon groups: -
+engineering - wheel - sudo ssh_authorized_keys: - ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABgQDC5QFS&#8230; - ssh-ed25519
+AAAAC3NzaC1lZDI1NTE5AAAAIIveEaMRW&#8230; - name: miabbott groups: -
+docker - marketing - wheel - sudo password_hash:
+\$y\$j9T\$aUmgEDoFIDPhGxEe2FUjc/\$C5A&#8230; ssh_authorized_keys: -
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDTey7R&#8230;
 
     == Enabling SSH Password Authentication
 
     To enable password authentication via SSH, add the following to your Butane config:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/ssh/sshd_config.d/20-enable-passwords.conf mode: 0644
-contents: inline: \| \# Fedora CoreOS disables SSH password login by
-default. \# Enable it. \# This file must sort before
+contents: inline: \| &#35; Fedora CoreOS disables SSH password login by
+default. &#35; Enable it. &#35; This file must sort before
 40-disable-passwords.conf. PasswordAuthentication yes
 
     = Setting a Hostname
 
-    To set a custom hostname for your system, use the following Butane config to write to `/etc/hostname`:
+    To set a custom hostname for your system, use the following Butane config to write to \&#96;/etc/hostname\&#96;:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/hostname mode: 0644 overwrite: true contents: inline:
 myhostname
 
-    Once booted, you can also verify that the desired hostname has been set using `hostnamectl`.
+    Once booted, you can also verify that the desired hostname has been set using \&#96;hostnamectl\&#96;.
 
-    NOTE: We use `overwrite: true` to make sure that we overwrite the hostname that is set up by Afterburn on some platforms.
+    NOTE: We use \&#96;overwrite: true\&#96; to make sure that we overwrite the hostname that is set up by Afterburn on some platforms.
     If Afterburn does not support setting the hostname on your platform, you can remove it.
+
+
     = Proxied Internet Access
 
     If you are deploying to an environment requiring internet access via a proxy, you will want to configure services so that they can access resources as intended.
@@ -5745,24 +5764,24 @@ myhostname
 
     This common file has to be subsequently referenced explicitly by each service that requires internet access.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/example-proxy.env mode: 0644 contents: inline: \|
-https_proxy=\"http://example.com:8080\"
-all_proxy=\"http://example.com:8080\"
-http_proxy=\"http://example.com:8080\"
-HTTP_PROXY=\"http://example.com:8080\"
-HTTPS_PROXY=\"http://example.com:8080\"
-no_proxy=\"\*.example.com,127.0.0.1,0.0.0.0,localhost\"
+https_proxy=\'http://example.com:8080\'
+all_proxy=\'http://example.com:8080\'
+http_proxy=\'http://example.com:8080\'
+HTTP_PROXY=\'http://example.com:8080\'
+HTTPS_PROXY=\'http://example.com:8080\'
+no_proxy=\'&#42;.example.com,127.0.0.1,0.0.0.0,localhost\'
 
     == Defining drop-in units for core services
 
     https://github.com/coreos/zincati[Zincati] polls for OS updates, and https://github.com/coreos/rpm-ostree[rpm-ostree] is used to apply OS and layered package updates both therefore requiring internet access. The optional anonymized https://docs.fedoraproject.org/en-US/fedora-coreos/counting/[countme] service also requires access if enabled.
 
-    TIP: You may be able to use local file references to systemd units instead of inlining them. See xref:tutorial-services.adoc#_using_butanes__files_dir_parameter_to_embed_files[Using butane's `--files-dir` Parameter to Embed Files] for more information.
+    TIP: You may be able to use local file references to systemd units instead of inlining them. See xref:tutorial-services.adoc\&#35;_using_butanes__files_dir_parameter_to_embed_files[Using butane's \&#96;--files-dir\&#96; Parameter to Embed Files] for more information.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: rpm-ostreed.service dropins: - name: 99-proxy.conf contents: \|
@@ -5777,9 +5796,9 @@ EnvironmentFile=/etc/example-proxy.env
 
     == Defining drop-in units for container daemons
 
-    If using docker then the `docker.service` drop-in is sufficient. If running Kubernetes with containerd (and no docker) then the `containerd.service` drop-in may be necessary.
+    If using docker then the \&#96;docker.service\&#96; drop-in is sufficient. If running Kubernetes with containerd (and no docker) then the \&#96;containerd.service\&#96; drop-in may be necessary.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: docker.service enabled: true dropins: - name: 99-proxy.conf
@@ -5794,7 +5813,7 @@ EnvironmentFile=/etc/example-proxy.env
 
     Podman has no daemon and so configuration is for each individual service scheduled, and can be done as part of the full systemd unit definition.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: example-svc.service enabled: true contents: \|
@@ -5811,61 +5830,64 @@ WantedBy=multi-user.target
 
     = Setting Keyboard Layout
 
-    To set your system keyboard layout (keymap), use the following Butane config to write to `/etc/vconsole.conf`:
+    To set your system keyboard layout (keymap), use the following Butane config to write to \&#96;/etc/vconsole.conf\&#96;:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/vconsole.conf mode: 0644 contents: inline: KEYMAP=de
 
-    Once booted, you can also verify that the desired keymap has been set using `localectl`.
+    Once booted, you can also verify that the desired keymap has been set using \&#96;localectl\&#96;.
+
+
     = Adding OS extensions to the host system
 
-    Fedora CoreOS keeps the base image as simple and small as possible for security and maintainability reasons. That is why you should in general prefer the usage of `podman` containers over layering software. However, in some cases it is necessary to add software to the base OS itself. For example, drivers or VPN software are potential candidates because they are harder to containerize and may be brought in as extensions to the OS.
+    Fedora CoreOS keeps the base image as simple and small as possible for security and maintainability reasons. That is why you should in general prefer the usage of \&#96;podman\&#96; containers over layering software. However, in some cases it is necessary to add software to the base OS itself. For example, drivers or VPN software are potential candidates because they are harder to containerize and may be brought in as extensions to the OS.
 
-    NOTE: If you're making nontrivial changes to the base operating system, you may instead consider using https://docs.fedoraproject.org/en-US/bootc/[Fedora Bootc], which is oriented around custom OS builds derived from a starting base image. There is more information on the relationship between Fedora CoreOS and Fedora Bootc in xref:faq.adoc#_how_does_fedora_coreos_relate_to_fedora_bootc[our FAQ].
+    NOTE: If you're making nontrivial changes to the base operating system, you may instead consider using https://docs.fedoraproject.org/en-US/bootc/[Fedora Bootc], which is oriented around custom OS builds derived from a starting base image. There is more information on the relationship between Fedora CoreOS and Fedora Bootc in xref:faq.adoc\&#35;_how_does_fedora_coreos_relate_to_fedora_bootc[our FAQ].
 
-    To add in additional software to a Fedora CoreOS system, you can use https://coreos.github.io/rpm-ostree/[`rpm-ostree install`]. Consider these packages as "extensions": they extend the functionality of the base OS rather than e.g. providing runtimes for user applications. That said, there are no restrictions on which packages one can actually install. By default, packages are downloaded from the https://docs.fedoraproject.org/en-US/quick-docs/repositories/[Fedora repositories].
+    To add in additional software to a Fedora CoreOS system, you can use https://coreos.github.io/rpm-ostree/[\&#96;rpm-ostree install\&#96;]. Consider these packages as 'extensions': they extend the functionality of the base OS rather than e.g. providing runtimes for user applications. That said, there are no restrictions on which packages one can actually install. By default, packages are downloaded from the https://docs.fedoraproject.org/en-US/quick-docs/repositories/[Fedora repositories].
 
-    To start the layering of a package, you need to write a systemd unit that executes the `rpm-ostree` command to install the wanted package(s).
+    To start the layering of a package, you need to write a systemd unit that executes the \&#96;rpm-ostree\&#96; command to install the wanted package(s).
     Changes are applied to a new deployment and a reboot is necessary for those to take effect.
 
     == Example: Layering vim and setting it as the default editor
 
-    Fedora CoreOS includes both `nano` and `vi` as text editors, with the former set as default (see the corresponding https://fedoraproject.org/wiki/Changes/UseNanoByDefault[Fedora change]).
+    Fedora CoreOS includes both \&#96;nano\&#96; and \&#96;vi\&#96; as text editors, with the former set as default (see the corresponding https://fedoraproject.org/wiki/Changes/UseNanoByDefault[Fedora change]).
 
-    This example shows how to install the fully fledged `vim` text editor and how to set it up as default for all users by setting up the required configuration in `/etc/profile.d/`.
+    This example shows how to install the fully fledged \&#96;vim\&#96; text editor and how to set it up as default for all users by setting up the required configuration in \&#96;/etc/profile.d/\&#96;.
 
-    NOTE: In the future, we will have a more Ignition-friendly method of doing this with stronger guarantees. See upstream issues https://github.com/coreos/butane/issues/81[butane#81] and https://github.com/coreos/fedora-coreos-tracker/issues/681[fedora-coreos-tracker#681] for more information.
+    NOTE: In the future, we will have a more Ignition-friendly method of doing this with stronger guarantees. See upstream issues https://github.com/coreos/butane/issues/81[butane\&#35;81] and https://github.com/coreos/fedora-coreos-tracker/issues/681[fedora-coreos-tracker\&#35;681] for more information.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
-variant: fcos version: {butane-latest-stable-spec} systemd: units: \#
+variant: fcos version: {butane-latest-stable-spec} systemd: units: &#35;
 Installing vim as a layered package with rpm-ostree - name:
 rpm-ostree-install-vim.service enabled: true contents: \|
 
 Description=Layer vim with rpm-ostree Wants=network-online.target
-After=network-online.target \# We run before `zincati.service` to avoid
-conflicting rpm-ostree \# transactions. Before=zincati.service
+After=network-online.target &#35; We run before
+&#96;zincati.service&#96; to avoid conflicting rpm-ostree &#35;
+transactions. Before=zincati.service
 ConditionPathExists=!/var/lib/%N.stamp
 
-Type=oneshot RemainAfterExit=yes \# `--allow-inactive` ensures that
-rpm-ostree does not return an error \# if the package is already
-installed. This is useful if the package is \# added to the root image
-in a future Fedora CoreOS release as it will \# prevent the service from
-failing. ExecStart=/usr/bin/rpm-ostree install -y \--allow-inactive vim
-ExecStart=/bin/touch /var/lib/%N.stamp ExecStart=/bin/systemctl
-\--no-block reboot
+Type=oneshot RemainAfterExit=yes &#35; &#96;\--allow-inactive&#96;
+ensures that rpm-ostree does not return an error &#35; if the package is
+already installed. This is useful if the package is &#35; added to the
+root image in a future Fedora CoreOS release as it will &#35; prevent
+the service from failing. ExecStart=/usr/bin/rpm-ostree install -y
+\--allow-inactive vim ExecStart=/bin/touch /var/lib/%N.stamp
+ExecStart=/bin/systemctl \--no-block reboot
 
-WantedBy=multi-user.target storage: files: \# Set vim as default editor
-\# We use `zz-` as prefix to make sure this is processed last in order
-to \# override any previously set defaults. - path:
-/etc/profile.d/zz-default-editor.sh overwrite: true contents: inline: \|
-export EDITOR=vim
+WantedBy=multi-user.target storage: files: &#35; Set vim as default
+editor &#35; We use &#96;zz-&#96; as prefix to make sure this is
+processed last in order to &#35; override any previously set defaults. -
+path: /etc/profile.d/zz-default-editor.sh overwrite: true contents:
+inline: \| export EDITOR=vim
 
     = Installing Docker CE
 
-    By default, Fedora CoreOS comes with out-of-the-box support for `docker` CLI (as provided via https://mobyproject.org/[Moby]).
+    By default, Fedora CoreOS comes with out-of-the-box support for \&#96;docker\&#96; CLI (as provided via https://mobyproject.org/[Moby]).
     However, in some cases Docker Community Edition (CE) may be preferred for various reasons.
     This page explains how to replace the provided version with the latest from the upstream Docker sources.
 
@@ -5878,9 +5900,9 @@ export EDITOR=vim
     On provisioning, you can install Docker CE during the first boot of the system via Ignition configuration.
 
     .Example Butane config for setting up Docker CE
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
-variant: fcos version: {butane-latest-stable-spec} systemd: units: \#
+variant: fcos version: {butane-latest-stable-spec} systemd: units: &#35;
 Install Docker CE - name: rpm-ostree-install-docker-ce.service enabled:
 true contents: \|
 
@@ -5889,7 +5911,7 @@ After=network-online.target Before=zincati.service
 ConditionPathExists=!/var/lib/%N.stamp
 
 Type=oneshot RemainAfterExit=yes ExecStart=/usr/bin/curl \--output-dir
-\"/etc/yum.repos.d\" \--remote-name
+\'/etc/yum.repos.d\' \--remote-name
 <https://download.docker.com/linux/fedora/docker-ce.repo>
 ExecStart=/usr/bin/rpm-ostree override remove moby-engine containerd
 runc docker-cli \--install docker-ce ExecStart=/usr/bin/touch
@@ -5900,9 +5922,9 @@ WantedBy=multi-user.target
     == Installing Docker CE on a running system
 
     First, download and setup the Docker repository.
-    Then you need to remove `moby-engine` and several other conflicting packages that ship by default in the Fedora CoreOS image, install the necessary Docker CE packages, and reboot the system.
+    Then you need to remove \&#96;moby-engine\&#96; and several other conflicting packages that ship by default in the Fedora CoreOS image, install the necessary Docker CE packages, and reboot the system.
 
-    [source, bash]
+    [source,_bash]
 
 curl \--remote-name
 <https://download.docker.com/linux/fedora/docker-ce.repo> sudo install
@@ -5917,25 +5939,27 @@ moby-engine containerd runc docker-cli \--install docker-ce \--reboot
     [NOTE]
     ====
     If you have Docker CE installed and are still using Fedora CoreOS 40, upgrading to Fedora CoreOS 41 will likely fail.
-    This is due to the new `docker-cli` package added in Fedora CoreOS 41 and later.
+    This is due to the new \&#96;docker-cli\&#96; package added in Fedora CoreOS 41 and later.
     To upgrade to Fedora CoreOS 41 you’ll need to reset the overrides and uninstall layered Docker CE packages with the following command.
 
-    [source, bash]
+    [source,_bash]
 
 sudo rpm-ostree override reset containerd moby-engine runc \--uninstall
 docker-ce
 
-    After upgrading to Fedora CoreOS 41, you can follow the instructions for xref:#_installing_docker_ce_on_a_running_system[Installing Docker CE on a running system].
+    After upgrading to Fedora CoreOS 41, you can follow the instructions for xref:\&#35;_installing_docker_ce_on_a_running_system[Installing Docker CE on a running system].
     ====
+
+
     = How to Customize a NIC Name
 
     == Using a systemd Link File
     You can create a systemd https://www.freedesktop.org/software/systemd/man/systemd.link.html[link file] with Ignition configs.
 
-    For example, to name NIC with the MAC address `12:34:56:78:9a:bc` to "infra", place a systemd link file at `/etc/systemd/network/25-infra.link` using the xref:producing-ign.adoc[Butane] config snippet shown below:
+    For example, to name NIC with the MAC address \&#96;12:34:56:78:9a:bc\&#96; to 'infra', place a systemd link file at \&#96;/etc/systemd/network/25-infra.link\&#96; using the xref:producing-ign.adoc[Butane] config snippet shown below:
 
     .Example: Customize NIC via systemd Link File
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/systemd/network/25-infra.link mode: 0644 contents: inline: \|
@@ -5945,52 +5969,53 @@ MACAddress=12:34:56:78:9a:bc
 Name=infra
 
     == Using Udev Rules
-    Similarly, also through Ignition configs, to name NIC with the MAC address `12:34:56:78:9a:bc` to "infra", create a https://man7.org/linux/man-pages/man7/udev.7.html[udev rule] at `/etc/udev/rules.d/80-ifname.rules` using the xref:producing-ign.adoc[Butane] config snippet shown below:
+    Similarly, also through Ignition configs, to name NIC with the MAC address \&#96;12:34:56:78:9a:bc\&#96; to 'infra', create a https://man7.org/linux/man-pages/man7/udev.7.html[udev rule] at \&#96;/etc/udev/rules.d/80-ifname.rules\&#96; using the xref:producing-ign.adoc[Butane] config snippet shown below:
 
     .Example: Customize NIC via Udev Rules
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/udev/rules.d/80-ifname.rules mode: 0644 contents: inline: \|
-SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?\*\",
-ATTR{address}==\"12:34:56:78:9a:bc\", ATTR{type}==\"1\", NAME=\"infra\"
+SUBSYSTEM==\'net\', ACTION==\'add\', DRIVERS==\'?&#42;\',
+ATTR{address}==\'12:34:56:78:9a:bc\', ATTR{type}==\'1\', NAME=\'infra\'
 
     == Networking in the Initramfs via Kernel Arguments
-    If networking in the initramfs is required, the kernel argument `ifname=` will dynamically create a udev rule to change the name of a NIC.
+    If networking in the initramfs is required, the kernel argument \&#96;ifname=\&#96; will dynamically create a udev rule to change the name of a NIC.
 
     Currently, unlike other parts of the networking config from the initramfs (e.g. static IPs, hostnames, etc.), these udev rules are not persisted into the real root. If the custom name needs to be applied to the real root, either a link file or udev rule must be created, as shown above. See https://github.com/coreos/fedora-coreos-tracker/issues/553[this issue] for more details.
 
-    For example, to give the NIC with the MAC address `12:34:56:78:9a:bc` a name of "infra", provide a `ifname=infra:12:34:56:78:9a:bc` kernel argument. A udev rule would be created in the initramfs like:
+    For example, to give the NIC with the MAC address \&#96;12:34:56:78:9a:bc\&#96; a name of 'infra', provide a \&#96;ifname=infra:12:34:56:78:9a:bc\&#96; kernel argument. A udev rule would be created in the initramfs like:
     [source]
 
-# cat /etc/udev/rules.d/80-ifname.rules {#_cat_etcudevrules_d80_ifname_rules}
-
-SUBSYSTEM==\"net\", ACTION==\"add\", DRIVERS==\"?\*\",
-ATTR{address}==\"12:34:56:78:9a:bc\", ATTR{type}==\"1\", NAME=\"infra\"
+&#35; cat /etc/udev/rules.d/80-ifname.rules SUBSYSTEM==\'net\',
+ACTION==\'add\', DRIVERS==\'?&#42;\',
+ATTR{address}==\'12:34:56:78:9a:bc\', ATTR{type}==\'1\', NAME=\'infra\'
 
     = Configuring Swap on ZRAM
 
-    In Fedora 33 some editions https://www.fedoraproject.org/wiki/Releases/33/ChangeSet#swap_on_zram[enabled swap on ZRAM by default]. Fedora CoreOS currently has the `zram-generator` included but no configuration in place to enable swap on ZRAM by default. In order to configure swap on ZRAM you can lay down a configuration file via Ignition that will tell the zram generator to set up swap on top of a zram device.
+    In Fedora 33 some editions https://www.fedoraproject.org/wiki/Releases/33/ChangeSet\&#35;swap_on_zram[enabled swap on ZRAM by default]. Fedora CoreOS currently has the \&#96;zram-generator\&#96; included but no configuration in place to enable swap on ZRAM by default. In order to configure swap on ZRAM you can lay down a configuration file via Ignition that will tell the zram generator to set up swap on top of a zram device.
 
-    The documentation for the config file format lives in the https://github.com/systemd/zram-generator/blob/main/man/zram-generator.conf.md[upstream documentation] along with a comprehensive https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example[example]. The most basic form of a configuration file that will set up a `zram0` device for swap is:
+    The documentation for the config file format lives in the https://github.com/systemd/zram-generator/blob/main/man/zram-generator.conf.md[upstream documentation] along with a comprehensive https://github.com/systemd/zram-generator/blob/main/zram-generator.conf.example[example]. The most basic form of a configuration file that will set up a \&#96;zram0\&#96; device for swap is:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/systemd/zram-generator.conf mode: 0644 contents: inline: \|
-\# This config file enables a /dev/zram0 device with the default
+&#35; This config file enables a /dev/zram0 device with the default
 settings
 
-    Once booted, you can verify the swap device is set up by viewing the `swapon --show` output. You can also view the true compression ratio of the currently configured zram devices by running `zramctl`.
+    Once booted, you can verify the swap device is set up by viewing the \&#96;swapon --show\&#96; output. You can also view the true compression ratio of the currently configured zram devices by running \&#96;zramctl\&#96;.
+
+
     = Configuring WireGuard
 
     From https://www.wireguard.com/[wireguard.com]:
 
-    > WireGuard is a novel VPN that runs inside the Linux Kernel and uses state-of-the-art cryptography.
-    > It aims to be faster, simpler, leaner, and more useful than IPSec, while avoiding the massive headache.
-    > It intends to be considerably more performant than OpenVPN.
-    > WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances.
-    > It runs over UDP.
+    \&gt; WireGuard is a novel VPN that runs inside the Linux Kernel and uses state-of-the-art cryptography.
+    \&gt; It aims to be faster, simpler, leaner, and more useful than IPSec, while avoiding the massive headache.
+    \&gt; It intends to be considerably more performant than OpenVPN.
+    \&gt; WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances.
+    \&gt; It runs over UDP.
 
     You might also want to read the https://www.wireguard.com/[Conceptual Overview], the https://www.wireguard.com/quickstart/[Quickstart] and the https://www.wireguard.com/papers/wireguard.pdf[Whitepaper].
 
@@ -6001,7 +6026,7 @@ settings
     There are two options to set up WireGuard on Fedora CoreOS:
 
     - Importing the WireGuard configuration in NetworkManager
-    - Using https://www.man7.org/linux/man-pages/man8/wg-quick.8.html[`wg-quick`]
+    - Using https://www.man7.org/linux/man-pages/man8/wg-quick.8.html[\&#96;wg-quick\&#96;]
 
     == Generating Keys
 
@@ -6013,7 +6038,7 @@ settings
     .Generate WireGuard keys for the Fedora CoreOS system
     [source,bash]
 
-umask 077 wg genkey \| tee fcos_private_key \| wg pubkey \>
+umask 077 wg genkey \| tee fcos_private_key \| wg pubkey &gt;
 fcos_public_key
 
     Now let's generate the WireGuard keys for the client:
@@ -6021,7 +6046,7 @@ fcos_public_key
     .Generate WireGuard keys for the client
     [source,bash]
 
-umask 077 wg genkey \| tee client_private_key \| wg pubkey \>
+umask 077 wg genkey \| tee client_private_key \| wg pubkey &gt;
 client_public_key
 
     You can optionnaly generate a pre-shared key to increase security:
@@ -6029,7 +6054,7 @@ client_public_key
     .Generate a preshared key for this peer pair
     [source,bash]
 
-wg genpsk \> fcos_client_psk
+wg genpsk &gt; fcos_client_psk
 
     [NOTE]
     ====
@@ -6038,26 +6063,27 @@ wg genpsk \> fcos_client_psk
 
     == Configuring WireGuard on Fedora CoreOS
 
-    You can now modify your Butane config to create the `wg0` configuration file:
+    You can now modify your Butane config to create the \&#96;wg0\&#96; configuration file:
 
     .Example Butane config with a WireGuard configuration file
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/wireguard/wg0.conf mode: 0600 contents: inline: \|
 
 Address = 192.168.71.1/24,fdc9:3c6b:21c7:e6bd::1/64 PrivateKey =
-\<fcos_private_key\> ListenPort = 51820
+&lt;fcos_private_key&gt; ListenPort = 51820
 
-PublicKey = \<client_public_key\> PresharedKey = \<fcos_client_psk\>
-AllowedIPs = 192.168.71.2/32,fdc9:3c6b:21c7:e6bd::2/128
+PublicKey = &lt;client_public_key&gt; PresharedKey =
+&lt;fcos_client_psk&gt; AllowedIPs =
+192.168.71.2/32,fdc9:3c6b:21c7:e6bd::2/128
 
     === Using NetworkManager
 
     If you want to use the support in NetworkManager, you can import the WireGuard configuration with a oneshot unit:
 
     .Example systemd service unit to import the WireGuard configuration
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 systemd: units: - name: import-wireguard-config.service enabled: true
 contents: \|
@@ -6072,7 +6098,7 @@ WantedBy=multi-user.target
 
     [NOTE]
     ====
-    NetworkManager will ignGre `PostUp` and `PostDown` directives in the WireGuard config.
+    NetworkManager will ignGre \&#96;PostUp\&#96; and \&#96;PostDown\&#96; directives in the WireGuard config.
     If you have firewall configuration to apply, make sure to apply it with a separate unit, or manually.
     ====
 
@@ -6083,8 +6109,8 @@ WantedBy=multi-user.target
     .Re-import updated WireGuard configuration
     [source,console]
 
-\$ sudo nmcli con delete wg0 && sudo nmcli con import type wireguard
-file /etc/wireguard/wg0.conf Connection \'wg0\'
+\$ sudo nmcli con delete wg0 &amp;&amp; sudo nmcli con import type
+wireguard file /etc/wireguard/wg0.conf Connection \'wg0\'
 (1e4f869e-f95c-4221-b2b9-99726ffde92b) successfully deleted. Connection
 \'wg0\' (18cd8e61-1cc2-43a2-9f2e-467b75cd99da) successfully added.
 
@@ -6092,9 +6118,9 @@ file /etc/wireguard/wg0.conf Connection \'wg0\'
 
     === Using wg-quick
 
-    If you want to use `wg-quick` instead of the support in NetworkManager, you can add the following to your Butane config:
+    If you want to use \&#96;wg-quick\&#96; instead of the support in NetworkManager, you can add the following to your Butane config:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 systemd: units: - name: wg-quick@wg0.service enabled: true
 
@@ -6111,27 +6137,28 @@ systemctl reload <wg-quick@wg0.conf>
     == Verifying the configuration on the Fedora CoreOS system
 
     Boot Fedora CoreOS and log in.
-    When you run `sudo wg show` you should see this:
+    When you run \&#96;sudo wg show\&#96; you should see this:
 
     .Check WireGuard configuration
     [source,console]
 
 \[core@server \~\]\$ sudo wg show interface: wg0 public key:
-\<fcos_public_key\> private key: (hidden) listening port: 51820
+&lt;fcos_public_key&gt; private key: (hidden) listening port: 51820
 
-peer: \<client_one_public_key\> preshared key: (hidden) endpoint:
-\<Client IP Address\>:51821 allowed ips: 192.168.71.0/24,
+peer: &lt;client_one_public_key&gt; preshared key: (hidden) endpoint:
+&lt;Client IP Address&gt;:51821 allowed ips: 192.168.71.0/24,
 fdc9:3c6b:21c7:e6bd::/64
 
 \[core@server \~\]\$ sudo ip addr show wg0 12: wg0:
-\<POINTOPOINT,NOARP,UP,LOWER_UP\> mtu 1420 qdisc noqueue state UNKNOWN
-group default qlen 1000 link/none inet 192.168.71.1/24 scope global wg0
-valid_lft forever preferred_lft forever inet6 fdc9:3c6b:21c7:e6bd::1/64
-scope global valid_lft forever preferred_lft forever
+&lt;POINTOPOINT,NOARP,UP,LOWER_UP&gt; mtu 1420 qdisc noqueue state
+UNKNOWN group default qlen 1000 link/none inet 192.168.71.1/24 scope
+global wg0 valid_lft forever preferred_lft forever inet6
+fdc9:3c6b:21c7:e6bd::1/64 scope global valid_lft forever preferred_lft
+forever
 
     [NOTE]
     ====
-    <Client IP address> above is the IP or FQDN of the Client computer.
+    \&lt;Client IP address\&gt; above is the IP or FQDN of the Client computer.
     ====
 
     == Configuring WireGuard on a client
@@ -6142,18 +6169,18 @@ scope global valid_lft forever preferred_lft forever
     [source,ini]
 
 Address = 192.168.71.2/24,fdc9:3c6b:21c7:e6bd::2/64 PrivateKey =
-\<client_private_key\> ListenPort = 51821
+&lt;client_private_key&gt; ListenPort = 51821
 
-PublicKey = \<fcos_public_key\> PresharedKey = \<fcos_client_psk\>
-Endpoint = \<FCOS IP address\>:51820 AllowedIPs =
-192.168.71.0/24,fdc9:3c6b:21c7:e6bd::/64
+PublicKey = &lt;fcos_public_key&gt; PresharedKey =
+&lt;fcos_client_psk&gt; Endpoint = &lt;FCOS IP address&gt;:51820
+AllowedIPs = 192.168.71.0/24,fdc9:3c6b:21c7:e6bd::/64
 
     [NOTE]
     ====
-    <FCOS IP address> is the IP or FQDN of the FCOS server.
+    \&lt;FCOS IP address\&gt; is the IP or FQDN of the FCOS server.
     ====
 
-    Write the above config to `/etc/wireguard/wg0.conf`, set the access mode on the configuration file and then import the configuration on your client:
+    Write the above config to \&#96;/etc/wireguard/wg0.conf\&#96;, set the access mode on the configuration file and then import the configuration on your client:
 
     .Import the WireGuard configuration on the client
     [source,console]
@@ -6168,16 +6195,19 @@ Endpoint = \<FCOS IP address\>:51820 AllowedIPs =
     [source,bash]
 
 \[core@client \~\]\$ sudo wg show interface: wg0 public key:
-\<client_one_public_key\> private key: (hidden) listening port: 51821
+&lt;client_one_public_key&gt; private key: (hidden) listening port:
+51821
 
-peer: \<fcos_public_key\> preshared key: (hidden) endpoint: \<FCOS IP
-address\>:51820 allowed ips: 192.168.71.0/24, fdc9:3c6b:21c7:e6bd::/64
+peer: &lt;fcos_public_key&gt; preshared key: (hidden) endpoint: &lt;FCOS
+IP address&gt;:51820 allowed ips: 192.168.71.0/24,
+fdc9:3c6b:21c7:e6bd::/64
 
 \[core@client \~\]\$ sudo ip addr show wg0 21: wg0:
-\<POINTOPOINT,NOARP,UP,LOWER_UP\> mtu 1420 qdisc noqueue state UNKNOWN
-group default qlen 1000 link/none inet 192.168.71.2/24 scope global wg0
-valid_lft forever preferred_lft forever inet6 fdc9:3c6b:21c7:e6bd::2/64
-scope global valid_lft forever preferred_lft forever
+&lt;POINTOPOINT,NOARP,UP,LOWER_UP&gt; mtu 1420 qdisc noqueue state
+UNKNOWN group default qlen 1000 link/none inet 192.168.71.2/24 scope
+global wg0 valid_lft forever preferred_lft forever inet6
+fdc9:3c6b:21c7:e6bd::2/64 scope global valid_lft forever preferred_lft
+forever
 
     == Testing the WireGuard connection
 
@@ -6204,25 +6234,26 @@ fdc9:3c6b:21c7:e6bd::1 ping statistics \-\-- 4 packets transmitted, 4
 received, 0% packet loss, time 3054ms rtt min/avg/max/mdev =
 0.424/0.712/1.546/0.481 ms
 
-    When you run `sudo wg show` on your client you should see a recent handshake and a transfer sections with sent and received:
+    When you run \&#96;sudo wg show\&#96; on your client you should see a recent handshake and a transfer sections with sent and received:
 
     .Verify handshake and transfer metrics
     [source,bash]
 
 \[core@client \~\]\$ sudo wg show interface: wg0 public key:
-\<client_one_public_key\> private key: (hidden) listening port: 51821
+&lt;client_one_public_key&gt; private key: (hidden) listening port:
+51821
 
-peer: \<fcos_public_key\> preshared key: (hidden) endpoint: \<Client IP
-address\>:51820 allowed ips: 192.168.71.0/24, fdc9:3c6b:21c7:e6bd::/64
-latest handshake: 9 seconds ago transfer: 22.02 KiB received, 22.28 KiB
-sent
+peer: &lt;fcos_public_key&gt; preshared key: (hidden) endpoint:
+&lt;Client IP address&gt;:51820 allowed ips: 192.168.71.0/24,
+fdc9:3c6b:21c7:e6bd::/64 latest handshake: 9 seconds ago transfer: 22.02
+KiB received, 22.28 KiB sent
 
     == Routing all traffic over WireGuard
 
     If you plan on forwarding all of your client's traffic through the Fedora CoreOS instance, you will need to enable IP Forwarding and set some PostUp and PostDown directives:
 
     .Example Fedora CoreOS WireGuard configuration with IP forwarding
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/sysctl.d/90-ipv4-ip-forward.conf mode: 0644 contents: inline:
@@ -6234,7 +6265,7 @@ path: /etc/sysctl.d/90-ipv4-ip-forward.conf mode: 0644 contents: inline:
 - path: /etc/wireguard/wg0.conf mode: 0600 contents: inline: \|
 
   Address = 192.168.71.1/24,fdc9:3c6b:21c7:e6bd::1/64 PrivateKey =
-  \<fcos_private_key\> ListenPort = 51820
+  &lt;fcos_private_key&gt; ListenPort = 51820
 
 PostUp = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -t nat -A
 POSTROUTING -o enp1s0 -j MASQUERADE; ip6tables -A FORWARD -i wg0 -j
@@ -6243,8 +6274,9 @@ ACCEPT; ip6tables -t nat -A POSTROUTING -o enp1s0 -j MASQUERADE PostDown
 -o enp1s0 -j MASQUERADE; ip6tables -D FORWARD -i wg0 -j ACCEPT;
 ip6tables -t nat -D POSTROUTING -o enp1s0 -j MASQUERADE
 
-PublicKey = \<client_public_key\> PresharedKey = \<fcos_client_psk\>
-AllowedIPs = 192.168.71.0/24,fdc9:3c6b:21c7:e6bd::/64
+PublicKey = &lt;client_public_key&gt; PresharedKey =
+&lt;fcos_client_psk&gt; AllowedIPs =
+192.168.71.0/24,fdc9:3c6b:21c7:e6bd::/64
 
 systemd: units: - name: wg-quick@wg0.service enabled: true
 
@@ -6254,27 +6286,28 @@ systemd: units: - name: wg-quick@wg0.service enabled: true
     Make sure to use the correct interface name for your hardware in the above PostUp and PostDown commands.
     ====
 
-    Then set `AllowedIPs = 0.0.0.0/0,::/0` in `/etc/wireguard/wg0.conf` in the client configuration to route all IPv4 and IPv6 traffic on the client computer over the WireGuard interface:
+    Then set \&#96;AllowedIPs = 0.0.0.0/0,::/0\&#96; in \&#96;/etc/wireguard/wg0.conf\&#96; in the client configuration to route all IPv4 and IPv6 traffic on the client computer over the WireGuard interface:
 
     .A configuration for routing all traffic on the client over WireGuard:
 
 Address = 192.168.71.1/24,fdc9:3c6b:21c7:e6bd::2/64 PrivateKey =
-\<client_private_key\> ListenPort = 51821
+&lt;client_private_key&gt; ListenPort = 51821
 
-PublicKey = \<fcos_public_key\> PresharedKey = \<fcos_client_psk\>
-Endpoint = \<FCOS IP Address\>:51820 AllowedIPs = 0.0.0.0/0,::/0
+PublicKey = &lt;fcos_public_key&gt; PresharedKey =
+&lt;fcos_client_psk&gt; Endpoint = &lt;FCOS IP Address&gt;:51820
+AllowedIPs = 0.0.0.0/0,::/0
 
     = Modifying Kernel Arguments
 
     == Modifying Kernel Arguments via Ignition
 
-    You can specify kernel arguments in a Butane config using the `kernel_arguments` section.
+    You can specify kernel arguments in a Butane config using the \&#96;kernel_arguments\&#96; section.
 
     === Example: Disabling all CPU vulnerability mitigations
 
-    Here's an example `kernelArguments` section which switches `mitigations=auto,nosmt` to `mitigations=off` to disable all CPU vulnerability mitigations:
+    Here's an example \&#96;kernelArguments\&#96; section which switches \&#96;mitigations=auto,nosmt\&#96; to \&#96;mitigations=off\&#96; to disable all CPU vulnerability mitigations:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} kernel_arguments:
 should_exist: - mitigations=off should_not_exist: -
@@ -6282,11 +6315,11 @@ mitigations=auto,nosmt
 
     == Modifying Console Configuration During Bare Metal Install
 
-    `coreos-installer` has special support for changing the console configuration when performing a bare-metal installation. This functionality can be used to add `console` arguments to the kernel command line and equivalent parameters to the GRUB bootloader configuration. For more information, see xref:emergency-shell.adoc[Emergency Console Access]. For more information about bare metal installs, see xref:bare-metal.adoc[Installing CoreOS on Bare Metal].
+    \&#96;coreos-installer\&#96; has special support for changing the console configuration when performing a bare-metal installation. This functionality can be used to add \&#96;console\&#96; arguments to the kernel command line and equivalent parameters to the GRUB bootloader configuration. For more information, see xref:emergency-shell.adoc[Emergency Console Access]. For more information about bare metal installs, see xref:bare-metal.adoc[Installing CoreOS on Bare Metal].
 
     == Modifying Kernel Arguments on Existing Systems
 
-    Kernel arguments changes are managed by `rpm-ostree` via the https://www.mankier.com/1/rpm-ostree[`rpm-ostree kargs`] subcommand. Changes are applied to a new deployment and a reboot is necessary for those to take effect.
+    Kernel arguments changes are managed by \&#96;rpm-ostree\&#96; via the https://www.mankier.com/1/rpm-ostree[\&#96;rpm-ostree kargs\&#96;] subcommand. Changes are applied to a new deployment and a reboot is necessary for those to take effect.
 
     === Adding kernel arguments
 
@@ -6327,7 +6360,7 @@ mitigations=auto,nosmt
 
     === Replacing existing kernel arguments
 
-    You can replace an existing kernel argument with a new value. You can directly use `KEY=VALUE` if only one value exists for that argument. Otherwise, you can specify the new value using the following format:
+    You can replace an existing kernel argument with a new value. You can directly use \&#96;KEY=VALUE\&#96; if only one value exists for that argument. Otherwise, you can specify the new value using the following format:
 
     [source,bash]
 
@@ -6339,7 +6372,7 @@ mitigations=auto,nosmt
 
 \$ sudo rpm-ostree kargs \--replace=mitigations=auto,nosmt=off
 
-    This switches `mitigations=auto,nosmt` to `mitigations=off` to disable all CPU vulnerability mitigations.
+    This switches \&#96;mitigations=auto,nosmt\&#96; to \&#96;mitigations=off\&#96; to disable all CPU vulnerability mitigations.
 
     === Interactive editing
 
@@ -6351,11 +6384,11 @@ mitigations=auto,nosmt
 
     = Setting alternatives
 
-    Due to an https://github.com/fedora-sysv/chkconfig/issues/9[ongoing issue] in how alternatives configurations are stored on the system, Fedora CoreOS systems can not use the usual `alternatives` commands to configure them.
+    Due to an https://github.com/fedora-sysv/chkconfig/issues/9[ongoing issue] in how alternatives configurations are stored on the system, Fedora CoreOS systems can not use the usual \&#96;alternatives\&#96; commands to configure them.
 
-    Instead, until this issue is resolved, you can set the symlinks directly in `/etc/alternatives`. For example, to use the legacy-based variants of the `iptables` commands:
+    Instead, until this issue is resolved, you can set the symlinks directly in \&#96;/etc/alternatives\&#96;. For example, to use the legacy-based variants of the \&#96;iptables\&#96; commands:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: links: -
 path: /etc/alternatives/iptables target: /usr/sbin/iptables-legacy
@@ -6371,10 +6404,10 @@ path: /etc/alternatives/ip6tables-save target:
 
     == Using alternatives commands
 
-    Starting with Fedora CoreOS based on Fedora 41, you can use `alternatives` commands to configure the default command.
+    Starting with Fedora CoreOS based on Fedora 41, you can use \&#96;alternatives\&#96; commands to configure the default command.
 
     .Example Butane config using a systemd unit to configure the default iptables backend
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: custom-iptables-default.service enabled: true contents: \|
@@ -6386,28 +6419,25 @@ ExecStart=/usr/sbin/alternatives \--set iptables
 
 WantedBy=multi-user.target
 
-    NOTE: We don't recommend configuring the default iptables backend to `iptables-legacy`. This is just an example.
+    NOTE: We don't recommend configuring the default iptables backend to \&#96;iptables-legacy\&#96;. This is just an example.
 
-    You can also manually run the `alternatives` commands to configure the default command runtime.
+    You can also manually run the \&#96;alternatives\&#96; commands to configure the default command runtime.
 
     .Example to manually configure the default iptables backend
     [source,bash]
 
-# Check the link info {#_check_the_link_info}
+&#35; Check the link info alternatives \--display iptables iptables
+\--version
 
-alternatives \--display iptables iptables \--version
+&#35; Configure iptables to point to iptables-nft sudo alternatives
+\--set iptables /usr/sbin/iptables-nft
 
-# Configure iptables to point to iptables-nft {#_configure_iptables_to_point_to_iptables_nft}
-
-sudo alternatives \--set iptables /usr/sbin/iptables-nft
-
-# Verify iptables version is iptables-nft {#_verify_iptables_version_is_iptables_nft}
-
-alternatives \--display iptables iptables \--version
+&#35; Verify iptables version is iptables-nft alternatives \--display
+iptables iptables \--version
 
     = Node counting
 
-    Fedora CoreOS nodes are counted by the Fedora infrastructure via the Count Me feature. This system is explicitly designed to make sure that no personally identifiable information is sent from counted systems. It also ensures that the Fedora infrastructure does not collect any personal data. The nickname for this counting mechanism is "Count Me", from the option name. Implementation details of this feature are available in https://fedoraproject.org/wiki/Changes/DNF_Better_Counting[DNF Better Counting change request for Fedora 32]. In short, the Count Me mechanism works by telling Fedora servers how old your system is (with a very large approximation).
+    Fedora CoreOS nodes are counted by the Fedora infrastructure via the Count Me feature. This system is explicitly designed to make sure that no personally identifiable information is sent from counted systems. It also ensures that the Fedora infrastructure does not collect any personal data. The nickname for this counting mechanism is 'Count Me', from the option name. Implementation details of this feature are available in https://fedoraproject.org/wiki/Changes/DNF_Better_Counting[DNF Better Counting change request for Fedora 32]. In short, the Count Me mechanism works by telling Fedora servers how old your system is (with a very large approximation).
 
     On Fedora CoreOS nodes, this functionality is implemented in https://coreos.github.io/rpm-ostree/countme/[rpm-ostree as a stand-alone method]. The new implementation has the same privacy preserving properties as the original DNF implementation.
 
@@ -6421,7 +6451,7 @@ alternatives \--display iptables iptables \--version
 
     You can use the following Butane config to disable counting during provisioning on first boot:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: rpm-ostree-countme.timer enabled: false mask: true
@@ -6432,7 +6462,7 @@ name: rpm-ostree-countme.timer enabled: false mask: true
 
     == Viewing and changing time zone
 
-    The `timedatectl` command displays and sets the date, time, and time zone.
+    The \&#96;timedatectl\&#96; command displays and sets the date, time, and time zone.
 
     [source,bash]
 
@@ -6441,75 +6471,79 @@ time: Mon 2021-05-17 20:10:20 UTC RTC time: Mon 2021-05-17 20:10:20 Time
 zone: UTC (UTC, +0000) System clock synchronized: yes NTP service:
 active RTC in local TZ: no
 
-    You can use the `list-timezones` subcommand to list the available time zones. Available time zones are represented by https://man7.org/linux/man-pages/man5/tzfile.5.html[`tzfile`] entries in the system's time zone database under `/usr/share/zoneinfo`.
+    You can use the \&#96;list-timezones\&#96; subcommand to list the available time zones. Available time zones are represented by https://man7.org/linux/man-pages/man5/tzfile.5.html[\&#96;tzfile\&#96;] entries in the system's time zone database under \&#96;/usr/share/zoneinfo\&#96;.
 
     [source,bash]
 
 \$ timedatectl list-timezones Africa/Abidjan Africa/Accra
 Africa/Addis_Ababa ...
 
-    See the https://www.freedesktop.org/software/systemd/man/timedatectl.html[manual page] for more information about how `timedatectl` can be used; however, we do not recommend changing the time zone per-machine imperatively via SSH.
+    See the https://www.freedesktop.org/software/systemd/man/timedatectl.html[manual page] for more information about how \&#96;timedatectl\&#96; can be used; however, we do not recommend changing the time zone per-machine imperatively via SSH.
 
     === Recommended time zone: Coordinated Universal Time (UTC)
 
     We recommend that all machines in Fedora CoreOS clusters use the default UTC time zone. It is strongly discouraged to set a non-UTC time zone for reasons including, but not limited to, time zone confusions, complexities of adjusting clocks for daylight savings time depending on regional customs, difficulty in correlating log files across systems, possibility of a stale time zone database, and unpredictability, as local time zones are subject to arbitrary local policies and laws.
 
-    If your applications require a different time zone, in most cases, it is possible to set a different time zone than the system one for individual applications by setting the `TZ` environment variable.
+    If your applications require a different time zone, in most cases, it is possible to set a different time zone than the system one for individual applications by setting the \&#96;TZ\&#96; environment variable.
 
     === Setting the time zone via Ignition
 
-    If you are aware of the downsides to setting a system time zone that is different from the default UTC time zone, you can set a different system time zone by setting the local time zone configuration file, https://www.freedesktop.org/software/systemd/man/localtime.html[`/etc/localtime`], to be an absolute or relative symlink to a `tzfile` entry under `/usr/share/zoneinfo/`.
+    If you are aware of the downsides to setting a system time zone that is different from the default UTC time zone, you can set a different system time zone by setting the local time zone configuration file, https://www.freedesktop.org/software/systemd/man/localtime.html[\&#96;/etc/localtime\&#96;], to be an absolute or relative symlink to a \&#96;tzfile\&#96; entry under \&#96;/usr/share/zoneinfo/\&#96;.
     It is recommended that you set the same time zone across all your machines in the cluster.
 
-    For example, you can set the time zone to `America/New_York` by using a Butane config like the following:
+    For example, you can set the time zone to \&#96;America/New_York\&#96; by using a Butane config like the following:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: links: -
 path: /etc/localtime target: ../usr/share/zoneinfo/America/New_York
 
     == Time synchronization
 
-    Fedora CoreOS uses the https://chrony.tuxfamily.org/[`chrony`] implementation of NTP, with some additional custom logic for specific clouds. For details, see the https://github.com/coreos/fedora-coreos-tracker/blob/main/internals/README-internals.md#time-synchronization[Fedora CoreOS internals documentation].
+    Fedora CoreOS uses the https://chrony.tuxfamily.org/[\&#96;chrony\&#96;] implementation of NTP, with some additional custom logic for specific clouds. For details, see the https://github.com/coreos/fedora-coreos-tracker/blob/main/internals/README-internals.md\&#35;time-synchronization[Fedora CoreOS internals documentation].
+
+
     = Setting a GRUB password
 
     You can set up a password to prevent unauthorized users from accessing the GRUB command line, modifying kernel command-line arguments, or booting non-default OSTree deployments.
 
     == Creating the password hash
 
-    You can use `grub2-mkpasswd-pbkdf2` to create a password hash for GRUB.
+    You can use \&#96;grub2-mkpasswd-pbkdf2\&#96; to create a password hash for GRUB.
 
-    [source, bash]
+    [source,_bash]
 
-\$ grub2-mkpasswd-pbkdf2 Enter password: \<PASSWORD\> Reenter password:
-\<PASSWORD\> PBKDF2 hash of your password is
-grub.pbkdf2.sha512.10000.5AE6255...​
+\$ grub2-mkpasswd-pbkdf2 Enter password: &lt;PASSWORD&gt; Reenter
+password: &lt;PASSWORD&gt; PBKDF2 hash of your password is
+grub.pbkdf2.sha512.10000.5AE6255&#8230;
 
-    NOTE: `grub2-mkpasswd-pbkdf2` tool is a component of the `grub2-tools-minimal` package on Fedora.
+    NOTE: \&#96;grub2-mkpasswd-pbkdf2\&#96; tool is a component of the \&#96;grub2-tools-minimal\&#96; package on Fedora.
 
     == Butane config
 
     With the password hash ready, you can now create the Butane config.
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} grub: users: - name:
-root password_hash: grub.pbkdf2.sha512.10000.5AE6255...​
+root password_hash: grub.pbkdf2.sha512.10000.5AE6255&#8230;
 
-    The Butane config defines a GRUB superuser `root` and sets the password for that user using a hash.
+    The Butane config defines a GRUB superuser \&#96;root\&#96; and sets the password for that user using a hash.
 
     You can now use this config to boot a Fedora CoreOS instance.
-    = Managing the audit daemon (`auditd`)
 
-    Starting with the first release based on Fedora 39, Fedora CoreOS includes the audit daemon (`auditd`) to load and manage audit rules.
 
-    Like all system daemons on Fedora CoreOS, the audit daemon is managed by systemd but with an exception: it cannot be stopped or restarted via `systemctl stop auditd` or `systemctl restart auditd` for compliance reasons.
+    = Managing the audit daemon (\&#96;auditd\&#96;)
+
+    Starting with the first release based on Fedora 39, Fedora CoreOS includes the audit daemon (\&#96;auditd\&#96;) to load and manage audit rules.
+
+    Like all system daemons on Fedora CoreOS, the audit daemon is managed by systemd but with an exception: it cannot be stopped or restarted via \&#96;systemctl stop auditd\&#96; or \&#96;systemctl restart auditd\&#96; for compliance reasons.
 
     From https://access.redhat.com/solutions/2664811[Unable to restart/stop auditd service using systemctl command in RHEL]:
 
     [quote]
     ____
-    "The reason for this unusual handling of restart/stop requests is that auditd is treated specially by the kernel: the credentials of a process that sends a killing signal to auditd are saved to the audit log. The audit developers do not want to see the credentials of PID 1 logged there. They want to see the login UID of the user who initiated the action."
+    'The reason for this unusual handling of restart/stop requests is that auditd is treated specially by the kernel: the credentials of a process that sends a killing signal to auditd are saved to the audit log. The audit developers do not want to see the credentials of PID 1 logged there. They want to see the login UID of the user who initiated the action.'
     ____
 
     To stop and restart the audit daemon, you should use the following commands:
@@ -6517,7 +6551,7 @@ root password_hash: grub.pbkdf2.sha512.10000.5AE6255...​
     [source,bash]
 
 \$ sudo auditctl \--signal stop \$ sudo systemctl start auditd.service
-\# Only if you want it started again
+&#35; Only if you want it started again
 
     You may also use the following commands to reload the rules, rotate the logs, resume logging or dump the daemon state:
 
@@ -6527,33 +6561,35 @@ root password_hash: grub.pbkdf2.sha512.10000.5AE6255...​
 sudo auditctl \--signal resume \$ sudo auditctl \--signal state
 
     See https://man7.org/linux/man-pages/man8/auditctl.8.html[auditctl(8)] and https://man7.org/linux/man-pages/man8/auditd.8.html[auditd(8)] for more details about those commands.
+
+
     = Composefs
 
     Fedora CoreOS introduced composefs enabled by default starting in Fedora 41.
     Composefs is an overlay filesystem where the data comes from the usual ostree deployment, and metadata is in the composefs file.
-    The result is a truly read-only root (`/`) filesystem, increasing the system integrity and robustness.
+    The result is a truly read-only root (\&#96;/\&#96;) filesystem, increasing the system integrity and robustness.
 
     This is a first step towards a full verification of filesystem integrity, even at runtime.
 
     == What does it change?
 
-    The main visible change will be that the root filesystem (`/`) is now small and full (a few MB, 100% used).
+    The main visible change will be that the root filesystem (\&#96;/\&#96;) is now small and full (a few MB, 100% used).
 
     == Known issues
 
     === Top-level directories
 
-    Another consequence is that it is now impossible to create top-level directories in `/`.
+    Another consequence is that it is now impossible to create top-level directories in \&#96;/\&#96;.
     A common use case for those top level directories is to use them as mount points.
-    We recommend using sub directories in `/var` instead.
+    We recommend using sub directories in \&#96;/var\&#96; instead.
     Currently, the only way around that is to disable composefs as shown below.
 
     == Disable composefs
 
-    Composefs can be disabled through a kernel argument: `ostree.prepare-root.composefs=0`.
+    Composefs can be disabled through a kernel argument: \&#96;ostree.prepare-root.composefs=0\&#96;.
 
     .Disabling composefs at provisioning
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} kernel_arguments:
 should_exist: - ostree.prepare-root.composefs=0
@@ -6568,48 +6604,50 @@ should_exist: - ostree.prepare-root.composefs=0
     == Links
 
     https://fedoraproject.org/wiki/Changes/ComposefsAtomicCoreOSIoT[Enabling composefs by default for CoreOS and IoT]
-    * OS updates
+
+
+    \&#42; OS updates
     = Update Streams
 
     == Individual Update Streams
 
     Fedora CoreOS (FCOS) has several individual update streams that are available to end users. They are:
 
-    * `stable`
+    \&#42; \&#96;stable\&#96;
 
-    ** The `stable` stream is the most reliable stream offered with changes
-    only reaching that stream after spending a period of time in the `testing`
+    \&#42;\&#42; The \&#96;stable\&#96; stream is the most reliable stream offered with changes
+    only reaching that stream after spending a period of time in the \&#96;testing\&#96;
     stream.
 
-    * `testing`
+    \&#42; \&#96;testing\&#96;
 
-    ** The `testing` stream represents what is coming in the next `stable`
+    \&#42;\&#42; The \&#96;testing\&#96; stream represents what is coming in the next \&#96;stable\&#96;
     release. Content in this stream is updated regularly and offers our
     community an opportunity to catch breaking changes before they hit
-    the `stable` stream.
+    the \&#96;stable\&#96; stream.
 
-    * `next`
+    \&#42; \&#96;next\&#96;
 
-    ** The `next` stream represents the future. It will often be
+    \&#42;\&#42; The \&#96;next\&#96; stream represents the future. It will often be
     used to experiment with new features and also test out rebases of our
     platform on top of the next major version of Fedora. The content in
-    the `next` stream will also eventually filter down into `testing`
-    and on to `stable`.
+    the \&#96;next\&#96; stream will also eventually filter down into \&#96;testing\&#96;
+    and on to \&#96;stable\&#96;.
 
-    When following a stream, a system is updated automatically when a new release is rolled out on that stream. While all streams of FCOS are automatically tested, it is strongly encouraged for users to devote a percentage of their FCOS deployment to running the `testing` and `next` streams. This ensures possible breaking changes can be caught early enough that `stable` deployments experience fewer regressions.
+    When following a stream, a system is updated automatically when a new release is rolled out on that stream. While all streams of FCOS are automatically tested, it is strongly encouraged for users to devote a percentage of their FCOS deployment to running the \&#96;testing\&#96; and \&#96;next\&#96; streams. This ensures possible breaking changes can be caught early enough that \&#96;stable\&#96; deployments experience fewer regressions.
 
     == Switching to a Different Stream
 
-    In order to switch between the different streams of Fedora CoreOS (FCOS) a user can leverage the `rpm-ostree rebase` command.
+    In order to switch between the different streams of Fedora CoreOS (FCOS) a user can leverage the \&#96;rpm-ostree rebase\&#96; command.
 
     [TIP]
     ====
-    It may be a good idea to backup data under `/var` before switching streams.
+    It may be a good idea to backup data under \&#96;/var\&#96; before switching streams.
     ====
 
     [NOTE]
     ====
-    Software updates generally follow the `next` -> `testing` -> `stable` flow, meaning `next` has the newest software and `stable` has the oldest software. Upstream software components are generally tested for upgrading, not downgrading, which means that upstream software typically can handle a data/configuration migration forward (upgrade), but not backwards (downgrade). For this reason it is typically safer to rebase from `stable` -> `testing` or `testing` -> `next`, but less safe to go the other direction.
+    Software updates generally follow the \&#96;next\&#96; -\&gt; \&#96;testing\&#96; -\&gt; \&#96;stable\&#96; flow, meaning \&#96;next\&#96; has the newest software and \&#96;stable\&#96; has the oldest software. Upstream software components are generally tested for upgrading, not downgrading, which means that upstream software typically can handle a data/configuration migration forward (upgrade), but not backwards (downgrade). For this reason it is typically safer to rebase from \&#96;stable\&#96; -\&gt; \&#96;testing\&#96; or \&#96;testing\&#96; -\&gt; \&#96;next\&#96;, but less safe to go the other direction.
     ====
 
 
@@ -6620,38 +6658,37 @@ should_exist: - ostree.prepare-root.composefs=0
 
     [source,bash]
 
-# Stop the service that performs automatic updates {#_stop_the_service_that_performs_automatic_updates}
+&#35; Stop the service that performs automatic updates sudo systemctl
+stop zincati.service
 
-sudo systemctl stop zincati.service
-
-# Perform the rebase to a different stream {#_perform_the_rebase_to_a_different_stream}
-
-# Available streams: \"stable\", \"testing\", and \"next\" {#_available_streams_stable_testing_and_next}
-
-STREAM=\"testing\" sudo rpm-ostree rebase
-\"ostree-image-signed:docker://quay.io/fedora/fedora-coreos:\${STREAM}\"
+&#35; Perform the rebase to a different stream &#35; Available streams:
+\'stable\', \'testing\', and \'next\' STREAM=\'testing\' sudo rpm-ostree
+rebase
+\'ostree-image-signed:docker://quay.io/fedora/fedora-coreos:\${STREAM}\'
 
     After inspecting the package difference the user can reboot. After boot the system will be loaded into the latest release on the new stream and will follow that stream for future updates.
+
+
     = Auto-Updates and Manual Rollbacks
 
     Fedora CoreOS provides atomic updates and rollbacks via https://ostreedev.github.io/ostree/[OSTree] deployments.
 
     By default, the OS performs continual auto-updates via two components:
 
-    * https://github.com/coreos/rpm-ostree[rpm-ostree] handles multiple on-disk OSTree deployments and can switch between them at boot-time.
-    * https://github.com/coreos/zincati[Zincati] continually checks for OS updates and applies them via rpm-ostree.
+    \&#42; https://github.com/coreos/rpm-ostree[rpm-ostree] handles multiple on-disk OSTree deployments and can switch between them at boot-time.
+    \&#42; https://github.com/coreos/zincati[Zincati] continually checks for OS updates and applies them via rpm-ostree.
 
     == Wariness to updates
 
     The local Zincati agent periodically checks with a remote service to see when updates are available.
-    A custom "rollout wariness" value (see https://coreos.github.io/zincati/usage/auto-updates/#phased-rollouts-client-wariness-canaries[documentation]) can be provided to let the server know how eager, or how risk-averse, the node is to receiving updates.
+    A custom 'rollout wariness' value (see https://coreos.github.io/zincati/usage/auto-updates/\&#35;phased-rollouts-client-wariness-canaries[documentation]) can be provided to let the server know how eager, or how risk-averse, the node is to receiving updates.
 
-    The `rollout_wariness` parameter can be set to a floating point value between `0.0` (most eager) and `1.0` (most conservative).
-    In order to receive updates very early in the phased rollout cycle, a node can be configured with a low value (e.g. `0.001`).
+    The \&#96;rollout_wariness\&#96; parameter can be set to a floating point value between \&#96;0.0\&#96; (most eager) and \&#96;1.0\&#96; (most conservative).
+    In order to receive updates very early in the phased rollout cycle, a node can be configured with a low value (e.g. \&#96;0.001\&#96;).
     This can be done during provisioning by using the xref:producing-ign.adoc[Butane] config snippet shown below:
 
     .Example: configuring Zincati rollout wariness
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/zincati/config.d/51-rollout-wariness.toml contents: inline:
@@ -6666,26 +6703,28 @@ rollout_wariness = 0.001
 
     The following finalization strategies are available:
 
-    * As soon as the update is downloaded and staged locally, immediately reboot to apply an update.
-    * Use an external lock-manager to coordinate the reboot of a fleet of machines.
-    * Allow reboots only within configured maintenance windows, defined on a weekly UTC schedule.
+    \&#42; As soon as the update is downloaded and staged locally, immediately reboot to apply an update.
+    \&#42; Use an external lock-manager to coordinate the reboot of a fleet of machines.
+    \&#42; Allow reboots only within configured maintenance windows, defined on a weekly UTC schedule.
 
     A specific finalization strategy can be configured on each node.
 
     The xref:producing-ign.adoc[Butane] snippet below shows how to define two maintenance windows during weekend days, starting at 22:30 UTC and lasting one hour each:
 
     .Example: configuring Zincati updates strategy
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/zincati/config.d/55-updates-strategy.toml contents: inline:
 \|
 
-strategy = \"periodic\"
+strategy = \'periodic\'
 
-days = \[ \"Sat\", \"Sun\" \] start_time = \"22:30\" length_minutes = 60
+days = \[ \'Sat\', \'Sun\' \] start_time = \'22:30\' length_minutes = 60
 
     For further details on updates finalization, check the https://coreos.github.io/zincati/usage/updates-strategy/[Zincati documentation].
+
+
 
     = Updating the bootloader
 
@@ -6699,39 +6738,35 @@ days = \[ \"Sat\", \"Sun\" \] start_time = \"22:30\" length_minutes = 60
     bootloader is for https://eclypsium.com/2020/07/29/theres-a-hole-in-the-boot/[the BootHole vulnerability].
 
     Both the EFI system partition and BIOS MBR can be updated by bootupd.
-    Bootloader updates are performed automatically by `bootloader-update.service`.
-    Use `journalctl -u bootloader-update` to inspect its logs.
+    Bootloader updates are performed automatically by \&#96;bootloader-update.service\&#96;.
+    Use \&#96;journalctl -u bootloader-update\&#96; to inspect its logs.
 
     Inspect the system status:
 
     [source,bash]
 
-# bootupctl status {#_bootupctl_status}
-
-Component EFI Installed:
+&#35; bootupctl status Component EFI Installed:
 grub2-efi-x64-1:2.04-31.fc33.x86_64,shim-x64-15-8.x86_64 Update: At
 latest version
 
-    If an update is available, use `bootupctl update` to apply it manually;
+    If an update is available, use \&#96;bootupctl update\&#96; to apply it manually;
     the change will take effect for the next reboot.
 
     [source,bash]
 
-# bootupctl update {#_bootupctl_update}
-
-...​ Updated: grub2-efi-x64-1:2.04-31.fc33.x86_64,shim-x64-15-8.x86_64
+&#35; bootupctl update &#8230; Updated:
+grub2-efi-x64-1:2.04-31.fc33.x86_64,shim-x64-15-8.x86_64
 
     === Using images that predate bootupd
 
     Older CoreOS images that predate the existence of bootupd need
-    an explicit "adoption" phase. If `bootupctl status` says the component
-    is `Adoptable`, perform the adoption with `bootupctl adopt-and-update`.
+    an explicit 'adoption' phase. If \&#96;bootupctl status\&#96; says the component
+    is \&#96;Adoptable\&#96;, perform the adoption with \&#96;bootupctl adopt-and-update\&#96;.
 
     [source,bash]
 
-# bootupctl adopt-and-update {#_bootupctl_adopt_and_update}
-
-...​ Updated: grub2-efi-x64-1:2.04-31.fc33.x86_64,shim-x64-15-8.x86_64
+&#35; bootupctl adopt-and-update &#8230; Updated:
+grub2-efi-x64-1:2.04-31.fc33.x86_64,shim-x64-15-8.x86_64
 
     = Major Changes in Fedora CoreOS
     :toc:
@@ -6752,16 +6787,16 @@ latest version
 
     === Planning
 
-    This change has been introduced first in new disk images for the `next` stream, as part of the Fedora 42 rebase.
-    The `testing` and `next` streams will follow when they rebase to Fedora 42.
+    This change has been introduced first in new disk images for the \&#96;next\&#96; stream, as part of the Fedora 42 rebase.
+    The \&#96;testing\&#96; and \&#96;next\&#96; streams will follow when they rebase to Fedora 42.
     After a few releases we will migrate existing machines through a barrier release.
 
     |===
     |Update Stream |Release date
 
-    |`next` | 42.20250316.1.0 (2025-03-18)
-    |`testing`| 42.20250705.2.0 (2025-07-06)
-    |`stable`| 42.20250803.3.0 (2025-08-19)
+    |\&#96;next\&#96; | 42.20250316.1.0 (2025-03-18)
+    |\&#96;testing\&#96;| 42.20250705.2.0 (2025-07-06)
+    |\&#96;stable\&#96;| 42.20250803.3.0 (2025-08-19)
     |===
 
     === Notes
@@ -6796,14 +6831,14 @@ latest version
     |===
     |Update Stream |Targeted release date
 
-    |`next` | 41.20240916.1.0 (Sep 16, 2024)
-    |`testing`| 41.20241027.2.0 (Oct 28, 2024)
-    |`stable`| 41.20241027.3.0 (Nov 08, 2024)
+    |\&#96;next\&#96; | 41.20240916.1.0 (Sep 16, 2024)
+    |\&#96;testing\&#96;| 41.20241027.2.0 (Oct 28, 2024)
+    |\&#96;stable\&#96;| 41.20241027.3.0 (Nov 08, 2024)
     |===
 
     === Notes
 
-    See: https://github.com/coreos/fedora-coreos-tracker/issues/1715#issuecomment-2331986149[fedora-coreos-tracker/issues#1715].
+    See: https://github.com/coreos/fedora-coreos-tracker/issues/1715\&#35;issuecomment-2331986149[fedora-coreos-tracker/issues\&#35;1715].
 
     Detailed description of the change, the impacts, how to test, what manual actions are needed, etc.
 
@@ -6820,9 +6855,9 @@ latest version
     |===
     |Update Stream |Targeted release date
 
-    |`next` | 40.20240322.1.0 (Mar 24, 2024)
-    |`testing`| 40.20240416.2.0 (Apr 22, 2024)
-    |`stable`| 40.20240416.3.1 (May 07, 2024)
+    |\&#96;next\&#96; | 40.20240322.1.0 (Mar 24, 2024)
+    |\&#96;testing\&#96;| 40.20240416.2.0 (Apr 22, 2024)
+    |\&#96;stable\&#96;| 40.20240416.3.1 (May 07, 2024)
     |===
 
     === Notes
@@ -6856,33 +6891,33 @@ latest version
     |===
     |Update Stream |Targeted release date
 
-    |`next` | 2022-10-03 (37.20221003.1.0)
-    |`testing`| 2022-11-28
-    |`stable`| Will follow `testing` as usual
+    |\&#96;next\&#96; | 2022-10-03 (37.20221003.1.0)
+    |\&#96;testing\&#96;| 2022-11-28
+    |\&#96;stable\&#96;| Will follow \&#96;testing\&#96; as usual
     |===
 
     === Notes
 
     The current default depends on the CPU architecture:
 
-    - On x86_64, the first serial port `ttyS0` is the primary console and the graphical console is secondary.
+    - On x86_64, the first serial port \&#96;ttyS0\&#96; is the primary console and the graphical console is secondary.
 
     - On other architectures, Fedora CoreOS generally does not configure a particular console, leaving the bootloader and kernel to follow their own defaults.
     This typically means that a graphical console is used if one is available, and a serial console otherwise.
 
     The new defaults will depend on both the CPU architecture and platform.
-    The exact configuration is in https://github.com/coreos/fedora-coreos-config/blob/next-devel/platforms.yaml[`platform.yaml` (next-devel branch)].
+    The exact configuration is in https://github.com/coreos/fedora-coreos-config/blob/next-devel/platforms.yaml[\&#96;platform.yaml\&#96; (next-devel branch)].
     In summary:
 
     - On many architecture/platform pairs, Fedora CoreOS will allow GRUB and the kernel to follow their own defaults.
     On x86_64, this causes the graphical console to be selected, even if no video card is available.
-    In particular, *x86_64 bare metal installations will no longer use a serial console by default*.
+    In particular, \&#42;x86_64 bare metal installations will no longer use a serial console by default\&#42;.
 
     - On platforms that expect specific system consoles to be used, such as AWS, Azure, and GCP, Fedora CoreOS will select those consoles by default.
 
     - On OpenStack, VirtualBox, and VMware, Fedora CoreOS will use a primary graphical console but continue providing a serial console for debugging.
 
-    - The QEMU image will continue to select `ttyS0` as the primary console and the graphical console as secondary.
+    - The QEMU image will continue to select \&#96;ttyS0\&#96; as the primary console and the graphical console as secondary.
 
     If the new defaults aren't appropriate for your environment, you can override them in several ways.
     See the xref:emergency-shell.adoc[Emergency console access] documentation page for details.
@@ -6900,9 +6935,9 @@ latest version
     |===
     |Update Stream |Targeted release date
 
-    |`next` | 2022-03-15
-    |`testing`| 2022-04-19
-    |`stable`| Will follow `testing` as usual
+    |\&#96;next\&#96; | 2022-03-15
+    |\&#96;testing\&#96;| 2022-04-19
+    |\&#96;stable\&#96;| Will follow \&#96;testing\&#96; as usual
     |===
 
     === Notes
@@ -6917,11 +6952,11 @@ latest version
 
     - Rollbacks to a version with Podman v3.x will require manual action: Podman v4.0 will perform several schema migrations in the Podman database when it is first run. These schema migrations will cause Podman v3.x and earlier to be unable to read certain network configuration information from the database. This means that it will not be possible to roll back to a release with Podman v3.x without losing some functionality in existing containers.
 
-    - Only new installations will use the new network stack by default: Existing systems will keep using the CNI network stack with Podman v4.0. To benefit from the new network stack, you will have to remove all existing containers, images and network with the `podman system reset` command. It is recommended to reboot to apply the change.
+    - Only new installations will use the new network stack by default: Existing systems will keep using the CNI network stack with Podman v4.0. To benefit from the new network stack, you will have to remove all existing containers, images and network with the \&#96;podman system reset\&#96; command. It is recommended to reboot to apply the change.
 
     To validate this change in advance in your deployment, you can use the following instructions to try Podman v4.0 on a node for testing purposes:
 
-    [source, bash]
+    [source,_bash]
 
 \$ cat /etc/yum.repos.d/podman4.repo
 
@@ -6936,7 +6971,7 @@ replace \--experimental podman containers-common catatonit \--freeze
 
     == Moving to iptables-nft
 
-    All new and upgrading Fedora CoreOS nodes will migrate to the nft backend of iptables. This will be done by updating the relevant symbolic links in `/etc/alternatives`. The legacy backend is considered deprecated.
+    All new and upgrading Fedora CoreOS nodes will migrate to the nft backend of iptables. This will be done by updating the relevant symbolic links in \&#96;/etc/alternatives\&#96;. The legacy backend is considered deprecated.
 
     See also the https://github.com/coreos/fedora-coreos-tracker/issues/676[tracking issue].
 
@@ -6947,23 +6982,23 @@ replace \--experimental podman containers-common catatonit \--freeze
     |===
     |Update Stream |Targeted release date
 
-    |`next` | 2022-03-15
-    |`testing`| 2022-04-19
-    |`stable`| Will follow `testing` as usual
+    |\&#96;next\&#96; | 2022-03-15
+    |\&#96;testing\&#96;| 2022-04-19
+    |\&#96;stable\&#96;| Will follow \&#96;testing\&#96; as usual
     |===
 
     === Notes
 
-    If you need to stay on the legacy backend, create an empty file at `/etc/coreos/iptables-legacy.stamp`. For existing nodes, you can manually create the file now:
+    If you need to stay on the legacy backend, create an empty file at \&#96;/etc/coreos/iptables-legacy.stamp\&#96;. For existing nodes, you can manually create the file now:
 
-    [source, bash]
+    [source,_bash]
 
 \$ sudo mkdir -m 755 /etc/coreos/ \$ sudo touch
 /etc/coreos/iptables-legacy.stamp
 
-    For new nodes that get deployed between now and when the migration happens, you can create the `/etc/coreos/iptables-legacy.stamp` file using Ignition to ensure they don't get migrated. After the migration, you can bring up new nodes on the legacy backend by manually setting the symbolic links via Ignition. Below is a Butane config that does both of these:
+    For new nodes that get deployed between now and when the migration happens, you can create the \&#96;/etc/coreos/iptables-legacy.stamp\&#96; file using Ignition to ensure they don't get migrated. After the migration, you can bring up new nodes on the legacy backend by manually setting the symbolic links via Ignition. Below is a Butane config that does both of these:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /etc/coreos/iptables-legacy.stamp mode: 0644 links: - path:
@@ -6989,28 +7024,30 @@ overwrite: true hard: false
 
     === Planning
 
-    This change will be rolled out ...
+    This change will be rolled out \&#8230;
 
     |===
     |Update Stream |Targeted release date
 
-    |`next` | <date>
-    |`testing`| <date>
-    |`stable`| Will follow `testing` as usual
+    |\&#96;next\&#96; | \&lt;date\&gt;
+    |\&#96;testing\&#96;| \&lt;date\&gt;
+    |\&#96;stable\&#96;| Will follow \&#96;testing\&#96; as usual
     |===
 
     === Notes
 
     Detailed description of the change, the impacts, how to test, what manual actions are needed, etc.
     ////
-    * Troubleshooting
+
+
+    \&#42; Troubleshooting
     = Manual Rollbacks
 
     When an update is complete, the previous OS deployment remains on disk. If an update causes issues, you can use it as a fallback. This is a manual operation that requires human intervention and console access.
 
     == Temporary rollback
 
-    To temporarily boot the previous OS deployment, hold down `Shift` during the OS boot process. When the bootloader menu appears, select the relevant OS entry in the menu.
+    To temporarily boot the previous OS deployment, hold down \&#96;Shift\&#96; during the OS boot process. When the bootloader menu appears, select the relevant OS entry in the menu.
 
     == Permanent rollback
 
@@ -7018,13 +7055,11 @@ overwrite: true hard: false
 
     [source,bash]
 
-# Stop the service that performs automatic updates {#_stop_the_service_that_performs_automatic_updates_2}
+&#35; Stop the service that performs automatic updates sudo systemctl
+stop zincati.service
 
-sudo systemctl stop zincati.service
-
-# Mark the previous OS deployment as the default and immediately reboot into it {#_mark_the_previous_os_deployment_as_the_default_and_immediately_reboot_into_it}
-
-sudo rpm-ostree rollback -r
+&#35; Mark the previous OS deployment as the default and immediately
+reboot into it sudo rpm-ostree rollback -r
 
     Please note that Zincati will keep looking for updates and upgrade to any new available OS deployment, other than the one you just reverted.
 
@@ -7032,24 +7067,26 @@ sudo rpm-ostree rollback -r
 
     [source,bash]
 
-# Disable Zincati in order to opt-out from future auto-updates {#_disable_zincati_in_order_to_opt_out_from_future_auto_updates}
+&#35; Disable Zincati in order to opt-out from future auto-updates sudo
+systemctl disable \--now zincati.service
 
-sudo systemctl disable \--now zincati.service
+\[&#8230;\]
 
-# At a later point, re-enable it to re-align with the tip of stream {#_at_a_later_point_re_enable_it_to_re_align_with_the_tip_of_stream}
-
+&#35; At a later point, re-enable it to re-align with the tip of stream
 sudo systemctl enable \--now zincati.service
 
     = Access Recovery
 
-    If you've lost the private key of an SSH key pair used to log into Fedora CoreOS, and do not have any password logins set up to use at the console, you can gain access back to the machine by booting into single user mode with the `single` kernel command-line argument:
+    If you've lost the private key of an SSH key pair used to log into Fedora CoreOS, and do not have any password logins set up to use at the console, you can gain access back to the machine by booting into single user mode with the \&#96;single\&#96; kernel command-line argument:
 
-    . When booting the system, intercept the GRUB menu and edit the entry to append `single` to the kernel argument list, then press Ctrl-X to resume booting.
+    . When booting the system, intercept the GRUB menu and edit the entry to append \&#96;single\&#96; to the kernel argument list, then press Ctrl-X to resume booting.
     . Wait for the system to boot into a shell prompt
-    . Set or reset the password for the target user using the `passwd` utility.
-    . Finally, reboot the system with `/sbin/reboot -f`.
+    . Set or reset the password for the target user using the \&#96;passwd\&#96; utility.
+    . Finally, reboot the system with \&#96;/sbin/reboot -f\&#96;.
 
-    You should now be able to log back into the system at the console. From there, you can e.g. fetch a new public SSH key to add to `~/.ssh/authorized_keys` and delete the old one. You may also want to lock the password you've set (using `passwd -l`). Note that Fedora CoreOS by default does not allow SSH login via password authentication.
+    You should now be able to log back into the system at the console. From there, you can e.g. fetch a new public SSH key to add to \&#96;~/.ssh/authorized_keys\&#96; and delete the old one. You may also want to lock the password you've set (using \&#96;passwd -l\&#96;). Note that Fedora CoreOS by default does not allow SSH login via password authentication.
+
+
     = Emergency console access
 
     Sometimes you may want to access the node console to perform troubleshooting steps or emergency maintenance.
@@ -7059,18 +7096,18 @@ sudo systemctl enable \--now zincati.service
 
     All Fedora CoreOS (FCOS) images come with a default configuration for the console which is meant to accommodate most virtualized and bare-metal setups. Older FCOS releases enabled both serial and graphical consoles by default. Newer releases use different defaults for each cloud and virtualization platform, and use the kernel's defaults (typically a graphical console) on bare metal. New installs of Fedora CoreOS will switch to these new defaults starting with releases on these dates:
 
-    - `next` stream: October 3, 2022
-    - `testing` stream: November 28, 2022
-    - `stable` stream: December 12, 2022
+    - \&#96;next\&#96; stream: October 3, 2022
+    - \&#96;testing\&#96; stream: November 28, 2022
+    - \&#96;stable\&#96; stream: December 12, 2022
 
-    The default consoles may not always match your specific hardware configuration. In that case, you can tweak the console setup. Fedora CoreOS has special support for doing this during xref:bare-metal.adoc[bare-metal installation], and in other cases you can xref:kernel-args.adoc[adjust kernel parameters]. Both approaches use https://www.kernel.org/doc/html/latest/admin-guide/serial-console.html[kernel argument syntax] for specifying the desired consoles. You can specify multiple consoles; kernel messages will appear on all of them, but only the last-specified device will be used as the foreground interactive console (i.e. `/dev/console`) for the machine.
+    The default consoles may not always match your specific hardware configuration. In that case, you can tweak the console setup. Fedora CoreOS has special support for doing this during xref:bare-metal.adoc[bare-metal installation], and in other cases you can xref:kernel-args.adoc[adjust kernel parameters]. Both approaches use https://www.kernel.org/doc/html/latest/admin-guide/serial-console.html[kernel argument syntax] for specifying the desired consoles. You can specify multiple consoles; kernel messages will appear on all of them, but only the last-specified device will be used as the foreground interactive console (i.e. \&#96;/dev/console\&#96;) for the machine.
 
     == Configuring the console during bare-metal installation
 
-    If you are installing FCOS via `coreos-installer`, you can configure the console at install time.
+    If you are installing FCOS via \&#96;coreos-installer\&#96;, you can configure the console at install time.
 
     .Example: Enabling primary serial and secondary graphical console
-    [source, bash]
+    [source,_bash]
 
 sudo podman run \--pull=always \--privileged \--rm \\ -v /dev:/dev -v
 /run/udev:/run/udev -v .:/data -w /data \\
@@ -7084,28 +7121,30 @@ config.ign \\ \--console tty0 \--console ttyS0,115200n8
     If you are launching FCOS from an image (in a cloud or a virtual machine), you can use Ignition to configure the console at provisioning time.
 
     .Example: Enabling primary serial and secondary graphical console
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} kernel_arguments:
-should_exist: \# Order is significant, so group both arguments into the
-same list entry. - console=tty0 console=ttyS0,115200n8 should_not_exist:
-\# Remove any existing defaults. Adjust as needed. - console=hvc0 -
-console=tty0 - console=ttyAMA0,115200n8 - console=ttyS0,115200n8 -
-console=ttyS1,115200n8
+should_exist: &#35; Order is significant, so group both arguments into
+the same list entry. - console=tty0 console=ttyS0,115200n8
+should_not_exist: &#35; Remove any existing defaults. Adjust as
+needed. - console=hvc0 - console=tty0 - console=ttyAMA0,115200n8 -
+console=ttyS0,115200n8 - console=ttyS1,115200n8
 
     This will configure the kernel to use the specified consoles. The GRUB bootloader will continue to use its previous default. Ignition will configure the console, then reboot into the new configuration and continue provisioning the node.
 
     == Configuring the console after installation
 
-    You can adjust the console configuration of an existing FCOS node via `rpm-ostree`.
+    You can adjust the console configuration of an existing FCOS node via \&#96;rpm-ostree\&#96;.
 
     .Example: Enabling primary serial and secondary graphical console
-    [source, bash]
+    [source,_bash]
 
 sudo rpm-ostree kargs \--append=console=tty0
 \--append=console=ttyS0,115200n8 \--reboot
 
-    `rpm-ostree` will create a new deployment with the specified kernel arguments added and reboot into the new configuration. The GRUB bootloader will continue to use its previous default.
+    \&#96;rpm-ostree\&#96; will create a new deployment with the specified kernel arguments added and reboot into the new configuration. The GRUB bootloader will continue to use its previous default.
+
+
     = Debugging with Toolbx
 
     The FCOS image is kept minimal by design to reduce the image size and the attack surface.
@@ -7121,31 +7160,31 @@ sudo rpm-ostree kargs \--append=console=tty0
 
     == Using Toolbx
 
-    You can create a new toolbox by running the command below. On the first run it will ask you if you want to download an image. Answer yes with `y`.
+    You can create a new toolbox by running the command below. On the first run it will ask you if you want to download an image. Answer yes with \&#96;y\&#96;.
 
     [source,sh]
 
 toolbox create my_toolbox
 
     You can then list all the running toolboxes running on the host.
-    This should show you your newly created toolbox. In this case, it is named `my_toolbox`.
+    This should show you your newly created toolbox. In this case, it is named \&#96;my_toolbox\&#96;.
 
     [source,sh]
 
 toolbox list
 
-    As pointed out by the output of the `toolbox create my_toolbox` command, you can enter the following command to enter your toolbox.
+    As pointed out by the output of the \&#96;toolbox create my_toolbox\&#96; command, you can enter the following command to enter your toolbox.
 
     [source,sh]
 
 toolbox enter my_toolbox
 
-    Now that you're in the container, you can use the included `dnf` package manager to install packages.
-    For example, let's install `strace` to look at read syscall done by the host's `toolbox` utility.
+    Now that you're in the container, you can use the included \&#96;dnf\&#96; package manager to install packages.
+    For example, let's install \&#96;strace\&#96; to look at read syscall done by the host's \&#96;toolbox\&#96; utility.
 
     [source,sh]
 
-sudo dnf install strace \# Some hosts directories are mounted at
+sudo dnf install strace &#35; Some hosts directories are mounted at
 /run/host strace -eread /run/host/usr/bin/toolbox list
 
     Once done with your container, you can exit the container and then remove it from the host with the following command.
@@ -7156,18 +7195,20 @@ toolbox rm \--force my_toolbox
 
     NOTE: Toolbx allows you to create toolboxes with your custom images.
     You can find more details in the https://github.com/containers/toolbox/tree/main/doc[toolbox manpages].
+
+
     = Debugging kernel crashes using kdump
 
     == Introduction
-    kdump is a service that creates crash dumps when there is a kernel crash. It uses https://www.mankier.com/8/kexec[`kexec(8)`] to boot into a secondary kernel (known as a capture kernel), then exports the contents of the kernel's memory (known as a crash dump or vmcore) to the filesystem. The contents of vmcore can then be analyzed to root cause the kernel crash.
+    kdump is a service that creates crash dumps when there is a kernel crash. It uses https://www.mankier.com/8/kexec[\&#96;kexec(8)\&#96;] to boot into a secondary kernel (known as a capture kernel), then exports the contents of the kernel's memory (known as a crash dump or vmcore) to the filesystem. The contents of vmcore can then be analyzed to root cause the kernel crash.
 
-    Configuring kdump requires setting the `crashkernel` kernel argument and enabling the kdump systemd service. Memory must be reserved for the crash kernel during booting of the first kernel. `crashkernel=auto` generally doesn't reserve enough memory on Fedora CoreOS, so it is recommended to specify `crashkernel=300M`.
+    Configuring kdump requires setting the \&#96;crashkernel\&#96; kernel argument and enabling the kdump systemd service. Memory must be reserved for the crash kernel during booting of the first kernel. \&#96;crashkernel=auto\&#96; generally doesn't reserve enough memory on Fedora CoreOS, so it is recommended to specify \&#96;crashkernel=300M\&#96;.
 
-    By default, the vmcore will be saved in `/var/crash`. It is also possible to write the dump to some other location on the local system or to send it over the network by editing `/etc/kdump.conf`. For additional information, see https://www.mankier.com/5/kdump.conf[`kdump.conf(5)`] and the comments in `/etc/kdump.conf` and `/etc/sysconfig/kdump`.
+    By default, the vmcore will be saved in \&#96;/var/crash\&#96;. It is also possible to write the dump to some other location on the local system or to send it over the network by editing \&#96;/etc/kdump.conf\&#96;. For additional information, see https://www.mankier.com/5/kdump.conf[\&#96;kdump.conf(5)\&#96;] and the comments in \&#96;/etc/kdump.conf\&#96; and \&#96;/etc/sysconfig/kdump\&#96;.
 
     == Configuring kdump via Ignition
     .Example kdump configuration
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} kernel_arguments:
 should_exist: - \'crashkernel=300M\' systemd: units: - name:
@@ -7176,25 +7217,27 @@ kdump.service enabled: true
     == Configuring kdump after initial provision
     . Set the crashkernel kernel argument
     +
-    [source, bash]
+    [source,_bash]
 
 sudo rpm-ostree kargs \--append=\'crashkernel=300M\'
 
-    xref:kernel-args.adoc[More information] on how to modify kargs via `rpm-ostree`.
+    xref:kernel-args.adoc[More information] on how to modify kargs via \&#96;rpm-ostree\&#96;.
 
     . Enable the kdump systemd service.
     +
-    [source, bash]
+    [source,_bash]
 
 sudo systemctl enable kdump.service
 
     . Reboot your system.
     +
-    [source, bash]
+    [source,_bash]
 
 sudo systemctl reboot
 
-    NOTE: It is highly recommended to test the configuration after setting up the `kdump` service, with extra attention to the amount of memory reserved for the crash kernel. For information on how to test that kdump is properly armed and how to analyze the dump, refer to the https://fedoraproject.org/wiki/How_to_use_kdump_to_debug_kernel_crashes[kdump documentation for Fedora] and https://www.kernel.org/doc/html/latest/admin-guide/kdump/kdump.html[the Linux kernel documentation on kdump].
+    NOTE: It is highly recommended to test the configuration after setting up the \&#96;kdump\&#96; service, with extra attention to the amount of memory reserved for the crash kernel. For information on how to test that kdump is properly armed and how to analyze the dump, refer to the https://fedoraproject.org/wiki/How_to_use_kdump_to_debug_kernel_crashes[kdump documentation for Fedora] and https://www.kernel.org/doc/html/latest/admin-guide/kdump/kdump.html[the Linux kernel documentation on kdump].
+
+
     = SELinux
 
     Fedora CoreOS comes with SELinux enabled in enforcing mode.
@@ -7202,13 +7245,13 @@ sudo systemctl reboot
     == Policy changes
 
     Changing policy booleans and adding SELinux modules is supported on Fedora CoreOS.
-    However, we do not include `semanage` and there is no sugar in Butane or direct support in Ignition for doing those operations.
-    See https://github.com/coreos/fedora-coreos-tracker/issues/701[fedora-coreos-tracker#701] for more details.
+    However, we do not include \&#96;semanage\&#96; and there is no sugar in Butane or direct support in Ignition for doing those operations.
+    See https://github.com/coreos/fedora-coreos-tracker/issues/701[fedora-coreos-tracker\&#35;701] for more details.
 
     Here is an example to set an SELinux boolean via a systemd unit that executes on every boot:
 
     .Example Butane config for dynamically applying SELinux boolean
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: setsebool.service enabled: true contents: \|
@@ -7223,12 +7266,12 @@ WantedBy=multi-user.target
     If you encounter unexpected SELinux issue, it may be due to local policy modifications.
 
     .Example SELinux denial
-    [source, text]
+    [source,_text]
 
 systemd-resolved\[755\]: Failed to symlink
 /run/systemd/resolve/stub-resolv.conf: Permission denied audit\[755\]:
-AVC avc: denied { create } for pid=755 comm=\"systemd-resolve\"
-name=\".#stub-resolv.confc418434d59d7d93a\"
+AVC avc: denied { create } for pid=755 comm=\'systemd-resolve\'
+name=\'.&#35;stub-resolv.confc418434d59d7d93a\'
 scontext=system_u:system_r:systemd_resolved_t:s0
 tcontext=system_u:object_r:systemd_resolved_var_run_t:s0 tclass=lnk_file
 permissive=0
@@ -7237,7 +7280,7 @@ permissive=0
 
     [source,console]
 
-\$ sudo ostree admin config-diff \| grep -E \'selinux/.\*/policy\' M
+\$ sudo ostree admin config-diff \| grep -E \'selinux/.&#42;/policy\' M
 selinux/targeted/active/policy.linked M
 selinux/targeted/active/policy.kern M selinux/targeted/policy/policy.31
 A selinux/targeted/policy/policy.30
@@ -7246,8 +7289,8 @@ A selinux/targeted/policy/policy.30
 
     You have two options to reset the SELinux policy to the default one:
 
-    * Re-deploy the system from the latest Fedora CoreOS artifacts.
-    * Manually restore the default policy
+    \&#42; Re-deploy the system from the latest Fedora CoreOS artifacts.
+    \&#42; Manually restore the default policy
 
     To restore the default policy:
 
@@ -7266,7 +7309,7 @@ sudo rsync \--archive \--links \--verbose \--delete /usr/etc/selinux/
 /etc/selinux/
 
     +
-    After this command, the output from `sudo ostree admin config-diff | grep -E 'selinux/.*/policy'` should no longer indicate the policy is modified.
+    After this command, the output from \&#96;sudo ostree admin config-diff | grep -E 'selinux/.\&#42;/policy'\&#96; should no longer indicate the policy is modified.
     +
     . Finally, reload the SELinux policy or restart your system:
     +
@@ -7277,15 +7320,15 @@ sudo semodule -R
     == Disabling SELinux
 
     We do not support disabling SELinux in Fedora CoreOS.
-    See https://github.com/coreos/rpm-ostree/issues/971[rpm-ostree#971].
-    See also the discussion in https://github.com/coreos/fedora-coreos-docs/issues/439[fedora-coreos-docs#439].
+    See https://github.com/coreos/rpm-ostree/issues/971[rpm-ostree\&#35;971].
+    See also the discussion in https://github.com/coreos/fedora-coreos-docs/issues/439[fedora-coreos-docs\&#35;439].
 
     == Setting SELinux in permissive mode
 
-    We do not recommend setting the entire system in permissive mode (i.e. `set enforce 0`).
+    We do not recommend setting the entire system in permissive mode (i.e. \&#96;set enforce 0\&#96;).
     Instead, you can set SELinux to permissive for a single application by creating a https://github.com/SELinuxProject/selinux-notebook/blob/main/src/cil_overview.md[CIL policy module].
 
-    For example for the `wireguard_t` domain:
+    For example for the \&#96;wireguard_t\&#96; domain:
 
     [source,console]
 
@@ -7303,34 +7346,36 @@ sudo semodule -i permissive-wireguard.cil
 
 sudo semodule -r permissive-wireguard
 
-    See also the discussion in https://github.com/coreos/fedora-coreos-docs/issues/439[fedora-coreos-docs#439].
-    * Tutorials
+    See also the discussion in https://github.com/coreos/fedora-coreos-docs/issues/439[fedora-coreos-docs\&#35;439].
+
+
+    \&#42; Tutorials
     = Prerequisites for the tutorials
 
     The following tutorials are focused on helping you get started with Fedora CoreOS by learning how to automatically configure (or provision) an instance on first boot. Each tutorial has its roots in the previous one thus it is recommended to follow them sequentially.
 
     If you don't know what Fedora CoreOS is, you can refer to the xref:faq.adoc[FAQ] for more information.
 
-    NOTE: If you need any help or need to ask any questions while going through those tutorials, please join the link:https://chat.fedoraproject.org/#/room/#fedora:fedoraproject.org[Matrix room], or join our https://discussion.fedoraproject.org/tag/coreos[discussion board]. If you find any issue in the tutorial, please report them in the https://github.com/coreos/fedora-coreos-docs/issues[fedora-coreos-docs issue tracker].
+    NOTE: If you need any help or need to ask any questions while going through those tutorials, please join the link:https://chat.fedoraproject.org/\&#35;/room/\&#35;fedora:fedoraproject.org[Matrix room], or join our https://discussion.fedoraproject.org/tag/coreos[discussion board]. If you find any issue in the tutorial, please report them in the https://github.com/coreos/fedora-coreos-docs/issues[fedora-coreos-docs issue tracker].
 
     You should start with the setup instructions from this page as they must be completed first to be able to follow the tutorials.
 
-    * xref:tutorial-autologin.adoc[Enabling autologin and custom hostname]
-    ** In this tutorial, you will write your first Ignition config and start a Fedora CoreOS instance with it.
-    * xref:tutorial-services.adoc[Starting a service on first boot]
-    ** In this tutorial, you will learn how to start a custom script via a systemd unit on the first boot of a Fedora CoreOS instance.
-    * xref:tutorial-containers.adoc[SSH access and starting containers]
-    ** In this tutorial, you will learn how to start a container at first boot with podman.
-    * xref:tutorial-user-systemd-unit-on-boot.adoc[Launching a user-level systemd unit on boot]
-    ** There are times when it’s helpful to launch a user-level systemd unit without having to log in. This tutorial demonstrates creating a user-level systemd unit that launches on boot.
-    * xref:tutorial-updates.adoc[Testing Fedora CoreOS updates]
-    ** In this tutorial, you will learn how automatic updates are handled in Fedora CoreOS and how to rollback in case of failures.
+    \&#42; xref:tutorial-autologin.adoc[Enabling autologin and custom hostname]
+    \&#42;\&#42; In this tutorial, you will write your first Ignition config and start a Fedora CoreOS instance with it.
+    \&#42; xref:tutorial-services.adoc[Starting a service on first boot]
+    \&#42;\&#42; In this tutorial, you will learn how to start a custom script via a systemd unit on the first boot of a Fedora CoreOS instance.
+    \&#42; xref:tutorial-containers.adoc[SSH access and starting containers]
+    \&#42;\&#42; In this tutorial, you will learn how to start a container at first boot with podman.
+    \&#42; xref:tutorial-user-systemd-unit-on-boot.adoc[Launching a user-level systemd unit on boot]
+    \&#42;\&#42; There are times when it’s helpful to launch a user-level systemd unit without having to log in. This tutorial demonstrates creating a user-level systemd unit that launches on boot.
+    \&#42; xref:tutorial-updates.adoc[Testing Fedora CoreOS updates]
+    \&#42;\&#42; In this tutorial, you will learn how automatic updates are handled in Fedora CoreOS and how to rollback in case of failures.
 
-    == Virtualization with `libvirt`
+    == Virtualization with \&#96;libvirt\&#96;
 
-    These tutorials are written targeting a Linux environment with a working `libvirt` setup and hardware virtualization support via `KVM`. There is, however, nothing specific to the `libvirt` environment in those tutorials and you can thus try the same configurations on any platform where you have console access (or you can skip to the SSH access tutorial to get remote access).
+    These tutorials are written targeting a Linux environment with a working \&#96;libvirt\&#96; setup and hardware virtualization support via \&#96;KVM\&#96;. There is, however, nothing specific to the \&#96;libvirt\&#96; environment in those tutorials and you can thus try the same configurations on any platform where you have console access (or you can skip to the SSH access tutorial to get remote access).
 
-    For instructions to set up `libvirt` and `KVM` you may refer to the https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/[Getting started with virtualization] guide from Fedora. Although this setup guide is focused on Fedora, the tutorials should work on any distribution with `libvirt` installed and running.
+    For instructions to set up \&#96;libvirt\&#96; and \&#96;KVM\&#96; you may refer to the https://docs.fedoraproject.org/en-US/quick-docs/getting-started-with-virtualization/[Getting started with virtualization] guide from Fedora. Although this setup guide is focused on Fedora, the tutorials should work on any distribution with \&#96;libvirt\&#96; installed and running.
 
     == Local working directory
 
@@ -7343,7 +7388,7 @@ mkdir \~/coreos cd \~/coreos
     == SSH public key
 
     Some of the tutorials add an SSH public key to the instances to allow for SSH access as opposed to serial console access. Please place a public key in your current working directory under the filename
-    `ssh-key.pub`. For example, for a RSA keypair the default location would be in `~/.ssh/id_rsa.pub`:
+    \&#96;ssh-key.pub\&#96;. For example, for a RSA keypair the default location would be in \&#96;~/.ssh/id_rsa.pub\&#96;:
 
     [source,bash]
 
@@ -7353,12 +7398,12 @@ cp \~/.ssh/id_rsa.pub ssh-key.pub
 
     For the tutorials, we will need the following tools:
 
-    * Butane: To generate Ignition configuration from Butane config files.
-    * `coreos-installer`: To download the latest Fedora CoreOS QCOW2 image.
-    * `ignition-validate`: To validate Ignition configuration files.
+    \&#42; Butane: To generate Ignition configuration from Butane config files.
+    \&#42; \&#96;coreos-installer\&#96;: To download the latest Fedora CoreOS QCOW2 image.
+    \&#42; \&#96;ignition-validate\&#96;: To validate Ignition configuration files.
 
 
-    === Setup with `podman` or `docker`
+    === Setup with \&#96;podman\&#96; or \&#96;docker\&#96;
 
     All the tools required to work with Fedora CoreOS are available from containers hosted on https://quay.io/[quay.io]:
 
@@ -7373,19 +7418,19 @@ quay.io/coreos/ignition-validate:release
     [source,bash]
 
 alias butane=\'podman run \--rm \--interactive \\ \--security-opt
-label=disable \\ \--volume \"\${PWD}:/pwd\" \--workdir /pwd \\
+label=disable \\ \--volume \'\${PWD}:/pwd\' \--workdir /pwd \\
 quay.io/coreos/butane:release\'
 
 alias coreos-installer=\'podman run \--pull=always \\ \--rm
 \--interactive \\ \--security-opt label=disable \\ \--volume
-\"\${PWD}:/pwd\" \--workdir /pwd \\
+\'\${PWD}:/pwd\' \--workdir /pwd \\
 quay.io/coreos/coreos-installer:release\'
 
 alias ignition-validate=\'podman run \--rm \--interactive \\
-\--security-opt label=disable \\ \--volume \"\${PWD}:/pwd\" \--workdir
+\--security-opt label=disable \\ \--volume \'\${PWD}:/pwd\' \--workdir
 /pwd \\ quay.io/coreos/ignition-validate:release\'
 
-    You can then use `coreos-installer` to download the latest stable image with:
+    You can then use \&#96;coreos-installer\&#96; to download the latest stable image with:
 
     [source,bash]
 
@@ -7393,7 +7438,7 @@ coreos-installer download -p qemu -f qcow2.xz \--decompress
 
     To make the tutorial simpler, you should rename the image that we have just downloaded to a shorter name:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 mv fedora-coreos-{stable-version}-qemu.x86_64.qcow2 fedora-coreos.qcow2
 
@@ -7401,21 +7446,19 @@ mv fedora-coreos-{stable-version}-qemu.x86_64.qcow2 fedora-coreos.qcow2
 
     === Installing via Fedora packages
 
-    All three tools (Butane, `coreos-installer`, and `ignition-validate`) are available as Fedora packages:
+    All three tools (Butane, \&#96;coreos-installer\&#96;, and \&#96;ignition-validate\&#96;) are available as Fedora packages:
 
     [source,bash]
 
-# Installing the tools {#_installing_the_tools}
+&#35; Installing the tools sudo dnf install -y butane coreos-installer
+ignition-validate
 
-sudo dnf install -y butane coreos-installer ignition-validate
-
-# Downloading the latest Fedora CoreOS stable QCOW2 image {#_downloading_the_latest_fedora_coreos_stable_qcow2_image}
-
+&#35; Downloading the latest Fedora CoreOS stable QCOW2 image
 coreos-installer download -p qemu -f qcow2.xz \--decompress
 
     To make the tutorial simpler, you should rename the image that we have just downloaded to a shorter name:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 mv fedora-coreos-{stable-version}-qemu.x86_64.qcow2 fedora-coreos.qcow2
 
@@ -7423,16 +7466,16 @@ mv fedora-coreos-{stable-version}-qemu.x86_64.qcow2 fedora-coreos.qcow2
 
     === Manual download
 
-    If none of the previous solutions work for you, you can still manually download Fedora CoreOS from https://fedoraproject.org/coreos/download/?stream=stable#baremetal[fedoraproject.org] with:
+    If none of the previous solutions work for you, you can still manually download Fedora CoreOS from https://fedoraproject.org/coreos/download/?stream=stable\&#35;baremetal[fedoraproject.org] with:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
-RELEASE=\"{stable-version}\" curl -O
+RELEASE=\'{stable-version}\' curl -O
 [https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/\${RELEASE}/x86_64/fedora-coreos-\${RELEASE}-qemu.x86_64.qcow2.xz](https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/${RELEASE}/x86_64/fedora-coreos-${RELEASE}-qemu.x86_64.qcow2.xz)
 curl -O
 [https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/\${RELEASE}/x86_64/fedora-coreos-\${RELEASE}-qemu.x86_64.qcow2.xz.sig](https://builds.coreos.fedoraproject.org/prod/streams/stable/builds/${RELEASE}/x86_64/fedora-coreos-${RELEASE}-qemu.x86_64.qcow2.xz.sig)
 
-    Once the archive has been downloaded, make sure to verify its integrity by following the instructions available by clicking on the `Verify signature & SHA256` button. You will have to download the checksum file, the signature and Fedora GPG keys to verify your download:
+    Once the archive has been downloaded, make sure to verify its integrity by following the instructions available by clicking on the \&#96;Verify signature \&amp; SHA256\&#96; button. You will have to download the checksum file, the signature and Fedora GPG keys to verify your download:
 
     [source,bash]
 
@@ -7447,26 +7490,22 @@ unxz fedora-coreos-\${RELEASE}-qemu.x86_64.qcow2.xz
 
     To make the tutorial simpler, you should rename the image that we have just downloaded to a shorter name:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 mv fedora-coreos-{stable-version}-qemu.x86_64.qcow2 fedora-coreos.qcow2
 
     You should then download the latest https://github.com/coreos/butane/releases[Butane] and https://github.com/coreos/ignition/releases[ignition-validate] releases from GitHub:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
-# Butane {#_butane}
-
-curl -OL
+&#35; Butane curl -OL
 [https://github.com/coreos/butane/releases/download/v{butane-version}/butane-x86_64-unknown-linux-gnu](https://github.com/coreos/butane/releases/download/v{butane-version}/butane-x86_64-unknown-linux-gnu)
 curl -OL
 [https://github.com/coreos/butane/releases/download/v{butane-version}/butane-x86_64-unknown-linux-gnu.asc](https://github.com/coreos/butane/releases/download/v{butane-version}/butane-x86_64-unknown-linux-gnu.asc)
 gpg \--verify butane-x86_64-unknown-linux-gnu.asc mv
 butane-x86_64-unknown-linux-gnu butane chmod a+x butane
 
-# ignition-validate {#_ignition_validate}
-
-curl -OL
+&#35; ignition-validate curl -OL
 [https://github.com/coreos/ignition/releases/download/v{ignition-version}/ignition-validate-x86_64-linux](https://github.com/coreos/ignition/releases/download/v{ignition-version}/ignition-validate-x86_64-linux)
 curl -OL
 [https://github.com/coreos/ignition/releases/download/v{ignition-version}/ignition-validate-x86_64-linux.asc](https://github.com/coreos/ignition/releases/download/v{ignition-version}/ignition-validate-x86_64-linux.asc)
@@ -7474,21 +7513,23 @@ gpg \--verify ignition-validate-x86_64-linux.asc mv
 ignition-validate-x86_64-linux ignition-validate chmod a+x
 ignition-validate
 
-    You may then set up aliases for `butane` and `ignition-validate`:
+    You may then set up aliases for \&#96;butane\&#96; and \&#96;ignition-validate\&#96;:
 
     [source,bash]
 
-alias butane=\"\${PWD}/butane\" alias
-ignition-validate=\"\${PWD}/ignition-validate\"
+alias butane=\'\${PWD}/butane\' alias
+ignition-validate=\'\${PWD}/ignition-validate\'
 
-    Or move those commands to a folder in your `$PATH`, for example:
+    Or move those commands to a folder in your \&#96;$PATH\&#96;, for example:
 
     [source,bash]
 
-mv butane ignition-validate \"\${HOME}/.local/bin/\" \# Or mv butane
-ignition-validate \"\${HOME}/bin\"
+mv butane ignition-validate \'\${HOME}/.local/bin/\' &#35; Or mv butane
+ignition-validate \'\${HOME}/bin\'
 
     You are now ready to proceed with the xref:tutorial-autologin.adoc[first tutorial].
+
+
     = Enabling autologin and setting a custom hostname
 
     NOTE: Make sure that you have completed the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial.
@@ -7503,25 +7544,26 @@ ignition-validate \"\${HOME}/bin\"
 
     Let's create a small Butane config that will perform the following actions:
 
-    * Add a systemd dropin to override the default `serial-getty@ttyS0.service`.
-    * The override will make the service automatically log the `core` user in to the serial console of the booted machine.
-    * Set the system hostname by dropping a file at `/etc/hostname`,
-    * Add a bash profile that tells systemd to not use a pager for output.
+    \&#42; Add a systemd dropin to override the default \&#96;serial-getty@ttyS0.service\&#96;.
+    \&#42; The override will make the service automatically log the \&#96;core\&#96; user in to the serial console of the booted machine.
+    \&#42; Set the system hostname by dropping a file at \&#96;/etc/hostname\&#96;,
+    \&#42; Add a bash profile that tells systemd to not use a pager for output.
 
-    We can create a config file named `autologin.bu` now as:
+    We can create a config file named \&#96;autologin.bu\&#96; now as:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: serial-getty@ttyS0.service dropins: - name: autologin-core.conf
 contents: \|
 
-ExecStart= \# Add new Execstart with `-` prefix to ignore failure
-ExecStart=-/usr/sbin/agetty \--autologin core \--noclear %I \$TERM
-storage: files: - path: /etc/hostname mode: 0644 contents: inline: \|
-tutorial - path: /etc/profile.d/systemd-pager.sh mode: 0644 contents:
-inline: \| \# Tell systemd to not use a pager when printing information
-export SYSTEMD_PAGER=cat
+&#35; Override Execstart in main unit ExecStart= &#35; Add new Execstart
+with &#96;-&#96; prefix to ignore failure ExecStart=-/usr/sbin/agetty
+\--autologin core \--noclear %I \$TERM storage: files: - path:
+/etc/hostname mode: 0644 contents: inline: \| tutorial - path:
+/etc/profile.d/systemd-pager.sh mode: 0644 contents: inline: \| &#35;
+Tell systemd to not use a pager when printing information export
+SYSTEMD_PAGER=cat
 
     This configuration can then be converted into an Ignition config with Butane:
 
@@ -7529,54 +7571,52 @@ export SYSTEMD_PAGER=cat
 
 butane \--pretty \--strict autologin.bu \--output autologin.ign
 
-    The resulting Ignition configuration produced by Butane as `autologin.ign` has the following content:
+    The resulting Ignition configuration produced by Butane as \&#96;autologin.ign\&#96; has the following content:
 
     [source,json]
 
-{ \"ignition\": { \"version\": \"3.4.0\" }, \"storage\": { \"files\": \[
-{ \"path\": \"/etc/hostname\", \"contents\": { \"compression\": \"\",
-\"source\": \"data:,tutorial%0A\" }, \"mode\": 420 }, { \"path\":
-\"/etc/profile.d/systemd-pager.sh\", \"contents\": { \"compression\":
-\"\", \"source\":
-\"data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A\"
-}, \"mode\": 420 } \] }, \"systemd\": { \"units\": \[ { \"dropins\": \[
-{ \"contents\": \"\[Service\]\\n# Override Execstart in main
-unit\\nExecStart=\\n# Add new Execstart with `-` prefix to ignore
-failure\\nExecStart=-/usr/sbin/agetty \--autologin core \--noclear %I
-\$TERM\\n\", \"name\": \"autologin-core.conf\" } \], \"name\":
-\"serial-getty@ttyS0.service\" } \] } }
+{ \'ignition\': { \'version\': \'3.4.0\' }, \'storage\': { \'files\': \[
+{ \'path\': \'/etc/hostname\', \'contents\': { \'compression\': \'\',
+\'source\': \'data:,tutorial%0A\' }, \'mode\': 420 }, { \'path\':
+\'/etc/profile.d/systemd-pager.sh\', \'contents\': { \'compression\':
+\'\', \'source\':
+\'data:,%23%20Tell%20systemd%20to%20not%20use%20a%20pager%20when%20printing%20information%0Aexport%20SYSTEMD_PAGER%3Dcat%0A\'
+}, \'mode\': 420 } \] }, \'systemd\': { \'units\': \[ { \'dropins\': \[
+{ \'contents\': \'\[Service\]\\n&#35; Override Execstart in main
+unit\\nExecStart=\\n&#35; Add new Execstart with &#96;-&#96; prefix to
+ignore failure\\nExecStart=-/usr/sbin/agetty \--autologin core
+\--noclear %I \$TERM\\n\', \'name\': \'autologin-core.conf\' } \],
+\'name\': \'serial-getty@ttyS0.service\' } \] } }
 
-    Butane outputs valid Ignition configs. However, if you are tweaking the config after Butane, or manually creating Ignition configs, you will have to verify that the config format is valid with `ignition-validate`:
+    Butane outputs valid Ignition configs. However, if you are tweaking the config after Butane, or manually creating Ignition configs, you will have to verify that the config format is valid with \&#96;ignition-validate\&#96;:
 
     [source,bash]
 
-ignition-validate autologin.ign && echo \'Success!\'
+ignition-validate autologin.ign &amp;&amp; echo \'Success!\'
 
     == Booting Fedora CoreOS
 
-    Now that we have an Ignition config, we can boot a virtual machine with it. This tutorial uses the QEMU image with `libvirt`, but you should be able to use the same Ignition config on all the platforms supported by Fedora CoreOS.
+    Now that we have an Ignition config, we can boot a virtual machine with it. This tutorial uses the QEMU image with \&#96;libvirt\&#96;, but you should be able to use the same Ignition config on all the platforms supported by Fedora CoreOS.
 
-    We use `virt-install` to create a new Fedora CoreOS virtual machine with a specific config:
+    We use \&#96;virt-install\&#96; to create a new Fedora CoreOS virtual machine with a specific config:
 
     [source,bash]
 
-# Setup the correct SELinux label to allow access to the config {#_setup_the_correct_selinux_label_to_allow_access_to_the_config}
-
+&#35; Setup the correct SELinux label to allow access to the config
 chcon \--verbose \--type svirt_home_t autologin.ign
 
-# Start a Fedora CoreOS virtual machine {#_start_a_fedora_coreos_virtual_machine}
+&#35; Start a Fedora CoreOS virtual machine virt-install \--name=fcos
+\--vcpus=2 \--ram=2048 \--os-variant=fedora-coreos-stable \\ \--import
+\--network=bridge=virbr0 \--graphics=none \\
+\--qemu-commandline=\'-fw_cfg
+name=opt/com.coreos/config,file=\${PWD}/autologin.ign\' \\
+\--disk=\'size=20,backing_store=\${PWD}/fedora-coreos.qcow2\'
 
-virt-install \--name=fcos \--vcpus=2 \--ram=2048
-\--os-variant=fedora-coreos-stable \\ \--import \--network=bridge=virbr0
-\--graphics=none \\ \--qemu-commandline=\"-fw_cfg
-name=opt/com.coreos/config,file=\${PWD}/autologin.ign\" \\
-\--disk=\"size=20,backing_store=\${PWD}/fedora-coreos.qcow2\"
+    The \&#96;virt-install\&#96; command will start an instance named \&#96;fcos\&#96; from the \&#96;fedora-coreos.qcow2\&#96; image using the \&#96;autologin.ign\&#96; Ignition config. It will auto-attach the serial console of the machine so you will be able to see the image bootup messages.
 
-    The `virt-install` command will start an instance named `fcos` from the `fedora-coreos.qcow2` image using the `autologin.ign` Ignition config. It will auto-attach the serial console of the machine so you will be able to see the image bootup messages.
+    We use the \&#96;backing_store\&#96; option to \&#96;virt-install --disk\&#96; to quickly create a new disk image and avoid writing to the original image we have downloaded. This new disk image can be easily thrown away.
 
-    We use the `backing_store` option to `virt-install --disk` to quickly create a new disk image and avoid writing to the original image we have downloaded. This new disk image can be easily thrown away.
-
-    NOTE: Depending on your version of `virt-install`, you may not be able to use `--os-variant=fedora-coreos-stable` and will get an error. In this case, you should pick an older Fedora variant (`--os-variant=fedora31` for example). You can find the variants that are supported by you current version of `virt-install` with `osinfo-query os | grep '^\s*fedora'`.
+    NOTE: Depending on your version of \&#96;virt-install\&#96;, you may not be able to use \&#96;--os-variant=fedora-coreos-stable\&#96; and will get an error. In this case, you should pick an older Fedora variant (\&#96;--os-variant=fedora31\&#96; for example). You can find the variants that are supported by you current version of \&#96;virt-install\&#96; with \&#96;osinfo-query os | grep '^\s\&#42;fedora'\&#96;.
 
     Once the machine is booted up you should see a few prompts and then you should be automatically logged in and presented with a bash shell:
 
@@ -7597,13 +7637,15 @@ Fedora CoreOS 38.20230709.3.0 \[core@tutorial \~\]\$
 
     [source,bash]
 
-\[core@tutorial \~\]\$ systemctl cat serial-getty@ttyS0.service \#
-/usr/lib/systemd/system/serial-getty@.service ...​
+\[core@tutorial \~\]\$ systemctl cat serial-getty@ttyS0.service &#35;
+/usr/lib/systemd/system/serial-getty@.service &#8230;
 
-# /etc/systemd/system/serial-getty@ttyS0.service.d/autologin-core.conf {#_etcsystemdsystemserial_gettyttys0_service_dautologin_core_conf}
+&#35;
+/etc/systemd/system/serial-getty@ttyS0.service.d/autologin-core.conf
 
-ExecStart= \# Add new Execstart with `-` prefix to ignore failure
-ExecStart=-/usr/sbin/agetty \--autologin core \--noclear %I \$TERM
+&#35; Override Execstart in main unit ExecStart= &#35; Add new Execstart
+with &#96;-&#96; prefix to ignore failure ExecStart=-/usr/sbin/agetty
+\--autologin core \--noclear %I \$TERM
 
     We can also check that the hostname has correctly been set:
 
@@ -7639,7 +7681,7 @@ Deployments: ● fedora:fedora/x86_64/coreos/stable Version:
 GPGSignature: Valid signature by
 6A51BBABBA3D5467B6171221809A8D7CEB10B464
 
-    And check on `zincati.service`, which communicates with our update server and tells `rpm-ostree` when to do an update and to what version to update to:
+    And check on \&#96;zincati.service\&#96;, which communicates with our update server and tells \&#96;rpm-ostree\&#96; when to do an update and to what version to update to:
 
 \[core@tutorial \~\]\$ systemctl status \--full zincati.service ●
 zincati.service - Zincati Update Agent Loaded: loaded
@@ -7647,14 +7689,14 @@ zincati.service - Zincati Update Agent Loaded: loaded
 Drop-In: /usr/lib/systemd/system/service.d └─10-timeout-abort.conf
 Active: active (running) since Thu 2023-08-03 16:06:39 UTC; 18s ago
 Docs: <https://github.com/coreos/zincati> Main PID: 1843 (zincati)
-Status: \"periodically polling for updates (last checked Thu 2023-08-03
-16:06:39 UTC)\" Tasks: 6 (limit: 2238) Memory: 2.8M CPU: 257ms CGroup:
+Status: \'periodically polling for updates (last checked Thu 2023-08-03
+16:06:39 UTC)\' Tasks: 6 (limit: 2238) Memory: 2.8M CPU: 257ms CGroup:
 /system.slice/zincati.service └─1843 /usr/libexec/zincati agent -v
 
 Aug 03 16:06:39 tutorial systemd\[1\]: Starting zincati.service -
-Zincati Update Agent...​ Aug 03 16:06:39 tutorial zincati\[1843\]: \[INFO
-zincati::cli::agent\] starting update agent (zincati 0.0.25) Aug 03
-16:06:39 tutorial zincati\[1843\]: \[INFO zincati::cincinnati\]
+Zincati Update Agent&#8230; Aug 03 16:06:39 tutorial zincati\[1843\]:
+\[INFO zincati::cli::agent\] starting update agent (zincati 0.0.25) Aug
+03 16:06:39 tutorial zincati\[1843\]: \[INFO zincati::cincinnati\]
 Cincinnati service: <https://updates.coreos.fedoraproject.org> Aug 03
 16:06:39 tutorial zincati\[1843\]: \[INFO zincati::cli::agent\] agent
 running on node \'8fb5386cba574235a21ad3b2d59885d9\', in update group
@@ -7674,55 +7716,57 @@ detected as not a dead-end
 
 journalctl -t ignition
 
-    And finally, of course we can use the `podman` (or `docker`) command to inspect the current state of containers on the system:
+    And finally, of course we can use the \&#96;podman\&#96; (or \&#96;docker\&#96;) command to inspect the current state of containers on the system:
 
 podman version podman info
 
-    NOTE: `podman` commands can be run as root or as non-root user. `docker` commands need to be run as root via `sudo` unless the user has been added to the `docker` group.
+    NOTE: \&#96;podman\&#96; commands can be run as root or as non-root user. \&#96;docker\&#96; commands need to be run as root via \&#96;sudo\&#96; unless the user has been added to the \&#96;docker\&#96; group.
 
-    NOTE: Running containers via `docker` and `podman` at the same time can cause issues and result in unexpected behaviour. Refer to the https://docs.fedoraproject.org/en-US/fedora-coreos/faq/#_can_i_run_containers_via_docker_and_podman_at_the_same_time[FAQ Entry] for more details.
+    NOTE: Running containers via \&#96;docker\&#96; and \&#96;podman\&#96; at the same time can cause issues and result in unexpected behaviour. Refer to the https://docs.fedoraproject.org/en-US/fedora-coreos/faq/\&#35;_can_i_run_containers_via_docker_and_podman_at_the_same_time[FAQ Entry] for more details.
 
-    NOTE: The Docker daemon is not started by default but running any `docker` command will start it as it is socket activated via systemd.
+    NOTE: The Docker daemon is not started by default but running any \&#96;docker\&#96; command will start it as it is socket activated via systemd.
 
     == Taking down the Virtual Machine
 
-    Let's now get rid of that virtual machine so we can start again from scratch. First escape out of the serial console by pressing `CTRL + ]` and then type:
+    Let's now get rid of that virtual machine so we can start again from scratch. First escape out of the serial console by pressing \&#96;CTRL + ]\&#96; and then type:
 
 virsh destroy fcos virsh undefine \--remove-all-storage fcos
 
     You may now proceed with the xref:tutorial-services.adoc[second tutorial].
+
+
     = Starting a script on first boot via a systemd service
 
     NOTE: Make sure that you have completed the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial.
 
     In this tutorial, we will run a script on the first boot via a systemd service. We will add the following to the Butane config from the previous scenario:
 
-    * Add a script at `/usr/local/bin/public-ipv4.sh`.
-    * Configure a systemd service to run the script on first boot.
+    \&#42; Add a script at \&#96;/usr/local/bin/public-ipv4.sh\&#96;.
+    \&#42; Configure a systemd service to run the script on first boot.
 
     == Writing the script
 
-    Let's write a small script that uses https://icanhazip.com/[icanhazip.com] to create an issue file to display as a prelogin message on the console and store it in `public-ipv4.sh`.
+    Let's write a small script that uses https://icanhazip.com/[icanhazip.com] to create an issue file to display as a prelogin message on the console and store it in \&#96;public-ipv4.sh\&#96;.
 
     NOTE: This is only an example to show how to run a service on boot. Do not use this if you don't trust the owners of https://icanhazip.com/[icanhazip.com].
 
     [source,bash]
 
-cat \<\<\'EOF\' \> public-ipv4.sh #!/bin/bash echo \"Detected Public
-IPv4: is \$(curl ipv4.icanhazip.com)\" \>
+cat &lt;&lt;\'EOF\' &gt; public-ipv4.sh &#35;!/bin/bash echo \'Detected
+Public IPv4: is \$(curl <https://ipv4.icanhazip.com)'> &gt; \\
 /etc/issue.d/50_public-ipv4.issue EOF
 
     This could be useful in cloud environments where you might have different public and private addresses.
 
-    We will store this script into `/usr/local/bin/public-ipv4.sh` when we provision the machine.
+    We will store this script into \&#96;/usr/local/bin/public-ipv4.sh\&#96; when we provision the machine.
 
     == Writing the systemd service
 
-    We need to call the script from the previous section by using a systemd unit. Let's write a systemd unit into the `issuegen-public-ipv4.service` file that does what we want, which is to execute on first boot and not again:
+    We need to call the script from the previous section by using a systemd unit. Let's write a systemd unit into the \&#96;issuegen-public-ipv4.service\&#96; file that does what we want, which is to execute on first boot and not again:
 
     [source,bash]
 
-cat \<\<\'EOF\' \> issuegen-public-ipv4.service
+cat &lt;&lt;\'EOF\' &gt; issuegen-public-ipv4.service
 
 Before=systemd-user-sessions.service Wants=network-online.target
 After=network-online.target
@@ -7736,27 +7780,28 @@ WantedBy=multi-user.target EOF
 
     == Writing the Butane config and converting to Ignition
 
-    We can now create a Butane config that will include the script and systemd unit file contents by picking up the local `public-ipv4.sh` and `issuegen-public-ipv4.service` files using local file references. The final Butane config, stored in `services.bu`, will be:
+    We can now create a Butane config that will include the script and systemd unit file contents by picking up the local \&#96;public-ipv4.sh\&#96; and \&#96;issuegen-public-ipv4.service\&#96; files using local file references. The final Butane config, stored in \&#96;services.bu\&#96;, will be:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: serial-getty@ttyS0.service dropins: - name: autologin-core.conf
 contents: \|
 
-ExecStart= \# Add new Execstart with `-` prefix to ignore failure
-ExecStart=-/usr/sbin/agetty \--autologin core \--noclear %I \$TERM -
-name: issuegen-public-ipv4.service enabled: true contents_local:
+&#35; Override Execstart in main unit ExecStart= &#35; Add new Execstart
+with &#96;-&#96; prefix to ignore failure ExecStart=-/usr/sbin/agetty
+\--autologin core \--noclear %I \$TERM - name:
+issuegen-public-ipv4.service enabled: true contents_local:
 issuegen-public-ipv4.service storage: files: - path: /etc/hostname mode:
 0644 contents: inline: \| tutorial - path:
-/etc/profile.d/systemd-pager.sh mode: 0644 contents: inline: \| \# Tell
-systemd to not use a pager when printing information export
+/etc/profile.d/systemd-pager.sh mode: 0644 contents: inline: \| &#35;
+Tell systemd to not use a pager when printing information export
 SYSTEMD_PAGER=cat - path: /usr/local/bin/public-ipv4.sh mode: 0755
 contents: local: public-ipv4.sh
 
     NOTE: Check the Butane https://coreos.github.io/butane/examples/[Examples] and https://coreos.github.io/butane/specs/[Configuration specifications] for more details about local file includes.
 
-    With the files `public-ipv4.sh`, `issuegen-public-ipv4.service`, and `services.bu` in the current working directory we can now convert to Ignition:
+    With the files \&#96;public-ipv4.sh\&#96;, \&#96;issuegen-public-ipv4.service\&#96;, and \&#96;services.bu\&#96; in the current working directory we can now convert to Ignition:
 
     [source,bash]
 
@@ -7769,19 +7814,17 @@ services.ign
 
     [source,bash]
 
-# Setup the correct SELinux label to allow access to the config {#_setup_the_correct_selinux_label_to_allow_access_to_the_config_2}
-
+&#35; Setup the correct SELinux label to allow access to the config
 chcon \--verbose \--type svirt_home_t services.ign
 
-# Start a Fedora CoreOS virtual machine {#_start_a_fedora_coreos_virtual_machine_2}
+&#35; Start a Fedora CoreOS virtual machine virt-install \--name=fcos
+\--vcpus=2 \--ram=2048 \--os-variant=fedora-coreos-stable \\ \--import
+\--network=bridge=virbr0 \--graphics=none \\
+\--qemu-commandline=\'-fw_cfg
+name=opt/com.coreos/config,file=\${PWD}/services.ign\' \\
+\--disk=\'size=20,backing_store=\${PWD}/fedora-coreos.qcow2\'
 
-virt-install \--name=fcos \--vcpus=2 \--ram=2048
-\--os-variant=fedora-coreos-stable \\ \--import \--network=bridge=virbr0
-\--graphics=none \\ \--qemu-commandline=\"-fw_cfg
-name=opt/com.coreos/config,file=\${PWD}/services.ign\" \\
-\--disk=\"size=20,backing_store=\${PWD}/fedora-coreos.qcow2\"
-
-    And view on the console that the `Detected Public IPv4` is shown in the console output right before you are dropped to a login prompt:
+    And view on the console that the \&#96;Detected Public IPv4\&#96; is shown in the console output right before you are dropped to a login prompt:
 
 Fedora CoreOS 38.20230709.3.0 Kernel 6.3.11-200.fc38.x86_64 on an x86_64
 (ttyS0)
@@ -7811,7 +7854,7 @@ Process: 1460 ExecStartPost=/usr/bin/touch /var/lib/issuegen-public-ipv4
 status=0/SUCCESS) CPU: 84ms
 
 Aug 03 16:40:55 tutorial systemd\[1\]: Starting
-issuegen-public-ipv4.service...​ Aug 03 16:40:55 tutorial
+issuegen-public-ipv4.service&#8230; Aug 03 16:40:55 tutorial
 public-ipv4.sh\[1424\]: % Total % Received % Xferd Average Speed Time
 Time Time Current Aug 03 16:40:55 tutorial public-ipv4.sh\[1424\]: Dload
 Upload Total Spent Left Speed Aug 03 16:40:55 tutorial
@@ -7820,47 +7863,50 @@ systemd\[1\]: Finished issuegen-public-ipv4.service.
 
     == Cleanup
 
-    Now let's take down the instance for the next test. First, disconnect from the serial console by pressing `CTRL` + `]` and then destroy the machine:
+    Now let's take down the instance for the next test. First, disconnect from the serial console by pressing \&#96;CTRL\&#96; + \&#96;]\&#96; and then destroy the machine:
 
 virsh destroy fcos virsh undefine \--remove-all-storage fcos
 
     You may now proceed with the xref:tutorial-containers.adoc[next tutorial].
+
+
     = Setting up SSH access and starting containers at boot
 
-    NOTE: Complete all the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial. Make sure you have created the file `ssh-key.pub` following the instructions provided in the https://docs.fedoraproject.org/en-US/fedora-coreos/tutorial-setup/#_ssh_public_key[prerequisites] for the tutorial. We will use this key in the Butane configuration file that we are about to write.
+    NOTE: Complete all the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial. Make sure you have created the file \&#96;ssh-key.pub\&#96; following the instructions provided in the https://docs.fedoraproject.org/en-US/fedora-coreos/tutorial-setup/\&#35;_ssh_public_key[prerequisites] for the tutorial. We will use this key in the Butane configuration file that we are about to write.
 
     In this tutorial, we will set up SSH access and start a container at boot. Fedora CoreOS is focused on running applications/services in containers thus we recommend trying to run containers and avoid modifying the host directly. Running containers and keeping a pristine host layer makes automatic updates more reliable and allows for separation of concerns with the Fedora CoreOS team responsible for the OS and end-user operators/sysadmins responsible for the applications.
 
     As usual, we will set up console autologin, a hostname, systemd pager configuration, but we will also:
 
-    * Add an SSH Key for the `core` user from the local `ssh-key.pub` file.
-    * Add a systemd service (`failure.service`) that fails on boot.
-    * Add a running container via a Podman https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html[quadlet systemd.unit container file].
-    * This `etcd-member.container` will then be associated with a `etcd-member.service` on the running system.
-    * `etcd-member.service` will launch and manage the lifecycle of the container using `podman`.
+    \&#42; Add an SSH Key for the \&#96;core\&#96; user from the local \&#96;ssh-key.pub\&#96; file.
+    \&#42; Add a systemd service (\&#96;failure.service\&#96;) that fails on boot.
+    \&#42; Add a running container via a Podman https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html[quadlet systemd.unit container file].
+    \&#42; This \&#96;etcd-member.container\&#96; will then be associated with a \&#96;etcd-member.service\&#96; on the running system.
+    \&#42; \&#96;etcd-member.service\&#96; will launch and manage the lifecycle of the container using \&#96;podman\&#96;.
 
     == Writing the Butane config and converting to Ignition
 
-    Similarly to what we did in the second provisioning scenario, we will write the following Butane config in a file called `containers.bu`:
+    Similarly to what we did in the second provisioning scenario, we will write the following Butane config in a file called \&#96;containers.bu\&#96;:
 
     .Example with automatic serial console login, SSH key, and multiple systemd units
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys_local: - ssh-key.pub systemd: units: -
 name: serial-getty@ttyS0.service dropins: - name: autologin-core.conf
 contents: \|
 
-ExecStart= \# Add new Execstart with `-` prefix to ignore failure
-ExecStart=-/usr/sbin/agetty \--autologin core \--noclear %I \$TERM
-TTYVTDisallocate=no - name: failure.service enabled: true contents: \|
+&#35; Override Execstart in main unit ExecStart= &#35; Add new Execstart
+with &#96;-&#96; prefix to ignore failure ExecStart=-/usr/sbin/agetty
+\--autologin core \--noclear %I \$TERM TTYVTDisallocate=no - name:
+failure.service enabled: true contents: \|
 
 Type=oneshot ExecStart=/usr/bin/false RemainAfterExit=yes
 
 WantedBy=multi-user.target storage: files: - path: /etc/hostname mode:
 0644 contents: inline: \| tutorial - path:
-/etc/profile.d/systemd-pager.sh mode: 0644 contents: inline: \| \# Tell
-systemd to not use a pager when printing information export
+/etc/profile.d/systemd-pager.sh mode: 0644 contents: inline: \| &#35;
+Tell systemd to not use a pager when printing information export
 SYSTEMD_PAGER=cat - path: /etc/containers/systemd/etcd-member.container
 mode: 0644 contents: inline: \|
 
@@ -7888,17 +7934,15 @@ containers.ign
 
     [source,bash]
 
-# Setup the correct SELinux label to allow access to the config {#_setup_the_correct_selinux_label_to_allow_access_to_the_config_3}
-
+&#35; Setup the correct SELinux label to allow access to the config
 chcon \--verbose \--type svirt_home_t containers.ign
 
-# Start a Fedora CoreOS virtual machine {#_start_a_fedora_coreos_virtual_machine_3}
-
-virt-install \--name=fcos \--vcpus=2 \--ram=2048
-\--os-variant=fedora-coreos-stable \\ \--import \--network=bridge=virbr0
-\--graphics=none \\ \--qemu-commandline=\"-fw_cfg
-name=opt/com.coreos/config,file=\${PWD}/containers.ign\" \\
-\--disk=\"size=20,backing_store=\${PWD}/fedora-coreos.qcow2\"
+&#35; Start a Fedora CoreOS virtual machine virt-install \--name=fcos
+\--vcpus=2 \--ram=2048 \--os-variant=fedora-coreos-stable \\ \--import
+\--network=bridge=virbr0 \--graphics=none \\
+\--qemu-commandline=\'-fw_cfg
+name=opt/com.coreos/config,file=\${PWD}/containers.ign\' \\
+\--disk=\'size=20,backing_store=\${PWD}/fedora-coreos.qcow2\'
 
     On the console you will see:
 
@@ -7918,7 +7962,7 @@ Fedora CoreOS 38.20230709.3.0
 
 Failed Units: 1 failure.service \[core@tutorial \~\]\$
 
-    If you would like to connect via SSH, disconnect from the serial console by pressing `CTRL` + `]` and then use the reported IP address for the NIC from the serial console to log in using the `core` user via SSH:
+    If you would like to connect via SSH, disconnect from the serial console by pressing \&#96;CTRL\&#96; + \&#96;]\&#96; and then use the reported IP address for the NIC from the serial console to log in using the \&#96;core\&#96; user via SSH:
 
 \$ ssh core@192.168.124.119 The authenticity of host \'192.168.124.119
 (192.168.124.119)\' can't be established. ED25519 key fingerprint is
@@ -7934,9 +7978,9 @@ Last login: Thu Aug 3 18:18:06 2023
 
 Failed Units: 1 failure.service
 
-    The `Failed Units` message is coming from the https://github.com/coreos/console-login-helper-messages[console login helper messages] helpers. This particular helper shows us when `systemd` has services that are in a failed state. In this case we made `failure.service` with `ExecStart=/usr/bin/false`, so we intentionally created a service that will always fail in order to illustrate the helper messages.
+    The \&#96;Failed Units\&#96; message is coming from the https://github.com/coreos/console-login-helper-messages[console login helper messages] helpers. This particular helper shows us when \&#96;systemd\&#96; has services that are in a failed state. In this case we made \&#96;failure.service\&#96; with \&#96;ExecStart=/usr/bin/false\&#96;, so we intentionally created a service that will always fail in order to illustrate the helper messages.
 
-    Now that we’re up and don’t have any real failures we can check out the status of `etcd-member.service`, which was generated from our `etcd-member.container` file.
+    Now that we’re up and don’t have any real failures we can check out the status of \&#96;etcd-member.service\&#96;, which was generated from our \&#96;etcd-member.container\&#96; file.
 
 \[core@tutorial \~\]\$ systemctl status \--full etcd-member.service ●
 etcd-member.service - Run a single node etcd Loaded: loaded
@@ -7946,7 +7990,8 @@ etcd-member.service - Run a single node etcd Loaded: loaded
 (conmon) Tasks: 10 (limit: 2238) Memory: 86.5M CPU: 3.129s CGroup:
 /system.slice/etcd-member.service
 ├─libpod-payload-31af97b0ef902b3b3b3d717bd98947b209701b9585db2129ca53f4b33962415e
-│ └─1555 /usr/local/bin/etcd ...​ └─runtime └─1553 /usr/bin/conmon ...​
+│ └─1555 /usr/local/bin/etcd &#8230; └─runtime └─1553 /usr/bin/conmon
+&#8230;
 
 Aug 03 18:17:58 tutorial etcd\[1553\]: 2023-08-03 18:17:58.745207 I \|
 raft: b71f75320dc06a6c became candidate at term 2 Aug 03 18:17:58
@@ -7974,51 +8019,53 @@ discouraged!
 
 \[core@tutorial \~\]\$ sudo podman ps -a CONTAINER ID IMAGE COMMAND
 CREATED STATUS PORTS NAMES 31af97b0ef90 quay.io/coreos/etcd:latest
-/usr/local/bin/et...​ 4 minutes ago Up 4 minutes etcd
+/usr/local/bin/et&#8230; 4 minutes ago Up 4 minutes etcd
 
-    And we can set a key/value pair in etcd. For now let’s set the key `fedora` to the value `fun`:
+    And we can set a key/value pair in etcd. For now let’s set the key \&#96;fedora\&#96; to the value \&#96;fun\&#96;:
 
 \[core@tutorial \~\]\$ curl -L <http://127.0.0.1:2379/v3/kv/put> -X POST
--d \'{\"key\": \"ZmVkb3Jh\", \"value\": \"ZnVu\"}\'
-{\"header\":{\"cluster_id\":\"2037210783374497686\",\"member_id\":\"13195394291058371180\",\"revision\":\"4\",\"raft_term\":\"2\"}}
+-d \'{\'key\': \'ZmVkb3Jh\', \'value\': \'ZnVu\'}\'
+{\'header\':{\'cluster_id\':\'2037210783374497686\',\'member_id\':\'13195394291058371180\',\'revision\':\'4\',\'raft_term\':\'2\'}}
 \[core@tutorial \~\]\$ curl -sL <http://127.0.0.1:2379/v3/kv/range> -X
-POST -d \'{\"key\": \"AA==\", \"range_end\": \"AA==\"}\' \| jq {
-\"header\": { \"cluster_id\": \"2037210783374497686\", \"member_id\":
-\"13195394291058371180\", \"revision\": \"4\", \"raft_term\": \"2\" },
-\"kvs\": \[ { \"key\": \"ZmVkb3Jh\", \"create_revision\": \"2\",
-\"mod_revision\": \"4\", \"version\": \"2\", \"value\": \"ZnVu\" } \],
-\"count\": \"2\" }
+POST -d \'{\'key\': \'AA==\', \'range_end\': \'AA==\'}\' \| jq {
+\'header\': { \'cluster_id\': \'2037210783374497686\', \'member_id\':
+\'13195394291058371180\', \'revision\': \'4\', \'raft_term\': \'2\' },
+\'kvs\': \[ { \'key\': \'ZmVkb3Jh\', \'create_revision\': \'2\',
+\'mod_revision\': \'4\', \'version\': \'2\', \'value\': \'ZnVu\' } \],
+\'count\': \'2\' }
 
     Looks like everything is working!
 
     == Cleanup
 
-    Now let's take down the instance for the next test. Disconnect from the serial console by pressing `CTRL` + `]` or from SSH and then destroy the machine:
+    Now let's take down the instance for the next test. Disconnect from the serial console by pressing \&#96;CTRL\&#96; + \&#96;]\&#96; or from SSH and then destroy the machine:
 
 virsh destroy fcos virsh undefine \--remove-all-storage fcos
 
     You may now proceed with the xref:tutorial-user-systemd-unit-on-boot.adoc[next tutorial].
+
+
     = Launching a user-level systemd unit on boot
 
-    NOTE: Complete all the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial. Make sure you have created the file `ssh-key.pub` following the instructions provided in the https://docs.fedoraproject.org/en-US/fedora-coreos/tutorial-setup/#_ssh_public_key[prerequisites] for the tutorial. We will use this key in the Butane configuration file that we are about to write.
+    NOTE: Complete all the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial. Make sure you have created the file \&#96;ssh-key.pub\&#96; following the instructions provided in the https://docs.fedoraproject.org/en-US/fedora-coreos/tutorial-setup/\&#35;_ssh_public_key[prerequisites] for the tutorial. We will use this key in the Butane configuration file that we are about to write.
 
     In this tutorial, we will set up a user level systemd unit for an unprivileged user. There are times when it's helpful to launch a user-level https://www.freedesktop.org/software/systemd/man/systemd.unit.html[systemd unit] without having to log in. For example, you may wish to launch a container that provides a network service or run an HPC job. For this setup, we will add the following to a Butane config:
 
-    * A user level systemd unit: `/home/sleeper/.config/systemd/user/linger-example.service`.
-    * Enable it as a user level systemd service.
+    \&#42; A user level systemd unit: \&#96;/home/sleeper/.config/systemd/user/linger-example.service\&#96;.
+    \&#42; Enable it as a user level systemd service.
 
     == Setting up the systemd unit
 
-    In this example, we will launch a systemd service for the user `sleeper`. First, let's create a user:
+    In this example, we will launch a systemd service for the user \&#96;sleeper\&#96;. First, let's create a user:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: sleeper
 
-    This will also create the home directory for the `sleeper` user. Then we can add the systemd unit:
+    This will also create the home directory for the \&#96;sleeper\&#96; user. Then we can add the systemd unit:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /home/sleeper/.config/systemd/user/linger-example.service mode:
@@ -8031,7 +8078,7 @@ sleeper
 
     System services can be directly enabled in Butane configs but user level services have to be manually enabled for now:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage:
 directories: - path:
@@ -8043,14 +8090,14 @@ user: name: sleeper group: name: sleeper target:
 
     We set up lingering for the systemd user level instance so that it gets started directly on boot and stays running:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage: files: -
 path: /var/lib/systemd/linger/sleeper mode: 0644
 
     As the following directories do not exist yet, we will have to create them to tell Ignition to set the right ownership and permissions:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} storage:
 directories: - path: /home/sleeper/.config mode: 0755 user: name:
@@ -8063,9 +8110,9 @@ name: sleeper group: name: sleeper
 
     == Writing the Butane config and converting to Ignition
 
-    The final Butane config, stored in `user.bu`, will be:
+    The final Butane config, stored in \&#96;user.bu\&#96;, will be:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys_local: - ssh-key.pub - name: sleeper
@@ -8100,17 +8147,15 @@ butane \--pretty \--strict \--files-dir=./ user.bu \--output user.ign
 
     [source,bash]
 
-# Setup the correct SELinux label to allow access to the config {#_setup_the_correct_selinux_label_to_allow_access_to_the_config_4}
-
+&#35; Setup the correct SELinux label to allow access to the config
 chcon \--verbose \--type svirt_home_t user.ign
 
-# Start a Fedora CoreOS virtual machine {#_start_a_fedora_coreos_virtual_machine_4}
-
-virt-install \--name=fcos \--vcpus=2 \--ram=2048
-\--os-variant=fedora-coreos-stable \\ \--import \--network=bridge=virbr0
-\--graphics=none \\ \--qemu-commandline=\"-fw_cfg
-name=opt/com.coreos/config,file=\${PWD}/user.ign\" \\
-\--disk=\"size=20,backing_store=\${PWD}/fedora-coreos.qcow2\"
+&#35; Start a Fedora CoreOS virtual machine virt-install \--name=fcos
+\--vcpus=2 \--ram=2048 \--os-variant=fedora-coreos-stable \\ \--import
+\--network=bridge=virbr0 \--graphics=none \\
+\--qemu-commandline=\'-fw_cfg
+name=opt/com.coreos/config,file=\${PWD}/user.ign\' \\
+\--disk=\'size=20,backing_store=\${PWD}/fedora-coreos.qcow2\'
 
     We can then verify that the unit has been started under the sleeper systemd user instance:
 
@@ -8124,7 +8169,7 @@ aliases) Jobs: 0 queued Failed: 0 units Since: Thu 2023-08-03 18:31:27
 UTC; 23s ago systemd: 253.4-1.fc38 CGroup:
 /user.slice/user-1001.slice/user@1001.service ├─app.slice │
 └─linger-example.service │ └─1589 /usr/bin/sleep infinity └─init.scope
-├─1489 /usr/lib/systemd/systemd \--user └─1496 \"(sd-pam)\"
+├─1489 /usr/lib/systemd/systemd \--user └─1496 \'(sd-pam)\'
 \[sleeper@localhost \~\]\$ systemctl \--user status
 linger-example.service ● linger-example.service - A systemd user unit
 demo Loaded: loaded
@@ -8141,11 +8186,13 @@ linger-example.service - A systemd user unit demo.
 
     == Cleanup
 
-    You can then take down the instance. First, disconnect from the serial console by pressing `CTRL` + `]` and then destroy the machine:
+    You can then take down the instance. First, disconnect from the serial console by pressing \&#96;CTRL\&#96; + \&#96;]\&#96; and then destroy the machine:
 
 virsh destroy fcos virsh undefine \--remove-all-storage fcos
 
     You may now proceed with the xref:tutorial-updates.adoc[next tutorial].
+
+
     = Testing Fedora CoreOS updates
 
     NOTE: Make sure that you have completed the steps described in the xref:tutorial-setup.adoc[initial setup page] before starting this tutorial.
@@ -8154,7 +8201,7 @@ virsh destroy fcos virsh undefine \--remove-all-storage fcos
 
     == Downloading an older Fedora CoreOS release
 
-    One of the defining features of Fedora CoreOS is automatic updates. To see them in action, we have to download an older Fedora CoreOS release. In this case we'll boot the `N-1` release of Fedora CoreOS, which can be seen from the https://fedoraproject.org/coreos/release-notes/[Fedora CoreOS release page] or by using the `releases.json` metadata:
+    One of the defining features of Fedora CoreOS is automatic updates. To see them in action, we have to download an older Fedora CoreOS release. In this case we'll boot the \&#96;N-1\&#96; release of Fedora CoreOS, which can be seen from the https://fedoraproject.org/coreos/release-notes/[Fedora CoreOS release page] or by using the \&#96;releases.json\&#96; metadata:
 
     [source,bash]
 
@@ -8172,7 +8219,7 @@ curl -O
 curl <https://fedoraproject.org/fedora.gpg> \| gpg \--import gpg
 \--verify fedora-coreos-\${RELEASE}-qemu.x86_64.qcow2.xz.sig
 
-    TIP: Look for *"Good signature from"* in the output.
+    TIP: Look for \&#42;'Good signature from'\&#42; in the output.
 
     Once you have verified the archive, you can extract it with:
 
@@ -8190,24 +8237,24 @@ mv fedora-coreos-\${RELEASE}-qemu.x86_64.qcow2 fedora-coreos-older.qcow2
 
     We will create a Butane config that will:
 
-    * Set up console autologin.
-    * Add an SSH Key for the `core` user from the local `ssh-key.pub` file.
+    \&#42; Set up console autologin.
+    \&#42; Add an SSH Key for the \&#96;core\&#96; user from the local \&#96;ssh-key.pub\&#96; file.
 
-    Let's write this Butane config to a file called `updates.bu`:
+    Let's write this Butane config to a file called \&#96;updates.bu\&#96;:
 
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core ssh_authorized_keys_local: - ssh-key.pub systemd: units: -
 name: serial-getty@ttyS0.service dropins: - name: autologin-core.conf
 contents: \|
 
-ExecStart= \# Add new Execstart with `-` prefix to ignore failure
-ExecStart=-/usr/sbin/agetty \--autologin core \--noclear %I \$TERM
-TTYVTDisallocate=no storage: files: - path:
-/etc/profile.d/systemd-pager.sh mode: 0644 contents: inline: \| \# Tell
-systemd to not use a pager when printing information export
-SYSTEMD_PAGER=cat
+&#35; Override Execstart in main unit ExecStart= &#35; Add new Execstart
+with &#96;-&#96; prefix to ignore failure ExecStart=-/usr/sbin/agetty
+\--autologin core \--noclear %I \$TERM TTYVTDisallocate=no storage:
+files: - path: /etc/profile.d/systemd-pager.sh mode: 0644 contents:
+inline: \| &#35; Tell systemd to not use a pager when printing
+information export SYSTEMD_PAGER=cat
 
     TIP: Optionally you can replace the SSH pubkey in the yaml file with your own public key so you can log in to the booted instance. If you choose not to do this you'll still be auto logged in to the serial console.
 
@@ -8222,21 +8269,19 @@ updates.ign
 
     Now let's provision it. Make sure that you are starting from the older Fedora CoreOS image in this step:
 
-    [source, bash]
+    [source,_bash]
 
-# Setup the correct SELinux label to allow access to the config {#_setup_the_correct_selinux_label_to_allow_access_to_the_config_5}
-
+&#35; Setup the correct SELinux label to allow access to the config
 chcon \--verbose \--type svirt_home_t updates.ign
 
-# Start a Fedora CoreOS virtual machine {#_start_a_fedora_coreos_virtual_machine_5}
+&#35; Start a Fedora CoreOS virtual machine virt-install \--name=fcos
+\--vcpus=2 \--ram=2048 \--os-variant=fedora-coreos-stable \\ \--import
+\--network=bridge=virbr0 \--graphics=none \\
+\--qemu-commandline=\'-fw_cfg
+name=opt/com.coreos/config,file=\${PWD}/updates.ign\' \\
+\--disk=\'size=20,backing_store=\${PWD}/fedora-coreos-older.qcow2\'
 
-virt-install \--name=fcos \--vcpus=2 \--ram=2048
-\--os-variant=fedora-coreos-stable \\ \--import \--network=bridge=virbr0
-\--graphics=none \\ \--qemu-commandline=\"-fw_cfg
-name=opt/com.coreos/config,file=\${PWD}/updates.ign\" \\
-\--disk=\"size=20,backing_store=\${PWD}/fedora-coreos-older.qcow2\"
-
-    Disconnect from the serial console by pressing `CTRL` + `]` and then use the reported IP address for the NIC from the serial console to log in using the `core` user via SSH:
+    Disconnect from the serial console by pressing \&#96;CTRL\&#96; + \&#96;]\&#96; and then use the reported IP address for the NIC from the serial console to log in using the \&#96;core\&#96; user via SSH:
 
     As the system is not up to date, Zincati will notice this and will start updating the system. You should see the update process happening right away:
 
@@ -8248,7 +8293,7 @@ zincati.service - Zincati Update Agent Loaded: loaded
 Drop-In: /usr/lib/systemd/system/service.d └─10-timeout-abort.conf
 Active: active (running) since Thu 2023-08-03 19:52:41 UTC; 10s ago
 Docs: <https://github.com/coreos/zincati> Main PID: 1816 (zincati)
-Status: \"found update on remote: 38.20230709.3.0\" Tasks: 12 (limit:
+Status: \'found update on remote: 38.20230709.3.0\' Tasks: 12 (limit:
 2239) Memory: 6.8M CPU: 273ms CGroup: /system.slice/zincati.service
 ├─1816 /usr/libexec/zincati agent -v └─1873 rpm-ostree deploy
 \--lock-finalization \--skip-branch-check
@@ -8299,8 +8344,8 @@ zincati.service - Zincati Update Agent Loaded: loaded
 Drop-In: /usr/lib/systemd/system/service.d └─10-timeout-abort.conf
 Active: active (running) since Thu 2023-08-03 19:52:41 UTC; 1min 21s ago
 Docs: <https://github.com/coreos/zincati> Main PID: 1816 (zincati)
-Status: \"update staged: 38.20230709.3.0; reboot delayed due to active
-user sessions\" Tasks: 6 (limit: 2239) Memory: 3.2M CPU: 362ms CGroup:
+Status: \'update staged: 38.20230709.3.0; reboot delayed due to active
+user sessions\' Tasks: 6 (limit: 2239) Memory: 3.2M CPU: 362ms CGroup:
 /system.slice/zincati.service └─1816 /usr/libexec/zincati agent -v
 
 Aug 03 19:52:41 localhost.localdomain zincati\[1816\]: \[INFO
@@ -8340,9 +8385,9 @@ auto-update process continue.
 \[core@localhost \~\]\$ exit logout Connection to 192.168.124.222
 closed.
 
-    TIP: You can monitor the serial console to see when the machine has performed the reboot via `virsh console fcos`.
+    TIP: You can monitor the serial console to see when the machine has performed the reboot via \&#96;virsh console fcos\&#96;.
 
-    When we log back in we can view the current version of Fedora CoreOS is now the latest one. The `rpm-ostree status` output will also show the older version, which still exists in case we need to rollback:
+    When we log back in we can view the current version of Fedora CoreOS is now the latest one. The \&#96;rpm-ostree status\&#96; output will also show the older version, which still exists in case we need to rollback:
 
 \[core@localhost \~\]\$ rpm-ostree status State: idle
 AutomaticUpdatesDriver: Zincati DriverState: active; periodically
@@ -8359,21 +8404,21 @@ e841d77aadb875bb801ac845a0d9b8a70b4224bdeb15e7d6c5bff1da932c0301
 GPGSignature: Valid signature by
 6A51BBABBA3D5467B6171221809A8D7CEB10B464
 
-    NOTE: The currently booted deployment is denoted by the `●` character.
+    NOTE: The currently booted deployment is denoted by the \&#96;●\&#96; character.
 
-    You can view the differences between the two versions by running an `rpm-ostree db diff` command:
+    You can view the differences between the two versions by running an \&#96;rpm-ostree db diff\&#96; command:
 
 \[core@localhost \~\]\$ rpm-ostree db diff ostree diff commit from:
 rollback deployment
 (e841d77aadb875bb801ac845a0d9b8a70b4224bdeb15e7d6c5bff1da932c0301)
 ostree diff commit to: booted deployment
 (552de26fe0fe6a5e491f7a4163db125e3d44b144ae53a8f5f488e3f8481c46f9)
-Upgraded: NetworkManager 1:1.42.6-1.fc38 → 1:1.42.8-1.fc38
-NetworkManager-cloud-setup 1:1.42.6-1.fc38 → 1:1.42.8-1.fc38
-NetworkManager-libnm 1:1.42.6-1.fc38 → 1:1.42.8-1.fc38
-NetworkManager-team 1:1.42.6-1.fc38 → 1:1.42.8-1.fc38 NetworkManager-tui
-1:1.42.6-1.fc38 → 1:1.42.8-1.fc38 aardvark-dns 1.6.0-1.fc38 →
-1.7.0-1.fc38 ...​
+Upgraded: NetworkManager 1:1.42.6-1.fc38 -&gt; 1:1.42.8-1.fc38
+NetworkManager-cloud-setup 1:1.42.6-1.fc38 -&gt; 1:1.42.8-1.fc38
+NetworkManager-libnm 1:1.42.6-1.fc38 -&gt; 1:1.42.8-1.fc38
+NetworkManager-team 1:1.42.6-1.fc38 -&gt; 1:1.42.8-1.fc38
+NetworkManager-tui 1:1.42.6-1.fc38 -&gt; 1:1.42.8-1.fc38 aardvark-dns
+1.6.0-1.fc38 -&gt; 1.7.0-1.fc38 &#8230;
 
     == Reverting to the previous version
 
@@ -8408,8 +8453,8 @@ zincati.service - Zincati Update Agent Loaded: loaded
 Drop-In: /usr/lib/systemd/system/service.d └─10-timeout-abort.conf
 Active: active (running) since Thu 2023-08-03 20:05:05 UTC; 45s ago
 Docs: <https://github.com/coreos/zincati> Main PID: 813 (zincati)
-Status: \"periodically polling for updates (last checked Thu 2023-08-03
-20:05:05 UTC)\" Tasks: 6 (limit: 2239) Memory: 22.0M CPU: 238ms CGroup:
+Status: \'periodically polling for updates (last checked Thu 2023-08-03
+20:05:05 UTC)\' Tasks: 6 (limit: 2239) Memory: 22.0M CPU: 238ms CGroup:
 /system.slice/zincati.service └─813 /usr/libexec/zincati agent -v
 
 Aug 03 20:05:05 localhost.localdomain zincati\[813\]: \[INFO
@@ -8442,49 +8487,49 @@ not a dead-end
 
 virsh destroy fcos virsh undefine \--remove-all-storage fcos
 
-    * Reference pages
+    \&#42; Reference pages
     = Live ISO and PXE image reference
 
     For an introduction to running Fedora CoreOS directly from RAM, see the xref:live-booting.adoc[provisioning guide].
 
     == Passing the PXE rootfs to a machine
 
-    The Fedora CoreOS PXE image includes three components: a `kernel`, an `initramfs`, and a `rootfs`. All three are mandatory and the live PXE environment will not boot without them.
+    The Fedora CoreOS PXE image includes three components: a \&#96;kernel\&#96;, an \&#96;initramfs\&#96;, and a \&#96;rootfs\&#96;. All three are mandatory and the live PXE environment will not boot without them.
 
-    There are multiple ways to pass the `rootfs` to a machine:
+    There are multiple ways to pass the \&#96;rootfs\&#96; to a machine:
 
-    - Specify only the `initramfs` file as the initrd in your PXE configuration, and pass an HTTP(S) or TFTP URL for the `rootfs` using the `coreos.live.rootfs_url=` kernel argument. This method requires 2 GiB of RAM, and is the recommended option unless you have special requirements.
-    - Specify both `initramfs` and `rootfs` files as initrds in your PXE configuration. This can be done via multiple `initrd` directives, or using additional `initrd=` parameters as kernel arguments. This method is slower than the first method and requires 4 GiB of RAM.
-    - Concatenate the `initramfs` and `rootfs` files together, and specify the combined file as the initrd. This method is slower and requires 4 GiB of RAM.
+    - Specify only the \&#96;initramfs\&#96; file as the initrd in your PXE configuration, and pass an HTTP(S) or TFTP URL for the \&#96;rootfs\&#96; using the \&#96;coreos.live.rootfs_url=\&#96; kernel argument. This method requires 2 GiB of RAM, and is the recommended option unless you have special requirements.
+    - Specify both \&#96;initramfs\&#96; and \&#96;rootfs\&#96; files as initrds in your PXE configuration. This can be done via multiple \&#96;initrd\&#96; directives, or using additional \&#96;initrd=\&#96; parameters as kernel arguments. This method is slower than the first method and requires 4 GiB of RAM.
+    - Concatenate the \&#96;initramfs\&#96; and \&#96;rootfs\&#96; files together, and specify the combined file as the initrd. This method is slower and requires 4 GiB of RAM.
 
     == Passing an Ignition config to a live PXE system
 
-    When booting Fedora CoreOS via live PXE, the kernel command line must include the arguments `ignition.firstboot ignition.platform.id=metal` to run Ignition. If running in a virtual machine, replace `metal` with the https://coreos.github.io/ignition/supported-platforms/[platform ID] for your platform, such as `qemu` or `vmware`.
+    When booting Fedora CoreOS via live PXE, the kernel command line must include the arguments \&#96;ignition.firstboot ignition.platform.id=metal\&#96; to run Ignition. If running in a virtual machine, replace \&#96;metal\&#96; with the https://coreos.github.io/ignition/supported-platforms/[platform ID] for your platform, such as \&#96;qemu\&#96; or \&#96;vmware\&#96;.
 
     There are several ways to pass an Ignition config when booting Fedora CoreOS via PXE:
 
-    - Add `ignition.config.url=<config-url>` to the kernel command line. Supported URL schemes include `http`, `https`, `tftp`, `s3`, and `gs`.
+    - Add \&#96;ignition.config.url=\&lt;config-url\&gt;\&#96; to the kernel command line. Supported URL schemes include \&#96;http\&#96;, \&#96;https\&#96;, \&#96;tftp\&#96;, \&#96;s3\&#96;, and \&#96;gs\&#96;.
 
-    - If running virtualized, pass the Ignition config via the hypervisor, exactly as you would when booting from a disk image. Ensure the `ignition.platform.id` kernel argument is set to the https://coreos.github.io/ignition/supported-platforms/[platform ID] for your platform.
+    - If running virtualized, pass the Ignition config via the hypervisor, exactly as you would when booting from a disk image. Ensure the \&#96;ignition.platform.id\&#96; kernel argument is set to the https://coreos.github.io/ignition/supported-platforms/[platform ID] for your platform.
 
-    - Generate a customized version of the `initramfs` containing your Ignition config using `coreos-installer pxe customize`. For example, run:
+    - Generate a customized version of the \&#96;initramfs\&#96; containing your Ignition config using \&#96;coreos-installer pxe customize\&#96;. For example, run:
     +
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 coreos-installer pxe customize \--live-ignition config.ign -o
 custom-initramfs.img \\
 fedora-coreos-{stable-version}-live-initramfs.x86_64.img
 
-    - If you prefer to keep the Ignition config separate from the Fedora CoreOS `initramfs` image, generate a separate initrd with the low-level `coreos-installer pxe ignition wrap` command and pass it as an additional initrd. For example, run:
+    - If you prefer to keep the Ignition config separate from the Fedora CoreOS \&#96;initramfs\&#96; image, generate a separate initrd with the low-level \&#96;coreos-installer pxe ignition wrap\&#96; command and pass it as an additional initrd. For example, run:
     +
     [source,bash]
 
 coreos-installer pxe ignition wrap -i config.ign -o ignition.img
 
     +
-    and then use a PXELINUX `APPEND` line similar to:
+    and then use a PXELINUX \&#96;APPEND\&#96; line similar to:
     +
-    [source,subs="attributes"]
+    [source,subs='attributes']
 
 APPEND
 initrd=fedora-coreos-{stable-version}-live-initramfs.x86_64.img,fedora-coreos-{stable-version}-live-rootfs.x86_64.img,ignition.img
@@ -8494,22 +8539,22 @@ ignition.firstboot ignition.platform.id=metal
 
     On Fedora CoreOS, networking is typically configured via https://developer.gnome.org/NetworkManager/stable/nm-settings-keyfile.html[NetworkManager keyfiles]. If your network requires special configuration such as static IP addresses, and your Ignition config fetches resources from the network, you cannot simply include those keyfiles in your Ignition config, since that would create a circular dependency.
 
-    Instead, you can use `coreos-installer iso customize` or `coreos-installer pxe customize` with the `--network-keyfile` option to create a customized ISO image or PXE `initramfs` image which applies your network settings before running Ignition. For example:
+    Instead, you can use \&#96;coreos-installer iso customize\&#96; or \&#96;coreos-installer pxe customize\&#96; with the \&#96;--network-keyfile\&#96; option to create a customized ISO image or PXE \&#96;initramfs\&#96; image which applies your network settings before running Ignition. For example:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 coreos-installer iso customize \--network-keyfile custom.nmconnection -o
 custom.iso \\ fedora-coreos-{stable-version}-live.x86_64.iso
 
-    If you're PXE booting and want to keep your network settings separate from the Fedora CoreOS `initramfs` image, you can also use the lower-level `coreos-installer pxe network wrap` command to create a separate initrd image, and pass that as an additional initrd. For example, run:
+    If you're PXE booting and want to keep your network settings separate from the Fedora CoreOS \&#96;initramfs\&#96; image, you can also use the lower-level \&#96;coreos-installer pxe network wrap\&#96; command to create a separate initrd image, and pass that as an additional initrd. For example, run:
 
     [source,bash]
 
 coreos-installer pxe network wrap -k custom.nmconnection -o network.img
 
-    and then use a PXELINUX `APPEND` line similar to:
+    and then use a PXELINUX \&#96;APPEND\&#96; line similar to:
 
-    [source,subs="attributes"]
+    [source,subs='attributes']
 
 APPEND
 initrd=fedora-coreos-{stable-version}-live-initramfs.x86_64.img,fedora-coreos-{stable-version}-live-rootfs.x86_64.img,network.img
@@ -8517,9 +8562,9 @@ ignition.firstboot ignition.platform.id=metal
 
     == Passing kernel arguments to a live ISO system
 
-    If you want to modify the default kernel arguments of a live ISO system, you can use the `--live-karg-{append,replace,delete}` options to `coreos-installer iso customize`. For example, if you want to enable simultaneous multithreading (SMT) even on CPUs where that is insecure, you can run:
+    If you want to modify the default kernel arguments of a live ISO system, you can use the \&#96;--live-karg-{append,replace,delete}\&#96; options to \&#96;coreos-installer iso customize\&#96;. For example, if you want to enable simultaneous multithreading (SMT) even on CPUs where that is insecure, you can run:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 coreos-installer iso customize \--live-karg-delete
 mitigations=auto,nosmt -o custom.iso \\
@@ -8529,7 +8574,7 @@ fedora-coreos-{stable-version}-live.x86_64.iso
 
     If you want the Fedora CoreOS PXE artifacts and already have an ISO image, you can extract the PXE artifacts from it:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 podman run \--security-opt label=disable \--pull=always \--rm -v .:/data
 -w /data \\ quay.io/coreos/coreos-installer:release iso extract pxe \\
@@ -8541,11 +8586,11 @@ fedora-coreos-{stable-version}-live.x86_64.iso
 
     In some cases, you may want to boot the Fedora CoreOS ISO image on a machine equipped with Lights-Out Management (LOM) hardware. You can upload the ISO to the LOM controller as a virtual CD image, but the ISO may be larger than the LOM controller supports.
 
-    To avoid this problem, you can convert the ISO image to a smaller _minimal ISO image_ without the `rootfs`. Similar to the PXE image, the minimal ISO must fetch the `rootfs` from the network during boot.
+    To avoid this problem, you can convert the ISO image to a smaller _minimal ISO image_ without the \&#96;rootfs\&#96;. Similar to the PXE image, the minimal ISO must fetch the \&#96;rootfs\&#96; from the network during boot.
 
-    Suppose you plan to host the `rootfs` image at `https://example.com/fedora-coreos-{stable-version}-live-rootfs.x86_64.img`. This command will extract a minimal ISO image and a `rootfs` from an ISO image, embedding a `coreos.live.rootfs_url` kernel argument with the correct URL:
+    Suppose you plan to host the \&#96;rootfs\&#96; image at \&#96;https://example.com/fedora-coreos-{stable-version}-live-rootfs.x86_64.img\&#96;. This command will extract a minimal ISO image and a \&#96;rootfs\&#96; from an ISO image, embedding a \&#96;coreos.live.rootfs_url\&#96; kernel argument with the correct URL:
 
-    [source,bash,subs="attributes"]
+    [source,bash,subs='attributes']
 
 podman run \--security-opt label=disable \--pull=always \--rm -v .:/data
 -w /data \\ quay.io/coreos/coreos-installer:release iso extract
@@ -8565,55 +8610,55 @@ fedora-coreos-{stable-version}-live-minimal.x86_64.iso
 
     === x86_64
 
-    * Aliyun/Alibaba Cloud (`aliyun`): Cloud platform. See xref:provisioning-aliyun.adoc[Booting on Alibaba Cloud].
-    * Amazon Web Services (`aws`): Cloud platform. See xref:provisioning-aws.adoc[Booting on AWS].
-    * Microsoft Azure (`azure`): Cloud platform. See xref:provisioning-azure.adoc[Booting on Azure].
-    * Microsoft Azure Stack (`azurestack`): Cloud platform.
-    * DigitalOcean (`digitalocean`): Cloud platform. See xref:provisioning-digitalocean.adoc[Booting on DigitalOcean].
-    * Exoscale (`exoscale`): Cloud platform. See xref:provisioning-exoscale.adoc[Booting on Exoscale].
-    * Google Cloud Platform (`gcp`): Cloud platform. See xref:provisioning-gcp.adoc[Booting on GCP].
-    * Hetzner (`hetzner`): Cloud platform. See xref:provisioning-hetzner.adoc[Booting on Hetzner].
-    * HyperV (`hyperv`): Hypervisor. See xref:provisioning-hyperv.adoc[Booting on HyperV].
-    * IBM Cloud (`ibmcloud`): Cloud platform. See xref:provisioning-ibmcloud.adoc[Booting on IBM Cloud].
-    * KubeVirt (`kubevirt`): Cloud platform. See xref:provisioning-kubevirt.adoc[Booting on KubeVirt].
-    * libvirt (`libvirt`): Hypervisor. See xref:provisioning-libvirt.adoc[Booting on libvirt]
-    * Bare metal (`metal`): With BIOS, UEFI or network boot, with standard or 4k Native disks. See xref:bare-metal.adoc[Installing on Bare Metal] or xref:live-booting-ipxe.adoc[Live-booting via iPXE].
-    * Nutanix (`nutanix`): Hypervisor. See xref:provisioning-nutanix.adoc[Booting on Nutanix].
-    * MacOS (`applehv`): Hypervisor. See xref:provisioning-applehv.adoc[Booting on MacOS].
-    * OpenStack (`openstack`): Cloud platform. See xref:provisioning-openstack.adoc[Booting on OpenStack].
-    * Oracle Cloud (`oraclecloud`): Cloud platform. See xref:provisioning-oraclecloud.adoc[Booting on Oracle Cloud].
-    * Proxmox (`proxmoxve`): Hypervisor. See xref:provisioning-proxmoxve.adoc[Booting on Proxmox]
-    * QEMU (`qemu`): Hypervisor. See xref:provisioning-qemu.adoc[Booting on QEMU]
-    * VirtualBox (`virtualbox`): Hypervisor. See xref:provisioning-virtualbox.adoc[Booting on VirtualBox].
-    * VMware ESXi, Fusion, and Workstation (`vmware`): Hypervisor. See xref:provisioning-vmware.adoc[Booting on VMware]. Fedora CoreOS images currently use https://kb.vmware.com/s/article/1003746[hardware version] 17, supporting VMware ESXi 7.0 or later, Fusion 12.0 or later, and Workstation 16.0 or later.
-    * Vultr (`vultr`): Cloud platform. See xref:provisioning-vultr.adoc[Booting on Vultr].
+    \&#42; Aliyun/Alibaba Cloud (\&#96;aliyun\&#96;): Cloud platform. See xref:provisioning-aliyun.adoc[Booting on Alibaba Cloud].
+    \&#42; Amazon Web Services (\&#96;aws\&#96;): Cloud platform. See xref:provisioning-aws.adoc[Booting on AWS].
+    \&#42; Microsoft Azure (\&#96;azure\&#96;): Cloud platform. See xref:provisioning-azure.adoc[Booting on Azure].
+    \&#42; Microsoft Azure Stack (\&#96;azurestack\&#96;): Cloud platform.
+    \&#42; DigitalOcean (\&#96;digitalocean\&#96;): Cloud platform. See xref:provisioning-digitalocean.adoc[Booting on DigitalOcean].
+    \&#42; Exoscale (\&#96;exoscale\&#96;): Cloud platform. See xref:provisioning-exoscale.adoc[Booting on Exoscale].
+    \&#42; Google Cloud Platform (\&#96;gcp\&#96;): Cloud platform. See xref:provisioning-gcp.adoc[Booting on GCP].
+    \&#42; Hetzner (\&#96;hetzner\&#96;): Cloud platform. See xref:provisioning-hetzner.adoc[Booting on Hetzner].
+    \&#42; HyperV (\&#96;hyperv\&#96;): Hypervisor. See xref:provisioning-hyperv.adoc[Booting on HyperV].
+    \&#42; IBM Cloud (\&#96;ibmcloud\&#96;): Cloud platform. See xref:provisioning-ibmcloud.adoc[Booting on IBM Cloud].
+    \&#42; KubeVirt (\&#96;kubevirt\&#96;): Cloud platform. See xref:provisioning-kubevirt.adoc[Booting on KubeVirt].
+    \&#42; libvirt (\&#96;libvirt\&#96;): Hypervisor. See xref:provisioning-libvirt.adoc[Booting on libvirt]
+    \&#42; Bare metal (\&#96;metal\&#96;): With BIOS, UEFI or network boot, with standard or 4k Native disks. See xref:bare-metal.adoc[Installing on Bare Metal] or xref:live-booting-ipxe.adoc[Live-booting via iPXE].
+    \&#42; Nutanix (\&#96;nutanix\&#96;): Hypervisor. See xref:provisioning-nutanix.adoc[Booting on Nutanix].
+    \&#42; MacOS (\&#96;applehv\&#96;): Hypervisor. See xref:provisioning-applehv.adoc[Booting on MacOS].
+    \&#42; OpenStack (\&#96;openstack\&#96;): Cloud platform. See xref:provisioning-openstack.adoc[Booting on OpenStack].
+    \&#42; Oracle Cloud (\&#96;oraclecloud\&#96;): Cloud platform. See xref:provisioning-oraclecloud.adoc[Booting on Oracle Cloud].
+    \&#42; Proxmox (\&#96;proxmoxve\&#96;): Hypervisor. See xref:provisioning-proxmoxve.adoc[Booting on Proxmox]
+    \&#42; QEMU (\&#96;qemu\&#96;): Hypervisor. See xref:provisioning-qemu.adoc[Booting on QEMU]
+    \&#42; VirtualBox (\&#96;virtualbox\&#96;): Hypervisor. See xref:provisioning-virtualbox.adoc[Booting on VirtualBox].
+    \&#42; VMware ESXi, Fusion, and Workstation (\&#96;vmware\&#96;): Hypervisor. See xref:provisioning-vmware.adoc[Booting on VMware]. Fedora CoreOS images currently use https://kb.vmware.com/s/article/1003746[hardware version] 17, supporting VMware ESXi 7.0 or later, Fusion 12.0 or later, and Workstation 16.0 or later.
+    \&#42; Vultr (\&#96;vultr\&#96;): Cloud platform. See xref:provisioning-vultr.adoc[Booting on Vultr].
 
     === AArch64
 
-    * Amazon Web Services (`aws`): Cloud platform. See xref:provisioning-aws.adoc[Booting on AWS].
-    * Bare metal (`metal`): With UEFI or network boot, with standard or 4k Native disks. See xref:bare-metal.adoc[Installing on Bare Metal] or xref:live-booting-ipxe.adoc[Live-booting via iPXE] and xref:provisioning-raspberry-pi4.adoc[Booting on the Raspberry Pi 4].
-    * QEMU (`qemu`): Hypervisor. See xref:provisioning-libvirt.adoc[Booting on libvirt]
-    * OpenStack (`openstack`): Cloud platform. See xref:provisioning-openstack.adoc[Booting on OpenStack].
+    \&#42; Amazon Web Services (\&#96;aws\&#96;): Cloud platform. See xref:provisioning-aws.adoc[Booting on AWS].
+    \&#42; Bare metal (\&#96;metal\&#96;): With UEFI or network boot, with standard or 4k Native disks. See xref:bare-metal.adoc[Installing on Bare Metal] or xref:live-booting-ipxe.adoc[Live-booting via iPXE] and xref:provisioning-raspberry-pi4.adoc[Booting on the Raspberry Pi 4].
+    \&#42; QEMU (\&#96;qemu\&#96;): Hypervisor. See xref:provisioning-libvirt.adoc[Booting on libvirt]
+    \&#42; OpenStack (\&#96;openstack\&#96;): Cloud platform. See xref:provisioning-openstack.adoc[Booting on OpenStack].
 
     === s390x
 
-    * IBM Cloud (`ibmcloud`): Cloud platform. See xref:provisioning-ibmcloud.adoc[Booting on IBM Cloud].
-    * Bare metal (`metal`): From disk or network boot. See xref:bare-metal.adoc[Installing on Bare Metal] or xref:live-booting-ipxe.adoc[Live-booting via iPXE].
-    * QEMU (`qemu`): Hypervisor. See xref:provisioning-libvirt.adoc[Booting on libvirt]
-    * OpenStack (`openstack`): Cloud platform. See xref:provisioning-openstack.adoc[Booting on OpenStack].
+    \&#42; IBM Cloud (\&#96;ibmcloud\&#96;): Cloud platform. See xref:provisioning-ibmcloud.adoc[Booting on IBM Cloud].
+    \&#42; Bare metal (\&#96;metal\&#96;): From disk or network boot. See xref:bare-metal.adoc[Installing on Bare Metal] or xref:live-booting-ipxe.adoc[Live-booting via iPXE].
+    \&#42; QEMU (\&#96;qemu\&#96;): Hypervisor. See xref:provisioning-libvirt.adoc[Booting on libvirt]
+    \&#42; OpenStack (\&#96;openstack\&#96;): Cloud platform. See xref:provisioning-openstack.adoc[Booting on OpenStack].
 
     == Runtime introspection of platform IDs
 
-    Each Fedora CoreOS image boots with a platform-specific identifier, available on the kernel command-line. The name of the parameter is `ignition.platform.id`. The platform ID is consumed by OS components such as https://github.com/coreos/ignition[Ignition] and https://github.com/coreos/afterburn[Afterburn]. Additionally, it can be used in systemd units via https://www.freedesktop.org/software/systemd/man/systemd.unit.html#ConditionKernelCommandLine=[`ConditionKernelCommandLine=`].
+    Each Fedora CoreOS image boots with a platform-specific identifier, available on the kernel command-line. The name of the parameter is \&#96;ignition.platform.id\&#96;. The platform ID is consumed by OS components such as https://github.com/coreos/ignition[Ignition] and https://github.com/coreos/afterburn[Afterburn]. Additionally, it can be used in systemd units via https://www.freedesktop.org/software/systemd/man/systemd.unit.html\&#35;ConditionKernelCommandLine=[\&#96;ConditionKernelCommandLine=\&#96;].
 
     See https://coreos.github.io/ignition/supported-platforms/[Ignition's Supported Platforms] and https://coreos.github.io/afterburn/platforms/[Afterburn's Supported Platforms] documentation pages for more details about which features are supported for each platform. Note that some platforms are currently supported by Ignition and Afterburn but are not yet supported by Fedora CoreOS.
 
     The Platform ID can be introspected at runtime, as follows:
 
     .CLI example of platform introspection
-    [source, bash]
+    [source,_bash]
 
-\$ grep -o ignition.platform.id=\'[]{#:alnum:}\*\' /proc/cmdline
+\$ grep -o ignition.platform.id=\'[]{#:alnum:}&#42;\' /proc/cmdline
 
 ignition.platform.id=aws
 
@@ -8621,12 +8666,14 @@ ignition.platform.id=aws
 
     This a list of projects that are actively using Fedora CoreOS:
 
-    * https://docs.podman.io/en/latest/markdown/podman-machine.1.html[Podman Machine] uses Fedora CoreOS to run containers in a local environment (notably including Windows and macOS), and also has a https://docs.podman.io/en/latest/markdown/podman-machine-os.1.html[podman machine os] command that allows customization of Fedora CoreOS in a container-native way.
-    * https://www.okd.io[OKD] is the Community Distribution of Kubernetes that powers https://www.openshift.com/products/container-platform[Red Hat OpenShift Container Platform]. By default, Fedora CoreOS is the underlying OS used by the control plane nodes and the worker nodes.
-    * https://github.com/poseidon/typhoon[Typhoon] is a minimal and free Kubernetes distribution. Users of Typhoon have the option of using Fedora CoreOS as the underlying OS for their nodes.
-    * https://wiki.openstack.org/wiki/Magnum[OpenStack Magnum] is an OpenStack API service developed by the OpenStack Containers Team making container orchestration engines such as Docker Swarm, Kubernetes, and Apache Mesos available as first class resources in OpenStack. Fedora CoreOS is used as the underlying OS for nodes that are provisioned via Magnum.
-    * https://www.ovirt.org/develop/release-management/features/virt/coreos-ignition-support.html[oVirt] supports booting Fedora CoreOS nodes and has native support for https://github.com/coreos/ignition[Ignition] configurations.
-    * https://quay.io/[Quay.io] is using Fedora CoreOS in production to handle the job of building containers for their users.
+    \&#42; https://docs.podman.io/en/latest/markdown/podman-machine.1.html[Podman Machine] uses Fedora CoreOS to run containers in a local environment (notably including Windows and macOS), and also has a https://docs.podman.io/en/latest/markdown/podman-machine-os.1.html[podman machine os] command that allows customization of Fedora CoreOS in a container-native way.
+    \&#42; https://www.okd.io[OKD] is the Community Distribution of Kubernetes that powers https://www.openshift.com/products/container-platform[Red Hat OpenShift Container Platform]. By default, Fedora CoreOS is the underlying OS used by the control plane nodes and the worker nodes.
+    \&#42; https://github.com/poseidon/typhoon[Typhoon] is a minimal and free Kubernetes distribution. Users of Typhoon have the option of using Fedora CoreOS as the underlying OS for their nodes.
+    \&#42; https://wiki.openstack.org/wiki/Magnum[OpenStack Magnum] is an OpenStack API service developed by the OpenStack Containers Team making container orchestration engines such as Docker Swarm, Kubernetes, and Apache Mesos available as first class resources in OpenStack. Fedora CoreOS is used as the underlying OS for nodes that are provisioned via Magnum.
+    \&#42; https://www.ovirt.org/develop/release-management/features/virt/coreos-ignition-support.html[oVirt] supports booting Fedora CoreOS nodes and has native support for https://github.com/coreos/ignition[Ignition] configurations.
+    \&#42; https://quay.io/[Quay.io] is using Fedora CoreOS in production to handle the job of building containers for their users.
+
+
     = Signing keys and updates
 
     All binary artifacts, ostree commits, and OS images belonging to Fedora and Fedora CoreOS (FCOS) are signed via GPG. The current set of trusted signing keys is available at https://fedoraproject.org/security/.
@@ -8645,67 +8692,71 @@ ignition.platform.id=aws
 
 \$ grep OSTREE /etc/os-release OSTREE_VERSION=\'32.20200615.3.0\'
 
-\$ ls -v /usr/etc/pki/rpm-gpg/\*primary \| tail -3
+\$ ls -v /usr/etc/pki/rpm-gpg/&#42;primary \| tail -3
 /usr/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-31-primary
 /usr/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-32-primary
 /usr/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-33-primary
 
-    Later in that release cycle, the signing key is generated for future Fedora 34 releases and added to FCOS. A barrier is put in place in FCOS update graph, for example on release `32.20200907.3.0`. Inspecting that image shows the following:
+    Later in that release cycle, the signing key is generated for future Fedora 34 releases and added to FCOS. A barrier is put in place in FCOS update graph, for example on release \&#96;32.20200907.3.0\&#96;. Inspecting that image shows the following:
 
 \$ grep OSTREE /etc/os-release OSTREE_VERSION=\'32.20200907.3.0\'
 
-\$ ls -v /usr/etc/pki/rpm-gpg/\*primary \| tail -3
+\$ ls -v /usr/etc/pki/rpm-gpg/&#42;primary \| tail -3
 /usr/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-32-primary
 /usr/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-33-primary
 /usr/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-34-primary
 
-    With this barrier in place, older instances must first upgrade to `32.20200907.3.0` in order to make sure they know (and trust) the signing key for Fedora 34, before being able to upgrade to new releases based on that.
-    * Projects documentation
-    ** https://coreos.github.io/afterburn/[Afterburn]
-    ** https://coreos.github.io/butane/[Butane (Config Transpiler)]
-    ** https://coreos.github.io/coreos-assembler/[CoreOS Assembler]
-    ** https://coreos.github.io/coreos-installer/[CoreOS Installer]
-    ** https://coreos.github.io/ignition/[Ignition]
-    ** https://coreos.github.io/rpm-ostree/[rpm-ostree]
-    ** https://coreos.github.io/zincati/[Zincati]
-    ** https://ostreedev.github.io/ostree/[ostree]
-    * Migration notes
+    With this barrier in place, older instances must first upgrade to \&#96;32.20200907.3.0\&#96; in order to make sure they know (and trust) the signing key for Fedora 34, before being able to upgrade to new releases based on that.
+
+
+    \&#42; Projects documentation
+    \&#42;\&#42; https://coreos.github.io/afterburn/[Afterburn]
+    \&#42;\&#42; https://coreos.github.io/butane/[Butane (Config Transpiler)]
+    \&#42;\&#42; https://coreos.github.io/coreos-assembler/[CoreOS Assembler]
+    \&#42;\&#42; https://coreos.github.io/coreos-installer/[CoreOS Installer]
+    \&#42;\&#42; https://coreos.github.io/ignition/[Ignition]
+    \&#42;\&#42; https://coreos.github.io/rpm-ostree/[rpm-ostree]
+    \&#42;\&#42; https://coreos.github.io/zincati/[Zincati]
+    \&#42;\&#42; https://ostreedev.github.io/ostree/[ostree]
+    \&#42; Migration notes
     = Migrating from Fedora Atomic Host (FAH) to Fedora CoreOS (FCOS)
 
     == Overview
 
     https://www.projectatomic.io/[Fedora Atomic Host] was a system to deploy applications in containers. Existing FAH users are encouraged to migrate to FCOS, as the project has reached its end-of-life.
 
-    FAH used `cloud-init` for provisioning, which required users to provide a `cloud-config` file as userdata for configuration of the instance. Since FCOS Ignition and `cloud-init` are different and have overlapping feature sets, it is not trivial to convert `cloud-init` files to Ignition. Currently, there is no tool for this conversion, so you must manually convert `cloud-init` configs to Butane configs. Refer to link:https://coreos.github.io/butane/specs/[Butane Specification] for an explanation of the available configuration options.
+    FAH used \&#96;cloud-init\&#96; for provisioning, which required users to provide a \&#96;cloud-config\&#96; file as userdata for configuration of the instance. Since FCOS Ignition and \&#96;cloud-init\&#96; are different and have overlapping feature sets, it is not trivial to convert \&#96;cloud-init\&#96; files to Ignition. Currently, there is no tool for this conversion, so you must manually convert \&#96;cloud-init\&#96; configs to Butane configs. Refer to link:https://coreos.github.io/butane/specs/[Butane Specification] for an explanation of the available configuration options.
 
-    == Converting `cloud-init` and `cloud-config` userdata
+    == Converting \&#96;cloud-init\&#96; and \&#96;cloud-config\&#96; userdata
 
     The following examples show the difference between FAH userdata and user configuration with Butane.
 
     .Example of FAH userdata file:
 
-#cloud-config password: atomic ssh_pwauth: True chpasswd: { expire:
+&#35;cloud-config password: atomic ssh_pwauth: True chpasswd: { expire:
 False }
 
-ssh_authorized_keys: - ssh-rsa ...​
+ssh_authorized_keys: - ssh-rsa &#8230;
 
-    This can be manually translated into a `passwd` node within the Butane config:
+    This can be manually translated into a \&#96;passwd\&#96; node within the Butane config:
 
     .Example of users:
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} passwd: users: -
 name: core password_hash:
-\"\$6\$5s2u6/jR\$un0AvWnqilcgaNB3Mkxd5yYv6mTlWfOoCYHZmfi3LDKVltj.E8XNKEcwWm...​\"
-ssh_authorized_keys: - \"ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABAQDGdByTgSVHq...​...​.\" groups: \[ sudo,
-docker \]
+\'\$6\$5s2u6/jR\$un0AvWnqilcgaNB3Mkxd5yYv6mTlWfOoCYHZmfi3LDKVltj.E8XNKEcwWm&#8230;\'
+ssh_authorized_keys: - \'ssh-rsa
+AAAAB3NzaC1yc2EAAAADAQABAAABAQDGdByTgSVHq&#8230;&#8230;.\' groups: \[
+sudo, docker \]
 
     NOTE: Fedora CoreOS disables password login over SSH by default. It is strongly recommended to only use key authentication. Setting passwords can be useful however for logging into the console directly.
 
     == Converting storage definitions
 
-    With FAH, you could configure additional storage for the system with either `cloud-init` or  `docker-storage-setup` via the `/etc/sysconfig/docker-storage-setup` file. With FCOS, you should configure additional storage at provisioning time via Ignition in the `storage` node of the Butane config.
+    With FAH, you could configure additional storage for the system with either \&#96;cloud-init\&#96; or  \&#96;docker-storage-setup\&#96; via the \&#96;/etc/sysconfig/docker-storage-setup\&#96; file. With FCOS, you should configure additional storage at provisioning time via Ignition in the \&#96;storage\&#96; node of the Butane config.
+
+
     = Migrating from CoreOS Container Linux (CL) to Fedora CoreOS (FCOS)
 
     Fedora CoreOS is the official successor of CoreOS Container Linux, which https://coreos.com/os/eol/[reached its end of life] on May 26, 2020. This page attempts to document the differences between CL and FCOS to ease the transition to FCOS.
@@ -8714,66 +8765,68 @@ docker \]
 
     == Introduction
 
-    To migrate from CL to FCOS, you must convert your old Container Linux Configs, Ignition configs, or `cloud-config` files to a xref:producing-ign.adoc[Butane config] and adapt the contents for FCOS. Since many of the configuration details have changed, you should reference this page and the https://github.com/coreos/fedora-coreos-tracker/issues/159[CL migration issue] on GitHub.
+    To migrate from CL to FCOS, you must convert your old Container Linux Configs, Ignition configs, or \&#96;cloud-config\&#96; files to a xref:producing-ign.adoc[Butane config] and adapt the contents for FCOS. Since many of the configuration details have changed, you should reference this page and the https://github.com/coreos/fedora-coreos-tracker/issues/159[CL migration issue] on GitHub.
 
     == Installation changes
 
     The following changes have been made to the installation process:
 
-    * The `coreos-install` script has been replaced with https://github.com/coreos/coreos-installer[`coreos-installer`]. It offers similar functionality.
-    * The `coreos.autologin` kernel command-line parameter is not currently supported in FCOS. For access recovery purposes, there are instructions available xref:access-recovery.adoc[here].
-    * Certain CL platforms, such as Vagrant, are not yet supported in FCOS. Refer to the https://fedoraproject.org/coreos/download/[Download page] to see the available image types.
+    \&#42; The \&#96;coreos-install\&#96; script has been replaced with https://github.com/coreos/coreos-installer[\&#96;coreos-installer\&#96;]. It offers similar functionality.
+    \&#42; The \&#96;coreos.autologin\&#96; kernel command-line parameter is not currently supported in FCOS. For access recovery purposes, there are instructions available xref:access-recovery.adoc[here].
+    \&#42; Certain CL platforms, such as Vagrant, are not yet supported in FCOS. Refer to the https://fedoraproject.org/coreos/download/[Download page] to see the available image types.
 
     == Software package changes
 
-    * `etcd` is not included in FCOS. Refer to xref:running-containers.adoc#running-etcd[Running etcd] for instructions to run it as a container on FCOS.
-    * `flannel` is not included in FCOS.
-    * The Podman container runtime is included in FCOS and is the recommended container runtime. The rkt container runtime is not included.
-    * FCOS does not have a recommended mechanism to select the version of `docker`.
-    * Network configuration is now handled by NetworkManager instead of `systemd-networkd`.
-    * For time synchronization, use https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/servers/Configuring_NTP_Using_the_chrony_Suite/[`chronyd`] rather than `ntpd` or `systemd-timesyncd`.
-    * Automatic updates are now coordinated by Zincati, as described in the https://coreos.github.io/zincati/usage/auto-updates/[Zincati documentation]. The rollback mechanism (via grub) is now provided by https://coreos.github.io/rpm-ostree/[`rpm-ostree`].
-    * The functionality of the reboot manager (`locksmith`) is rolled into https://coreos.github.io/zincati/[Zincati].
-    * The `update-ssh-keys` tool is not provided on FCOS. sshd uses a xref:authentication.adoc#ssh-key-locations[helper program] to read key files directly out of `~/.ssh/authorized_keys.d`.
+    \&#42; \&#96;etcd\&#96; is not included in FCOS. Refer to xref:running-containers.adoc\&#35;running-etcd[Running etcd] for instructions to run it as a container on FCOS.
+    \&#42; \&#96;flannel\&#96; is not included in FCOS.
+    \&#42; The Podman container runtime is included in FCOS and is the recommended container runtime. The rkt container runtime is not included.
+    \&#42; FCOS does not have a recommended mechanism to select the version of \&#96;docker\&#96;.
+    \&#42; Network configuration is now handled by NetworkManager instead of \&#96;systemd-networkd\&#96;.
+    \&#42; For time synchronization, use https://docs.fedoraproject.org/en-US/fedora/rawhide/system-administrators-guide/servers/Configuring_NTP_Using_the_chrony_Suite/[\&#96;chronyd\&#96;] rather than \&#96;ntpd\&#96; or \&#96;systemd-timesyncd\&#96;.
+    \&#42; Automatic updates are now coordinated by Zincati, as described in the https://coreos.github.io/zincati/usage/auto-updates/[Zincati documentation]. The rollback mechanism (via grub) is now provided by https://coreos.github.io/rpm-ostree/[\&#96;rpm-ostree\&#96;].
+    \&#42; The functionality of the reboot manager (\&#96;locksmith\&#96;) is rolled into https://coreos.github.io/zincati/[Zincati].
+    \&#42; The \&#96;update-ssh-keys\&#96; tool is not provided on FCOS. sshd uses a xref:authentication.adoc\&#35;ssh-key-locations[helper program] to read key files directly out of \&#96;~/.ssh/authorized_keys.d\&#96;.
 
     == Configuration changes
 
     When writing Butane configs, note the following changes:
 
-    * `coreos-metadata` is now https://coreos.github.io/afterburn/[Afterburn]. The prefix of the metadata variable names has changed from `COREOS_` to `AFTERBURN_`, and the following platform names have changed:
-    ** `EC2` is now `AWS`
-    ** `GCE` is now `GCP`
+    \&#42; \&#96;coreos-metadata\&#96; is now https://coreos.github.io/afterburn/[Afterburn]. The prefix of the metadata variable names has changed from \&#96;COREOS_\&#96; to \&#96;AFTERBURN_\&#96;, and the following platform names have changed:
+    \&#42;\&#42; \&#96;EC2\&#96; is now \&#96;AWS\&#96;
+    \&#42;\&#42; \&#96;GCE\&#96; is now \&#96;GCP\&#96;
     +
     For more info, see the https://coreos.github.io/afterburn/usage/attributes/[Afterburn documentation].
 
-    * By default, FCOS does not allow password logins via SSH. We recommend xref:authentication.adoc#using-an-ssh-key[configuring SSH keys] instead. If needed, you can xref:authentication.adoc#enabling-ssh-password-authentication[enable SSH password authentication].
-    * Because `usermod` is not yet fully-functional on FCOS, there is a `docker` group in the `/etc/group` file. This is a stop-gap measure to facilitate a smooth transition to FCOS. The team is working on a more functional `usermod`, at which time the `docker` group will no longer be included by default. See the https://github.com/coreos/fedora-coreos-tracker/issues/2[docker group issue].
-    * There is no way to create directories below the `/` directory. Changes are restricted to `/etc` and `/var`. Refer to the documentation for the `storage` node of the Butane config for details about writing directories and files to FCOS.
-    * Butane configs no longer have a separate section for network configuration. Use the Butane `files` section to write a https://developer.gnome.org/NetworkManager/stable/nm-settings-keyfile.html[NetworkManager key file] instead.
+    \&#42; By default, FCOS does not allow password logins via SSH. We recommend xref:authentication.adoc\&#35;using-an-ssh-key[configuring SSH keys] instead. If needed, you can xref:authentication.adoc\&#35;enabling-ssh-password-authentication[enable SSH password authentication].
+    \&#42; Because \&#96;usermod\&#96; is not yet fully-functional on FCOS, there is a \&#96;docker\&#96; group in the \&#96;/etc/group\&#96; file. This is a stop-gap measure to facilitate a smooth transition to FCOS. The team is working on a more functional \&#96;usermod\&#96;, at which time the \&#96;docker\&#96; group will no longer be included by default. See the https://github.com/coreos/fedora-coreos-tracker/issues/2[docker group issue].
+    \&#42; There is no way to create directories below the \&#96;/\&#96; directory. Changes are restricted to \&#96;/etc\&#96; and \&#96;/var\&#96;. Refer to the documentation for the \&#96;storage\&#96; node of the Butane config for details about writing directories and files to FCOS.
+    \&#42; Butane configs no longer have a separate section for network configuration. Use the Butane \&#96;files\&#96; section to write a https://developer.gnome.org/NetworkManager/stable/nm-settings-keyfile.html[NetworkManager key file] instead.
 
     == Operator notes
 
-    * FCOS provides https://fedoramagazine.org/fedora-coreos-out-of-preview/[best-effort stability], and may occasionally include regressions or breaking changes for some use cases or workloads.
-    * CL had three release channels: `alpha`, `beta`, and `stable`. The FCOS production https://github.com/coreos/fedora-coreos-tracker/blob/main/Design.md#release-streams[release streams] are `next`, `testing`, and `stable`, with somewhat different semantics.
-    * In general, SELinux confinement should work the same as in Fedora.
-    * To deploy an Ignition config as part of a PXE image (a "custom OEM" in CL terminology), follow the https://coreos.com/os/docs/latest/booting-with-pxe.html#adding-a-custom-oem[same process] as in CL, but place the `config.ign` file in the root of the archive.
-    * In CL, metrics/telemetry data was collected by the update mechanism. In FCOS, nodes are counted (without unique identifiers) via the xref:counting.adoc[Count Me] mechanism.
-    * Cloud CLI clients are not included in FCOS. There is an initiative to create a "tools" container to run on FCOS.
-    * When opening an existing file in a sticky directory, the behavior differs from CL. See https://github.com/systemd/systemd/commit/2732587540035227fe59e4b64b60127352611b35[the relevant systemd commit].
-    * CL left Simultaneous Multi-Threading (SMT) enabled but advised users to turn it off if their systems were vulnerable to certain issues such as https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/l1tf.html[L1TF] or https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html[MDS]. By default, FCOS https://github.com/coreos/fedora-coreos-tracker/blob/main/Design.md#automatically-disable-smt-when-needed-to-address-vulnerabilities[automatically disables SMT] for vulnerable systems.
-    * In general, `docker` uses the default configuration from Fedora, which is different under many aspects. Notably the logging driver is set to `journald` and live-restore is enabled.
+    \&#42; FCOS provides https://fedoramagazine.org/fedora-coreos-out-of-preview/[best-effort stability], and may occasionally include regressions or breaking changes for some use cases or workloads.
+    \&#42; CL had three release channels: \&#96;alpha\&#96;, \&#96;beta\&#96;, and \&#96;stable\&#96;. The FCOS production https://github.com/coreos/fedora-coreos-tracker/blob/main/Design.md\&#35;release-streams[release streams] are \&#96;next\&#96;, \&#96;testing\&#96;, and \&#96;stable\&#96;, with somewhat different semantics.
+    \&#42; In general, SELinux confinement should work the same as in Fedora.
+    \&#42; To deploy an Ignition config as part of a PXE image (a 'custom OEM' in CL terminology), follow the https://coreos.com/os/docs/latest/booting-with-pxe.html\&#35;adding-a-custom-oem[same process] as in CL, but place the \&#96;config.ign\&#96; file in the root of the archive.
+    \&#42; In CL, metrics/telemetry data was collected by the update mechanism. In FCOS, nodes are counted (without unique identifiers) via the xref:counting.adoc[Count Me] mechanism.
+    \&#42; Cloud CLI clients are not included in FCOS. There is an initiative to create a 'tools' container to run on FCOS.
+    \&#42; When opening an existing file in a sticky directory, the behavior differs from CL. See https://github.com/systemd/systemd/commit/2732587540035227fe59e4b64b60127352611b35[the relevant systemd commit].
+    \&#42; CL left Simultaneous Multi-Threading (SMT) enabled but advised users to turn it off if their systems were vulnerable to certain issues such as https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/l1tf.html[L1TF] or https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html[MDS]. By default, FCOS https://github.com/coreos/fedora-coreos-tracker/blob/main/Design.md\&#35;automatically-disable-smt-when-needed-to-address-vulnerabilities[automatically disables SMT] for vulnerable systems.
+    \&#42; In general, \&#96;docker\&#96; uses the default configuration from Fedora, which is different under many aspects. Notably the logging driver is set to \&#96;journald\&#96; and live-restore is enabled.
 
     == Implementation notes
-    //* Partition layout differences. CL is at https://coreos.com/os/docs/latest/sdk-disk-partitions.html. I can't make heads or tails of the results of the discussions in https://github.com/coreos/fedora-coreos-tracker/issues/94.
-    * The default filesystem on CL was `ext4`. On FCOS, the default is `xfs`.
-    * While CL used systemd socket activation for `sshd`, FCOS starts `sshd` at startup by default.
-    * CL had an "OEM partition" at `/usr/share/oem` with a user-customizable GRUB config and some additional tools, but FCOS does not have this.
-    //* Filesystem resizing differences. Need more info on FCOS side.
+    //\&#42; Partition layout differences. CL is at https://coreos.com/os/docs/latest/sdk-disk-partitions.html. I can't make heads or tails of the results of the discussions in https://github.com/coreos/fedora-coreos-tracker/issues/94.
+    \&#42; The default filesystem on CL was \&#96;ext4\&#96;. On FCOS, the default is \&#96;xfs\&#96;.
+    \&#42; While CL used systemd socket activation for \&#96;sshd\&#96;, FCOS starts \&#96;sshd\&#96; at startup by default.
+    \&#42; CL had an 'OEM partition' at \&#96;/usr/share/oem\&#96; with a user-customizable GRUB config and some additional tools, but FCOS does not have this.
+    //\&#42; Filesystem resizing differences. Need more info on FCOS side.
+
+
     = Fedora CoreOS Frequently Asked Questions
 
     If you have questions other than those mentioned here or want to discuss
     further, join us in our Matrix room,
-    link:https://chat.fedoraproject.org/#/room/#coreos:fedoraproject.org[#coreos:fedoraproject.org],
+    link:https://chat.fedoraproject.org/\&#35;/room/\&#35;coreos:fedoraproject.org[\&#35;coreos:fedoraproject.org],
     or on our https://discussion.fedoraproject.org/tag/coreos[discussion board].
     Please refer back here as some questions and answers will likely get
     updated.
@@ -8820,12 +8873,12 @@ docker \]
 
     We have the following new communication channels around Fedora CoreOS:
 
-    * Mailing list: https://lists.fedoraproject.org/archives/list/coreos@lists.fedoraproject.org/[coreos@lists.fedoraproject.org]
-    * Operational notices for Fedora CoreOS: https://lists.fedoraproject.org/archives/list/coreos-status@lists.fedoraproject.org/[coreos-status@lists.fedoraproject.org]
-    * Matrix: https://chat.fedoraproject.org/#/room/#coreos:fedoraproject.org[#coreos:fedoraproject.org]
-    * Forum at https://discussion.fedoraproject.org/tag/coreos
-    * Website at https://fedoraproject.org/coreos/
-    * Twitter at https://twitter.com/fedoracoreos[@fedoracoreos] (Fedora CoreOS news), https://twitter.com/fedora[@fedora] (all Fedora and other relevant news)
+    \&#42; Mailing list: https://lists.fedoraproject.org/archives/list/coreos@lists.fedoraproject.org/[coreos@lists.fedoraproject.org]
+    \&#42; Operational notices for Fedora CoreOS: https://lists.fedoraproject.org/archives/list/coreos-status@lists.fedoraproject.org/[coreos-status@lists.fedoraproject.org]
+    \&#42; Matrix: https://chat.fedoraproject.org/\&#35;/room/\&#35;coreos:fedoraproject.org[\&#35;coreos:fedoraproject.org]
+    \&#42; Forum at https://discussion.fedoraproject.org/tag/coreos
+    \&#42; Website at https://fedoraproject.org/coreos/
+    \&#42; Twitter at https://twitter.com/fedoracoreos[@fedoracoreos] (Fedora CoreOS news), https://twitter.com/fedora[@fedora] (all Fedora and other relevant news)
 
     There is a community meeting that happens every week. See the https://calendar.fedoraproject.org/CoreOS/[Fedora CoreOS fedocal] for the most up-to-date information.
 
@@ -8851,13 +8904,13 @@ docker \]
 
     == What data persists across upgrades and reboots?
 
-    The directories `/etc` and `/var` are mounted as read-write which lets users
+    The directories \&#96;/etc\&#96; and \&#96;/var\&#96; are mounted as read-write which lets users
     write and modify files.
 
-    The directory `/etc` may be changed by deployments, but will not override user
-    made changes. The content under `/var` is left untouched by rpm-ostree when
+    The directory \&#96;/etc\&#96; may be changed by deployments, but will not override user
+    made changes. The content under \&#96;/var\&#96; is left untouched by rpm-ostree when
     applying upgrades or rollbacks. For more information, refer to the
-    https://docs.fedoraproject.org/en-US/fedora-coreos/storage/#_mounted_filesystems[Mounted Filesystems]
+    https://docs.fedoraproject.org/en-US/fedora-coreos/storage/\&#35;_mounted_filesystems[Mounted Filesystems]
     section.
 
     == Which container runtimes are available on Fedora CoreOS?
@@ -8882,14 +8935,14 @@ docker \]
     == Where is my preferred tool for troubleshooting?
 
     The FCOS image is kept minimal by design. Not every troubleshooting tool is
-    included by default. Instead, it is recommended to use the `toolbox` utility.
+    included by default. Instead, it is recommended to use the \&#96;toolbox\&#96; utility.
 
     xref:debugging-with-toolbox.adoc[Debugging with Toolbx].
 
     == How do I coordinate cluster-wide OS updates?
 
     The Zincati update manager includes a
-    https://coreos.github.io/zincati/usage/updates-strategy/#lock-based-strategy[lock-based updates strategy]
+    https://coreos.github.io/zincati/usage/updates-strategy/\&#35;lock-based-strategy[lock-based updates strategy]
     that supports multiple backends.
 
     OKD's https://github.com/openshift/machine-config-operator[Machine Config Operator (MCO)]
@@ -8903,44 +8956,44 @@ docker \]
     yourself.
 
     Note that Fedora CoreOS uses a unified BIOS/UEFI partition layout. As such, it
-    is not compatible with the `aws ec2 import-image` API (for more information,
+    is not compatible with the \&#96;aws ec2 import-image\&#96; API (for more information,
     see https://github.com/openshift/os/pull/396[related discussions]). Instead,
-    you must use `aws ec2 import-snapshot` combined with `aws ec2 register-image`.
+    you must use \&#96;aws ec2 import-snapshot\&#96; combined with \&#96;aws ec2 register-image\&#96;.
 
     To learn more about these APIs, see the AWS documentation for
     https://docs.aws.amazon.com/vm-import/latest/userguide/vmimport-import-snapshot.html[importing snapshots]
     and
-    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html#creating-launching-ami-from-snapshot[creating EBS-backed AMIs].
+    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/creating-an-ami-ebs.html\&#35;creating-launching-ami-from-snapshot[creating EBS-backed AMIs].
 
     == Can I run containers via docker and podman at the same time?
 
-    No. Running containers via `docker` and `podman` at the same time can cause
+    No. Running containers via \&#96;docker\&#96; and \&#96;podman\&#96; at the same time can cause
     issues and unexpected behavior. We highly recommend against trying to use them
     both at the same time.
 
-    It is worth noting that in Fedora CoreOS we have `docker.service`
+    It is worth noting that in Fedora CoreOS we have \&#96;docker.service\&#96;
     disabled by default but it is easily started if anything communicates
-    with the `/var/run/docker.sock` because `docker.socket` is enabled by
-    default. This means that if a user runs any `docker` command (via
-    `sudo docker`) then the daemon will be activated.
+    with the \&#96;/var/run/docker.sock\&#96; because \&#96;docker.socket\&#96; is enabled by
+    default. This means that if a user runs any \&#96;docker\&#96; command (via
+    \&#96;sudo docker\&#96;) then the daemon will be activated.
 
-    In https://github.com/coreos/fedora-coreos-tracker/issues/408[coreos/fedora-coreos-tracker#408]
+    In https://github.com/coreos/fedora-coreos-tracker/issues/408[coreos/fedora-coreos-tracker\&#35;408]
     it was pointed out that because of socket activation users who are
-    using `podman` for containers could unintentionally start the docker
+    using \&#96;podman\&#96; for containers could unintentionally start the docker
     daemon. This could weaken the security of the system because of the
     interaction of both container runtimes with the firewall on the system.
-    To prevent making this mistake you can disable `docker` completely by
-    masking the `docker.service` systemd unit.
+    To prevent making this mistake you can disable \&#96;docker\&#96; completely by
+    masking the \&#96;docker.service\&#96; systemd unit.
 
     .Example Butane config for disabling docker.service
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: docker.service mask: true
 
     == Are Fedora CoreOS x86_64 disk images hybrid BIOS+UEFI bootable?
 
-    The x86_64 images we provide can be used for either BIOS (legacy) boot or UEFI boot. They contain a hybrid BIOS/UEFI partition setup that allows them to be used for either. The exception to that is the `metal4k` 4k native image, which is targeted at disks with 4k sectors and https://github.com/coreos/coreos-assembler/blob/12029fea7798fa5d3535eafcf8c3d02f9a6095e4/src/cmd-buildextend-metal#L200-L202[does not have a BIOS boot partition] because 4k native disks are https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/hard-drives-and-partitions#advanced-format-drives[only supported with UEFI].
+    The x86_64 images we provide can be used for either BIOS (legacy) boot or UEFI boot. They contain a hybrid BIOS/UEFI partition setup that allows them to be used for either. The exception to that is the \&#96;metal4k\&#96; 4k native image, which is targeted at disks with 4k sectors and https://github.com/coreos/coreos-assembler/blob/12029fea7798fa5d3535eafcf8c3d02f9a6095e4/src/cmd-buildextend-metal\&#35;L200-L202[does not have a BIOS boot partition] because 4k native disks are https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/hard-drives-and-partitions\&#35;advanced-format-drives[only supported with UEFI].
 
     == What's the difference between Ignition and Butane configurations?
 
@@ -8949,7 +9002,7 @@ name: docker.service mask: true
     This JSON configuration is processed by each FCOS instance upon first boot.
 
     Many high-level tools exist that can produce an Ignition configuration starting from their own specific input formats,
-    such as `terraform`, `matchbox`, `openshift-installer`, and Butane.
+    such as \&#96;terraform\&#96;, \&#96;matchbox\&#96;, \&#96;openshift-installer\&#96;, and Butane.
 
     Butane is one such high-level tool.
     It is primarily meant as a human-friendly interface, thus defining its own richer configuration entries and using YAML documents as input.
@@ -8961,29 +9014,29 @@ name: docker.service mask: true
 
     == What is the format of the version number?
 
-    This is covered in detail in the https://github.com/coreos/fedora-coreos-tracker/blob/main/Design.md#version-numbers[design docs].
+    This is covered in detail in the https://github.com/coreos/fedora-coreos-tracker/blob/main/Design.md\&#35;version-numbers[design docs].
 
-    The summary is that Fedora CoreOS uses the format `X.Y.Z.A`
+    The summary is that Fedora CoreOS uses the format \&#96;X.Y.Z.A\&#96;
 
-    * `X` is the Fedora major version (i.e. `32`)
-    * `Y` is the datestamp that the package set was snapshotted from Fedora (i.e. `20200715`)
-    * `Z` is a code number used by official builds
-    ** `1` for the `next` stream
-    ** `2` for the `testing` stream
-    ** `3` for the `stable` stream
-    * `A` is a revision number that is incremented for each new build with the same `X.Y.Z` parameters
+    \&#42; \&#96;X\&#96; is the Fedora major version (i.e. \&#96;32\&#96;)
+    \&#42; \&#96;Y\&#96; is the datestamp that the package set was snapshotted from Fedora (i.e. \&#96;20200715\&#96;)
+    \&#42; \&#96;Z\&#96; is a code number used by official builds
+    \&#42;\&#42; \&#96;1\&#96; for the \&#96;next\&#96; stream
+    \&#42;\&#42; \&#96;2\&#96; for the \&#96;testing\&#96; stream
+    \&#42;\&#42; \&#96;3\&#96; for the \&#96;stable\&#96; stream
+    \&#42; \&#96;A\&#96; is a revision number that is incremented for each new build with the same \&#96;X.Y.Z\&#96; parameters
 
     The version numbering scheme is subject to change and is not intended to be parsed by machine.
 
-    == Why is the `dnsmasq.service` systemd unit masked?
+    == Why is the \&#96;dnsmasq.service\&#96; systemd unit masked?
 
     We have found that the dnsmasq binary can be used for several host
     applications, including podman and NetworkManager. For this reason we
     include the dnsmasq package in the base OSTree layer, but we discourage
-    the use of the `dnsmasq.service` in the host by masking it with
-    `systemctl mask dnsmasq.service`.
+    the use of the \&#96;dnsmasq.service\&#96; in the host by masking it with
+    \&#96;systemctl mask dnsmasq.service\&#96;.
 
-    _"Why do you mask the service?"_
+    _'Why do you mask the service?'_
 
     dnsmasq is useful for running a DHCP/DNS/TFTP server for external clients
     (i.e. not local to the host), too, but that is something we'd prefer users
@@ -8993,13 +9046,13 @@ name: docker.service mask: true
     remove it from the host and the service you depend on would cease to
     work.
 
-    _"But, I really want to use it!"_
+    _'But, I really want to use it!'_
 
     We don't recommend it, but if you really want to use it you can just
     unmask and enable it:
 
     .Example Butane config for unmasking dnsmasq.service
-    [source,yaml,subs="attributes"]
+    [source,yaml,subs='attributes']
 
 variant: fcos version: {butane-latest-stable-spec} systemd: units: -
 name: dnsmasq.service mask: false enabled: true
@@ -9007,7 +9060,7 @@ name: dnsmasq.service mask: false enabled: true
     For more information see
     https://github.com/coreos/fedora-coreos-tracker/issues/519[the tracker issue discussion].
 
-    == Why is the `systemd-repart.service` systemd unit masked?
+    == Why is the \&#96;systemd-repart.service\&#96; systemd unit masked?
 
     https://www.freedesktop.org/software/systemd/man/systemd-repart.html[systemd-repart]
     is a tool to grow and add partitions to a partition table. On Fedora CoreOS, we
@@ -9016,21 +9069,21 @@ name: dnsmasq.service mask: false enabled: true
 
     Ignition runs on first boot in the initramfs and is aware of Fedora CoreOS
     specific disk layout. It is also capable of reconfiguring the root filesystem
-    (from xfs to ext4 for example), setting up LUKS, etc... See the
+    (from xfs to ext4 for example), setting up LUKS, etc\&#8230; See the
     xref:storage.adoc[Configuring Storage] page for examples.
 
-    See the xref:faq.adoc#_why_is_the_dnsmasq_service_systemd_unit_masked[Why is the `dnsmasq.service` systemd unit masked]
+    See the xref:faq.adoc\&#35;_why_is_the_dnsmasq_service_systemd_unit_masked[Why is the \&#96;dnsmasq.service\&#96; systemd unit masked]
     entry for an example config to unmask this unit.
 
-    [#wifi-fw]
+    [\&#35;wifi-fw]
     == How do I keep dropped wireless firmware?
 
-    Some Wi-Fi firmwares were split into subpackages in Fedora 39 and Fedora 40. Fedora CoreOS will keep them in until Fedora 41, but display a warning message in the console if `NetworkManager-wifi` is layered without any other Wi-Fi firmware packages layered.
+    Some Wi-Fi firmwares were split into subpackages in Fedora 39 and Fedora 40. Fedora CoreOS will keep them in until Fedora 41, but display a warning message in the console if \&#96;NetworkManager-wifi\&#96; is layered without any other Wi-Fi firmware packages layered.
 
-    To request the Wi-Fi firmware stay installed even when Fedora CoreOS drops these packages please follow the xref:sysconfig-enabling-wifi.adoc#_on_an_existing_fedora_coreos_system[steps to perform Wi-Fi enablement on an existing system].
+    To request the Wi-Fi firmware stay installed even when Fedora CoreOS drops these packages please follow the xref:sysconfig-enabling-wifi.adoc\&#35;_on_an_existing_fedora_coreos_system[steps to perform Wi-Fi enablement on an existing system].
 
     Once the packages are requested you can now disable the warning so it won't be checked on subsequent boots.
 
-    [source, text]
+    [source,_text]
 
 sudo systemctl disable coreos-check-wireless-firmwares.service

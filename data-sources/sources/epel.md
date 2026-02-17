@@ -23,13 +23,14 @@ official permalinks on this page to ensure the best experience.
 
 # Release package permalinks {#_release_package_permalinks}
 
-- [epel-release-latest-10](https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm)
-
-- [epel-next-release-latest-9](https://dl.fedoraproject.org/pub/epel/epel-next-release-latest-9.noarch.rpm)
-
-- [epel-release-latest-9](https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm)
-
-- [epel-release-latest-8](https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm)
+&#42;
+[epel-release-latest-10](https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.rpm)
+&#42;
+[epel-next-release-latest-9](https://dl.fedoraproject.org/pub/epel/epel-next-release-latest-9.noarch.rpm)
+&#42;
+[epel-release-latest-9](https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm)
+&#42;
+[epel-release-latest-8](https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm)
 
 # EL10 {#_el10}
 
@@ -54,8 +55,9 @@ $ dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarc
 :::
 
 EPEL 9 has two different release packages. If you are using RHEL 9, only
-install the `epel-release` package. If you are using CentOS Stream 9,
-install **both** the `epel-release` and `epel-next-release` packages.
+install the &#96;epel-release&#96; package. If you are using CentOS
+Stream 9, install &#42;both&#42; the &#96;epel-release&#96; and
+&#96;epel-next-release&#96; packages.
 ::::
 
 ## CentOS Stream 9 {#_centos_stream_9}
@@ -79,7 +81,7 @@ will also likely work with other distributions that target RHEL 9
 compatibility. We cannot list specific instructions for all such
 distributions, but in general the steps needed should look similar to
 the steps for RHEL 9. First enable the distribution's equivalent of the
-CRB repository, then install the `epel-release` package.
+CRB repository, then install the &#96;epel-release&#96; package.
 
 ``` console
 $ dnf config-manager --set-enabled crb
@@ -102,7 +104,7 @@ with other distributions that target RHEL 8 compatibility. We cannot
 list specific instructions for all such distributions, but in general
 the steps needed should look similar to the steps for RHEL 8. First
 enable the distribution's equivalent of the PowerTools/CRB repository,
-then install the `epel-release` package.
+then install the &#96;epel-release&#96; package.
 
 ``` console
 $ dnf config-manager --set-enabled powertools
@@ -115,7 +117,7 @@ $ dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch
 ::: title
 :::
 
-**End-of-life releases are no longer supported.**
+&#42;End-of-life releases are no longer supported.&#42;
 ::::
 
 :::: note
@@ -131,14 +133,10 @@ system mirror the entire archive and then for your systems to point to
 that mirror.
 ::::
 
-- EPEL 7: <https://dl.fedoraproject.org/pub/archive/epel/7/>
-
-- EPEL 6: <https://dl.fedoraproject.org/pub/archive/epel/6/>
-
-- EPEL 5: <https://dl.fedoraproject.org/pub/archive/epel/5/>
-
-- EPEL 4: <https://dl.fedoraproject.org/pub/archive/epel/4/>
-  :experimental:
+&#42; EPEL 7: <https://dl.fedoraproject.org/pub/archive/epel/7/> &#42;
+EPEL 6: <https://dl.fedoraproject.org/pub/archive/epel/6/> &#42; EPEL 5:
+<https://dl.fedoraproject.org/pub/archive/epel/5/> &#42; EPEL 4:
+<https://dl.fedoraproject.org/pub/archive/epel/4/>
 
 # Available packages in EPEL {#available_packages_and_versions_in_epel}
 
@@ -151,36 +149,34 @@ please follow [this guide](epel-package-request.xml) to request it.
 
 Alternately, you can browse the repo files directly:
 
-- EPEL 10:
-  [x86_64](https://dl.fedoraproject.org/pub/epel/10/Everything/x86_64/),
-  [s390x](https://dl.fedoraproject.org/pub/epel/10/Everything/s390x/),
-  [ppc64le](https://dl.fedoraproject.org/pub/epel/10/Everything/ppc64le/),
-  [aarch64](https://dl.fedoraproject.org/pub/epel/10/Everything/aarch64/),
-  [sources](https://dl.fedoraproject.org/pub/epel/10/Everything/source/tree/)
-
-- EPEL 9:
-  [x86_64](https://dl.fedoraproject.org/pub/epel/9/Everything/x86_64/),
-  [s390x](https://dl.fedoraproject.org/pub/epel/9/Everything/s390x/),
-  [ppc64le](https://dl.fedoraproject.org/pub/epel/9/Everything/ppc64le/),
-  [aarch64](https://dl.fedoraproject.org/pub/epel/9/Everything/aarch64/),
-  [sources](https://dl.fedoraproject.org/pub/epel/9/Everything/source/tree/)
-
-- EPEL 8:
-  [x86_64](https://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/),
-  [s390x](https://dl.fedoraproject.org/pub/epel/8/Everything/s390x/),
-  [ppc64le](https://dl.fedoraproject.org/pub/epel/8/Everything/ppc64le/),
-  [aarch64](https://dl.fedoraproject.org/pub/epel/8/Everything/aarch64/),
-  [sources](https://dl.fedoraproject.org/pub/epel/8/Everything/SRPMS/)
+&#42; EPEL 10:
+[x86_64](https://dl.fedoraproject.org/pub/epel/10/Everything/x86_64/),
+[s390x](https://dl.fedoraproject.org/pub/epel/10/Everything/s390x/),
+[ppc64le](https://dl.fedoraproject.org/pub/epel/10/Everything/ppc64le/),
+[aarch64](https://dl.fedoraproject.org/pub/epel/10/Everything/aarch64/),
+[sources](https://dl.fedoraproject.org/pub/epel/10/Everything/source/tree/)
+&#42; EPEL 9:
+[x86_64](https://dl.fedoraproject.org/pub/epel/9/Everything/x86_64/),
+[s390x](https://dl.fedoraproject.org/pub/epel/9/Everything/s390x/),
+[ppc64le](https://dl.fedoraproject.org/pub/epel/9/Everything/ppc64le/),
+[aarch64](https://dl.fedoraproject.org/pub/epel/9/Everything/aarch64/),
+[sources](https://dl.fedoraproject.org/pub/epel/9/Everything/source/tree/)
+&#42; EPEL 8:
+[x86_64](https://dl.fedoraproject.org/pub/epel/8/Everything/x86_64/),
+[s390x](https://dl.fedoraproject.org/pub/epel/8/Everything/s390x/),
+[ppc64le](https://dl.fedoraproject.org/pub/epel/8/Everything/ppc64le/),
+[aarch64](https://dl.fedoraproject.org/pub/epel/8/Everything/aarch64/),
+[sources](https://dl.fedoraproject.org/pub/epel/8/Everything/SRPMS/)
 
 You can also browse these same directories on any of our
 [mirrors](https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL).
-:experimental:
 
 # The EPEL testing repository {#_the_epel_testing_repository}
 
-The `epel-testing` repository contains updates scheduled to be released
-for the maintained releases of EPEL. User testing and feedback provided
-via [Bodhi](https://bodhi.fedoraproject.org), on the
+The &#96;&#42;epel-testing&#42;&#96; repository contains updates
+scheduled to be released for the maintained releases of EPEL. User
+testing and feedback provided via
+[Bodhi](https://bodhi.fedoraproject.org), on the
 [epel-devel](https://admin.fedoraproject.org/mailman/listinfo/epel-devel)
 mailing list and the relevant [Bugzilla](https://bugzilla.redhat.com) is
 vital to ensure that good updates are released quickly and bad ones kept
@@ -190,15 +186,15 @@ away from release.
 
 ### Enabling the repository persistently {#enabling_the_repository_persistently}
 
-The following command will enable the `epel-testing` repository
+The following command will enable the &#96;epel-testing&#96; repository
 persistently.
 
 ``` console
 $ dnf config-manager --set-enabled epel-testing
 ```
 
-Use `dnf repolist` to verify. If you wish to disable it again, run the
-following command.
+Use &#96;dnf repolist&#96; to verify. If you wish to disable it again,
+run the following command.
 
 ``` console
 $ dnf config-manager --set-disabled epel-testing
@@ -208,38 +204,39 @@ $ dnf config-manager --set-disabled epel-testing
 ::: title
 :::
 
-`dnf distro-sync` will sync the packages to the versions available in
-the repository. This might be useful to run after you disable the
-testing repository to downgrade packages back to the stable versions.
+&#96;dnf distro-sync&#96; will sync the packages to the versions
+available in the repository. This might be useful to run after you
+disable the testing repository to downgrade packages back to the stable
+versions.
 ::::
 
 :::: note
 ::: title
 :::
 
-The `dnf config-manager` command is available as part of the
+The &#96;dnf config-manager&#96; command is available as part of the
 dnf-plugins-core package. You can also edit the
-`/etc/yum.repos.d/epel-testing.repo` file manually to set `enabled=1`
-under the `[epel-testing]` section.
+&#96;/etc/yum.repos.d/epel-testing.repo&#96; file manually to set
+&#96;enabled=1&#96; under the &#96;\[epel-testing\]&#96; section.
 ::::
 
 ### Enabling the repository temporarily {#enabling_the_repository_temporarily}
 
-You can enable the the `epel-testing` repository on a case-by-case basis
-instead of persistently.
+You can enable the the &#96;epel-testing&#96; repository on a
+case-by-case basis instead of persistently.
 
-The following command will enable the `epel-testing` repository for a
-single upgrade transaction.
+The following command will enable the &#96;epel-testing&#96; repository
+for a single upgrade transaction.
 
 ``` console
 $ dnf --enablerepo epel-testing upgrade
 ```
 
-The following command will enable the `epel-testing` repository for a
-single install transaction.
+The following command will enable the &#96;epel-testing&#96; repository
+for a single install transaction.
 
 ``` console
-$ dnf --enablerepo epel-testing install <foo>
+$ dnf --enablerepo epel-testing install \&lt;foo\&gt;
 ```
 
 ## What to test, testing, and reporting results {#what_to_test_testing_and_reporting_results}
@@ -250,34 +247,34 @@ in the Bodhi system. First of all, if any test update package works
 worse for you in any respect than the pre-update version did, this is a
 problem that should be communicated to the developers. Secondly, when
 you click on a certain update, you will see a screen with more
-information on the update. The `Details` section should give you
+information on the update. The &#96;Details&#96; section should give you
 information on what the update is intended to fix. You should, if
 possible, test that the update does indeed fix the issues it claims to
 fix.
 
 You can give your feedback on a test update by using the [Bodhi web
-interface](https://bodhi.fedoraproject.org). There is a `Login` link in
-the left-hand sidebar. Log in using your Fedora account. If you don't
-have a Fedora account, you can [create an account
+interface](https://bodhi.fedoraproject.org). There is a &#96;Login&#96;
+link in the left-hand sidebar. Log in using your Fedora account. If you
+don't have a Fedora account, you can [create an account
 here](https://admin.fedoraproject.org/accounts/user/new). Once you are
 logged in, you will be able to leave a comment on the update. Underneath
-the comment box are three options: `Untested`, `Works for me`, and
-`Does not work`. For a guide on when to leave each type of feedback,
-read the [update feedback
+the comment box are three options: &#96;Untested&#96;, &#96;Works for
+me&#96;, and &#96;Does not work&#96;. For a guide on when to leave each
+type of feedback, read the [update feedback
 guidelines](https://fedoraproject.org/wiki/QA:Update_feedback_guidelines).
 
-Each `Works for me` adds 1 to the test update's karma, while each
-`Does not work` subtracts 1 from it. `Untested` leaves the karma
-unchanged. Usually, test updates with karma of 3 are automatically sent
-out as full official updates, while test updates with karma of -3 are
-automatically withdrawn from the testing repository. As you can see,
-your testing and feedback is vital to make sure that good updates are
-released quickly and bad ones don't get out to the general public.
+Each &#96;Works for me&#96; adds 1 to the test update's karma, while
+each &#96;Does not work&#96; subtracts 1 from it. &#96;Untested&#96;
+leaves the karma unchanged. Usually, test updates with karma of 3 are
+automatically sent out as full official updates, while test updates with
+karma of -3 are automatically withdrawn from the testing repository. As
+you can see, your testing and feedback is vital to make sure that good
+updates are released quickly and bad ones don't get out to the general
+public.
 
 ## See also {#see_also}
 
-- [Bodhi Guide](https://fedoraproject.org/wiki/Bodhi) :experimental:
-  :page-aliases: request.adoc
+&#42; [Bodhi Guide](https://fedoraproject.org/wiki/Bodhi)
 
 # Requesting a new package in EPEL {#_requesting_a_new_package_in_epel}
 
@@ -287,7 +284,7 @@ different depending on your ability or willingness to help.
 If you are already a Fedora contributor, for your own package use the
 [standard
 procedures](package-maintainers::Package_Maintenance_Guide.xml) for
-requesting a new branch using `fedpkg request-branch`.
+requesting a new branch using &#96;+fedpkg request-branch+&#96;.
 
 :::: note
 ::: title
@@ -300,31 +297,32 @@ those are out of scope for this guide.
 
 ## Determine the component {#determine_the_component}
 
-EPEL package requests are tracked in bugzilla. The **source package**
-name is used as the bugzilla `Component` field. This may or may not be
-the same as the package name you are looking for. If you are not sure
-what the source package name is, search for your desired package in the
-[Fedora Packages web app](https://packages.fedoraproject.org/). Once you
-locate the desired package in this app, the URL will have the following
-structure:
+EPEL package requests are tracked in bugzilla. The &#42;source
+package&#42; name is used as the bugzilla &#96;Component&#96; field.
+This may or may not be the same as the package name you are looking for.
+If you are not sure what the source package name is, search for your
+desired package in the [Fedora Packages web
+app](https://packages.fedoraproject.org/). Once you locate the desired
+package in this app, the URL will have the following structure:
 
 ``` console
-https://packages.fedoraproject.org/pkgs/<source_package>/<package>/
+https://packages.fedoraproject.org/pkgs/\&lt;source_package\&gt;/\&lt;package\&gt;/
 ```
 
-The title of the page will be \"\<package\> Subpackage of
-\<source_package\>\" if the names are different, or just \"\<package\>\"
-if the names are the same. Use the source package name for the component
-in the rest of this guide.
+The title of the page will be \'&lt;package&gt; Subpackage of
+&lt;source_package&gt;\' if the names are different, or just
+\'&lt;package&gt;\' if the names are the same. Use the source package
+name for the component in the rest of this guide.
 
 ## File a bug {#file_a_bug}
 
 Before opening a new bug report, check the existing ones to see if the
 package has already been requested. Use the following URL (replacing
-`<component>` with your component) to view existing open bugs.
+&#96;&lt;component&gt;&#96; with your component) to view existing open
+bugs.
 
 ``` console
-https://bugz.fedoraproject.org/<component>
+https://bugz.fedoraproject.org/\&lt;component\&gt;
 ```
 
 If there are no open requests for the EPEL version you desire, then open
@@ -346,53 +344,41 @@ requesting in the bug description.
 Bugzilla fields for an EPEL request
 :::
 
-- Classification: `Fedora`
-
-- Product: `Fedora EPEL`
-
-- Component: `<component>` (if the component is not found, skip to the
-  next note)
-
-- Version: `epel10` (or `epel9`, `epel8`, etc.)
-
-- Summary: Please branch and build \<package\> in epel10 (or epel9,
-  epel8, etc.)
+&#42; Classification: &#96;Fedora&#96; &#42; Product: &#96;Fedora
+EPEL&#96; &#42; Component: &#96;&lt;component&gt;&#96; (if the component
+is not found, skip to the next note) &#42; Version: &#96;epel10&#96; (or
+&#96;epel9&#96;, &#96;epel8&#96;, etc.) &#42; Summary: Please branch and
+build &lt;package&gt; in epel10 (or epel9, epel8, etc.)
 ::::
 
 If this package has never been in EPEL before, the component will not
-exist in the `Fedora EPEL` Product. You can still request the package by
-using the `Fedora` Product.
+exist in the &#96;Fedora EPEL&#96; Product. You can still request the
+package by using the &#96;Fedora&#96; Product.
 
 :::: note
 ::: title
 Bugzilla fields for an EPEL request (alternative)
 :::
 
-- Classification: `Fedora`
-
-- Product: `Fedora`
-
-- Component: `<component>`
-
-- Version: `rawhide`
-
-- Summary: Please branch and build \<package\> in epel10 (or epel9,
-  epel8, etc.)
+&#42; Classification: &#96;Fedora&#96; &#42; Product: &#96;Fedora&#96;
+&#42; Component: &#96;&lt;component&gt;&#96; &#42; Version:
+&#96;rawhide&#96; &#42; Summary: Please branch and build &lt;package&gt;
+in epel10 (or epel9, epel8, etc.)
 ::::
 
-If the component isn't found in either the `Fedora EPEL` or `Fedora`
-Products, then it probably doesn't exist in Fedora and needs to be added
-there first.
+If the component isn't found in either the &#96;Fedora EPEL&#96; or
+&#96;Fedora&#96; Products, then it probably doesn't exist in Fedora and
+needs to be added there first.
 
 At this point, things change depending on your ability or willingness to
 help.
 
 ### Consumers/end users {#end_users}
 
-Clear out `Description` and put in:
+Clear out &#96;Description&#96; and put in:
 
 ``` console
-Please branch and build <package> in epel10.
+Please branch and build \&lt;package\&gt; in epel10.
 ```
 
 If you desire the package in the current epel10 minor version please add
@@ -402,7 +388,7 @@ If there is no response after a week, add the following comment in the
 bug:
 
 ``` console
-Will you be able to branch and build <package> in epel10?
+Will you be able to branch and build \&lt;package\&gt; in epel10?
 ```
 
 If there is no action on the bug after two more weeks, send an email to
@@ -415,12 +401,12 @@ your package in EPEL. Be sure to include the Bugzilla URL in your email.
 Clear out Description and put in:
 
 ``` console
-Please branch and build <package> in epel10.
+Please branch and build \&lt;package\&gt; in epel10.
 
-If you do not wish to maintain <package> in epel10,
+If you do not wish to maintain \&lt;package\&gt; in epel10,
 or do not think you will be able to do this in a timely manner,
-I would be happy to be a co-maintainer of the package (FAS <your FAS Id>);
-please add me through https://src.fedoraproject.org/rpms/<package>/adduser
+I would be happy to be a co-maintainer of the package (FAS \&lt;your FAS Id\&gt;);
+please add me through https://src.fedoraproject.org/rpms/\&lt;package\&gt;/adduser
 ```
 
 If you desire the package in the current epel10 minor version please add
@@ -430,34 +416,38 @@ If there is no response after a week, add the following comment in the
 bug:
 
 ``` console
-Will you be able to branch and build <package> in epel10?
+Will you be able to branch and build \&lt;package\&gt; in epel10?
 I would be happy to be a co-maintainer if you do not wish
-to build it on epel10 (FAS: <your FAS Id>).
+to build it on epel10 (FAS: \&lt;your FAS Id\&gt;).
 ```
 
 If there is no action on the bug after two more weeks, follow the
 [stalled EPEL request
-steps](epel-package-request.xml#stalled_epel_requests), and open a
+steps](epel-package-request.adoc&#35;stalled_epel_requests), and open a
 ticket with [releng](https://forge.fedoraproject.org/releng/tickets):
 
-- Ticket Title:
+&#42; Ticket Title:
 
-  ``` console
-  Stalled EPEL package: <package>
-  ```
+\+
 
-- Ticket Body:
+``` console
+Stalled EPEL package: \&lt;package\&gt;
+```
 
-  ``` console
-  <package> has a stalled EPEL branch request.
+&#42; Ticket Body:
 
-  <bugzilla URL>
+\+
 
-  Since this has met the time requirements as outlined in the stalled EPEL request policy,
-  please grant my FAS (@<FAS of requester>) commit access to the package.
+``` console
+\&lt;package\&gt; has a stalled EPEL branch request.
 
-  cc: @<FAS of maintainer>
-  ```
+\&lt;bugzilla URL\&gt;
+
+Since this has met the time requirements as outlined in the stalled EPEL request policy,
+please grant my FAS (@\&lt;FAS of requester\&gt;) commit access to the package.
+
+cc: @\&lt;FAS of maintainer\&gt;
+```
 
 After you have been given commit permissions, you can then branch,
 build, and maintain the package in epel.
@@ -469,92 +459,79 @@ responding to an EPEL package request. If a different packager would
 like to build and maintain that package in EPEL, these are the steps
 they take.
 
-- Anybody opens a Bugzilla bug requesting a package be added to EPEL-X.
-  A packager (the Bugzilla reporter or another person) expresses that
-  they are willing to help maintain / co-maintain that package in
-  EPEL-X.
+&#42; Anybody opens a Bugzilla bug requesting a package be added to
+EPEL-X. A packager (the Bugzilla reporter or another person) expresses
+that they are willing to help maintain / co-maintain that package in
+EPEL-X. &#42; A week goes by with no action. &#42; They re-say that they
+are willing to maintain / co-maintain the package in EPEL and set a
+needinfo flag for the maintainer. &#42;&#42; This is in case the initial
+message was missed. &#42; Two weeks go by with no response. &#42; They
+file a [releng ticket](https://forge.fedoraproject.org/releng/tickets)
+requesting appropriate privileges to be able to branch and build that
+package in EPEL-X. This ticket must include a link to the bugzilla
+request and mention the maintainer's FAS account. &#42;&#42; This part
+of the policy will adjust as various features get implemented in pagure
+and dist-git. &#42; The privileges are given and the packager is made
+the Bugzilla contact for EPEL. &#42; They then request a branch, and
+build the package in EPEL-X following normal steps.
 
-- A week goes by with no action.
+\'Action\' is considered something that progresses the bug. \'Action\'
+can be positive or negative. Such as a response of \'The code has not
+been updated for 10 years and has security issues\' and then they close
+the ticket. \'No Action\' could be no response at all, or it could be a
+response of \'I do not want to do epel\' and then they do nothing else.
 
-- They re-say that they are willing to maintain / co-maintain the
-  package in EPEL and set a needinfo flag for the maintainer.
-
-  - This is in case the initial message was missed.
-
-- Two weeks go by with no response.
-
-- They file a [releng
-  ticket](https://forge.fedoraproject.org/releng/tickets) requesting
-  appropriate privileges to be able to branch and build that package in
-  EPEL-X. This ticket must include a link to the bugzilla request and
-  mention the maintainer's FAS account.
-
-  - This part of the policy will adjust as various features get
-    implemented in pagure and dist-git.
-
-- The privileges are given and the packager is made the Bugzilla contact
-  for EPEL.
-
-- They then request a branch, and build the package in EPEL-X following
-  normal steps.
-
-\"Action\" is considered something that progresses the bug. \"Action\"
-can be positive or negative. Such as a response of \"The code has not
-been updated for 10 years and has security issues\" and then they close
-the ticket. \"No Action\" could be no response at all, or it could be a
-response of \"I do not want to do epel\" and then they do nothing else.
-
-A template for these steps can be found above. :experimental:
+A template for these steps can be found above.
 
 ## Communicating with EPEL {#communicating_with_epel}
 
 There are many ways to communicate with EPEL and its members:
 
-- The
-  [epel:fedoraproject.org](https://matrix.to/#/#epel:fedoraproject.org)
-  channel on offers real-time support for EPEL users and developers.
+&#42; The
+[epel:fedoraproject.org](https://matrix.to/\&#35;/\&#35;epel:fedoraproject.org)
+channel on offers real-time support for EPEL users and developers.
 
-- The [#epel](https://web.libera.chat/?channels=#epel) IRC channel on
-  [Libera Chat](https://libera.chat) is a secondary chat location, but
-  is not bridged to Matrix.
+&#42; The [&#35;epel](https://web.libera.chat/?channels=\&#35;epel) IRC
+channel on [Libera Chat](https://libera.chat) is a secondary chat
+location, but is not bridged to Matrix.
 
-- The
-  [epel-devel](https://lists.fedoraproject.org/admin/lists/epel-devel@lists.fedoraproject.org/)
-  mailing list is for general EPEL discussion. [Historic
-  archives](https://www.redhat.com/archives/epel-devel-list/) are
-  available.
+&#42; The
+[epel-devel](https://lists.fedoraproject.org/admin/lists/epel-devel@lists.fedoraproject.org/)
+mailing list is for general EPEL discussion. [Historic
+archives](https://www.redhat.com/archives/epel-devel-list/) are
+available.
 
-- The
-  [epel-announce](https://lists.fedoraproject.org/admin/lists/epel-announce@lists.fedoraproject.org/)
-  mailing list is a low volume mailing list for only important
-  announcements.
+&#42; The
+[epel-announce](https://lists.fedoraproject.org/admin/lists/epel-announce@lists.fedoraproject.org/)
+mailing list is a low volume mailing list for only important
+announcements.
 
-- The
-  [epel-package-announce](https://lists.fedoraproject.org/admin/lists/epel-package-announce@lists.fedoraproject.org/)
-  mailing list is a list that gets information about package updates as
-  they happen in the stable repository.
+&#42; The
+[epel-package-announce](https://lists.fedoraproject.org/admin/lists/epel-package-announce@lists.fedoraproject.org/)
+mailing list is a list that gets information about package updates as
+they happen in the stable repository.
 
-- If you find a bug in a EPEL maintained package, please report it to
-  [<https://bugzilla.redhat.com/>](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora+EPEL)
-  under the \"Fedora EPEL\" product.
+&#42; If you find a bug in a EPEL maintained package, please report it
+to
+[<https://bugzilla.redhat.com/>](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora+EPEL)
+under the \'Fedora EPEL\' product.
 
-- Infrastructure issues (mirrors, repos, etc.) should be reported to
-  [Fedora releng](https://forge.fedoraproject.org/releng/tickets).
+&#42; Infrastructure issues (mirrors, repos, etc.) should be reported to
+[Fedora releng](https://forge.fedoraproject.org/releng/tickets).
 
-- The EPEL Steering Committee meets on Wednesday every week in the
-  [Fedora Meeting
-  1](https://chat.fedoraproject.org/#/room/#meeting-1:fedoraproject.org)
-  Matrix channel. The time is **not** tied to U.S. daylight savings
-  time, so it is at 18:00 UTC regardless of the time of year. Please
-  check the time on the [epel
-  calendar](https://calendar.fedoraproject.org/epel/); sometimes it can
-  change or a meeting can be skipped. Feel free to join us! Logs of past
-  meetings can be viewed in
-  [meetbot](https://meetbot.fedoraproject.org/sresults/?group_id=epel&type=team).
+&#42; The EPEL Steering Committee meets on Wednesday every week in the
+[Fedora Meeting
+1](https://chat.fedoraproject.org/\&#35;/room/\&#35;meeting-1:fedoraproject.org)
+Matrix channel. The time is &#42;&#42;not&#42;&#42; tied to U.S.
+daylight savings time, so it is at 18:00 UTC regardless of the time of
+year. Please check the time on the [epel
+calendar](https://calendar.fedoraproject.org/epel/); sometimes it can
+change or a meeting can be skipped. Feel free to join us! Logs of past
+meetings can be viewed in
+[meetbot](https://meetbot.fedoraproject.org/sresults/?group_id=epel\&amp;type=team).
 
-- The EPEL Steering Committee has [monthly office hours for the EPEL
-  project](https://discussion.fedoraproject.org/t/join-us-for-the-epel-office-hours-every-month/37235).
-  :experimental: :page-aliases: help.adoc, contribute.adoc
+&#42; The EPEL Steering Committee has [monthly office hours for the EPEL
+project](https://discussion.fedoraproject.org/t/join-us-for-the-epel-office-hours-every-month/37235).
 
 # Joining EPEL {#_joining_epel}
 
@@ -584,7 +561,7 @@ EPEL Release engineering is responsible for making sure packages are
 built and signed and mirrored out. Currently this group is a subset of
 the Fedora Release Engineering group. See the [Fedora Release
 Engineering page](https://docs.pagure.org/releng/contributing.html) for
-more information. :experimental:
+more information.
 
 # EPEL Quality Assurance {#_epel_quality_assurance}
 
@@ -620,7 +597,7 @@ start off as allowed and then need to be later removed.
 ## Fedora QA resources {#fedora_qa_resources}
 
 See the [Fedora QA](https://docs.fedoraproject.org/en-US/qa-docs/) page
-for information about helping with Fedora Quality. :experimental:
+for information about helping with Fedora Quality.
 
 # EPEL packaging {#_epel_packaging}
 
@@ -637,7 +614,7 @@ Fedora packages.
 
 All EPEL package dependencies (build-time or runtime) MUST ALWAYS be
 satisfiable within the Target Base (as defined by [EPEL
-policy](epel-policy.xml#_policy)) or EPEL itself. [Weak package
+policy](epel-policy.adoc&#35;_policy)) or EPEL itself. [Weak package
 dependencies](packaging-guidelines::WeakDependencies.xml) are allowed on
 packages from other RHEL channels that are not part of the Target Base,
 such as the HighAvailability or ResilientStorage channels. This allows
@@ -649,7 +626,8 @@ This does not mean that EPEL packages should incorrectly identify a
 dependency as weak (e.g. changing a Requires to a Recommends). On a case
 by case basis, exceptions to this policy may be granted by the EPEL
 Steering Committee. To request an exception [open an
-issue](https://pagure.io/epel/issues) and add the \"meeting\" tag.
+issue](https://forge.fedoraproject.org/epel/steering) and add the
+\'meeting\' tag.
 
 ## ELN
 
@@ -667,14 +645,12 @@ in (whether they are a library that some in-house or ISV software needs,
 or a tool) and getting them branched and built, we can use ELN Extras in
 this way:
 
-- add packages to ELN Extras\' content resolver input, e.g. [KDE
-  packages](https://github.com/minimization/content-resolver-input/blob/master/configs/eln_extras_kde.yaml);
-  note that this has sufficient metadata to indicate who will maintain
-  such packages
-
-- check the
-  [dependencies](https://tiny.distro.builders/workload-dependencies--eln_extras_kde--fedora-empty-base--repository-fedora-eln--x86_64.html)
-  pulled in
+&#42; add packages to ELN Extras\' content resolver input, e.g. [KDE
+packages](https://github.com/minimization/content-resolver-input/blob/master/configs/eln_extras_kde.yaml);
+note that this has sufficient metadata to indicate who will maintain
+such packages &#42; check the
+[dependencies](https://tiny.distro.builders/workload-dependencies--eln_extras_kde--fedora-empty-base--repository-fedora-eln--x86_64.html)
+pulled in
 
 The former list is what packagers actually care about, the latter is
 just what needs to be brought in.
@@ -711,12 +687,12 @@ here.
 The [Fedora Python Packaging
 Guidelines](packaging-guidelines::Python.xml) underwent a major overhaul
 in 2021. The macros used in these guidelines are also available in RHEL
-9. EPEL 9 Python packages **SHOULD** use these guidelines. EPEL 9 Python
-packages **MAY** use the older [201x-era Fedora Python Packaging
-Guidelines](packaging-guidelines::Python_201x.xml). EPEL 8 Python
-packages **MUST** use the older guidelines. New Python 2 packages
-**SHOULD NOT** be added to EPEL 8, because the RHEL 8 Python 2.7
-Application Stream was [retired in June
+9. EPEL 9 Python packages &#42;SHOULD&#42; use these guidelines. EPEL 9
+Python packages &#42;MAY&#42; use the older [201x-era Fedora Python
+Packaging Guidelines](packaging-guidelines::Python_201x.xml). EPEL 8
+Python packages &#42;MUST&#42; use the older guidelines. New Python 2
+packages &#42;SHOULD NOT&#42; be added to EPEL 8, because the RHEL 8
+Python 2.7 Application Stream was [retired in June
 2024](https://access.redhat.com/support/policy/updates/rhel-app-streams-life-cycle).
 
 ### Automatically generated dependencies {#_automatically_generated_dependencies}
@@ -729,17 +705,17 @@ The dependency generator in RHEL 8 is significantly limited compared to
 the one in Fedora and RHEL 9. Simple dependencies and minimum/maximum
 versions work correctly, but more advanced specifications such as
 [environment
-markers](https://peps.python.org/pep-0508/#environment-markers) and
+markers](https://peps.python.org/pep-0508/\&#35;environment-markers) and
 [compatible release
-clauses](https://peps.python.org/pep-0440/#compatible-release) do not.
-This can lead to missing dependencies, included dependencies that should
-have been skipped, or other incorrect behavior. The packager **MUST**
-inspect the generated requires for correctness. If the software uses an
-advanced dependency specification that does not parse correctly, the
-packager **MUST** ensure the dependency is included. This can be done
-either by patching the source to achieve the desired result from the
-generator, or by using an explicit `Requires:` statements.
-:experimental:
+clauses](https://peps.python.org/pep-0440/\&#35;compatible-release) do
+not. This can lead to missing dependencies, included dependencies that
+should have been skipped, or other incorrect behavior. The packager
+&#42;MUST&#42; inspect the generated requires for correctness. If the
+software uses an advanced dependency specification that does not parse
+correctly, the packager &#42;MUST&#42; ensure the dependency is
+included. This can be done either by patching the source to achieve the
+desired result from the generator, or by using an explicit
+&#96;+Requires:+&#96; statements.
 
 # EPEL packaging examples {#_epel_packaging_examples}
 
@@ -747,54 +723,50 @@ generator, or by using an explicit `Requires:` statements.
 
 These examples are for the [Missing RHEL sub-packages/missing built
 sub-packages/short term
-policy](epel-policy-missing-sub-packages.xml#short_term).
+policy](epel-policy-missing-sub-packages.adoc&#35;short_term).
 
 ### Missing-but-built workflow {#_missing_but_built_workflow}
 
 This is an example workflow.
 
-1.  `fedpkg request-repo --exception <package>-epel`
+1.  &#96;fedpkg request-repo \--exception &lt;package&gt;-epel&#96;
+    &#42; For example: fedpkg request-repo \--exception pycairo-epel
 
-    - For example: fedpkg request-repo \--exception pycairo-epel
+2.  &#96;fedpkg request-branch \--repo &lt;package&gt;-epel
+    epel&lt;version&gt;&#96; &#42; For example: &#96;fedpkg
+    request-branch \--repo pycairo-epel epel9&#96;
 
-2.  `fedpkg request-branch --repo <package>-epel epel<version>`
+    :::: note
+    ::: title
+    :::
 
-    - For example: `fedpkg request-branch --repo pycairo-epel epel9`
-
-      :::: note
-      ::: title
-      :::
-
-      `request-repo` and `request-branch` can be done at the same time
-      as long as `request-repo` is done first.
-      ::::
+    &#96;request-repo&#96; and &#96;request-branch&#96; can be done at
+    the same time as long as &#96;request-repo&#96; is done first.
+    ::::
 
 3.  Wait until you get an email saying the request is done
 
-4.  `fedpkg clone <package>-epel ; cd <package>-epel`
+4.  &#96;fedpkg clone &lt;package&gt;-epel ; cd
+    &lt;package&gt;-epel&#96; &#42; For example: &#96;fedpkg clone
+    pycairo-epel ; cd pycairo-epel&#96;
 
-    - For example: `fedpkg clone pycairo-epel ; cd pycairo-epel`
+5.  &#96;fedpkg retire \'For epel only, not Fedora\'&#96;
 
-5.  `fedpkg retire "For epel only, not Fedora"`
-
-6.  `fedpkg switch-branch epel<version>`
-
-    - For example: `fedpkg switch-branch epel9`
+6.  &#96;fedpkg switch-branch epel&lt;version&gt;&#96; &#42; For
+    example: &#96;fedpkg switch-branch epel9&#96;
 
 7.  Download the source rpm corresponding to the latest released RHEL
     build
 
-8.  `fedpkg import <full patch to source rpm>`
+8.  &#96;fedpkg import &lt;full patch to source rpm&gt;&#96; &#42; For
+    example: &#96;fedpkg import /tmp/pycairo-1.20.0-4.el9.src.rpm&#96;
 
-    - For example: `fedpkg import /tmp/pycairo-1.20.0-4.el9.src.rpm`
+9.  &#96;fedpkg commit -m \'import from CentOS Stream srpm\'&#96;
 
-9.  `fedpkg commit -m "import from CentOS Stream srpm"`
+10. &#96;git mv &lt;package&gt;.spec &lt;package&gt;-epel.spec&#96;
+    &#42; For example: &#96;git mv pycairo.spec pycairo-epel.spec&#96;
 
-10. `git mv <package>.spec <package>-epel.spec`
-
-    - For example: `git mv pycairo.spec pycairo-epel.spec`
-
-11. `fedpkg commit -m "rename spec file"`
+11. &#96;fedpkg commit -m \'rename spec file\'&#96;
 
 12. Edit the spec file so it builds, but only produces the missing
     binaries
@@ -802,73 +774,62 @@ This is an example workflow.
 13. Test build and test install your rpm, which ever way you like to do
     that
 
-14. `fedpkg commit -m "Convert RHEL<version> <package> to <package>-epel with just <package>-devel subpackage"`
+14. &#96;fedpkg commit -m \'Convert RHEL&lt;version&gt; &lt;package&gt;
+    to &lt;package&gt;-epel with just &lt;package&gt;-devel
+    subpackage\'&#96; &#42; For example: &#96;fedpkg commit -m \'Convert
+    RHEL9 pycairo to pycairo-epel with just python3-cairo-devel
+    subpackage\'&#96;
 
-    - For example:
-      `fedpkg commit -m "Convert RHEL9 pycairo to pycairo-epel with just python3-cairo-devel subpackage"`
+15. &#96;fedpkg push&#96;
 
-15. `fedpkg push`
+16. &#96;fedpkg build&#96;
 
-16. `fedpkg build`
-
-17. `fedpkg update`
+17. &#96;fedpkg update&#96;
 
 ### Missing-but-built spec examples {#_missing_but_built_spec_examples}
 
-These examples should help you convert your RHEL spec file to a `-epel`
-spec file.
+These examples should help you convert your RHEL spec file to a
+&#96;-epel&#96; spec file.
 
 #### Header/top of spec {#_headertop_of_spec}
 
-- State where the original spec came from, and where to look to make
-  sure it is in sync.
+&#42; State where the original spec came from, and where to look to make
+sure it is in sync. &#42; A variable for the original name of the
+package. It doesn't have to be &#96;rhel_name&#96;, but keep it
+consistent. &#42;&#42; Do a global replacement of &#96;%{name} to
+%{rhel_name}&#96; in your spec file. &#42; Turn off debugsource.
 
-- A variable for the original name of the package. It doesn't have to be
-  `rhel_name`, but keep it consistent.
-
-  - Do a global replacement of `%{name} to %{rhel_name}` in your spec
-    file.
-
-- Turn off debugsource.
-
-<!-- -->
-
-    # This spec file is derived from the RHEL9 pycairo spec file.  They should be kept
-    # in sync over time.
-    # https://gitlab.com/redhat/centos-stream/rpms/pycairo
-    %global rhel_name pycairo
-    %global _debugsource_template %{nil}
+&#8230;. &#35; This spec file is derived from the RHEL9 pycairo spec
+file. They should be kept &#35; in sync over time. &#35;
+<https://gitlab.com/redhat/centos-stream/rpms/pycairo> %global rhel_name
+pycairo %global \_debugsource_template %{nil} &#8230;.
 
 #### %prep {#_prep}
 
-Add `-n %{rhel_name}-%{version}` to your setup. So the build doesn't
-think the source is in `<package>-epel-version`.
+Add &#96;-n %{rhel_name}-%{version}&#96; to your setup. So the build
+doesn't think the source is in &#96;&lt;package&gt;-epel-version&#96;.
 
-    %prep
-    %autosetup -p1 -n %{rhel_name}-%{version}
+&#8230;. %prep %autosetup -p1 -n %{rhel_name}-%{version} &#8230;.
 
 #### %package %description and %files {#_package_description_and_files}
 
-You need to add `-n %{rhel_name}-` to each of these.
+You need to add &#96;-n %{rhel_name}-&#96; to each of these.
 
-    %package -n %{rhel_name}-devel
-    %description -n %{rhel_name}-devel
-    %files -n %{rhel_name}-devel
+&#8230;. %package -n %{rhel_name}-devel %description -n
+%{rhel_name}-devel %files -n %{rhel_name}-devel &#8230;.
 
 #### Fix Requires: {#_fix_requires}
 
-Most `-devel` packages have a `Requires:` equal to the
-Name-Version-Release (NVR)
+Most &#96;-devel&#96; packages have a &#96;Requires:&#96; equal to the
+Name-Version-Release (NVR) &#8230;. %package -n %{rhel_name}-devel
+Requires: %{rhel_name}%{?\_isa} = %{version}-%{release} &#8230;.
 
-    %package -n %{rhel_name}-devel
-    Requires: %{rhel_name}%{?_isa} = %{version}-%{release}
+If this were a perfect world, you could leave your &#96;-epel&#96;
+package like that. But it's not a perfect world, and there are many
+times you need to update your &#96;-epel&#96; package separate from the
+RHEL package being updated.
 
-If this were a perfect world, you could leave your `-epel` package like
-that. But it's not a perfect world, and there are many times you need to
-update your `-epel` package separate from the RHEL package being
-updated.
-
-The following are two options. It is up to the `-epel` package
+The following are two options. It is up to the &#96;-epel&#96; package
 maintainer to decide which is right for them, or perhaps do things your
 own way.
 
@@ -876,87 +837,68 @@ own way.
 
 If your -epel package only has some unchanging headers, you usually do
 not need to keep completely in step with the RHEL release, only the
-version. If that is the case, simply remove the `-%{release}` section.
-
-    %package -n %{rhel_name}-devel
-    Requires: %{rhel_name}%{?_isa} = %{version}
+version. If that is the case, simply remove the &#96;-%{release}&#96;
+section. &#8230;. %package -n %{rhel_name}-devel Requires:
+%{rhel_name}%{?\_isa} = %{version} &#8230;.
 
 ##### Rename release {#_rename_release}
 
-If your `-epel` package has to be updated each time the RHEL package is
-updated, no matter what, one way to do this is with a `%{rhel_release}`
-that goes along with your `%{rhel_name}`. If you do this, your `-epel`
-release must be less than the RHEL release.
-
-    ...
-    %global rhel_name pycairo
-    %global rhel_release 4
-    %global epel_release 1
-    ...
-    Name: %{rhel_name}-epel
-    Release: 0.%{rhel_release}%{?dist}.%{epel_release}
-    ...
-    %package -n %{rhel_name}-devel
-    Requires: %{rhel_name}%{?_isa} = %{version}-%{rhel_release}
-    ...
+If your &#96;-epel&#96; package has to be updated each time the RHEL
+package is updated, no matter what, one way to do this is with a
+&#96;%{rhel_release}&#96; that goes along with your
+&#96;%{rhel_name}&#96;. If you do this, your &#96;-epel&#96; release
+must be less than the RHEL release. &#8230;. &#8230; %global rhel_name
+pycairo %global rhel_release 4 %global epel_release 1 &#8230; Name:
+%{rhel_name}-epel Release: 0.%{rhel_release}%{?dist}.%{epel_release}
+&#8230; %package -n %{rhel_name}-devel Requires: %{rhel_name}%{?\_isa} =
+%{version}-%{rhel_release} &#8230; &#8230;.
 
 #### ExcludeArch: (if needed) {#_excludearch_if_needed}
 
 Some sub-packages are only missing in some arches. If that is the case,
-then you should use `ExcludeArch:` to have your package only built on
-those arches you care about.
+then you should use &#96;ExcludeArch:&#96; to have your package only
+built on those arches you care about.
 
-    # This is only for non-x86/POWER architectures
-    ExcludeArch: %{ix86} x86_64 %{power64}
+&#8230;. &#35; This is only for non-x86/POWER architectures ExcludeArch:
+%{ix86} x86_64 %{power64} &#8230;.
 
 #### Remove files shipped in RHEL {#_remove_files_shipped_in_rhel}
 
-At the end of the `%install` section, remove all the files you will not
-be shipping.
+At the end of the &#96;%install&#96; section, remove all the files you
+will not be shipping.
 
-    %install
-    %py3_install
+&#8230;. %install %py3_install
 
-    # remove files shipped in RHEL
-    rm -rf %{buildroot}%{python3_sitearch}
+&#35; remove files shipped in RHEL rm -rf
+%{buildroot}%{python3_sitearch} &#8230;.
 
 #### Remove un-needed sections {#_remove_un_needed_sections}
 
-- **Need to remove**
+&#42; &#42;Need to remove&#42; &#42;&#42; &#96;%files&#96;
+&#42;&#42;&#42; Remove all the &#96;%files&#96; sections you will not be
+shipping. &#42;&#42;&#42; Make sure any file listed in those sections is
+removed in the &#96;%install&#96; section.
 
-  - `%files`
-
-    - Remove all the `%files` sections you will not be shipping.
-
-    - Make sure any file listed in those sections is removed in the
-      `%install` section.
-
-- **Optional remove**
-
-  - `%package` and `%description`
-
-  - `%prep`, `%post`, and other scripts
-
-  - `%check`
-
-    - This really depends on what you are doing. If `%check` takes an
-      hour, and all you need is a few headers, feel free to remove it.
-      If the missing package has an actual program in it, leave it in.
-
-    - When in doubt, leave `%check` in.
+&#42; &#42;Optional remove&#42; &#42;&#42; &#96;%package&#96; and
+&#96;%description&#96; &#42;&#42; &#96;%prep&#96;, &#96;%post&#96;, and
+other scripts &#42;&#42; &#96;%check&#96; &#42;&#42;&#42; This really
+depends on what you are doing. If &#96;%check&#96; takes an hour, and
+all you need is a few headers, feel free to remove it. If the missing
+package has an actual program in it, leave it in. &#42;&#42;&#42; When
+in doubt, leave &#96;%check&#96; in.
 
 ## Missing un-built examples {#_missing_un_built_examples}
 
 These examples are for the [Missing RHEL sub-packages/missing un-built
 sub-packages
-policy](epel-policy-missing-sub-packages.xml#missing_un-built_sub-packages).
+policy](epel-policy-missing-sub-packages.adoc&#35;missing_un-built_sub-packages).
 
 # EPEL package maintainers {#_epel_package_maintainers}
 
 EPEL packages are maintained by members of the community. These
 maintainers respond to bug reports, update packages and add new packages
 to the collection as needed. EPEL packagers are members of the Fedora
-`packagers` group.
+&#96;packagers&#96; group.
 
 ## Joining the EPEL package maintainers {#joining_the_epel_package_maintainers}
 
@@ -966,7 +908,7 @@ There are several ways you can join the EPEL package maintainer group:
     EPEL packages by becoming a maintainer or co-maintainer of an
     existing EPEL package, which you can apply for in pkgdb. You can
     also [request EPEL
-    branches](epel-faq.xml#how_do_i_request_a_epel_branch_for_an_existing_fedora_package)
+    branches](epel-faq.adoc&#35;how_do_i_request_a_epel_branch_for_an_existing_fedora_package)
     for your Fedora package and maintain them for EPEL with a Package
     SCM request.
 
@@ -974,22 +916,22 @@ There are several ways you can join the EPEL package maintainer group:
     join that group by submitting one or more new packages for
     Fedora/EPEL, and following the normal Fedora sponsorship process.
     Then, simply [request EPEL
-    branches](epel-faq.xml#how_do_i_request_a_epel_branch_for_an_existing_fedora_package)
+    branches](epel-faq.adoc&#35;how_do_i_request_a_epel_branch_for_an_existing_fedora_package)
     for your new packages once they are approved.
 
 3.  If you are not currently in the Fedora packager group and wish to
     help co-maintain one or more packages in EPEL, you can try and find
     an existing package and maintainer of that package who wishes to
-    mentor you. You can then follow the [\"Become a co-maintainer\" path
+    mentor you. You can then follow the [\'Become a co-maintainer\' path
     to
-    sponsorship](package-maintainers::How_to_Get_Sponsored_into_the_Packager_Group.xml#become_a_co_maintainer).
+    sponsorship](package-maintainers::How_to_Get_Sponsored_into_the_Packager_Group.adoc&#35;become_a_co_maintainer).
 
 4.  If you are an existing EPEL/Fedora maintainer and wish to maintain a
     package in EPEL that someone else maintains in Fedora, file a bug
     asking them if they would like to maintain it in EPEL, if no
     response in a week or if the Fedora maintainer has no interest in
     EPEL, follow the [stalled EPEL Request
-    procedure](epel-package-request.xml#stalled_epel_requests) and
+    procedure](epel-package-request.adoc&#35;stalled_epel_requests) and
     maintain it yourself.
 
 ## EPEL policies and guidelines {#epel_policies_and_guidelines}
@@ -1026,7 +968,7 @@ Fedora, but it should be exceptional. Such packages can be submitted for
 review as per the regular process. Be ready to discuss why your package
 only applies to EPEL.
 
-If the package is in Fedora but not in EPEL, see above. :experimental:
+If the package is in Fedora but not in EPEL, see above.
 
 # EPEL Packagers SIG {#_epel_packagers_sig}
 
@@ -1060,14 +1002,10 @@ are SIG members that are also on the EPEL Steering Committee.
 There is often a lag between a new Enterprise Linux release being
 available, and extra packages being available for it:
 
-- That package has to be branched and built
-
-- The existing maintainers have to decide if they want to support the
-  latest EPEL or not
-
-- Rinse and repeat for every dependency
-
-- Then have years of maintenance and updates for that package
+&#42; That package has to be branched and built &#42; The existing
+maintainers have to decide if they want to support the latest EPEL or
+not &#42; Rinse and repeat for every dependency &#42; Then have years of
+maintenance and updates for that package
 
 Adding the epel-packagers-sig group as a collaborator for a package
 gives the regular package maintainer(s) more people to maintain it over
@@ -1078,17 +1016,14 @@ EPEL faster.
 
 We aim to be somewhere in between the language-based SIGs (e.g. the
 [Python SIG](https://fedoraproject.org/wiki/SIGs/Python)) and being
-\"provenpackagers for EPEL\":
+\'provenpackagers for EPEL\':
 
-- like the language-based SIG, it's opt in: if a package maintainer
-  would like help maintaining their packages for EPEL, they can add
-  epel-packagers-sig as co-maintainers
-
-- SIG members can request new EPEL branches for packages they
-  co-maintain
-
-- SIG members can mark packages they co-maintain to be automatically
-  branched for the next EPEL release
+&#42; like the language-based SIG, it's opt in: if a package maintainer
+would like help maintaining their packages for EPEL, they can add
+epel-packagers-sig as co-maintainers &#42; SIG members can request new
+EPEL branches for packages they co-maintain &#42; SIG members can mark
+packages they co-maintain to be automatically branched for the next EPEL
+release
 
 Existing maintainers can decide whether to give the SIG commit access
 (in which case SIG members can also commit to Rawhide and Fedora
@@ -1102,7 +1037,7 @@ Automatic branching is not implemented yet.
 
 Candidate packages for onboarding --- [NEW branch requests over two
 weeks
-old](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&f1=days_elapsed&list_id=11600601&o1=greaterthan&product=Fedora&product=Fedora%20EPEL&query_format=advanced&short_desc=epel&short_desc_type=allwordssubstr&v1=14).
+old](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW\&amp;f1=days_elapsed\&amp;list_id=11600601\&amp;o1=greaterthan\&amp;product=Fedora\&amp;product=Fedora%20EPEL\&amp;query_format=advanced\&amp;short_desc=epel\&amp;short_desc_type=allwordssubstr\&amp;v1=14).
 We should consider reviewing this periodically.
 
 Branch requests and/or bug requests that need to be brought into the
@@ -1110,78 +1045,66 @@ SIG's attention should block [the EPELPackagersSIG
 tracker](https://bugzilla.redhat.com/show_bug.cgi?id=EPELPackagersSIG).
 
 See [the guidelines for stalled
-requests](epel-package-request.xml#stalled_epel_requests) for follow-ups
-if a branch request has been stale for at least a week.
+requests](epel-package-request.adoc&#35;stalled_epel_requests) for
+follow-ups if a branch request has been stale for at least a week.
 
 ## Joining the EPEL Packagers SIG {#_joining_the_epel_packagers_sig}
 
-Getting added to `epel-packagers-sig` grants collective access to all
-packages this group has access to, so we do need to be more careful when
-adding new contributors to this group.
+Getting added to &#96;epel-packagers-sig&#96; grants collective access
+to all packages this group has access to, so we do need to be more
+careful when adding new contributors to this group.
 
 A candidate should be a skilled package maintainer who is experienced in
 a wide variety of package types and who are familiar with the [Fedora
-packaging guidelines](fesco::Package_maintainer_responsibilities.xml)
-and [EPEL package maintainer policies](epel-policy.xml). They should
-have been packaging with Fedora and/or EPEL for at least a year.
+packaging
+guidelines](fesco::Package_maintainer_responsibilities.adoc&#35;) and
+[EPEL package maintainer policies](epel-policy.xml). They should have
+been packaging with Fedora and/or EPEL for at least a year.
 
 The procedure is similar to that for
-[provenpackagers](fesco::Provenpackager_policy.xml#_becoming_provenpackager).
+[provenpackagers](fesco::Provenpackager_policy.adoc&#35;_becoming_provenpackager).
 
-- File a ticket in the [EPEL issue
-  tracker](https://pagure.io/epel/issues) indicating why you wish to
-  become a member.
-
-- A [Packagers SIG
-  Sponsor](https://accounts.fedoraproject.org/group/epel-packagers-sig/)
-  will send an e-mail to the SIG members, so they are aware about the
-  ticket.
-
-- Packagers SIG Sponsors vote in the EPEL ticket.
-
-- You must get at least 1 positive votes from SIG Sponsor with no
-  negative votes, over a one week review period, to be approved.
+&#42; File a ticket in the [EPEL issue
+tracker](https://forge.fedoraproject.org/epel/steering) indicating why
+you wish to become a member. &#42; A [Packagers SIG
+Sponsor](https://accounts.fedoraproject.org/group/epel-packagers-sig/)
+will send an e-mail to the SIG members, so they are aware about the
+ticket. &#42; Packagers SIG Sponsors vote in the EPEL ticket. &#42; You
+must get at least 1 positive votes from SIG Sponsor with no negative
+votes, over a one week review period, to be approved.
 
 If you haven't been approved after one week, the EPEL Steering Committee
 will vote (normal EPEL voting mechanism applies).
 
 ### Get to work {#_get_to_work}
 
-- Look through [the general EPEL issues](https://pagure.io/epel/issues)
-  related to packaging and see where you can help.
-
-- Look through [the EPEL Packagers SIG bug
-  tracker](https://bugzilla.redhat.com/show_bug.cgi?id=EPELPackagersSIG),
-  see if there are any you want to help with.
-
-- Look through [old epel
-  bugs](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW&f1=days_elapsed&list_id=11600601&o1=greaterthan&product=Fedora&product=Fedora%20EPEL&query_format=advanced&short_desc=epel&short_desc_type=allwordssubstr&v1=14).
-  Many of them are requesting packages. See if there are any you think
-  should be added to the EPEL Packagers Sig tracker.
-
-- Look at [the EPEL Packagers SIG
-  dashboard](https://packager-dashboard.fedoraproject.org/dashboard?groups=epel-packagers-sig)
-  to see if there is anything there you can do.
-
-- Look at
-  [Will-It-Install](https://tdawson.fedorapeople.org/epel/willit/status-overall.html)
-  and see if there are any packages that will not install that you can
-  help with.
-
-  - [EPEL 9 packages that will not
-    install](https://tdawson.fedorapeople.org/epel/willit/epel9/status-wont-install.html).
-
-  - [EPEL 8 packages that will not
-    install](https://tdawson.fedorapeople.org/epel/willit/epel8/status-wont-install.html).
+&#42; Look through [the general EPEL
+issues](https://forge.fedoraproject.org/epel/steering) related to
+packaging and see where you can help. &#42; Look through [the EPEL
+Packagers SIG bug
+tracker](https://bugzilla.redhat.com/show_bug.cgi?id=EPELPackagersSIG),
+see if there are any you want to help with. &#42; Look through [old epel
+bugs](https://bugzilla.redhat.com/buglist.cgi?bug_status=NEW\&amp;f1=days_elapsed\&amp;list_id=11600601\&amp;o1=greaterthan\&amp;product=Fedora\&amp;product=Fedora%20EPEL\&amp;query_format=advanced\&amp;short_desc=epel\&amp;short_desc_type=allwordssubstr\&amp;v1=14).
+Many of them are requesting packages. See if there are any you think
+should be added to the EPEL Packagers Sig tracker. &#42; Look at [the
+EPEL Packagers SIG
+dashboard](https://packager-dashboard.fedoraproject.org/dashboard?groups=epel-packagers-sig)
+to see if there is anything there you can do. &#42; Look at
+[Will-It-Install](https://tdawson.fedorapeople.org/epel/willit/status-overall.html)
+and see if there are any packages that will not install that you can
+help with. &#42;&#42; [EPEL 9 packages that will not
+install](https://tdawson.fedorapeople.org/epel/willit/epel9/status-wont-install.html).
+&#42;&#42; [EPEL 8 packages that will not
+install](https://tdawson.fedorapeople.org/epel/willit/epel8/status-wont-install.html).
 
 See [the guidelines for stalled
-requests](epel-package-request.xml#stalled_epel_requests) for follow-ups
-if a branch request has been stale for at least a week.
+requests](epel-package-request.adoc&#35;stalled_epel_requests) for
+follow-ups if a branch request has been stale for at least a week.
 
 ## Communicating with the EPEL Packagers SIG {#communicating_with_the_epel_packagers_sig}
 
 We use the same communication channels as EPEL; see [Communicating with
-EPEL](epel-communication.xml) for details. :experimental:
+EPEL](epel-communication.xml) for details.
 
 # EPEL Next {#_epel_next}
 
@@ -1195,15 +1118,15 @@ minimum version build requirement that is already in CentOS Stream but
 not yet in RHEL. EPEL Next has its own distgit branches, koji build
 targets, and bodhi releases.
 
-EPEL Next packages have `.next` appended to the disttag (e.g. a disttag
-of `.el9.next` for epel9-next) to provide an upgrade path from an EPEL
-package that was built from the same distgit commit. A package
-maintainer can rebuild the same commit for both EPEL and EPEL Next and
-get two different NVRs in koji. Within six months, the build requirement
-necessitating building in EPEL Next should be in RHEL, and at that time
-the package maintainer can do a normal release bump commit in the EPEL
-branch and get a newer NVR than both the previous EPEL and EPEL Next
-packages.
+EPEL Next packages have &#96;.next&#96; appended to the disttag (e.g. a
+disttag of &#96;.el9.next&#96; for epel9-next) to provide an upgrade
+path from an EPEL package that was built from the same distgit commit. A
+package maintainer can rebuild the same commit for both EPEL and EPEL
+Next and get two different NVRs in koji. Within six months, the build
+requirement necessitating building in EPEL Next should be in RHEL, and
+at that time the package maintainer can do a normal release bump commit
+in the EPEL branch and get a newer NVR than both the previous EPEL and
+EPEL Next packages.
 
 To get started with EPEL Next, request the corresponding branch for the
 EPEL release you are targeting, e.g. request an epel9-next branch to
@@ -1222,33 +1145,26 @@ dependency that was rebased in the distro which is destined for the next
 minor release of RHEL. You can use EPEL Next to build a compatible
 package now.
 
-- `fedpkg request-branch epel9-next` and wait for the branch to be
-  created
-
-- `git checkout epel9-next`
-
-- `git merge epel9`
-
-- `git push`
-
-- `fedpkg build`
-
-- submit bodhi update via web interface or cli
+&#42; &#96;fedpkg request-branch epel9-next&#96; and wait for the branch
+to be created &#42; &#96;git checkout epel9-next&#96; &#42; &#96;git
+merge epel9&#96; &#42; &#96;git push&#96; &#42; &#96;fedpkg build&#96;
+&#42; submit bodhi update via web interface or cli
 
 This will result in an EPEL Next package that is the same as the
-existing EPEL package, except for the `.next` suffix on the disttag and
-being built against CentOS Stream 9. Your `epel9-next` branches can
-diverge from the corresponding epel9 branches as needed. If an update
-for your EPEL package requires a minimum version of a dependency that is
-only in CentOS Stream so far, you can update in the `epel9-next` branch
-first, then merge from `epel9-next` to `epel9` when the dependency is
-added to the next RHEL minor release.
+existing EPEL package, except for the &#96;.next&#96; suffix on the
+disttag and being built against CentOS Stream 9. Your
+&#96;epel9-next&#96; branches can diverge from the corresponding epel9
+branches as needed. If an update for your EPEL package requires a
+minimum version of a dependency that is only in CentOS Stream so far,
+you can update in the &#96;epel9-next&#96; branch first, then merge from
+&#96;epel9-next&#96; to &#96;epel9&#96; when the dependency is added to
+the next RHEL minor release.
 
 ## FAQ {#_faq}
 
 ### How do I enable EPEL Next? {#how_do_i_enable_epel_next}
 
-`dnf install epel-next-release`
+&#96;dnf install epel-next-release&#96;
 
 ### If I build my package in EPEL do I also need to build my package in EPEL Next? {#if_i_build_my_package_in_epel_do_i_also_need_to_build_my_package_in_epel_next}
 
@@ -1265,16 +1181,14 @@ epel-next-release package requires epel-release.
 
 ### Why isn't this called EPEL Stream? {#why_isnt_this_called_epel_stream}
 
-The term stream is already massively overloaded. \"Next\" correctly
+The term stream is already massively overloaded. \'Next\' correctly
 describes the purpose of the repository, which is providing packages
 compatible with the next minor release of RHEL. Additionally, EPEL Next
 isn't exclusively useful for CentOS Stream. It's also useful for:
 
-- RHEL Beta releases.
-
-- RHEL itself temporarily at minor release time when an EPEL package was
-  already rebuilt for a library change in EPEL Next but hasn't been
-  rebuilt in EPEL yet.
+&#42; RHEL Beta releases. &#42; RHEL itself temporarily at minor release
+time when an EPEL package was already rebuilt for a library change in
+EPEL Next but hasn't been rebuilt in EPEL yet.
 
 ### When I request an epel9 branch, will an epel9-next branch be requested automatically? {#when_i_request_an_epel9_branch_will_an_epel9_next_branch_be_requested_automatically}
 
@@ -1293,12 +1207,12 @@ process](epel-policy-incompatible-upgrades.xml).
 
 ### Why is the package I'm looking for in EPEL but not in EPEL Next? {#why_is_the_package_im_looking_for_in_epel_but_not_in_epel_next}
 
-EPEL Next is **not** a complete rebuild of all EPEL packages. Most EPEL
-packages already install on CentOS Stream correctly. EPEL Next is an
-additional repository to be used with regular EPEL (not instead of) to
-resolve the occasional compatibility issue. If you install both
-epel-release and epel-next-release, \`dnf install \` should pick the
-correct available package from the appropriate repository. If that
+EPEL Next is &#42;not&#42; a complete rebuild of all EPEL packages. Most
+EPEL packages already install on CentOS Stream correctly. EPEL Next is
+an additional repository to be used with regular EPEL (not instead of)
+to resolve the occasional compatibility issue. If you install both
+epel-release and epel-next-release, &#96;dnf install &#96; should pick
+the correct available package from the appropriate repository. If that
 doesn't work, please file a
 [bug](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora%20EPEL)
 to let the maintainer know.
@@ -1320,7 +1234,7 @@ available, you'll see an error like this.
 
 This is because epel-next-release intentionally requires epel-release.
 EPEL Next is designed to be used *with* EPEL, not as a replacement. EPEL
-Next packages will often require other packages in EPEL. :experimental:
+Next packages will often require other packages in EPEL.
 
 # EPEL Playground {#_epel_playground}
 
@@ -1328,17 +1242,17 @@ Next packages will often require other packages in EPEL. :experimental:
 ::: title
 :::
 
-**EPEL Playground was shut down in January 2022**
+&#42;EPEL Playground was shut down in January 2022&#42;
 ::::
 
 EPEL 8 Playground was a place that developers and maintainers could
-\"play around\" with updated, or changed packages in epel. EPEL
+\'play around\' with updated, or changed packages in epel. EPEL
 Playground never really worked out and ended up being more burden than
 helpful.
 
 If developers or maintainers want something similar to EPEL Playground
 we recommend [Fedora COPR](https://copr.fedorainfracloud.org/), which
-has availability for EPEL builds. :experimental:
+has availability for EPEL builds.
 
 # EPEL package maintainer generic job description {#_epel_package_maintainer_generic_job_description}
 
@@ -1356,7 +1270,7 @@ lives on in case you do not.
 
 ## Generic job description {#generic_job_description}
 
-**EPEL Package Maintainer**
+&#42;EPEL Package Maintainer&#42;
 
 This role includes maintaining one or more packages through the Fedora
 Project. These packages are rebuilt in the Fedora Extra Packages for
@@ -1388,50 +1302,43 @@ Enterprise Linux.
 
 ### Job duties {#job_duties}
 
-- Interact with upstream
-
-- Interact with Fedora and EPEL sub-group
-
-- Maintain package throughout the life of the associated Enterprise
-  Linux
-
-- Provide security updates
-
-- Be active in the appropriate packaging communities
-
-- Follow all Fedora and EPEL guidelines, procedures, and rules
-  :experimental:
+&#42; Interact with upstream &#42; Interact with Fedora and EPEL
+sub-group &#42; Maintain package throughout the life of the associated
+Enterprise Linux &#42; Provide security updates &#42; Be active in the
+appropriate packaging communities &#42; Follow all Fedora and EPEL
+guidelines, procedures, and rules
 
 # RHEL entitlements for EPEL maintainers {#_rhel_entitlements_for_epel_maintainers}
 
 EPEL maintainers can use the free [RHEL developer
 subscription](https://developers.redhat.com) to develop and test their
 packages. The [mock](https://rpm-software-management.github.io/mock/)
-tool includes `rhel+epel-<version>-<arch>.cfg` configuration files that
-[integrate with this
+tool includes &#96;rhel+epel-&lt;version&gt;-&lt;arch&gt;.cfg&#96;
+configuration files that [integrate with this
 subscription](https://rpm-software-management.github.io/mock/Feature-rhelchroots),
 even on non-RHEL distributions such as Fedora.
 
 An EPEL maintainer may alternatively use other RHEL-like distributions
 to develop and test their packages. Mock includes several other
-`<distro>+epel-<version>-<arch>.cfg` configuration files to choose from.
-These distributions will have some differences from RHEL. It is the
-maintainer's responsibility to ensure that their EPEL packages work on
-RHEL in spite of these differences. :experimental:
+&#96;&lt;distro&gt;+epel-&lt;version&gt;-&lt;arch&gt;.cfg&#96;
+configuration files to choose from. These distributions will have some
+differences from RHEL. It is the maintainer's responsibility to ensure
+that their EPEL packages work on RHEL in spite of these differences.
 
 # Packaging guidelines and policies for EPEL {#_packaging_guidelines_and_policies_for_epel}
 
 The packages in EPEL follow the Fedora Packaging and Maintenance
 Guidelines --- that includes, but is not limited to the [packaging
 guidelines](packaging-guidelines::index.xml), the [package naming
-guidelines](packaging-guidelines::index.xml#_naming), and the [package
-review guidelines](packaging-guidelines::ReviewGuidelines.xml) that are
-designed and maintained by the [FESCo](fesco::index.xml), and [Packaging
+guidelines](packaging-guidelines::index.adoc&#35;_naming), and the
+[package review guidelines](packaging-guidelines::ReviewGuidelines.xml)
+that are designed and maintained by the [FESCo](fesco::index.xml), and
+[Packaging
 Committee](https://fedoraproject.org/wiki/Packaging_Committee).
 EPEL-specific exceptions are documented here and in the [EPEL
 packaging](epel-packaging.xml) page.
 
-Please note that the sections \"Guidelines\" and \"Policies\" use their
+Please note that the sections \'Guidelines\' and \'Policies\' use their
 names on purpose. Consider the guidelines as something that should be
 followed normally, but doesn't have to if there are good reasons not
 to --- please ask EPEL members in case you are in doubt if your reasons
@@ -1441,7 +1348,7 @@ followed.
 
 ## Package maintenance and update policy {#package_maintenance_and_update_policy}
 
-EPEL wants to provide a common \"look and feel\" to the users of our
+EPEL wants to provide a common \'look and feel\' to the users of our
 repository. Thus the EPEL Steering Committee wrote this policy that
 describes the regulations for package maintenance and updates in EPEL,
 that are a bit more strictly regulated then they are in Fedora now.
@@ -1454,8 +1361,8 @@ replacing packages from that distribution. The packages in the
 repository should, if possible, be maintained in similar ways to the
 Enterprise Packages they were built against. In other words: have a
 mostly stable set of packages that normally do not change at all and
-only changes if there are good reasons for it --- so no \"hey, there is
-a new version, it builds, let's ship it\" mentality.
+only changes if there are good reasons for it --- so no \'hey, there is
+a new version, it builds, let's ship it\' mentality.
 
 ### Policy {#_policy}
 
@@ -1471,53 +1378,29 @@ The Target Base for each distribution has been defined in older mailing
 list discussions as the version of Red Hat Enterprise Linux that the
 Koji builders have access to.
 
-- EPEL 10's leading minor version is built against CentOS Stream 10
-  repos
-
-  - `baseos`
-
-  - `appstream`
-
-  - `crb`
-
-- EPEL 10's trailing minor versions are built against Red Hat Enterprise
-  Linux 10 channels
-
-  - `rhel-10-for-*-baseos-rpms`
-
-  - `rhel-10-for-*-appstream-rpms`
-
-  - `codeready-builder-for-rhel-10-*-rpms`
-
-- EPEL 9 Next is built against CentOS Stream 9 repos
-
-  - `baseos`
-
-  - `appstream`
-
-  - `crb`
-
-- EPEL 9 is built against Red Hat Enterprise Linux 9 channels
-
-  - `rhel-9-for-*-baseos-rpms`
-
-  - `rhel-9-for-*-appstream-rpms`
-
-  - `codeready-builder-for-rhel-9-*-rpms`
-
-- EPEL 8 is built against Red Hat Enterprise Linux 8 channels
-
-  - `rhel-8-for-*-baseos-rpms`
-
-  - `rhel-8-for-*-appstream-rpms`
-
-  - `codeready-builder-for-rhel-8-*-rpms`
+&#42; EPEL 10's leading minor version is built against CentOS Stream 10
+repos &#42;&#42; &#96;baseos&#96; &#42;&#42; &#96;appstream&#96;
+&#42;&#42; &#96;crb&#96; &#42; EPEL 10's trailing minor versions are
+built against Red Hat Enterprise Linux 10 channels &#42;&#42;
+&#96;rhel-10-for-&#42;-baseos-rpms&#96; &#42;&#42;
+&#96;rhel-10-for-&#42;-appstream-rpms&#96; &#42;&#42;
+&#96;codeready-builder-for-rhel-10-&#42;-rpms&#96; &#42; EPEL 9 Next is
+built against CentOS Stream 9 repos &#42;&#42; &#96;baseos&#96;
+&#42;&#42; &#96;appstream&#96; &#42;&#42; &#96;crb&#96; &#42; EPEL 9 is
+built against Red Hat Enterprise Linux 9 channels &#42;&#42;
+&#96;rhel-9-for-&#42;-baseos-rpms&#96; &#42;&#42;
+&#96;rhel-9-for-&#42;-appstream-rpms&#96; &#42;&#42;
+&#96;codeready-builder-for-rhel-9-&#42;-rpms&#96; &#42; EPEL 8 is built
+against Red Hat Enterprise Linux 8 channels &#42;&#42;
+&#96;rhel-8-for-&#42;-baseos-rpms&#96; &#42;&#42;
+&#96;rhel-8-for-&#42;-appstream-rpms&#96; &#42;&#42;
+&#96;codeready-builder-for-rhel-8-&#42;-rpms&#96;
 
 EPEL packages which are known to also exist in other RHEL channels
-should keep a lower `epoch:version-release` (EVR) than the RHEL package.
-This is because packages have been known to move from these other
-channels into the target base channels. Keeping a lower EVR helps ensure
-a smooth upgrade path.
+should keep a lower &#96;epoch:version-release&#96; (EVR) than the RHEL
+package. This is because packages have been known to move from these
+other channels into the target base channels. Keeping a lower EVR helps
+ensure a smooth upgrade path.
 
 The packages in the repository should, if possible, be maintained in
 similar ways to the Enterprise Packages they were built against. In
@@ -1531,7 +1414,7 @@ security problems, really annoying bugs) go to a testing branch for a
 short time period and then are pushed to the stable branch; those people
 that sign and push the EPEL packages to the public repo will skim over
 the list of updated packages for the stable repo to make sure that sure
-the goal \"only important updates for the stable branch\" is fulfilled.
+the goal \'only important updates for the stable branch\' is fulfilled.
 
 Other updates get queued up in a testing repository over time. That
 repository becomes the new stable branch after 2 weeks of testing. But
@@ -1551,16 +1434,11 @@ policy](epel-policy-updates.xml).
 
 ## Workflow examples/information {#workflow_examples_information}
 
-- Maintainer builds the package.
-
-- Maintainer submits an update for testing using bodhi.
-
-- If the update gets sufficient karma it is promoted to stable.
-
-- After 2 weeks, if the package does not have a negative karma, bodhi
-  will promote the package to stable.
-
-- Pushes for both testing and stable take place daily.
+&#42; Maintainer builds the package. &#42; Maintainer submits an update
+for testing using bodhi. &#42; If the update gets sufficient karma it is
+promoted to stable. &#42; After 2 weeks, if the package does not have a
+negative karma, bodhi will promote the package to stable. &#42; Pushes
+for both testing and stable take place daily.
 
 ## Guidelines and backgrounds for this policy {#guidelines_and_backgrounds_for_this_policy}
 
@@ -1574,8 +1452,8 @@ practise.
 Let's assume package foo is shipped in EPEL 8 as version 1.0.1; upstream
 developers now ship 1.0.2
 
-- build as normal, but wait at least two weeks and possibly more in
-  testing.
+&#42; build as normal, but wait at least two weeks and possibly more in
+testing.
 
 #### A little bit bigger minor version updates {#a_little_bit_bigger_minor_version_updates}
 
@@ -1583,8 +1461,8 @@ Let's assume package foo is shipped in EPEL 8 as version 1.0.1; upstream
 developers now ship 1.2.0; the ABI is compatible to 1.0.1 and the
 existing config files continue to work
 
-- build as normal, but leave in testing until there is sufficient karma
-  to go to stable.
+&#42; build as normal, but leave in testing until there is sufficient
+karma to go to stable.
 
 #### A yet again little bit bigger minor version updates {#a_yet_again_little_bit_bigger_minor_version_updates}
 
@@ -1592,16 +1470,13 @@ Let's assume package foo is shipped in EPEL 8 as version 1.0.1; upstream
 developers now ship 1.4.0; the ABI is compatible to 1.0.1, but the
 config files need manual adjustments
 
-- build for the stable branch is normally not acceptable; a backport
-  should be strongly considered if there are any serious bugs that must
-  be fixed
-
-- build for the testing branch is also disliked; but it is acceptable if
-  there is no other easy way out to solve serious bugs; but the update
-  and the config file adjustments need to be announced to the users
-  properly --- use the epel-announce list for this.
-
-- leave in testing if at all possible.
+&#42; build for the stable branch is normally not acceptable; a backport
+should be strongly considered if there are any serious bugs that must be
+fixed &#42; build for the testing branch is also disliked; but it is
+acceptable if there is no other easy way out to solve serious bugs; but
+the update and the config file adjustments need to be announced to the
+users properly --- use the epel-announce list for this. &#42; leave in
+testing if at all possible.
 
 #### A major version update {#a_major_version_update}
 
@@ -1609,12 +1484,12 @@ Let's assume package foo is shipped in EPEL 8 as version 1.0.1; upstream
 developers now ship 2.0.0; the ABI changes or the config files need
 manual adjustments
 
-- This update should be avoided if possible at all. If there really is
-  no other way to fix a serious bug then follow the [incompatible
-  upgrades policy](epel-policy-incompatible-upgrades.xml). In the case
-  of a library package changing soname, consider shipping a compat
-  package that provides the current soname at the same time you ship the
-  new soname.
+&#42; This update should be avoided if possible at all. If there really
+is no other way to fix a serious bug then follow the [incompatible
+upgrades policy](epel-policy-incompatible-upgrades.xml). In the case of
+a library package changing soname, consider shipping a compat package
+that provides the current soname at the same time you ship the new
+soname.
 
 #### Security updates {#security_updates}
 
@@ -1630,7 +1505,7 @@ If too many show up, put them into a separate document.
 
 ## Still unsure if a package is fine for EPEL? {#still_unsure_if_a_package_is_fine_for_epel}
 
-Just ask on [epel-devel mailing list or #epel IRC
+Just ask on [epel-devel mailing list or &#35;epel IRC
 channel](epel-communication.xml) for opinions from EPEL members.
 
 ## Why not a rolling release with latest packages like what was in Fedora Extras? {#why_not_a_rolling_release_with_latest_packages_like_what_was_in_fedora_extras}
@@ -1645,10 +1520,10 @@ distro for some reasons --- if they want the latest packages they might
 have chosen Fedora.
 
 Sure, there are lots of areas where having a mix of a stable base and a
-set of quite new packages on top of it is wanted. **Maybe** the EPEL
-project will provide a solution (in parallel to the carefully updated
-repository!) for those cases in the long term, but not for the start.
-There are already third party repositories out there that provide
+set of quite new packages on top of it is wanted. &#42;Maybe&#42; the
+EPEL project will provide a solution (in parallel to the carefully
+updated repository!) for those cases in the long term, but not for the
+start. There are already third party repositories out there that provide
 something in this direction, so users might be served by them already.
 
 Further: A rolling release scheme like Fedora Extras did is not possible
@@ -1665,8 +1540,8 @@ So if even if we would try to have a rolling scheme with quite new
 package we'd fail, as we can't build a bunch of package due to this
 dependencies on libs; in the end we would have a repo with some quite
 new packages while others are still quite old. That mix wouldn't make
-either of the \"latest versions\" or \"careful updates only\" sides
-happy; so we try to target the \"careful updates only\" sides. Remember,
+either of the \'latest versions\' or \'careful updates only\' sides
+happy; so we try to target the \'careful updates only\' sides. Remember,
 EPEL's support and updates cycle is much longer then Fedora's.
 
 ## Distribution specific guidelines {#distribution_specific_guidelines}
@@ -1681,28 +1556,22 @@ packaging](epel-packaging.xml) page.
 ## Policy for conflicting packages {#policy_for_conflicting_packages}
 
 [Per RHEL release package conflict channel
-exclusions](epel-faq.xml#does_epel_replace_packages_provided_within_red_hat_enterprise_linux)
+exclusions](epel-faq.adoc&#35;does_epel_replace_packages_provided_within_red_hat_enterprise_linux)
 
-- EPEL packages must not conflict with packages in the target base of
-  RHEL. See above link for a complete list of channels per RHEL Release
-  that EPEL does not conflict with. This includes source package names
-  due to the way that koji deals with packages from external
-  repositories.
-
-- As an exception to the above rule, devel packages in EPEL that are
-  alternate versions of devel packages in RHEL (i.e. compat packages)
-  are allowed to conflict with each other. See the section about
-  [conflicts in compat
-  packages](epel-policy.xml#conflicts_in_compat_packages) for more
-  details.
-
-- EPEL packages can conflict with packages in other RHEL channels
-  outside of the target base.
-
-- EPEL maintainers should be open to communication from RHEL maintainers
-  and try and accommodate them by not shipping specific packages, or by
-  adjusting the package in EPEL to better handle a conflicting package
-  in a channel on a case by case basis.
+&#42; EPEL packages must not conflict with packages in the target base
+of RHEL. See above link for a complete list of channels per RHEL Release
+that EPEL does not conflict with. This includes source package names due
+to the way that koji deals with packages from external repositories.
+&#42; As an exception to the above rule, devel packages in EPEL that are
+alternate versions of devel packages in RHEL (i.e. compat packages) are
+allowed to conflict with each other. See the section about [conflicts in
+compat packages](epel-policy.adoc&#35;conflicts_in_compat_packages) for
+more details. &#42; EPEL packages can conflict with packages in other
+RHEL channels outside of the target base. &#42; EPEL maintainers should
+be open to communication from RHEL maintainers and try and accommodate
+them by not shipping specific packages, or by adjusting the package in
+EPEL to better handle a conflicting package in a channel on a case by
+case basis.
 
 When a package is added to RHEL for that is already in EPEL, it usually
 needs to be removed from EPEL. Please follow the [retirement
@@ -1710,7 +1579,7 @@ process](package-maintainers::Package_Retirement_Process.xml) to do
 this. If the package is only available for a subset of all
 architectures, it might still be possible to keep the package in EPEL as
 described in the [EPEL packaging
-guidelines](epel-packaging.xml#limited_arch_packages).
+guidelines](epel-packaging.adoc&#35;limited_arch_packages).
 
 ## Conflicts in compat packages {#conflicts_in_compat_packages}
 
@@ -1720,18 +1589,18 @@ packages than Fedora. There may also be cases where backwards compat
 (i.e. older alternate version) packages are needed. When creating a
 compat package, note that it is okay to set a Conflicts between them as
 noted in the [Fedora conflicts
-guidelines](packaging-guidelines::Conflicts.xml#_compat_package_conflicts).
+guidelines](packaging-guidelines::Conflicts.adoc&#35;_compat_package_conflicts).
 This is allowed both between EPEL packages and between EPEL and RHEL
 packages. The latter is an explicit exception to the general rule for
 EPEL packages to not conflict with target base RHEL packages.
 
-## Policy for `-epel` suffixed packages {#policy_for_epel_suffixed_packages}
+## Policy for &#96;-epel&#96; suffixed packages {#policy_for_epel_suffixed_packages}
 
-The `-epel` suffix on package names is reserved for EPEL-only packages
-that provide [missing RHEL
+The &#96;-epel&#96; suffix on package names is reserved for EPEL-only
+packages that provide [missing RHEL
 subpackages](epel-policy-missing-sub-packages.xml). Any other use of the
-`-epel` suffix requires an explict exception from the [EPEL Steering
-Committee](epel-policy-steering-committee.xml).
+&#96;-epel&#96; suffix requires an explict exception from the [EPEL
+Steering Committee](epel-policy-steering-committee.xml).
 
 ## Policy for orphan and retired packages {#policy_for_orphan_and_retired_packages}
 
@@ -1746,7 +1615,7 @@ still in Fedora.
 ## Policy for end-of-life releases {#policy_for_end_of_life_releases}
 
 When a RHEL release reaches the end of the [Maintenance Support
-phase](https://access.redhat.com/support/policy/updates/errata#Life_Cycle_Dates),
+phase](https://access.redhat.com/support/policy/updates/errata\&#35;Life_Cycle_Dates),
 the corresponding EPEL release also goes end-of-life. On the day
 maintenance support ends for the RHEL release, Koji build targets are
 removed, and it is no longer possible to build or distribute new EPEL
@@ -1763,41 +1632,42 @@ release will be active until the end of overall EPEL major release.
 ## Upgrade path policy {#upgrade_path_policy}
 
 Similar to
-[Fedora](fesco::Package_maintainer_responsibilities.xml#_miscellaneous_items),
-EPEL packages **SHOULD** have a valid upgrade path between EPEL major
-versions.
+[Fedora](fesco::Package_maintainer_responsibilities.adoc&#35;_miscellaneous_items),
+EPEL packages &#42;SHOULD&#42; have a valid upgrade path between EPEL
+major versions.
 
-- EPEL 8 → EPEL 9 → EPEL 10.\*
+&#42; EPEL 8 -&gt; EPEL 9 -&gt; EPEL 10.\\&#42;
 
-This involves setting the `Version:` and `Release:` tags as appropriate
-in spec files, as well as the `Epoch:` tag if necessary. More
-information about these tags can be found in the [Fedora versioning
-guidelines](packaging-guidelines::Versioning.xml).
+This involves setting the &#96;+Version:+&#96; and &#96;+Release:+&#96;
+tags as appropriate in spec files, as well as the &#96;+Epoch:+&#96; tag
+if necessary. More information about these tags can be found in the
+[Fedora versioning guidelines](packaging-guidelines::Versioning.xml).
 
 For EPEL releases with minor versions (e.g. EPEL 10), EPEL packages
-**MUST** have a valid upgrade path between EPEL minor versions of the
-same major version.
+&#42;MUST&#42; have a valid upgrade path between EPEL minor versions of
+the same major version.
 
-- EPEL 10.0 → EPEL 10.1 → EPEL 10.2
+&#42; EPEL 10.0 -&gt; EPEL 10.1 -&gt; EPEL 10.2
 
 A simple way to achieve this is to push changes to the leading branch
 (e.g. epel10) first, and then selectively fast-forward merge or
 cherry-pick commits to trailing branches (e.g. epel10.0, epel10.1) if
 needed. Diverging from this pattern is allowed but discouraged, as it
 can easily lead to upgrade path issues and prevent users from getting
-necessary updates. :experimental:
+necessary updates.
 
 # EPEL branches {#_epel_branches}
 
 Fedora and EPEL package sources are maintained in [Fedora's
 dist-git](https://src.fedoraproject.org). The default branch is
-`rawhide`, corresponding to [Fedora Rawhide](releases::rawhide.xml).
-Additional branches are used for other Fedora and EPEL releases.
+&#96;rawhide&#96;, corresponding to [Fedora
+Rawhide](releases::rawhide.xml). Additional branches are used for other
+Fedora and EPEL releases.
 
 The rest of this page will describe the specific branches that are used
 for EPEL packages. The general mechanics of working with dist-git
 branches is covered in greater detail in the [Package Maintenance
-Guide](package-maintainers::Package_Maintenance_Guide.xml#working_with_branches).
+Guide](package-maintainers::Package_Maintenance_Guide.adoc&#35;working_with_branches).
 
 ## EPEL 10 {#_epel_10}
 
@@ -1806,55 +1676,45 @@ minor version of RHEL 10.
 
 ### epel10 {#_epel10}
 
-The `epel10` branch is used to create builds for the leading EPEL 10
-minor version repository. Prior to the CentOS Stream 10 end of life
-(which corresponds to the end of the RHEL 10 [Full Support
-Phase](https://access.redhat.com/support/policy/updates/errata#Life_Cycle_Dates)),
+The &#96;epel10&#96; branch is used to create builds for the leading
+EPEL 10 minor version repository. Prior to the CentOS Stream 10 end of
+life (which corresponds to the end of the RHEL 10 [Full Support
+Phase](https://access.redhat.com/support/policy/updates/errata\&#35;Life_Cycle_Dates)),
 these builds are built against external repositories of the matching
 major version of CentOS Stream 10.
 
-- CentOS Stream 10 BaseOS
-
-- CentOS Stream 10 AppStream
-
-- CentOS Stream 10 CRB
+&#42; CentOS Stream 10 BaseOS &#42; CentOS Stream 10 AppStream &#42;
+CentOS Stream 10 CRB
 
 These builds will indicate the minor version they are targeting in their
 [dist tag](packaging-guidelines::DistTag.xml) using the format of
-`.el10_x`, where `x` is the minor version. They are published in the
-`pub/epel/10` dnf repository for consumption by CentOS Stream 10, which
-is a symbolic link to the latest `pub/epel/10.x` dnf repository.
+&#96;.el10_x&#96;, where &#96;x&#96; is the minor version. They are
+published in the &#96;pub/epel/10&#96; dnf repository for consumption by
+CentOS Stream 10, which is a symbolic link to the latest
+&#96;pub/epel/10.x&#96; dnf repository.
 
 After the CentOS Stream 10 end of life (which corresponds to the
 beginning of the RHEL 10 [Maintenance Support
-Phase](https://access.redhat.com/support/policy/updates/errata#Life_Cycle_Dates)),
+Phase](https://access.redhat.com/support/policy/updates/errata\&#35;Life_Cycle_Dates)),
 these builds are built against external repositories of the final minor
 version of RHEL 10.
 
-- RHEL 10.10 BaseOS
-
-- RHEL 10.10 AppStream
-
-- RHEL 10.10 CRB
+&#42; RHEL 10.10 BaseOS &#42; RHEL 10.10 AppStream &#42; RHEL 10.10 CRB
 
 ### epel10.x {#_epel10_x}
 
-The `epel10.x` branches (where `x` is the minor version, e.g.
-`epel10.0`) are used to create builds for the trailing EPEL 10 minor
-version repositories. These builds are built against external
+The &#96;epel10.x&#96; branches (where &#96;x&#96; is the minor version,
+e.g. &#96;epel10.0&#96;) are used to create builds for the trailing EPEL
+10 minor version repositories. These builds are built against external
 repositories of the matching minor version of RHEL 10.
 
-- RHEL 10.x BaseOS
-
-- RHEL 10.x AppStream
-
-- RHEL 10.x CRB
+&#42; RHEL 10.x BaseOS &#42; RHEL 10.x AppStream &#42; RHEL 10.x CRB
 
 These builds will indicate the minor version they are targeting in their
 [dist tag](packaging-guidelines::DistTag.xml) using the format of
-`.el10_x`, where `x` is the minor version. They are published in
-`pub/epel/10.x` dnf repositories for consumption by the corresponding
-RHEL 10 minor version.
+&#96;.el10_x&#96;, where &#96;x&#96; is the minor version. They are
+published in &#96;pub/epel/10.x&#96; dnf repositories for consumption by
+the corresponding RHEL 10 minor version.
 
 ### minor branch lifetime {#_minor_branch_lifetime}
 
@@ -1883,39 +1743,32 @@ EPEL 9 has two dnf repositories and dist-git branches.
 
 ### epel9 {#_epel9}
 
-The `epel9` branch is used to create builds for the EPEL 9 repository.
-These builds are built against external repositories of the matching
-major version of RHEL 9.
+The &#96;epel9&#96; branch is used to create builds for the EPEL 9
+repository. These builds are built against external repositories of the
+matching major version of RHEL 9.
 
-- RHEL 9 BaseOS
+&#42; RHEL 9 BaseOS &#42; RHEL 9 AppStream &#42; RHEL 9 CRB
 
-- RHEL 9 AppStream
-
-- RHEL 9 CRB
-
-They are published in the `pub/epel/9` dnf repository for consumption by
-both RHEL 9 and CentOS Stream 9. EPEL 9 has no connection to RHEL 9
-minor versions, and is always built against the current RHEL 9 minor
-version.
+They are published in the &#96;pub/epel/9&#96; dnf repository for
+consumption by both RHEL 9 and CentOS Stream 9. EPEL 9 has no connection
+to RHEL 9 minor versions, and is always built against the current RHEL 9
+minor version.
 
 ### epel9-next {#_epel9_next}
 
-The `epel9-next` branch is used to create builds for the EPEL 9 Next
-repository. These builds are built against external repositories of the
-matching major version of CentOS Stream 9.
+The &#96;epel9-next&#96; branch is used to create builds for the EPEL 9
+Next repository. These builds are built against external repositories of
+the matching major version of CentOS Stream 9.
 
-- CentOS Stream 9 BaseOS
+&#42; CentOS Stream 9 BaseOS &#42; CentOS Stream 9 AppStream &#42;
+CentOS Stream 9 CRB
 
-- CentOS Stream 9 AppStream
-
-- CentOS Stream 9 CRB
-
-They are published in the `pub/epel/next/9` dnf repository for
+They are published in the &#96;pub/epel/next/9&#96; dnf repository for
 consumption by CentOS Stream 9.
 
-`epel9-next` branches are optional, and maintainers usually do not need
-to create them. You can read more about EPEL 9 Next and when it is
-needed [here](epel-about-next.xml).
+&#96;epel9-next&#96; branches are optional, and maintainers usually do
+not need to create them. You can read more about EPEL 9 Next and when it
+is needed [here](epel-about-next.xml).
 
 ## EPEL 8 {#_epel_8}
 
@@ -1923,19 +1776,15 @@ EPEL 8 has a single dnf repository and dist-git branch.
 
 ### epel8 {#_epel8}
 
-The `epel8` branch is used to create builds for the EPEL 8 repository.
-These builds are built against external repositories of the matching
-major version of RHEL 8.
+The &#96;epel8&#96; branch is used to create builds for the EPEL 8
+repository. These builds are built against external repositories of the
+matching major version of RHEL 8.
 
-- RHEL 8 BaseOS
+&#42; RHEL 8 BaseOS &#42; RHEL 8 AppStream &#42; RHEL 8 CRB
 
-- RHEL 8 AppStream
-
-- RHEL 8 CRB
-
-They are published in the `pub/epel/8` dnf repository for consumption by
-RHEL 8. EPEL 8 has no connection to RHEL 8 minor versions, and is always
-built against the current RHEL 8 minor version. :experimental:
+They are published in the &#96;pub/epel/8&#96; dnf repository for
+consumption by RHEL 8. EPEL 8 has no connection to RHEL 8 minor
+versions, and is always built against the current RHEL 8 minor version.
 
 # EPEL updates policy {#_epel_updates_policy}
 
@@ -1945,20 +1794,20 @@ package collection. For general EPEL package guidelines, refer to the
 
 ## Stable releases {#stable_releases}
 
-- All updates MUST spend at least 1 week in the testing repository, or
-  +3 karma from testers.
+&#42; All updates MUST spend at least 1 week in the testing repository,
+or +3 karma from testers.
 
-- All updates should strive to avoid situations that require manual
-  intervention to keep the package functioning after update.
+&#42; All updates should strive to avoid situations that require manual
+intervention to keep the package functioning after update.
 
-- Major updates with changes to user experience are to be avoided. If
-  they cannot be avoided, the [EPEL incompatible upgrades
-  policy](epel-policy-incompatible-upgrades.xml) MUST be followed. This
-  includes two separate announcements to the epel-announce mailing list.
+&#42; Major updates with changes to user experience are to be avoided.
+If they cannot be avoided, the [EPEL incompatible upgrades
+policy](epel-policy-incompatible-upgrades.xml) MUST be followed. This
+includes two separate announcements to the epel-announce mailing list.
 
-- When new packages enter the Enterprise Linux distribution that is
-  already available in EPEL, that package will be marked dead.package
-  and blocked in pkgdb and koji.
+&#42; When new packages enter the Enterprise Linux distribution that is
+already available in EPEL, that package will be marked dead.package and
+blocked in pkgdb and koji.
 
 ## Exceptions {#_exceptions}
 
@@ -1966,14 +1815,14 @@ In some rare cases, exceptions will need to be made. Bring your case
 before the EPEL Steering Committee at one of the weekly meetings and/or
 the mailing list. Possibly grounds for exception might include:
 
-- Serious security issue that cannot be backported to the existing
-  version, so a new major version is required.
+&#42; Serious security issue that cannot be backported to the existing
+version, so a new major version is required.
 
-- Serious bugs that cannot be fixed in the existing version.
+&#42; Serious bugs that cannot be fixed in the existing version.
 
 In cases of major disruption, EPEL updates will looked to be done along
 with Red Hat Enterprise Linux minor releases (8.1, 8.2, 8.3) so as to
-allow for longer testing or differing beta testing. :experimental:
+allow for longer testing or differing beta testing.
 
 # Incompatible upgrades policy {#_incompatible_upgrades_policy}
 
@@ -1996,14 +1845,15 @@ maintainer is unable to backport just the security fix.
     reference (if applicable). Also reference a bug in
     [Bugzilla](epel-communication.xml) against the package.
 
-2.  In the case of a critical CVE the maintainer **MAY** build the
+2.  In the case of a critical CVE the maintainer &#42;MAY&#42; build the
     package and submit it to bodhi for testing. \'Auto-request stable?\'
-    **MUST NOT** be checked.
+    &#42;MUST NOT&#42; be checked.
 
-3.  File an [EPEL issue](https://pagure.io/epel/issues). This can be
-    done while discussion is ongoing; please link to the thread in the
-    mailing list archive so the EPEL Steering Committee can monitor the
-    discussion and know when it is ready to be discussed.
+3.  File an [EPEL issue](https://forge.fedoraproject.org/epel/steering).
+    This can be done while discussion is ongoing; please link to the
+    thread in the mailing list archive so the EPEL Steering Committee
+    can monitor the discussion and know when it is ready to be
+    discussed.
 
 4.  After a week of mailing list discussion, an EPEL Steering Committee
     member will add the meeting tag and the issue will be discussed at
@@ -2019,27 +1869,28 @@ maintainer is unable to backport just the security fix.
     must take in order to continue using the software.
 
 7.  Package MUST remain in testing for at least 1 week, regardless of
-    received karma. In bodhi, \'Auto-request stable?\' **MUST NOT** be
-    checked.
+    received karma. In bodhi, \'Auto-request stable?\' &#42;MUST
+    NOT&#42; be checked.
 
-8.  When pushing the package to stable, the maintainer **MUST** send
-    another e-mail to epel-announce.
+8.  When pushing the package to stable, the maintainer &#42;MUST&#42;
+    send another e-mail to epel-announce.
 
 ## Procedure for other packages {#procedure_for_other_packages}
 
-For other - non-security - incompatible updates, the maintainer **MUST
-NOT** push those types of changes. Consider shipping an alternatively
-named new package (e.g. foo2) to provide the newer version.
+For other - non-security - incompatible updates, the maintainer
+&#42;MUST NOT&#42; push those types of changes. Consider shipping an
+alternatively named new package (e.g. foo2) to provide the newer
+version.
 
 ## Discussion points {#discussion_points}
 
 1.  Approval process - majority of those present seems to be lax, but
-    being there's no body such as FESCo in \"charge\" of EPEL (yes, I
+    being there's no body such as FESCo in \'charge\' of EPEL (yes, I
     realize that FESCo has oversight, but oversight != make day-to-day
     decisions such as these), I'm not sure what else to put there.
 
 2.  How to enforce the mail to epel-announce? Maybe have the chair of
-    the EPEL meeting send it? :experimental:
+    the EPEL meeting send it?
 
 # Retirement policy {#_retirement_policy}
 
@@ -2047,11 +1898,8 @@ named new package (e.g. foo2) to provide the newer version.
 
 There are three reasons for retiring a package in EPEL.
 
-- The package is now included in RHEL.
-
-- Security reasons.
-
-- Maintainer no longer has time and/or desire.
+&#42; The package is now included in RHEL. &#42; Security reasons. &#42;
+Maintainer no longer has time and/or desire.
 
 ## Process: Package in RHEL {#process_package_in_rhel}
 
@@ -2059,27 +1907,24 @@ If a package is in RHEL, you should have received a bug telling you your
 package is going to be in RHEL. It should also say which RHEL release it
 will be in (e.g. RHEL 8.8).
 
-**Do not remove your EPEL package until you have verified that it is in
-RHEL.**
+&#42;Do not remove your EPEL package until you have verified that it is
+in RHEL.&#42;
 
-- If the package version in RHEL is older than the version in EPEL, send
-  an e-mail to
-  [epel-devel](https://lists.fedoraproject.org/archives/list/epel-devel@lists.fedoraproject.org/),
-  documenting the potential loss of functionality. If the package
-  version in RHEL is the same or newer, sending the e-mail is optional
-
-- Once your package is in RHEL, you should [retire the package from
-  EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/#_procedure).
-
-  - fedpkg switch-branch epel8 (or whichever epel branch is correct)
-
-  - fedpkg retire \"REASON FOR RETIREMENT\"
+&#42; If the package version in RHEL is older than the version in EPEL,
+send an e-mail to
+[epel-devel](https://lists.fedoraproject.org/archives/list/epel-devel@lists.fedoraproject.org/),
+documenting the potential loss of functionality. If the package version
+in RHEL is the same or newer, sending the e-mail is optional &#42; Once
+your package is in RHEL, you should [retire the package from
+EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/\&#35;_procedure).
+&#42;&#42; fedpkg switch-branch epel8 (or whichever epel branch is
+correct) &#42;&#42; fedpkg retire \'REASON FOR RETIREMENT\'
 
 ## Process: Security reasons {#process_security_reasons}
 
 If a package has a severe security issue, and the fix cannot be
 backported, usually this can be fixed [with an incompatible
-upgrade](epel-policy-incompatible-upgrades.xml#process_for_incompatible_upgrades).
+upgrade](epel-policy-incompatible-upgrades.adoc&#35;process_for_incompatible_upgrades).
 If the EPEL version is fairly old, and a newer version cannot be built,
 it's possible that the only choice of action is to remove the package.
 
@@ -2096,14 +1941,13 @@ it's possible that the only choice of action is to remove the package.
 3.  The maintainer is then responsible for sending an e-mail to
     epel-announce. It should announce the retirement and specific
     actions that users must take in order to continue using the software
-    (e.g. install using `pip` or some other delivery mechanism).
+    (e.g. install using &#96;pip&#96; or some other delivery mechanism).
 
 4.  [Retire the package from
-    EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/#_procedure).
-
-    - `fedpkg switch-branch epel8` (or whichever epel branch is correct)
-
-    - `fedpkg retire "REASON FOR RETIREMENT"`
+    EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/\&#35;_procedure).
+    &#42;&#42; &#96;fedpkg switch-branch epel8&#96; (or whichever epel
+    branch is correct) &#42;&#42; &#96;fedpkg retire \'REASON FOR
+    RETIREMENT\'&#96;
 
 ## Process: No time or desire {#process_no_time_or_desire}
 
@@ -2112,7 +1956,7 @@ priorities change over time. It is natural that a time might come that
 you no longer have the time or desire to maintain a package.
 
 1.  Check if there are other maintainers of the package.
-    [<https://src.fedoraproject.org/rpms/package>](https://src.fedoraproject.org/rpms/nedit)
+    [<https://src.fedoraproject.org/rpms/&lt;package&gt>;](https://src.fedoraproject.org/rpms/nedit)
     If there are, ask them if they would like to maintain the epel
     branches.
 
@@ -2127,15 +1971,14 @@ you no longer have the time or desire to maintain a package.
 3.  After two weeks, If nobody has volunteered to take over the package
     for you, send an e-mail to epel-announce. It should announce the
     retirement and specific actions that users must take in order to
-    continue using the software (e.g. install using `pip` or some other
-    delivery mechanism).
+    continue using the software (e.g. install using &#96;pip&#96; or
+    some other delivery mechanism).
 
 4.  [Retire the package from
-    EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/#_procedure).
-
-    - `fedpkg switch-branch epel8` (or whichever epel branch is correct)
-
-    - `fedpkg retire "REASON FOR RETIREMENT"`
+    EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/\&#35;_procedure).
+    &#42;&#42; &#96;fedpkg switch-branch epel8&#96; (or whichever epel
+    branch is correct) &#42;&#42; &#96;fedpkg retire \'REASON FOR
+    RETIREMENT\'&#96;
 
 ## Process: Not installable {#process_not_installable}
 
@@ -2148,7 +1991,7 @@ but no longer are. Packages that were never installable.
 If a package was once installable, but no longer is, try to fix the
 problem. If you cannot, or you do not have the time or desire to fix it,
 follow the [No Time or Desire
-policy](https://docs.fedoraproject.org/en-US/epel/epel-policy-retirement/#process_no_time_or_desire)
+policy](https://docs.fedoraproject.org/en-US/epel/epel-policy-retirement/\&#35;process_no_time_or_desire)
 
 ### Process: Never installable {#process_never_installable}
 
@@ -2157,19 +2000,19 @@ problem. If you cannot fix the problem and wish to retire the package
 from that EPEL branch / repo, you can.
 
 1.  [Retire the package from
-    EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/#_procedure).
-
-    - `fedpkg switch-branch epel8` (or whichever epel branch is correct)
-
-    - `fedpkg retire "REASON FOR RETIREMENT"` :experimental:
+    EPEL](https://docs.fedoraproject.org/en-US/package-maintainers/Package_Retirement_Process/\&#35;_procedure).
+    &#42;&#42; &#96;fedpkg switch-branch epel8&#96; (or whichever epel
+    branch is correct) &#42;&#42; &#96;fedpkg retire \'REASON FOR
+    RETIREMENT\'&#96;
 
 # Regarding EPEL and Software Collections {#_regarding_epel_and_software_collections}
 
 ## Background {#_background}
 
-RHEL comes with the `scl-utils` and `scl-utils-build` packages --- which
-contain tools for using and building SCLs. These packages appear to
-function as expected with RHEL and CentOS Stream.
+RHEL comes with the &#96;+scl-utils+&#96; and
+&#96;+scl-utils-build+&#96; packages --- which contain tools for using
+and building SCLs. These packages appear to function as expected with
+RHEL and CentOS Stream.
 
 ## Recommendations {#_recommendations}
 
@@ -2181,8 +2024,7 @@ EPEL will not provide any SCLs.
 For use cases that require the parallel installation of multiple
 versions of the same component, EPEL recommends the same solution as
 Fedora in the [Fedora Packaging
-Guidelines](https://docs.fedoraproject.org/en-US/packaging-guidelines/Naming/#multiple).
-:experimental:
+Guidelines](https://docs.fedoraproject.org/en-US/packaging-guidelines/Naming/\&#35;multiple).
 
 # Missing RHEL sub-packages {#_missing_rhel_sub_packages}
 
@@ -2191,11 +2033,11 @@ binary package. These extra packages are generally called sub-packages.
 
 Sometimes RHEL sub-packages that are built are not published. Sometimes
 packages are built for all arches, but only published on one or two
-arches. We call these two types \"missing built sub-packages\".
+arches. We call these two types \'missing built sub-packages\'.
 
 Sometimes when a RHEL source package is built, it does not create all
 the sub-packages that it potentially could. We call these types
-\"missing un-built sub-packages\".
+\'missing un-built sub-packages\'.
 
 EPEL cannot have a package with the same name as a source or binary
 package published in RHEL. To solve the problem of missing built and
@@ -2204,11 +2046,10 @@ setup.
 
 ## Shared guidelines {#shared_guidelines}
 
-- You MUST name your source package `<package>-epel` per the [policy for
-  `-epel` suffixed
-  packages](epel-policy.xml#policy_for_epel_suffixed_packages)
-
-- You MUST NOT conflict with any RHEL packages or files
+&#42; You MUST name your source package &#96;&lt;package&gt;-epel&#96;
+per the [policy for &#96;-epel&#96; suffixed
+packages](epel-policy.adoc&#35;policy_for_epel_suffixed_packages) &#42;
+You MUST NOT conflict with any RHEL packages or files
 
 ## Missing built sub-packages {#missing_built_sub-packages}
 
@@ -2217,67 +2058,56 @@ setup.
 Create an EPEL package that only has the missing packages, or missing
 arches.
 
-- Be prepared to maintain this package as long as it is needed.
-
-  - It is recommended that you add the epel-packagers-sig group as a
-    co-maintainer.
-
-- A package review is not required, but it is a good idea to have
-  someone look at the updated spec file.
-
-- If you need help building this, ask for help. We have [some
-  examples](epel-packaging-examples.xml#_missing_but_built_examples).
-
-- It qualifies for an exception to the package review process so you can
-  request the repo with.
-
-  - `fedpkg request-repo --exception <package>-epel`
-
-- Once the repo is created, you must retire the rawhide branch to make
-  it clear that this is an EPEL-only package and shouldn't be branched
-  for future Fedora releases.
-
-  - `fedpkg retire 'EPEL-only package'`
-
-- When/If the missing package(s) are added to RHEL CRB, retire your
-  -epel package following the [EPEL retirement
-  policy](epel-policy-retirement.xml#process_package_in_rhel).
+&#42; Be prepared to maintain this package as long as it is needed.
+&#42;&#42; It is recommended that you add the epel-packagers-sig group
+as a co-maintainer. &#42; A package review is not required, but it is a
+good idea to have someone look at the updated spec file. &#42; If you
+need help building this, ask for help. We have [some
+examples](epel-packaging-examples.adoc&#35;_missing_but_built_examples).
+&#42; It qualifies for an exception to the package review process so you
+can request the repo with. &#42;&#42; &#96;fedpkg request-repo
+\--exception &lt;package&gt;-epel&#96; &#42; Once the repo is created,
+you must retire the rawhide branch to make it clear that this is an
+EPEL-only package and shouldn't be branched for future Fedora releases.
+&#42;&#42; &#96;fedpkg retire \'EPEL-only package\'&#96; &#42; When/If
+the missing package(s) are added to RHEL CRB, retire your -epel package
+following the [EPEL retirement
+policy](epel-policy-retirement.adoc&#35;process_package_in_rhel).
 
 [Short term examples and
-workflow](epel-packaging-examples.xml#_missing_but_built_examples)
+workflow](epel-packaging-examples.adoc&#35;_missing_but_built_examples)
 
 ### Long term {#long_term}
 
 Request the package be added to the appropriate RHEL CRB repository.
 
-- To initiate this process, please file an issue in
-  link:https://issues.redhat.com and request it be added to RHEL. Report
-  the bug against the RHEL project, assign it to the proper CentOS
-  Stream versions, and add the source package name in the Component
-  field. More details on this can be found in the [CentOS contributor
-  guide](https://docs.centos.org/en-US/stream-contrib/quickstart/#_1_file_an_issue).
-
-- Be sure to say that it is impacting an EPEL build, and which package
-  it is impacting.
+&#42; To initiate this process, please file an issue in
+link:https://issues.redhat.com and request it be added to RHEL. Report
+the bug against the RHEL project, assign it to the proper CentOS Stream
+versions, and add the source package name in the Component field. More
+details on this can be found in the [CentOS contributor
+guide](https://docs.centos.org/en-US/stream-contrib/quickstart/\&#35;_1_file_an_issue).
+&#42; Be sure to say that it is impacting an EPEL build, and which
+package it is impacting.
 
 ``` console
-Please add <sub-package> to CRB in RHEL9
+Please add \&lt;sub-package\&gt; to CRB in RHEL9
 
-I am building <my package> in EPEL9.
-<my package> requires <sub-package> to build in EPEL9.
-
-(Optional)
-<my package> is important because these other packages depend on it:
-<other packages>
+I am building \&lt;my package\&gt; in EPEL9.
+\&lt;my package\&gt; requires \&lt;sub-package\&gt; to build in EPEL9.
 
 (Optional)
-<my package> is important because <my company> uses it for <reason>
+\&lt;my package\&gt; is important because these other packages depend on it:
+\&lt;other packages\&gt;
+
+(Optional)
+\&lt;my package\&gt; is important because \&lt;my company\&gt; uses it for \&lt;reason\&gt;
 ```
 
-In the past, the default answer for a request like this was \"no\". But
+In the past, the default answer for a request like this was \'no\'. But
 in mid-2021 the RHEL policy changed to allow the RHEL package maintainer
 to make the decision. There are still packages where the answer might be
-\"no\", but many maintainers are choosing to add the sub-packages to the
+\'no\', but many maintainers are choosing to add the sub-packages to the
 RHEL CRB repo.
 
 ## Missing un-built sub-packages {#missing_un-built_sub-packages}
@@ -2285,12 +2115,11 @@ RHEL CRB repo.
 You can create packages that supply missing sub-packages that were not
 built in RHEL but are built in Fedora.
 
-In the past these were named \<package\>-extra, but these are now named
-`<package>-epel` to avoid confusion.
+In the past these were named &lt;package&gt;-extra, but these are now
+named &#96;&lt;package&gt;-epel&#96; to avoid confusion.
 
 [Missing but un-built
-examples](epel-packaging-examples.xml#_missing_un_built_examples)
-:experimental:
+examples](epel-packaging-examples.adoc&#35;_missing_un_built_examples)
 
 # EPEL Steering Committee {#_epel_steering_committee}
 
@@ -2310,50 +2139,29 @@ The first election of committee members is planned for the spring of
 
 ### Current Committee Members {#current_committee_members}
 
-- Kevin Fenzi (nirik) - Start: February 2007
-
-- Troy Dawson (tdawson) - Start: October 2020
-
-- Carl George (carlwgeorge) - Start: October 2020
-
-- Davide Cavalca (dcavalca) - Start: June 2021
-
-- Neal Gompa (ngompa) - Start: June 2021
-
-- Jonathan Wright (jonathanspw) - Start: June 2024
-
-- Robby Callicotte (rcallicotte) - Start: June 2025
+&#42; Kevin Fenzi (nirik) - Start: February 2007 &#42; Troy Dawson
+(tdawson) - Start: October 2020 &#42; Carl George (carlwgeorge) - Start:
+October 2020 &#42; Davide Cavalca (dcavalca) - Start: June 2021 &#42;
+Neal Gompa (ngompa) - Start: June 2021 &#42; Jonathan Wright
+(jonathanspw) - Start: June 2024 &#42; Robby Callicotte (rcallicotte) -
+Start: June 2025
 
 ### Past Committee Members {#past_committee_members}
 
-- Michel Lind (salimma) - Start: June 2021 End: June 2025
-
-- Pablo Greco (pgreco) - Start: February 2019 End: June 2024
-
-- Brian Stinson (bstinson) - Start: December 2014 End: June 2021
-
-- Jim Perrin (jperrin) - Start: December 2014 End: October 2020
-
-- Stephen J Smoogen (smooge) - Start: February 2008 End: October 2020
-
-- Anssi Johansson (avij) - Start: April 2015 End: February 2019
-
-- Dennis Gilmore (ausil) - Start: February 2007 End: February 2019
-
-- Mike McGrath (mmcgrath) - Start: February 2007 End: December 2014
-
-- Michael Stahnke (stahnma) - Start: February 2007 End: December 2014
-
-- Xavier Lamien (SmootherFrOgZ) - Start: February 2007 End: December
-  2014
-
-- Andy Gospodarek (Gospo) - Start: February 2007 End: December 2014
-
-- Jeff Sheltren (Jeff_S) - Start: February 2007 End: December 2014
-
-- Karsten Wade (quaid) - Start: February 2007 End: December 2014
-
-- Thorsten Leemhuis - Start: February 2007 End: February 2008
+&#42; Michel Lind (salimma) - Start: June 2021 End: June 2025 &#42;
+Pablo Greco (pgreco) - Start: February 2019 End: June 2024 &#42; Brian
+Stinson (bstinson) - Start: December 2014 End: June 2021 &#42; Jim
+Perrin (jperrin) - Start: December 2014 End: October 2020 &#42; Stephen
+J Smoogen (smooge) - Start: February 2008 End: October 2020 &#42; Anssi
+Johansson (avij) - Start: April 2015 End: February 2019 &#42; Dennis
+Gilmore (ausil) - Start: February 2007 End: February 2019 &#42; Mike
+McGrath (mmcgrath) - Start: February 2007 End: December 2014 &#42;
+Michael Stahnke (stahnma) - Start: February 2007 End: December 2014
+&#42; Xavier Lamien (SmootherFrOgZ) - Start: February 2007 End: December
+2014 &#42; Andy Gospodarek (Gospo) - Start: February 2007 End: December
+2014 &#42; Jeff Sheltren (Jeff_S) - Start: February 2007 End: December
+2014 &#42; Karsten Wade (quaid) - Start: February 2007 End: December
+2014 &#42; Thorsten Leemhuis - Start: February 2007 End: February 2008
 
 ### Committee member selection {#committee_member_selection}
 
@@ -2369,11 +2177,9 @@ cycle of a calendar year.
 
 ### Current committee members {#committee_chair_history}
 
-- Troy Dawson (tdawson ) Start: October 2020
-
-- Stephen J Smoogen ( smooge ) Start: February 2008 End: October 2020
-
-- Thorsten Leemhuis - Start: February 2007 End: February 2008
+&#42; Troy Dawson (tdawson ) Start: October 2020 &#42; Stephen J Smoogen
+( smooge ) Start: February 2008 End: October 2020 &#42; Thorsten
+Leemhuis - Start: February 2007 End: February 2008
 
 ### Committee chair selection {#committee_chair_selection}
 
@@ -2393,41 +2199,38 @@ The meeting is public and everyone is invited.
 ### Committee meeting voting {#committee_meeting_voting}
 
 The EPEL Steering Committee tracks ongoing decisions using the [EPEL
-ticketing system](https://pagure.io/epel/issues). Decisions are voted on
-at the weekly Steering Committee meeting. These decisions usually fall
-into one of these categories:
+ticketing system](https://forge.fedoraproject.org/epel/steering).
+Decisions are voted on at the weekly Steering Committee meeting. These
+decisions usually fall into one of these categories:
 
-- tickets asking for a change in EPEL policy
-
-- tickets asking for an exception to EPEL policy
-
-- tickets requesting approval for an [incompatible
-  upgrade](https://docs.fedoraproject.org/en-US/epel/epel-policy-incompatible-upgrades/)
+&#42; tickets asking for a change in EPEL policy &#42; tickets asking
+for an exception to EPEL policy &#42; tickets requesting approval for an
+[incompatible
+upgrade](https://docs.fedoraproject.org/en-US/epel/epel-policy-incompatible-upgrades/)
 
 Eligible voters are all currently-serving members of the Steering
 Committee. If a member is unable to attend a meeting, they may relay
 their vote through another member.
 
-An official vote must be one of `+1`, `0`, `-1`:
+An official vote must be one of &#96;+1&#96;, &#96;+0+&#96;,
+&#96;+-1+&#96;:
 
-- `+1` - I am in favor of the proposal as currently written.
+&#42; &#96;+1&#96; - I am in favor of the proposal as currently written.
+&#42; &#96;+0+&#96; - I am removing myself from the list of voters
+required for majority for this proposal. &#42; &#96;+-1+&#96; - I am
+opposed to the proposal as currently written.
 
-- `0` - I am removing myself from the list of voters required for
-  majority for this proposal.
-
-- `-1` - I am opposed to the proposal as currently written.
-
-A vote of `0` reduces the denominator of the fraction required to
-achieve the 51% majority. In effect, it says \"I am agreeing to vote
-with the remaining majority, whatever they decide.\"
+A vote of &#96;+0+&#96; reduces the denominator of the fraction required
+to achieve the 51% majority. In effect, it says \'I am agreeing to vote
+with the remaining majority, whatever they decide.\'
 
 If a vote achieves a 51% majority of eligible voters, regardless of
-their attendance at the meeting and accounting for any explicit `0`
-votes, in favor of a proposal, that proposal is accepted.
+their attendance at the meeting and accounting for any explicit
+&#96;+0+&#96; votes, in favor of a proposal, that proposal is accepted.
 
 If a vote fails to achieve a 51% majority of eligible voters, regardless
-of their attendance at the meeting and accounting for any explicit `0`
-votes, that proposal is rejected.
+of their attendance at the meeting and accounting for any explicit
+&#96;+0+&#96; votes, that proposal is rejected.
 
 After the meeting where the proposal is voted on, a member of the
 Steering Committee will update the ticket with the results of the vote.
@@ -2440,7 +2243,6 @@ votes as comments in the ticket.
 Decisions made by the EPEL Steering Committee may be re-discussed in
 FESCo meetings, if necessary. FESCo retains authority over EPEL Steering
 Committee decisions and can exercise a veto on a voted-upon topic.
-:experimental:
 
 # About EPEL {#_about_epel}
 
@@ -2508,15 +2310,11 @@ For independent software and hardware vendors, this is how you get your
 software into the enterprise ecosystem:
 
 1.  Use the Fedora process to get your favorite software in to the
-    repository:
-
-    - Get an entirely new package into Fedora.
-
-    - Become a co-maintainer for the package you want to have
-      enterprise-level longevity.
-
-    - Package a free and open source library or other shareable software
-      source to build a community around your applications.
+    repository: &#42; Get an entirely new package into Fedora. &#42;
+    Become a co-maintainer for the package you want to have
+    enterprise-level longevity. &#42; Package a free and open source
+    library or other shareable software source to build a community
+    around your applications.
 
 2.  Gain the additional six to twelve months of Fedora testing and
     feedback.
@@ -2567,7 +2365,7 @@ enterprise-quality packages.
 If you look around, you see that people have put in great effort to
 provide these packages that did not make it into RHEL. The Fedora
 enterprise packages are a way of enabling, growing, and honoring the
-work that has come before.\'\' :experimental:
+work that has come before.\'\'
 
 # History and philosophy of EPEL (Extra Packages for Enterprise Linux) {#_history_and_philosophy_of_epel_extra_packages_for_enterprise_linux}
 
@@ -2641,24 +2439,17 @@ are no longer provided because these versions are end of life.
 
 ### How is EPEL different from other third party repositories for RHEL? {#how_is_epel_different_from_other_third_party_repositories_for_rhel}
 
-- EPEL packages are in most cases built or derived from the equivalent
-  ones in Fedora repository and maintained by the same people. It has
-  also been improved through peer reviews, testing and feedback from end
-  users.
-
-- EPEL adheres to the well documented [Fedora Packaging
-  guidelines](packaging-guidelines::index.xml), which RHEL has started
-  following. This ensures good integration.
-
-- EPEL is purely a complementary add-on repository and does not replace
-  packages in RHEL.
-
-- EPEL has a large team of contributors including Red Hat engineers and
-  volunteer community members working together to maintain the
-  repository.
-
-- EPEL only provides free and open source software unencumbered by
-  patents or any legal issues.
+&#42; EPEL packages are in most cases built or derived from the
+equivalent ones in Fedora repository and maintained by the same people.
+It has also been improved through peer reviews, testing and feedback
+from end users. &#42; EPEL adheres to the well documented [Fedora
+Packaging guidelines](packaging-guidelines::index.xml), which RHEL has
+started following. This ensures good integration. &#42; EPEL is purely a
+complementary add-on repository and does not replace packages in RHEL.
+&#42; EPEL has a large team of contributors including Red Hat engineers
+and volunteer community members working together to maintain the
+repository. &#42; EPEL only provides free and open source software
+unencumbered by patents or any legal issues.
 
 ### Can I rely on these packages? {#can_i_rely_on_these_packages}
 
@@ -2690,7 +2481,7 @@ repository.
 
 Learn more about EPEL-Next on the following page:
 
-- [EPEL Next](epel-about-next.xml)
+&#42; [EPEL Next](epel-about-next.xml)
 
 ## Packages {#_packages_2}
 
@@ -2699,8 +2490,9 @@ Learn more about EPEL-Next on the following page:
 No. EPEL is purely a complementary repository that provide add-on
 packages. EPEL packages will not conflict with any of the channels that
 it builds against, with limited exceptions (see [conflicts in compat
-packages](epel-policy.xml#conflicts_in_compat_packages)). Those specific
-channels are listed in the [EPEL policy](epel-policy.xml#_policy).
+packages](epel-policy.adoc&#35;conflicts_in_compat_packages)). Those
+specific channels are listed in the [EPEL
+policy](epel-policy.adoc&#35;_policy).
 
 It is permitted for EPEL to provide an alternative non-modular package
 to any package found only in a non-default RHEL module.
@@ -2756,7 +2548,7 @@ years. Your participation is vital for the success of this project.
 
 Software and hardware vendors are encouraged to get involved in EPEL.
 For more information, read the [ ISV/IHV
-perspective](epel-about.xml#isvihv_perspective).
+perspective](epel-about.adoc&#35;isvihv_perspective).
 
 ### Why isn't a package in EPEL 9 when it is in EPEL 8? {#why_isnt_a_package_in_epel_9_when_it_is_in_epel_8}
 
@@ -2791,11 +2583,11 @@ orphaned.
 ### What if the EPEL package is added to RHEL? {#what_if_the_epel_package_is_added_to_rhel}
 
 If the package is added to RHEL it must be retired from EPEL as it is no
-longer an \"extra package for enterprise linux\". There is some
+longer an \'extra package for enterprise linux\'. There is some
 automation in place to file a ticket to give the EPEL maintainer a heads
 up; see the [EPEL package retirement
-process](package-maintainers::Package_Retirement_Process.xml#_epel) for
-more information.
+process](package-maintainers::Package_Retirement_Process.adoc&#35;_epel)
+for more information.
 
 ## Using EPEL {#using_epel}
 
@@ -2821,23 +2613,23 @@ migrated to the latest RHEL version.
 
 The main fedora download server is currently ipv4 only.
 
-- <https://dl.fedoraproject.org/pub/epel/>
+&#42; <https://dl.fedoraproject.org/pub/epel/>
 
 It is recommended that you find the closest ipv6 mirror from the mirror
 list.
 
-- <https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL>
+&#42; <https://admin.fedoraproject.org/mirrormanager/mirrors/EPEL>
 
 If you must connect directly to a fedora ipv6 download server, go here.
 
-- <https://download-ib01.fedoraproject.org/pub/epel/>
+&#42; <https://download-ib01.fedoraproject.org/pub/epel/>
 
 ### Where can I find help or report issues? {#where_can_i_find_help_or_report_issues}
 
 You can find help or discuss issues on the
 [epel-devel](https://admin.fedoraproject.org/mailman/listinfo/epel-devel)
-mailing list or IRC channel #epel on libera.chat. Report issues against
-EPEL via
+mailing list or IRC channel &#35;epel on libera.chat. Report issues
+against EPEL via
 [Bugzilla](https://bugzilla.redhat.com/enter_bug.cgi?product=Fedora%20EPEL).
 More options are available to [communicate with
 EPEL](epel-communication.xml).
@@ -2867,13 +2659,13 @@ Or you can install and run the \'keychecker\' script to list all
 packages signed with a particular key as well as which repo they came
 from.
 
-### Is EPEL \"upstream\" or \"an official package repository\" (like Fedora Extras was)? {#is_epel_upstream_or_an_official_package_repository_like_fedora_extras_was}
+### Is EPEL \'upstream\' or \'an official package repository\' (like Fedora Extras was)? {#is_epel_upstream_or_an_official_package_repository_like_fedora_extras_was}
 
 EPEL is just one of several add-on repositories with RPM packages for
 RHEL. It is not an official repository. The different repositories serve
 different user bases or follow different ideas.
 
-Just like RHEL itself, EPEL in reality is more a \"downstream\" in the
+Just like RHEL itself, EPEL in reality is more a \'downstream\' in the
 sense that Fedora is upstream and EPEL, just like Red Hat, takes
 packages for its product that are constantly developed, tested and
 receive feedback in Fedora. Red Hat, through their sponsorship for the
@@ -2968,18 +2760,17 @@ The easiest ways to do this are to either use the [RHEL developer
 subscription](epel-rhel-entitlements.xml) or check the RHEL package
 manifests.
 
-- [RHEL 9 package
-  manifest](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/package_manifest/index)
-
-- [RHEL 8 package
-  manifest](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/package_manifest/index)
+&#42; [RHEL 9 package
+manifest](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/package_manifest/index)
+&#42; [RHEL 8 package
+manifest](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/8/html-single/package_manifest/index)
 
 You can also check the package source repos in the [CentOS Stream GitLab
 space](https://gitlab.com/redhat/centos-stream/rpms). Note that a GitLab
 branch corresponds to the same major version of RHEL, e.g. the c9s
-branch for RHEL 9. If a branch has a `dead.package` file, that means it
-was removed during development of that RHEL version and is thus eligible
-for EPEL.
+branch for RHEL 9. If a branch has a &#96;dead.package&#96; file, that
+means it was removed during development of that RHEL version and is thus
+eligible for EPEL.
 
 ### I want to build packages for EPEL but some of my packages dependencies are not available in EPEL --- or --- I'd like to see a Fedora package in EPEL that is not yet available there {#i_want_to_build_packages_for_epel_but_some_of_my_packages_dependencies_are_not_available_in_epel____or____id_like_to_see_a_fedora_package_in_epel_that_is_not_yet_available_there}
 
@@ -2991,45 +2782,31 @@ EPEL](epel-package-request.xml).
 There is a short term and a long term solution. These two solutions
 should be used together.
 
-- Short Term: Create an epel package that only has the missing packages.
+&#42; Short Term: Create an epel package that only has the missing
+packages. &#42;&#42; Be prepared to maintain this package as long as it
+is needed. &#42;&#42; It is recommended that you name it
+&#96;&lt;package&gt;-epel&#96; &#42;&#42; It is recommended that you add
+the epel-packagers-sig group as a co-maintainer &#42;&#42; It qualifies
+for an exception to the [package review
+process](packaging-guidelines::ReviewGuidelines.xml) so you can request
+the repo with &#42;&#42;&#42; &#96;fedpkg request-repo \--exception
+&lt;package&gt;-epel&#96; &#42;&#42; Once the repo is created, you must
+retire the rawhide branch to make it clear that this is an EPEL-only
+package and it shouldn't be branched for future Fedora releases
+&#42;&#42;&#42; &#96;fedpkg retire \'EPEL-only package\'&#96; &#42;&#42;
+If you need help building this, ask for help. We have some examples.
+&#42;&#42; When/If the missing package(s) are added to RHEL CRB, retire
+your &#96;-epel&#96; package.
 
-  - Be prepared to maintain this package as long as it is needed.
-
-  - It is recommended that you name it `<package>-epel`
-
-  - It is recommended that you add the epel-packagers-sig group as a
-    co-maintainer
-
-  - It qualifies for an exception to the [package review
-    process](packaging-guidelines::ReviewGuidelines.xml) so you can
-    request the repo with
-
-    - `fedpkg request-repo --exception <package>-epel`
-
-  - Once the repo is created, you must retire the rawhide branch to make
-    it clear that this is an EPEL-only package and it shouldn't be
-    branched for future Fedora releases
-
-    - `fedpkg retire 'EPEL-only package'`
-
-  - If you need help building this, ask for help. We have some examples.
-
-  - When/If the missing package(s) are added to RHEL CRB, retire your
-    `-epel` package.
-
-- Long Term: Request the package be added to RHEL 8 and 9 CRB
-  repository.
-
-  - To initiate this process, please file an issue in
-    <https://issues.redhat.com> and request it be added to RHEL 8 and 9.
-    Report the bug against the RHEL project, assign it to the proper
-    CentOS Stream versions and add the source package name in the
-    Component field. More details on this can be found in the [CentOS
-    contributor
-    guide](https://docs.centos.org/en-US/stream-contrib/quickstart/#_1_file_an_issue).
-
-  - Be sure to say that it is impacting an EPEL build, and which package
-    it is impacting.
+&#42; Long Term: Request the package be added to RHEL 8 and 9 CRB
+repository. &#42;&#42; To initiate this process, please file an issue in
+<https://issues.redhat.com> and request it be added to RHEL 8 and 9.
+Report the bug against the RHEL project, assign it to the proper CentOS
+Stream versions and add the source package name in the Component field.
+More details on this can be found in the [CentOS contributor
+guide](https://docs.centos.org/en-US/stream-contrib/quickstart/\&#35;_1_file_an_issue).
+&#42;&#42; Be sure to say that it is impacting an EPEL build, and which
+package it is impacting.
 
 ### Can I bring a modular package into EPEL? {#can_i_bring_a_modular_package_into_EPEL}
 
@@ -3043,7 +2820,7 @@ Currently there is no plan to bring modularity back to EPEL.
 
 If you want to bring a package that is distributed as modular in Fedora
 you will need to create a [non-modular version of the
-package](https://docs.fedoraproject.org/en-US/packaging-guidelines/Naming/#multiple).
+package](https://docs.fedoraproject.org/en-US/packaging-guidelines/Naming/\&#35;multiple).
 
 ## Miscellaneous {#_miscellaneous}
 
@@ -3130,5 +2907,5 @@ involved.
 
 ## Other questions? {#other_questions}
 
-You can contact the [EPEL
-team](#where_can_i_find_help_or_report_issues).
+You can contact the
+xref:&#35;where_can_i_find_help_or_report_issues\[EPEL team\].

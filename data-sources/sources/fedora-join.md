@@ -1,4 +1,4 @@
-- Welcome!
+&#42; Welcome!
 
 # Welcome to Fedora! {#_welcome_to_fedora}
 
@@ -90,7 +90,7 @@ do is
 
 1\) Login to [Pagure](https://pagure.io/fedora-join/WelcomeToFedora)
 with your Fedora account once, and 2) Reachout via [Join Fedora on
-Matrix](https://matrix.to/#/%23join%3Afedoraproject.org?via=fedora.im&via=matrix.org&via=4d2.org)
+Matrix](https://matrix.to/&#35;/%23join%3Afedoraproject.org?via=fedora.im&amp;via=matrix.org&amp;via=4d2.org)
 or on the [mailing list which you can
 subscribe](https://lists.fedoraproject.org/archives/list/fedora-join@lists.fedoraproject.org/)
 
@@ -98,7 +98,7 @@ And that is it! You are one of us now, for as long as you would like.
 
 Remember, there is no minimum commitment. Take the time to look around.
 
-> **We would of course recommend you to use Fedora :)**
+&gt; &#42;We would of course recommend you to use Fedora :)&#42;
 
 ## Onboarding New Joiners (workflow for the Join SIG team) {#_onboarding_new_joiners_workflow_for_the_join_sig_team}
 
@@ -108,19 +108,19 @@ community and find their area of interest.
 
 We go through the following steps with the new person.
 
-1\) We tag tickets. - Tags starting with \"S:\" track the status of the
-ticket from their perspective. - Tags starting with \"C:\" track the
+1\) We tag tickets. - Tags starting with \'S:\' track the status of the
+ticket from their perspective. - Tags starting with \'C:\' track the
 status of the ticket from the community's perspective. - Tags starting
-with \"I:\" track their interests.
+with \'I:\' track their interests.
 
 2\) We ask \$USER to subscribe to the Fedora Join mailing list. This is
 so people can interact via e-mail if they wish, and can stay informed on
 what happens in the community. The associated tag is: [S:
 Subscribed](https://pagure.io/fedora-join/WelcomeToFedora/issues?tags=S%3A+Subscribed).
 
-3\) We open a new \"Hello Fedora World\" ticket for the \$USER and add
-them to the `fedora-join` group in Pagure. The associated tag is: [S:
-Hello Fedora
+3\) We open a new \'Hello Fedora World\' ticket for the \$USER and add
+them to the &#96;fedora-join&#96; group in Pagure. The associated tag
+is: [S: Hello Fedora
 World](https://pagure.io/fedora-join/WelcomeToFedora/issues?tags=S%3A+Hello+Fedora+world).
 
 4\) We ask the \$USER to introduce themselves, preferably via the
@@ -164,7 +164,7 @@ tag.
 
 6\) Some infrastructure in Fedora requires users to be part of a team or
 group on the Fedora Account System. We can give temporary membership to
-the \"Fedora-Join\" FAS group if a new user requires. This can be
+the \'Fedora-Join\' FAS group if a new user requires. This can be
 requested by setting the [C: Temporary membership
 needed](https://pagure.io/fedora-join/WelcomeToFedora/issues?tags=C%3A+Temporary+membership+needed)
 tag. After discussing the situation, if temporary membership to the FAS
@@ -195,7 +195,7 @@ Feedback](https://pagure.io/fedora-join/WelcomeToFedora/issues?tags=S%3A+Feedbac
 community, we can close the ticket. Let them know that they can have it
 reopened once they have some time to spare.
 
-- Resources
+&#42; Resources
 
 # Get started with badges! {#_get_started_with_badges}
 
@@ -268,9 +268,9 @@ installation, [see this wiki
 page](https://fedoraproject.org/wiki/Cryptography).
 
 Once you have your SSH key pair, you should have two files. The defaults
-are: `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`. The first is your private
-key, keep this safe! The second is your public key, and is the one we
-share.
+are: &#96;\~/.ssh/id_rsa&#96; and &#96;\~/.ssh/id_rsa.pub&#96;. The
+first is your private key, keep this safe! The second is your public
+key, and is the one we share.
 
 1.  Go to [Fedora Account System](https://accounts.fedoraproject.org/)
 
@@ -278,16 +278,17 @@ share.
 
 3.  Click *Edit profile* in the left side bar
 
-4.  Go to tab *SSH & GPG Keys*
+4.  Go to tab *SSH &amp; GPG Keys*
 
-5.  Copy the contents of your public key file, `~/.ssh/id_rsa.pub`, an
-    paste it in the text box for SSH Keys.
+5.  Copy the contents of your public key file,
+    &#96;\~/.ssh/id_rsa.pub&#96;, an paste it in the text box for SSH
+    Keys.
 
 6.  Select *Save*
 
 The badge is awarded once per week, so you may not get the badge
 immediately. If it is longer than seven days, ask for help in
-[#fedora-admin](https://libera.chat/#fedora-admin) on IRC.
+[&#35;fedora-admin](https://libera.chat/&#35;fedora-admin) on IRC.
 
 ![Crypto Badger - Fedora
 Badges](https://badges.fedoraproject.org/pngs/fas-crypto-badger.png)
@@ -311,11 +312,11 @@ If you have a GPG public key, you can set it it FAS with these steps:
 
 3.  Click *Edit profile* in the left side bar
 
-4.  Go to tab *SSH & GPG Keys*
+4.  Go to tab *SSH &amp; GPG Keys*
 
 5.  Copy the last 16 characters of your public key fingerprint file
-    (e.g. `39E45FB6014131E4`) and paste it in the text box under *GPG
-    Keys*.
+    (e.g. &#96;39E45FB6014131E4&#96;) and paste it in the text box under
+    *GPG Keys*.
 
 6.  Select *Save*
 
@@ -336,24 +337,20 @@ Badges](https://badges.fedoraproject.org/pngs/baby-badger.png)
 
 The badges listed here are also good badges to earn. They aren't
 explained yet, but they will be soon. If you want to help with this,
-come say hello in [#fedora-commops](https://libera.chat/#fedora-commops)
-on Libera.chat's IRC network.
+come say hello in
+[&#35;fedora-commops](https://libera.chat/&#35;fedora-commops) on
+Libera.chat's IRC network.
 
-- [Bloggin\'
-  it!](https://badges.fedoraproject.org/badge/bloggin-it!-planet-i)
+&#42; [Bloggin\'
+it!](https://badges.fedoraproject.org/badge/bloggin-it!-planet-i) &#42;
+[Curious
+Penguin](https://badges.fedoraproject.org/badge/curious-penguin-ask-fedora-i)
+&#42; [Macaron - Cookie
+I](https://badges.fedoraproject.org/badge/macaron-cookie-i) &#42;
+[Mugshot](https://badges.fedoraproject.org/badge/mugshot) &#42; [Speak
+Up!](https://blog.justinwflory.com/2016/01/gotta-badge-em-all-speak-up/)
 
-- [Curious
-  Penguin](https://badges.fedoraproject.org/badge/curious-penguin-ask-fedora-i)
-
-- [Macaron - Cookie
-  I](https://badges.fedoraproject.org/badge/macaron-cookie-i)
-
-- [Mugshot](https://badges.fedoraproject.org/badge/mugshot)
-
-- [Speak
-  Up!](https://blog.justinwflory.com/2016/01/gotta-badge-em-all-speak-up/)
-
-- Classroom
+&#42; Classroom
 
 # Fedora Classroom {#_fedora_classroom}
 
@@ -362,14 +359,11 @@ others. We host a plethora of sessions on different subjects.
 
 ## Links {#_links}
 
-- Recordings of sessions are made available on the {YOUTUBE}\[Fedora
-  Youtube channel\].
-
-- Follow up questions on the sessions can be asked on
-  {DISCOURSE_CLASSROOM}\[Discourse under the classroom sub-category\].
-
-- Suggestions for new sessions should be made on {PAGURE}/issues\[our
-  Pagure project\].
+&#42; Recordings of sessions are made available on the {YOUTUBE}\[Fedora
+Youtube channel\]. &#42; Follow up questions on the sessions can be
+asked on {DISCOURSE_CLASSROOM}\[Discourse under the classroom
+sub-category\]. &#42; Suggestions for new sessions should be made on
+{PAGURE}/issues\[our Pagure project\].
 
 ## Sessions {#_sessions}
 
@@ -391,7 +385,7 @@ be used to record sessions.
 Community members that instruct sessions earn
 [badges](https://pagure.io/Fedora-Badges/issue/523)! These are awarded
 automatically for sessions that are held in
-[#fedora-classroom](https://web.libera.chat/?channels=#fedora-classroom)
+[&#35;fedora-classroom](https://web.libera.chat/?channels=&#35;fedora-classroom)
 IRC channel. For sessions that are held on other platforms, a [ticket
 must be filed to award the badge
 manually](https://pagure.io/fedora-badges/issue/645).
@@ -402,7 +396,7 @@ We are available via our [mailing
 list](https://admin.fedoraproject.org/mailman/listinfo/classroom).
 
 We are also on the IRC at
-[#fedora-classroom](https://web.libera.chat/?channels=#fedora-classroom).
+[&#35;fedora-classroom](https://web.libera.chat/?channels=&#35;fedora-classroom).
 We use the {PAGURE}/new_issue\[Pagure project\] to manage our tickets.
 
 ## Help wanted {#_help_wanted}
@@ -417,13 +411,10 @@ The purpose of the classroom is to provide instruction on a specific
 topic. As such, it is beneficial for classroom sessions to adhere to a
 certain standard. Please try to adhere to the following during sessions:
 
-- Keep in mind that classroom sessions may be logged
-
-- Adhere to teacher instructions regarding questions and input
-
-- Avoid unnecessary actions, nick changes and away messages
-
-- Avoid off-topic conversation
+&#42; Keep in mind that classroom sessions may be logged &#42; Adhere to
+teacher instructions regarding questions and input &#42; Avoid
+unnecessary actions, nick changes and away messages &#42; Avoid
+off-topic conversation
 
 The point is to help maintain a classroom environment that promotes
 learning while avoiding extraneous content.
@@ -434,24 +425,19 @@ If you would like to teach a class on any Fedora related topic, please
 mail an introduction of yourself and outline of your proposed class to
 the classroom mailing list. Some things to keep in mind:
 
-- **We recommend sessions be approximately 90 minutes** This allows for
-  an hour long session and enough time for questions and answers.
-
-- Make sure you know your subject and know where to point students who
-  wish more detailed information.
-
-- Note at the beginning of your class if you would like students to ask
-  questions as you go, or would prefer them to wait until the end.
-
-- Remember that typing is slower than talking in front of a class or
-  speaking on a phone call, so keep in mind you will not cover as much
-  on IRC.
-
-- All teacher notes and class resources should be licensed as \"CC 4.0
-  unported international license\"
+&#42; &#42;We recommend sessions be approximately 90 minutes&#42; This
+allows for an hour long session and enough time for questions and
+answers. &#42; Make sure you know your subject and know where to point
+students who wish more detailed information. &#42; Note at the beginning
+of your class if you would like students to ask questions as you go, or
+would prefer them to wait until the end. &#42; Remember that typing is
+slower than talking in front of a class or speaking on a phone call, so
+keep in mind you will not cover as much on IRC. &#42; All teacher notes
+and class resources should be licensed as \'CC 4.0 unported
+international license\'
 
 (Note: Check out [The World Clock Meeting
-Planner](http://www.timeanddate.com/worldclock/meeting.html?year=2008&month=12&day=6&p1=195&p2=179&p3=1038&p4=47)
+Planner](http://www.timeanddate.com/worldclock/meeting.html?year=2008&amp;month=12&amp;day=6&amp;p1=195&amp;p2=179&amp;p3=1038&amp;p4=47)
 for time zone syncing.)
 
 ## Fedora Magazine Post {#_fedora_magazine_post}
@@ -468,28 +454,20 @@ out. A checklist of tasks can be found
 
 The work can be classified into the following roles.
 
-**Note**: anyone interested in filling the positions listed below should
-contact [Fedora Join SIG](index.xml#_communication).
+&#42;Note&#42;: anyone interested in filling the positions listed below
+should contact [Fedora Join SIG](index.adoc&#35;_communication).
 
 ## Wranglers {#_wranglers}
 
 Keep things rolling week in, week out:
 
-- keep wiki page up to date - schedule, volunteer lists
-
-- keep fedocal up to date
-
-- ensure Magazine POC writes, schedules, and publishes post on time
-
-- ensure CommBlog POC writes, schedules, and publishes post on time
-
-- create survey for session
-
-- send out reminder to the announce mailing list
-
-- summarise session, analyse information collected from survey
-
-- write summary report every release
+&#42; keep wiki page up to date - schedule, volunteer lists &#42; keep
+fedocal up to date &#42; ensure Magazine POC writes, schedules, and
+publishes post on time &#42; ensure CommBlog POC writes, schedules, and
+publishes post on time &#42; create survey for session &#42; send out
+reminder to the announce mailing list &#42; summarise session, analyse
+information collected from survey &#42; write summary report every
+release
 
 ## Instructor {#_instructor}
 
@@ -526,7 +504,7 @@ questions about the sessions and help control disruptive students or the
 like. The Emcee should also be able to upload logs of just completed
 classes to the wiki.
 
-- Policies
+&#42; Policies
 
 ## Inactive Members {#_inactive_members}
 
@@ -550,8 +528,8 @@ groups will be restored. I.e., they will not have to start again from
 zero. Just as they retain their friends in the Fedora community even
 when they are away, they also retain the community's trust when away.
 
-We'd like to note that the intention here is not to \"*kick people out
-of the community*\" at all. We do not mark FAS accounts as
+We'd like to note that the intention here is not to \'*kick people out
+of the community*\' at all. We do not mark FAS accounts as
 inactive\-\--we only update Fedora Join related groups (FAS/Pagure).
 Please also note that other teams may have their own policies regarding
 inactive community members.
@@ -578,7 +556,7 @@ received at all), the team will:
 
 1.  remove the member from the FAS and Pagure groups,
 
-2.  close the ticket with its status set to \"inactive\".
+2.  close the ticket with its status set to \'inactive\'.
 
 The scripts that is used to check for activity can be found here:
 [Fedora Community
@@ -595,8 +573,8 @@ another.
 
 In the Fedora community, students, professionals and hobbyists all come
 together to promote Free/Open Source Software. We do this by packaging
-software to produce a well integrated operating system (a \"Linux
-distribution\").
+software to produce a well integrated operating system (a \'Linux
+distribution\').
 
 But, that is not all we do! We also do lots of design work, promotion
 work, marketing, create cool artwork, videos, and podcasts, write both
@@ -626,7 +604,7 @@ volunteering requires us to take time out of our lives, time that could
 be spent elsewhere: on jobs to earn a salary, life and family and
 friends, or other hobbies and projects. The biggest difference between
 those that are able to stay and remain long term contributors and those
-that are not is \"commitment and time\".
+that are not is \'commitment and time\'.
 
 ### Rewards from volunteering {#_rewards_from_volunteering}
 
@@ -729,7 +707,7 @@ next month.
 :::
 
 Read [this very useful post on
-\"cookie-licking\"](https://www.redhat.com/en/blog/dont-lick-cookie).
+\'cookie-licking\'](https://www.redhat.com/en/blog/dont-lick-cookie).
 ::::
 
 ## Joining {#_joining}
@@ -739,11 +717,11 @@ Read [this very useful post on
 :::
 
 Get to know the community members, teams, and how they work before
-jumping into \"doing tasks\".
+jumping into \'doing tasks\'.
 ::::
 
-A common mistake most new contributors make is showing up \"just wanting
-to contribute.\" That's not how communities work. Unlike jobs, there are
+A common mistake most new contributors make is showing up \'just wanting
+to contribute.\' That's not how communities work. Unlike jobs, there are
 no managers here. We don't assign tasks to each other. Yes, there are
 people who have been around longer and may know more, but we're still
 all friends and equals.
@@ -751,9 +729,8 @@ all friends and equals.
 So, before jumping in to tasks, it is important to get to know the
 people.
 
-- Take time to observe how teams work (refer to the section below).
-
-- See how their work aligns with your own skills and personality.
+&#42; Take time to observe how teams work (refer to the section below).
+&#42; See how their work aligns with your own skills and personality.
 
 :::: tip
 ::: title
@@ -822,14 +799,14 @@ Offer suggestions on topics being discussed, and share any experiences
 (good or bad) you've had that is relevant to the discussion. But do note
 that part of observing and making constructive suggestions may require
 withholding judgment. When making suggestions, don't assume you come
-with all of the answers or that the Fedora Project is \"doing it all
-wrong\". There is a good chance we can improve the way we are doing
+with all of the answers or that the Fedora Project is \'doing it all
+wrong\'. There is a good chance we can improve the way we are doing
 things, however most of our current practices were developed over long
 periods of time after lengthy discussion. Your criticism may be better
 received once you have established yourself in the community and are
 perceived as understanding our culture.
 
-A good way of providing feedback is to use \"plussing\". The fundamental
+A good way of providing feedback is to use \'plussing\'. The fundamental
 idea is to not just provide a critique or feedback for an idea, but to
 also offer suggestions or alternative solutions with that feedback.
 
@@ -888,21 +865,15 @@ public communication channels. As noted in [this informative
 post](https://www.scrye.com/wordpress/nirik/2013/02/12/default-to-open-please/),
 this has many advantages:
 
-- You can get an answer faster from a group of people than just one
-  person.
-
-- You can get peer review of that answer from the group, where you
-  wouldn't by just talking to one person.
-
-- You can increase the knowledge of the community, instead of hiding it
-  away. Perhaps 5 other people had the same question you just asked and
-  got answered.
-
-- You can start discussions and end up with a much better solution than
-  the one person you were trying to talk to would have given you.
-
-- Your question or comment could lead others in related questions or
-  comments.
+&#42; You can get an answer faster from a group of people than just one
+person. &#42; You can get peer review of that answer from the group,
+where you wouldn't by just talking to one person. &#42; You can increase
+the knowledge of the community, instead of hiding it away. Perhaps 5
+other people had the same question you just asked and got answered.
+&#42; You can start discussions and end up with a much better solution
+than the one person you were trying to talk to would have given you.
+&#42; Your question or comment could lead others in related questions or
+comments.
 
 :::: tip
 ::: title
@@ -913,17 +884,12 @@ Open communication is key in the Fedora community.
 
 So, for example:
 
-- Default to sending to a list when you are replying to something asked
-  there.
-
-- Default to asking in a public channel (Matrix/IRC) instead of sending
-  someone a private message
-
-- Default to filing a ticket when you wish something done instead of
-  sending private email.
-
-- Default to replying on a Bugzilla bug instead of sending private
-  emails.
+&#42; Default to sending to a list when you are replying to something
+asked there. &#42; Default to asking in a public channel (Matrix/IRC)
+instead of sending someone a private message &#42; Default to filing a
+ticket when you wish something done instead of sending private email.
+&#42; Default to replying on a Bugzilla bug instead of sending private
+emails.
 
 ### We are all mentors {#_we_are_all_mentors}
 

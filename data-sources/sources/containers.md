@@ -12,43 +12,40 @@ used for Fedora rawhide the development version of Fedora.
 
 # Install fedpkg {#_install_fedpkg}
 
-`fedpkg` is used to interact with Fedora infrastructure. You can install
-it using the following command:
-
-    $ sudo dnf install fedpkg
+&#96;fedpkg&#96; is used to interact with Fedora infrastructure. You can
+install it using the following command: &#96;&#96;&#96; \$ sudo dnf
+install fedpkg &#96;&#96;&#96;
 
 # Cloning a dist-git repository and building a image {#_cloning_a_dist_git_repository_and_building_a_image}
 
 In order to build a layered image using Fedora's container build system,
 you first need to clone the image git repository either using fedpkg or
-git: Here, the repository is called `tools`. All container repositories
-are in the [container
+git: Here, the repository is called &#96;tools&#96;. All container
+repositories are in the [container
 namespace](https://src.fedoraproject.org/projects/container/%2A) in the
 Fedora sources.
 
-    # Using fedpkg co <namespace>/<repository>
-    $ fedpkg co container/tools
+&#96;&#96;&#96; &#35; Using fedpkg co
+&lt;namespace&gt;/&lt;repository&gt; \$ fedpkg co container/tools
 
-    # Using git with the clone URL:
-    $ git clone https://src.fedoraproject.org/container/tools.git
+&#35; Using git with the clone URL: \$ git clone
+<https://src.fedoraproject.org/container/tools.git>
 
-    # Enter the repository:
-    $ cd tools && ls
-    Dockerfile  README.md  root
+&#35; Enter the repository: \$ cd tools &amp;&amp; ls Dockerfile
+README.md root &#96;&#96;&#96;
 
 You need to authenticate with the buildsystem to trigger builds, this is
 done using kerberos
 
-    $ kinit username@FEDORAPROJECT.ORG
-    Password for username@FEDORAPROJECT.ORG:
+&#96;&#96;&#96; \$ kinit <username@FEDORAPROJECT.ORG> Password for
+<username@FEDORAPROJECT.ORG>: &#96;&#96;&#96;
 
 You can now trigger the build
 
-    $ fedpkg container-build
-    Created task: 52510681
-    Task info: https://koji.fedoraproject.org/koji/taskinfo?taskID=52510681
-    Watching tasks (this may be safely interrupted)...
-    52510681 buildContainer (noarch): free
+&#96;&#96;&#96; \$ fedpkg container-build Created task: 52510681 Task
+info: <https://koji.fedoraproject.org/koji/taskinfo?taskID=52510681>
+Watching tasks (this may be safely interrupted)&#8230; 52510681
+buildContainer (noarch): free &#96;&#96;&#96;
 
 You get a link to the builsystem task, this is useful in case you build
 fails and you need to inspect the logs.
@@ -65,7 +62,7 @@ update system](https://bodhi.fedoraproject.org/).
 
 After login in the web application, you create an a new update. In the
 new update from use the NVR (Name Version Release) of the container
-build to populate the \"Builds\" section. Then add some description and
+build to populate the \'Builds\' section. Then add some description and
 metadata as needed and submit the update.
 
 The container is available on Fedora's
@@ -77,8 +74,9 @@ available on
 # Opening a Pull Request {#_opening_a_pull_request}
 
 [Pull Requests on
-dist-git](https://docs.fedoraproject.org/en-US/ci/pull-requests/) \*
-Guidelines == Fedora Container Naming
+dist-git](https://docs.fedoraproject.org/en-US/ci/pull-requests/)
+
+&#42; Guidelines == Fedora Container Naming
 
 A Fedora Container Layered Image name should be the same as the the name
 of main service that it intends to provide end users. Therefore, naming
@@ -89,10 +87,11 @@ None of the Fedora releases/DistGit-branch naming should be taken into
 consideration by the main container name, just as it is for RPM Package
 Naming.
 
-Fedora content is now \"namespaced\" in
+Fedora content is now \'namespaced\' in
 [DistGit](https://src.fedoraproject.org/projects/container/%2A), with
-the container namespace being \'container\'. :experimental: == Container
-Image Creation
+the container namespace being \'container\'.
+
+# Container Image Creation {#_container_image_creation}
 
 Container images in Fedora are built using a
 [Dockerfile](https://docs.docker.com/engine/reference/builder/) much in
@@ -109,7 +108,8 @@ As defined by the Dockerfile reference, the FROM instruction
 \'\'\'must\'\'\' be fully-qualified with the fedora registry name, image
 name, and tag as shown in this example:
 
-    FROM registry.fedoraproject.org/imagename:tag
+&#96;&#96;&#96; FROM registry.fedoraproject.org/imagename:tag
+&#96;&#96;&#96;
 
 This provides a guarantee of where the base image is coming from when
 being built by the build service or when rebuilt by a user.
@@ -119,18 +119,20 @@ Service](https://docs.pagure.org/releng/layered_image_build_service.html),
 the FROM line will use one of the Fedora base images that exist on the
 [Fedora Container Registry](https://registry.fedoraproject.org/):
 
-    FROM registry.fedoraproject.org/fedora:latest
+&#96;&#96;&#96; FROM registry.fedoraproject.org/fedora:latest
+&#96;&#96;&#96;
 
 It is also possible to use another layered image as the base layer, as
 in this example:
 
-    FROM registry.fedoraproject.org/f25/kubernetes-master:latest
+&#96;&#96;&#96; FROM
+registry.fedoraproject.org/f25/kubernetes-master:latest &#96;&#96;&#96;
 
 ## Labels {#_labels}
 
 Dockerfiles have a concept of a
-[LABEL](https://docs.docker.com/engine/reference/builder/#label) which
-can add arbitrary metadata to an image as a key-value pair. Fedora
+[LABEL](https://docs.docker.com/engine/reference/builder/&#35;label)
+which can add arbitrary metadata to an image as a key-value pair. Fedora
 Guidelines on the topic of LABELs follows the [Project
 Atomic](http://www.projectatomic.io/) [Container Application Generic
 Labels](https://github.com/projectatomic/ContainerApplicationGenericLabels)
@@ -138,64 +140,78 @@ standards for LABEL definition.
 
 \'\'\'Required\'\'\' LABELs for a Fedora Layered Image are as follows:
 
-+-----------------------------------+-----------------------------------+
-| Name                              | Description                       |
-+-----------------------------------+-----------------------------------+
-| com.redhat.component              | The Bugzilla component name where |
-|                                   | bugs against this container       |
-|                                   | should be reported by users.      |
-+-----------------------------------+-----------------------------------+
-| name                              | Name of the Image                 |
-+-----------------------------------+-----------------------------------+
-| version                           | Version of the image              |
-+-----------------------------------+-----------------------------------+
-| architecture                      | Architecture the software in the  |
-|                                   | image should target (Optional: if |
-|                                   | omitted, it will be built for all |
-|                                   | supported Fedora Architectures)   |
-+-----------------------------------+-----------------------------------+
-| maintainer                        | The name and email of the         |
-|                                   | maintainer (usually the           |
-|                                   | submitter)                        |
-+-----------------------------------+-----------------------------------+
-| run or usage                      | Either provides an Atomic run     |
-|                                   | line, or a human readable example |
-|                                   | of container execution            |
-+-----------------------------------+-----------------------------------+
-| summary                           | A short description of the image. |
-+-----------------------------------+-----------------------------------+
++-----------------------------------------------------------------------+
+| Name                                                                  |
++-----------------------------------------------------------------------+
+| Description                                                           |
++-----------------------------------------------------------------------+
+| com.redhat.component                                                  |
++-----------------------------------------------------------------------+
+| The Bugzilla component name where bugs against this container should  |
+| be reported by users.                                                 |
++-----------------------------------------------------------------------+
+| name                                                                  |
++-----------------------------------------------------------------------+
+| Name of the Image                                                     |
++-----------------------------------------------------------------------+
+| version                                                               |
++-----------------------------------------------------------------------+
+| Version of the image                                                  |
++-----------------------------------------------------------------------+
+| architecture                                                          |
++-----------------------------------------------------------------------+
+| Architecture the software in the image should target (Optional: if    |
+| omitted, it will be built for all supported Fedora Architectures)     |
++-----------------------------------------------------------------------+
+| maintainer                                                            |
++-----------------------------------------------------------------------+
+| The name and email of the maintainer (usually the submitter)          |
++-----------------------------------------------------------------------+
+| run or usage                                                          |
++-----------------------------------------------------------------------+
+| Either provides an Atomic run line, or a human readable example of    |
+| container execution                                                   |
++-----------------------------------------------------------------------+
+| summary                                                               |
++-----------------------------------------------------------------------+
+| A short description of the image.                                     |
++-----------------------------------------------------------------------+
 
 \'\'\'Optional\'\'\' labels for Fedora Layered Images
 
-+-----------------------------------+-----------------------------------+
-| Name                              | Description                       |
-+-----------------------------------+-----------------------------------+
-| install                           | Powers \"atomic install\"         |
-|                                   | command. Not used for system      |
-|                                   | containers.                       |
-+-----------------------------------+-----------------------------------+
-| uninstall                         | Powers \"atomic uninstall\"       |
-|                                   | command. Required if Install is   |
-|                                   | present.                          |
-+-----------------------------------+-----------------------------------+
-| url                               | A URL where the user can find     |
-|                                   | more information about the image. |
-+-----------------------------------+-----------------------------------+
-| help                              | A runnable command which results  |
-|                                   | in display of Help information.   |
-+-----------------------------------+-----------------------------------+
-| atomic.type                       | Used for system containers, see   |
-|                                   | below.                            |
-+-----------------------------------+-----------------------------------+
-| Generics                          | Any of the [Container Application |
-|                                   | Generic                           |
-|                                   | Labels](h                         |
-|                                   | ttps://github.com/projectatomic/C |
-|                                   | ontainerApplicationGenericLabels) |
-|                                   | which are appropriate to the      |
-|                                   | container, such as \"stop\",      |
-|                                   | \"debug\", or \"changelog-url\"   |
-+-----------------------------------+-----------------------------------+
++-----------------------------------------------------------------------+
+| Name                                                                  |
++-----------------------------------------------------------------------+
+| Description                                                           |
++-----------------------------------------------------------------------+
+| install                                                               |
++-----------------------------------------------------------------------+
+| Powers \'atomic install\' command. Not used for system containers.    |
++-----------------------------------------------------------------------+
+| uninstall                                                             |
++-----------------------------------------------------------------------+
+| Powers \'atomic uninstall\' command. Required if Install is present.  |
++-----------------------------------------------------------------------+
+| url                                                                   |
++-----------------------------------------------------------------------+
+| A URL where the user can find more information about the image.       |
++-----------------------------------------------------------------------+
+| help                                                                  |
++-----------------------------------------------------------------------+
+| A runnable command which results in display of Help information.      |
++-----------------------------------------------------------------------+
+| atomic.type                                                           |
++-----------------------------------------------------------------------+
+| Used for system containers, see below.                                |
++-----------------------------------------------------------------------+
+| Generics                                                              |
++-----------------------------------------------------------------------+
+| Any of the [Container Application Generic                             |
+| Labels                                                                |
+| ](https://github.com/projectatomic/ContainerApplicationGenericLabels) |
+| which are appropriate to the container, such as \'stop\', \'debug\',  |
+| or \'changelog-url\'                                                  |
++-----------------------------------------------------------------------+
 
 See LABEL SPECIFICATION below for more details on what's required for
 each of these labels.
@@ -229,9 +245,9 @@ RPM, it should have the exact same name of that RPM. Otherwise, please
 see naming guidelines above.
 
 \'\'\'version\'\'\': Usually 0. Populated from the ARG variable. See
-\"VERSIONING\" below for explanation.
+\'VERSIONING\' below for explanation.
 
-\'\'\'architecture\'\'\': usually \"x86_64\", unless the container image
+\'\'\'architecture\'\'\': usually \'x86_64\', unless the container image
 supports other/all architectures.
 
 \'\'\'usage\'\'\': a human-readable example command line for invoking
@@ -240,8 +256,8 @@ options, such as ports, volumes, and any required command-line
 parameters. You may use any container runtime as your example. Example
 from the OwnCloud container:
 
-usage=\"docker run -d -P -v owncloud-data:/var/lib/owncloud -v
-owncloud-config:/etc/owncloud owncloud\"
+usage=\'docker run -d -P -v owncloud-data:/var/lib/owncloud -v
+owncloud-config:/etc/owncloud owncloud\'
 
 \'\'\'summary\'\'\': A short description of the image, intended to be
 searchable once we have a registry with search functionality. Please
@@ -251,10 +267,10 @@ include relevant keywords.
 use by the [Atomic CLI](https://github.com/projectatomic/atomic),
 including placeholders and the embedded atomic-run code. Must
 successfully execute on a suitable Fedora Atomic system. Required if
-\"usage\" is not present. Example for the Cockpit container:
+\'usage\' is not present. Example for the Cockpit container:
 
-run=\"/usr/bin/docker run -d \--privileged \--pid=host -v /:/host IMAGE
-/container/atomic-run \--local-ssh\"
+run=\'/usr/bin/docker run -d \--privileged \--pid=host -v /:/host IMAGE
+/container/atomic-run \--local-ssh\'
 
 \'\'\'install\'\'\': A container may require preparation of the host
 system before the container can be run. In this case the install label
@@ -266,11 +282,11 @@ must be tested and work with the [Atomic
 CLI](https://github.com/projectatomic/atomic). Optionally an uninstall
 label should also be provided that will allow for cleaning up any
 operations done by install. Please refer to the [upstream
-documentation](https://github.com/projectatomic/atomic#atomic-install)
+documentation](https://github.com/projectatomic/atomic&#35;atomic-install)
 for more information. Example for the Cockpit container:
 
-install=\"/usr/bin/docker run \--rm \--privileged -v /:/host IMAGE
-/container/atomic-install\"
+install=\'/usr/bin/docker run \--rm \--privileged -v /:/host IMAGE
+/container/atomic-install\'
 
 \'\'\'uninstall\'\'\': If a container has an install label then most
 likely an uninstall label will be needed in order to delete any files
@@ -281,46 +297,47 @@ the install label so the uninstall label might not be needed. If an
 uninstall label is provided then it must be tested and work with the
 [Atomic CLI](https://github.com/projectatomic/atomic). Please refer to
 the [upstream
-documentation](https://github.com/projectatomic/atomic#atomic-uninstall)
+documentation](https://github.com/projectatomic/atomic&#35;atomic-uninstall)
 for more information.
 
-uninstall=\"/usr/bin/docker run \--rm \--privileged -v /:/host IMAGE
-/container/atomic-uninstall\"
+uninstall=\'/usr/bin/docker run \--rm \--privileged -v /:/host IMAGE
+/container/atomic-uninstall\'
 
 \'\'\'url\'\'\': A URL where users can get more information about the
 image, such as a github or pagure repository, or software documentation.
 
 \'\'\'help\'\'\': A runnable command which outputs a man page or other
-\"help\" information. If supplied, must be tested with `atomic help`. If
-you have a help command, you do not need to also supply a Help File (see
-below).
+\'help\' information. If supplied, must be tested with &#96;atomic
+help&#96;. If you have a help command, you do not need to also supply a
+Help File (see below).
 
 ## Versioning {#_versioning}
 
 In the previous section there was coverage of LABELs, one of those is
-the Version that is set in the example using the `ENV` variable
-`VERSION` which at this time needs to be `0`. OSBS handle automatically
-the increase of the release number for a given version of the container
-image.
+the Version that is set in the example using the &#96;ENV&#96; variable
+&#96;VERSION&#96; which at this time needs to be &#96;0&#96;. OSBS
+handle automatically the increase of the release number for a given
+version of the container image.
 
 At this time there is no way to automatically populate the
-`Version`/`VERSION` value with the same value of the latest version of
-the primary RPM belonging to the container image. This is something that
-is currently [on the roadmap](https://pagure.io/atomic-wg/issue/249).
+&#96;Version&#96;/&#96;VERSION&#96; value with the same value of the
+latest version of the primary RPM belonging to the container image. This
+is something that is currently [on the
+roadmap](https://pagure.io/atomic-wg/issue/249).
 
 Why is this needed?
 
-If we set the `Version` LABEL to the version of it's respective RPM at
-the time of the Container Image Review, then the maintainer will
+If we set the &#96;Version&#96; LABEL to the version of it's respective
+RPM at the time of the Container Image Review, then the maintainer will
 constantly have to update it by hand every time there is a RPM update
 which is inconvenient and error prone. Beyond that, there's a
 possibility that the version of the RPM could be updated by the layered
 image automatic rebuilds and the maintainer isn't able to update the
-`Dockerfile` in a timely manner (Automatic Rebuilds are done by [Release
-Engineering](https://docs.pagure.org/releng/) in order to pull in
-security updates for all layered images). If this were to happen, then
-the version of the container image will not match the version of the
-software it's meant to deliver which would lead to confusion and
+&#96;Dockerfile&#96; in a timely manner (Automatic Rebuilds are done by
+[Release Engineering](https://docs.pagure.org/releng/) in order to pull
+in security updates for all layered images). If this were to happen,
+then the version of the container image will not match the version of
+the software it's meant to deliver which would lead to confusion and
 potentially unexpected negative side effects for users. Therefore, for
 the time being we're saying that the version number of the container is
 not meaningful but it will be as soon as possible.
@@ -331,7 +348,8 @@ Another item required is a CMD or ENTRYPOINT entry so that when an user
 were run perform the following command (for example), expected behavior
 occurs.:
 
-    docker run registry.fedoraproject.org/f25/myawesomecontainer
+&#96;&#96;&#96; docker run
+registry.fedoraproject.org/f25/myawesomecontainer &#96;&#96;&#96;
 
 For more information on these entries, please reference the upstream
 [Dockerfile
@@ -342,46 +360,41 @@ documentation](https://docs.docker.com/engine/reference/builder/).
 The use of container volumes for persistent data is permitted and
 encouraged, but the following guidelines need to be followed:
 
-- Any user data that would be at risk of loss on update \'\'\'must\'\'\'
-  be in a volume.
+&#42; Any user data that would be at risk of loss on update
+\'\'\'must\'\'\' be in a volume. &#42; Any application configuration
+data that requires persistence \'\'\'must\'\'\' be in a volume.
+Configuration by environment variables instead is also allowed, either
+together or instead of configuration volumes. &#42; All volumes listed
+in the Dockerfile \'\'\'must\'\'\' be listed in the Help File. &#42; The
+example run command \'\'\'should\'\'\' have the volume with a persistent
+name (e.g. \'docker run -d -v owncloud-data:/var/lib/owncloud -v
+owncloud-config:/etc/owncloud owncloud\') &#42; Volumes \'\'\'must\'\'\'
+be defined as narrowly as possible. Specifically, unless the image is
+intended for use as a system container intended for system
+administration, volumes must be defined so as to mount system
+directories which are exclusive to the container. For example, the
+container must mount /etc/application-name/ for config files,
+\'\'not\'\' /etc/.
 
-- Any application configuration data that requires persistence
-  \'\'\'must\'\'\' be in a volume. Configuration by environment
-  variables instead is also allowed, either together or instead of
-  configuration volumes.
-
-- All volumes listed in the Dockerfile \'\'\'must\'\'\' be listed in the
-  Help File.
-
-- The example run command \'\'\'should\'\'\' have the volume with a
-  persistent name (e.g. \"docker run -d -v
-  owncloud-data:/var/lib/owncloud -v owncloud-config:/etc/owncloud
-  owncloud\")
-
-- Volumes \'\'\'must\'\'\' be defined as narrowly as possible.
-  Specifically, unless the image is intended for use as a system
-  container intended for system administration, volumes must be defined
-  so as to mount system directories which are exclusive to the
-  container. For example, the container must mount
-  /etc/application-name/ for config files, \'\'not\'\' /etc/.
-
-Each volume in the Help File \'\'\'must\'\'\' have the following: \* The
-full path of the volume \* Why it is marked a volume (such as why this
-config needs persistence or indicating user data lives there)
+Each volume in the Help File \'\'\'must\'\'\' have the following: &#42;
+The full path of the volume &#42; Why it is marked a volume (such as why
+this config needs persistence or indicating user data lives there)
 
 Volumes listed in the Help File \'\'\'should\'\'\' also include
 information about space, permissions, and performance requirements.
 
 The readme \'\'\'may\'\'\' contain suggested additional volumes that
 aren't made mandatory by the Dockerfile, such as locations for
-generated, rather than self signed, ssl certificates. == Image Contents
+generated, rather than self signed, ssl certificates.
+
+# Image Contents {#_image_contents}
 
 ## Allowed Content {#_allowed_content}
 
 Dockerfiles in Fedora should not contain net new code. The meaning of
 this is that software should be packaged properly as RPMs and placed in
 the Fedora repositories, Dockerfiles are simply a deliver mechanism for
-pre-defined \"ready to run\" configurations. Any content that is to
+pre-defined \'ready to run\' configurations. Any content that is to
 accompany the Dockerfile must either be configuration files or
 startup/orchestration scripts. The goal of this is such that we follow
 the key points of the [Fedora Release Engineering
@@ -406,39 +419,40 @@ that is what users will expect.
 The recommended location and naming scheme is the following (MySQL taken
 as an example):
 
-+-----------------------------------+-----------------------------------+
-| Location                          | Description                       |
-+-----------------------------------+-----------------------------------+
-| `/usr/bin/run-mysqld`             | Main executables that users       |
-|                                   | usually use; one of them is       |
-|                                   | usually set as default CMD        |
-+-----------------------------------+-----------------------------------+
-| `/usr/libexec/container-setup`    | Script that is run during         |
-|                                   | container build to prepare        |
-|                                   | container content; with this      |
-|                                   | command we can run only one       |
-|                                   | command instead of having a       |
-|                                   | complicated scripts directly in   |
-|                                   | the Dockerfile                    |
-+-----------------------------------+-----------------------------------+
-| `/etc/my.cnf`                     | Main config file for the daemon,  |
-|                                   | the location of the config file   |
-|                                   | should be the same as in RPM,     |
-|                                   | because it is what users expect   |
-+-----------------------------------+-----------------------------------+
-| `/usr/share/container-scri        | Template for another config file, |
-| pts/mysql/my-tuning.cnf.template` | its content may be evaluated      |
-|                                   | using `envsubst` utility, so      |
-|                                   | concrete values are set according |
-|                                   | to environment variables given as |
-|                                   | argument to `docker run` command  |
-+-----------------------------------+-----------------------------------+
-| `/var/lib/mysql/data`             | Path to the data, that is often a |
-|                                   | docker VOLUME; the `data` part is |
-|                                   | important so the volume-mounted   |
-|                                   | directory does not have a         |
-|                                   | root-owned parent                 |
-+-----------------------------------+-----------------------------------+
++-----------------------------------------------------------------------+
+| Location                                                              |
++-----------------------------------------------------------------------+
+| Description                                                           |
++-----------------------------------------------------------------------+
+| &#96;/usr/bin/run-mysqld&#96;                                         |
++-----------------------------------------------------------------------+
+| Main executables that users usually use; one of them is usually set   |
+| as default CMD                                                        |
++-----------------------------------------------------------------------+
+| &#96;/usr/libexec/container-setup&#96;                                |
++-----------------------------------------------------------------------+
+| Script that is run during container build to prepare container        |
+| content; with this command we can run only one command instead of     |
+| having a complicated scripts directly in the Dockerfile               |
++-----------------------------------------------------------------------+
+| &#96;/etc/my.cnf&#96;                                                 |
++-----------------------------------------------------------------------+
+| Main config file for the daemon, the location of the config file      |
+| should be the same as in RPM, because it is what users expect         |
++-----------------------------------------------------------------------+
+| &#96;/usr/share/container-scripts/mysql/my-tuning.cnf.template&#96;   |
++-----------------------------------------------------------------------+
+| Template for another config file, its content may be evaluated using  |
+| &#96;envsubst&#96; utility, so concrete values are set according to   |
+| environment variables given as argument to &#96;docker run&#96;       |
+| command                                                               |
++-----------------------------------------------------------------------+
+| &#96;/var/lib/mysql/data&#96;                                         |
++-----------------------------------------------------------------------+
+| Path to the data, that is often a docker VOLUME; the &#96;data&#96;   |
+| part is important so the volume-mounted directory does not have a     |
+| root-owned parent                                                     |
++-----------------------------------------------------------------------+
 
 : Location of Support Files
 
@@ -446,25 +460,24 @@ In order to have the Dockerfile clean, it is good practice to put all
 the files into one directory and use their final location under that
 directory. In case of the MySQL example above, it might look like this:
 
-    ls root/
-    /etc/my.cnf
-    /usr/bin/run-mysqld
-    /usr/libexec/container-setup
-    /usr/share/container-scripts/mysql/my-tuning.cnf.template
-    /var/lib/mysql/data
+&#96;&#96;&#96; ls root/ /etc/my.cnf /usr/bin/run-mysqld
+/usr/libexec/container-setup
+/usr/share/container-scripts/mysql/my-tuning.cnf.template
+/var/lib/mysql/data &#96;&#96;&#96;
 
 Adding all the files in the Dockerfile can be then as simple as this:
 
-    COPY root /
+&#96;&#96;&#96; COPY root / &#96;&#96;&#96;
 
 The source files may be stored on FTP or some other medium that does not
-keep UNIX file attributes, so the Dockerfile or `container-setup` script
-should make sure the files will have proper attributes set, like that
-files in `/usr/bin/*` are executable, etc.
+keep UNIX file attributes, so the Dockerfile or
+&#96;container-setup&#96; script should make sure the files will have
+proper attributes set, like that files in &#96;/usr/bin/&#42;&#96; are
+executable, etc.
 
 ## Multi Container Services {#_multi_container_services}
 
-Each container image should provide only one \"service\" and
+Each container image should provide only one \'service\' and
 multi-container services should be handled by an external orchestration
 tool at the users discretion such as \[<https://www.openshift.org/>
 OpenShift Origin\], \[<http://kubernetes.io/> kubernetes\],
@@ -477,50 +490,41 @@ These types of multi-container services should be documented in such a
 way that users can adapt them to their needs. One example would be using
 the \[<https://projectatomic.io> Project Atomic\]
 \[<https://github.com/projectatomic/nulecule> nulecule\] specification.
-:experimental: == Help File
 
-Just like traditional packages, containers need some \"man page\"
+# Help File {#_help_file}
+
+Just like traditional packages, containers need some \'man page\'
 information about how they are to be used, configured, and integrated
 into a larger stack. As such, a Help File is required as part of your
-container package unless you have supplied a \"help\" command instead.
+container package unless you have supplied a \'help\' command instead.
 This Help File, if present, will be supplied as part of the Container
 Review. It must be a MarkDown file, to be placed in the DistGit
 repository root prior to triggering your container builds, and it must
 have the following name:
 
-- help.md
+&#42; help.md
 
 OSBS will automatically convert this file into a man page and copy it to
-`/help.1` in the built image.
+&#96;/help.1&#96; in the built image.
 
 The help file should contain all of the following, depending on the
 requirements of the image:
 
-- A brief description of what service/software the image contains.
-
-- What purpose it fulfills in a larger infrastructure, if any.
-
-- If it is possible to configure the contained service the file
-  \'\'\'must\'\'\' contain directions on how to do so.
-
-- If the container has any dependencies on other services (for example a
-  database) the file \'\'\'must\'\'\' detail these.
-
-- If the container uses any volumes the file \'\'\'must\'\'\' detail
-  what each one is for, see VOLUMES guidelines for more detail.
-
-- An explanation of each PORT the image listens on, including its
-  protocol and purpose.
-
-- Links to any external documentation or software project pages, if such
-  pages exist.
-
-- If the container has any special requirements (like lots of RAM, or
-  sound server access), these \'\'\'must\'\'\' be listed.
-
-- If the application has major variants on how it can be built,
-  information about these (e.g. mod_php vs. fastcgi) is
-  \'\'\'required\'\'\'.
+&#42; A brief description of what service/software the image contains.
+&#42; What purpose it fulfills in a larger infrastructure, if any. &#42;
+If it is possible to configure the contained service the file
+\'\'\'must\'\'\' contain directions on how to do so. &#42; If the
+container has any dependencies on other services (for example a
+database) the file \'\'\'must\'\'\' detail these. &#42; If the container
+uses any volumes the file \'\'\'must\'\'\' detail what each one is for,
+see VOLUMES guidelines for more detail. &#42; An explanation of each
+PORT the image listens on, including its protocol and purpose. &#42;
+Links to any external documentation or software project pages, if such
+pages exist. &#42; If the container has any special requirements (like
+lots of RAM, or sound server access), these \'\'\'must\'\'\' be listed.
+&#42; If the application has major variants on how it can be built,
+information about these (e.g. mod_php vs. fastcgi) is
+\'\'\'required\'\'\'.
 
 Example Help File:
 
@@ -562,83 +566,74 @@ the
 
 ### Dockerfiles {#_dockerfiles}
 
-- Put your Dockerfile, accompanying configuration files, and control
-  scripts somewhere on the Internet where it can be directly downloaded
-  (just HTTP(s), no registration pages or special download methods,
-  please). If you have no access at all and would like space, please
-  visit [The sponsors ticket
-  system](https://pagure.io/packager-sponsors), log in, and file a
-  ticket with component \"Initial package hosting request\". You will be
-  given access to [Fedorapeople](https://fedorapeople.org/).
+&#42; Put your Dockerfile, accompanying configuration files, and control
+scripts somewhere on the Internet where it can be directly downloaded
+(just HTTP(s), no registration pages or special download methods,
+please). If you have no access at all and would like space, please visit
+[The sponsors ticket system](https://pagure.io/packager-sponsors), log
+in, and file a ticket with component \'Initial package hosting
+request\'. You will be given access to
+[Fedorapeople](https://fedorapeople.org/).
 
-- Fill out a [request for review in bugzilla](http://red.ht/2qtgK7S).
-  Summary field needs to be in format of `Container Review Request:..`.
-  If the `:` is omitted the fedpkg tool's request-repo will error out.
+&#42; Fill out a [request for review in
+bugzilla](http://red.ht/2qtgK7S). Summary field needs to be in format of
+&#96;Container Review Request:..&#96;. If the &#96;:&#96; is omitted the
+fedpkg tool's request-repo will error out.
 
-- If you do not have any package or container layered image already in
-  Fedora, this means you need a sponsor and to add FE-NEEDSPONSOR
-  (Bugzilla id:177841) to the bugs being blocked by your review request.
-  For more information read the [How to Get Sponsored into the Packager
-  Group](https://docs.fedoraproject.org/en-US/package-maintainers/How_to_Get_Sponsored_into_the_Packager_Group/)
-  page.
+&#42; If you do not have any package or container layered image already
+in Fedora, this means you need a sponsor and to add FE-NEEDSPONSOR
+(Bugzilla id:177841) to the bugs being blocked by your review request.
+For more information read the [How to Get Sponsored into the Packager
+Group](https://docs.fedoraproject.org/en-US/package-maintainers/How_to_Get_Sponsored_into_the_Packager_Group/)
+page.
 
-- Wait for someone to review your Dockerfile! At this point in the
-  process, the \'\'\'fedora-review flag\'\'\' is blank, meaning that no
-  reviewer is assigned.
+&#42; Wait for someone to review your Dockerfile! At this point in the
+process, the \'\'\'fedora-review flag\'\'\' is blank, meaning that no
+reviewer is assigned.
 
 If nobody comments on your review request, you might want to mail to a
-mailing list (<devel@list.fedoraproject.org>) asking for a \"review
-swap\". This is an offer to do a review of someone else's Dockerfile in
+mailing list (<devel@list.fedoraproject.org>) asking for a \'review
+swap\'. This is an offer to do a review of someone else's Dockerfile in
 exchange for them reviewing your Dockerfile. This is usually
 one-for-one, or can be some other private arrangement depending on the
 difficulty of the respective packages.
 
-- There may be comments from people that are not formally reviewing the
-  package, they may add NotReady to the Whiteboard field, indication
-  that the review request is not yet ready, because of some issues they
-  report. After you have addressed them, please post the URLs to the
-  updated Dockerfile and associated files and remove it from the
-  Whiteboard. It is expected that you will respond to commentary,
-  including updating your submission to address it; if you do not, your
-  ticket will be closed.
+&#42; There may be comments from people that are not formally reviewing
+the package, they may add NotReady to the Whiteboard field, indication
+that the review request is not yet ready, because of some issues they
+report. After you have addressed them, please post the URLs to the
+updated Dockerfile and associated files and remove it from the
+Whiteboard. It is expected that you will respond to commentary,
+including updating your submission to address it; if you do not, your
+ticket will be closed.
 
-- A reviewer takes on the task of reviewing your package. They will set
-  the \'\'\'fedora-review flag\'\'\' to \'\'\'?\'\'\'
+&#42; A reviewer takes on the task of reviewing your package. They will
+set the \'\'\'fedora-review flag\'\'\' to \'\'\'?\'\'\'
 
-- The reviewer will review your Dockerfile. You should fix any blockers
-  that the reviewer identifies. Once the reviewer is happy with the
-  package, the \'\'\'fedora-review\'\'\' flag will be set to
-  \'\'\'+\'\'\', indicating that the package has passed review.
+&#42; The reviewer will review your Dockerfile. You should fix any
+blockers that the reviewer identifies. Once the reviewer is happy with
+the package, the \'\'\'fedora-review\'\'\' flag will be set to
+\'\'\'+\'\'\', indicating that the package has passed review.
 
-- At this point, you need to make an [SCM admin
-  request](https://fedoraproject.org/wiki/PackageDB_admin_requests) for
-  your newly approved Layered Image. If you have not yet been sponsored,
-  you will not be able to progress past this point. (You will need to
-  make sure to request the container namespace in src.fedorproject.org)
-
-- Checkout the package using \"fedpkg clone
-  container/\<container-name\>\" do a final check of Dockerfile, etc.
-
-- When this is complete, you can add relevant container files into the
-  SCM. Required files should be:
-
-- Dockerfile
-
-- help.md file
-
-- Request a build by running \"fedpkg container-build\".
-
-- Repeat the process for other branches you may have requested. (NOTE:
-  The FROM line in the Dockerfile for each branch will need to reflect
-  which Fedora release distgit branch it is in or else the builds will
-  collide in koji)
-
-- You should make sure the review ticket is closed. You are welcome to
-  close it once the Container Layered Image has been built on the
-  requested branches, or if you built for one of the Fedora release
-  branches you can ask Bodhi to close the ticket for you when it
-  completes the process. If you close the ticket yourself, use
-  \'\'\'NEXTRELEASE\'\'\' as the resolution.
+&#42; At this point, you need to make an [SCM admin
+request](https://fedoraproject.org/wiki/PackageDB_admin_requests) for
+your newly approved Layered Image. If you have not yet been sponsored,
+you will not be able to progress past this point. (You will need to make
+sure to request the container namespace in src.fedorproject.org) &#42;
+Checkout the package using \'fedpkg clone
+container/&lt;container-name&gt;\' do a final check of Dockerfile, etc.
+&#42; When this is complete, you can add relevant container files into
+the SCM. Required files should be: &#42; Dockerfile &#42; help.md file
+&#42; Request a build by running \'fedpkg container-build\'. &#42;
+Repeat the process for other branches you may have requested. (NOTE: The
+FROM line in the Dockerfile for each branch will need to reflect which
+Fedora release distgit branch it is in or else the builds will collide
+in koji) &#42; You should make sure the review ticket is closed. You are
+welcome to close it once the Container Layered Image has been built on
+the requested branches, or if you built for one of the Fedora release
+branches you can ask Bodhi to close the ticket for you when it completes
+the process. If you close the ticket yourself, use
+\'\'\'NEXTRELEASE\'\'\' as the resolution.
 
 You do not need to go through the review process again for subsequent
 Container Layered Image changes for this Layered Image.
@@ -654,71 +649,68 @@ Guidelines](https://docs.fedoraproject.org/en-US/containers/guidelines/guideline
 
 The Reviewer can be any Fedora account holder who is a member of the
 [packager
-group](https://admin.fedoraproject.org/accounts/group/members/packager/*).
+group](https://admin.fedoraproject.org/accounts/group/members/packager/&#42;).
 (If the Contributor is not yet sponsored, the review can still proceed
 to completion but they will need to find a sponsor at some point.)
 
-- Search for a review request that needs a reviewer:
-  <https://bugzilla.redhat.com/buglist.cgi?component=Container%20Review&list_id=9912775&product=Fedora%20Container%20Images>
+&#42; Search for a review request that needs a reviewer:
+<https://bugzilla.redhat.com/buglist.cgi?component=Container%20Review&amp;list_id=9912775&amp;product=Fedora%20Container%20Images>
 
-- If you notice some issues that need to be solved before you want to
-  start a formal review, add these issues in a comment and set the
-  Whiteboard of the bug to contain NotReady. This helps other possible
-  reviewers to notice that the review request is not yet ready for
-  further review action.
+&#42; If you notice some issues that need to be solved before you want
+to start a formal review, add these issues in a comment and set the
+Whiteboard of the bug to contain NotReady. This helps other possible
+reviewers to notice that the review request is not yet ready for further
+review action.
 
-- if you want to formally review the Dockerfile, set the
-  \'\'\'fedora-review\'\'\' flag to \'\'\'?\'\'\' and assign the bug to
-  yourself.
+&#42; if you want to formally review the Dockerfile, set the
+\'\'\'fedora-review\'\'\' flag to \'\'\'?\'\'\' and assign the bug to
+yourself.
 
 If you want to step back from the review for any reason, reset the
-\<code\>fedora-review\</code\> flag to be blank \'\'\'and\'\'\' reassign
-the bug to the default owner of the component, which is
+&lt;code&gt;fedora-review&lt;/code&gt; flag to be blank \'\'\'and\'\'\'
+reassign the bug to the default owner of the component, which is
 \'\'\'<nobody@fedoraproject.org>\'\'\'
 
 ### Review the package {#_review_the_package}
 
-- Go through the MUST items listed in [Container
-  Guidelines](https://docs.fedoraproject.org/en-US/containers/guidelines/guidelines/).
+&#42; Go through the MUST items listed in [Container
+Guidelines](https://docs.fedoraproject.org/en-US/containers/guidelines/guidelines/).
+&#42; Go through the SHOULD items in [Container
+Guidelines](https://docs.fedoraproject.org/en-US/containers/guidelines/guidelines/).
 
-- Go through the SHOULD items in [Container
-  Guidelines](https://docs.fedoraproject.org/en-US/containers/guidelines/guidelines/).
+&#42; Include the text of your review in a comment in the ticket. For
+easy readability, simply use a regular comment instead of an attachment.
 
-- Include the text of your review in a comment in the ticket. For easy
-  readability, simply use a regular comment instead of an attachment.
-
-- Take one of the following actions:
-
-- \'\'\'ACCEPT\'\'\' - If the container layered image is good, set the
-  \'\'\'fedora-review\'\'\' flag to \'\'\'+\'\'\'
+&#42; Take one of the following actions: &#42; \'\'\'ACCEPT\'\'\' - If
+the container layered image is good, set the \'\'\'fedora-review\'\'\'
+flag to \'\'\'+\'\'\'
 
 If the Reviewer is also acting as Sponsor for the Contributor, then this
 is the time to sponsor the Contributor.
 
-- \'\'\'FAIL, LEGAL\'\'\' - If the container layered image is legally
-  risky for whatever reason (known patent or copyright infringement,
-  trademark concerns) close the bug WONTFIX and leave an appropriate
-  comment (i.e. we don't ship mp3). Set the \'\'\'fedora-review\'\'\'
-  flag to \'\'\'-\'\'\', and have the review ticket block FE-Legal.
+&#42; \'\'\'FAIL, LEGAL\'\'\' - If the container layered image is
+legally risky for whatever reason (known patent or copyright
+infringement, trademark concerns) close the bug WONTFIX and leave an
+appropriate comment (i.e. we don't ship mp3). Set the
+\'\'\'fedora-review\'\'\' flag to \'\'\'-\'\'\', and have the review
+ticket block FE-Legal.
 
-- \'\'\'FAIL, OTHER\'\'\' - If the container layered image is just way
-  off or unsuitable for some other reason, and there is no simple fix,
-  then close the bug WONTFIX and leave an appropriate comment (i.e. we
-  don't package pornography for redistribution, sorry. Or, this isn't a
-  specfile, it's a McDonald's menu, sorry.) Set the
-  \'\'\'fedora-review\'\'\' flag to \'\'\'-\'\'\'.
+&#42; \'\'\'FAIL, OTHER\'\'\' - If the container layered image is just
+way off or unsuitable for some other reason, and there is no simple fix,
+then close the bug WONTFIX and leave an appropriate comment (i.e. we
+don't package pornography for redistribution, sorry. Or, this isn't a
+specfile, it's a McDonald's menu, sorry.) Set the
+\'\'\'fedora-review\'\'\' flag to \'\'\'-\'\'\'.
 
-- \'\'\'NEEDSWORK\'\'\' - Anything that isn't explicitly failed should
-  be left open while the submitter and reviewer work together to fix any
-  potential issues. Mark the bug as NEEDINFO while waiting for the
-  reviewer to respond to improvement requests; this makes it easier for
-  reviewers to find open reviews which require their input.
-
-- Once a package is flagged as \'\'\'fedora-review +\'\'\' (or
-  \'\'\'-\'\'\'), the Reviewer's job is done although they may be called
-  upon to assist the Contributor with the import/build/update process
-  and to ensure that the Contributor closes the ticket out when the
-  process is complete.
+&#42; \'\'\'NEEDSWORK\'\'\' - Anything that isn't explicitly failed
+should be left open while the submitter and reviewer work together to
+fix any potential issues. Mark the bug as NEEDINFO while waiting for the
+reviewer to respond to improvement requests; this makes it easier for
+reviewers to find open reviews which require their input. &#42; Once a
+package is flagged as \'\'\'fedora-review +\'\'\' (or \'\'\'-\'\'\'),
+the Reviewer's job is done although they may be called upon to assist
+the Contributor with the import/build/update process and to ensure that
+the Contributor closes the ticket out when the process is complete.
 
 # Fedora Container Build System {#_fedora_container_build_system}
 
@@ -734,10 +726,10 @@ the scope of this Guidelines document.
 The Fedora Base Image provides information that can be used by the
 Layered Images via inherited Environment Variables:
 
-- `$DISTTAG` is defined just as it is for RPMs, but since Containerfiles
-  (or Dockerfiles) lack a mechanism similar to RPM Macros this is being
-  stored in the base image such that it can be inherited by layered
-  images.
+&#42; &#96;\$DISTTAG&#96; is defined just as it is for RPMs, but since
+Containerfiles (or Dockerfiles) lack a mechanism similar to RPM Macros
+this is being stored in the base image such that it can be inherited by
+layered images.
 
 ## Fedora Container Registries and Updates {#_fedora_container_registries_and_updates}
 
@@ -747,70 +739,62 @@ All Layered Image Builds end up in the candidate registry as soon as
 they are successful in the Fedora Layered Image Build System. These
 images can immediately be pulled. For example:
 
-    # With podman
-    podman pull candidate-registry.fedoraproject.org/$FGC/$NAME:latest`
+&#96;&#96;&#96; &#35; With podman podman pull
+candidate-registry.fedoraproject.org/\$FGC/\$NAME:latest&#96;
 
-    # With Docker
-    docker pull candidate-registry.fedoraproject.org/$FGC/$NAME:latest`
+&#35; With Docker docker pull
+candidate-registry.fedoraproject.org/\$FGC/\$NAME:latest&#96;
+&#96;&#96;&#96;
 
 Gated releases will happen on a Two Week Cadence, alternating with the
 Fedora Two Week Atomic Host.
 
 ### Registry Layout {#_registry_layout}
 
-Fedora Base Images will be available at the \"root\" namespace of the
+Fedora Base Images will be available at the \'root\' namespace of the
 registry, an example is below:
 
-    https://candidate-registry.fedoraproject.org/fedora:24
-    https://candidate-registry.fedoraproject.org/fedora:25
-    https://candidate-registry.fedoraproject.org/fedora:latest
+&#96;&#96;&#96; <https://candidate-registry.fedoraproject.org/fedora:24>
+<https://candidate-registry.fedoraproject.org/fedora:25>
+<https://candidate-registry.fedoraproject.org/fedora:latest>
 
-    https://registry.fedoraproject.org/fedora:24
-    https://registry.fedoraproject.org/fedora:25
-    https://registry.fedoraproject.org/fedora:latest
+<https://registry.fedoraproject.org/fedora:24>
+<https://registry.fedoraproject.org/fedora:25>
+<https://registry.fedoraproject.org/fedora:latest> &#96;&#96;&#96;
 
-Fedora Layered Images will be available in their respective `$FGC`
-namespace which correlates to their DistGit branch and Koji tag. An
-example is as follows for the `f25` Fedora Generational Core and the
-cockpit container image.
+Fedora Layered Images will be available in their respective
+&#96;\$FGC&#96; namespace which correlates to their DistGit branch and
+Koji tag. An example is as follows for the &#96;f25&#96; Fedora
+Generational Core and the cockpit container image.
 
 There are multiple tags applied to each image:
 
-- `Name:Version-Release` (including `$DISTTAG`)
-
-- `Name:Version`
-
-- `Name:latest`
-
-  - The `:latest` tag can be omitted when issuing a `podmand pull` or
-    `docker pull` command.
+&#42; &#96;Name:Version-Release&#96; (including &#96;\$DISTTAG&#96;)
+&#42; &#96;Name:Version&#96; &#42; &#96;Name:latest&#96; &#42;&#42; The
+&#96;:latest&#96; tag can be omitted when issuing a &#96;podmand
+pull&#96; or &#96;docker pull&#96; command.
 
 The latter two tags are updated in-place and a new execution of
-`podman pull` or `docker pull` will get the latest image.
+&#96;podman pull&#96; or &#96;docker pull&#96; will get the latest
+image.
 
-    https://candidate-registry.fedoraproject.org/cockpit:latest
+&#96;&#96;&#96;
+<https://candidate-registry.fedoraproject.org/cockpit:latest>
 
-    https://registry.fedoraproject.org/cockpit:latest
+<https://registry.fedoraproject.org/cockpit:latest> &#96;&#96;&#96;
 
-## Tools & Ecosystem {#_tools_ecosystem}
+## Tools &amp; Ecosystem {#_tools_amp_ecosystem}
 
-- [Podman 🔗](https://podman.io)
+&#42; [Podman &amp;&#35;128279;](https://podman.io) &#42; [Buildah
+&amp;&#35;128279;](https://buildah.io) &#42; [Skopeo
+&amp;&#35;128279;](https://github.com/containers/skopeo) &#42; [OKD
+&amp;&#35;128279;](https://okd.io) &#42; [CRI-O
+&amp;&#35;128279;](https://cri-o.io/) &#42; [Kubernetes
+&amp;&#35;128279;](https://kubernetes.io) &#42; [Fedora Silverblue
+&amp;&#35;128279;](https://silverblue.fedoraproject.org/) &#42; [Fedora
+CoreOS &amp;&#35;128279;](https://coreos.fedoraproject.org/)
 
-- [Buildah 🔗](https://buildah.io)
-
-- [Skopeo 🔗](https://github.com/containers/skopeo)
-
-- [OKD 🔗](https://okd.io)
-
-- [CRI-O 🔗](https://cri-o.io/)
-
-- [Kubernetes 🔗](https://kubernetes.io)
-
-- [Fedora Silverblue 🔗](https://silverblue.fedoraproject.org/)
-
-- [Fedora CoreOS 🔗](https://coreos.fedoraproject.org/)
-
-- Terminology === Dictionary
+&#42; Terminology === Dictionary
 
 When discussing containerization, it's important to have a solid grasp
 on the related vocabulary. One of the challenges people have is that
@@ -837,15 +821,16 @@ images are typically tens of MBs in size), and start almost instantly.
 
 ### Repository {#_repository}
 
-When using the `docker` command, a repository is what is specified on
-the command line, not an image. In the following command, "fedora" is
-the repository.
+When using the &#96;docker&#96; command, a repository is what is
+specified on the command line, not an image. In the following command,
+"fedora" is the repository.
 
-    docker pull fedora
+&#96;&#96;&#96; docker pull fedora &#96;&#96;&#96;
 
 This is actually expanded automatically to:
 
-    docker pull docker.io/library/fedora:latest
+&#96;&#96;&#96; docker pull docker.io/library/fedora:latest
+&#96;&#96;&#96;
 
 This can be confusing, and many people refer to this as an image or a
 container image. In fact, the docker images sub-command is what is used
@@ -864,7 +849,8 @@ In the above command, only the repository name was specified, but it's
 also possible to specify a full URL address with the Docker client. To
 highlight this, let's start with dissecting a full address.
 
-    REGISTRY[:PORT]/NAMESPACE/REPOSITORY[:TAG]
+&#96;&#96;&#96; REGISTRY\[:PORT\]/NAMESPACE/REPOSITORY\[:TAG\]
+&#96;&#96;&#96;
 
 The full URL is made up of a standard server name, a namespace, and
 optionally a tag. There are actually many permutations of how to specify
@@ -872,10 +858,9 @@ a URL and as you explore the Docker ecosystem, you will find that many
 pieces are optional. The following commands are all valid and all pull
 some permutation of the same repository:
 
-    docker pull docker.io/library/fedora:latest
-    docker pull docker.io/library/fedora
-    docker pull library/fedora
-    docker pull fedora
+&#96;&#96;&#96; docker pull docker.io/library/fedora:latest docker pull
+docker.io/library/fedora docker pull library/fedora docker pull fedora
+&#96;&#96;&#96;
 
 ### Image Layer {#_image_layer}
 
@@ -917,7 +902,9 @@ When an image builder creates a new repository, they will typically
 label the best image layers to use. These are called tags and typically
 map to versions of software contained in the repository. In other words,
 tags are how various images in a repository are distinguished from each
-other. === Container Use Cases
+other.
+
+### Container Use Cases {#_container_use_cases}
 
 There are many types of Container design patterns forming. Since
 containers are the runtime version of a container image, the way a
@@ -932,20 +919,20 @@ image/container.
 This section will delve into some of the common use cases that users are
 tackling with containers.
 
-### Application Containers {#_application_containers}
+#### Application Containers {#_application_containers}
 
 Applications containers are the most popular form of containers. These
 are what developers and application owners care about. Application
 containers contain the code that developers work on. These include, for
 example, MySQL, Apache, MongoDB, and Node.js.
 
-### Cattle vs Pet Containers {#_cattle_vs_pet_containers}
+#### Cattle vs Pet Containers {#_cattle_vs_pet_containers}
 
 Containers are usually perceived as a technology that serves for
 deploying applications that are immutable and can be therefore
 redeployed or killed any time without severe consequences. As an
-analogy, these are often referred to as \"cattle\". Containers in this
-development environment don't have \"identity\", the user doesn't need
+analogy, these are often referred to as \'cattle\'. Containers in this
+development environment don't have \'identity\', the user doesn't need
 to care where the contianers live in the cluster, the containers are
 automatically recovered after failures and can be scaled up or down as
 needed. In contrast, when a pet container fails, the running application
@@ -954,7 +941,7 @@ containers require user's closer attention and management and are
 usually accompanied with regular health checks. A typical example would
 be a containerized database.
 
-### Super Privileged Containers {#_super_privileged_containers}
+#### Super Privileged Containers {#_super_privileged_containers}
 
 When building container infrastructure on dedicated container hosts such
 as Atomic Host, system administrators still need to perform
@@ -978,21 +965,20 @@ compatible with the host kernel.
 A base image is one of the simplest types of images, but you will find a
 lot of definitions. Sometimes users will also refer an application image
 as the "base image." However, technically, this is not a base image,
-these are [Intermediate images](#intermediate_images).
+these are [Intermediate images](&#35;intermediate_images).
 
 Simply put, a base image is an image that has no parent layer.
 Typically, a base image contains a fresh copy of an operating system.
 Base images normally include core system tools, such as bash or
 coreutils and tools necessary to install packages and make updates to
-the image over time (yum, rpm, apt-get, dnf, microdnf...​) While base
+the image over time (yum, rpm, apt-get, dnf, microdnf&#8230;) While base
 images can be "hand crafted", in practice they are typically produced
 and published by open source projects (like Debian, Fedora or CentOS)
 and vendors (like Red Hat). The provenance of base images is critical
 for security. In short, the sole purpose of a base image is to provide a
 starting place for creating your derivative images. When using a
 Dockerfile, the choice of which base image you are using is explicit:
-
-    FROM registry.fedoraproject.org/fedora
+&#96;&#96;&#96; FROM registry.fedoraproject.org/fedora &#96;&#96;&#96;
 
 #### Builder Images {#_builder_images}
 
@@ -1020,7 +1006,7 @@ quickly and easily, building off of trusted components.
 Some Builder images are created in a way that allows developers to not
 only provide their source code, but also custom configuration for
 software built into the image. One such example is the [Nginx Builder
-image](https://github.com/openshift/source-to-image/tree/master/examples/nginx-centos7#configuring-nginx)
+image](https://github.com/openshift/source-to-image/tree/master/examples/nginx-centos7&#35;configuring-nginx)
 in the source-to-image upstream repository.
 
 #### Intermediate Images {#_intermediate_images}
@@ -1082,28 +1068,29 @@ traditional methodology such as an RPM or installer script.
 
 It's important to understand that containerized components are not
 designed to function on their own. They provide value to a larger piece
-of software, but provide very little value on their own. === Image Types
+of software, but provide very little value on their own.
+
+### Image Types {#_image_types_2}
 
 #### Base Images {#_base_images_2}
 
 A base image is one of the simplest types of images, but you will find a
 lot of definitions. Sometimes users will also refer an application image
 as the "base image." However, technically, this is not a base image,
-these are [Intermediate images](#intermediate_images).
+these are [Intermediate images](&#35;intermediate_images).
 
 Simply put, a base image is an image that has no parent layer.
 Typically, a base image contains a fresh copy of an operating system.
 Base images normally include core system tools, such as bash or
 coreutils and tools necessary to install packages and make updates to
-the image over time (yum, rpm, apt-get, dnf, microdnf...​) While base
+the image over time (yum, rpm, apt-get, dnf, microdnf&#8230;) While base
 images can be "hand crafted", in practice they are typically produced
 and published by open source projects (like Debian, Fedora or CentOS)
 and vendors (like Red Hat). The provenance of base images is critical
 for security. In short, the sole purpose of a base image is to provide a
 starting place for creating your derivative images. When using a
 Dockerfile, the choice of which base image you are using is explicit:
-
-    FROM registry.fedoraproject.org/fedora
+&#96;&#96;&#96; FROM registry.fedoraproject.org/fedora &#96;&#96;&#96;
 
 #### Builder Images {#_builder_images_2}
 
@@ -1131,7 +1118,7 @@ quickly and easily, building off of trusted components.
 Some Builder images are created in a way that allows developers to not
 only provide their source code, but also custom configuration for
 software built into the image. One such example is the [Nginx Builder
-image](https://github.com/openshift/source-to-image/tree/master/examples/nginx-centos7#configuring-nginx)
+image](https://github.com/openshift/source-to-image/tree/master/examples/nginx-centos7&#35;configuring-nginx)
 in the source-to-image upstream repository.
 
 #### Intermediate Images {#_intermediate_images_2}

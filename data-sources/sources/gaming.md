@@ -34,18 +34,14 @@ feel at home.
 
 Our current high-level goals:
 
-- Expanding this documentation.
-
-- Gathering more interested gamers and contributors.
-
-- [Discussions on support for various graphics
-  cards](https://discussion.fedoraproject.org/t/about-the-gaming-category/26110/2?u=copperi)
-
-- [Learning Fedora through
-  gaming](https://discussion.fedoraproject.org/t/learning-fedora-linux-through-gaming/26153)
-
-- [Find package maintainers and fix the \"Games\" dnf
-  group](https://discussion.fedoraproject.org/t/comps-group-for-games-maintenance-needed/26947?u=nickavem)
+&#42; Expanding this documentation. &#42; Gathering more interested
+gamers and contributors. &#42; [Discussions on support for various
+graphics
+cards](https://discussion.fedoraproject.org/t/about-the-gaming-category/26110/2?u=copperi)
+&#42; [Learning Fedora through
+gaming](https://discussion.fedoraproject.org/t/learning-fedora-linux-through-gaming/26153)
+&#42; [Find package maintainers and fix the \'Games\' dnf
+group](https://discussion.fedoraproject.org/t/comps-group-for-games-maintenance-needed/26947?u=nickavem)
 
 :::: important
 ::: title
@@ -65,26 +61,27 @@ Fedora Forum](https://ask.fedoraproject.org).
 
 If you found a bug, report it!
 
-- [How to file a
-  bug](https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/).
+&#42; [How to file a
+bug](https://docs.fedoraproject.org/en-US/quick-docs/howto-file-a-bug/).
 
 If you have specific questions/ideas about gaming or game development,
 or want to introduce yourself and join the team, come visit us at the
 [Gaming Discussion
 Form](https://discussion.fedoraproject.org/c/desktop/gaming)!
 
-- Issues about gaming documentation can be filed at [ticketing
-  repository on Pagure](https://pagure.io/gaming/documentation/issues).
+&#42; Issues about gaming documentation can be filed at [ticketing
+repository on Pagure](https://pagure.io/gaming/documentation/issues).
 
-- You can chat with us at [#fedora-games on
-  irc.libera.chat](https://web.libera.chat/#fedora-games), or our
-  [Element/Matrix
-  channel](https://matrix.to/#/#gaming:fedoraproject.org). Chats are
-  bridged, so you can use either one of them.
+&#42; You can chat with us at [&#35;fedora-games on
+irc.libera.chat](https://web.libera.chat/\&#35;fedora-games), or our
+[Element/Matrix
+channel](https://matrix.to/&#35;/&#35;gaming:fedoraproject.org). Chats
+are bridged, so you can use either one of them.
 
-- You can e-mail us on the Games mailing list at
-  [games@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/games@lists.fedoraproject.org/).
-  = Glossary
+&#42; You can e-mail us on the Games mailing list at
+[games@lists.fedoraproject.org](https://lists.fedoraproject.org/admin/lists/games@lists.fedoraproject.org/).
+
+# Glossary {#_glossary}
 
 ## DNF {#_dnf}
 
@@ -93,7 +90,7 @@ DNF stands for Dandified Yum. It is the default package manager
 packages from official and third-party software repositories (online
 storage locations for software).
 
-**Usage:** DNF lets you install native Linux games, game engines,
+&#42;Usage:&#42; DNF lets you install native Linux games, game engines,
 libraries, and utilities that are not available as Flatpaks. It is also
 useful for installing Wine dependencies, performance tools, and emulator
 packages via the terminal. You can find more information in the [Fedora
@@ -106,9 +103,9 @@ hardware of a video game console. It allows games from that console to
 run on a different platform like a Fedora-based PC. See also: [Game Boy
 Emulator](gameboy-emulator.xml)
 
-**Usage:** On Fedora, emulators such as RetroArch, PCSX2, and Dolphin
-can be installed via Flatpak or RPM packages. Gamers use them to run
-ROMs (game files) or ISOs (disc images) of console games. You can
+&#42;Usage:&#42; On Fedora, emulators such as RetroArch, PCSX2, and
+Dolphin can be installed via Flatpak or RPM packages. Gamers use them to
+run ROMs (game files) or ISOs (disc images) of console games. You can
 configure input, video, and audio settings to enhance compatibility and
 performance.
 
@@ -118,24 +115,24 @@ Flatpak is a software packaging and distribution format that runs
 applications in isolated containers to ensure compatibility across
 different Linux distributions.
 
-**Usage:** Flatpak is commonly used to install and run emulators, game
-launchers, and indie titles from Flathub-the main Flatpak app store. It
-avoids dependency issues and sandboxes applications for security. You
-can manage Flatpaks via GNOME Software (graphical app store) or the
-command line (flatpak install, flatpak run).
+&#42;Usage:&#42; Flatpak is commonly used to install and run emulators,
+game launchers, and indie titles from Flathub-the main Flatpak app
+store. It avoids dependency issues and sandboxes applications for
+security. You can manage Flatpaks via GNOME Software (graphical app
+store) or the command line (flatpak install, flatpak run).
 
 ## Immutable OS {#_immutable_os}
 
 An immutable Operating system(OS) is a Linux system where the core
 filesystem is read-only. It prevents unintended or unauthorized changes
 to system files and ensures consistency across reboots. Think of it as a
-\"locked down\" system that's harder to break.
+\'locked down\' system that's harder to break.
 
-**Usage:** Fedora gaming variants like Bazzite or Fedora Silverblue use
-an immutable design to enhance system stability and security. Since the
-system is immutable, gamers typically install applications through
-Flatpak or use containerized environments like Distrobox for tools and
-scripts that need system access.
+&#42;Usage:&#42; Fedora gaming variants like Bazzite or Fedora
+Silverblue use an immutable design to enhance system stability and
+security. Since the system is immutable, gamers typically install
+applications through Flatpak or use containerized environments like
+Distrobox for tools and scripts that need system access.
 
 ## Lutris {#_lutris}
 
@@ -145,12 +142,12 @@ native Linux titles, Windows games (via Wine or Proton) and emulators.
 It serves as a unified game launcher that handles the complex setup for
 you.
 
-**Usage:** Lutris simplifies running games by managing different runtime
-environments like different Wine versions, graphics translation layers
-(DXVK), and dependencies (required files). It integrates with platforms
-like GOG, Epic Games, and Steam, and can be installed via RPM Fusion or
-Flathub. Essentially, it does the hard work so you don't have to
-manually configure each game. You can find more information about
+&#42;Usage:&#42; Lutris simplifies running games by managing different
+runtime environments like different Wine versions, graphics translation
+layers (DXVK), and dependencies (required files). It integrates with
+platforms like GOG, Epic Games, and Steam, and can be installed via RPM
+Fusion or Flathub. Essentially, it does the hard work so you don't have
+to manually configure each game. You can find more information about
 [Lutris](https://lutris.net/about) here.
 
 ## NVIDIA Drivers {#_nvidia_drivers}
@@ -160,11 +157,11 @@ including kernel modules (low-level system components) and user-space
 software that enable full hardware acceleration and performance features
 for NVIDIA graphics cards on Linux.
 
-**Usage:** Fedora gamers install NVIDIA drivers from the RPM Fusion
-repository because the default open source Nouveau driver has limited
-performance. These proprietary drivers offer better gaming performance
-and broader game support, and are essential for many gaming setups
-involving Steam, Proton, or Lutris.
+&#42;Usage:&#42; Fedora gamers install NVIDIA drivers from the RPM
+Fusion repository because the default open source Nouveau driver has
+limited performance. These proprietary drivers offer better gaming
+performance and broader game support, and are essential for many gaming
+setups involving Steam, Proton, or Lutris.
 
 ## Proton {#_proton}
 
@@ -173,11 +170,12 @@ Valve that allows Windows games to run on Linux. It combines Wine with
 additional tools like DXVK and Direct3D 12 to Vulkan translator(vkd3d )
 to improve game compatibility.
 
-**Usage:** Proton is built into Steam and can be enabled in the Steam
-Play settings. It lets you run many Windows-exclusive games on Linux
-without manual setup. You can select different Proton versions per game
-for better compatibility. Check ProtonDB to see how well specific games
-work with Proton. [Proton](https://github.com/ValveSoftware/Proton),
+&#42;Usage:&#42; Proton is built into Steam and can be enabled in the
+Steam Play settings. It lets you run many Windows-exclusive games on
+Linux without manual setup. You can select different Proton versions per
+game for better compatibility. Check ProtonDB to see how well specific
+games work with Proton.
+[Proton](https://github.com/ValveSoftware/Proton),
 [ProtonDB](https://www.protondb.com/explore)
 
 ## RPM {#_rpm}
@@ -186,14 +184,14 @@ RPM stands for RPM Package Manager. It is a package format (file type
 for software) and the underlying technology used by Fedora and other Red
 Hat-based distributions to install, upgrade, and manage software.
 
-**Usage:** RPM packages provide access to native tools, libraries, and
-some games via DNF or direct download. You might use RPMs when
+&#42;Usage:&#42; RPM packages provide access to native tools, libraries,
+and some games via DNF or direct download. You might use RPMs when
 installing performance tools, system utilities, or emulators that aren't
 available through Flatpak or Flathub.
 
 ## SIG {#_sig}
 
-\"SIG\" stands for Special Interest Group. These are informal teams
+\'SIG\' stands for Special Interest Group. These are informal teams
 within the Fedora Project that focus on specific areas of interest, like
 gaming, security, or documentation. The Fedora Games SIG works on
 improving gaming support in Fedora, so they're the people making Linux
@@ -205,9 +203,9 @@ Steam is a digital distribution platform (online game store) developed
 by Valve. It provides access to a large library of games, as well as
 features like multiplayer gaming, game streaming, and mod support.
 
-**Usage:** On Linux, Steam uses Proton to run Windows-based games that
-don't have native Linux versions. Steam can be installed via RPM Fusion
-(recommended) or Flatpak. It is your main gateway to playing both
+&#42;Usage:&#42; On Linux, Steam uses Proton to run Windows-based games
+that don't have native Linux versions. Steam can be installed via RPM
+Fusion (recommended) or Flatpak. It is your main gateway to playing both
 Linux-native games and Windows games (through Proton). You can configure
 graphical settings, performance options, and controllers through the
 Steam client.
@@ -219,22 +217,22 @@ replaces the traditional X11 system. It provides a simpler, secure, and
 efficient way for your desktop environment to communicate with
 applications and your graphics card.
 
-**Usage:** On Fedora, Wayland is the default session and works well with
-most games. Games run either natively under Wayland (via toolkits like
-SDL2 or Qt) or through XWayland for compatibility. The benefits include
-reduced input latency (faster response), better frame pacing (smoother
-gameplay), and stricter security isolation.
+&#42;Usage:&#42; On Fedora, Wayland is the default session and works
+well with most games. Games run either natively under Wayland (via
+toolkits like SDL2 or Qt) or through XWayland for compatibility. The
+benefits include reduced input latency (faster response), better frame
+pacing (smoother gameplay), and stricter security isolation.
 
 ## Wine {#_wine}
 
 Wine is a compatibility layer (translation software) that enables
 Windows applications and games to run on Linux by translating Windows
 system calls (requests to the operating system) into POSIX-compliant
-calls (Linux-compatible requests). Wine stands for \"Wine Is Not an
-Emulator\" - it translates rather than emulates.
+calls (Linux-compatible requests). Wine stands for \'Wine Is Not an
+Emulator\' - it translates rather than emulates.
 
-**Usage:** Wine can be installed via DNF or used within platforms like
-Lutris to manage game-specific configurations. It allows you to run
+&#42;Usage:&#42; Wine can be installed via DNF or used within platforms
+like Lutris to manage game-specific configurations. It allows you to run
 Windows games that don't have Linux versions, though setup sometimes
 requires additional tweaks like DLL overrides (replacing Windows system
 files) or installing runtime dependencies (required Windows components).
@@ -251,13 +249,15 @@ X11 (also called X Window System) is a display server protocol
 managing graphical user interfaces on Unix-like operating systems,
 including Linux.
 
-**Usage:** Although Fedora and other distributions are transitioning to
-Wayland as the default, X11 is still widely used for gaming and
-applications that require compatibility. Many games, especially older
-ones, continue to rely on X11 for display rendering. Some gaming tools
-or environments may not yet fully support Wayland, so you might need to
-switch to an X11 session for certain games or applications. = Frequently
-Asked Questions (FAQ)
+&#42;Usage:&#42; Although Fedora and other distributions are
+transitioning to Wayland as the default, X11 is still widely used for
+gaming and applications that require compatibility. Many games,
+especially older ones, continue to rely on X11 for display rendering.
+Some gaming tools or environments may not yet fully support Wayland, so
+you might need to switch to an X11 session for certain games or
+applications.
+
+# Frequently Asked Questions (FAQ) {#_frequently_asked_questions_faq}
 
 **Q:** Can I see a built preview of this template to get a better idea
 about the result?
@@ -384,9 +384,11 @@ not.
 
 ## Open-Source Games {#_open_source_games}
 
-There are many excellent open-source games as well! Try running
-`dnf groupinfo “Games”` or checking out [Flathub's games
-list](https://flathub.org/en/apps/category/game/1). = Steam Installation
+There are many excellent open-source games as well! Try running &#96;dnf
+groupinfo "Games"&#96; or checking out [Flathub's games
+list](https://flathub.org/en/apps/category/game/1).
+
+# Steam Installation {#_steam_installation}
 
 :::: note
 ::: title
@@ -399,18 +401,18 @@ This will require enabling an external repository.
 ::: title
 :::
 
-If you enabled \"Third Party Software\" (`rpmfusion Nonfree`) at
+If you enabled \'Third Party Software\' (&#96;rpmfusion Nonfree&#96;) at
 installation you can skip to installing Steam.
 ::::
 
 ## Using the terminal {#_using_the_terminal}
 
-### Enabling the external repository (`rpmfusion Nonfree`) {#_enabling_the_external_repository_rpmfusion_nonfree}
+### Enabling the external repository (&#96;rpmfusion Nonfree&#96;) {#_enabling_the_external_repository_96rpmfusion_nonfree96}
 
-- Launch The terminal prompt of your choice
+&#42; Launch The terminal prompt of your choice
 
-- Run the following command with a user that has root acess or can use
-  the `sudo` command
+&#42; Run the following command with a user that has root acess or can
+use the &#96;sudo&#96; command
 
 ``` bash
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
@@ -428,36 +430,35 @@ sudo dnf config-manager --enable fedora-cisco-openh264 -y
 
 ### Installing Steam {#_installing_steam}
 
-- Run the following command with a user that has root acess or can use
-  the `sudo` command
+&#42; Run the following command with a user that has root acess or can
+use the &#96;sudo&#96; command
 
 ``` bash
 sudo dnf install steam -y
 ```
 
-## Using `Software` GUI Package Manager {#_using_software_gui_package_manager}
+## Using &#96;Software&#96; GUI Package Manager {#_using_96software96_gui_package_manager}
 
 Open Software under the Activities in the top left corner.
 
 ![Software](software.png)
 
-### Enabling the external repository (`rpmfusion Nonfree`) {#_enabling_the_external_repository_rpmfusion_nonfree_2}
+### Enabling the external repository (&#96;rpmfusion Nonfree&#96;) {#_enabling_the_external_repository_96rpmfusion_nonfree96_2}
 
-- Click the Menu Button (☰) on upper right corner and choose Software
-  Repositories. (Circled red for visual aide)
+&#42; Click the Menu Button (☰) on upper right corner and choose
+Software Repositories. (Circled red for visual aide)
 
 ![800](hamburger.png)
 
-- Scroll down to the bottom of the new window till you see "Fedora Third
-  Party Repositories".
+&#42; Scroll down to the bottom of the new window till you see "Fedora
+Third Party Repositories".
 
 ![800](repos.png)
 
-- Enable \"RPM Fusion for Fedora XX - Nonfree - Steam\".
+&#42; Enable \'RPM Fusion for Fedora XX - Nonfree - Steam\'. &#42; Close
+the window.
 
-- Close the window.
-
-- Click on the upper left corner (search icon).
+&#42; Click on the upper left corner (search icon).
 
 ![800](search.png)
 
@@ -470,11 +471,11 @@ Open Software under the Activities in the top left corner.
 Following installation requires you to be online.
 ::::
 
-- Search for Steam and install it.
+&#42; Search for Steam and install it.
 
 ![800](steam.png)
 
-- Launch Steam.
+&#42; Launch Steam.
 
 ## Installing Steam on Atomic Desktops {#_installing_steam_on_atomic_desktops}
 
@@ -482,27 +483,27 @@ Following installation requires you to be online.
 ::: title
 :::
 
-If you enabled \"Third Party Software\" (`rpmfusion Nonfree`) at
+If you enabled \'Third Party Software\' (&#96;rpmfusion Nonfree&#96;) at
 installation you can skip to installing Steam.
 ::::
 
-### Enabling the external repository (`rpmfusion Nonfree`) {#_enabling_the_external_repository_rpmfusion_nonfree_3}
+### Enabling the external repository (&#96;rpmfusion Nonfree&#96;) {#_enabling_the_external_repository_96rpmfusion_nonfree96_3}
 
-- Launch The terminal prompt of your choice
+&#42; Launch The terminal prompt of your choice
 
-- Run the following command with a user that has root acess or can use
-  the `sudo` command
+&#42; Run the following command with a user that has root acess or can
+use the &#96;sudo&#96; command
 
 ``` bash
 rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 ```
 
-- Reboot the system to apply the changes
+&#42; Reboot the system to apply the changes
 
-- Also run the following command to remove the "lock" on the versioned
-  packages that were installed previously. This will enable the RPM
-  Fusion repos to be automatically updated and versioned correctly
-  across major Fedora version rebases:
+&#42; Also run the following command to remove the "lock" on the
+versioned packages that were installed previously. This will enable the
+RPM Fusion repos to be automatically updated and versioned correctly
+across major Fedora version rebases:
 
 ``` bash
 rpm-ostree update \
@@ -518,21 +519,21 @@ on Fedora Discussion.
 
 ### Installing Steam {#_installing_steam_3}
 
-- Run the following command with a user that has root acess or can use
-  the `sudo` command
+&#42; Run the following command with a user that has root acess or can
+use the &#96;sudo&#96; command
 
 ``` bash
 rpm-ostree install steam
 ```
 
-- Reboot once again to apply changes
+&#42; Reboot once again to apply changes
 
 :::: note
 ::: title
 :::
 
-you can append `--apply-live` at the end of the command above to not
-need a reboot
+you can append &#96;\--apply-live&#96; at the end of the command above
+to not need a reboot
 ::::
 
 ### Troubleshooting {#_troubleshooting}
@@ -551,15 +552,9 @@ __GL_CONSTANT_FRAME_RATE_HINT=3 steam
 Games that have linux native versions are sometimes poorly maintained.
 You can force Steam to use Proton in such cases.
 
-- Right-click the game in your library
-
-- Open Properties
-
-- Click Compatibility
-
-- Check Force the use of a specific Steam Play compatibility tool
-
-- Select your desired Proton version
+&#42; Right-click the game in your library &#42; Open Properties &#42;
+Click Compatibility &#42; Check Force the use of a specific Steam Play
+compatibility tool &#42; Select your desired Proton version
 
 ![800](force_proton.png)
 
@@ -586,16 +581,13 @@ library (unless it has a linux native version). Only follow this section
 if you have problems, or want to change Proton versions
 ::::
 
-- Open Steam and click Steam on the menu bar (upper left corner) and
-  click Settings.
+&#42; Open Steam and click Steam on the menu bar (upper left corner) and
+click Settings.
 
 ![800](settings.png)
 
-- Click Compatibility.
-
-- Click on the dropdown menu to change to your desired Proton version
-
-- Close the window
+&#42; Click Compatibility. &#42; Click on the dropdown menu to change to
+your desired Proton version &#42; Close the window
 
 ![800](steam_play.png)
 
@@ -625,11 +617,11 @@ Generic instructions on installations can be found
 On Gnome:
 
 From *Activities* menu choose *software* and search for:
-**VisualBoyAdvance-M**
+&#42;VisualBoyAdvance-M&#42;
 
-Choose **install**
+Choose &#42;install&#42;
 
-You can then find the program as **VBA-M** on your desktop (and
+You can then find the program as &#42;VBA-M&#42; on your desktop (and
 alternatively under *Applications .. Games*, if you have applications
 menu enabled).
 
@@ -646,10 +638,12 @@ From VBA-M choose file .. Open .. gba-file
 You can choose (and verify) your game-keys from: Options .. Input ..
 Configure
 
-# Optimization & Tools {#_optimization_tools}
+# Optimization &amp; Tools {#_optimization_amp_tools}
 
 Below you can find dedicated articles for more complex topic, that may
-be required for you to fully enjoy gaming under Fedora OS. = Controllers
+be required for you to fully enjoy gaming under Fedora OS.
+
+# Controllers {#_controllers}
 
 This guide explains how to connect PlayStation, Xbox, and Nintendo
 Switch controllers to Fedora for gaming. You'll learn to pair
@@ -667,10 +661,10 @@ games.
 
 Controllers can be connected in two main ways:
 
-- **Wired(USB)**: Using a USB cable to connect the controller directly
-  to your computer.
+&#42; &#42;Wired(USB)&#42;: Using a USB cable to connect the controller
+directly to your computer.
 
-- **Wireless(Bluetooth)**: Requires pairing and configuration.
+&#42; &#42;Wireless(Bluetooth)&#42;: Requires pairing and configuration.
 
 ## Playstation Controllers {#_playstation_controllers}
 
@@ -692,55 +686,54 @@ input lag.
 ::::
 
 The guide below recommends connecting your controller using the
-`bluetoothctl` tool in the terminal. While you can still try to connect
-using the graphical Bluetooth manager, the method described below is
-suggested, as it is generally more stable.
+&#96;bluetoothctl&#96; tool in the terminal. While you can still try to
+connect using the graphical Bluetooth manager, the method described
+below is suggested, as it is generally more stable.
 
 1.  Open your terminal
 
-2.  Run the `bluetoothctl` command and confirm that you see
-    `[bluetoothctl]>` at the beginning of the new line. This means you
-    are now using the bluetoothctl application.
+2.  Run the &#96;bluetoothctl&#96; command and confirm that you see
+    &#96;\[bluetoothctl\]&gt;&#96; at the beginning of the new line.
+    This means you are now using the bluetoothctl application.
 
-3.  Type `scan on` and press Enter to search for new devices.
+3.  Type &#96;scan on&#96; and press Enter to search for new devices.
 
 4.  Put your DualSense 5 controller into pairing mode:
 
-    - Press and hold the PlayStation button and the Share button (the
-      smaller button on the top left side of the touchpad)
-      simultaneously for a few seconds.
+&#42; Press and hold the PlayStation button and the Share button (the
+smaller button on the top left side of the touchpad) simultaneously for
+a few seconds. &#42; The sides of the touchpad will blink quickly with a
+blue light, indicating that pairing mode is enabled.
 
-    - The sides of the touchpad will blink quickly with a blue light,
-      indicating that pairing mode is enabled.
-
-5.  Wait for the terminal to display your DualSense controller with its
+1.  Wait for the terminal to display your DualSense controller with its
     MAC address, for example:
 
         [NEW] Device [MAC-ADDRESS] DualSense Wireless Controller
 
-6.  Start pairing by providing \[MAC-ADDRESS\] to the `pair` command:
+2.  Start pairing by providing \[MAC-ADDRESS\] to the &#96;pair&#96;
+    command:
 
-        [bluetoothctl]> pair [MAC-ADDRESS]
+        [bluetoothctl]\&gt;_pair_[MAC-ADDRESS]
 
-7.  After pairing has been completed, enter the following command to
+3.  After pairing has been completed, enter the following command to
     connect to the DualSense 5 controller:
 
-        [bluetoothctl]> connect [MAC-ADDRESS]
+        [bluetoothctl]\&gt;_connect_[MAC-ADDRESS]
 
 ##### Troubleshooting {#_troubleshooting_2}
 
-**Problem 1:** I am unable to use the controller with the method
+&#42;Problem 1:&#42; I am unable to use the controller with the method
 described above.
 
-**Solution:** Before pairing the DualSense 5 controller via Bluetooth,
-you may need to adjust the human interface device(HID ) protocol
-handling in the `/etc/bluetooth/input.conf` file.
+&#42;Solution:&#42; Before pairing the DualSense 5 controller via
+Bluetooth, you may need to adjust the human interface device(HID )
+protocol handling in the &#96;/etc/bluetooth/input.conf&#96; file.
 
 Steps:
 
 1.  Find following line:
 
-        #UserspaceHID=true
+        \&#35;UserspaceHID=true
 
 2.  Change it to::
 
@@ -764,62 +757,59 @@ USB cable.
 
 1.  Turn on your Xbox Wireless Controller.
 
-2.  Press the **Pair** button located at the back of the controller. The
-    Xbox logo on the controller should start blinking rapidly, which
-    implies that pairing mode has been enabled.
+2.  Press the &#42;Pair&#42; button located at the back of the
+    controller. The Xbox logo on the controller should start blinking
+    rapidly, which implies that pairing mode has been enabled.
 
 3.  Go to the Bluetooth settings on your operating system.
 
-4.  Select **Xbox Wireless Controller** from the list. If you don't see
-    it, ensure pairing mode is enabled and use the \"Search\" option to
-    refresh the list of available Bluetooth devices.
+4.  Select &#42;Xbox Wireless Controller&#42; from the list. If you
+    don't see it, ensure pairing mode is enabled and use the \'Search\'
+    option to refresh the list of available Bluetooth devices.
 
 5.  Accept the pairing request to connect your controller via Bluetooth.
 
 ##### Troubleshooting {#_troubleshooting_3}
 
-**Problem 1:** I am unable to pair my controller via Bluetooth.
+&#42;Problem 1:&#42; I am unable to pair my controller via Bluetooth.
 
-**Solution**
+&#42;Solution&#42;
 
 1.  Install Xbox Controller Driver You need to install additional Xbox
     Controller driver, available at repository
     [xpadneo](https://github.com/atar-axis/xpadneo). WARNING: The
     software mentioned below is maintained by a third party and is not
-    related to Fedora. You are installing it at your own risk.
+    related to Fedora. You are installing it at your own risk. &#42; Use
+    the Copr repository to install the driver:
 
-    - Use the Copr repository to install the driver:
+    ``` bash
+    dnf copr enable atim/xpadneo
+    dnf install xpadneo
+    ```
 
-      ``` bash
-      dnf copr enable atim/xpadneo
-      dnf install xpadneo
-      ```
+2.  Edit Bluetooth Configuration &#42; Open the Bluetooth configuration
+    file (elevated access required):
 
-2.  Edit Bluetooth Configuration
+    ``` bash
+    sudo nano /etc/bluetooth/main.conf
+    ```
 
-    - Open the Bluetooth configuration file (elevated access required):
+    &#42; Find the following line:
 
-      ``` bash
-      sudo nano /etc/bluetooth/main.conf
-      ```
+        \&#35;FastConnectable = false
 
-    - Find the following line:
+    Uncomment this line and replace &#96;false&#96; with &#96;true&#96;:
 
-          #FastConnectable = false
-
-      Uncomment this line and replace `false` with `true`:
-
-          FastConnectable = true
+        FastConnectable = true
 
 3.  Reboot and Test
 
-    - Reboot your machine after installation.
+&#42; Reboot your machine after installation. &#42; Try to pair your
+controller again.
 
-    - Try to pair your controller again.
+&#42;Problem 2:&#42; My controller disconnects after several seconds.
 
-**Problem 2:** My controller disconnects after several seconds.
-
-**Solution:**
+&#42;Solution:&#42;
 
 1.  Install the xpadneo driver from the previous section may resolve
     this issue.
@@ -827,11 +817,9 @@ USB cable.
 2.  You need to update your controller's firmware version. You can do
     this either:
 
-    - Via Xbox console, or
-
-    - Through the Microsoft Windows [Xbox
-      Accessories](https://apps.microsoft.com/detail/9nblggh30xj3?hl=en-US&gl=US)
-      application
+&#42; Via Xbox console, or &#42; Through the Microsoft Windows [Xbox
+Accessories](https://apps.microsoft.com/detail/9nblggh30xj3?hl=en-US&amp;gl=US)
+application
 
 :::: note
 ::: title
@@ -861,47 +849,49 @@ input lag.
 ::::
 
 The guide below recommends connecting your controller via
-`bluetoothctl`. While you can still try to connect via a dedicated GUI
-Bluetooth manager, the method described below is recommended because it
-is more stable.
+&#96;bluetoothctl&#96;. While you can still try to connect via a
+dedicated GUI Bluetooth manager, the method described below is
+recommended because it is more stable.
 
 1.  Open your terminal
 
 2.  Run the bluetoothctl command and confirm that you see
-    `[bluetoothctl]>` at the beginning of the new line. This means you
-    are using the bluetoothctl application.
+    &#96;\[bluetoothctl\]&gt;&#96; at the beginning of the new line.
+    This means you are using the bluetoothctl application.
 
 3.  Put your Nintendo Switch Pro controller into pairing mode:
 
-    - Press and hold the PlayStation button and the Share button (the
-      smaller button on the top left side of the touchpad)
-      simultaneously for a few seconds.
+&#42; Press and hold the PlayStation button and the Share button (the
+smaller button on the top left side of the touchpad) simultaneously for
+a few seconds.
 
-    - The sides of the touchpad will blink quickly with a blue light,
-      indicating that pairing mode is enabled.
+&#42; The sides of the touchpad will blink quickly with a blue light,
+indicating that pairing mode is enabled.
 
-4.  Type `scan on` and press **Enter** to search for new devices.
+1.  Type &#96;scan on&#96; and press &#42;Enter&#42; to search for new
+    devices.
 
-5.  Wait for the terminal to display your Nintendo Pro controller with
+2.  Wait for the terminal to display your Nintendo Pro controller with
     its MAC address, for example:
 
         [NEW] Device [MAC-ADDRESS] Pro Controller
 
-6.  Start pairing by providing \`\[MAC-ADDRESS\]\`to the pair command:
+3.  Start pairing by providing &#96;\[MAC-ADDRESS\]&#96;to the pair
+    command:
 
-        [bluetoothctl]> pair [MAC-ADDRESS]
+        [bluetoothctl]\&gt;_pair_[MAC-ADDRESS]
 
-7.  After pairing has been completed, enter the following command to
+4.  After pairing has been completed, enter the following command to
     connect to the Nintendo Switch Pro controller:
 
-        [bluetoothctl]> connect [MAC-ADDRESS]
+        [bluetoothctl]\&gt;_connect_[MAC-ADDRESS]
 
 ##### Troubleshooting {#_troubleshooting_4}
 
-**Problem 1:** I am unable to use the controller using the method
+&#42;Problem 1:&#42; I am unable to use the controller using the method
 described above
 
-**Solution:** Configure HID Protocol Handling
+&#42;Solution:&#42; Configure HID Protocol Handling
 
 Before trying to pair your Nintendo Switch Pro controller via Bluetooth,
 you need to change the HID protocol handling in the
@@ -917,7 +907,7 @@ Steps:
 
 2.  Find the following line:
 
-        #UserspaceHID=true
+        \&#35;UserspaceHID=true
 
 3.  Change it to:
 
@@ -928,8 +918,9 @@ Steps:
 ### Other controllers {#_other_controllers}
 
 Support may vary based on controller - please look into community boards
-for information, if your controller will be supported. = Performance
-Monitoring
+for information, if your controller will be supported.
+
+# Performance Monitoring {#_performance_monitoring}
 
 :::: note
 ::: title
@@ -967,9 +958,9 @@ using your favorite terminal with the following steps:
     as you type).
 
 3.  Review the list of packages to be installed. You should see both
-    `mangohud.i686` and `mangohud.x86_64`.
+    &#96;mangohud.i686&#96; and &#96;mangohud.x86_64&#96;.
 
-4.  Type `Y` and press `Enter` to confirm.
+4.  Type &#96;Y&#96; and press &#96;Enter&#96; to confirm.
 
 5.  Wait for the installation to complete --- and you're done! MangoHUD
     is ready to use.
@@ -986,10 +977,9 @@ as GNOME Software and KDE Discover.
 When searching for MangoHUD in a graphical package manager, you may see
 two versions:
 
-- **Fedora (Linux)**: Installs MangoHUD system-wide, but does not
-  support Flatpak apps.
-
-- **Flatpak**: Works only with Flatpak applications.
+&#42; &#42;&#42;Fedora (Linux)&#42;&#42;: Installs MangoHUD system-wide,
+but does not support Flatpak apps. &#42; &#42;&#42;Flatpak&#42;&#42;:
+Works only with Flatpak applications.
 
 Install the one that matches your use case --- or both if you want full
 compatibility.
@@ -1025,8 +1015,8 @@ Here are some default keyboard combos to control MangoHUD while in-game:
 
 #### Testing {#_testing}
 
-To confirm MangoHUD is working, you can test it with `glxgears` (usually
-preinstalled on Fedora). Run:
+To confirm MangoHUD is working, you can test it with &#96;glxgears&#96;
+(usually preinstalled on Fedora). Run:
 
 ``` bash
 mangohud glxgears
@@ -1039,11 +1029,11 @@ You should see a performance overlay at the top of the window.
 To enable MangoHUD in your Steam games:
 
 1.  Right-click the game in your Steam library and select
-    **Properties**.
+    &#42;Properties&#42;.
 
     ![steam game properties](steam_game_properties.png)
 
-2.  Under **Launch Options**, enter the following:
+2.  Under &#42;Launch Options&#42;, enter the following:
 
     ![800](steam_mangohud.png)
 
@@ -1056,15 +1046,15 @@ To enable MangoHUD in your Steam games:
 :::
 
 MangoHUD does not automatically show up. Use the default key combo
-`R-SHIFT + F12` to toggle the overlay in-game.
+&#96;R-SHIFT + F12&#96; to toggle the overlay in-game.
 ::::
 
 :::: tip
 ::: title
 :::
 
-If you're using `gamemode` in Steam, you can combine launch options like
-this:
+If you're using &#96;gamemode&#96; in Steam, you can combine launch
+options like this:
 
     mangohud gamemoderun %command%
 ::::
@@ -1075,27 +1065,27 @@ this:
 
 ![goverlay](goverlay.png)
 
-You can customize MangoHUD's overlay using **GOverlay**, a graphical
-front-end for MangoHUD. It allows you to preview and tweak the layout,
-enable/disable metrics, and change keyboard shortcuts.
+You can customize MangoHUD's overlay using &#42;GOverlay&#42;, a
+graphical front-end for MangoHUD. It allows you to preview and tweak the
+layout, enable/disable metrics, and change keyboard shortcuts.
 
-**Installation**
+&#42;Installation&#42;
 
 GOverlay is available in the Fedora repository. Installation can be done
 either by using Graphical Package Manager or using the terminal.
 
-**Graphical Installation**
+&#42;Graphical Installation&#42;
 
 1.  Open your Graphical Package Manager (Gnome Software or KDE Discover)
 
-2.  Search for the package \"GOverlay\"
+2.  Search for the package \'GOverlay\'
 
 3.  Click install.
 
-4.  Once installation is finish, launch **GOverlay** from your
+4.  Once installation is finish, launch &#42;GOverlay&#42; from your
     Application Menu to start customizing MANGOHUD to your preference.
 
-**Terminal Installation**
+&#42;Terminal Installation&#42;
 
 1.  Open your terminal
 
@@ -1105,8 +1095,8 @@ either by using Graphical Package Manager or using the terminal.
     sudo dnf install goverlay -y
     ```
 
-3.  Once installation finish, launch **GOverlay** from your Application
-    Menu to start customizing MANGOHUD to your preference.
+3.  Once installation finish, launch &#42;GOverlay&#42; from your
+    Application Menu to start customizing MANGOHUD to your preference.
 
 #### Configuring MANGOHUD Manually {#_configuring_mangohud_manually}
 
@@ -1158,29 +1148,21 @@ used by default on Valve's Steam Deck.
 Here are some of the well-known features of Gamescope tailored for
 gaming:
 
-- Resolution spoofing to force a game to run at a specific resolution
-  and/or aspect ratio for example, 4:3 screen ratio stretch
-
-- Upscaling support regardless of native game support, including AMD
-  fidelityFX super resolution (FSR) or NVIDIA Image Scaling (NIS)
-
-- ReShade support
-
-- HDR rendering support
-
-- Frame limiter (useful for games without a built-in frame limiter)
+&#42; Resolution spoofing to force a game to run at a specific
+resolution and/or aspect ratio for example, 4:3 screen ratio stretch
+&#42; Upscaling support regardless of native game support, including AMD
+fidelityFX super resolution (FSR) or NVIDIA Image Scaling (NIS) &#42;
+ReShade support &#42; HDR rendering support &#42; Frame limiter (useful
+for games without a built-in frame limiter)
 
 ### Requirements {#_requirements}
 
 To use Gamescope without issues, ensure the following requirements are
 met based on your GPU:
 
-- AMD: Mesa 20.3 or newer
-
-- Intel: Mesa 21.2 or newer
-
-- NVIDIA: Proprietary drivers 515.43.04 or newer, or NVIDIA Open Kernel
-  Module drivers
+&#42; AMD: Mesa 20.3 or newer &#42; Intel: Mesa 21.2 or newer &#42;
+NVIDIA: Proprietary drivers 515.43.04 or newer, or NVIDIA Open Kernel
+Module drivers
 
 :::: important
 ::: title
@@ -1225,8 +1207,8 @@ flatpak install gamescope
 
 ## Usage {#_usage}
 
-To run games with Gamescope, you need to prepend `gamescope` to the
-game's launch command. For example, when launching from Steam:
+To run games with Gamescope, you need to prepend &#96;gamescope&#96; to
+the game's launch command. For example, when launching from Steam:
 
     gamescope -- %command%
 
@@ -1239,29 +1221,38 @@ gamescope --help
 
 Here are a few commonly used launch options:
 
-- Run a game at 1920x1080 resolution fixed at 60Hz refresh rate:
+&#42; Run a game at 1920x1080 resolution fixed at 60Hz refresh rate:
 
-      gamescope -W 1920 -H 1080 -r 60 -- %command%
+\+
 
-- Run a game with FSR upscaling from 720p to 1440p:
+    gamescope -W 1920 -H 1080 -r 60 -- %command%
 
-      gamescope -h 720 -H 1440 -F fsr -- %command%
+&#42; Run a game with FSR upscaling from 720p to 1440p:
+
+\+
+
+    gamescope -h 720 -H 1440 -F fsr -- %command%
 
 :::: note
 ::: title
 :::
 
 Gamescope supports both AMD FSR and NVIDIA Image Scaling (NIS). You can
-switch `-F fsr` to `-F nis` if you prefer to use NIS as the upscaler.
+switch &#96;-F fsr&#96; to &#96;-F nis&#96; if you prefer to use NIS as
+the upscaler.
 ::::
 
-- Enable HDR rendering (requires compatible game and display):
+&#42; Enable HDR rendering (requires compatible game and display):
 
-      gamescope --hdr-enabled -- %command%
+\+
 
-- Enable variable refresh rate (VRR) on supported displays:
+    gamescope --hdr-enabled -- %command%
 
-      gamescope --adaptive-sync -- %command%
+&#42; Enable variable refresh rate (VRR) on supported displays:
+
+\+
+
+    gamescope --adaptive-sync -- %command%
 
 :::: tip
 ::: title
@@ -1269,7 +1260,7 @@ switch `-F fsr` to `-F nis` if you prefer to use NIS as the upscaler.
 
 You can combine multiple options depending on your use case. It is
 strongly recommended to read the available options and their usage by
-running `gamescope --help` in your terminal.
+running &#96;gamescope \--help&#96; in your terminal.
 ::::
 
 # NVIDIA GPU Driver Installation {#_nvidia_gpu_driver_installation}
@@ -1294,19 +1285,19 @@ This will require enabling an external repository.
 ::: title
 :::
 
-If you enabled \"Third Party Software\" (`rpmfusion Nonfree`) at
+If you enabled \'Third Party Software\' (&#96;rpmfusion Nonfree&#96;) at
 installation you can skip to Installing.
 ::::
 
 To game effectively when you have an NVIDIA graphics card, it is
 necessary for you to install the drivers first
 
-## Enabling the external repository (`rpmfusion Nonfree`) {#_enabling_the_external_repository_rpmfusion_nonfree_4}
+## Enabling the external repository (&#96;rpmfusion Nonfree&#96;) {#_enabling_the_external_repository_96rpmfusion_nonfree96_4}
 
-- Launch The terminal prompt of your choice
+&#42; Launch The terminal prompt of your choice
 
-- Run the following command with a user that has root acess or can use
-  the `sudo` command
+&#42; Run the following command with a user that has root acess or can
+use the &#96;sudo&#96; command
 
 ``` bash
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y
@@ -1314,8 +1305,8 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 
 ## Installing {#_installing}
 
-- Run the following command with a user that has root acess or can use
-  the `sudo` command
+&#42; Run the following command with a user that has root acess or can
+use the &#96;sudo&#96; command
 
 ``` bash
 sudo dnf install akmod-nvidia -y
@@ -1329,7 +1320,7 @@ It is important to wait a few minutes for the driver to build properly
 before rebooting
 ::::
 
-- Reboot your system to load the driver
+&#42; Reboot your system to load the driver
 
 # GPU Overclocking {#_gpu_overclocking}
 
@@ -1363,7 +1354,7 @@ The AMD GPU driver is built into the Linux kernel and comes preinstalled
 with every Fedora installation. However, advanced features such as clock
 and voltage adjustment are disabled by default. To enable these
 features, you need to add the following kernel parameter:
-`amdgpu.ppfeaturemask=0xffffffff` This setting unlocks access to
+&#96;amdgpu.ppfeaturemask=0xffffffff&#96; This setting unlocks access to
 performance tuning capabilities such as manual clock and voltage
 adjustments. Use the following command to add the kernel parameter.
 
@@ -1389,8 +1380,8 @@ GPU overclocking:
 
 2.  LACT - <https://github.com/ilya-zlobintsev/LACT>
 
-This guide will use **LACT** as the primary example for demonstrating
-the basic overclocking procedure.
+This guide will use &#42;LACT&#42; as the primary example for
+demonstrating the basic overclocking procedure.
 
 :::: note
 ::: title
@@ -1435,7 +1426,7 @@ Below is a basic rundown of the steps required to install LACT:
     sudo dnf install lact
     ```
 
-4.  Enable the LACT service using `systemctl`:
+4.  Enable the LACT service using &#96;systemctl&#96;:
 
     ``` bash
     sudo systemctl enable --now lactd
@@ -1454,7 +1445,7 @@ performance levels and AMDGPU power profiles. Below is a basic
 explanation of AMD performance levels and power profiles, along with
 what they are used for.
 
-**Performance Levels**
+&#42;Performance Levels&#42;
 
 +-----------------------------------+-----------------------------------+
 | Performance Level                 | Description                       |
@@ -1478,7 +1469,7 @@ what they are used for.
 |                                   | table below.                      |
 +-----------------------------------+-----------------------------------+
 
-**Power Profiles**
+&#42;Power Profiles&#42;
 
 +-----------------------------------+-----------------------------------+
 | Power Profile                     | Description                       |
@@ -1524,30 +1515,32 @@ crashes or hardware damage.
     real-time stats such as temperature, clocks, voltage, and power
     draw.
 
-3.  Navigate to the **OC** section. This is where you can adjust the
-    following parameters:
+3.  Navigate to the &#42;OC&#42; section. This is where you can adjust
+    the following parameters:
 
-    - `Maximum GPU Clock (MHz)`: Maximum targeted GPU core clock speed
+    - &#96;Maximum GPU Clock (MHz)&#96;: Maximum targeted GPU core clock
+      speed in MHz
+
+    - &#96;Maximum GPU Voltage (mV)&#96;: Maximum GPU core voltage in
+      milivolt
+
+    - &#96;Maximum VRAM Clock (MHz)&#96;: Maximum GPU Memory clock speed
       in MHz
-
-    - `Maximum GPU Voltage (mV)`: Maximum GPU core voltage in milivolt
-
-    - `Maximum VRAM Clock (MHz)`: Maximum GPU Memory clock speed in MHz
 
 4.  Start by increasing the GPU clock by a small increment (e.g., +25
     MHz) and apply the settings. Do the same with the memory clock if
     needed.
 
-5.  Apply the changes by clicking the **Apply** button. The new values
-    will take effect immediately.
+5.  Apply the changes by clicking the &#42;Apply&#42; button. The new
+    values will take effect immediately.
 
 6.  Monitor your system for stability by running a game or benchmark. If
     the system is stable, you can try increasing the clocks slightly
     more. If it crashes or shows artifacts, dial back the settings.
 
-7.  Optionally, go to the **Power Profile** section and set the profile
-    to `3D_FULLSCREEN` for gaming, or `COMPUTE` if you're doing
-    compute-heavy workloads.
+7.  Optionally, go to the &#42;Power Profile&#42; section and set the
+    profile to &#96;3D_FULLSCREEN&#96; for gaming, or &#96;COMPUTE&#96;
+    if you're doing compute-heavy workloads.
 
 8.  Once you find stable settings, you can save them as a profile in
     LACT for easy reuse.
@@ -1556,8 +1549,8 @@ crashes or hardware damage.
 ::: title
 :::
 
-LACT applies settings only when the daemon (`lactd`) is running. To
-persist settings across reboots, make sure the service is enabled and
+LACT applies settings only when the daemon (&#96;lactd&#96;) is running.
+To persist settings across reboots, make sure the service is enabled and
 your profile is saved.
 ::::
 
@@ -1565,9 +1558,9 @@ your profile is saved.
 ::: title
 :::
 
-You can use tools like `Unigine Superposition`, `Unigine Heaven`, or
-ingame benchmark to test performance and stability after applying
-overclock settings. You can use `mangohud` as detailed
+You can use tools like &#96;Unigine Superposition&#96;, &#96;Unigine
+Heaven&#96;, or ingame benchmark to test performance and stability after
+applying overclock settings. You can use &#96;mangohud&#96; as detailed
 [here](monitoring.xml) to monitor temperature and clock speed.
 ::::
 
@@ -1575,29 +1568,29 @@ overclock settings. You can use `mangohud` as detailed
 
 ![lact fancurve](lact_fancurve.png)
 
-**LACT** also allows users to manually control their GPU fan curves,
-providing finer control over thermal management. Custom fan control can
-help reduce noise or improve cooling depending on workload and
-preference. The AMDGPU driver supports three different fan control
+&#42;LACT&#42; also allows users to manually control their GPU fan
+curves, providing finer control over thermal management. Custom fan
+control can help reduce noise or improve cooling depending on workload
+and preference. The AMDGPU driver supports three different fan control
 modes, described below:
 
-- `Automatic`: The AMDGPU driver automatically adjusts the fan curve
-  according to the default settings defined in the GPU's VBIOS by the
-  manufacturer.
+&#42; &#96;Automatic&#96;: The AMDGPU driver automatically adjusts the
+fan curve according to the default settings defined in the GPU's VBIOS
+by the manufacturer.
 
-- `Curve`: Users can define a custom fan curve based on temperature
-  levels, enabling dynamic fan speed control.
+&#42; &#96;Curve&#96;: Users can define a custom fan curve based on
+temperature levels, enabling dynamic fan speed control.
 
-- `Static`: Sets the fan to run at a fixed RPM, as specified by the
-  user, regardless of GPU temperature.
+&#42; &#96;Static&#96;: Sets the fan to run at a fixed RPM, as specified
+by the user, regardless of GPU temperature.
 
 :::: note
 ::: title
 :::
 
-Enabling either `Curve` or `Static` mode may disable the \"Quiet mode\"
-or \"Zero RPM\" feature on certain GPU models. This means the fan will
-no longer stop spinning at low temperatures.
+Enabling either &#96;Curve&#96; or &#96;Static&#96; mode may disable the
+\'Quiet mode\' or \'Zero RPM\' feature on certain GPU models. This means
+the fan will no longer stop spinning at low temperatures.
 ::::
 
 # Game Development {#_game_development}
@@ -1612,53 +1605,37 @@ provided example that results in a working game on Fedora.
 
 Game development tooling that is available on Linux include
 
-- Gimp
-
-- Inkscape
-
-- Krita
-
-- Synfig
-
-- Blender
-
-- Godot
+&#42; Gimp &#42; Inkscape &#42; Krita &#42; Synfig &#42; Blender &#42;
+Godot
 
 ## Possible Sample Projects {#_possible_sample_projects}
 
-Blender and Godot are fantastic pieces of software. = Gaming Links
+Blender and Godot are fantastic pieces of software.
+
+# Gaming Links {#_gaming_links}
 
 We are currently discussing about games on Fedora
 
 [AlienArena](https://discussion.fedoraproject.org/t/alienarena-7-71-2-release/26310?u=copperi)
-= Gaming News sites
 
-- [Free Gamer](https://freegamer.blogspot.com/)
+# Gaming News sites {#_gaming_news_sites}
 
-- [Libregamewiki](https://libregamewiki.org/)
+&#42; [Free Gamer](https://freegamer.blogspot.com/) &#42;
+[Libregamewiki](https://libregamewiki.org/) &#42; [Linux games at
+MobyGames](https://www.mobygames.com/browse/games/linux/) CONTAINS NON
+FREE SOFTWARE &#42; [1](https://www.linuxgaming.de/) (German with Wiki,
+Forum and News) &#42; [Unixgames Q&amp;A](https://unixgames.org)
 
-- [Linux games at
-  MobyGames](https://www.mobygames.com/browse/games/linux/) CONTAINS NON
-  FREE SOFTWARE
+# Game List References {#_game_list_references}
 
-- [1](https://www.linuxgaming.de/) (German with Wiki, Forum and News)
-
-- [Unixgames Q&A](https://unixgames.org) = Game List References
-
-- [Allegro games](https://www.allegro.cc/) Instructions: genre → listing
-  → show options → \"Source\" to \"yes\" → Apply
-
-- [Debian games](https://packages.debian.org/unstable/games/)
-
-- [First-person
-  shooters](https://openarena.wikia.com/wiki/OtherOpenSourceShooter)
-  with different levels of Freeness
-
-- [Libre game wiki's list of
-  games](https://libregamewiki.org/List_of_games)
-
-- [Linux Gamers\' Game List](https://icculus.org/lgfaq/gamelist.php)
-
-- [List of open source video
-  games](https://en.wikipedia.org/wiki/List_of_open-source_video_games)
-  at Wikipedia
+&#42; [Allegro games](https://www.allegro.cc/) Instructions: genre -&gt;
+listing -&gt; show options -&gt; \'Source\' to \'yes\' -&gt; Apply &#42;
+[Debian games](https://packages.debian.org/unstable/games/) &#42;
+[First-person
+shooters](https://openarena.wikia.com/wiki/OtherOpenSourceShooter) with
+different levels of Freeness &#42; [Libre game wiki's list of
+games](https://libregamewiki.org/List_of_games) &#42; [Linux Gamers\'
+Game List](https://icculus.org/lgfaq/gamelist.php) &#42; [List of open
+source video
+games](https://en.wikipedia.org/wiki/List_of_open-source_video_games) at
+Wikipedia

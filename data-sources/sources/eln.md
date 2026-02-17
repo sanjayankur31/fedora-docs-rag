@@ -7,41 +7,42 @@ Organization and can be viewed
 
 # Responsibilities {#_responsibilities}
 
-- Own the scope and configuration of the `eln` disttag and buildroot
-  (see [ELN Buildroot](buildroot.xml)).
+&#42; Own the scope and configuration of the &#96;eln&#96; disttag and
+buildroot (see [ELN Buildroot](buildroot.xml)).
 
-  - As the project evolves the scope might change. There might be
-    additional features which will be included into the tag or excluded
-    from it.
+&#42;&#42; As the project evolves the scope might change. There might be
+additional features which will be included into the tag or excluded from
+it.
 
-- Define ELN content set
+&#42; Define ELN content set
 
-- Own the configuration of the compose (see [ELN Compose](compose.xml)).
+&#42; Own the configuration of the compose (see [ELN
+Compose](compose.xml)).
 
-- Maintain infrastructure required to build packages and composes.
+&#42; Maintain infrastructure required to build packages and composes.
 
-- Track the status of package builds and composes. Work with Fedora
-  package maintainers to resolve the issues.
+&#42; Track the status of package builds and composes. Work with Fedora
+package maintainers to resolve the issues.
 
-- Keep track of the [RHEL and ELN conditionals](eln-macros.xml) in RPM
-  spec files.
+&#42; Keep track of the [RHEL and ELN conditionals](eln-macros.xml) in
+RPM spec files.
 
-- Investigate compose failures
+&#42; Investigate compose failures
 
-- Own buildroot configuration
+&#42; Own buildroot configuration
 
 # Communication {#_communication}
 
-- Mailing list: Add **\[ELN\]** to the subject of an email to the
-  [devel@ mailing
-  list](https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/)
+&#42; Mailing list: Add &#42;\[ELN\]&#42; to the subject of an email to
+the [devel@ mailing
+list](https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/)
 
-- Matrix Room:
-  [#eln:fedoraproject.org](https://matrix.to/#/#eln:fedoraproject.org)
+&#42; Matrix Room:
+[&#35;eln:fedoraproject.org](https://matrix.to/&#35;/&#35;eln:fedoraproject.org)
 
 ## Issue tracker {#_issue_tracker}
 
-- <https://github.com/fedora-eln/eln/issues>
+&#42; <https://github.com/fedora-eln/eln/issues>
 
 ## Meetings {#_meetings}
 
@@ -51,19 +52,20 @@ listed on the [SIGs calendar](https://calendar.fedoraproject.org/SIGs/).
 
 The meeting agenda will generally be prepared in advance by opening
 tickets on the [issue tracker](https://github.com/fedora-eln/eln/issues)
-and tagging them with the `Meeting` label.
+and tagging them with the &#96;Meeting&#96; label.
 
 # How to Join {#_how_to_join}
 
 Anyone may join the SIG by asking to become a member. If no existing SIG
-member **opposes** that request within a week, they're in. If an
+member &#42;opposes&#42; that request within a week, they're in. If an
 existing SIG member opposes, we will hold a regular vote at the next
 scheduled meeting as described above.
 
-Prospective members may ask to join by filing a \"New Member Request\"
+Prospective members may ask to join by filing a \'New Member Request\'
 ticket on the [issue
-tracker](https://github.com/fedora-eln/eln/issues/new/choose). =
-Frequently Asked Questions =
+tracker](https://github.com/fedora-eln/eln/issues/new/choose).
+
+# Frequently Asked Questions {#_frequently_asked_questions}
 
 Why ELN?
 
@@ -96,9 +98,9 @@ What are the differences between Rawhide and ELN?
     usually built on the same libraries. But there are some [buildroot
     differences](https://docs.fedoraproject.org/en-US/eln/buildroot/) in
     [compiler
-    flags](https://docs.fedoraproject.org/en-US/eln/buildroot/#_compiler_flags_and_other_tweaks)
+    flags](https://docs.fedoraproject.org/en-US/eln/buildroot/&#35;_compiler_flags_and_other_tweaks)
     and [global
-    macros](https://docs.fedoraproject.org/en-US/eln/buildroot/#_distribution_related_macro_definitions)
+    macros](https://docs.fedoraproject.org/en-US/eln/buildroot/&#35;_distribution_related_macro_definitions)
     that can result in build differences.
 
 Note: Many packages have %if fedora / rhel conditionals in their
@@ -149,12 +151,12 @@ There is no browser preinstalled in ELN, what should I do?
     or Firefox RHEL Flatpak by following the [installation guide for
     RHEL
     Flatpaks](https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/administering_the_system_using_the_gnome_desktop_environment/assembly_installing-applications-using-flatpak_administering-the-system-using-the-gnome-desktop-environment).
-    Alternatively, there is a `firefox` RPM in the ELN Extras
-    repository. KDE users may also wish to install `angelfish`,
-    `falkon`, and/or `konqueror` RPMs, except on s390x where they are
-    not available.
+    Alternatively, there is a &#96;firefox&#96; RPM in the ELN Extras
+    repository. KDE users may also wish to install &#96;angelfish&#96;,
+    &#96;falkon&#96;, and/or &#96;konqueror&#96; RPMs, except on s390x
+    where they are not available.
 
-    - Docs
+&#42; Docs
 
 # Fedora ELN deliverables {#_fedora_eln_deliverables}
 
@@ -188,25 +190,28 @@ See also [Compose](compose.xml).
 ## Container image {#_container_image}
 
 As a part of the compose, we build container images which are then
-published to Quay.io image registry under the name `quay.io/fedora/eln`.
+published to Quay.io image registry under the name
+&#96;&#96;quay.io/fedora/eln&#96;&#96;.
 
 To create and use Fedora ELN container, run:
 
-    podman run -it quay.io/fedora/eln
+&#96;&#96;&#96; podman run -it quay.io/fedora/eln &#96;&#96;&#96;
 
 ## Toolbx image {#_toolbx_image}
 
 As a part of the compose, we build
 [Toolbx](https://containertoolbx.org/) images which are then published
-to Quay.io image registry under the name `quay.io/fedora/eln-toolbox`.
+to Quay.io image registry under the name
+&#96;&#96;quay.io/fedora/eln-toolbox&#96;&#96;.
 
 To run Fedora ELN with Toolbx, first create the container:
 
-    toolbox create --image quay.io/fedora/eln-toolbox eln-toolbox
+&#96;&#96;&#96; toolbox create \--image quay.io/fedora/eln-toolbox
+eln-toolbox &#96;&#96;&#96;
 
 Then run:
 
-    toolbox enter eln-toolbox
+&#96;&#96;&#96; toolbox enter eln-toolbox &#96;&#96;&#96;
 
 ## Cloud images {#_cloud_images}
 
@@ -214,8 +219,8 @@ As a part of the compose, we build Cloud images for AWS, Azure, and GCP.
 These are uploaded to each cloud provider on a regular basis as a
 community offering.
 
-To use, search for **ELN** among community images when creating a new
-instance.
+To use, search for &#42;&#42;ELN&#42;&#42; among community images when
+creating a new instance.
 
 ## WSL images {#_wsl_images}
 
@@ -227,10 +232,10 @@ architectures:
 To install and use the first time, download the .wsl image, double-click
 the downloaded file, and follow the prompts in the terminal.
 
-For subsequent usage, launch the **Fedora-ELN** entry in the Start Menu,
-or run in the Command Prompt or PowerShell:
+For subsequent usage, launch the &#42;&#42;Fedora-ELN&#42;&#42; entry in
+the Start Menu, or run in the Command Prompt or PowerShell:
 
-    wsl -d Fedora-ELN
+&#96;&#96;&#96; wsl -d Fedora-ELN &#96;&#96;&#96;
 
 For more details, see [the Fedora on WSL
 documentation](https://docs.fedoraproject.org/en-US/cloud/wsl/).
@@ -250,7 +255,9 @@ Live media can be found here:
 ## Mock environment {#_mock_environment}
 
 To build custom packages for ELN you can setup Mock environment as
-described at [Buildroot](buildroot.xml). = Buildroot configuration =
+described at [Buildroot](buildroot.xml).
+
+# Buildroot configuration {#_buildroot_configuration}
 
 ## Versioning {#_versioning}
 
@@ -262,15 +269,16 @@ versioning.
 This approach allows us to rebuild RPM packages on buildroot changes
 without changing the spec file of a package in dist-git.
 
-ELN Buildroot version is written as `XY`.
+ELN Buildroot version is written as &#96;XY&#96;.
 
-The `X` version refers to major changes in the ELN buildroot (generally
-those events that necessitate a mass-rebuild). The `Y` version refers to
-changes in the buildroot configuration that are compatible and will
-apply to future builds in the ELN buildroot.
+The &#96;X&#96; version refers to major changes in the ELN buildroot
+(generally those events that necessitate a mass-rebuild). The
+&#96;Y&#96; version refers to changes in the buildroot configuration
+that are compatible and will apply to future builds in the ELN
+buildroot.
 
-We start this number at `100`, where `1` is the X version and `00` is
-the Y version.
+We start this number at &#96;100&#96;, where &#96;1&#96; is the X
+version and &#96;00&#96; is the Y version.
 
 ## Distribution-related Macro Definitions {#_distribution_related_macro_definitions}
 
@@ -280,32 +288,33 @@ setting. Thus, following macro values are set by default:
 +----------------------+----------------------+-----------------------+
 | Macro                | Value                | Description           |
 +======================+======================+=======================+
-| `%{fedora}`          | `%{nil}`             | Unset                 |
+| &#96;%{fedora}&#96;  | &#96;%{nil}&#96;     | Unset                 |
 +----------------------+----------------------+-----------------------+
-| `%{rhel}`            | `11`                 | Integer value one     |
+| &#96;%{rhel}&#96;    | &#96;11&#96;         | Integer value one     |
 |                      |                      | higher than the most  |
 |                      |                      | recently released     |
 |                      |                      | major version of RHEL |
 +----------------------+----------------------+-----------------------+
-| `%{eln}`             | `XY`                 | Version of the eln    |
+| &#96;%{eln}&#96;     | &#96;XY&#96;         | Version of the eln    |
 |                      |                      | buildroot. Not tied   |
 |                      |                      | to any RHEL or Fedora |
 |                      |                      | release.              |
 +----------------------+----------------------+-----------------------+
-| `%{dist}`            | `.eln%{eln}`         | eln-disttag, for      |
-|                      |                      | example `.eln101`     |
+| &#96;%{dist}&#96;    | &#96;.eln%{eln}&#96; | eln-disttag, for      |
+|                      |                      | example               |
+|                      |                      | &#96;.eln101&#96;     |
 +----------------------+----------------------+-----------------------+
 
 : Macros values
 
 We set these values in Koji for the eln-build tag as follows:
 
-    koji edit-tag \
-    -x rpm.macro.fedora=%{nil} \
-    -x rpm.macro.rhel=9 \
-    -x rpm.macro.eln=101 \
-    -x 'rpm.macro.dist=%{!?distprefix0:%{?distprefix}}%{expand:%{lua:for i=0,9999 do print("%{?distprefix" .. i .."}") end}}.eln%{eln}%{?with_bootstrap:~bootstrap}' \
-    eln-build
+&#96;&#96;&#96; koji edit-tag \\ -x rpm.macro.fedora=%{nil} \\ -x
+rpm.macro.rhel=9 \\ -x rpm.macro.eln=101 \\ -x
+\'rpm.macro.dist=%{!?distprefix0:%{?distprefix}}%{expand:%{lua:for
+i=0,9999 do print(\'%{?distprefix\' .. i ..\'}\')
+end}}.eln%{eln}%{?with_bootstrap:\~bootstrap}\' \\ eln-build
+&#96;&#96;&#96;
 
 ## Compiler flags and other tweaks {#_compiler_flags_and_other_tweaks}
 
@@ -314,14 +323,14 @@ We set these values in Koji for the eln-build tag as follows:
 +======================+======================+=======================+
 | aarch64              | \-                   | \-                    |
 +----------------------+----------------------+-----------------------+
-| ppc64le              | `-mcpu=p             | `-mcpu=p              |
-|                      | ower8 -mtune=power8` | ower9 -mtune=power10` |
+| ppc64le              | &#96;-mcpu=power8    | &#96;-mcpu=power9     |
+|                      | -mtune=power8&#96;   | -mtune=power10&#96;   |
 +----------------------+----------------------+-----------------------+
-| s390x                | `-m                  | `-                    |
-|                      | arch=z13 -mtune=z14` | march=z14 -mtune=z15` |
+| s390x                | &#96;-march=z13      | &#96;-march=z14       |
+|                      | -mtune=z14&#96;      | -mtune=z15&#96;       |
 +----------------------+----------------------+-----------------------+
-| x86_64               | `-march=x8           | `-march=x86-          |
-|                      | 6-64 -mtune=generic` | 64-v3 -mtune=generic` |
+| x86_64               | &#96;-march=x86-64   | &#96;-march=x86-64-v3 |
+|                      | -mtune=generic&#96;  | -mtune=generic&#96;   |
 +----------------------+----------------------+-----------------------+
 
 : Compiler Flags
@@ -329,29 +338,31 @@ We set these values in Koji for the eln-build tag as follows:
 The compiler flag tweaks can be found in /usr/lib/rpm/redhat/macros The
 above options are from redhat-rpm-config-200-1
 
-## Building with the ELN buildroot {#building}
+\[&#35;building\] == Building with the ELN buildroot
 
-Simply specify `eln` as the release when kicking off a `koji` build
-using `fedpkg`:
+Simply specify &#96;eln&#96; as the release when kicking off a
+&#96;koji&#96; build using &#96;fedpkg&#96;:
 
-    fedpkg --release eln build [--scratch] [--srpm [SRPM]] [...]
+&#96;&#96;&#96; fedpkg \--release eln build \[\--scratch\] \[\--srpm
+\[SRPM\]\] \[&#8230;\] &#96;&#96;&#96;
 
-`mock` can also be used to perform builds locally.
+&#96;mock&#96; can also be used to perform builds locally.
 
-A supported `mock` configuration is available in the `mock-core-configs`
-package version 33 or later. This enables the ELN environment to be used
-locally by running (for arch `x86_64`):
+A supported &#96;mock&#96; configuration is available in the
+&#96;mock-core-configs&#96; package version 33 or later. This enables
+the ELN environment to be used locally by running (for arch
+&#96;x86_64&#96;):
 
-    mock -r fedora-eln-x86_64 ...
+&#96;&#96;&#96; mock -r fedora-eln-x86_64 &#8230; &#96;&#96;&#96;
 
 :::: note
 ::: title
 :::
 
-If the official `mock` configuration is not yet available, an
+If the official &#96;mock&#96; configuration is not yet available, an
 unsupported configuration file can be downloaded
 [here]({attachmentsdir}/fedora-eln-x86_64.cfg). See
-[mock#649](https://github.com/rpm-software-management/mock/pull/649)
+[mock&#35;649](https://github.com/rpm-software-management/mock/pull/649)
 ::::
 
 # Resolving ELN build failures {#_resolving_eln_build_failures}
@@ -370,14 +381,14 @@ The set of packages that currently need to build for ELN can be found at
 set including build dependencies can be found at
 <https://tiny.distro.builders/view--view-eln-and-buildroot.html>.
 
-There is also an [ELN Build Status page](status.xml#_eln_builds) showing
-which packages are currently failing to build for ELN, as well as those
-that have a discrepancy between Fedora Rawhide and ELN builds.
+There is also an [ELN Build Status page](status.adoc&#35;_eln_builds)
+showing which packages are currently failing to build for ELN, as well
+as those that have a discrepancy between Fedora Rawhide and ELN builds.
 
 ## Debugging ELN build failures {#_debugging_eln_build_failures}
 
-Check the details about [how to build](buildroot.xml#building) with
-`koji` and `mock` using the ELN buildroot.
+Check the details about [how to build](buildroot.adoc&#35;building) with
+&#96;koji&#96; and &#96;mock&#96; using the ELN buildroot.
 
 ## Fixing ELN build failures {#_fixing_eln_build_failures}
 
@@ -409,49 +420,41 @@ Generally, this means limiting the difference in old versions of Fedora,
 while letting the next version of RHEL adopt the Fedora code path.
 
 As one common scenario where a difference is required, RHEL often ends
-up with a smaller set of dependencies than Fedora. The `%{fedora}` and
-`%{rhel}` macros, when defined, contain the major release versions per
-distro.
+up with a smaller set of dependencies than Fedora. The
+&#96;%{fedora}&#96; and &#96;%{rhel}&#96; macros, when defined, contain
+the major release versions per distro.
 
 Consider this SPEC file snippet:
 
-    %if 0%{?fedora} >= 29 || 0%{?rhel} >= 9
-    BuildRequires: SomePackage
-    %endif
+&#96;&#96;&#96; %if 0%{?fedora} &gt;= 29 \|\| 0%{?rhel} &gt;= 9
+BuildRequires: SomePackage %endif &#96;&#96;&#96;
 
-This conditional will be met when `%{rhel}` is defined as 9 or greater.
-It is also shareable between earlier and later versions of Fedora and
-RHEL. Often it is better to use `<` to limit behaviors to RHEL 8 and
-earlier:
+This conditional will be met when &#96;%{rhel}&#96; is defined as 9 or
+greater. It is also shareable between earlier and later versions of
+Fedora and RHEL. Often it is better to use &#96;&lt;&#96; to limit
+behaviors to RHEL 8 and earlier:
 
-    %if 0%{?fedora} < 32 && 0%{?rhel} < 9
-    %global rhel8orearlier 1
-    %else
-    %global rhel9orlater 1
-    %endif
+&#96;&#96;&#96; %if 0%{?fedora} &lt; 32 &amp;&amp; 0%{?rhel} &lt; 9
+%global rhel8orearlier 1 %else %global rhel9orlater 1 %endif
+&#96;&#96;&#96;
 
 The best spec files alter default behavior only for released versions of
 Fedora or RHEL, making the default policy the one applicable to the
 current versions of Fedora or RHEL.
 
-As a last resort, there is an `%{eln}` macro available. Using it should
-be avoided if at all possible. However, if you find you do need to use
-it you should only check if it is set to a non-zero value. For example:
+As a last resort, there is an &#96;%{eln}&#96; macro available. Using it
+should be avoided if at all possible. However, if you find you do need
+to use it you should only check if it is set to a non-zero value. For
+example:
 
-    %if 0%{?eln}
-    # something specific to ELN only
-    ...
-    %endif
+&#96;&#96;&#96; %if 0%{?eln} &#35; something specific to ELN only
+&#8230; %endif
 
-    %if 0%{?fedora} || 0%{?eln}
-    # something specific to Fedora or ELN
-    ...
-    %endif
+%if 0%{?fedora} \|\| 0%{?eln} &#35; something specific to Fedora or ELN
+&#8230; %endif
 
-    %if 0%{?rhel} && ! 0%{?eln}
-    # something specific to RHEL only, not ELN.
-    ...
-    %endif
+%if 0%{?rhel} &amp;&amp; ! 0%{?eln} &#35; something specific to RHEL
+only, not ELN. &#8230; %endif &#96;&#96;&#96;
 
 ### Python 2 deprecation {#_python_2_deprecation}
 
@@ -460,30 +463,26 @@ and ELN. There has been a recurring pattern with ELN build failures that
 can be resolved by adjusting the SPEC conditionals to disable Python 2.
 For example, if you have something like this:
 
-    %if 0%{?fedora} >= 30
-    %global python2_enabled 0
-    %else
-    %global python2_enabled 1
-    %endif
+&#96;&#96;&#96; %if 0%{?fedora} &gt;= 30 %global python2_enabled 0 %else
+%global python2_enabled 1 %endif &#96;&#96;&#96;
 
 Change the conditional to:
 
-    %if 0%{?fedora} >= 30 || 0%{?rhel} >= 9
+&#96;&#96;&#96; %if 0%{?fedora} &gt;= 30 \|\| 0%{?rhel} &gt;= 9
+&#96;&#96;&#96;
 
 ### Architecture dependencies {#_architecture_dependencies}
 
 ELN is built for the same set of architectures as Rawhide. However, the
 kernel package in ELN no longer produces a full kernel for any 32-bit
-architecture. Notably, there is no `kernel` package for architecture
-`armv7hl`, only the `kernel-headers` package. To help address this
-difference, there is a new `%{kernel_arches}` macro available that can
-be used in the SPEC file. For example:
+architecture. Notably, there is no &#96;kernel&#96; package for
+architecture &#96;armv7hl&#96;, only the &#96;kernel-headers&#96;
+package. To help address this difference, there is a new
+&#96;%{kernel_arches}&#96; macro available that can be used in the SPEC
+file. For example:
 
-    %ifarch %{kernel_arches}
-    BuildRequires: kernel
-    %else
-    BuildRequires: kernel-headers
-    %fi
+&#96;&#96;&#96; %ifarch %{kernel_arches} BuildRequires: kernel %else
+BuildRequires: kernel-headers %fi &#96;&#96;&#96;
 
 # ELN Branches {#_eln_branches}
 
@@ -511,7 +510,8 @@ maintaining the eln branch.
 If you are a Fedora maintainer of the package needing a branch, then the
 next step if fairly simple.
 
-    fedpkg request-branch eln --no-auto-module --repo <package>
+&#8230;. fedpkg request-branch eln \--no-auto-module \--repo
+&lt;package&gt; &#8230;.
 
 ### You ARE NOT the Fedora maintainer {#_you_are_not_the_fedora_maintainer}
 
@@ -526,28 +526,23 @@ open a bugzilla ticket for the package.
 Bugzilla fields for an ELN branch request (alternative)
 :::
 
-- Classification: Fedora
-
-- Product: Fedora
-
-- Component: \<package\>
-
-- Version: rawhide
-
-- Summary: Please branch \<package\> in eln
+&#42; Classification: Fedora &#42; Product: Fedora &#42; Component:
+&lt;package&gt; &#42; Version: rawhide &#42; Summary: Please branch
+&lt;package&gt; in eln
 ::::
 
 Clear out Description and put
 
-    Please branch <package> in eln
+&#8230;. Please branch &lt;package&gt; in eln
 
-    fedpkg request-branch eln --no-auto-module --repo <package>
+fedpkg request-branch eln \--no-auto-module \--repo &lt;package&gt;
 
-    I will be maintaining the eln branch.
+I will be maintaining the eln branch.
 
-    If you do not think you will be able to do this in a timely manner
-    and/or would like me to be a co-maintainer, please add me (FAS <your FAS Id>)
-    as a co-maintaine through https://src.fedoraproject.org/rpms/<package>/adduser
+If you do not think you will be able to do this in a timely manner
+and/or would like me to be a co-maintainer, please add me (FAS &lt;your
+FAS Id&gt;) as a co-maintaine through
+<https://src.fedoraproject.org/rpms/&lt;package&gt;/adduser> &#8230;.
 
 ## Step 3: Maintain Branch {#_step_3_maintain_branch}
 
@@ -555,9 +550,11 @@ After your branch has been created, remember that the ELN branch is your
 responsibility. Do not create the branch, build it once, and then never
 touch the branch again.
 
-**If you decide that you no longer need the ELN branch Do not retire the
-branch. You must tell the ELN SIG.** The ELN SIG will need to change
-configurations as well as retire the branch properly. = ELN Macros
+&#42;If you decide that you no longer need the ELN branch Do not retire
+the branch. You must tell the ELN SIG.&#42; The ELN SIG will need to
+change configurations as well as retire the branch properly.
+
+# ELN Macros {#_eln_macros}
 
 The ELN buildroot defines the %{rhel} macro as the next major version of
 RHEL (currently, 11), and does not define the %{fedora} macro. For
@@ -657,7 +654,7 @@ macros does not suffice.
 | python-rpm-macros                 | CS/RHEL support multiple Python   |
 |                                   | versions, ELN only supports       |
 |                                   | latest                            |
-|                                   | ([#73](https://gith               |
+|                                   | ([&#35;73](https://gith           |
 |                                   | ub.com/fedora-eln/eln/issues/73)) |
 +-----------------------------------+-----------------------------------+
 | python-requests                   | Package is partly provided in     |
@@ -692,8 +689,8 @@ packages have already been built for ELN-Extras.
 ::: title
 :::
 
-**You** are responsible when your package fails to build on ELN Extras.
-Remember to check your packages on [the ELN Status
+&#42;&#42;You&#42;&#42; are responsible when your package fails to build
+on ELN Extras. Remember to check your packages on [the ELN Status
 Page](https://sgallagh.fedorapeople.org/dbs_status.html). ELN Extras
 packages get rebuilt much more frequently than in EPEL.
 ::::
@@ -706,8 +703,8 @@ Extras, while only a handful of people can add packages to ELN.
 
 You add binary packages by creating and submitting workloads for
 [Content
-Resolver](https://github.com/minimization/content-resolver#readme). You
-submit them as pull requests at [content resolver
+Resolver](https://github.com/minimization/content-resolver&#35;readme).
+You submit them as pull requests at [content resolver
 input](https://github.com/minimization/content-resolver-input). The
 workloads go in the config directory.
 
@@ -733,97 +730,54 @@ need everything for ELN Extras.
 
 #### Workload Required Sections {#_workload_required_sections}
 
-- document: feedback-pipeline-workload
-
-  - This exact line, do not change it
-
-- version: 1
-
-  - This exact line, do not change it
-
-- name: \<workload name\>
-
-  - Keep this short, spaces are allowed
-
-- description: \<workload description\>
-
-  - Longer description, but must be on one line
-
-- maintainer: \<FAS and/or Github ID\>
-
-  - Who will be the maintainer of the packages in this workload for ELN
-    and EPEL.
-
-  - Do not put someone elses name as maintainer without their
-    permission.
-
-- labels: eln-extras
-
-  - Although multiple labels can be listed, for eln-extras, only list
-    the one
-
-- packages:
-
-  - List of binary packages in the workgroup
-
-  - DO NOT LIST SOURCE PACKAGE NAMES IN PACKAGES LIST.
-
-  - LIST ALL THE BINARY PACKAGES YOU NEED.
-
-  - If you are listing a package in the optional arch specific package
-    list, do not list it here.
+&#42; document: feedback-pipeline-workload &#42;&#42; This exact line,
+do not change it &#42; version: 1 &#42;&#42; This exact line, do not
+change it &#42; name: &lt;workload name&gt; &#42;&#42; Keep this short,
+spaces are allowed &#42; description: &lt;workload description&gt;
+&#42;&#42; Longer description, but must be on one line &#42; maintainer:
+&lt;FAS and/or Github ID&gt; &#42;&#42; Who will be the maintainer of
+the packages in this workload for ELN and EPEL. &#42;&#42; Do not put
+someone elses name as maintainer without their permission. &#42; labels:
+eln-extras &#42;&#42; Although multiple labels can be listed, for
+eln-extras, only list the one &#42; packages: &#42;&#42; List of binary
+packages in the workgroup &#42;&#42; DO NOT LIST SOURCE PACKAGE NAMES IN
+PACKAGES LIST. &#42;&#42; LIST ALL THE BINARY PACKAGES YOU NEED.
+&#42;&#42; If you are listing a package in the optional arch specific
+package list, do not list it here.
 
 #### Workload Optional Sections {#_workload_optional_sections}
 
-- arch_packages:
-
-  - If you have a package that is not built on all arches, you need to
-    list it on all the arches it it built on.
-
-  - All noarch packages go in the regular package: section.
-
-- options:
-
-  - If you need to use the options, you can.
+&#42; arch_packages: &#42;&#42; If you have a package that is not built
+on all arches, you need to list it on all the arches it it built on.
+&#42;&#42; All noarch packages go in the regular package: section. &#42;
+options: &#42;&#42; If you need to use the options, you can.
 
 #### Workload Unused Sections {#_workload_unused_sections}
 
-- modules_disable:
-
-  - We do not have modules in ELN Extras
-
-- groups:
-
-  - We do not have groups in ELN Extras
-
-- package_placeholders:
-
-  - We do not process package_placeholders in ELN Extras
+&#42; modules_disable: &#42;&#42; We do not have modules in ELN Extras
+&#42; groups: &#42;&#42; We do not have groups in ELN Extras &#42;
+package_placeholders: &#42;&#42; We do not process package_placeholders
+in ELN Extras
 
 ### ELN-only packages {#_eln_only_packages}
 
 ELN-only packages can also be added to ELN Extras. One example is [-epel
-packages](https://docs.fedoraproject.org/en-US/epel/epel-faq/#rhel_8_has_binaries_in_the_release_but_is_missing_some_corresponding__devel_package._how_do_i_build_a_package_that_needs_that_missing__devel_package)
+packages](https://docs.fedoraproject.org/en-US/epel/epel-faq/&#35;rhel_8_has_binaries_in_the_release_but_is_missing_some_corresponding__devel_package._how_do_i_build_a_package_that_needs_that_missing__devel_package)
 which are often used to provide subpackages that have been unshipped or
 otherwise excluded in RHEL. These packages can be added to ELN Extras,
 with some additional caveats:
 
-- similarly to regular -epel packages, the package needs to only produce
-  the needed subpackages and nothing else
-
-- the package needs to be manually built for ELN from the \"eln\" branch
-  in dist-git
-
-- the SRPM name has to be different from the corresponding Rawhide
-  package ([example](https://src.fedoraproject.org/rpms/libxcrypt-epel))
-
-- the SRPM name has to be added to the exclusion list in ELNBuildSync to
-  avoid accidental rebuilds
-  ([example](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/commit/f50f8d99596cee37fa2b15cd3c62f1c8e86e72fa))
-
-- the needed subpackages need to be added to Content Resolver for ELN
-  Extras as usual
-  ([example](https://github.com/minimization/content-resolver-input/pull/1124))
+&#42; similarly to regular -epel packages, the package needs to only
+produce the needed subpackages and nothing else &#42; the package needs
+to be manually built for ELN from the \'eln\' branch in dist-git &#42;
+the SRPM name has to be different from the corresponding Rawhide package
+([example](https://src.fedoraproject.org/rpms/libxcrypt-epel)) &#42; the
+SRPM name has to be added to the exclusion list in ELNBuildSync to avoid
+accidental rebuilds
+([example](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/commit/f50f8d99596cee37fa2b15cd3c62f1c8e86e72fa))
+&#42; the needed subpackages need to be added to Content Resolver for
+ELN Extras as usual
+([example](https://github.com/minimization/content-resolver-input/pull/1124))
 
 ## ELN Extras Frequently Asked Questions {#_eln_extras_frequently_asked_questions}
 
@@ -845,7 +799,7 @@ If someone has already added a package to their workload, can I have the same pa
     show what workloads list, or require what packages. It even takes a
     guess on who should be the owner of the package.
 
-    - Infrastructure = Fedora ELN Branching Events =
+&#42; Infrastructure = Fedora ELN Branching Events =
 
 ## Fedora Branching {#_fedora_branching}
 
@@ -856,29 +810,28 @@ becomes Fedora 42.
 
 ### Branching Tasks {#_branching_tasks}
 
-1.  Pause the Fedora ELN package rebuilds in ELNBuildSync
-
-    - Set the `configuration.control.pause` value in the ELNBuildSync
-      [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
-      to `true`
+1.  Pause the Fedora ELN package rebuilds in ELNBuildSync &#42;&#42; Set
+    the &#96;configuration.control.pause&#96; value in the ELNBuildSync
+    [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
+    to &#96;true&#96;
 
 2.  Wait for the Fedora ELN Buildroot to regenerate
 
 \$ koji wait-repo eln-build \--request
 
-1.  Update `configuration.trigger.rpms` in
+1.  Update &#96;configuration.trigger.rpms&#96; in
     [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
-    to the next Fedora tag (`f42`)
+    to the next Fedora tag (&#96;f42&#96;)
 
-2.  Resume ELN package rebuilds in ELNBuildSync
+2.  Resume ELN package rebuilds in ELNBuildSync &#42;&#42; Set the
+    &#96;configuration.control.pause&#96; value in
+    [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
+    to &#96;false&#96;
 
-    - Set the `configuration.control.pause` value in
-      [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
-      to `false`
-
-3.  Once a new batch has been processed,[^1] then update `rpm.macro.eln`
-    for the `eln-build` Koji tag with the next available number.[^2] For
-    example, if the current value is 141
+3.  Once a new batch has been processed,[^1] then update
+    &#96;rpm.macro.eln&#96; for the &#96;eln-build&#96; Koji tag with
+    the next available number.[^2] For example, if the current value is
+    141
 
 \$ koji edit-tag eln-build -x rpm.macro.eln=142
 
@@ -904,28 +857,28 @@ launched.
 
 #### On the Fedora Side {#_on_the_fedora_side}
 
-1.  Pause the Fedora ELN package rebuilds in ELNBuildSync
+1.  Pause the Fedora ELN package rebuilds in ELNBuildSync &#42;&#42; Set
+    the &#96;configuration.control.pause&#96; value in the ELNBuildSync
+    [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
+    to &#96;true&#96;
 
-    - Set the `configuration.control.pause` value in the ELNBuildSync
-      [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
-      to `true`
-
-2.  Wait for any ongoing Fedora ELN builds to complete.
-
-    - Detecting this requires access to the ELNBuildSync logs which are
-      non-public at this time.
+2.  Wait for any ongoing Fedora ELN builds to complete. &#42;&#42;
+    Detecting this requires access to the ELNBuildSync logs which are
+    non-public at this time.
 
 3.  Disable the DistroBuildSync from Fedora ELN to CentOS Stream
+    &#42;&#42; Set &#96;enabled: false&#96; in the CentOS Stream
+    distrobaker.yaml [^3]
 
-    - Set `enabled: false` in the CentOS Stream distrobaker.yaml [^3]
-
-4.  Update `rpm.macro.eln` for the `eln-build` Koji tag with the next
-    available number. For example, if the current value is 135
+4.  Update &#96;rpm.macro.eln&#96; for the &#96;eln-build&#96; Koji tag
+    with the next available number. For example, if the current value is
+    135
 
 \$ koji edit-tag eln-build -x rpm.macro.eln=136
 
-1.  Update `rpm.macro.rhel` for the `eln-build` Koji tag with the next
-    major release value. For example, if the current value is 10
+1.  Update &#96;rpm.macro.rhel&#96; for the &#96;eln-build&#96; Koji tag
+    with the next major release value. For example, if the current value
+    is 10
 
 \$ koji edit-tag eln-build -x rpm.macro.rhel=11
 
@@ -937,28 +890,29 @@ launched.
     [fedora-release](https://src.fedoraproject.org/rpms/fedora-release)
     package
 
-    a.  Set `rhel_dist_version` to the same value as `rpm.macro.rhel`
-        above.
+    a.  Set &#96;rhel_dist_version&#96; to the same value as
+        &#96;rpm.macro.rhel&#96; above.
 
-    b.  Rebuild the `fedora-release` package, coordinating with Fedora
-        Release Engineering
+    b.  Rebuild the &#96;fedora-release&#96; package, coordinating with
+        Fedora Release Engineering
 
-2.  Update `kiwibuild_version` in
+2.  Update &#96;kiwibuild_version&#96; in
     <https://pagure.io/pungi-fedora/blob/eln/f/fedora/override.conf> to
-    the same value as `rpm.macro.rhel` above
+    the same value as &#96;rpm.macro.rhel&#96; above
 
-3.  Update `configuration.trigger.rpms` in
+3.  Update &#96;configuration.trigger.rpms&#96; in
     [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
-    to the next Fedora tag (`f41`)
+    to the next Fedora tag (&#96;f41&#96;)
 
-4.  Resume ELN package rebuilds in ELNBuildSync
-
-    - Set the `configuration.control.pause` value in
-      [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
-      to `false`
+4.  Resume ELN package rebuilds in ELNBuildSync &#42;&#42; Set the
+    &#96;configuration.control.pause&#96; value in
+    [distrobaker.yaml](https://gitlab.com/redhat/centos-stream/ci-cd/distrosync/distrobuildsync-config/-/blob/main/distrobaker.yaml)
+    to &#96;false&#96;
 
 5.  Schedule a mass-rebuild of Fedora ELN to pick up any pending RHEL
-    X+1 changes.[^4] = Fedora ELN compose =
+    X+1 changes.[^4]
+
+# Fedora ELN compose {#_fedora_eln_compose}
 
 ## Summary {#_summary}
 
@@ -977,10 +931,11 @@ day's synced compose.
 ## Compose configuration files {#_compose_configuration_files}
 
 The main Fedora ELN compose configuration is stored in the official
-<https://pagure.io/pungi-fedora/> repository in the `eln` branch.
+<https://pagure.io/pungi-fedora/> repository in the
+&#96;&#96;eln&#96;&#96; branch.
 
-The Fedora ELN compose uses the `comps-eln.xml` file stored in the
-<https://pagure.io/fedora-comps> repository.
+The Fedora ELN compose uses the &#96;&#96;comps-eln.xml&#96;&#96; file
+stored in the <https://pagure.io/fedora-comps> repository.
 
 ## Generating the Fedora ELN compose {#_generating_the_fedora_eln_compose}
 
@@ -996,28 +951,30 @@ compose host and performing the following steps:
 The first time you need to log in to an infrastructure compose host, you
 will need to set up your SSH configuration as described in [Fedora
 Infrastructure
-Documentation](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/sshaccess/#_ssh_configuration).
+Documentation](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/sshaccess/&#35;_ssh_configuration).
 ::::
 
 1.  Log in to compose-eln01.iad2.fedoraproject.org
 
-2.  Verify that no compose is already running with
-    `ps -ef|grep pungi-koji` or a similar command.
+2.  Verify that no compose is already running with &#96;&#96;ps
+    -ef\|grep pungi-koji&#96;&#96; or a similar command.
 
-3.  Edit the file `/etc/cron.d/eln`, copying the line containing
-    `eln-nightly.sh` to a new line and modifying the cron syntax to
-    start the compose two minutes in the future. For example, if the
-    current time is 1520 UTC, you would set the cron configuration to
-    `22 15 * * *`.
+3.  Edit the file &#96;&#96;/etc/cron.d/eln&#96;&#96;, copying the line
+    containing &#96;&#96;eln-nightly.sh&#96;&#96; to a new line and
+    modifying the cron syntax to start the compose two minutes in the
+    future. For example, if the current time is 1520 UTC, you would set
+    the cron configuration to &#96;&#96;22 15 &#42; &#42;
+    &#42;&#96;&#96;.
 
 4.  Wait for the compose to start, verifying that it did so with
-    `ps -ef|grep pungi-koji`
+    &#96;&#96;ps -ef\|grep pungi-koji&#96;&#96;
 
-5.  Remove the additional entry in `/etc/cron.d/eln` so that it does not
-    continue to trigger at the same time each day.
+5.  Remove the additional entry in &#96;&#96;/etc/cron.d/eln&#96;&#96;
+    so that it does not continue to trigger at the same time each day.
 
-6.  (Optional) Monitor the overall compose progress with
-    `tail -f /mnt/koji/compose/eln/<compose_id>/logs/global/pungi.global.log`
+6.  (Optional) Monitor the overall compose progress with &#96;&#96;tail
+    -f
+    /mnt/koji/compose/eln/&lt;compose_id&gt;/logs/global/pungi.global.log&#96;&#96;
 
 :::: note
 ::: title
@@ -1026,8 +983,8 @@ Documentation](https://docs.fedoraproject.org/en-US/infra/sysadmin_guide/sshacce
 Normally, the ELN compose will only be synced to the mirror list the
 first time that a compose succeeds for that day. In rare situations,
 this may need to be overridden. In this case, you will need to modify
-the command used to launch the compose to include a `-f` argument to
-`eln-nightly.sh`.
+the command used to launch the compose to include a
+&#96;&#96;-f&#96;&#96; argument to &#96;&#96;eln-nightly.sh&#96;&#96;.
 ::::
 
 # ELN Status {#_eln_status}
@@ -1038,6 +995,9 @@ The table shows the discrepancy between Fedora Rawhide and ELN builds.
 
 Source: <https://sgallagh.fedorapeople.org/dbs_status.html>
 
+\\\<iframe src=\'https://sgallagh.fedorapeople.org/dbs_status.html\'
+style=\'height:400px;width:100%;\'\\\>\\\</iframe\\\>
+
 [^1]: This timing avoids an accidental mass rebuild from being started
     due to the mass retagging of rawhide builds with the new tag.
 
@@ -1047,4 +1007,4 @@ Source: <https://sgallagh.fedorapeople.org/dbs_status.html>
 [^3]: Requires access inside the Red Hat firewall
 
 [^4]: For example, frame pointer enablement is conditionalized as
-    `%if 0%{?rhel} >= 11`
+    &#96;%if 0%{?rhel} &gt;= 11&#96;

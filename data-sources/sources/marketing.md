@@ -1,42 +1,31 @@
-- Are you willing to enhance Fedora Project marketing initiatives?
-
-- Have you tuned into any {team_name} meetings?
-
-- Do you know the basics of GitLab?
+&#42; Are you willing to enhance Fedora Project marketing initiatives?
+&#42; Have you tuned into any {team_name} meetings? &#42; Do you know
+the basics of GitLab?
 
 If you said YES to one or more points above, you are at the right place!
 Our team always looks forward to working with folks from diverse
 backgrounds.
 
-**Ask us in our [Matrix room]({team_synch_communication}) how to join
-the team!**
+&#42;Ask us in our [Matrix room]({team_synch_communication}) how to join
+the team!&#42;
 
 # How you can contribute {#contribute}
 
 Here are some examples of what constitutes a contribution to the
 {team_name}:
 
-- Managing talking points for one or more editions, or parts of Fedora
-  (a Fedora Edition, a major feature, etc.).
-
-- Writing a release announcement or contributing a large section to a
-  release announcement.
-
-  - Fixing a comma splice is not really a significant contribution.
-    Managing a section on the Workstation Edition is.
-
-- Working to create one or more flyers or information sheets for an
-  edition, Fedora overall, etc.
-
-- Substantial work helping clean up the Marketing docs.
-
-- Creating materials for Fedora Ambassadors for an event, or talking
-  points for an event or events.
-
-- Any observable significant and useful contribution that moves Fedora
-  Marketing forward during a release cycle.
-
-- Mentor and bring in new contributors to marketing.
+&#42; Managing talking points for one or more editions, or parts of
+Fedora (a Fedora Edition, a major feature, etc.). &#42; Writing a
+release announcement or contributing a large section to a release
+announcement. &#42;&#42; Fixing a comma splice is not really a
+significant contribution. Managing a section on the Workstation Edition
+is. &#42; Working to create one or more flyers or information sheets for
+an edition, Fedora overall, etc. &#42; Substantial work helping clean up
+the Marketing docs. &#42; Creating materials for Fedora Ambassadors for
+an event, or talking points for an event or events. &#42; Any observable
+significant and useful contribution that moves Fedora Marketing forward
+during a release cycle. &#42; Mentor and bring in new contributors to
+marketing.
 
 We grant membership to anyone who invests in teaching other people the
 ropes, even if that means their impact is not as visible on the finished
@@ -48,55 +37,38 @@ kind of work.
 
 # Join our meetings {#meetings}
 
-- Meetings will be held once every two weeks. Check the [**Marketing
-  Calendar**]({team_meetings}) for updated meeting times.
-
-  - Video Meetings on Jitsi;
-
-  - Recorded and posted on PeerTube
-
-  - Audio and Video is not required to join the meeting (you can always
-    use the chat for input)
-
-- Meeting Notes:
-
-  - Will be held in the [Marketing
-    HackMD](https://hackmd.io/team/fedoramarketing?nav=overviewFedora)
-
-  - Meeting leader will then post [on
-    Discourse]({team_asynch_communication}) for community to provide
-    transparency to our community
+&#42; Meetings will be held once every two weeks. Check the
+[&#42;Marketing Calendar&#42;]({team_meetings}) for updated meeting
+times. &#42;&#42; Video Meetings on Jitsi; &#42;&#42; Recorded and
+posted on PeerTube &#42;&#42; Audio and Video is not required to join
+the meeting (you can always use the chat for input) &#42; Meeting Notes:
+&#42;&#42; Will be held in the [Marketing
+HackMD](https://hackmd.io/team/fedoramarketing?nav=overviewFedora)
+&#42;&#42; Meeting leader will then post [on
+Discourse]({team_asynch_communication}) for community to provide
+transparency to our community
 
 # Have ideas for social media posts? {#social-media}
 
-- **[Open a ticket on our Gitlab]({team_issue_tracker}/-/issues/new):**
-
-  - Issue name must include Month/Day then title of Social Media post
-
-    - **EX: 10/29 EPEL Campaign Post**
-
-  - The ticket Description:
-
-    - **Purpose of ticket**
-
-    - **Any art ideas for the post**
-
-    - **Potential Caption idea**
+&#42; &#42;[Open a ticket on our
+Gitlab]({team_issue_tracker}/-/issues/new):&#42; &#42;&#42; Issue name
+must include Month/Day then title of Social Media post &#42;&#42;&#42;
+&#42;EX: 10/29 EPEL Campaign Post&#42; &#42;&#42; The ticket
+Description: &#42;&#42;&#42; &#42;Purpose of ticket&#42; &#42;&#42;&#42;
+&#42;Any art ideas for the post&#42; &#42;&#42;&#42; &#42;Potential
+Caption idea&#42;
 
 Feedback from official {team_name} members must be provided before
 accepted to post.
 
 # Want to help with videos? {#videos}
 
-- Check [our standard procedure to process
-  livestreams](sops/stream-uploads.xml) to know how you can easily take
-  livestreams from our events and turn them into talks to upload to our
-  social media profiles;
-
-- Check the [Podcast team GitLab
-  repo](https://gitlab.com/fedora/podcast/-/issues) if you'd like to
-  help with the Fedora Podcast, as they have a tight relation to our
-  team;
+&#42; Check [our standard procedure to process
+livestreams](sops/stream-uploads.xml) to know how you can easily take
+livestreams from our events and turn them into talks to upload to our
+social media profiles; &#42; Check the [Podcast team GitLab
+repo](https://gitlab.com/fedora/podcast/-/issues) if you'd like to help
+with the Fedora Podcast, as they have a tight relation to our team;
 
 # Fedora social media accounts {#_fedora_social_media_accounts}
 
@@ -127,201 +99,104 @@ Fedora Trademark.
 
 ### Mastodon {#official-mastodon}
 
-- **Page name**: Fedora Project
-
-- **Links**:
-
-  - [Mastodon](https://joinmastodon.org/)
-
-  - [fosstodon.org/@fedora](https://fosstodon.org/@fedora)
-
-- **Administrators**:
-
-  - [Joseph Gayoso]({FWIKI}/User:Joseph)
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-  - [Nick Bebout]({FWIKI}/User:Nb)
-
-- **Clients**: open source decentralized servers, web-based, clients
-  available on mobile (Android, iOS)
+&#42; &#42;Page name&#42;: Fedora Project &#42; &#42;Links&#42;:
+&#42;&#42; [Mastodon](https://joinmastodon.org/) &#42;&#42;
+[fosstodon.org/@fedora](https://fosstodon.org/@fedora) &#42;
+&#42;Administrators&#42;: &#42;&#42; [Joseph
+Gayoso]({FWIKI}/User:Joseph) &#42;&#42; [Justin W.
+Flory]({FWIKI}/User:Jflory7) &#42;&#42; [Nick Bebout]({FWIKI}/User:Nb)
+&#42; &#42;Clients&#42;: open source decentralized servers, web-based,
+clients available on mobile (Android, iOS)
 
 ### Facebook {#official-facebook}
 
-- **Page name**: The Fedora Project
-
-- **Links**:
-
-  - [Facebook](https://www.facebook.com)
-
-  - [facebook.com/TheFedoraProject](https://www.facebook.com/TheFedoraProject)
-
-- **Administrators**:
-
-  - **Administrators (full access)**:
-
-    - [Brian Proffitt]({FWIKI}/User:Bproffit)
-
-    - [Paul W. Frields]({FWIKI}/User:Pfrields)
-
-    - [Ryan Lerch]({FWIKI}/User:Ryanlerch)
-
-    - [Joe Brockmeier]({FWIKI}/User:Jzb)
-
-    - [Christoph Wickert]({FWIKI}/User:Cwickert)
-
-    - [Robyn Bergeron]({FWIKI}/User:Rbergero)
-
-    - [Jiří Eischmann]({FWIKI}/User:Eischmann)
-
-    - [Tom Callaway]({FWIKI}/User:Spot)
-
-    - [Ruth Suehle]({FWIKI}/User:Rsuehle)
-
-  - **Editors**:
-
-    - [Remy DeCausemaker]({FWIKI}/User:Decause)
-
-    - [Diaa Radwan]({FWIKI}/User:Diaa)
-
-- **Clients**: proprietary server, web-based, messaging supported in
-  `bitlbee`, `pidgin`
+&#42; &#42;Page name&#42;: The Fedora Project &#42; &#42;Links&#42;:
+&#42;&#42; [Facebook](https://www.facebook.com) &#42;&#42;
+[facebook.com/TheFedoraProject](https://www.facebook.com/TheFedoraProject)
+&#42; &#42;Administrators&#42;: &#42;&#42; &#42;Administrators (full
+access)&#42;: &#42;&#42;&#42; [Brian Proffitt]({FWIKI}/User:Bproffit)
+&#42;&#42;&#42; [Paul W. Frields]({FWIKI}/User:Pfrields) &#42;&#42;&#42;
+[Ryan Lerch]({FWIKI}/User:Ryanlerch) &#42;&#42;&#42; [Joe
+Brockmeier]({FWIKI}/User:Jzb) &#42;&#42;&#42; [Christoph
+Wickert]({FWIKI}/User:Cwickert) &#42;&#42;&#42; [Robyn
+Bergeron]({FWIKI}/User:Rbergero) &#42;&#42;&#42; [Jiří
+Eischmann]({FWIKI}/User:Eischmann) &#42;&#42;&#42; [Tom
+Callaway]({FWIKI}/User:Spot) &#42;&#42;&#42; [Ruth
+Suehle]({FWIKI}/User:Rsuehle) &#42;&#42; &#42;Editors&#42;:
+&#42;&#42;&#42; [Remy DeCausemaker]({FWIKI}/User:Decause)
+&#42;&#42;&#42; [Diaa Radwan]({FWIKI}/User:Diaa) &#42;
+&#42;Clients&#42;: proprietary server, web-based, messaging supported in
+&#96;bitlbee&#96;, &#96;pidgin&#96;
 
 ### X/Twitter {#official-twitter}
 
-- **Page name**: \@fedora
-
-- **Links**:
-
-  - [X/Twitter](https://twitter.com/)
-
-  - [twitter.com/fedora](https://twitter.com/fedora)
-
-- **Administrators**:
-
-  - [Brian Proffitt]({FWIKI}/User:Bproffit)
-
-  - [Paul W. Frields]({FWIKI}/User:Pfrields)
-
-  - [Ruth Suehle]({FWIKI}/User:Rsuehle)
-
-  - [Joe Brockmeier]({FWIKI}/User:Jzb)
-
-  - [Ryan Lerch]({FWIKI}/User:Ryanlerch)
-
-  - [Matthew Miller]({FWIKI}/User:Mattdm)
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-  - [ Jona Azizaj]({FWIKI}/User:Jonatoni)
-
-  - [Marie Nordin]({FWIKI}/User:Riecatnor)
-
-  - [Vipul Siddharth]({FWIKI}/User:siddharthvipul1)
-
-- **Clients**: proprietary server, web-based, clients available
-  (`cawbird`)
+&#42; &#42;Page name&#42;: \@fedora &#42; &#42;Links&#42;: &#42;&#42;
+[X/Twitter](https://twitter.com/) &#42;&#42;
+[twitter.com/fedora](https://twitter.com/fedora) &#42;
+&#42;Administrators&#42;: &#42;&#42; [Brian
+Proffitt]({FWIKI}/User:Bproffit) &#42;&#42; [Paul W.
+Frields]({FWIKI}/User:Pfrields) &#42;&#42; [Ruth
+Suehle]({FWIKI}/User:Rsuehle) &#42;&#42; [Joe
+Brockmeier]({FWIKI}/User:Jzb) &#42;&#42; [Ryan
+Lerch]({FWIKI}/User:Ryanlerch) &#42;&#42; [Matthew
+Miller]({FWIKI}/User:Mattdm) &#42;&#42; [Justin W.
+Flory]({FWIKI}/User:Jflory7) &#42;&#42; [ Jona
+Azizaj]({FWIKI}/User:Jonatoni) &#42;&#42; [Marie
+Nordin]({FWIKI}/User:Riecatnor) &#42;&#42; [Vipul
+Siddharth]({FWIKI}/User:siddharthvipul1) &#42; &#42;Clients&#42;:
+proprietary server, web-based, clients available (&#96;cawbird&#96;)
 
 ### YouTube {#official-youtube}
 
-- **Page name**: Fedora Project
-
-- **Links**:
-
-  - [YouTube](https://www.youtube.com)
-
-  - [youtube.com/fedora](https://www.youtube.com/fedora)
-
-- **Administrators**:
-
-  - **Primary owner**: *Fedora Project (social media mgmt.)* (special
-    Google account managed by the [Fedora Community
-    Architect](council::fca.xml) specifically for YouTube)
-
-  - **Owners**:
-
-    - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-    - [Brian Proffitt]({FWIKI}/User:Bproffit)
-
-  - **Managers**:
-
-    - [Adrian Edwards]({FWIKI}/User:Moralcode)
-
-    - [Akashdeep Dhar]({FWIKI}/User:T0xic0der)
-
-    - [Alberto Rodríguez Sánchez]({FWIKI}/User:Bt0dotninja)
-
-    - [Ben Cotton]({FWIKI}/User:Bcotton)
-
-    - [Daimar Stein]({FWIKI}/User:Steiner)
-
-    - [Eduard Lucena]({FWIKI}/User:X3mboy)
-
-    - [Eric Hendricks]({FWIKI}/User:Itguyeric)
-
-    - [Jiří Eischmann]({FWIKI}/User:Eischmann)
-
-    - [Kevin Fenzi]({FWIKI}/User:Kevin)
-
-    - [Marie Nordin]({FWIKI}/User:Riecatnor)
-
-    - [Mark Terranova]({FWIKI}/User:Markdude)
-
-    - [Paul W. Frields]({FWIKI}/User:Pfrields)
-
-    - [Ryan Lerch]({FWIKI}/User:Ryanlerch)
-
-    - [Tom Callaway]({FWIKI}/User:Spot)
-
-- **Clients**: proprietary server, web-based, supported in
-  `video-downloader`
+&#42; &#42;Page name&#42;: Fedora Project &#42; &#42;Links&#42;:
+&#42;&#42; [YouTube](https://www.youtube.com) &#42;&#42;
+[youtube.com/fedora](https://www.youtube.com/fedora) &#42;
+&#42;Administrators&#42;: &#42;&#42; &#42;Primary owner&#42;: *Fedora
+Project (social media mgmt.)* (special Google account managed by the
+[Fedora Community Architect](council::fca.xml) specifically for YouTube)
+&#42;&#42; &#42;Owners&#42;: &#42;&#42;&#42; [Justin W.
+Flory]({FWIKI}/User:Jflory7) &#42;&#42;&#42; [Brian
+Proffitt]({FWIKI}/User:Bproffit) &#42;&#42; &#42;Managers&#42;:
+&#42;&#42;&#42; [Adrian Edwards]({FWIKI}/User:Moralcode) &#42;&#42;&#42;
+[Akashdeep Dhar]({FWIKI}/User:T0xic0der) &#42;&#42;&#42; [Alberto
+Rodríguez Sánchez]({FWIKI}/User:Bt0dotninja) &#42;&#42;&#42; [Ben
+Cotton]({FWIKI}/User:Bcotton) &#42;&#42;&#42; [Daimar
+Stein]({FWIKI}/User:Steiner) &#42;&#42;&#42; [Eduard
+Lucena]({FWIKI}/User:X3mboy) &#42;&#42;&#42; [Eric
+Hendricks]({FWIKI}/User:Itguyeric) &#42;&#42;&#42; [Jiří
+Eischmann]({FWIKI}/User:Eischmann) &#42;&#42;&#42; [Kevin
+Fenzi]({FWIKI}/User:Kevin) &#42;&#42;&#42; [Marie
+Nordin]({FWIKI}/User:Riecatnor) &#42;&#42;&#42; [Mark
+Terranova]({FWIKI}/User:Markdude) &#42;&#42;&#42; [Paul W.
+Frields]({FWIKI}/User:Pfrields) &#42;&#42;&#42; [Ryan
+Lerch]({FWIKI}/User:Ryanlerch) &#42;&#42;&#42; [Tom
+Callaway]({FWIKI}/User:Spot) &#42; &#42;Clients&#42;: proprietary
+server, web-based, supported in &#96;video-downloader&#96;
 
 ### Instagram {#official-instagram}
 
-- Page name: \@thefedoraproject
-
-- **Links**:
-
-  - [Instagram](https://www.instagram.com)
-
-  - [instagram.com/thefedoraproject](https://www.instagram.com/thefedoraproject/)
-
-- **Administrators**:
-
-  - [Daimar Stein]({FWIKI}/User:Steiner)
-
-  - [Emma Kidney]({FWIKI}/User:Ekidney)
-
-  - [Ryan Lerch]({FWIKI}/User:Ryanlerch)
-
-  - [Jona Azizaj]({FWIKI}/User:Jonatoni)
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-- **Clients**:
-
-  - proprietary server, has web version
+&#42; Page name: \@thefedoraproject &#42; &#42;Links&#42;: &#42;&#42;
+[Instagram](https://www.instagram.com) &#42;&#42;
+[instagram.com/thefedoraproject](https://www.instagram.com/thefedoraproject/)
+&#42; &#42;Administrators&#42;: &#42;&#42; [Daimar
+Stein]({FWIKI}/User:Steiner) &#42;&#42; [Emma
+Kidney]({FWIKI}/User:Ekidney) &#42;&#42; [Ryan
+Lerch]({FWIKI}/User:Ryanlerch) &#42;&#42; [Jona
+Azizaj]({FWIKI}/User:Jonatoni) &#42;&#42; [Justin W.
+Flory]({FWIKI}/User:Jflory7) &#42; &#42;Clients&#42;: &#42;&#42;
+proprietary server, has web version
 
 ### Matrix/Element {#official-matrix}
 
-- **Page name**: `#fedora-space:fedoraproject.org`
-
-- **Links**:
-
-  - link:https://chat.fedoraproject.org/*/room/#fedora-space:fedoraproject.org\[chat.fedoraproject.org/*/room/#fedora-space:fedoraproject.org\]
-
-- **Administrators**:
-
-  - [Kevin Fenzi]({FWIKI}/User:Kevin)
-
-  - [Nick Bebout]({FWIKI}/User:Nb)
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-- **Clients**: open source server, has web version, open source client
-  available as flatpak in
-  [flathub](https://flathub.org/apps/details/im.riot.Riot)
+&#42; &#42;Page name&#42;: &#96;&#35;fedora-space:fedoraproject.org&#96;
+&#42; &#42;Links&#42;: &#42;&#42;
+[chat.fedoraproject.org/&#35;/room/&#35;fedora-space:fedoraproject.org](https://chat.fedoraproject.org/&#35;/room/&#35;fedora-space:fedoraproject.org)
+&#42; &#42;Administrators&#42;: &#42;&#42; [Kevin
+Fenzi]({FWIKI}/User:Kevin) &#42;&#42; [Nick Bebout]({FWIKI}/User:Nb)
+&#42;&#42; [Justin W. Flory]({FWIKI}/User:Jflory7) &#42;
+&#42;Clients&#42;: open source server, has web version, open source
+client available as flatpak in
+[flathub](https://flathub.org/apps/details/im.riot.Riot)
 
 ## Secondary accounts {#secondary}
 
@@ -337,105 +212,52 @@ tweet links for new [Community
 Blog](https://docs.fedoraproject.org/en-US/commops/community-blog/)
 articles.
 
-- **Page name**: \@fedoracommunity
-
-- **Links**:
-
-  - [Twitter](https://twitter.com/)
-
-  - [twitter.com/fedoracommunity](https://twitter.com/fedoracommunity)
-
-- **Administrators**:
-
-  - [Brian Exelbierd]({FWIKI}/User:Bex)
-
-  - [Jona Azizaj]({FWIKI}/User:Jonatoni)
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-  - [Marie Nordin]({FWIKI}/User:Riecatnor)
-
-  - [Paul W. Frields]({FWIKI}/User:Pfrields)
-
-  - [Ryan Lerch]({FWIKI}/User:Ryanlerch)
+&#42; &#42;Page name&#42;: \@fedoracommunity &#42; &#42;Links&#42;:
+&#42;&#42; [Twitter](https://twitter.com/) &#42;&#42;
+[twitter.com/fedoracommunity](https://twitter.com/fedoracommunity) &#42;
+&#42;Administrators&#42;: &#42;&#42; [Brian Exelbierd]({FWIKI}/User:Bex)
+&#42;&#42; [Jona Azizaj]({FWIKI}/User:Jonatoni) &#42;&#42; [Justin W.
+Flory]({FWIKI}/User:Jflory7) &#42;&#42; [Marie
+Nordin]({FWIKI}/User:Riecatnor) &#42;&#42; [Paul W.
+Frields]({FWIKI}/User:Pfrields) &#42;&#42; [Ryan
+Lerch]({FWIKI}/User:Ryanlerch)
 
 ### Reddit (/r/Fedora) {#secondary-reddit}
 
-- **Page name**: /r/Fedora
-
-- **Links**:
-
-  - [Reddit](https://www.reddit.com/)
-
-  - [reddit.com/r/Fedora/](https://www.reddit.com/r/Fedora/)
-
-- **Administrators**:
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-  - [Eric Gustavsson]({FWIKI}/User:SpyTec)
-
-- **Clients**: proprietary server, web-based
+&#42; &#42;Page name&#42;: /r/Fedora &#42; &#42;Links&#42;: &#42;&#42;
+[Reddit](https://www.reddit.com/) &#42;&#42;
+[reddit.com/r/Fedora/](https://www.reddit.com/r/Fedora/) &#42;
+&#42;Administrators&#42;: &#42;&#42; [Justin W.
+Flory]({FWIKI}/User:Jflory7) &#42;&#42; [Eric
+Gustavsson]({FWIKI}/User:SpyTec) &#42; &#42;Clients&#42;: proprietary
+server, web-based
 
 ### Discord {#secondary-discord}
 
-- **Page name**: Fedora Linux
-
-- **Links**:
-
-  - [Discord](https://discordapp.com)
-
-  - [discord.gg/fedora](https://discord.gg/fedora)
-
-- **Administrators**:
-
-  - *Owner*: [Radka (Rhea) Gustavsson]({FWIKI}/User:Rhea)
-
-  - *Moderators*:
-
-    - [Eric Eisenhart]({FWIKI}/User:Ffreiheit)
-
-    - DokaDoka
-
-    - dvs
-
-    - refi64
-
-    - Sebastiaan
-
-    - -Kass
-
-- **Clients**: proprietary server, has web version, open source clients
-  are forbidden by license terms
+&#42; &#42;Page name&#42;: Fedora Linux &#42; &#42;Links&#42;:
+&#42;&#42; [Discord](https://discordapp.com) &#42;&#42;
+[discord.gg/fedora](https://discord.gg/fedora) &#42;
+&#42;Administrators&#42;: &#42;&#42; *Owner*: [Radka (Rhea)
+Gustavsson]({FWIKI}/User:Rhea) &#42;&#42; *Moderators*: &#42;&#42;&#42;
+[Eric Eisenhart]({FWIKI}/User:Ffreiheit) &#42;&#42;&#42; DokaDoka
+&#42;&#42;&#42; dvs &#42;&#42;&#42; refi64 &#42;&#42;&#42; Sebastiaan
+&#42;&#42;&#42; -Kass &#42; &#42;Clients&#42;: proprietary server, has
+web version, open source clients are forbidden by license terms
 
 ### Telegram {#secondary-telegram}
 
-- **Page name**: \@fedoranews
-
-- **Links**:
-
-  - [Telegram](https://telegram.org/)
-
-  - [\@fedoranews](https://t.me/fedoranews)
-
-- **Administrators**:
-
-  - [Justin W. Flory]({FWIKI}/User:Jflory7)
-
-  - [Jiří Eischmann]({FWIKI}/User:Eischmann)
-
-  - [Ryan Lerch]({FWIKI}/User:Ryanlerch)
-
-  - [Marie Nordin]({FWIKI}/User:Riecatnor)
-
-  - [Sumantro Mukherjee]({FWIKI}/User:Sumantrom)
-
-  - [Eduard Lucena]({FWIKI}/User:x3mboy)
-
-  - [Vipul Siddharth]({FWIKI}/User:siddharthvipul1)
-
-- **Clients**: proprietary server, has web version, open source client
-  available in RPMFusion
+&#42; &#42;Page name&#42;: \@fedoranews &#42; &#42;Links&#42;:
+&#42;&#42; [Telegram](https://telegram.org/) &#42;&#42;
+[\@fedoranews](https://t.me/fedoranews) &#42; &#42;Administrators&#42;:
+&#42;&#42; [Justin W. Flory]({FWIKI}/User:Jflory7) &#42;&#42; [Jiří
+Eischmann]({FWIKI}/User:Eischmann) &#42;&#42; [Ryan
+Lerch]({FWIKI}/User:Ryanlerch) &#42;&#42; [Marie
+Nordin]({FWIKI}/User:Riecatnor) &#42;&#42; [Sumantro
+Mukherjee]({FWIKI}/User:Sumantrom) &#42;&#42; [Eduard
+Lucena]({FWIKI}/User:x3mboy) &#42;&#42; [Vipul
+Siddharth]({FWIKI}/User:siddharthvipul1) &#42; &#42;Clients&#42;:
+proprietary server, has web version, open source client available in
+RPMFusion
 
 ## Community-managed accounts {#community}
 
@@ -443,10 +265,10 @@ Fedora Community-Managed Accounts are related to the Fedora Project, but
 not officially maintained by the Fedora Marketing Team or Social Media
 administrators. Often, these accounts are specific to a region or
 country. These pages are typically run by an individual contributor or a
-group of contributors. However, these accounts are **not** officially
-endorsed by the Fedora Project or Red Hat Inc. They are listed here to
-promote easier discoverability of places where Fedora contributors and
-users gather online.
+group of contributors. However, these accounts are &#42;not&#42;
+officially endorsed by the Fedora Project or Red Hat Inc. They are
+listed here to promote easier discoverability of places where Fedora
+contributors and users gather online.
 
 ### Facebook {#community-facebook}
 
@@ -634,8 +456,8 @@ longer maintained.
 | Network         | Page name       | Links           | A               |
 |                 |                 |                 | dministrator(s) |
 +=================+=================+=================+=================+
-| [d              | <fe             | [di             | [Brian          |
-| iaspora\*](http | dora@diasp.org> | asp.org/u/fedor | Pr              |
+| [dias           | <fe             | [di             | [Brian          |
+| pora&#42;](http | dora@diasp.org> | asp.org/u/fedor | Pr              |
 | s://diasp.org/) |                 | a](https://dias | offitt]({FWIKI} |
 |                 |                 | p.org/u/fedora) | /User:Bproffit) |
 +-----------------+-----------------+-----------------+-----------------+
@@ -684,10 +506,12 @@ The Google+ service shut down [on 2019 April
 +----------------------+----------------------+-----------------------+
 | Account name         | Links                | Administrator(s)      |
 +======================+======================+=======================+
-| Fedora Project       | [plus.google.com/+   | **Owner**: [Matthew   |
-|                      | Fedora](https://plus | Williams]({FWIKI}/U   |
-|                      | .google.com/+Fedora) | ser:Lorddrachenblut)\ |
-|                      |                      | **Managers**: [Brian  |
+| Fedora Project       | [plus.google.com/+   | &#42;Owner&#42;:      |
+|                      | Fedora](https://plus | [Matthew              |
+|                      | .google.com/+Fedora) | Williams]({FWIKI}/U   |
+|                      |                      | ser:Lorddrachenblut)\ |
+|                      |                      | &#42;Managers&#42;:   |
+|                      |                      | [Brian                |
 |                      |                      | Exelbier              |
 |                      |                      | d]({FWIKI}/User:Bex), |
 |                      |                      | [Brian                |
@@ -731,8 +555,9 @@ The Google+ service shut down [on 2019 April
 |                      |                      | [Matthew              |
 |                      |                      | Miller](              |
 |                      |                      | {FWIKI}/User:Mattdm)\ |
-|                      |                      | **Communications      |
-|                      |                      | manager**: [Charles   |
+|                      |                      | &#42;Communications   |
+|                      |                      | manager&#42;:         |
+|                      |                      | [Charles              |
 |                      |                      | Profitt]({            |
 |                      |                      | FWIKI}/User:Cprofitt) |
 +----------------------+----------------------+-----------------------+
@@ -778,17 +603,16 @@ security.
 
 ## Historical context {#historical}
 
-- Social media was briefly discussed at the [Marketing FAD
-  2010]({FWIKI}/Marketing_FAD_2010). [complete logs are available (start
-  at
-  14:10:39)](http://meetbot.fedoraproject.org/fedora-fad/2010-03-15/fedora-fad.2010-03-15-13.15.log.html).
-  For a shorter recap, see this [video of Neville Cross; Ryan Rix; and
-  Paul Frields explaining the
-  discussion](http://www.youtube.com/watch?v=oh9Yi_2jI_g) and [a diagram
-  of the whiteboard (photo by Henrik
-  Heigl)](http://www.flickr.com/photos/wonderer/4462227596/).
-
-- [Status and microblogging SOP]({FWIKI}/Status_and_microblogging_SOP)
+&#42; Social media was briefly discussed at the [Marketing FAD
+2010]({FWIKI}/Marketing_FAD_2010). [complete logs are available (start
+at
+14:10:39)](http://meetbot.fedoraproject.org/fedora-fad/2010-03-15/fedora-fad.2010-03-15-13.15.log.html).
+For a shorter recap, see this [video of Neville Cross; Ryan Rix; and
+Paul Frields explaining the
+discussion](http://www.youtube.com/watch?v=oh9Yi_2jI_g) and [a diagram
+of the whiteboard (photo by Henrik
+Heigl)](http://www.flickr.com/photos/wonderer/4462227596/). &#42;
+[Status and microblogging SOP]({FWIKI}/Status_and_microblogging_SOP)
 
 # Fedora Social Media Contribution Model {#_fedora_social_media_contribution_model}
 
@@ -798,11 +622,11 @@ discover how you can contribute.
 The Fedora Marketing Team operates a three-tiered model for social media
 contributions:
 
-1.  [**Social Media Manager**](#social-media-manager)
+1.  xref:&#35;social-media-manager\[&#42;Social Media Manager&#42;\]
 
-2.  [**Content Contributor**](#content-contributor)
+2.  xref:&#35;content-contributor\[&#42;Content Contributor&#42;\]
 
-3.  [**Community Contributor**](#community-contributor)
+3.  xref:&#35;community-contributor\[&#42;Community Contributor&#42;\]
 
 Each role focuses on different types of contributions, such as posting
 content, introducing new ideas for our social media, and sharing updates
@@ -816,10 +640,10 @@ you can get involved.
 ## Social Media Manager
 
 Social Media Managers are granted direct access to our social media
-accounts and are categorized into two specific functions: [**Account
-Lead**](#account-lead) and [**Account
-Contributor**](#account-contributor). These functions have varying
-levels of contribution and responsibility.
+accounts and are categorized into two specific functions:
+xref:&#35;account-lead\[&#42;Account Lead&#42;\] and
+xref:&#35;account-contributor\[&#42;Account Contributor&#42;\]. These
+functions have varying levels of contribution and responsibility.
 
 ### Account Lead
 
@@ -834,7 +658,7 @@ the Curator. Curators take full ownership of a social media account,
 independently sourcing content, crafting posts, and actively engaging
 with the Fedora and Linux communities. This demands a higher level of
 responsibility, proactive engagement, and a deep understanding of
-Fedora, its \"products,\" stakeholders, and community dynamics.
+Fedora, its \'products,\' stakeholders, and community dynamics.
 
 ### Account Contributor
 
@@ -847,16 +671,10 @@ submissions from others.
 
 ### Ways to Contribute {#ways}
 
-- Social media management
-
-- Engaging with our users on social media
-
-- Posting content on our social media accounts
-
-- Checking and responding to comments, tags, and direct messages
-
-- Working with individuals in the other roles to schedule and post
-  content
+&#42; Social media management &#42; Engaging with our users on social
+media &#42; Posting content on our social media accounts &#42; Checking
+and responding to comments, tags, and direct messages &#42; Working with
+individuals in the other roles to schedule and post content
 
 ### Our Social Media Management Team {#social-media-team}
 
@@ -876,7 +694,7 @@ submissions from others.
 
 <figure>
 <img src="stream-uploads/social-media-contribution-model.png"
-alt="A visual aid titled &quot;Social Media Contribution Model&quot;. There are four rings of different sizes stacked on top of each other" />
+alt="A visual aid titled &#39;Social Media Contribution Model&#39;. There are four rings of different sizes stacked on top of each other" />
 <figcaption>social media contribution model</figcaption>
 </figure>
 
@@ -892,29 +710,24 @@ Managers.
 
 ### Ways to Contribute {#ways-to}
 
-- Come up with interesting ideas to post about. Write a post on that
-  topic, then follow the submission process below. Make sure the content
-  is engaging and aligns with Fedora's messaging and voice.
-
-- Work with the [Marketing Team](need-help.xml) to coordinate and manage
-  social media campaigns.
-
-- Curate content for use by the Lead.
+&#42; Come up with interesting ideas to post about. Write a post on that
+topic, then follow the submission process below. Make sure the content
+is engaging and aligns with Fedora's messaging and voice. &#42; Work
+with the [Marketing Team](need-help.xml) to coordinate and manage social
+media campaigns. &#42; Curate content for use by the Lead.
 
 Follow the steps below to submit your content idea to our Social Media
 Managers.
 
 ### How to submit your post to the Social Media Managers {#sumbit-post}
 
-- Open an issue on GitLab for your idea/content in the Fedora [Marketing
-  Planning](https://gitlab.com/fedora/marketing/marketing-planning/-/issues)
-  repo.
-
-- Choose ****social-media-template**** and follow the prompt to submit
-  your idea.
-
-- A Social Media Manager will review your submission, provide feedback,
-  and approve it for posting.
+&#42; Open an issue on GitLab for your idea/content in the Fedora
+[Marketing
+Planning](https://gitlab.com/fedora/marketing/marketing-planning/-/issues)
+repo. &#42; Choose &#42;&#42;&#42;social-media-template&#42;&#42;&#42;
+and follow the prompt to submit your idea. &#42; A Social Media Manager
+will review your submission, provide feedback, and approve it for
+posting.
 
 ## Community Contributor
 
@@ -925,17 +738,16 @@ social media coverage for specific events, articles, or announcements.
 
 ### Ways to Contribute {#ways-to-contribute}
 
-- Reach out to the Marketing Team with topics, ideas, or requests for
-  social media coverage. The easiest way is to join our [Matrix
-  room](https://matrix.to/#/#marketing:fedoraproject.org) and simply
-  mention what assistance you need. Usually we can accommodate these
-  requests without having to create a ticket on GitLab. However, for
-  larger or more complex request, you can create a ticket on GitLab. But
-  before then, the team prefers that you ask for help first, and if the
-  request is large, the team will create a ticket if necessary.
-
-- Inform the marketing team about upcoming events where Fedora will have
-  a presence, requesting promotional coverage.
+&#42; Reach out to the Marketing Team with topics, ideas, or requests
+for social media coverage. The easiest way is to join our [Matrix
+room](https://matrix.to/&#35;/&#35;marketing:fedoraproject.org) and
+simply mention what assistance you need. Usually we can accommodate
+these requests without having to create a ticket on GitLab. However, for
+larger or more complex request, you can create a ticket on GitLab. But
+before then, the team prefers that you ask for help first, and if the
+request is large, the team will create a ticket if necessary. &#42;
+Inform the marketing team about upcoming events where Fedora will have a
+presence, requesting promotional coverage.
 
 ## Changelog
 
@@ -943,7 +755,7 @@ For added transparency about when changes are made to this document, a
 changelog is maintained below.
 
 +----------------------+----------------------+-----------------------+
-| Version \#           | Authors              | Description           |
+| Version &#35;        | Authors              | Description           |
 +======================+======================+=======================+
 | 1.0                  | Roseline Bassey;     | Initial release.      |
 |                      | Joseph Gayoso;       | Copyediting led by    |
@@ -958,40 +770,32 @@ These resources will help you take Fedora to the people.
 
 ## Where to find the Fedora Marketing Team {#contact}
 
-- [Our room on Matrix]({team_synch_communication})
-
-- [Our tag on Fedora Discussion]({team_asynch_communication})
-
-- [Our planning discussions on GitLab]({team_issue_tracker}/-/issues)
+&#42; [Our room on Matrix]({team_synch_communication}) &#42; [Our tag on
+Fedora Discussion]({team_asynch_communication}) &#42; [Our planning
+discussions on GitLab]({team_issue_tracker}/-/issues)
 
 The best way to find and contact the Marketing team is on Matrix/Element
 or by opening a ticket on GitLab.
 
 ## The social media profiles we currently manage {#social-media}
 
-- [Mastodon](https://fosstodon.org/@fedora)
+&#42; [Mastodon](https://fosstodon.org/@fedora) &#42;
+[Instagram](https://www.instagram.com/thefedoraproject/) &#42;
+[Twitter](https://twitter.com/fedora) &#42;
+[LinkedIn](https://www.linkedin.com/company/fedora-project/) &#42;
+[YouTube](https://www.youtube.com/@fedora/)
 
-- [Instagram](https://www.instagram.com/thefedoraproject/)
-
-- [Twitter](https://twitter.com/fedora)
-
-- [LinkedIn](https://www.linkedin.com/company/fedora-project/)
-
-- [YouTube](https://www.youtube.com/@fedora/)
-
-Don't see your favorite social media platform here? **Help us spread the
-word by joining as a social media manager or helping create content for
-it!**
+Don't see your favorite social media platform here? &#42;Help us spread
+the word by joining as a social media manager or helping create content
+for it!&#42;
 
 ## The tools we use in our work {#tools}
 
-- We use [HackMD](https://hackmd.io/) for working in collaboration in
-  our notes;
-
-- We use both [Penpot](https://design.penpot.app) and
-  [Inkscape](https://inkscape.org/) for our graphic design work. They
-  are the same tools the Fedora Design Team uses, so you can also help
-  the Design Team out by learning to use our tools.
+&#42; We use [HackMD](https://hackmd.io/) for working in collaboration
+in our notes; &#42; We use both [Penpot](https://design.penpot.app) and
+[Inkscape](https://inkscape.org/) for our graphic design work. They are
+the same tools the Fedora Design Team uses, so you can also help the
+Design Team out by learning to use our tools.
 
 # Introducing Fedora Ready {#_introducing_fedora_ready}
 
@@ -1014,49 +818,39 @@ can easily locate where to buy them.
 
 ## What Fedora Ready is not {#fedora-ready-is-not}
 
-- Fedora Ready is NOT a certification or endorsement program.
-
-- Fedora Ready is not a formal partnership program nor are we in legal
-  partnership with vendors listed on our compatibility list. Vendors
-  oversee the lifecycle of their devices and offer what makes a good
-  experience for their customers.
+&#42; Fedora Ready is NOT a certification or endorsement program. &#42;
+Fedora Ready is not a formal partnership program nor are we in legal
+partnership with vendors listed on our compatibility list. Vendors
+oversee the lifecycle of their devices and offer what makes a good
+experience for their customers.
 
 ## Criteria for Vendor Listing {#criteria}
 
 Vendors are listed under Fedora Ready if:
 
-- A vendor is selling a computer with Fedora Linux available
-  pre-installed:
+&#42; A vendor is selling a computer with Fedora Linux available
+pre-installed: &#42;&#42; We have reputable contact with decision-makers
+or points of contact within your team. &#42;&#42; The computer is
+available for purchase online. &#42;&#42; If the product is in the
+pipeline and not ready yet, then we should be in contact in the lead up
+to the product's launch to tie our promotional efforts to that moment.
 
-  - We have reputable contact with decision-makers or points of contact
-    within your team.
+&#42; A vendor is officially supporting Fedora Linux as an operating
+system for their computer: &#42;&#42; We have reputable contact with
+decision-makers or points of contact within your team. &#42;&#42; You
+need to publicly share which devices have the support for Fedora Linux
+online. &#42;&#42; If the support is something that is planned, then we
+should be in contact with your team to tie promotion to the product's
+announcement.
 
-  - The computer is available for purchase online.
+&#42; A vendor offers official Fedora Linux support without
+preinstallation.
 
-  - If the product is in the pipeline and not ready yet, then we should
-    be in contact in the lead up to the product's launch to tie our
-    promotional efforts to that moment.
-
-- A vendor is officially supporting Fedora Linux as an operating system
-  for their computer:
-
-  - We have reputable contact with decision-makers or points of contact
-    within your team.
-
-  - You need to publicly share which devices have the support for Fedora
-    Linux online.
-
-  - If the support is something that is planned, then we should be in
-    contact with your team to tie promotion to the product's
-    announcement.
-
-- A vendor offers official Fedora Linux support without preinstallation.
-
-- They agree to ship a Fedora Linux Edition (such as [Fedora KDE Plasma
-  Desktop](https://fedoraproject.org/kde/) or [Fedora
-  Workstation](https://fedoraproject.org/workstation/)) unmodified when
-  using the Fedora trademark and are in compliance with all Fedora
-  trademark guidelines.
+&#42; They agree to ship a Fedora Linux Edition (such as [Fedora KDE
+Plasma Desktop](https://fedoraproject.org/kde/) or [Fedora
+Workstation](https://fedoraproject.org/workstation/)) unmodified when
+using the Fedora trademark and are in compliance with all Fedora
+trademark guidelines.
 
 :::: note
 ::: title
@@ -1078,41 +872,38 @@ list. This helps us maintain the program's value.
 
 ### A Vendor will be delisted from the program if: {#delisting-criteria}
 
-- A vendor decides to stop supporting Fedora Linux on their devices
-  after confirmation.
-
-- A vendor ships a modified Fedora Linux when using the Fedora trademark
-  or in a manner that differs from what we offer directly to our users.
-
-- A vendor is non-compliance with all Fedora trademark guidelines.
-
-- A vendor's actions conflict with our values or become detrimental to
-  the program's integrity. In such cases, we reserve the right to take
-  necessary actions, including removing the vendor and /or product from
-  the program, to protect the integrity of the program and our
-  trademark.
+&#42; A vendor decides to stop supporting Fedora Linux on their devices
+after confirmation. &#42; A vendor ships a modified Fedora Linux when
+using the Fedora trademark or in a manner that differs from what we
+offer directly to our users. &#42; A vendor is non-compliance with all
+Fedora trademark guidelines. &#42; A vendor's actions conflict with our
+values or become detrimental to the program's integrity. In such cases,
+we reserve the right to take necessary actions, including removing the
+vendor and /or product from the program, to protect the integrity of the
+program and our trademark.
 
 ### Delisting Process
 
-**Initial Communication**: If a vendor does not meet our criteria, we
-will notify the vendor about the possibility of being delisted. We will
-specify the issues observed and the criteria they have failed to meet.
+&#42;Initial Communication&#42;: If a vendor does not meet our criteria,
+we will notify the vendor about the possibility of being delisted. We
+will specify the issues observed and the criteria they have failed to
+meet.
 
-**Vendor Response Period**: The vendor will have a specified period
-(e.g., 30 days) to respond to the notification and implement the
+&#42;Vendor Response Period&#42;: The vendor will have a specified
+period (e.g., 30 days) to respond to the notification and implement the
 necessary corrective actions to comply with Fedora Ready standards.
 
-**Evaluation of Response**: After the response period, we will
+&#42;Evaluation of Response&#42;: After the response period, we will
 re-evaluate the vendor's status. If the vendor has addressed the issues
 satisfactorily, we will continue their listing with a probationary
 review scheduled. If the vendor has failed to comply or the response is
 unsatisfactory, we will proceed to the next step.
 
-**Final Decision and Notification**: We will make a final decision on
-delisting the vendor. If delisting is decided, we will notify the vendor
-of the decision and the reasons for it.
+&#42;Final Decision and Notification&#42;: We will make a final decision
+on delisting the vendor. If delisting is decided, we will notify the
+vendor of the decision and the reasons for it.
 
-**Update Listing**: We will update the [Fedora Ready compatibility
+&#42;Update Listing&#42;: We will update the [Fedora Ready compatibility
 list](ready/list.xml) accordingly.
 
 ## Understanding our Limitations {#limitations}
@@ -1124,14 +915,14 @@ supporting vendors remains unwavering.
 
 ### What This Means for Vendors {#vendors}
 
-- **Availability:** Our team members volunteer their time alongside
-  their personal and professional commitments. Because of this, our
-  response times may be a bit longer than what you might expect from a
-  full-time corporate team.
+- &#42;Availability:&#42; Our team members volunteer their time
+  alongside their personal and professional commitments. Because of
+  this, our response times may be a bit longer than what you might
+  expect from a full-time corporate team.
 
-- **Resources:** We do not have specific resources allocated exclusively
-  for this program. However, we are here to provide feedback and
-  guidance in various forms. Ultimately, it is up to the vendors to
+- &#42;Resources:&#42; We do not have specific resources allocated
+  exclusively for this program. However, we are here to provide feedback
+  and guidance in various forms. Ultimately, it is up to the vendors to
   implement and support Fedora Linux on their devices.
 
 ### How We've Supported Vendors in the Past {#past}
@@ -1140,41 +931,32 @@ Despite these constraints, we have successfully provided support to
 vendors in various ways. Here are a few examples of what we have helped
 vendors with in the past:
 
-- Two product launches for Slimbook which has included social media
-  campaigns, distribution to media outlets, co-writing of the product's
-  announcement, and an episode on the [Fedora
-  Podcast](https://fedoraproject.fireside.fm/31)
-
-- Direct and confidential contact with the Fedora Quality Team for quick
-  help with issues as they have arisen (not promised, case by case)
-
-- The Fedora Ready [compatibility list](ready/list.xml)
-
-- Regular social media posts and boosts between accounts to support each
-  other among our respective communities
+&#42; Two product launches for Slimbook which has included social media
+campaigns, distribution to media outlets, co-writing of the product's
+announcement, and an episode on the [Fedora
+Podcast](https://fedoraproject.fireside.fm/31) &#42; Direct and
+confidential contact with the Fedora Quality Team for quick help with
+issues as they have arisen (not promised, case by case) &#42; The Fedora
+Ready [compatibility list](ready/list.xml) &#42; Regular social media
+posts and boosts between accounts to support each other among our
+respective communities
 
 ## How We Support Vendors {#support}
 
 Fedora Ready support vendors by offering:
 
-- Marketing support through Fedora's channels.
-
-- Technical support for integrating Fedora Linux with their hardware.
-
-- Liaison support to foster community connections.
-
-- Curating feedback from users.
+&#42; Marketing support through Fedora's channels. &#42; Technical
+support for integrating Fedora Linux with their hardware. &#42; Liaison
+support to foster community connections. &#42; Curating feedback from
+users.
 
 ## Vendor and Device Categories {#devices}
 
-- **Fedora preinstalled:** Computers that come with Fedora Linux
-  officially preinstalled by the vendor.
-
-- **Fedora supported by vendor:** Computers tested and verified to run
-  Fedora Linux successfully.
-
-- **Fedora may run:** Computers that may run Fedora Linux successfully
-  based on informal assurances from the vendor.
+&#42; &#42;Fedora preinstalled:&#42; Computers that come with Fedora
+Linux officially preinstalled by the vendor. &#42; &#42;Fedora supported
+by vendor:&#42; Computers tested and verified to run Fedora Linux
+successfully. &#42; &#42;Fedora may run:&#42; Computers that may run
+Fedora Linux successfully based on informal assurances from the vendor.
 
 For example, some Lenovo devices have not been tested for Fedora Linux,
 but they were tested for Ubuntu. The Lenovo Linux team has informally
@@ -1183,7 +965,7 @@ said that Fedora Linux has a decent chance of running on those devices.
 ## Where Can You Find Fedora Ready Vendors and Devices? {#list}
 
 You can find Vendors and Fedora Ready approved devices on our
-[compatibility list](ready/list.xml#fedora-ready-approved-devices).
+[compatibility list](ready/list.adoc&#35;fedora-ready-approved-devices).
 
 ## How to Contact Us {#contact}
 
@@ -1197,7 +979,7 @@ For added transparency about when changes are made to this document, a
 changelog is maintained below.
 
 +----------------------+----------------------+-----------------------+
-| Version \#           | Authors              | Description           |
+| Version &#35;        | Authors              | Description           |
 +----------------------+----------------------+-----------------------+
 | 1.1                  | Neal Gompa           | Clarify and           |
 |                      |                      | genericize the        |
@@ -1213,11 +995,12 @@ changelog is maintained below.
 
 # Fedora Ready Brand Guidelines {#_fedora_ready_brand_guidelines}
 
-Roseline Bassey \<<roseline-bassey@fedoraproject.org>\>; Justin W.
-Wheeler \<<jww@fedoraproject.org>\>; Fedora community contributors
-2025-02-17
+Roseline Bassey &lt;<roseline-bassey@fedoraproject.org>\\&gt
 
-**Official Fedora Ready Brand Elements Usage and Guidelines**
+:   Justin W. Wheeler &lt;<jww@fedoraproject.org>&gt;; Fedora community
+    contributors 2025-02-17
+
+&#42;Official Fedora Ready Brand Elements Usage and Guidelines&#42;
 
 This document outlines the proper use of the Fedora [Fedora
 Ready](:ready/index.xml) identity elements. It is important to note that
@@ -1260,9 +1043,9 @@ stand out and is easily identifiable.
 ::: title
 :::
 
-**Do not use the Fedora Ready logos on this page without written
-permission**. The images on this page are Fedora trademarks and are not
-licensed for reuse. Please obtain permission for using the Fedora
+&#42;Do not use the Fedora Ready logos on this page without written
+permission&#42;. The images on this page are Fedora trademarks and are
+not licensed for reuse. Please obtain permission for using the Fedora
 trademark and follow all applicable guidelines set out on this page and
 in the [official trademark guidelines](legal/trademarks.xml).
 ::::
@@ -1291,39 +1074,31 @@ follow this process:
   make your request.
 
 - If approved, read this part of the [Fedora logo
-  guldeline]({url_wiki}/Logo/UsageGuidelines#Obtaining_the_Fedora_logo_to_your_specifications)
+  guldeline]({url_wiki}/Logo/UsageGuidelines&#35;Obtaining_the_Fedora_logo_to_your_specifications)
   on how to obtain the logo.
 
 ## Using our Logo and Name {#logo-usage}
 
-The \"Fedora Ready\" name and logo are trademarks of Red Hat, Inc.
+The \'Fedora Ready\' name and logo are trademarks of Red Hat, Inc.
 Please follow the following guidelines for the proper usage of our name
 and logo.
 
 ## Usage Guidelines
 
-- "Fedora Ready" name and logo should not be used in any context that
-  implies Fedora officially endorses a vendor, hardware, product, or
-  service or in a way that implies an affiliation with Fedora and/or
-  Fedora Ready brand.
-
-- **The Fedora Ready Logo:** The Fedora Ready logo is our primary logo.
-  It is made up of Fedora emblem, \"READY\" label, and a gimmick. It
-  should only be used on white, black, or gray backgrounds.
-
-- Ensure sufficient contrast between the logo and the background.
-
-- Maintain a clear space around the logo equal to the height of the
-  letter \"X\". This ensures other elements do not crowd the logo.
-
-- Our logo should be used in a manner that aligns with our brand values
-  and identity.
-
-- To use our logo you need to request formal approval from the Fedora
-  Ready team with details of the intended use.
-
-- Provide specifics on where and how the logo will be used and displayed
-  to ensure proper evaluation.
+&#42; "Fedora Ready" name and logo should not be used in any context
+that implies Fedora officially endorses a vendor, hardware, product, or
+service or in a way that implies an affiliation with Fedora and/or
+Fedora Ready brand. &#42; &#42;The Fedora Ready Logo:&#42; The Fedora
+Ready logo is our primary logo. It is made up of Fedora emblem,
+\'READY\' label, and a gimmick. It should only be used on white, black,
+or gray backgrounds. &#42; Ensure sufficient contrast between the logo
+and the background. &#42; Maintain a clear space around the logo equal
+to the height of the letter \'X\'. This ensures other elements do not
+crowd the logo. &#42; Our logo should be used in a manner that aligns
+with our brand values and identity. &#42; To use our logo you need to
+request formal approval from the Fedora Ready team with details of the
+intended use. &#42; Provide specifics on where and how the logo will be
+used and displayed to ensure proper evaluation.
 
 ### Minimum Size {#logo-size}
 
@@ -1352,17 +1127,14 @@ digital or 20mm in print.
 To maintain consistency across all materials we recommend using the
 following fonts. They are both openly licensed and freely shareable:
 
-- **Open Sans**: For body text and copy font.
-
-- **Montserrat**: For titles and headlines.
+&#42; &#42;Open Sans&#42;: For body text and copy font. &#42;
+&#42;Montserrat&#42;: For titles and headlines.
 
 ## Imagery and Graphics {#imagery}
 
-- Use only the product photos provided by the vendor or on the vendor's
-  product page.
-
-- Use high-quality, high-resolution product photos or graphics that
-  reflect the professionalism of Fedora Ready.
+&#42; Use only the product photos provided by the vendor or on the
+vendor's product page. &#42; Use high-quality, high-resolution product
+photos or graphics that reflect the professionalism of Fedora Ready.
 
 # Fedora Ready Compatibility List {#_fedora_ready_compatibility_list}
 
@@ -1380,34 +1152,27 @@ intended for use with Fedora Linux.
 ## Criteria for Vendor Listing {#criteria}
 
 To get your device listed, hardware vendors can check out our [Criteria
-for Vendor Listing](ready/index.xml#criteria). Once you have reviewed
-it, feel free to [contact us](ready/index.xml#contact) to discuss about
-adding your device(s) to the list.
+for Vendor Listing](ready/index.adoc&#35;criteria). Once you have
+reviewed it, feel free to [contact us](ready/index.adoc&#35;contact) to
+discuss about adding your device(s) to the list.
 
 ## Device Categories {#categories}
 
 Vendors and devices are categorized into three main groups:
 
-- **Fedora preinstalled:** Computers that come with Fedora Linux
-  officially preinstalled by the vendor.
-
-- **Fedora supported by vendor:** Computers tested and verified to run
-  Fedora Linux successfully.
-
-- **Fedora may run:** Computers that may run Fedora Linux successfully
-  based on informal assurances from the vendor.
+&#42; &#42;Fedora preinstalled:&#42; Computers that come with Fedora
+Linux officially preinstalled by the vendor. &#42; &#42;Fedora supported
+by vendor:&#42; Computers tested and verified to run Fedora Linux
+successfully. &#42; &#42;Fedora may run:&#42; Computers that may run
+Fedora Linux successfully based on informal assurances from the vendor.
 
 ## Fedora Ready Vendors
 
 Please find Fedora Ready hardware and vendor specific page below:
 
-- [Lenovo](ready/lenovo.xml)
-
-- [Framework](ready/framework.xml)
-
-- [Slimbook](ready/slimbook.xml)
-
-- [NovaCustom](ready/novacustom.xml)
+&#42; [Lenovo](ready/lenovo.xml) &#42; [Framework](ready/framework.xml)
+&#42; [Slimbook](ready/slimbook.xml) &#42;
+[NovaCustom](ready/novacustom.xml)
 
 # Framework {#_framework}
 
@@ -1423,7 +1188,7 @@ We're also working on enabling firmware updates through LVFS to complete
 the Linux experience. Details on Framework Linux laptops are available
 at <https://frame.work/linux>
 
-## [Fedora Supported by Vendor](ready/list.xml#categories)
+## [Fedora Supported by Vendor](ready/list.adoc&#35;categories)
 
 +-------------+-------------+-------------+-------------+-------------+
 | Level of    | Device Name | Tested      | Where to    | Notes       |
@@ -1650,8 +1415,8 @@ at <https://frame.work/linux>
 |             |             |             |             | Europe and  |
 |             |             |             |             | India look  |
 |             |             |             |             | for the     |
-|             |             |             |             | \"Build     |
-|             |             |             |             | Your PC\"   |
+|             |             |             |             | \'Build     |
+|             |             |             |             | Your PC\'   |
 |             |             |             |             | option on   |
 |             |             |             |             | certified   |
 |             |             |             |             | laptops and |
@@ -1668,13 +1433,14 @@ at <https://frame.work/linux>
 |             |             |             |             | {#fedora-pr |
 |             |             |             |             | einstalled} |
 |             |             |             |             | == [Fedora  |
-|             |             |             |             | Preinst     |
-|             |             |             |             | alled](read |
-|             |             |             |             | y/list.xml# |
+|             |             |             |             | P           |
+|             |             |             |             | reinstalled |
+|             |             |             |             | ](ready/lis |
+|             |             |             |             | t.adoc&#35; |
 |             |             |             |             | categories) |
 |             |             |             |             |             |
-|             |             |             |             | \[cols=\"   |
-|             |             |             |             | 1,1,1,1\"\] |
+|             |             |             |             | \[cols=\'   |
+|             |             |             |             | 1,1,1,1\'\] |
 +-------------+-------------+-------------+-------------+-------------+
 
 \|Level of Support \|Device Name \|Tested Distro \|Where to Purchase
@@ -1696,12 +1462,12 @@ US\] \|Fedora preinstalled \|Thinkpad X13 6th Gen AMD \|Fedora 42
 \|https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux\[e.g.
 US\] \|Fedora preinstalled \|Thinkpad X1 Carbon 12th Gen \|Fedora 39
 \|https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083\[USA\]
-&
+&amp;
 [Canada](https://www.lenovo.com/ca/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083)
 \|Fedora preinstalled \|Thinkpad X1 Carbon 11th Gen \|Fedora 38
 \|https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21HMCTO1WWGB3\[Europe\]
-& [North
-America](https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%253A%252F%252Fdiscussion.fedoraproject.org%252F&bundleId=21HMCTO1WWUS6)
+&amp; [North
+America](https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%253A%252F%252Fdiscussion.fedoraproject.org%252F&amp;bundleId=21HMCTO1WWUS6)
 \|Fedora preinstalled \|Thinkpad T14s 6th Gen AMD \|Fedora 41
 \|[USA](https://www.lenovo.com/us/en/laptops/results/?visibleDatas=699%3ALinux)
 (also in Canada) \|Fedora preinstalled \|Thinkpad T14 5th Gen AMD
@@ -1720,12 +1486,12 @@ America](https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%2
 
 \|Fedora preinstalled \|Thinkpad X1 Carbon 12th Gen \|Fedora 39
 \|[USA](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083)
-&
+&amp;
 [Canada](https://www.lenovo.com/ca/en/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-(14-inch-intel)/len101t0083)
 \|Fedora preinstalled \|Thinkpad X1 Carbon 11th Gen \|Fedora 38
 \|[Europe](https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21HMCTO1WWGB3)
-& [North
-America](https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%253A%252F%252Fdiscussion.fedoraproject.org%252F&bundleId=21HMCTO1WWUS6)
+&amp; [North
+America](https://www.lenovo.com/us/en/configurator/cto/index.html?orgRef=https%253A%252F%252Fdiscussion.fedoraproject.org%252F&amp;bundleId=21HMCTO1WWUS6)
 
 \|Fedora preinstalled \|ThinkPad Z16 1st Gen \|Fedora 36 \|Lenovo
 Europe - build your own PC (e.g. [Configure Your PC, Lenovo
@@ -1739,9 +1505,9 @@ UK](https://www.lenovo.com/gb/en/configurator/cto/index.html?bundleId=21J5CTO1WW
 
 +-----------------------------------------------------------------------+
 | []{#fedora-supported-by-vendor} == [Fedora Supported by               |
-| Vendor](ready/list.xml#categories)                                    |
+| Vendor](ready/list.adoc&#35;categories)                               |
 |                                                                       |
-| \[cols=\"1,1,1,1,1\"\]                                                |
+| \[cols=\'1,1,1,1,1\'\]                                                |
 +-----------------------------------------------------------------------+
 
 \|Level of Support \|Device Name \|Tested Distro \|Where to Purchase
@@ -1879,9 +1645,10 @@ driver from RPM Fusion recommended
 \| \|
 
 +-----------------------------------------------------------------------+
-| []{#fedora-may-run} == [Fedora May Run](ready/list.xml#categories)    |
+| []{#fedora-may-run} == [Fedora May                                    |
+| Run](ready/list.adoc&#35;categories)                                  |
 |                                                                       |
-| \[cols=\"1,1,1\"\]                                                    |
+| \[cols=\'1,1,1\'\]                                                    |
 +-----------------------------------------------------------------------+
 
 \|Level of Support \|Device Name \|Tested Distro
@@ -2039,9 +1806,9 @@ Yoga \|RHEL 7.4 - 7.x
 | <https://novacustom.com/>.                                            |
 |                                                                       |
 | []{#fedora-preinstalled} == [Fedora                                   |
-| Preinstalled](ready/list.xml#categories)                              |
+| Preinstalled](ready/list.adoc&#35;categories)                         |
 |                                                                       |
-| \[cols=\"1,1,1,1\"\]                                                  |
+| \[cols=\'1,1,1,1\'\]                                                  |
 +-----------------------------------------------------------------------+
 
 \|Level of Support \|Device Name \|Tested Distro \|Where to Purchase
@@ -2059,13 +1826,13 @@ preinstalled \|V56 Series \|Fedora 42
 | 2015, shipping them globally with exceptional technical support.      |
 | Additionally, it engages with the community through local projects,   |
 | partnerships with Linux desktops like Fedora, and offers free courses |
-| through its \"Linux Center\" academy. Details on Slimbook Fedora      |
+| through its \'Linux Center\' academy. Details on Slimbook Fedora      |
 | laptops are available at <https://fedora.slimbook.com/>               |
 |                                                                       |
 | []{#fedora-preinstalled} == [Fedora                                   |
-| Preinstalled](ready/list.xml#categories)                              |
+| Preinstalled](ready/list.adoc&#35;categories)                         |
 |                                                                       |
-| \[cols=\"1,1,1,1,1\"\]                                                |
+| \[cols=\'1,1,1,1,1\'\]                                                |
 +-----------------------------------------------------------------------+
 
 \|Level of Support \|Device Name \|Tested Distro \|Where to Purchase
@@ -2106,27 +1873,25 @@ No longer on sale; compatible with Fedora 39
 
 Our formal processes for getting things done.
 
-- [Defining who is officially part of the Marketing
-  team]({team_issue_tracker}/-/issues/13)
+&#42; [Defining who is officially part of the Marketing
+team]({team_issue_tracker}/-/issues/13) &#42; [Defining who gets access
+to our social media
+profiles](https://gitlab.com/fedora/mindshare/home/-/issues/26) &#42;
+[Processing event VODs (how we turn the livestreams into separate
+talks)](sops/stream-uploads.xml) &#42; [Organizing and running team
+meetings](get-involved.adoc&#35;meetings)
 
-- [Defining who gets access to our social media
-  profiles](https://gitlab.com/fedora/mindshare/home/-/issues/26)
-
-- [Processing event VODs (how we turn the livestreams into separate
-  talks)](sops/stream-uploads.xml)
-
-- [Organizing and running team meetings](get-involved.xml#meetings)
-
-  - [Marketing Team Membership
-    ^\[🡵\]^](https://gitlab.com/fedora/marketing/marketing-planning/-/issues/13)
-
-  - [Social Media Access
-    ^\[🡵\]^](https://gitlab.com/fedora/mindshare/home/-/issues/26)
+&#42;&#42; [Marketing Team Membership
+^\[🡵\]^](https://gitlab.com/fedora/marketing/marketing-planning/-/issues/13)
+&#42;&#42; [Social Media Access
+^\[🡵\]^](https://gitlab.com/fedora/mindshare/home/-/issues/26)
 
 # Processing Livestreams: A Standardized Workflow {#_processing_livestreams_a_standardized_workflow}
 
-Adrian Edwards \<<moralcode@fedoraproject.org>\>; Justin W. Wheeler
-\<<jww@fedoraproject.org>\>; Fedora community contributors
+Adrian Edwards &lt;<moralcode@fedoraproject.org>\\&gt
+
+:   Justin W. Wheeler &lt;<jww@fedoraproject.org>&gt;; Fedora community
+    contributors
 
 This guide outlines a streamlined procedure for processing Fedora
 livestreams (e.g., Flock, release parties, Fedora Week of Diversity),
@@ -2134,25 +1899,18 @@ making it easier to edit and share recordings of these events. This
 standardized workflow utilizes tools and automation to minimize manual
 effort and ensure consistency.
 
-<div>
-
+:::: formalpara
 ::: title
 Tools You'll Need
 :::
 
-- [LosslessCut](https://www.mifi.no/losslesscut/) (version 3.62.0 or
-  later recommended)
-
-- [Sponsorblock](https://sponsor.ajay.app/) (optional, but highly
-  recommended)
-
-- [Inkscape](https://inkscape.org/) with the [Next Generator
-  extension](https://gitlab.com/Moini/nextgenerator) (for creating
-  thumbnails)
-
-- Python scripts (provided in the guide)
-
-</div>
+&#42; [LosslessCut](https://www.mifi.no/losslesscut/) (version 3.62.0 or
+later recommended) &#42; [Sponsorblock](https://sponsor.ajay.app/)
+(optional, but highly recommended) &#42;
+[Inkscape](https://inkscape.org/) with the [Next Generator
+extension](https://gitlab.com/Moini/nextgenerator) (for creating
+thumbnails) &#42; Python scripts (provided in the guide)
+::::
 
 :::: note
 ::: title
@@ -2173,12 +1931,13 @@ used for automation and consistency.
 If your event uses Pretalx, you can automatically generate the CSV file
 using a Python script:
 
-1.  Clone the repository:
-    `git clone https://gitlab.com/fedora/commops/home.git`
+1.  Clone the repository: &#96;git clone
+    <https://gitlab.com/fedora/commops/home.git&#96>;
 
-2.  Navigate to the script: `cd commops/scripts/conference`
+2.  Navigate to the script: &#96;cd commops/scripts/conference&#96;
 
-3.  Run the script: `python main.py <Pretalx Schedule URL>`
+3.  Run the script: &#96;python main.py &lt;Pretalx Schedule
+    URL&gt;&#96;
 
 :::: note
 ::: title
@@ -2188,18 +1947,15 @@ Ensure the Pretalx schedule accurately reflects the livestream order.
 ::::
 
 The script can also generate YouTube descriptions based on a template
-file (`description.template.txt`).
+file (&#96;description.template.txt&#96;).
 
 ### 1.2 Manual Metadata Preparation {#manual-metadata}
 
 If you're not using Pretalx, create a CSV file with these columns:
 
-- `Title`: The title of the talk.
-
-- `Speakers`: The speaker(s) of the talk.
-
-- `Identifier`: A unique identifier for the talk (lowercase, no spaces
-  or special characters).
+&#42; &#96;Title&#96;: The title of the talk. &#42; &#96;Speakers&#96;:
+The speaker(s) of the talk. &#42; &#96;Identifier&#96;: A unique
+identifier for the talk (lowercase, no spaces or special characters).
 
 Populate the CSV with information for each talk.
 
@@ -2213,8 +1969,8 @@ This helps automate splitting the video later.
 2.  Open the YouTube video.
 
 3.  Use the Sponsorblock controls to tag intermissions (usually
-    \"Intermission/Intro Animation\") and optionally tag individual
-    talks as \"Chapter.\"
+    \'Intermission/Intro Animation\') and optionally tag individual
+    talks as \'Chapter.\'
 
 4.  Submit your tags to the Sponsorblock database.
 
@@ -2223,10 +1979,10 @@ This helps automate splitting the video later.
 YouTube uses a specific format for chapters. You can automate this
 formatting using a Python script:
 
-1.  Navigate to the script: `cd commops/scripts/timestamps`
+1.  Navigate to the script: &#96;cd commops/scripts/timestamps&#96;
 
-2.  Run the script:
-    `python main.py <YouTube video URL> [<stream CSV file>]`
+2.  Run the script: &#96;python main.py &lt;YouTube video URL&gt;
+    \[&lt;stream CSV file&gt;\]&#96;
 
 The script will generate the timestamps. If you provide the stream CSV,
 it will also fill in the talk titles.
@@ -2236,26 +1992,22 @@ match the YouTube format.
 
 ## Step 4: Download and Split the Video {#splitting-video}
 
-Use `yt-dlp` to download the video:
+Use &#96;yt-dlp&#96; to download the video:
 
-    yt-dlp <YouTube video URL>
+    yt-dlp \&lt;YouTube video URL\&gt;
 
 Then, use LosslessCut to split the video based on the Sponsorblock tags:
 
 1.  Open LosslessCut and drag the downloaded video into it.
 
-2.  Import the `losslesscut.csv` file (if generated) to load the
+2.  Import the &#96;losslesscut.csv&#96; file (if generated) to load the
     segments.
 
 3.  Verify the segments align with the talks.
 
-4.  Click the export button and configure the settings:
-
-    - Output folder
-
-    - Output file names: `${SEG_LABEL}${EXT}`
-
-    - Enable \"Smart cut (experimental)\"
+4.  Click the export button and configure the settings: &#42; Output
+    folder &#42; Output file names: &#96;\${SEG_LABEL}\${EXT}&#96; &#42;
+    Enable \'Smart cut (experimental)\'
 
 5.  Click *Export* to split the video.
 
@@ -2265,18 +2017,13 @@ Use Inkscape with the Next Generator extension to create thumbnails for
 each talk:
 
 1.  Design your thumbnail template in Inkscape, using variables like
-    `%VAR_TalkName%` and `%VAR_PresenterNames%` to represent data from
-    your CSV.
+    &#96;%VAR_TalkName%&#96; and &#96;%VAR_PresenterNames%&#96; to
+    represent data from your CSV.
 
-2.  Go to **Extensions \> Export \> NextGenerator**.
+2.  Go to &#42;Extensions &gt; Export &gt; NextGenerator&#42;.
 
-3.  Configure the export settings:
-
-    - CSV file path
-
-    - File format
-
-    - File name pattern (e.g., `%VAR_Identifier%`)
+3.  Configure the export settings: &#42; CSV file path &#42; File format
+    &#42; File name pattern (e.g., &#96;%VAR_Identifier%&#96;)
 
 4.  Click *Export* to generate the thumbnails.
 
@@ -2285,12 +2032,12 @@ each talk:
 You can add a short intro with the thumbnail at the beginning of each
 talk using a Python script:
 
-1.  Navigate to the script: `cd commops/scripts/transcode`
+1.  Navigate to the script: &#96;cd commops/scripts/transcode&#96;
 
 2.  Prepare a CSV file with talk data (if not already generated).
 
-3.  Configure the `config.ini` file with settings for intro duration,
-    etc.
+3.  Configure the &#96;config.ini&#96; file with settings for intro
+    duration, etc.
 
 4.  Run the script according to the instructions in the README.
 
@@ -2299,21 +2046,14 @@ talk using a Python script:
 While this workflow incorporates significant automation, some areas can
 be further improved:
 
-- **Chapter Creation**: Streamline the process of creating YouTube
-  chapters.
-
-- **Recombining Clips**: Automate the handling of interruptions and
-  inconsistencies in the livestream.
-
-- **Video Reformatting**: Automatically convert videos to optimal
-  formats for processing.
-
-- **Captions**: Explore automated captioning and translation solutions.
-
-- **Audio Processing**: Implement loudness normalization and dynamic
-  range compression.
-
-- **End Cards**: Automate the addition of end cards to videos.
+&#42; &#42;Chapter Creation&#42;: Streamline the process of creating
+YouTube chapters. &#42; &#42;Recombining Clips&#42;: Automate the
+handling of interruptions and inconsistencies in the livestream. &#42;
+&#42;Video Reformatting&#42;: Automatically convert videos to optimal
+formats for processing. &#42; &#42;Captions&#42;: Explore automated
+captioning and translation solutions. &#42; &#42;Audio Processing&#42;:
+Implement loudness normalization and dynamic range compression. &#42;
+&#42;End Cards&#42;: Automate the addition of end cards to videos.
 
 These improvements would further enhance the efficiency and robustness
 of the livestream processing pipeline.
@@ -2323,20 +2063,14 @@ of the livestream processing pipeline.
 Do you work on a Fedora-related project but can't get people to know it
 exists?
 
-- **[Open a ticket in our GitLab]({team_issue_tracker}/-/issues/new)!**
-
-  - **Title must include:** (Team Name) Marketing Ask
-
-  - **Description:** Tell us what your team does and who your team
-    leaders are.
-
-    - What is your team looking for?
-
-      - More Contributors?
-
-      - Capture more attention?
-
-  - **Provide a point of contact:** Matrix ID or email
+&#42; &#42;[Open a ticket in our
+GitLab]({team_issue_tracker}/-/issues/new)!&#42; &#42;&#42; &#42;Title
+must include:&#42; (Team Name) Marketing Ask &#42;&#42;
+&#42;Description:&#42; Tell us what your team does and who your team
+leaders are. &#42;&#42;&#42; What is your team looking for?
+&#42;&#42;&#42;&#42; More Contributors? &#42;&#42;&#42;&#42; Capture
+more attention? &#42;&#42; &#42;Provide a point of contact:&#42; Matrix
+ID or email
 
 The Marketing Team reviews tickets during our meetings. If your request
 is more urgent, let us know in our [Matrix
