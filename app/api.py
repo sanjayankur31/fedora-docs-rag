@@ -24,7 +24,7 @@ async def lifespan(app: FastAPI):
     chat_model = os.environ.get("GEN_RAG_CHAT_MODEL", "ollama:qwen3:1.7b")
     vs_config_file = os.environ.get(
         "GEN_RAG_VS_CONFIG",
-        "/home/asinha/Documents/02_Code/00_mine/NeuroML/software/neuroml-ai/rag_pkg/vector-stores.json",
+        "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores.json",
     )
 
     rag = RAG(chat_model=chat_model, vs_config_file=vs_config_file, memory=True)
