@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Enter one line description here.
+Test vector stores
 
-File:
+File: data-sources/test-vs.py
 
 Copyright 2026 Ankur Sinha
 Author: Ankur Sinha <sanjay DOT ankur AT gmail DOT com>
@@ -60,65 +60,83 @@ class FedoraDocsTest(object):
 
         info_files = sorted(glob(f"{self.stores_sources_path}/*.md", recursive=True))
 
-        for src in info_files:
-            src_path = Path(src)
-            vs_persist_dir = f"./vector-stores/{src_path.name.replace('.md', '')}_{self.embedding_model.replace(':', '_')}.db"
+        with open("vs-test.csv", "w") as f:
+            for src in info_files:
+                src_path = Path(src)
+                file = src_path.name.replace(".md", "").replace("-", " ")
+                vs_persist_dir = f"./vector-stores/{src_path.name.replace('.md', '')}_{self.embedding_model.replace(':', '_')}.db"
 
-            chroma_client_settings_text = chromadb.config.Settings(
-                is_persistent=True,
-                persist_directory=vs_persist_dir,
-                anonymized_telemetry=False,
-            )
-            collection_name = src_path.name.replace(".md", "")
-            if "fedora" not in collection_name:
-                collection_name = f"fedora-{collection_name}"
-            store = Chroma(
-                collection_name=collection_name,
-                embedding_function=self.embeddings,
-                client_settings=chroma_client_settings_text,
-            )
+                chroma_client_settings_text = chromadb.config.Settings(
+                    is_persistent=True,
+                    persist_directory=vs_persist_dir,
+                    anonymized_telemetry=False,
+                )
+                collection_name = src_path.name.replace(".md", "")
+                if "fedora" not in collection_name:
+                    collection_name = f"fedora-{collection_name}"
+                store = Chroma(
+                    collection_name=collection_name,
+                    embedding_function=self.embeddings,
+                    client_settings=chroma_client_settings_text,
+                )
 
-            # res = store.similarity_search_with_relevance_scores(query=query, k=2)
-            # self.logger.debug(f"-> {query}:\n{res}\n\n")
+                # query = src_path.name.replace(".md", "").replace("-", " ")
+                # query = "fedora council functions"
+                # res = store.similarity_search_with_relevance_scores(query=query, k=5)
+                # print(f"-> {query}:\n{res}\n\n")
 
-            docs = store.get(include=["embeddings"])
+                docs = store.get(include=["embeddings"])
 
-            self.logger.debug(f"{docs =}")
-            # leave out beginning and end to prevent out of index errors
-            all_ids = docs["ids"]
-            all_embeddings = docs["embeddings"]
-            if len(all_ids) > 3:
-                random_ids = random.sample(all_ids, k=int(len(all_ids) / 3))
-            else:
-                random_ids = [all_ids[1]]
+                self.logger.debug(f"{docs =}")
+                # leave out beginning and end to prevent out of index errors
+                all_ids = docs["ids"]
+                if not len(all_ids):
+                    self.logger.error(f"{collection_name} has NO IDS!")
+                    print(f"{file},0,0,0,INVALID")
+                    print(f"{file},0,0,0,INVALID", file=f)
+                    continue
 
-            similarities = []
+                all_embeddings = docs["embeddings"]
+                if len(all_ids) > 3:
+                    random_ids = random.sample(all_ids[:-1], k=int(len(all_ids) / 3))
+                else:
+                    random_ids = [all_ids[1]]
 
-            for id_ in random_ids:
-                id_x = all_ids.index(id_)
-                neighbours = all_embeddings[[id_x - 1, id_x + 1]]
-                main = all_embeddings[[id_x]]
-                self.logger.debug(f"{neighbours =}")
-                self.logger.debug(f"{neighbours.shape =}")
-                self.logger.debug(f"{main.shape =}")
-                similarity = cosine_similarity(main, neighbours)[0]
-                print(f"Similarity: {similarity}")
-                similarities.extend(similarity)
+                similarities = []
 
-            avg = numpy.mean(numpy.array(similarities))
-            file = src_path.name.replace(".md", "").replace("-", " ")
-            print(f"-> std ({file}): {avg}")
-            if avg < 0.60:
-                print("-> Disjoined!")
-            elif avg > 0.95:
-                print("-> Redundant!")
-            else:
-                print("-> OK")
+                print(f"{len(random_ids) =}")
 
-            print()
+                for id_ in random_ids:
+                    id_x = all_ids.index(id_)
+                    try:
+                        neighbours = all_embeddings[[id_x - 1, id_x + 1]]
+                    except IndexError:
+                        self.logger.warning(
+                            f"{collection_name}: Index error. Skipping."
+                        )
+                    main = all_embeddings[[id_x]]
+                    self.logger.debug(f"{neighbours =}")
+                    self.logger.debug(f"{neighbours.shape =}")
+                    self.logger.debug(f"{main.shape =}")
+                    similarity = cosine_similarity(main, neighbours)[0]
+                    similarities.extend(similarity)
+
+                avg = numpy.mean(numpy.array(similarities))
+                status = ""
+                if avg < 0.60:
+                    status = "Disjoined"
+                elif avg > 0.95:
+                    status = "Redundant"
+                else:
+                    status = "OK"
+
+                print(f"{file},{len(all_ids)},{len(random_ids)},{avg},{status}")
+                print(f"{file},{len(all_ids)},{len(random_ids)},{avg},{status}", file=f)
 
 
 if __name__ == "__main__":
-    converter = FedoraDocsTest(embedding_model="ollama:bge-m3:latest")
+    converter = FedoraDocsTest(
+        embedding_model="ollama:bge-m3:latest", logging_level=logging.WARNING
+    )
     converter.setup()
     converter.test()
