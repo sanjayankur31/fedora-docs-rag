@@ -51,28 +51,36 @@ def rag_cli(
                     pass
                 else:
                     with yaspin(text="Working ..."):
-                        async with httpx.AsyncClient() as client:
-                            response = await client.post(
-                                f"{url}/query",
-                                params={"query": single_query},
-                                timeout=None,
-                            )
-                            response_result = response.json().get("result")
-                            print(f"NeuroML-AI (AI) >>> {response_result}\n\n")
+                        try:
+                            async with httpx.AsyncClient() as client:
+                                response = await client.post(
+                                    f"{url}/query",
+                                    params={"query": single_query},
+                                    timeout=None,
+                                )
+                                response_result = response.json().get("result")
+                                print(f"NeuroML-AI (AI) >>> {response_result}\n\n")
+                        except httpx.RequestError as e:
+                            print("An error occured. Please try again")
+                            print(f"```\n{e}\n```")
 
             else:
                 while (query := input("NeuroML-AI (USER) >>> ")) != "quit":
                     # we use checkpoints, so we don't need to store and reload the
                     # state ourselves
                     with yaspin(text="Working ..."):
-                        async with httpx.AsyncClient() as client:
-                            response = await client.post(
-                                f"{url}/query",
-                                params={"query": query},
-                                timeout=None,
-                            )
-                            response_result = response.json().get("result")
-                            print(f"NeuroML-AI (AI) >>> {response_result}\n\n")
+                        try:
+                            async with httpx.AsyncClient() as client:
+                                response = await client.post(
+                                    f"{url}/query",
+                                    params={"query": query},
+                                    timeout=None,
+                                )
+                                response_result = response.json().get("result")
+                                print(f"NeuroML-AI (AI) >>> {response_result}\n\n")
+                        except httpx.RequestError as e:
+                            print("An error occured. Please try again")
+                            print(f"```\n{e}\n```")
 
         try:
             asyncio.run(cli_main())
