@@ -70,3 +70,5 @@ data-sources/repos/github*
 
 data-sources/sources/*.xml
 data-sources/vector-stores/*db
+
+data-sources/*vector-stores.tar.*
