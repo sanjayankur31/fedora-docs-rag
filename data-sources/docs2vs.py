@@ -63,8 +63,10 @@ class FedoraDocs(object):
             # strip prefix
             self.embedding_model = self.embedding_model.replace("ollama:", "")
 
-        self.embedding_model = self.embedding_model.replace(":cheapest", "").replace(
-            ":fastest", ""
+        self.embedding_model = (
+            self.embedding_model.replace(":cheapest", "")
+            .replace(":fastest", "")
+            .replace(":latest", "")
         )
 
     def create(self):
