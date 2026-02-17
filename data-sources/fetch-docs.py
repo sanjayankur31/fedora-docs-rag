@@ -60,8 +60,8 @@ class RepoToSingleAdoc(object):
     def __init__(self, embedding_model):
         self.logger = logging.getLogger("fetch-fedora-docs")
         self.logger.setLevel(logging.DEBUG)
-        self.repo_download_path = "./repos/"
-        self.output_path = "./sources/"
+        self.repo_download_path = Path("./repos/").absolute()
+        self.output_path = Path("./sources/").absolute()
 
     def runner(self):
         response = requests.get(all_docs_yaml)
@@ -90,6 +90,8 @@ class RepoToSingleAdoc(object):
 
         command = "git clone --depth=1"
         for repo, info in repo_urls.items():
+            if "Council" not in repo:
+                continue
             url = info["url"]
             branches = info["branches"]
             variables = {}
@@ -98,114 +100,115 @@ class RepoToSingleAdoc(object):
             url_map = {}
 
             self.logger.info(f"Processing {repo}")
-            repo_path = f"./{self.repo_download_path}/{repo}"
+            repo_path = f"{self.repo_download_path}/{repo}"
 
-            repo_command = command + f" {url} {repo_path}"
-            res = subprocess.run(repo_command.split())
-            if res.returncode:
-                self.logger.error(f"Git checkout failed for {repo}. Skipping.")
-                continue
-            else:
-                self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
-
+            # repo_command = command + f" {url} {repo_path}"
+            # res = subprocess.run(repo_command.split())
+            # if res.returncode:
+            #     self.logger.error(f"Git checkout failed for {repo}. Skipping.")
+            #     continue
+            # else:
+            #     self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
+            #
             with chdir(repo_path):
                 self.logger.debug(f"Working in {repo_path}")
                 cwd = Path(".")
-                nav_files = list(cwd.rglob("nav.adoc"))
-                if len(nav_files) == 0:
-                    self.logger.info(
-                        f"Repo '{repo}' does not include a 'nav.adoc' file. Skipping"
-                    )
-                    continue
-
-                web_url = docs_url_base
                 # get url:
                 # for the moment, use the top level repo url
                 # should be possible to map individual pages to web urls using the nav.adoc entries.
-                repo_config_file_path = list(cwd.rglob(repo_config_file))
-                if len(repo_config_file_path) == 0:
+                repo_config_file_paths = list(cwd.rglob(repo_config_file))
+                if len(repo_config_file_paths) == 0:
                     self.logger.critical(f"{repo_config_file} not found! Skipping")
                     continue
-                if len(repo_config_file_path) > 1:
-                    self.logger.warning(
-                        f"multiple {repo_config_file} files found! Using first one."
-                    )
-                config_file = repo_config_file_path[0]
+                for repo_config_file_path in repo_config_file_paths:
+                    web_url = docs_url_base
+                    self.logger.debug(f"processing {repo_config_file_path.absolute()}")
+                    config_file = repo_config_file_path
 
-                with open(config_file, "r") as f:
-                    repo_config = load(f, Loader=Loader)
-                    self.logger.debug(f"{repo_config =}")
-                    repo_ref = repo_config["name"]
-                    self.logger.debug(f"{repo_ref = }")
-                    web_url += f"/{repo_ref}"
+                    with chdir(config_file.parent):
+                        with open(config_file.name, "r") as f:
+                            repo_config = load(f, Loader=Loader)
+                            self.logger.debug(f"{repo_config =}")
+                            repo_ref = repo_config["name"]
+                            self.logger.debug(f"{repo_ref = }")
+                            web_url += f"/{repo_ref}"
 
-                    repo_branch = repo_config.get("version", "main")
-                    # TODO: how can it be None here?
-                    if not repo_branch:
-                        repo_branch = "main"
+                            repo_branch = repo_config.get("version", "main")
+                            # TODO: how can it be None here?
+                            if not repo_branch:
+                                repo_branch = "main"
 
-                    self.logger.debug(f"{repo_branch = } ({type(repo_branch)})")
-                    self.logger.debug(f"{branches = }")
+                            self.logger.debug(f"{repo_branch = } ({type(repo_branch)})")
+                            self.logger.debug(f"{branches = }")
 
-                    ignore_branches = ["None", "master", "main"]
-                    if repo_branch not in ignore_branches:
-                        if isinstance(branches, list):
-                            if len(branches) > 1:
-                                if current_release in branches:
-                                    web_url += f"/{current_release}"
+                            ignore_branches = ["None", "master", "main"]
+                            if repo_branch not in ignore_branches:
+                                if isinstance(branches, list):
+                                    if len(branches) > 1:
+                                        if current_release in branches:
+                                            web_url += f"/{current_release}"
+                                        else:
+                                            web_url += f"/{branches[0]}"
                                 else:
-                                    web_url += f"/{branches[0]}"
-                        else:
-                            web_url += f"/{repo_branch}"
+                                    web_url += f"/{repo_branch}"
 
-                    self.logger.debug(f"Repo web url: {web_url}")
-                    url_map["DEFAULT"] = web_url
+                            self.logger.debug(f"Repo web url: {web_url}")
+                            url_map["DEFAULT"] = web_url
 
-                for nav_file in nav_files:
-                    self.logger.debug(f"Processing {nav_file}")
-                    if "ROOT" not in str(nav_file.parent):
-                        module = str(nav_file.parent).split("/")[-1]
-                    else:
-                        module = ""
-                    self.logger.debug(f"{ module = }")
+                        nav_files = list(cwd.rglob("nav.adoc"))
+                        if len(nav_files) == 0:
+                            self.logger.info(
+                                f"Repo '{repo}/{repo_config_file_path.parent}' does not include a 'nav.adoc' file. Skipping"
+                            )
+                            continue
 
-                    with chdir(nav_file.parent):
-                        pagesdir = Path("./pages")
-                        partialsdir = Path("./partials")
-                        full_text += self.process_adoc(
-                            Path(nav_file.name),
-                            module,
-                            pagesdir,
-                            partialsdir,
-                            variables,
-                            url_map,
-                        )
+                        for nav_file in nav_files:
+                            self.logger.debug(f"Processing {nav_file}")
+                            if "ROOT" not in str(nav_file.parent):
+                                module_root = str(nav_file.parent).split("/")[-1]
+                            else:
+                                module_root = ""
+                            self.logger.debug(f"{ module_root = }")
 
-            print(f"{variables =}")
-            # replace all the variables we can
-            for key, value in variables.items():
-                full_text = full_text.replace("{" + key + "}", value)
+                            with chdir(nav_file.parent):
+                                pagesdir = Path("./pages")
+                                partialsdir = Path("./partials")
+                                full_text += self.process_adoc(
+                                    Path(nav_file.name),
+                                    web_url,
+                                    module_root,
+                                    pagesdir,
+                                    partialsdir,
+                                    variables,
+                                    url_map,
+                                )
 
-            # more replacements
-            for a, b in replacements.items():
-                full_text = full_text.replace(a, b)
+                    print(f"{variables =}")
+                    # replace all the variables we can
+                    for key, value in variables.items():
+                        full_text = full_text.replace("{" + key + "}", value)
 
-            self.logger.debug(
-                f"Writing to {self.output_path}/{repo_ref}.adoc: {full_text}"
-            )
-            with open(f"{self.output_path}/{repo_ref}.adoc", "w") as f:
-                f.write(full_text)
+                    # more replacements
+                    for a, b in replacements.items():
+                        full_text = full_text.replace(a, b)
 
-            self.logger.debug(
-                f"Writing to {self.output_path}/{repo_ref}.json: {url_map}"
-            )
-            with open(f"{self.output_path}/{repo_ref}.json", "w") as f:
-                json.dump(url_map, f)
+                    # self.logger.debug(
+                    #     f"Writing to {self.output_path}/{repo_ref}.adoc: {full_text}"
+                    # )
+                    with open(f"{self.output_path}/{repo_ref}.adoc", "w") as f:
+                        f.write(full_text)
+
+                    self.logger.debug(
+                        f"Writing to {self.output_path}/{repo_ref}.json: {url_map}"
+                    )
+                    with open(f"{self.output_path}/{repo_ref}.json", "w") as f:
+                        json.dump(url_map, f)
 
     def process_adoc(
         self,
         afile: Path,
-        module: str,
+        web_url: str,
+        module_root: str,
         pagesdir: Path,
         partialsdir: Path,
         variables: dict[str, str],
@@ -237,15 +240,22 @@ class RepoToSingleAdoc(object):
                     file_ref = matchres.group(1)
                     file_ref_path = pagesdir / Path(file_ref)
                     self.logger.debug(f"Referenced file: {file_ref_path}")
-                    text += self.process_adoc(
-                        Path(file_ref_path),
-                        module,
-                        pagesdir,
-                        partialsdir,
-                        variables,
-                        url_map,
-                    )
-                    text += "\n\n"
+
+                    if file_ref_path.exists():
+                        text += self.process_adoc(
+                            Path(file_ref_path),
+                            web_url,
+                            module_root,
+                            pagesdir,
+                            partialsdir,
+                            variables,
+                            url_map,
+                        )
+                        text += "\n\n"
+                    else:
+                        self.logger.warning(
+                            f"Referenced file {file_ref_path} not found. Skipping."
+                        )
                 # includes
                 elif line.startswith("include::"):
                     self.logger.debug(f"Processing include:: {line}")
@@ -258,23 +268,27 @@ class RepoToSingleAdoc(object):
                             ".adoc[]", ".adoc"
                         )
                         self.logger.debug(f"Included file: {include_file_path}")
-                        text += self.process_adoc(
-                            Path(include_file_path),
-                            module,
-                            pagesdir,
-                            partialsdir,
-                            variables,
-                            url_map,
-                        )
-                        text += "\n\n"
+                        if Path(include_file_path).exists():
+                            text += self.process_adoc(
+                                Path(include_file_path),
+                                web_url,
+                                module_root,
+                                pagesdir,
+                                partialsdir,
+                                variables,
+                                url_map,
+                            )
+                            text += "\n\n"
+                        else:
+                            self.logger.warning(
+                                f"Included file {include_file_path} not found. Skipping."
+                            )
                 # a header: update map
                 elif line.startswith("=") and not line.endswith("="):
                     header = line.replace("=", "").strip()
 
                     url = (
-                        url_map["DEFAULT"]
-                        + "/"
-                        + module
+                        web_url
                         + "/"
                         + str(afile).replace("pages/", "").replace(".adoc", "")
                     )

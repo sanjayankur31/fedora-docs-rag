@@ -94,6 +94,8 @@ class FedoraDocs(object):
                 anonymized_telemetry=False,
             )
             collection_name = src_path.name.replace(".md", "")
+            # IMPORTANT: this is the collection name and must match in the vector-stores.json file.
+            # Otherwise retrieval silently fails.
             if "fedora" not in collection_name:
                 collection_name = f"fedora-{collection_name}"
             store = Chroma(
