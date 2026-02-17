@@ -112,10 +112,6 @@
             "description": "the Fedora localization/translation team (l10n)",
             "vector_stores": [
                 {
-                    "name": "fedora-docs-l10n",
-                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/docs-l10n_bge-m3.db"
-                },
-                {
                     "name": "fedora-localization",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/localization_bge-m3.db"
                 }
