@@ -4,4 +4,5 @@ langchain-ollama
 ollama
 fastapi[standard]
 streamlit
+yaspin
 #git+https://github.com/neuroml/neuroml-ai/#subdirectory=utils_pkg
