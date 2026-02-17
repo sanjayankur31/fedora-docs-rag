@@ -181,10 +181,10 @@ class RepoToSingleAdoc(object):
                             url_map,
                         )
 
-                print(f"{variables =}")
-                # replace all the variables we can
-                for key, value in variables.items():
-                    full_text = full_text.replace("{" + key + "}", value)
+            print(f"{variables =}")
+            # replace all the variables we can
+            for key, value in variables.items():
+                full_text = full_text.replace("{" + key + "}", value)
 
             # more replacements
             for a, b in replacements.items():
@@ -271,9 +271,6 @@ class RepoToSingleAdoc(object):
                 elif line.startswith("=") and not line.endswith("="):
                     header = line.replace("=", "").strip()
 
-                    for key, value in variables.items():
-                        header = header.replace("{" + key + "}", value)
-
                     url = (
                         url_map["DEFAULT"]
                         + "/"
@@ -294,8 +291,9 @@ class RepoToSingleAdoc(object):
 
                 else:
                     text += f"{line}\n"
-                    for key, value in variables.items():
-                        text = text.replace("{" + key + "}", value)
+
+            for key, value in variables.items():
+                text = text.replace("{" + key + "}", value)
 
             return text
 
