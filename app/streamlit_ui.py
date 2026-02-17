@@ -48,8 +48,9 @@ def runner():
                         response_result = response.json().get("result")
                         st.markdown(response_result)
                     except httpx.RequestError as e:
-                        st.error("An error occured. Please try again")
-                        st.error(f"```\n{e}\n```")
+                        st.error(
+                            f"An error occured. Please try again:\n\n```\n{e}\n```\n"
+                        )
         st.session_state.history.append(
             {"role": "assistant", "content": response_result}
         )
