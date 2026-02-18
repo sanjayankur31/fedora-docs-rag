@@ -116,7 +116,7 @@ class FedoraDocs(object):
 
             self.process_file(store, src_path, url_map_data)
             output_map.append(
-                {"name": collection_name, "path": Path(vs_persist_dir).absolute()}
+                {"name": collection_name, "path": str(Path(vs_persist_dir).absolute())}
             )
 
         with open("vector-stores-template.json", "w") as f:
