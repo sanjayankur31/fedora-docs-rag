@@ -1,0 +1,113 @@
+= Fedora IoT Working Group
+:url-irc: https://web.libera.chat/?channel=\&#35;fedora-iot
+:url-matrix: https://matrix.to/\&#35;/\&#35;iot:fedoraproject.org
+
+The Fedora IoT Working Group develops and maintains the xref:iot::index.adoc[Fedora IoT Edition].
+If you'd like to join us, introduce yourself and pitch in!
+
+== Communications
+
+We primarily communicate by the https://lists.fedoraproject.org/admin/lists/iot.lists.fedoraproject.org/[Fedora IoT mailing list] and the {url-irc}[\&#35;fedora-iot IRC channel on Libera.Chat] (bridged to {url-matrix}[\&#35;iot on chat.fedoraproject.org]).
+Check the https://calendar.fedoraproject.org/IoT/[IoT calendar] for meeting times and locations.
+
+== Contributing to Fedora IoT
+
+There's a number of components that make up Fedora IoT.
+The upstream source components for general projects like the Zezere and Greenboot reside on the https://github.com/fedora-iot/[Fedora IoT GitHub page].
+
+For the source for Fedora specific things like compose configs, we have the https://pagure.io/group/fedora-iot[Fedora IoT] Pagure organisation which contains the various git repositories for building Fedora IoT.
+
+Docs and upstream component sources are on https://github.com/fedora-iot[GitHub].
+
+Bugs are tracked in Red Hat Bugzilla using the https://bugzilla.redhat.com/show_bug.cgi?id=IoT[IoT tracker bug] for bugs reported against other components and the https://bugzilla.redhat.com/buglist.cgi?component=IoT\&amp;product=Fedora[IoT component] for IoT-specific issues.
+
+
+\&#42; Historical docs
+== Requirements to promote Fedora IoT to an official edition
+
+This is based on the https://fedoraproject.org/wiki/Editions/Promotion_Process[Edition promotion process] pending approval from the Fedora Council.
+Historical information is included below for reference, although it is now incredibly out of date.
+
+=== Prerequisites
+
+[cols='8,2,8',options='header']
+|=====
+| Requirement | Status | Additional information
+| The candidate Edition must be backed by a team that holds regular public meetings | https://docs.fedoraproject.org/en-US/iot/contributing/\&#35;_communications[DONE] |
+| The candidate Edition must get trademark approval from the Fedora Council | https://pagure.io/Fedora-Council/tickets/issue/277[DONE] |
+| The candidate Edition must have a product requirements document | https://docs.fedoraproject.org/en-US/iot/prd/[DONE] |
+|=====
+
+=== Process
+
+==== Pre-submission steps
+
+[cols='8,2,8',options='header']
+|====
+| \&#42;\&#42;Requirement\&#42;\&#42; | \&#42;\&#42;Status\&#42;\&#42; | \&#42;\&#42;Additional information\&#42;\&#42;
+| Review test cases and release criteria with QA | https://fedoraproject.org/wiki/Category:IoT_Acceptance_Test_Cases[DONE] |
+| Work with Release Engineering | DONE | Composes are being produced
+|====
+
+
+==== Post-submission steps
+
+[cols='8,2,8',options='header']
+|====
+|Request design deliverables | |
+|Provide updated website content | https://teams.fedoraproject.org/project/fedora-iot/us/83?kanban-status=71[In-progress] | Basic content is on iot.fedoraproject.org. Further content will be needed as we finalize the web site.
+|Notify Documentation and Translation teams | https://teams.fedoraproject.org/project/fedora-iot/us/87?kanban-status=71[TODO] |
+|Provide marketing blurbs | https://teams.fedoraproject.org/project/fedora-iot/us/75?kanban-status=71[TODO] |
+|====
+
+== Historical content
+
+=== Phase one: MVP Edition launch (timeframe: July. Before Flock.)
+\&#42; Items for IoT team to complete
+\&#42;\&#42; F-30 published on stable ostree repo
+\&#42;\&#42;\&#42; Currently on “devel” branch -- need F30 to be the stable one instead of F29
+\&#42;\&#42;\&#42;  This is something Peter can do, but for F31 this should be integrated into proper QA \&amp; Rel-Eng process. Need procedures and to define clear roles.
+\&#42;\&#42; Clean up release process
+\&#42;\&#42; New ostrees and new ISOs
+\&#42;\&#42; Equivalent of two-week Atomic release process, but monthly
+\&#42;\&#42; Initial basic docs for release process
+\&#42;\&#42;\&#42; So that not everything is just in Peter’s head
+\&#42;\&#42; Update release criterial documentation
+\&#42;\&#42; Automatic updates enabled for F-30 release images
+\&#42;\&#42;\&#42; This is a change to ostree configuration to match CoreOS
+\&#42;\&#42; Update fedora-release-iot defaults and settings, add greenboot
+\&#42;\&#42;\&#42; PR from IoT team
+\&#42;\&#42;\&#42; Package owned by release engineering so CPE team expected to review and integrate PR
+\&#42;\&#42;\&#42; Review move to standard Fedora keys if ostree key rollover works
+\&#42;\&#42; Review of outstanding tickets for features/fixes
+
+\&#42; Web site(s) updates
+\&#42;\&#42; New content for the IoT page
+\&#42;\&#42;\&#42; Content from IoT team
+\&#42;\&#42;\&#42; Design from ??? (will ask OSPO)
+\&#42;\&#42;\&#42; Integration work into new web system from CPE
+\&#42;\&#42;\&#42; Parity with existing iot.fedoraproject.org for automatic updates when new images come out with
+\&#42;\&#42; New content for front page presenting the edition
+\&#42;\&#42;\&#42; Any text from CPE team
+\&#42;\&#42;\&#42; Design to match existing front page
+\&#42;\&#42;\&#42; Update to front page from ???
+\&#42;\&#42; Redirect from iot.fedoraproject.org to new getfedora edition page
+
+=== Phase two: Ideal target, Fedora 31 GA (October)
+\&#42; ARMv7 supported images (actually aiming this for phase 1)
+\&#42; Container pipeline for supported architectures
+\&#42;\&#42;\&#42; x86_64, ARMv7, aarch64
+\&#42;\&#42;\&#42; Current state: just x86_64, so we need ARM
+\&#42;\&#42;\&#42;\&#42; Donated aarch64 hardware exists but is being used as koji builders
+\&#42;\&#42;\&#42;\&#42; Note hardware was donated for this purpose
+
+\&#42;\&#42; Possible future: i686
+\&#42;\&#42; This is the big request for CPE
+\&#42; IoT Toolbox container
+\&#42;\&#42; X86_64, ARMv7, aarch64
+\&#42;\&#42; This is an IoT team thing
+\&#42; A number of containers for IoT demo use cases
+\&#42;\&#42; X86_64, ARMv7, aarch64
+\&#42;\&#42; Also handed by IoT team
+\&#42; Publish “devel” image with toolbox container, and “production” image without toolbox
+\&#42;\&#42; This is a rel-eng change, but PT from IoT team, because we’re adding additional deliverables

@@ -464,8 +464,6 @@ image::infographics/2019-achievements.png[2019 achievements,100%]
 
 \&#42; Fedora Events
 
-
-
 = In-person event guidance related to COVID-19
 :page-aliases: ROOT:covid19-guidance.adoc
 
@@ -538,8 +536,6 @@ By receiving funding related to in-person events, you agree to the following:
 . You acknowledge the health risks associated with the novel coronavirus (COVID-19) outbreak, and the risk of exposure or infection by COVID-19.
 . Neither Fedora, the event venue, the event organizer, or any of their respective parents, affiliates, sponsors, shareholders, employees, agents, officers, directors, successors, or assignees will be liable for any injury or illness, however caused, arising from, or in any way relate to COVID-19 in connection with the event.
 . You assume any and all risk, whatsoever, related to any Fedora or Fedora-related event, and release and discharge Fedora, their sponsors, and their agents from any liability to the fullest extent allowed by the law.
-
-
 
 
 
@@ -634,8 +630,6 @@ Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a li
 
 
 
-
-
 = Swag-Only Requests
 :page-aliases: ROOT:swag-only-requests.adoc
 
@@ -679,8 +673,6 @@ To extend the reach of audience, Advocates may syndicate their blog to Fedora Pl
 For more information link:{FWIKI}/Planet[check out this 'how to'].
 
 Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
-
-
 
 
 
@@ -734,8 +726,6 @@ For more information link:{FWIKI}/Planet[check out this 'how to'].
 Reimbursements are typically paid within 2 weeks.
 
 . Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
-
-
 
 
 
@@ -795,8 +785,6 @@ For more information link:{FWIKI}/Planet[check out this 'how to'].
 Reimbursements are typically paid within 2 weeks.
 
 . Comment on your issue in the link:{team_issue_tracker}[Mindshare repo] with a link to your event report.
-
-
 
 
 
@@ -861,8 +849,6 @@ Reimbursements are typically paid within 2 weeks.
 
 
 .Policies \&amp; Processes
-
-
 
 = Late Event Report Policy
 :page-aliases: ROOT:event-report-policy.adoc
@@ -1283,5 +1269,3 @@ Open Source Program Office.
 The team within Red Hat that often manages community engagement and funding for open source projects.
 \&#42; \&#42;ServiceNow\&#42;:
 An internal Red Hat platform used for managing various service requests, including the 'Payment Exception Approval' requests needed for these reimbursements.
-
-

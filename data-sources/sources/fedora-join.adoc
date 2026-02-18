@@ -1,7 +1,5 @@
 \&#42; Welcome!
 
-
-
 = Welcome to Fedora!
 
 image::https://pagure.io/fedora-join/WelcomeToFedora/raw/main/f/Artwork/Welcome-to-Fedora-banner-Feb2022.png[alt='fedora-banner', width=100%]
@@ -101,8 +99,6 @@ If $USER decide to exit the Fedora community we will close the ticket with the t
 
 
 \&#42; Resources
-
-
 
 = Get started with badges!
 
@@ -391,8 +387,6 @@ The scripts that is used to check for activity can be found here: https://pagure
 
 
 
-
-
 = How to be a successful contributor
 Ankur Sinha
 2023-10-30: Updated content, rewritten various sections.
@@ -635,5 +629,3 @@ Inform them of what tasks you had taken up and that they are now free for others
 
 If/when you're able to return, let people know too.
 We're always happy for people to take breaks and return to us.
-
-

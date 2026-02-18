@@ -1,6 +1,4 @@
 
-
-
 = Fedora Websites \&amp; Apps Team
 
 Welcome to the official documentation for the Fedora Websites \&amp; Apps Team. The team was rebooted in 2021 as a part of the https://fedoraproject.org/wiki/Objectives/Websites_%26_Apps_Community_Revamp[Websites \&amp; Apps Community Revamp Objective]. With the onset of this council objective, the team has been growing ever since with developers, designers and project managers having a wide range of skills and interests all members of the team and contributing to the Fedora Websites and Apps. It now organizes around https://gitlab.com/fedora/websites-apps/fedora-websites/fedora-websites-3.0[Websites Gitlab] and https://chat.fedoraproject.org/\&#35;/room/\&#35;websites:fedoraproject.org[Matrix Websites chat].
@@ -62,8 +60,6 @@ A Red Hat team dedicated to the Fedora and CentOS projects where they contribute
 
 ==== https://www.redhat.com/en/blog/channel/red-hat-open-source-program-office[\&#42;Red Hat Open Source Program Office engineers\&#42;]
 A Red Hat team that supports various Open Source technology initiatives across the Red Hat technology ecosystem.
-
-
 
 
 
@@ -141,8 +137,6 @@ Fedora has an active, engaged team that takes care of our main websites and all 
 
 
 
-
-
 = Our tasks
 
 The team designs, develops and maintains the Fedora's websites and applications.
@@ -197,8 +191,6 @@ Otherwise, please report them on our https://pagure.io/fedora-websites[repositor
 
 
 
-
-
 = Representatives
 
 The responsibilities of the representative involves representing the team to the Mindshare committee and collaborate with other groups/teams/SIGs that work with them. Being a conduit between the two teams, the representative is expected to invest a fair amount of time and have good communication skills.
@@ -242,8 +234,6 @@ If no nominees are found, the Websites and Apps Team will collaborate with the M
 
 
 
-
-
 = Resources
 
 The Websites \&amp; Apps Team is made up of people who collaborate on all levels of design, operations and technology. They value perspectives, opinions and experiences from a various points of views. Please check out these resources for your own local setup.
@@ -264,8 +254,6 @@ We are continually working to expand our established processes, instructional ma
 \&#42; link:++https://github.com/fedora-infra/fedbadges++[Fedora Badges]
 \&#42; link:++https://github.com/fedora-infra/noggin++[Fedora Account System(FAS)]
 \&#42; link:++https://pagure.io/fedora-docs/docs-fp-o++[Fedora Docs]
-
-
 
 
 
@@ -295,8 +283,6 @@ By becoming a Fedora Contributor, you accept these terms.
 
 
 
-
-
 = Fedora Websites \&amp; Apps Engineering Team
 
 Welcome to the official documentation for the Fedora Websites \&amp; Apps Engineering Team.
@@ -315,8 +301,6 @@ The team takes care maintenance and development of websites and applications whi
 4. Members, Akashdeep Dhar and Francois Andrieu have been instrumental in mentoring an intern, Subhangi Choudhary to revamp the web application used for aggregating IRC meeting logs and summaries.
 5. Members, Michael Scherer and Onuralp Sezer have been instrumental in mentoring an intern, Ojong Enow to assist with maintaining a certain set of websites and rebooting the websites/apps index.
 6. With active representation in the events like Nest With Fedora and Fedora Linux Release Parties, the team had been reaching out to garner more feedback on the work done so far and acquire contributors for assistance.
-
-
 
 
 
@@ -409,8 +393,6 @@ The chair should
 \&#42; Please stay muted when you are not speaking.
 \&#42; Please be mindful of background noise and join the call from a quiet location. Construction sites, windy gardens and non-quarantined internet cafes do not qualify as quiet locations.
 \&#42; All parents and caregivers shall enjoy an irrevocable 'background/foreground kid and dependent noise' exception at all times, but muting etiquette still applies.
-
-
 
 
 
@@ -536,8 +518,6 @@ The HyperText Markup Language or HTML is the standard markup language for docume
 [[javascript]]
 === JavaScript
 JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries.
-
-
 
 
 
@@ -671,8 +651,6 @@ Following is a list of applications that we help develop and maintain.
 
 
 
-
-
 = How to add the Fedora Annual Survey Banner
 
 == Add into start.fedoraproject.org
@@ -702,8 +680,6 @@ NOTE: MIGHT NOT WORK, CURRENTLY TESTING THIS WITH NEST BANNER
 \&#42; add a image to the data/content/index.html within the grey container
 \&#42; use the class \&#96;col-xs-12 top-margin\&#96; and set padding with \&#96;style='padding:10px 0'\&#96;
 \&#42; make the image responsive by giving it \&#96;style='max-width:832px; width:100%\&#96;
-
-
 
 
 
@@ -1025,8 +1001,6 @@ $ git commit
 
 
 
-
-
 = Fedora Release (Modern)
 
 == Introduction
@@ -1118,8 +1092,6 @@ been ported to the new system need to be updated separately and are beyond the
 scope of this document.
 
 Commit your changes on the \&#96;develop\&#96; branch, make sure everything looks good on the GitLab pages, then use Merge Request to deploy to staging \&amp; prod.
-
-
 
 
 
@@ -1221,8 +1193,6 @@ We should probably add an example Apache config here at some point.
 
 
 
-
-
 = Set up your environment (using containers)
 :page-aliases: websites::setup-docker.adoc
 
@@ -1292,8 +1262,6 @@ Now you are ready to go and any changes you make in the repository should be ref
 
 
 
-
-
 = Creating New Content
 :page-aliases: websites::newcontent.adoc
 
@@ -1316,8 +1284,6 @@ link:https://iot.fedoraproject.org[], etc.).
 There are cases, however, where the content being added is \&#42;not\&#42; a new edition,
 and is deserving of having its own distinct website, separate from
 getfedora.org. These cases should probably be somewhat rare.
-
-
 
 
 
@@ -1412,8 +1378,6 @@ go live immediately (well, within an hour) and automatically.
 
 
 
-
-
 = Creating A New Site
 :page-aliases: websites::newcontent-site.adoc
 
@@ -1428,8 +1392,6 @@ current getfedora.org work.
 But familiarizing yourself with link:https://flask.palletsprojects.com/[Flask]
 and link:https://pythonhosted.org/Frozen-Flask/[Frozen-Flask] is a good starting
 point, as we plan for all of our websites to build using this toolset.
-
-
 
 
 
@@ -1516,8 +1478,6 @@ Technically scripts can be run without using podman, but will then require prope
 
 
 
-
-
 = Contact us
 
 Have questions or want to know more?
@@ -1544,8 +1504,6 @@ By becoming a Fedora Contributor, you accept these terms.
 
 
 
-
-
 = Fedora Websites Revamp Stakeholders Team
 
 Welcome to the official documentation for the Fedora Websites Revamp Stakeholders Team.
@@ -1564,8 +1522,6 @@ The team looks into designing aesthetics, making the style guide, planning the w
 4. Planning and updates are now recorded in a GitLab subgroup - the creation of which was pursued by the members of this team, contributors from Fedora Infra and those from the Community Platform Engineering team.
 5. Meetings have been organized by Pawel Zelawski and attended by the members periodically to catch up on the progress, perform stakeholders reviews and plan on the next tasks.
 6. With active representation in the events like Nest With Fedora and Fedora Linux Release Parties, the team had been reaching out to garner more feedback on the work done so far and acquire contributors for assistance.
-
-
 
 
 
@@ -1638,8 +1594,6 @@ The chair should
 
 
 
-
-
 = Contact us
 
 Have questions or want to know more?
@@ -1663,5 +1617,3 @@ By becoming a Fedora Contributor, you accept these terms.
 
 \&#42; link:++https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement++[Fedora Project Contributor Agrement (FPCA)]
 \&#42; link:++https://docs.fedoraproject.org/en-US/project/code-of-conduct/++[Code of Conduct]
-
-

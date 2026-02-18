@@ -332,359 +332,1002 @@ requires full consensus.
 &#42;
 [fedora-diversity&#35;98](https://pagure.io/fedora-diversity/issue/98)
 
-&#42; Archive = Past Fedora DEI Team Activities
+# Events {#_events}
 
-This page preserves historical content from the Fedora Diversity,
-Equity, &amp; Inclusion (DEI) Team for transparency and reference. While
-these initiatives are no longer active or current focus areas, their
-legacy contributed to today's DEI work.
+The Events section of the Fedora Diversity, Equity, &amp; Inclusion
+(DEI) Team Docs aims to build a Fedora Diversity events calendar and
+identify regional events for participation. Our focus is on supporting
+minority-specific events to promote a more inclusive environment across
+the Fedora Community, we target minority-specific events.
 
-## Fedora Women
+Our mission is to &#42;embed inclusivity into all Fedora events&#42; and
+to &#42;expand Fedora's reach into historically marginalized
+regions&#42; through meaningful and well-supported participation.
 
-The &#42;Fedora Women&#42; initiative aimed to nurture the involvement
-of women (cis and trans) and gender-queer people in Fedora and other
-Free and Open Source Software projects.
+## Making Fedora events inclusive {#_making_fedora_events_inclusive}
 
-This community worked to bring awareness to contributions by women and
-non-binary contributors in Fedora.
+Inclusivity should be a part of all Fedora events and activities. Here
+are some best practices to consider when planning an event with your
+community:
 
-Although the Fedora Women team is no longer active, many of its goals
-have evolved into broader efforts, such as the [&#42;Fedora Week of
-Diversity (FWD)&#42;](dei::fedora-week-of-diversity.xml).
+&#42; Design sessions that are hybrid or remote-friendly &#42; Include
+speakers, panelist and/or contributors from diverse backgrounds &#42;
+Share the [Code of
+Conduct](https://docs.fedoraproject.org/en-US/project/code-of-conduct/)
+clearly before the event &#42; Provide translation or interpretation, if
+possible &#42; Choose accessible venues and platforms
 
-## Demographic Survey (2015/2016) {#demographic-survey}
+## Hosting events in marginalized regions {#_hosting_events_in_marginalized_regions}
 
-In 2015/2016, the Fedora Diversity, Equity, &amp; Inclusion (DEI) Team
-drafted a &#42;demographic survey&#42; to better understand the
-composition of the Fedora community.
+We want to support Fedora events in regions where open source is still
+growing - such as parts of Africa, Asia, South America, and more. This
+requires thoughtful planning.
 
-Due to data storage concerns, privacy issues, and evolving regulations
-like GDPR, this survey was never launched.
+Here's how to support that:
 
-You can check out more about it here in the Demographic survey section.
+&#42; Partner with local schools or tech communities &#42; Offer support
+for travel, internet access, or event costs (e.g., swag for
+contributors) &#42; Use local languages and culturally aware
+communication &#42; Connect local organizers with Fedora mentors
 
-## Events
+## Upcoming events {#_upcoming_events}
 
-We still run active events like Fedora Week of Diversity (FWD) to
-support diversity in our community, and in open source in general. You
-can also look at the past events section to see what we've done before,
-and follow our channels to stay updated on this year's events.
+If you're looking for upcoming events, you can check [Fedora events
+calendar](https://calendar.fedoraproject.org//Events/) for a list of
+official community activities.
 
-![Infographic with statistics about Fedora Women's Day since 2016 (now
-expanded to Fedora Week of Diversity). Created by Smera
-Goel.](infographic-2020.png)
+We would love to support you, and if you want to plan or have an
+upcoming event, or even want to help us with upcoming events, you can
+get in touch with the [DEI
+team](https://docs.fedoraproject.org/en-US/dei/get-involved/) or [Fedora
+DEI
+adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
 
-If you have questions about this historical content, please [contact the
-DEI Team.](index.xml)
+This section is a living document --- your stories, feedback, and
+contributions help keep it real.
 
-# About Fedora Project Demographic Survey {#_about_fedora_project_demographic_survey}
+This page is maintained by the Fedora Diversity, Equity, &amp; Inclusion
+(DEI) Team. For suggesting any modifications, [contact the
+team](https://docs.fedoraproject.org/en-US/dei/get-involved/) or the
+[DEI
+Adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
 
-Fedora Diversity, Equity, &amp; Inclusion Team
-&lt;<diversity@lists.fedoraproject.org>&gt; :toc:
+# Social Events in Fedora {#_social_events_in_fedora}
 
-This section documents the Fedora Project Demographic Survey research.
-This was work completed between 2016 to 2018 to launch a demographic
-survey to understand the Fedora Community. Because of legal concerns
-around recent data legislation passed in this time period
-([G.D.P.R.](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation)),
-the survey was planned but never published.
+Fedora social events are fun, welcoming spaces where people can connect,
+share, and build community. They happen during bigger conferences like
+&#42;Flock&#42;, or as part of smaller events or local meetups.
 
-A majority of this work was completed at the [Fedora Diversity
-FAD](https://communityblog.fedoraproject.org/fedora-diversity-fad-2017/)
-in January 2017.
+These events are open to everyone - you don't have to be an expert. The
+goal is to create a relaxed space where people can hang out, swap
+stories, play games, and enjoy being part of the Fedora community - they
+make Fedora feel more human and inclusive.
 
-:::: note
-::: title
-:::
+&#42;Tip&#42;: Focus on small, easy-to-join activities, give clear
+instructions, and always invite newcomers to jump in. It's okay if
+things aren't perfect - what really matters is people showing up and
+learning.
 
-This page represents six to eight months of work from the Fedora
-Diversity, Equity, &amp; Inclusion Team in late 2015 and early 2016.
-While the D.E.I. Team is &#42;no longer actively working on this
-survey&#42; due to data collection and storage concerns (i.e. G.D.P.R.),
-it is retained here for historical purposes. The team hopes our research
-and work may be useful for other Open Source communities and Diversity,
-Equity, &amp; Inclusion programmes.
-::::
+## Examples of Fedora DEI Social events {#_examples_of_fedora_dei_social_events}
 
-## Objectives
+We've organized various activities in the past, below are some of the
+examples we've hosted at past Fedora gatherings:
 
-The Fedora Project Demographic Survey established these key objectives
-for launching such a survey:
++----------+-----------------------------------+-----------------------+
+| Event    | Description                       | Link                  |
++----------+-----------------------------------+-----------------------+
+| Inter    | People brought sweets from their  | Flock 2025            |
+| national | countries and played games        | [schedule](h          |
+| Candy    | together. It was a simple and     | ttps://cfp.fedoraproj |
+| Swap     | joyful way to connect.            | ect.org/flock-to-fedo |
+| &amp;    |                                   | ra-2025/talk/DLLALE/) |
+| Board    |                                   | &amp; [wiki           |
+| Games    |                                   | page](https://fed     |
+|          |                                   | oraproject.org/wiki/F |
+|          |                                   | lock_2025/Candy_Swap) |
+|          |                                   |                       |
+|          |                                   | Flock 2024 - [wiki    |
+|          |                                   | page](https://fed     |
+|          |                                   | oraproject.org/wiki/F |
+|          |                                   | lock_2024/Candy_Swap) |
+|          |                                   |                       |
+|          |                                   | Flock 2023            |
+|          |                                   | [s                    |
+|          |                                   | chedule](https://cfp. |
+|          |                                   | fedoraproject.org/flo |
+|          |                                   | ck-2024/talk/LFVLES/) |
+|          |                                   | &amp; [wiki           |
+|          |                                   | page](https://fedo    |
+|          |                                   | raproject.org/wiki/Fl |
+|          |                                   | ock_2024/Candy_Swap). |
+|          |                                   |                       |
+|          |                                   | Flock 2018            |
+|          |                                   | [schedul              |
+|          |                                   | e](https://flock2018. |
+|          |                                   | sched.com/event/FjdT/ |
+|          |                                   | game-nightcandy-swap) |
+|          |                                   | &amp;                 |
+|          |                                   | [                     |
+|          |                                   | ticket](https://pagur |
+|          |                                   | e.io/flock/issue/54). |
++----------+-----------------------------------+-----------------------+
+| Coffee   | A relaxed coffee hangout where    | Flock 2019 -Ticket    |
+| Amongst  | folks chatted about anything -    | [&#35;106](http       |
+| Friends  | Fedora, open source, or just      | s://pagure.io/fedora- |
+|          | life.                             | diversity/issue/106), |
+|          |                                   | [&#                   |
+|          |                                   | 35;166](https://pagur |
+|          |                                   | e.io/flock/issue/166) |
+|          |                                   | &amp; [Fedora mailing |
+|          |                                   | list                  |
+|          |                                   | conversati            |
+|          |                                   | on](https://lists.fed |
+|          |                                   | oraproject.org/archiv |
+|          |                                   | es/list/diversity@lis |
+|          |                                   | ts.fedoraproject.org/ |
+|          |                                   | thread/GPPGSHTT7XVKF2 |
+|          |                                   | JB2LX4PB62VYDIPP5H/). |
++----------+-----------------------------------+-----------------------+
+| Non      | Participants practiced and shared | Flock 2019            |
+| -English | their languages in an inclusive,  | [sch                  |
+| Language | multilingual space.               | edule](https://flock2 |
+| Session  |                                   | 019.sched.com/event/S |
+|          |                                   | HRs/fedora-di-speak-a |
+|          |                                   | -non-english-language |
+|          |                                   | -event-at-flock-2019) |
+|          |                                   | &amp;                 |
+|          |                                   | [video](https://      |
+|          |                                   | youtu.be/LWHfTCCnLFM? |
+|          |                                   | si=ahWKQVn0y28KE8F7). |
++----------+-----------------------------------+-----------------------+
+| Karaoke  | A mix of fun karaoke sessions:    | Flock 2019            |
+| (sl      | from improvising presentations on | [sche                 |
+| ideshow) | random slides to classic singing  | dule](https://flock20 |
+|          | performances where everyone could | 19.sched.com/event/S5 |
+|          | join in and enjoy.                | qS/slideshow-karaoke) |
+|          |                                   | &amp;                 |
+|          |                                   | [Video](https://      |
+|          |                                   | youtu.be/_tSQ7vr53Mc? |
+|          |                                   | si=Lpdk32SeSy_W0HJK). |
+|          |                                   |                       |
+|          |                                   | Flock 2024 -          |
+|          |                                   | [s                    |
+|          |                                   | chedule](https://cfp. |
+|          |                                   | fedoraproject.org/flo |
+|          |                                   | ck-2024/talk/8PAPWY/) |
++----------+-----------------------------------+-----------------------+
+| Story    | A collaborative storytelling card | Flock 2023 -          |
+| Stich    | game where people share personal  | [schedule](ht         |
+|          | experiences and weave them into a | tps://flock2023.sched |
+|          | group narrative.                  | .com/event/1PbRQ/inte |
+|          |                                   | ractive-story-stitch) |
++----------+-----------------------------------+-----------------------+
+| Pub Quiz | A trivia night with general       | Flock 2023 -          |
+|          | knowledge and Fedora-themed       | [schedule](https:/    |
+|          | questions - perfect for teams and | /flock2023.sched.com/ |
+|          | friendly rivalry.                 | event/1PbkU/fedora-pu |
+|          |                                   | b-quiz-flock-edition) |
++----------+-----------------------------------+-----------------------+
+| Scribble | Casual art session where          | [Scribble             |
+| /        | participants doodled together and | game]                 |
+| Pi       | showcased their creations.        | (https://skribbl.io/) |
+| ctionary |                                   |                       |
+|          |                                   | [Fedora 34 release    |
+|          |                                   | party wiki            |
+|          |                                   | schedule](https:/     |
+|          |                                   | /fedoraproject.org/wi |
+|          |                                   | ki/Fedora_Linux_34_Re |
+|          |                                   | lease_Party_Schedule) |
+|          |                                   |                       |
+|          |                                   | [Fedora 33 release    |
+|          |                                   | party wiki            |
+|          |                                   | page](h               |
+|          |                                   | ttps://fedoraproject. |
+|          |                                   | org/wiki/Fedora_33_Re |
+|          |                                   | lease_Party_Schedule) |
+|          |                                   |                       |
+|          |                                   | [Creative common      |
+|          |                                   | summit 2023           |
+|          |                                   | wiki](https:          |
+|          |                                   | //fedoraproject.org/w |
+|          |                                   | iki/Creative_Freedom_ |
+|          |                                   | Summit_2023_Schedule) |
++----------+-----------------------------------+-----------------------+
+| Stickers | An activity where attendees       | Flock 2025            |
+| Match    | receive a sticker or token (like  | [schedule](h          |
+|          | a color, symbol, or Fedora        | ttps://cfp.fedoraproj |
+|          | mascot) for their name badge and  | ect.org/flock-to-fedo |
+|          | are encouraged to find others     | ra-2025/talk/9YGBQS/) |
+|          | with matching tokens. Those with  | &amp;                 |
+|          | the most connections could win    | [ticket](h            |
+|          | small prizes or swag.             | ttps://gitlab.com/fed |
+|          |                                   | ora/dei/fedora-mentor |
+|          |                                   | -summit/-/issues/15). |
++----------+-----------------------------------+-----------------------+
+| Social   | A collection of virtual spaces    | Nest with Fedora :    |
+| in the   | and games that recreated Fedora   | [2022                 |
+| Fedora   | social experiences in a digital   | schedule](https://eve |
+| Museum   | environment.                      | nts.ringcentral.com/e |
+|          |                                   | vents/nest-with-fedor |
+|          |                                   | a-2022/registration), |
+|          |                                   | [2021                 |
+|          |                                   | schedule              |
+|          |                                   | ](https://events.ring |
+|          |                                   | central.com/events/ne |
+|          |                                   | st-with-fedora-2021), |
+|          |                                   |                       |
+|          |                                   | [WorkAdventure        |
+|          |                                   | Gamep                 |
+|          |                                   | lay](https://play.wor |
+|          |                                   | kadventu.re/@/mindsha |
+|          |                                   | re-committee/nestwith |
+|          |                                   | fedora/fedoramuseum). |
++----------+-----------------------------------+-----------------------+
+| C        | A team-based word association     | [Fedora 40 release    |
+| odenames | game where players give and guess | party wiki            |
+|          | one-word clues to uncover hidden  | schedule](https://    |
+|          | words on the board before the     | fedoraproject.org/wik |
+|          | other team does.                  | i/Fedora_Linux_40_Rel |
+|          |                                   | ease_Party_Schedule), |
+|          |                                   |                       |
+|          |                                   | [Fedora release party |
+|          |                                   | codename social       |
+|          |                                   | wiki](https://fedorap |
+|          |                                   | roject.org/wiki/Fedor |
+|          |                                   | a_Linux_36_Release_Pa |
+|          |                                   | rty_Codenames_Social) |
++----------+-----------------------------------+-----------------------+
+| Among Us | An online social deduction game   | [Fedora 36 release    |
+|          | where participants work together  | party                 |
+|          | to complete tasks while trying to | wiki](https:/         |
+|          | identify the hidden impostors     | /fedoraproject.org/wi |
+|          | among them.                       | ki/Fedora_Linux_36_Re |
+|          |                                   | lease_Party_Schedule) |
+|          |                                   |                       |
+|          |                                   | [Fedora 35 release    |
+|          |                                   | party                 |
+|          |                                   | wiki](h               |
+|          |                                   | ttps://fedoraproject. |
+|          |                                   | org/wiki/User:Thunder |
+|          |                                   | birdtr/F35_Release_Pa |
+|          |                                   | rty_Among_Us_Session) |
++----------+-----------------------------------+-----------------------+
+| [Gartic  | A fun and creative game where you | [Fedora 37 release    |
+| phone](h | write, draw and guess based on    | party                 |
+| ttps://g | the previous player's input.      | wiki](https:/         |
+| articpho |                                   | /fedoraproject.org/wi |
+| ne.com/) |                                   | ki/Fedora_Linux_37_Re |
+|          |                                   | lease_Party_Schedule) |
+|          |                                   |                       |
+|          |                                   | [Creative common      |
+|          |                                   | summit 2023           |
+|          |                                   | wiki](https:          |
+|          |                                   | //fedoraproject.org/w |
+|          |                                   | iki/Creative_Freedom_ |
+|          |                                   | Summit_2023_Schedule) |
++----------+-----------------------------------+-----------------------+
 
-### 1. Understand baseline demographics about the Fedora Community. {#understand}
+If you want to plan or help a social event like this, please reach out
+to the Fedora DEI team or the [Fedora DEI
+Adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
 
-&#42; &#42;Why this objective was important&#42;: Enables Fedora
-Diversity, Equity, &amp; Inclusion Team to identify different areas of
-need for contributing to Fedora, and prioritize to act on areas of
-most-immediate need. &#42; &#42;Examples of target criteria&#42;:
-&#42;&#42; Age &#42;&#42; Gender &#42;&#42; Race and cultural background
-&#42;&#42; Geographic area or region &#42;&#42; Disability &#42;&#42;
-Parents and families &#42;&#42; Non-English languages
+# Fedora Week of Diversity {#_fedora_week_of_diversity}
 
-### 2. Support underrepresented groups by supplementing on-boarding resources to other Fedora teams. {#support}
+![Fedora Week of Diversity logo.](ROOT:fwd/fwd.png)
 
-&#42; &#42;Why this objective was important&#42;: &#42;&#42; Collaborate
-and support on-going work in other Fedora Teams by advising mentorship
-and teaching programs in Fedora Community &#42;&#42; Disseminate best
-practices through mentorship and community on-boarding &#42;
-&#42;Examples of possible partnering teams&#42;: &#42;&#42; [Join
-SIG](fedora-join::index.xml) &#42;&#42; Mentoring and internship
-programs (GSoC and Outreachy) &#42;&#42; [Fedora
-Classrooms](fedora-join::classroom/classroom.xml)
+[Fedora Week of
+Diversity](https://docs.fedoraproject.org/en-US/dei/events/past-events/&#35;_fedora_week_of_diversity_fwd)
+highlights and celebrates the contributions of diverse contributors and
+communities across Fedora and the wider open source ecosystem.
 
-## Miscellaneous comments {#misc-comments}
+Originally started as [Fedora Women's
+Day](https://docs.fedoraproject.org/en-US/dei/events/past-events/&#35;_fedora_womens_day_fwd)
+to recognize and uplift women contributors, this event has evolved into
+Fedora Week of Diversity to better reflect our community's commitment to
+inclusion across regions, cultures, and backgrounds.
 
-When the survey was first drafted in late 2016 and early 2017, several
-comments, ideas, and [resources](:resources.xml) influenced the design
-of the survey and an outreach campaign for it. Some of the pending and
-unresolved notes are below for archival purposes.
+Each year, Fedora contributors come together to share experiences,
+spotlight community achievements, and help more people discover how they
+can get involved in free and open source software. Fedora Week of
+Diversity is also an opportunity to strengthen regional communities,
+amplify underrepresented voices, and create a welcoming environment for
+everyone.
 
-> &#42; How were you introduced to Fedora? .. By another Fedora
-> contributor .. At a Fedora event (e.g. FAD / workshop / meetup /
-> release party) .. Conference .. Hackerspace .. Red Hat .. Web / online
-> &#42; What makes contributing to Fedora difficult for you?
+## How to participate {#_how_to_participate}
+
+Fedora Week of Diversity is designed to be flexible and the focus for
+each year may change - past themes have included [&#42;Empowering
+Diversity, Enriching Communities&#42;
+(2024)](https://cfp.fedoraproject.org/fwd-2024/cfp). Because of this,
+how you participate can vary; for example, you might share a personal
+story or blog post, record an interview or podcast, or thank
+contributors publicly.
+
+Note: Organizers will share themes and details each year. Watch the
+Fedora [Community Blog](https://communityblog.fedoraproject.org/),
+[Discourse](https://discussion.fedoraproject.org/), or [DEI team Matrix
+channel](https://matrix.to/&#35;/&#35;dei:fedoraproject.org) to stay
+updated.
+
+## How to organize Fedora events {#_how_to_organize_fedora_events}
+
+Organizing FWD takes effort and in this section, we're going to lay down
+the foundations of how to organize one. Anyone can help organize a local
+or virtual event organized by the DEI team. This guide shows you how you
+can get started and run a smooth, inclusive event.
+
+## Pre-Planning (3-6 months before) {#_pre_planning_3_6_months_before}
+
+Before anything else:
+
+&#42; Decide on event format (virtual / local / hybrid) &#42; Brainstorm
+a theme or focus (e.g. \'Stories from the Community\', \'First
+Contribution Day\', "open Source journeys", "Fedora Around the World")
+&#42; Create [a Fedora DEI GitLab
+ticket](https://gitlab.com/groups/fedora/dei/-/issues). Use this to
+request support for the FWD activities. &#42; For funding support,
+follow the process outlined by the [Fedora Mindshare
+Committee](https://docs.fedoraproject.org/en-US/mindshare-committee/).
+Budget requests should go through them. Be sure to plan early and
+clearly explain what you need. &#42; Think about what you'll need:
+speakers, hosts, swags, venue or platform?
+
+### Coordinate with the Fedora DEI Team {#_coordinate_with_the_fedora_dei_team}
+
+Then these steps below are mandatory and important to follow in that
+order:
+
+&#42; &#42;Open a ticket&#42; in the [Fedora DEI GitLab
+repository](https://gitlab.com/fedora/dei/week-of-diversity/-/issues).
+&#42; &#42;Discuss your ticket&#42; during the &#42;Fedora DEI bi-weekly
+meeting&#42; to get feedback, guidance, and alignment. &#42; &#42;Stay
+connected via Matrix&#42; for follow-up questions, coordination, and
+real-time updates.
+
+(For any event that requires funding, swag, or promotion help - the DEI
+GitLab ticket is the first and most important step.)
+
+## Recommended timeline {#_recommended_timeline}
+
+It is easier to manage your event when you have a clear timeline
+beforehand. Below is a recommended timeline to help you stay on track
+from concept to post-event wrap-up.
+
++----------------------+-----------------------------------------------+
+| Timeline             | Task                                          |
++----------------------+-----------------------------------------------+
+| 5--6 months before   | Propose event via [GitLab DEI                 |
+|                      | ticket](https://gitl                          |
+|                      | ab.com/fedora/dei/week-of-diversity/-/issues) |
++----------------------+-----------------------------------------------+
+| 4 months before      | Confirm date, format, venue(if in-person)     |
+|                      | speakers &amp; visuals                        |
++----------------------+-----------------------------------------------+
+| 3 months before      | Request support (promotion, mentorship, or    |
+|                      | budget) via your GitLab ticket                |
++----------------------+-----------------------------------------------+
+| 2 months before      | Launch call for participation (optional)\     |
+|                      | (Invite community members to participate)     |
++----------------------+-----------------------------------------------+
+| 1 month before       | Promote your event on social media and Fedora |
+|                      | channels                                      |
++----------------------+-----------------------------------------------+
+| 1 week before        | Send/post final reminders, do a tech check or |
+|                      | dry run                                       |
++----------------------+-----------------------------------------------+
+| Event day            | Run the event! 🎉                             |
++----------------------+-----------------------------------------------+
+| 1--3 days after      | Share blog recap + community highlights       |
++----------------------+-----------------------------------------------+
+
+## Promote your event {#_promote_your_event}
+
+Make it easy for people to find and join your event:
+
+&#42; Use hashtags like &#42;&#35;FWD(year, eg. FWD2025)&#42; or one
+relevant to your event. &#42; &#42;Add a picture or poster&#42; if you
+have one. Make sure it's easy to read and not too crowded. In case you
+don't have a designer in the team - reach out to the design team to
+create one for you. &#42; &#42;Tag relevant Fedora accounts&#42; and
+other people or groups who might be interested. &#42; &#42;Write
+clearly&#42; -- tell people what the event is, when it is, who should
+come, and what they'll learn. &#42; &#42;Post in multiple places&#42; :
+Fedora Discourse, Matrix, X(twitter), Instagram, Mastodon, and in local
+communities. &#42; &#42;Post more than once&#42; -- share early, remind
+people a few days before, and post during or after the event too. &#42;
+&#42;Coordinate with the [Fedora Marketing
+Team](https://docs.fedoraproject.org/en-US/marketing/need-help/)&#42;
+early, as they're really helpful in supporting and amplifying your
+event.
+
+## Contributor roles {#_contributor_roles}
+
+It is good to divide and assign tasks, meaning clear roles make sure
+everyone knows what to do - and it gives new contributors a chance to
+step up.
+
+Typical roles include: Project management, Event production, Speaker
+management, Content and promotion and Design. Check the [Week of
+Diversity GitLab
+README](https://gitlab.com/fedora/dei/week-of-diversity/-/blob/main/README.md)
+for more.
+
+You don't need a huge team - a few people can make it happen.
+
+(These roles are adopted from Fedora Week of Diversity(FWD), which has
+successfully used this structure to organize FWD events.)
+
+## Post-Event Wrap-up {#_post_event_wrap_up}
+
+You did it! Now it's time to document your impact and celebrate your
+team.
+
+&#42; Thank speakers, organizing team and attendees &#42; Share a short
+blog post or Discourse recap (with photos or quotes), check [FWD2024
+recap](https://discussion.fedoraproject.org/t/recap-of-fedora-week-of-diversity-2024/124450).
+&#42; Submit your GitLab wrap-up note with: &#42;&#42; What worked
+&#42;&#42; What could be improved &#42;&#42; Participant feedback (if
+any)
+
+This will help us all learn and grow - and it makes your event part of
+Fedora's living history.
+
+# Events {#_events_2}
+
+The Fedora Diversity, Equity &amp; Inclusion (DEI) Team has supported
+and organized several events over the years. These events celebrate
+community stories, foster inclusive spaces, and connect contributors
+globally and locally. Below is a record of some of our key initiatives:
+
+## Fedora Mentor Summit {#_fedora_mentor_summit}
+
+### 2025 {#_2025}
+
+In-person, part of the FLock to Fedora conference in Prague, Czech
+Republic
+
+&#42; [&#42;Mentored Projects Learnings &amp; Demo --
+Talk&#42;](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YE9P8R/)
+&#42;&#42; [Watch
+Video](https://www.youtube.com/live/YhoFPG7Ack0?si=puMwM-0YlhyuXADx)
+&#42; [&#42;Open Source Mentorship: Crafting Communities, Creating
+Leaders --
+Talk&#42;](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/JS9BHV/)
+&#42;&#42; [Watch
+Video](https://www.youtube.com/live/YhoFPG7Ack0?si=BTU8j_5wqpMrcy6L&amp;t=13263)
+&#42; &#42;Mentor-Mentee Lunch Matching&#42; --
+[Schedule](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YWCEJ9/)
+&#42; &#42;Sticker Match Social Networking&#42; -
+[Schedule](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/9YGBQS/)
+&#42; Contributor Recognition Award ([Wiki
+page](https://fedoraproject.org/wiki/Contributor_Recognition_Program_2025),
+[Discourse
+post](https://discussion.fedoraproject.org/t/contributor-recognition-program-winners-announcement/155845))
+
+### 2024 {#_2024}
+
+In-person event, part of the Flock to Fedora conference in Rochester,
+New York, United States of America
+
+&#42; &#42;Mentor Summit - Panel Discussion&#42; &#42;&#42;
+[Schedule](https://cfp.fedoraproject.org/flock-2024/talk/WPPGPT/) \|
+[Watch Video](https://youtu.be/4y4RdsHkUPk?si=-iAWrZ0aHmQPEXMK) &#42;
+&#42;Mentorship Bridges - Building Stronger Bonds in Fedora&#42;
+&#42;&#42;
+[Schedule](https://cfp.fedoraproject.org/flock-2024/talk/3ACYBP/) \|
+[Watch Video](https://youtu.be/35mA6g7tSZw?si=wV9wwzoj4ML2jQbt) &#42;
+&#42;Mentorship Level Up: Connect &amp; Communicate&#42; -
+[schedule](https://cfp.fedoraproject.org/flock-2024/talk/P7YQZQ/)
+
+### 2023 {#_2023}
+
+In-person event, part of the Flock to Fedora conference in Cork, Ireland
+
+&#42; &#42;Mentor Summit: Kickoff and Reflection on Mentoring in Fedora
+Community&#42; &#42;&#42;
+[Video](https://youtu.be/IP4sB2qLm0Y?si=rw1SqOmN-dEYah9A) &#42;
+&#42;Panel: Mentoring and Mentorship Best Practices in Fedora&#42;
+&#42;&#42; [Watch
+Video](https://youtu.be/J2uM5rYbahM?si=sHABFegnGlT-ppDw) \|
+[Schedule](https://flock2023.sched.com/event/1Or82/panel-mentoring-and-mentorship-best-practices-in-fedora)
+&#42; &#42;Icebreakers &amp; Community Social&#42; &#42;&#42;
+[Schedule](https://flock2023.sched.com/event/1Or8D/interactive-icebreakers-community-social)
+&#42; &#42;Unconscious bias &amp; imposter syndrome workshop&#42;
+&#42;&#42;
+[Schedule](https://flock2023.sched.com/event/1PbQq/interactive-unconscious-bias-imposter-syndrome-workshop)
+&#42; &#42;Exploring privilege dynamics workshop&#42; &#42;&#42;
+[Schedule](https://flock2023.sched.com/event/1PbR2/interactive-exploring-privilege-dynamics-workshop)
+&#42; &#42;Why You Should Join A Community&#42; &#42;&#42;
+[Schedule](https://flock2023.sched.com/event/1Or8A/why-you-should-join-a-community)
+\| [Video](https://youtu.be/DodBgwE0oJc?si=VDN0a41aTgAnj-tL) &#42;
+&#42;Interactive: Story Stitch&#42; &#42;&#42;
+[Schedule](https://flock2023.sched.com/event/1PbRQ/interactive-story-stitch)
+
+### 2022 {#_2022}
+
+Online event -
+[videos](https://www.youtube.com/playlist?list=PL0x39xti0_65QiQfG3g3uSvWYkRsKkxzq)
+and
+[schedule](https://events.ringcentral.com/events/fedora-mentor-summit-2022&#35;schedule)
+
+## [Fedora Week of Diversity (FWD)](https://docs.fedoraproject.org/en-US/dei/events/fwd/about-fwd/) {#_fedora_week_of_diversity_fwd}
+
+### 2024 {#_2024_2}
+
+&#42;&#42; YouTube Playlist: [Watch
+Here](https://youtube.com/playlist?list=PL0x39xti0_67oLN5oUN8lYj0a29xWCQLZ&amp;si=3VHY9tYLu3jYzYiE)
+&#42;&#42; Recap &amp; Discourse Post: [Fedora
+Discussion](https://discussion.fedoraproject.org/t/recap-of-fedora-week-of-diversity-2024)
+
+### 2022 {#_2022_2}
+
+Virtual Event Platform:
+[RingCentral](https://events.ringcentral.com/events/fedora-week-of-diversity-2022)
+
+&#42;&#42; Blog Post: [FWD
+2022](https://communityblog.fedoraproject.org/fwd-2022-call-for-volunteers/)
+&#42;&#42; Agenda: [Shared on Ring
+Central](https://events.ringcentral.com/events/fedora-week-of-diversity-2022)
+
+### 2021 {#_2021}
+
+[Fedora stories: Fedora Week of Diversity is
+here!](https://communityblog.fedoraproject.org/fedora-stories-fedora-week-of-diversity-is-here/)
+Community blog post.
+
+&#42;&#42; Community blog post. &#42;&#42; Theme: Video interviews and
+stories from contributors &#42;&#42; YouTube Playlist: [Watch
+Here](https://youtube.com/playlist?list=PL0x39xti0_66aqmB8GCXpHZOmEiG5NUpt&amp;si=LaU32xYNInB1qLXC)
+&#42;&#42; Slides: [Presented by Jona Azizaj, Marie Nordin, Vipul
+Siddharth](https://siddharthvipul1.fedorapeople.org/slides/F35%20Release%20Party_%20Fedora%20Week%20of%20Diversity%20Presentation.pdf)
+
+## DEI at Flock: Sessions and Impact {#_dei_at_flock_sessions_and_impact}
+
+### Flock 2025 (Prague, Czech Republic) {#_flock_2025_prague_czech_republic}
+
+&#42; [International Candy Swap and Board
+Games](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/DLLALE/)
+\| [Wiki page](https://fedoraproject.org/wiki/Flock_2025/Candy_Swap)
+
+### Flock 2024 (Rochester, NY, USA) {#_flock_2024_rochester_ny_usa}
+
+&#42; [Injecting DEI into Community Event
+Policies](https://cfp.fedoraproject.org/flock-2024/talk/BZKDJU/) &#42;
+[Fedora Diversity, Equity, &amp; Inclusion (DEI) Team
+Hackfest](https://cfp.fedoraproject.org/flock-2024/talk/LU7U9C/) &#42;
+Beyond Algorithms: Navigating Diversity, Equity, and Inclusion in the
+Artificial Intelligence Era &#42;&#42; [Talk
+Link](https://cfp.fedoraproject.org/flock-2024/talk/3UDG87/) &#42;&#42;
+[Watch Video](https://youtu.be/ymQBVO_latA?si=6riOUJ8oiZE9uLGo) &#42;
+[International Candy
+Swap](https://cfp.fedoraproject.org/flock-2024/talk/LFVLES/) \| [Wiki
+page](https://fedoraproject.org/wiki/Flock_2024/Candy_Swap)
+
+### Flock 2023 (Cork, Ireland) {#_flock_2023_cork_ireland}
+
+&#42; Framing Diversity and Inclusion Globally (Keynote) &#42;&#42;
+[Watch Video](https://youtu.be/8804SOHiIVo?si=OTHtxl-_QJ0eb4_l) \|
+[Schedule](https://flock2023.sched.com/event/1OrDF/keynote-framing-dei-globally)
+&#42; [Candy Swap
+schedule](https://flock2023.sched.com/event/1PVkK/international-candy-swap)
+\| [Wiki page](https://fedoraproject.org/wiki/Flock_2023/Candy)
+
+### Flock 2022 (Virtual) {#_flock_2022_virtual}
+
+&#42; 5 lessons learned from 5 years of Fedora DEI events &#42;&#42;
+[Video recording](https://youtu.be/nBgiuKh5nsk?si=o7r4obj9P_pB_p5d)
+
+### Flock 2021 (Virtual) {#_flock_2021_virtual}
+
+&#42; Tell your Fedora story: fedora week of diversity &#42;&#42; [Watch
+video](https://youtu.be/1pZd409H6pw?si=0HJfcULk7eNSJIUh) &#42; Examining
+Fedora DEI: Panel discussion &#42;&#42; [Watch
+video](https://youtu.be/B4KvLK-TI8M?si=yvPS9d2MDq0U81Mh)
+
+### Flock 2019 (Budapest, Hungary) {#_flock_2019_budapest_hungary}
+
+&#42; Coffee Amongst Friends (Community Listening) &#42;&#42; Informal,
+heart-to-heart sessions. Safe space for contributors to share lived
+experiences and struggles. &#42;&#42; [Diversity ticket
+&#35;106](https://pagure.io/fedora-diversity/issue/106), [Flock ticket
+&#35;166](https://pagure.io/flock/issue/166) &#42; Diversity Video
+Project &#42;&#42; Captured stories of community members around
+diversity. &#42;&#42; Organized by \@tatica. &#42;&#42; [Ticket issue
+&#35;107](https://pagure.io/fedora-diversity/issue/107), [Flock to
+Fedora 2019 -
+Budapest](https://youtu.be/O1eHRoEps6I?si=2lKgnwt0Xtb9wl6v) &#42;
+Slideshow Karaoke (Inclusive Icebreaker) &#42;&#42; Attendees delivered
+spontaneous presentations using random slides. Community-bonding and
+chaotic fun. &#42;&#42;
+[Schedule](https://flock2019.sched.com/event/S5qS/slideshow-karaoke) \|
+[Video](https://youtu.be/_tSQ7vr53Mc?si=Lpdk32SeSy_W0HJK) &#42;
+Non-English Language Event &#42;&#42; A multilingual conversation
+session held and showcased at the closing. &#42;&#42; [Issue
+&#35;91](https://pagure.io/fedora-diversity/issue/91), [Flock Issue
+&#35;167](https://pagure.io/flock/issue/167) &#42;&#42; [Video
+recording](https://youtu.be/LWHfTCCnLFM?si=ahWKQVn0y28KE8F7) &#42;
+D&amp;I Hackfest &#42;&#42; Continued tradition of focused D&amp;I
+collaboration during Flock. &#42;&#42;
+[Schedule](https://flock2019.sched.com/event/S5pz/fedora-diversity-inclusion-team-hackfest)
+&#42;&#42; [Video
+recording](https://youtu.be/LWHfTCCnLFM?si=ahWKQVn0y28KE8F7)
+
+### Flock 2018 (Dresden, Germany) {#_flock_2018_dresden_germany}
+
+&#42; &#42;[Unconscious bias &amp; Impostor Syndrome
+workshop](https://flock2018.sched.com/event/Fjcq/imposter-syndrome-workshop-and-unconscious-bias-training)&#42;
+&#42;&#42; Enabled attendees to recognize and address internalized
+biases. &#42;&#42; [Workshop ticket](https://pagure.io/flock/issue/54)
+&#42;&#42; Watch video - [First
+part](https://youtu.be/In6-0pzhDqs?si=QYgiodE1iB3zuotE), [second
+part](https://youtu.be/sHPm_rMMs0o?si=HvpL5w_uEe9mM7ku). &#42;
+&#42;[International Candy Swap (Evening
+Activity)](https://flock2018.sched.com/event/FjdT/game-nightcandy-swap)&#42;
+&#42;&#42; Global participants brought and shared sweets from their
+countries. &#42;&#42; Organized by \@jflory7. &#42; &#42;Fedora D&amp;I
+Team Sprint (Parts 1 &amp; 2)&#42; &#42;&#42; A split sprint session
+across two time blocks &#42;&#42;&#42; [Sprint Part 1 --
+Schedule](https://flock2018.sched.com/event/FjdP/fedora-diversity-inclusion-team-sprint)
+&#42;&#42;&#42; [Sprint Part 2 --
+Schedule](https://flock2018.sched.com/event/FjdS/fedora-diversity-inclusion-team-sprint)
+&#42; &#42;GSoC/Outreachy Project Showcase&#42; &#42;&#42; Interns
+presented their Fedora projects to a wider audience, encouraging
+mentoring and contributor pathways. &#42;&#42; [Watch
+video](https://youtu.be/B_kf68c3qog?si=mOlaTCdV8fBbocQl) \| [View
+schedule](https://flock2018.sched.com/event/Fjcp/fedora-in-google-summer-of-code-and-outreachy-project-showcase)
+
+### Flock 2017 (Cape Cod, Massachusetts, USA) {#_flock_2017_cape_cod_massachusetts_usa}
+
+&#42; &#42;D&amp;I Team Hackfest and team sprints (Collaborative
+Session)&#42; &#42;&#42; A working session where team members tackled
+ticket backlogs, planned strategies, and built resources. Typically
+limited to three key tasks per session. &#42; D&amp;I Hackfest
+&#42;&#42; A high-focus session tackling the team's backlog and setting
+direction. &#42;&#42;
+[Schedule](https://flock2017.sched.com/event/Bm8o/diversity-team-hackfest)
+&#42;&#42; [Video](https://youtu.be/kghGIxwMF38?si=glKQZjZcrDb1vmgW)
+
+### Flock 2016 (Krakow, Poland) {#_flock_2016_krakow_poland}
+
+&#42; Diversity - Women in Open Source (Presentation by Amita Sharma
+\[@amsharma\]) &#42;&#42; A foundational talk on DEI, outreach programs
+like PyLadies, Outreachy, GSoC, and support for women in FLOSS.
+&#42;&#42; [Watch the
+video](https://youtu.be/qp0EMGovSnc?si=Ktoeh0iogErNHB7L), [View the
+schedule](https://flock2016.sched.com/event/76nj/diversity-women-in-open-source).
+&#42; Diversity Panel &#42;&#42; [Interactive session collecting
+community feedback on DEI
+efforts](https://flock2016.sched.com/event/6yp5/diversity-panel-building-an-inclusive-community).
+&#42;&#42; [Event Blog - Tatica, Reflection
+Post](https://whatamithinks.wordpress.com/2016/08/15/480/)
+
+## Fedora Appreciation Week (FAW) {#_fedora_appreciation_week_faw}
+
+### [FWD 2023](https://communityblog.fedoraproject.org/fedora-appreciation-week-2023/) {#_fwd_2023}
+
+This year's Appreciation Week featured daily posts highlighting
+community members and their stories:
+
+&#42; [Day
+1](https://communityblog.fedoraproject.org/appreciation-week-2023-day-1/),
+[Day
+2](https://communityblog.fedoraproject.org/appreciation-week-2023-day-2/),
+[Day
+3](https://communityblog.fedoraproject.org/appreciation-week-2023-day-3/),
+[Day
+4](https://communityblog.fedoraproject.org/appreciation-week-2023-day-4/),
+[Day
+5](https://communityblog.fedoraproject.org/appreciation-week-2023-day-5/),
+[Day
+6](https://communityblog.fedoraproject.org/appreciation-week-2023-day-6/),
+[Day
+7](https://communityblog.fedoraproject.org/appreciation-week-2023-day-7/)
+
+### 2018 Docs Series: CommOps FAW {#_2018_docs_series_commops_faw}
+
+&#42; [Press
+Archive](https://docs.fedoraproject.org/en-US/commops/appreciation-week/&#35;_press)
+
+## [Fedora Women's Day (FWD)](https://pagure.io/fedora-diversity/fedora-womens-day) {#_fedora_womens_day_fwd}
+
+### 2020 {#_2020}
+
+&#42; FWD Reflection Post: [Read
+Here](https://communityblog.fedoraproject.org/fedora-womens-day-2020-reflection/)
+&#42; YouTube Video Playlist: [Watch
+Here](https://youtube.com/playlist?list=PL0x39xti0_64NxdF68V6eZ1JWUQtHbR3E&amp;si=VWpfuQG_jahi0BQq)
+
+### 2019 {#_2019}
+
+&#42; Call for Proposals: [Community
+Blog](https://communityblog.fedoraproject.org/call-for-fedora-womens-day-2019-proposals/)
+&#42; Interviews: [YouTube: Alex Calejas &amp;
+Sr_Kranken](https://youtu.be/0AHd8K1K8Bc?si=aBWCocET3ztLPR0s) &#42;
+Event Reports: &#42;&#42; [Fedora Women's Day 2019, Aurangabad
+Maharashtra,
+India](https://nikhilkathole.wordpress.com/2019/10/02/fedora-womens-day-2019/)
+&#42;&#42; [Fedora Women's Day 2019,
+Tirana](https://marianaballa.com/Fedora-Women-Day-2019-Tirana/)
+&#42;&#42; [Fedora Women's Day
+(Bhubaneswar)](https://communityblog.fedoraproject.org/fedora-womens-day-report-bhubaneswar/)
+&#42;&#42; [FWD'19 Mexico
+City](https://communityblog.fedoraproject.org/fwd19-mexico-city/)
+&#42;&#42; [Fedora Women's Day 2019 Lima,
+Peru](https://solanch96.wordpress.com/2019/11/12/fedora-womens-day-fwd-2019/)
+
+### 2018 {#_2018}
+
+&#42; Wiki: [FWD
+2018](https://fedoraproject.org/wiki/Fedora_Women’s_Day_2018) &#42;
+Resources: [How to organize
+FWD](https://communityblog.fedoraproject.org/fedora-womens-day-2018-proposals/)
+(Call for Fedora Women's Day 2018 proposal)
+
+### 2017 {#_2017}
+
+&#42; Wiki: [FWD
+2017](https://fedoraproject.org/wiki/Fedora_Women’s_Day_2017) &#42;
+Local Events:
+[Pune](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Pune),
+[Tirana](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Tirane),
+[Bangalore](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Bangalore),
+[Guwahati](https://fedoraproject.org/wiki/Fedora_Women%27s_Day/2017/Guwahati),
+[Lima](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Lima),
+[Managua](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Managua),
+[Prishtina](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Prishtina),
+[Brno](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Brno),
+[Cusco](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Cusco),
+[Puno](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Puno).
+&#42; Reports: [Fedora wd Brno
+report](https://rhea-ayase.eu/articles/2017-10/FWD-Brno) &#42; Blog:
+[Fedora Community
+Blog](https://communityblog.fedoraproject.org/fedora-women-days-2017/)
+by Jona Azizaj
+
+### 2016 {#_2016}
+
+&#42; Wiki: [Fedora Women's Day
+2016](https://fedoraproject.org/wiki/Category:Fedora_Women%27s_Day_2016)
+&#42; Description: Celebrated virtually and locally (Pune, Tirana).
+Focused on building networks, recognition, and inclusion. &#42; Workshop
+(Pune): Women in Free Software --- enabled participants to contribute to
+FLOSS, especially Fedora and Ubuntu. &#42;&#42; Links: [Pune workshop
+report](https://whatamithinks.wordpress.com/2016/07/17/event-report-fedora-women-day/)
+
+## Regional community events {#_regional_community_events}
+
+### [Fedora event at Murang'a University](https://fedoramagazine.org/were-in-kenya-fedora-at-muranga-university/) {#_fedora_event_at_muranga_university}
+
+&#42;&#42; On March 28th, 2025, [Cornelius
+Emase](https://fedoraproject.org/wiki/User:Lochipi) hosted an info
+session about open source (Fedora) at Muranga university of technology.
+The event focused on introducing students to Fedora, open source
+contribution paths, and community building. &#42;&#42; Impact factors
+that contributed to its success: &#42;&#42;&#42; Partnered with
+university faculty to secure a venue and promote the event
+&#42;&#42;&#42; Used beginner-friendly materials suitable for new
+contributors &#42;&#42;&#42; Provided actionable next steps (community
+links, Fedora Magazine articles, and Quick Docs) &#42;&#42;&#42;
+Designed a future engagement plan (virtual contribution workshop)
+&#42;&#42; What Worked Well: &#42;&#42;&#42; Collaborating with local
+institutions improved credibility and turnout &#42;&#42;&#42; Leveraging
+personal contributor stories helped attendees connect with Fedora
+&#42;&#42;&#42; The session increased participant confidence on open
+source &#42;&#42;&#42; Localized communication ensured better
+understanding and inclusivity
+
+You can read the full recap here: [Fedora Magazine blog
+post](https://fedoramagazine.org/were-in-kenya-fedora-at-muranga-university/),
+and the [highlights here](https://mut-fedora-event.vercel.app/).
+
+## Build pathways for the community: Beyond events {#_build_pathways_for_the_community_beyond_events}
+
+To truly support contributors from marginalized regions, DEI events must
+connect attendees to long-term opportunities and the possible ways we
+can retain them:
+
+&#42; Industry connections and job pipelines &#42; Global-local
+mentorships &#42; Training and skill-building follow-ups &#42; Fedora
+swag and material support &#42; Inclusion in Fedora working groups and
+decision spaces
+
+This page is maintained by the Fedora Diversity, Equity, &amp; Inclusion
+(DEI) Team. If you'd like to suggest changes or add your event, [contact
+the team](https://docs.fedoraproject.org/en-US/dei/get-involved/) or
+[the DEI
+Adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
+
+# FWD organizer resource pack {#_fwd_organizer_resource_pack}
+
+In this page you can find a resource pack that helps in organizing a
+successful [Fedora Week of Diversity](events:about-fwd.xml) event. The
+points below can be used in the event organizer's agenda:
+
+&#42; How to welcome contributors to Fedora &#42; A summary about Fedora
+D.E.I. team &#42; Overview of different Fedora editions &#42; Fedora and
+Python
+
+## How to welcome new contributors to Fedora? {#_how_to_welcome_new_contributors_to_fedora}
+
+Did you come across folks who are interested in contributing to the
+Fedora project? Then please create [Welcome to Fedora
+ticket](https://pagure.io/fedora-join/WelcomeToFedora/issues) for the
+newcomers with Fedora Join SIG. This ticket helps them to easily track
+their progress in the journey to becoming Fedora contributors. Find more
+information about the welcome ticket process
+[here](https://docs.fedoraproject.org/en-US/fedora-join/welcome/welcome/).
+
+Need help with creating the welcome ticket? Reach out to Fedora Join SIG
+at any of their [Communication
+channels](https://docs.fedoraproject.org/en-US/fedora-join/&#35;communication).
+
+## About Fedora Diversity, Equity, &amp; Inclusion Team {#_about_fedora_diversity_equity_amp_inclusion_team}
+
+At your event, start with an introduction to the Fedora Diversity,
+Equity, &amp; Inclusion Team. Explain the role of D.E.I. team in the
+Fedora community and its upcoming goals. Share our [team's introduction
+page](ROOT:index.xml) with anyone who is interested in learning more.
+
+What is the role of Fedora Diversity, Equity, &amp; Inclusion Team?
+
+:   As the name indicates, the main goal of the D.E.I. team is to foster
+    diversity, equity, and inclusion in Fedora community. Below are some
+    of the many efforts focused by D.E.I. team to achieve its goal:
+    &#42; Creating content and organizing events to spread awareness
+    about diversity within and outside Fedora community (like Fedora
+    Week of Diversity!) &#42; Supporting community building and
+    engagement activities to promote inclusion &#42; Coordinate with
+    Fedora sub-projects to enhance diversity, equity, and inclusion in
+    the community &#42; Supporting programs committed to building
+    diversity, equity, and inclusion in Free and Open Source Software
+    communities
+
+What the D.E.I. team works on?
+
+:   The D.E.I. team works on various tasks to support diversity, equity,
+    and inclusion in the Fedora Project. For example, new additions were
+    made to the 2018 [Fedora Flock
+    conference](https://flocktofedora.org/) such as including
+    gender-neutral bathrooms, a quiet room, and communication preference
+    stickers. These additions in turn supported our existing effort to
+    draft [event inclusion
+    guidelines](https://pagure.io/fedora-diversity/issue/54) for Fedora
+    event organizers. These guidelines when shared within and outside
+    Fedora community provide best practices to organizers holding an
+    event. In the past, we also worked on a [Fedora Project Demographic
+    Survey](survey:index.xml) to understand who is in the Fedora
+    Community.
+
+Community Script
+
+:   Hi, my name is *\_\_\_*, I am from *\_\_\_*, I am *\_\_\_*, and I
+    speak *\_\_\_*. We are from different countries, We speak different
+    languages, We are of different cultures, But Fedora unites us with
+    Open Source. WE ARE FEDORA!
+
+## Fedora Editions {#_fedora_editions}
+
+{FWIKI}/Editions\[Fedora Editions\] are the flagship configurations of
+Fedora offered by the Fedora Project. They are promoted on the
+[getfedora.org](https://getfedora.org/) website. Each Edition has a
+different use case and audience as explained below.
+
+### Fedora Workstation {#_fedora_workstation}
+
+[Fedora Workstation](https://getfedora.org/workstation/) is a primary
+desktop configuration offered by Fedora. Fedora workstation is a great
+choice for someone looking to use a Linux on their desktop or learn to
+develop in a Linux environment. It ships the [GNOME Desktop
+Environment](https://www.gnome.org/), includes latest versions of
+programming languages and libraries, and is easy to make a [bootable USB
+stick](https://fedoramagazine.org/make-fedora-usb-stick/).
+
+&#42; For a comprehensive description of updates and new features, see
+the official release notes
+[here](https://docs.fedoraproject.org/en-US/releases/).
+
+### Fedora Server {#_fedora_server}
+
+[Fedora Server](https://getfedora.org/server/) is a primary server
+configuration offered by Fedora. This makes a good choice for seasoned
+system administrators, allowing them to work with latest technologies
+from the open source community. This is a short-lifecycled,
+community-supported server environment. Fedora Server features
+[Cockpit](https://cockpit-project.org/), [FreeIPA identity
+management](https://www.freeipa.org/page/About), and the brand-new
+[Fedora Server Modular Edition](https://docs.pagure.org/modularity/).
+
+See recent features to Fedora Server
+[here](https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/sysadmin/).
+
+### Fedora Silverblue {#_fedora_silverblue}
+
+[Fedora Silverblue](https://silverblue.fedoraproject.org/) is a variant
+of Fedora Workstation. It looks, feels and behaves like a regular
+desktop operating system giving an experience is similar to a standard
+Fedora Workstation.
+
+However, unlike other operating systems, Silverblue is immutable. This
+means that every installation is identical to every other installation
+of the same version. The operating system that is on disk is exactly the
+same from one machine to the next, and it never changes as it is used.
+
+### Fedora CoreOS {#_fedora_coreos}
+
+[Fedora CoreOS](https://getfedora.org/en/coreos/) is an automatically
+updating, minimal, monolithic, container-focused operating system
+designed for clusters but also operable standalone. This is optimized
+for Kubernetes but also works great without it. It aims to combine the
+best of both CoreOS Container Linux and Fedora Atomic Host, by
+integrating Ignition technology from Container Linux with rpm-ostree and
+SELinux hardening from Project Atomic. The goal of this edition is to
+provide the best container host to run containerized workloads securely
+and at scale.
+
+### Fedora IoT {#_fedora_iot}
+
+[Fedora IoT](iot:ROOT:index.xml) or Fedora Internet of Things provides a
+strong foundation for IoT ecosystems. Whether you're working on a
+project at home, industrial gateways, smart cities or analytics with
+AI/ML, Fedora IoT can provide a trusted open source platform to build
+on. Fedora IoT rolling releases help you keep your ecosystem up-to-date.
+
+## Fedora Objectives {#_fedora_objectives}
+
+> The primary role of the Fedora Council is to identify the short,
+> medium, and long term goals of the Fedora community and to organize
+> and enable the project to best achieve them. Each objective has a
+> designated Objective Lead who is responsible for coordinating efforts
+> to reach the Objective's goals, for evaluating and reporting on
+> progress, and for working regularly with all relevant groups in Fedora
+> to ensure that progress is made.
 >
-> ---  Bee_Padalkar\_(bee2502)
+> ---
+> \_\'From_https://docs.fedoraproject.org/en-US/project/objectives/\[Fedora_Objectives\]\'
 
-We also wanted to identify how the data will be used. We aimed to make a
-communication plan for how the data would be used. Ideally, information
-about data use and intentions is available and embedded in the survey.
+These Objectives are listed as follows:
 
-# Demographic Survey Questions {#_demographic_survey_questions}
+&#42; [Fedora
+Minimization](https://docs.fedoraproject.org/en-US/project/objectives/minimization-phase-2/)
+&#42; {FWIKI}/Objectives/Fedora_IoT\[Internet of Things (IoT)\]
 
-Fedora Diversity, Equity, &amp; Inclusion Team
-&lt;<diversity@lists.fedoraproject.org>&gt; v1.0.0 :toc:
+## Fedora &lt;3 Python {#_fedora_lt3_python}
 
-This page includes the officially-approved list of questions for the
-Fedora Project Demographic Survey. It contains 23 questions. See the
-[About](index.xml) and [Resources &amp; references](resources.xml) pages
-for additional context behind these questions.
+[&#42;fedoralovespython.org&#42;](https://fedoralovespython.org/)
 
-:::: note
-::: title
-:::
+:   Collection of resources on using Python on Fedora.
 
-This page represents six to eight months of work from the Fedora
-Diversity, Equity, &amp; Inclusion Team in late 2015 and early 2016.
-While the D.E.I. Team is &#42;no longer actively working on this
-survey&#42; due to data collection and storage concerns (i.e. G.D.P.R.),
-it is retained here for historical purposes. The team hopes our research
-and work may be useful for other Open Source communities and Diversity,
-Equity, &amp; Inclusion programmes.
-::::
+[&#42;Python - Fedora Developer Portal&#42;](https://developer.fedoraproject.org/tech/languages/python/python-installation.html)
 
-## Fedora and Free and Open Source software usage and contributions {#fedora-foss}
+:   Steps and guides on how to install, use, and develop with Python on
+    Fedora (including Django, Flask,
+    [SciPy](https://developer.fedoraproject.org/tech/languages/python/scipy.html)
+    and more).
 
-1.  &#42;How long have you been a Fedora user?&#42; &#42;&#42; I have
-    never used Fedora &#42;&#42; Less than 1 year &#42;&#42; 1 to 3
-    years &#42;&#42; 3 to 6 years &#42;&#42; 6 to 10 years &#42;&#42;
-    Over 10 years &#42;&#42; Prefer not to say
+[&#42;Python 3 porting database&#42;](http://fedora.portingdb.xyz/)
 
-2.  &#42;How long have you been a Fedora contributor?&#42; &#42;&#42; I
-    have never contributed to Fedora &#42;&#42; Less than 1 year
-    &#42;&#42; 1 to 3 years &#42;&#42; 3 to 6 years &#42;&#42; 6 to 10
-    years &#42;&#42; Over 10 years &#42;&#42; Prefer not to say
+:   Fedora's Python 3 porting database. Shows progress towards fully
+    migrating Fedora Python packages to Python 3.
 
-3.  &#42;Please select types of contributions that you make to
-    Fedora:&#42; &#42;&#42; Community (community leadership, new
-    contributor outreach and onboarding, diversity and inclusion work,
-    marketing, event organization) &#42;&#42; Technical (packaging,
-    programming, infrastructure, operations, release engineering,
-    testing / QA, language-specific SIGs) &#42;&#42; Other non-technical
-    (design, documentation, localization, translation) &#42;&#42; Prefer
-    not to say &#42;&#42; Other (please specify)
+[&#42;Python Classroom Lab&#42;](https://labs.fedoraproject.org/python-classroom/)
 
-4.  &#42;Do you contribute to Fedora as a volunteer or as an employee of
-    a company?&#42; &#42;&#42; Volunteer (student) &#42;&#42; Volunteer
-    (unemployed) &#42;&#42; Volunteer (retired) &#42;&#42; Volunteer
-    (outside regular job) &#42;&#42; Employee (work-related
-    contributions) &#42;&#42; Prefer not to say &#42;&#42; Other (please
-    specify)
+:   Fedora Lab intended for teachers and instructors teaching students
+    Python. It includes several Python development tools and libraries
+    not normally installed by default (also is available as GNOME
+    desktop, a Vagrant VM, or a Docker container).
 
-5.  &#42;On average, how many hours a week did you spend on Fedora
-    contributions in the last three months?&#42; &#42;&#42; 0, I have
-    not contributed in the last three months &#42;&#42; Less than 2
-    &#42;&#42; 2 - 5 &#42;&#42; 6 - 10 &#42;&#42; 11 - 20 &#42;&#42;
-    21 - 40 &#42;&#42; More than 40 &#42;&#42; Prefer not to say
+[&#42;Contributing to Python in Fedora&#42;](https://whatcanidoforfedora.org/en/&#35;coding&#35;python)
 
-6.  &#42;What are the top reasons you contribute to Fedora?&#42; Please
-    check a maximum of 4 answers. &#42;&#42; To participate in a global
-    cooperative project &#42;&#42; To participate in a free and open
-    source software project &#42;&#42; To improve a free and open source
-    software project &#42;&#42; Because I think that software should not
-    be proprietary &#42;&#42; To solve a problem that could not be done
-    by proprietary software &#42;&#42; To get help in realizing a good
-    idea for a software project &#42;&#42; To learn and develop new
-    skills &#42;&#42; To share my knowledge and skills &#42;&#42; To
-    improve my job opportunities &#42;&#42; To get a reputation in the
-    free and open source software scene &#42;&#42; To meet other people
-    in the free and open source software community &#42;&#42; Because I
-    enjoy working with other people in the community &#42;&#42; To get
-    funding to travel internationally &#42;&#42; To earn a living
-    &#42;&#42; Prefer not to say &#42;&#42; Other (please specify)
+:   Helpful resources to find ways to contribute to Python efforts in
+    Fedora.
 
-7.  &#42;Think of the time you made your first contribution to Fedora
-    that was incorporated. What best describes your experience?&#42;
-    &#42;&#42; My co-worker, who was paid to work on Fedora, helped me
-    prepare the contribution &#42;&#42; A person I already knew socially
-    helped me prepare the contribution &#42;&#42; A person I did not
-    know before helped me prepare the contribution at an in-person event
-    &#42;&#42; A person I did not know before helped me prepare the
-    contribution via electronic communications &#42;&#42; A mentor for a
-    third-party program (e.g. Google Summer of Code, Outreachy, etc.)
-    helped me prepare the contribution via electornic communications
-    &#42;&#42; A mentor identified by the Fedora Project helped me
-    prepare the contribution via electronic communications &#42;&#42; A
-    person whom I identified as a mentor helped me prepare the
-    contribution via electronic communications &#42;&#42; I submitted my
-    contribution electronically for review and it was reviewed by my
-    co-worker, who was paid to work on Fedora &#42;&#42; I submitted my
-    contribution electronically for review and it was reviewed by
-    someone I already knew socially &#42;&#42; I submitted my
-    contribution electronically for review and it was reviewed by
-    someone I didn't know before &#42;&#42; Prefer not to say &#42;&#42;
-    Other (please specify)
+[&#42;Python articles on Fedora Magazine&#42;](https://fedoramagazine.org/tag/python/)
 
-8.  &#42;Do you routinely use software that is not free and open source
-    on Fedora?&#42; &#42;&#42; Yes, but only web-based applications like
-    Google Docs &#42;&#42; Yes, but only locally installed applications
-    (including hardware drivers) &#42;&#42; Yes, both web-based and
-    locally installed applications &#42;&#42; No &#42;&#42; Prefer not
-    to say &#42;&#42; Other (please specify)
-
-## Demographics
-
-1.  &#42;What is your gender?&#42; &#42;&#42; Male &#42;&#42; Female
-    &#42;&#42; Non-binary &#42;&#42; Prefer not to say &#42;&#42; Other
-    (please specify)
-
-2.  &#42;Do you identify as lesbian, gay, bisexual, transgender or
-    queer?&#42; &#42;&#42; Yes &#42;&#42; No &#42;&#42; Prefer not to
-    say
-
-3.  &#42;What is your age range?&#42; &#42;&#42; 17 or younger
-    &#42;&#42; 18 to 24 &#42;&#42; 25 to 34 &#42;&#42; 35 to 44
-    &#42;&#42; 45 to 54 &#42;&#42; 55 to 64 &#42;&#42; 65 to 74
-    &#42;&#42; Over 75 &#42;&#42; Prefer not to say
-
-4.  &#42;Do you have any disability, including, but not limited to any
-    of the ones listed
-    [here](https://www.dol.gov/ofccp/regs/compliance/sec503/Self_ID_Forms/VoluntarySelf-ID_CC-305_ENG_JRF_QA_508c.pdf)?&#42;
-    &#42;&#42; Yes &#42;&#42; No &#42;&#42; Prefer not to say
-
-5.  &#42;Do you have a partner?&#42; &#42;&#42; No, I am a single
-    &#42;&#42; Yes, although we do not live together &#42;&#42; Yes, I
-    live together with my partner &#42;&#42; Yes, I am married
-    &#42;&#42; Yes, I am married, but we do not live together &#42;&#42;
-    Prefer not to say &#42;&#42; Other (please specify)
-
-6.  &#42;How old is your youngest child?&#42; &#42;&#42; I don't have
-    children &#42;&#42; Less than 2 years old &#42;&#42; Between 2 years
-    and 5 years old &#42;&#42; Between 6 years and 10 years old
-    &#42;&#42; Between 11 years and 17 years old &#42;&#42; 18 years or
-    older &#42;&#42; Prefer not to say
-
-7.  &#42;What region of the world do you reside in?&#42; &#42;&#42; Asia
-    and Pacific Countries (APAC) &#42;&#42; Europe and the Middle East
-    (EMEA) &#42;&#42; Latin and South America (LATAM) &#42;&#42; North
-    America (NA) &#42;&#42; Prefer not to say
-
-8.  &#42;What is your country of residence?&#42;
-
-9.  &#42;What is the highest level of education you have completed?&#42;
-    &#42;&#42; Less than secondary (High) school &#42;&#42; Secondary
-    (High) school graduate or equivalent &#42;&#42; Vocational / trade
-    program or apprenticeship &#42;&#42; Some college (working towards a
-    first level university degree) &#42;&#42; Some college (not pursuing
-    a degree anymore) &#42;&#42; Associate degree &#42;&#42; Bachelor's
-    degree &#42;&#42; Master's degree &#42;&#42; Doctorate (Ph.D.) or
-    other advanced degree (e.g. M.D., J.D.) &#42;&#42; Prefer not to say
-    &#42;&#42; Other (please specify)
-
-10. &#42;If you are employed, what organization do you work for?&#42;
-    &#42;&#42; I am not employed &#42;&#42; Employed (please specify
-    organization name) &#42;&#42; Employed, but prefer not to specify
-    the organization &#42;&#42; Prefer not to say
-
-11. &#42;If you are employed, what do you work on?&#42; &#42;&#42; I am
-    not employed &#42;&#42; Software development &#42;&#42; System
-    administration &#42;&#42; Testing / QA / QE &#42;&#42; Technical
-    writing &#42;&#42; UX/UI design &#42;&#42; Marketing /communications
-    &#42;&#42; Community and event management &#42;&#42; Prefer not to
-    say &#42;&#42; Other (please specify)
-
-## Perception of, experience with, and attitudes towards diversity and inclusion {#perception}
-
-:::: note
-::: title
-:::
-
-This section title may need revisions for simplicity.
-::::
-
-The following questions can be presented as a table, with the same set
-of answer options. Questions about diverse perspectives, comfort with
-contributing ideas, valuing best ideas, and feeling respected were
-adapted from Red Hat Associate Survey.
-
-1.  &#42;Please indicate how you feel about the following
-    statements.&#42; &#42;&#42; Diverse perspectives are valued in the
-    Fedora community. &#42;&#42; I feel comfortable contributing my
-    ideas (in meetings or online forums), even when my views differ from
-    other contributors. &#42;&#42; The people I collaborate with value
-    the best ideas regardless of their source. &#42;&#42; I feel
-    respected when I share my ideas and opinions in the Fedora
-    community. &#42;&#42; Having greater diversity of contributors will
-    positively impact the Fedora Project. &#42;&#42; I'm appreciated for
-    the contributions I make.
-
-2.  &#42;Information about Fedora processes, policies or guidelines is
-    easy to find.&#42; &#42;&#42; Strongly agree &#42;&#42; Agree
-    &#42;&#42; Slightly agree &#42;&#42; Neither agree nor disagree
-    &#42;&#42; Slightly disagree &#42;&#42; Disagree &#42;&#42; Strongly
-    disagree
-
-:::: note
-::: title
-:::
-
-For the final two questions, do not add personally-identifying
-information about yourself or others in either text box.
-::::
-
-1.  &#42;Is there anything you believe would improve the inclusivity of
-    the Fedora community?&#42;
-
-2.  &#42;Do you have any feedback on this survey and are there any
-    additional questions you believe it should have asked?&#42;
-
-# Resources &amp; references {#_resources_amp_references}
-
-Several other existing surveys, Open Source research studies, and other
-writing influenced the creation, design, and execution of this survey:
-
-:::: note
-::: title
-:::
-
-FLOSS Survey 2013 focuses on a comparative analysis of different groups
-of respondents instead of asserting authoritative statistics abour
-diversity in the Open Source community.
-::::
-
-FLOSS Survey 2013
-
-:   &#42; [Questions and results](https://floss2013.larjona.net/) &#42;
-    [Women in Free/Libre/Open Source Software: The Situation in the
-    2010s](http://flosshub.org/content/women-freelibreopen-source-software-situation-2010s)
-    paper with results analysis
-
-Apache Software Foundation Committer Diversity Survey
-
-:   &#42; [Announcement
-    e-mail](http://mail-archives.apache.org/mod_mbox/www-announce/201611.mbox/%3Cpony-31e1cbf2b23a01ea035ee3323fe2ab95950c8284-dc1f345f30800e5cbef086a8801c55be77bc49c3%40announce.apache.org%3E)
-    &#42;
-    [Results](https://cwiki.apache.org/confluence/display/COMDEV/ASF+Committer+Diversity+Survey+-+2016)
+:   All articles on the Fedora Magazine related to Python in Fedora. Two
+    great examples are [*Python 3.7 now available in
+    Fedora*](https://fedoramagazine.org/python-3-7-now-available-in-fedora/)
+    and [*How to install Pipenv on
+    Fedora*](https://fedoramagazine.org/install-pipenv-fedora/).
 
 &#42; Event Checklist = Fedora Event Guidelines
 
@@ -1913,1003 +2556,6 @@ impact" guidelines as 🍎and "high effort-high impact" guidelines as ✅
 &#42;&#42;&#42; Do you need more resources to implement this guideline
 and/or support from Fedora DEI Team?
 
-# Events {#_events}
-
-The Events section of the Fedora Diversity, Equity, &amp; Inclusion
-(DEI) Team Docs aims to build a Fedora Diversity events calendar and
-identify regional events for participation. Our focus is on supporting
-minority-specific events to promote a more inclusive environment across
-the Fedora Community, we target minority-specific events.
-
-Our mission is to &#42;embed inclusivity into all Fedora events&#42; and
-to &#42;expand Fedora's reach into historically marginalized
-regions&#42; through meaningful and well-supported participation.
-
-## Making Fedora events inclusive {#_making_fedora_events_inclusive}
-
-Inclusivity should be a part of all Fedora events and activities. Here
-are some best practices to consider when planning an event with your
-community:
-
-&#42; Design sessions that are hybrid or remote-friendly &#42; Include
-speakers, panelist and/or contributors from diverse backgrounds &#42;
-Share the [Code of
-Conduct](https://docs.fedoraproject.org/en-US/project/code-of-conduct/)
-clearly before the event &#42; Provide translation or interpretation, if
-possible &#42; Choose accessible venues and platforms
-
-## Hosting events in marginalized regions {#_hosting_events_in_marginalized_regions}
-
-We want to support Fedora events in regions where open source is still
-growing - such as parts of Africa, Asia, South America, and more. This
-requires thoughtful planning.
-
-Here's how to support that:
-
-&#42; Partner with local schools or tech communities &#42; Offer support
-for travel, internet access, or event costs (e.g., swag for
-contributors) &#42; Use local languages and culturally aware
-communication &#42; Connect local organizers with Fedora mentors
-
-## Upcoming events {#_upcoming_events}
-
-If you're looking for upcoming events, you can check [Fedora events
-calendar](https://calendar.fedoraproject.org//Events/) for a list of
-official community activities.
-
-We would love to support you, and if you want to plan or have an
-upcoming event, or even want to help us with upcoming events, you can
-get in touch with the [DEI
-team](https://docs.fedoraproject.org/en-US/dei/get-involved/) or [Fedora
-DEI
-adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
-
-This section is a living document --- your stories, feedback, and
-contributions help keep it real.
-
-This page is maintained by the Fedora Diversity, Equity, &amp; Inclusion
-(DEI) Team. For suggesting any modifications, [contact the
-team](https://docs.fedoraproject.org/en-US/dei/get-involved/) or the
-[DEI
-Adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
-
-# Social Events in Fedora {#_social_events_in_fedora}
-
-Fedora social events are fun, welcoming spaces where people can connect,
-share, and build community. They happen during bigger conferences like
-&#42;Flock&#42;, or as part of smaller events or local meetups.
-
-These events are open to everyone - you don't have to be an expert. The
-goal is to create a relaxed space where people can hang out, swap
-stories, play games, and enjoy being part of the Fedora community - they
-make Fedora feel more human and inclusive.
-
-&#42;Tip&#42;: Focus on small, easy-to-join activities, give clear
-instructions, and always invite newcomers to jump in. It's okay if
-things aren't perfect - what really matters is people showing up and
-learning.
-
-## Examples of Fedora DEI Social events {#_examples_of_fedora_dei_social_events}
-
-We've organized various activities in the past, below are some of the
-examples we've hosted at past Fedora gatherings:
-
-+----------+-----------------------------------+-----------------------+
-| Event    | Description                       | Link                  |
-+----------+-----------------------------------+-----------------------+
-| Inter    | People brought sweets from their  | Flock 2025            |
-| national | countries and played games        | [schedule](h          |
-| Candy    | together. It was a simple and     | ttps://cfp.fedoraproj |
-| Swap     | joyful way to connect.            | ect.org/flock-to-fedo |
-| &amp;    |                                   | ra-2025/talk/DLLALE/) |
-| Board    |                                   | &amp; [wiki           |
-| Games    |                                   | page](https://fed     |
-|          |                                   | oraproject.org/wiki/F |
-|          |                                   | lock_2025/Candy_Swap) |
-|          |                                   |                       |
-|          |                                   | Flock 2024 - [wiki    |
-|          |                                   | page](https://fed     |
-|          |                                   | oraproject.org/wiki/F |
-|          |                                   | lock_2024/Candy_Swap) |
-|          |                                   |                       |
-|          |                                   | Flock 2023            |
-|          |                                   | [s                    |
-|          |                                   | chedule](https://cfp. |
-|          |                                   | fedoraproject.org/flo |
-|          |                                   | ck-2024/talk/LFVLES/) |
-|          |                                   | &amp; [wiki           |
-|          |                                   | page](https://fedo    |
-|          |                                   | raproject.org/wiki/Fl |
-|          |                                   | ock_2024/Candy_Swap). |
-|          |                                   |                       |
-|          |                                   | Flock 2018            |
-|          |                                   | [schedul              |
-|          |                                   | e](https://flock2018. |
-|          |                                   | sched.com/event/FjdT/ |
-|          |                                   | game-nightcandy-swap) |
-|          |                                   | &amp;                 |
-|          |                                   | [                     |
-|          |                                   | ticket](https://pagur |
-|          |                                   | e.io/flock/issue/54). |
-+----------+-----------------------------------+-----------------------+
-| Coffee   | A relaxed coffee hangout where    | Flock 2019 -Ticket    |
-| Amongst  | folks chatted about anything -    | [&#35;106](http       |
-| Friends  | Fedora, open source, or just      | s://pagure.io/fedora- |
-|          | life.                             | diversity/issue/106), |
-|          |                                   | [&#                   |
-|          |                                   | 35;166](https://pagur |
-|          |                                   | e.io/flock/issue/166) |
-|          |                                   | &amp; [Fedora mailing |
-|          |                                   | list                  |
-|          |                                   | conversati            |
-|          |                                   | on](https://lists.fed |
-|          |                                   | oraproject.org/archiv |
-|          |                                   | es/list/diversity@lis |
-|          |                                   | ts.fedoraproject.org/ |
-|          |                                   | thread/GPPGSHTT7XVKF2 |
-|          |                                   | JB2LX4PB62VYDIPP5H/). |
-+----------+-----------------------------------+-----------------------+
-| Non      | Participants practiced and shared | Flock 2019            |
-| -English | their languages in an inclusive,  | [sch                  |
-| Language | multilingual space.               | edule](https://flock2 |
-| Session  |                                   | 019.sched.com/event/S |
-|          |                                   | HRs/fedora-di-speak-a |
-|          |                                   | -non-english-language |
-|          |                                   | -event-at-flock-2019) |
-|          |                                   | &amp;                 |
-|          |                                   | [video](https://      |
-|          |                                   | youtu.be/LWHfTCCnLFM? |
-|          |                                   | si=ahWKQVn0y28KE8F7). |
-+----------+-----------------------------------+-----------------------+
-| Karaoke  | A mix of fun karaoke sessions:    | Flock 2019            |
-| (sl      | from improvising presentations on | [sche                 |
-| ideshow) | random slides to classic singing  | dule](https://flock20 |
-|          | performances where everyone could | 19.sched.com/event/S5 |
-|          | join in and enjoy.                | qS/slideshow-karaoke) |
-|          |                                   | &amp;                 |
-|          |                                   | [Video](https://      |
-|          |                                   | youtu.be/_tSQ7vr53Mc? |
-|          |                                   | si=Lpdk32SeSy_W0HJK). |
-|          |                                   |                       |
-|          |                                   | Flock 2024 -          |
-|          |                                   | [s                    |
-|          |                                   | chedule](https://cfp. |
-|          |                                   | fedoraproject.org/flo |
-|          |                                   | ck-2024/talk/8PAPWY/) |
-+----------+-----------------------------------+-----------------------+
-| Story    | A collaborative storytelling card | Flock 2023 -          |
-| Stich    | game where people share personal  | [schedule](ht         |
-|          | experiences and weave them into a | tps://flock2023.sched |
-|          | group narrative.                  | .com/event/1PbRQ/inte |
-|          |                                   | ractive-story-stitch) |
-+----------+-----------------------------------+-----------------------+
-| Pub Quiz | A trivia night with general       | Flock 2023 -          |
-|          | knowledge and Fedora-themed       | [schedule](https:/    |
-|          | questions - perfect for teams and | /flock2023.sched.com/ |
-|          | friendly rivalry.                 | event/1PbkU/fedora-pu |
-|          |                                   | b-quiz-flock-edition) |
-+----------+-----------------------------------+-----------------------+
-| Scribble | Casual art session where          | [Scribble             |
-| /        | participants doodled together and | game]                 |
-| Pi       | showcased their creations.        | (https://skribbl.io/) |
-| ctionary |                                   |                       |
-|          |                                   | [Fedora 34 release    |
-|          |                                   | party wiki            |
-|          |                                   | schedule](https:/     |
-|          |                                   | /fedoraproject.org/wi |
-|          |                                   | ki/Fedora_Linux_34_Re |
-|          |                                   | lease_Party_Schedule) |
-|          |                                   |                       |
-|          |                                   | [Fedora 33 release    |
-|          |                                   | party wiki            |
-|          |                                   | page](h               |
-|          |                                   | ttps://fedoraproject. |
-|          |                                   | org/wiki/Fedora_33_Re |
-|          |                                   | lease_Party_Schedule) |
-|          |                                   |                       |
-|          |                                   | [Creative common      |
-|          |                                   | summit 2023           |
-|          |                                   | wiki](https:          |
-|          |                                   | //fedoraproject.org/w |
-|          |                                   | iki/Creative_Freedom_ |
-|          |                                   | Summit_2023_Schedule) |
-+----------+-----------------------------------+-----------------------+
-| Stickers | An activity where attendees       | Flock 2025            |
-| Match    | receive a sticker or token (like  | [schedule](h          |
-|          | a color, symbol, or Fedora        | ttps://cfp.fedoraproj |
-|          | mascot) for their name badge and  | ect.org/flock-to-fedo |
-|          | are encouraged to find others     | ra-2025/talk/9YGBQS/) |
-|          | with matching tokens. Those with  | &amp;                 |
-|          | the most connections could win    | [ticket](h            |
-|          | small prizes or swag.             | ttps://gitlab.com/fed |
-|          |                                   | ora/dei/fedora-mentor |
-|          |                                   | -summit/-/issues/15). |
-+----------+-----------------------------------+-----------------------+
-| Social   | A collection of virtual spaces    | Nest with Fedora :    |
-| in the   | and games that recreated Fedora   | [2022                 |
-| Fedora   | social experiences in a digital   | schedule](https://eve |
-| Museum   | environment.                      | nts.ringcentral.com/e |
-|          |                                   | vents/nest-with-fedor |
-|          |                                   | a-2022/registration), |
-|          |                                   | [2021                 |
-|          |                                   | schedule              |
-|          |                                   | ](https://events.ring |
-|          |                                   | central.com/events/ne |
-|          |                                   | st-with-fedora-2021), |
-|          |                                   |                       |
-|          |                                   | [WorkAdventure        |
-|          |                                   | Gamep                 |
-|          |                                   | lay](https://play.wor |
-|          |                                   | kadventu.re/@/mindsha |
-|          |                                   | re-committee/nestwith |
-|          |                                   | fedora/fedoramuseum). |
-+----------+-----------------------------------+-----------------------+
-| C        | A team-based word association     | [Fedora 40 release    |
-| odenames | game where players give and guess | party wiki            |
-|          | one-word clues to uncover hidden  | schedule](https://    |
-|          | words on the board before the     | fedoraproject.org/wik |
-|          | other team does.                  | i/Fedora_Linux_40_Rel |
-|          |                                   | ease_Party_Schedule), |
-|          |                                   |                       |
-|          |                                   | [Fedora release party |
-|          |                                   | codename social       |
-|          |                                   | wiki](https://fedorap |
-|          |                                   | roject.org/wiki/Fedor |
-|          |                                   | a_Linux_36_Release_Pa |
-|          |                                   | rty_Codenames_Social) |
-+----------+-----------------------------------+-----------------------+
-| Among Us | An online social deduction game   | [Fedora 36 release    |
-|          | where participants work together  | party                 |
-|          | to complete tasks while trying to | wiki](https:/         |
-|          | identify the hidden impostors     | /fedoraproject.org/wi |
-|          | among them.                       | ki/Fedora_Linux_36_Re |
-|          |                                   | lease_Party_Schedule) |
-|          |                                   |                       |
-|          |                                   | [Fedora 35 release    |
-|          |                                   | party                 |
-|          |                                   | wiki](h               |
-|          |                                   | ttps://fedoraproject. |
-|          |                                   | org/wiki/User:Thunder |
-|          |                                   | birdtr/F35_Release_Pa |
-|          |                                   | rty_Among_Us_Session) |
-+----------+-----------------------------------+-----------------------+
-| [Gartic  | A fun and creative game where you | [Fedora 37 release    |
-| phone](h | write, draw and guess based on    | party                 |
-| ttps://g | the previous player's input.      | wiki](https:/         |
-| articpho |                                   | /fedoraproject.org/wi |
-| ne.com/) |                                   | ki/Fedora_Linux_37_Re |
-|          |                                   | lease_Party_Schedule) |
-|          |                                   |                       |
-|          |                                   | [Creative common      |
-|          |                                   | summit 2023           |
-|          |                                   | wiki](https:          |
-|          |                                   | //fedoraproject.org/w |
-|          |                                   | iki/Creative_Freedom_ |
-|          |                                   | Summit_2023_Schedule) |
-+----------+-----------------------------------+-----------------------+
-
-If you want to plan or help a social event like this, please reach out
-to the Fedora DEI team or the [Fedora DEI
-Adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
-
-# Fedora Week of Diversity {#_fedora_week_of_diversity}
-
-![Fedora Week of Diversity logo.](ROOT:fwd/fwd.png)
-
-[Fedora Week of
-Diversity](https://docs.fedoraproject.org/en-US/dei/events/past-events/&#35;_fedora_week_of_diversity_fwd)
-highlights and celebrates the contributions of diverse contributors and
-communities across Fedora and the wider open source ecosystem.
-
-Originally started as [Fedora Women's
-Day](https://docs.fedoraproject.org/en-US/dei/events/past-events/&#35;_fedora_womens_day_fwd)
-to recognize and uplift women contributors, this event has evolved into
-Fedora Week of Diversity to better reflect our community's commitment to
-inclusion across regions, cultures, and backgrounds.
-
-Each year, Fedora contributors come together to share experiences,
-spotlight community achievements, and help more people discover how they
-can get involved in free and open source software. Fedora Week of
-Diversity is also an opportunity to strengthen regional communities,
-amplify underrepresented voices, and create a welcoming environment for
-everyone.
-
-## How to participate {#_how_to_participate}
-
-Fedora Week of Diversity is designed to be flexible and the focus for
-each year may change - past themes have included [&#42;Empowering
-Diversity, Enriching Communities&#42;
-(2024)](https://cfp.fedoraproject.org/fwd-2024/cfp). Because of this,
-how you participate can vary; for example, you might share a personal
-story or blog post, record an interview or podcast, or thank
-contributors publicly.
-
-Note: Organizers will share themes and details each year. Watch the
-Fedora [Community Blog](https://communityblog.fedoraproject.org/),
-[Discourse](https://discussion.fedoraproject.org/), or [DEI team Matrix
-channel](https://matrix.to/&#35;/&#35;dei:fedoraproject.org) to stay
-updated.
-
-## How to organize Fedora events {#_how_to_organize_fedora_events}
-
-Organizing FWD takes effort and in this section, we're going to lay down
-the foundations of how to organize one. Anyone can help organize a local
-or virtual event organized by the DEI team. This guide shows you how you
-can get started and run a smooth, inclusive event.
-
-## Pre-Planning (3-6 months before) {#_pre_planning_3_6_months_before}
-
-Before anything else:
-
-&#42; Decide on event format (virtual / local / hybrid) &#42; Brainstorm
-a theme or focus (e.g. \'Stories from the Community\', \'First
-Contribution Day\', "open Source journeys", "Fedora Around the World")
-&#42; Create [a Fedora DEI GitLab
-ticket](https://gitlab.com/groups/fedora/dei/-/issues). Use this to
-request support for the FWD activities. &#42; For funding support,
-follow the process outlined by the [Fedora Mindshare
-Committee](https://docs.fedoraproject.org/en-US/mindshare-committee/).
-Budget requests should go through them. Be sure to plan early and
-clearly explain what you need. &#42; Think about what you'll need:
-speakers, hosts, swags, venue or platform?
-
-### Coordinate with the Fedora DEI Team {#_coordinate_with_the_fedora_dei_team}
-
-Then these steps below are mandatory and important to follow in that
-order:
-
-&#42; &#42;Open a ticket&#42; in the [Fedora DEI GitLab
-repository](https://gitlab.com/fedora/dei/week-of-diversity/-/issues).
-&#42; &#42;Discuss your ticket&#42; during the &#42;Fedora DEI bi-weekly
-meeting&#42; to get feedback, guidance, and alignment. &#42; &#42;Stay
-connected via Matrix&#42; for follow-up questions, coordination, and
-real-time updates.
-
-(For any event that requires funding, swag, or promotion help - the DEI
-GitLab ticket is the first and most important step.)
-
-## Recommended timeline {#_recommended_timeline}
-
-It is easier to manage your event when you have a clear timeline
-beforehand. Below is a recommended timeline to help you stay on track
-from concept to post-event wrap-up.
-
-+----------------------+-----------------------------------------------+
-| Timeline             | Task                                          |
-+----------------------+-----------------------------------------------+
-| 5--6 months before   | Propose event via [GitLab DEI                 |
-|                      | ticket](https://gitl                          |
-|                      | ab.com/fedora/dei/week-of-diversity/-/issues) |
-+----------------------+-----------------------------------------------+
-| 4 months before      | Confirm date, format, venue(if in-person)     |
-|                      | speakers &amp; visuals                        |
-+----------------------+-----------------------------------------------+
-| 3 months before      | Request support (promotion, mentorship, or    |
-|                      | budget) via your GitLab ticket                |
-+----------------------+-----------------------------------------------+
-| 2 months before      | Launch call for participation (optional)\     |
-|                      | (Invite community members to participate)     |
-+----------------------+-----------------------------------------------+
-| 1 month before       | Promote your event on social media and Fedora |
-|                      | channels                                      |
-+----------------------+-----------------------------------------------+
-| 1 week before        | Send/post final reminders, do a tech check or |
-|                      | dry run                                       |
-+----------------------+-----------------------------------------------+
-| Event day            | Run the event! 🎉                             |
-+----------------------+-----------------------------------------------+
-| 1--3 days after      | Share blog recap + community highlights       |
-+----------------------+-----------------------------------------------+
-
-## Promote your event {#_promote_your_event}
-
-Make it easy for people to find and join your event:
-
-&#42; Use hashtags like &#42;&#35;FWD(year, eg. FWD2025)&#42; or one
-relevant to your event. &#42; &#42;Add a picture or poster&#42; if you
-have one. Make sure it's easy to read and not too crowded. In case you
-don't have a designer in the team - reach out to the design team to
-create one for you. &#42; &#42;Tag relevant Fedora accounts&#42; and
-other people or groups who might be interested. &#42; &#42;Write
-clearly&#42; -- tell people what the event is, when it is, who should
-come, and what they'll learn. &#42; &#42;Post in multiple places&#42; :
-Fedora Discourse, Matrix, X(twitter), Instagram, Mastodon, and in local
-communities. &#42; &#42;Post more than once&#42; -- share early, remind
-people a few days before, and post during or after the event too. &#42;
-&#42;Coordinate with the [Fedora Marketing
-Team](https://docs.fedoraproject.org/en-US/marketing/need-help/)&#42;
-early, as they're really helpful in supporting and amplifying your
-event.
-
-## Contributor roles {#_contributor_roles}
-
-It is good to divide and assign tasks, meaning clear roles make sure
-everyone knows what to do - and it gives new contributors a chance to
-step up.
-
-Typical roles include: Project management, Event production, Speaker
-management, Content and promotion and Design. Check the [Week of
-Diversity GitLab
-README](https://gitlab.com/fedora/dei/week-of-diversity/-/blob/main/README.md)
-for more.
-
-You don't need a huge team - a few people can make it happen.
-
-(These roles are adopted from Fedora Week of Diversity(FWD), which has
-successfully used this structure to organize FWD events.)
-
-## Post-Event Wrap-up {#_post_event_wrap_up}
-
-You did it! Now it's time to document your impact and celebrate your
-team.
-
-&#42; Thank speakers, organizing team and attendees &#42; Share a short
-blog post or Discourse recap (with photos or quotes), check [FWD2024
-recap](https://discussion.fedoraproject.org/t/recap-of-fedora-week-of-diversity-2024/124450).
-&#42; Submit your GitLab wrap-up note with: &#42;&#42; What worked
-&#42;&#42; What could be improved &#42;&#42; Participant feedback (if
-any)
-
-This will help us all learn and grow - and it makes your event part of
-Fedora's living history.
-
-# Events {#_events_2}
-
-The Fedora Diversity, Equity &amp; Inclusion (DEI) Team has supported
-and organized several events over the years. These events celebrate
-community stories, foster inclusive spaces, and connect contributors
-globally and locally. Below is a record of some of our key initiatives:
-
-## Fedora Mentor Summit {#_fedora_mentor_summit}
-
-### 2025 {#_2025}
-
-In-person, part of the FLock to Fedora conference in Prague, Czech
-Republic
-
-&#42; [&#42;Mentored Projects Learnings &amp; Demo --
-Talk&#42;](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YE9P8R/)
-&#42;&#42; [Watch
-Video](https://www.youtube.com/live/YhoFPG7Ack0?si=puMwM-0YlhyuXADx)
-&#42; [&#42;Open Source Mentorship: Crafting Communities, Creating
-Leaders --
-Talk&#42;](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/JS9BHV/)
-&#42;&#42; [Watch
-Video](https://www.youtube.com/live/YhoFPG7Ack0?si=BTU8j_5wqpMrcy6L&amp;t=13263)
-&#42; &#42;Mentor-Mentee Lunch Matching&#42; --
-[Schedule](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/YWCEJ9/)
-&#42; &#42;Sticker Match Social Networking&#42; -
-[Schedule](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/9YGBQS/)
-&#42; Contributor Recognition Award ([Wiki
-page](https://fedoraproject.org/wiki/Contributor_Recognition_Program_2025),
-[Discourse
-post](https://discussion.fedoraproject.org/t/contributor-recognition-program-winners-announcement/155845))
-
-### 2024 {#_2024}
-
-In-person event, part of the Flock to Fedora conference in Rochester,
-New York, United States of America
-
-&#42; &#42;Mentor Summit - Panel Discussion&#42; &#42;&#42;
-[Schedule](https://cfp.fedoraproject.org/flock-2024/talk/WPPGPT/) \|
-[Watch Video](https://youtu.be/4y4RdsHkUPk?si=-iAWrZ0aHmQPEXMK) &#42;
-&#42;Mentorship Bridges - Building Stronger Bonds in Fedora&#42;
-&#42;&#42;
-[Schedule](https://cfp.fedoraproject.org/flock-2024/talk/3ACYBP/) \|
-[Watch Video](https://youtu.be/35mA6g7tSZw?si=wV9wwzoj4ML2jQbt) &#42;
-&#42;Mentorship Level Up: Connect &amp; Communicate&#42; -
-[schedule](https://cfp.fedoraproject.org/flock-2024/talk/P7YQZQ/)
-
-### 2023 {#_2023}
-
-In-person event, part of the Flock to Fedora conference in Cork, Ireland
-
-&#42; &#42;Mentor Summit: Kickoff and Reflection on Mentoring in Fedora
-Community&#42; &#42;&#42;
-[Video](https://youtu.be/IP4sB2qLm0Y?si=rw1SqOmN-dEYah9A) &#42;
-&#42;Panel: Mentoring and Mentorship Best Practices in Fedora&#42;
-&#42;&#42; [Watch
-Video](https://youtu.be/J2uM5rYbahM?si=sHABFegnGlT-ppDw) \|
-[Schedule](https://flock2023.sched.com/event/1Or82/panel-mentoring-and-mentorship-best-practices-in-fedora)
-&#42; &#42;Icebreakers &amp; Community Social&#42; &#42;&#42;
-[Schedule](https://flock2023.sched.com/event/1Or8D/interactive-icebreakers-community-social)
-&#42; &#42;Unconscious bias &amp; imposter syndrome workshop&#42;
-&#42;&#42;
-[Schedule](https://flock2023.sched.com/event/1PbQq/interactive-unconscious-bias-imposter-syndrome-workshop)
-&#42; &#42;Exploring privilege dynamics workshop&#42; &#42;&#42;
-[Schedule](https://flock2023.sched.com/event/1PbR2/interactive-exploring-privilege-dynamics-workshop)
-&#42; &#42;Why You Should Join A Community&#42; &#42;&#42;
-[Schedule](https://flock2023.sched.com/event/1Or8A/why-you-should-join-a-community)
-\| [Video](https://youtu.be/DodBgwE0oJc?si=VDN0a41aTgAnj-tL) &#42;
-&#42;Interactive: Story Stitch&#42; &#42;&#42;
-[Schedule](https://flock2023.sched.com/event/1PbRQ/interactive-story-stitch)
-
-### 2022 {#_2022}
-
-Online event -
-[videos](https://www.youtube.com/playlist?list=PL0x39xti0_65QiQfG3g3uSvWYkRsKkxzq)
-and
-[schedule](https://events.ringcentral.com/events/fedora-mentor-summit-2022&#35;schedule)
-
-## [Fedora Week of Diversity (FWD)](https://docs.fedoraproject.org/en-US/dei/events/fwd/about-fwd/) {#_fedora_week_of_diversity_fwd}
-
-### 2024 {#_2024_2}
-
-&#42;&#42; YouTube Playlist: [Watch
-Here](https://youtube.com/playlist?list=PL0x39xti0_67oLN5oUN8lYj0a29xWCQLZ&amp;si=3VHY9tYLu3jYzYiE)
-&#42;&#42; Recap &amp; Discourse Post: [Fedora
-Discussion](https://discussion.fedoraproject.org/t/recap-of-fedora-week-of-diversity-2024)
-
-### 2022 {#_2022_2}
-
-Virtual Event Platform:
-[RingCentral](https://events.ringcentral.com/events/fedora-week-of-diversity-2022)
-
-&#42;&#42; Blog Post: [FWD
-2022](https://communityblog.fedoraproject.org/fwd-2022-call-for-volunteers/)
-&#42;&#42; Agenda: [Shared on Ring
-Central](https://events.ringcentral.com/events/fedora-week-of-diversity-2022)
-
-### 2021 {#_2021}
-
-[Fedora stories: Fedora Week of Diversity is
-here!](https://communityblog.fedoraproject.org/fedora-stories-fedora-week-of-diversity-is-here/)
-Community blog post.
-
-&#42;&#42; Community blog post. &#42;&#42; Theme: Video interviews and
-stories from contributors &#42;&#42; YouTube Playlist: [Watch
-Here](https://youtube.com/playlist?list=PL0x39xti0_66aqmB8GCXpHZOmEiG5NUpt&amp;si=LaU32xYNInB1qLXC)
-&#42;&#42; Slides: [Presented by Jona Azizaj, Marie Nordin, Vipul
-Siddharth](https://siddharthvipul1.fedorapeople.org/slides/F35%20Release%20Party_%20Fedora%20Week%20of%20Diversity%20Presentation.pdf)
-
-## DEI at Flock: Sessions and Impact {#_dei_at_flock_sessions_and_impact}
-
-### Flock 2025 (Prague, Czech Republic) {#_flock_2025_prague_czech_republic}
-
-&#42; [International Candy Swap and Board
-Games](https://cfp.fedoraproject.org/flock-to-fedora-2025/talk/DLLALE/)
-\| [Wiki page](https://fedoraproject.org/wiki/Flock_2025/Candy_Swap)
-
-### Flock 2024 (Rochester, NY, USA) {#_flock_2024_rochester_ny_usa}
-
-&#42; [Injecting DEI into Community Event
-Policies](https://cfp.fedoraproject.org/flock-2024/talk/BZKDJU/) &#42;
-[Fedora Diversity, Equity, &amp; Inclusion (DEI) Team
-Hackfest](https://cfp.fedoraproject.org/flock-2024/talk/LU7U9C/) &#42;
-Beyond Algorithms: Navigating Diversity, Equity, and Inclusion in the
-Artificial Intelligence Era &#42;&#42; [Talk
-Link](https://cfp.fedoraproject.org/flock-2024/talk/3UDG87/) &#42;&#42;
-[Watch Video](https://youtu.be/ymQBVO_latA?si=6riOUJ8oiZE9uLGo) &#42;
-[International Candy
-Swap](https://cfp.fedoraproject.org/flock-2024/talk/LFVLES/) \| [Wiki
-page](https://fedoraproject.org/wiki/Flock_2024/Candy_Swap)
-
-### Flock 2023 (Cork, Ireland) {#_flock_2023_cork_ireland}
-
-&#42; Framing Diversity and Inclusion Globally (Keynote) &#42;&#42;
-[Watch Video](https://youtu.be/8804SOHiIVo?si=OTHtxl-_QJ0eb4_l) \|
-[Schedule](https://flock2023.sched.com/event/1OrDF/keynote-framing-dei-globally)
-&#42; [Candy Swap
-schedule](https://flock2023.sched.com/event/1PVkK/international-candy-swap)
-\| [Wiki page](https://fedoraproject.org/wiki/Flock_2023/Candy)
-
-### Flock 2022 (Virtual) {#_flock_2022_virtual}
-
-&#42; 5 lessons learned from 5 years of Fedora DEI events &#42;&#42;
-[Video recording](https://youtu.be/nBgiuKh5nsk?si=o7r4obj9P_pB_p5d)
-
-### Flock 2021 (Virtual) {#_flock_2021_virtual}
-
-&#42; Tell your Fedora story: fedora week of diversity &#42;&#42; [Watch
-video](https://youtu.be/1pZd409H6pw?si=0HJfcULk7eNSJIUh) &#42; Examining
-Fedora DEI: Panel discussion &#42;&#42; [Watch
-video](https://youtu.be/B4KvLK-TI8M?si=yvPS9d2MDq0U81Mh)
-
-### Flock 2019 (Budapest, Hungary) {#_flock_2019_budapest_hungary}
-
-&#42; Coffee Amongst Friends (Community Listening) &#42;&#42; Informal,
-heart-to-heart sessions. Safe space for contributors to share lived
-experiences and struggles. &#42;&#42; [Diversity ticket
-&#35;106](https://pagure.io/fedora-diversity/issue/106), [Flock ticket
-&#35;166](https://pagure.io/flock/issue/166) &#42; Diversity Video
-Project &#42;&#42; Captured stories of community members around
-diversity. &#42;&#42; Organized by \@tatica. &#42;&#42; [Ticket issue
-&#35;107](https://pagure.io/fedora-diversity/issue/107), [Flock to
-Fedora 2019 -
-Budapest](https://youtu.be/O1eHRoEps6I?si=2lKgnwt0Xtb9wl6v) &#42;
-Slideshow Karaoke (Inclusive Icebreaker) &#42;&#42; Attendees delivered
-spontaneous presentations using random slides. Community-bonding and
-chaotic fun. &#42;&#42;
-[Schedule](https://flock2019.sched.com/event/S5qS/slideshow-karaoke) \|
-[Video](https://youtu.be/_tSQ7vr53Mc?si=Lpdk32SeSy_W0HJK) &#42;
-Non-English Language Event &#42;&#42; A multilingual conversation
-session held and showcased at the closing. &#42;&#42; [Issue
-&#35;91](https://pagure.io/fedora-diversity/issue/91), [Flock Issue
-&#35;167](https://pagure.io/flock/issue/167) &#42;&#42; [Video
-recording](https://youtu.be/LWHfTCCnLFM?si=ahWKQVn0y28KE8F7) &#42;
-D&amp;I Hackfest &#42;&#42; Continued tradition of focused D&amp;I
-collaboration during Flock. &#42;&#42;
-[Schedule](https://flock2019.sched.com/event/S5pz/fedora-diversity-inclusion-team-hackfest)
-&#42;&#42; [Video
-recording](https://youtu.be/LWHfTCCnLFM?si=ahWKQVn0y28KE8F7)
-
-### Flock 2018 (Dresden, Germany) {#_flock_2018_dresden_germany}
-
-&#42; &#42;[Unconscious bias &amp; Impostor Syndrome
-workshop](https://flock2018.sched.com/event/Fjcq/imposter-syndrome-workshop-and-unconscious-bias-training)&#42;
-&#42;&#42; Enabled attendees to recognize and address internalized
-biases. &#42;&#42; [Workshop ticket](https://pagure.io/flock/issue/54)
-&#42;&#42; Watch video - [First
-part](https://youtu.be/In6-0pzhDqs?si=QYgiodE1iB3zuotE), [second
-part](https://youtu.be/sHPm_rMMs0o?si=HvpL5w_uEe9mM7ku). &#42;
-&#42;[International Candy Swap (Evening
-Activity)](https://flock2018.sched.com/event/FjdT/game-nightcandy-swap)&#42;
-&#42;&#42; Global participants brought and shared sweets from their
-countries. &#42;&#42; Organized by \@jflory7. &#42; &#42;Fedora D&amp;I
-Team Sprint (Parts 1 &amp; 2)&#42; &#42;&#42; A split sprint session
-across two time blocks &#42;&#42;&#42; [Sprint Part 1 --
-Schedule](https://flock2018.sched.com/event/FjdP/fedora-diversity-inclusion-team-sprint)
-&#42;&#42;&#42; [Sprint Part 2 --
-Schedule](https://flock2018.sched.com/event/FjdS/fedora-diversity-inclusion-team-sprint)
-&#42; &#42;GSoC/Outreachy Project Showcase&#42; &#42;&#42; Interns
-presented their Fedora projects to a wider audience, encouraging
-mentoring and contributor pathways. &#42;&#42; [Watch
-video](https://youtu.be/B_kf68c3qog?si=mOlaTCdV8fBbocQl) \| [View
-schedule](https://flock2018.sched.com/event/Fjcp/fedora-in-google-summer-of-code-and-outreachy-project-showcase)
-
-### Flock 2017 (Cape Cod, Massachusetts, USA) {#_flock_2017_cape_cod_massachusetts_usa}
-
-&#42; &#42;D&amp;I Team Hackfest and team sprints (Collaborative
-Session)&#42; &#42;&#42; A working session where team members tackled
-ticket backlogs, planned strategies, and built resources. Typically
-limited to three key tasks per session. &#42; D&amp;I Hackfest
-&#42;&#42; A high-focus session tackling the team's backlog and setting
-direction. &#42;&#42;
-[Schedule](https://flock2017.sched.com/event/Bm8o/diversity-team-hackfest)
-&#42;&#42; [Video](https://youtu.be/kghGIxwMF38?si=glKQZjZcrDb1vmgW)
-
-### Flock 2016 (Krakow, Poland) {#_flock_2016_krakow_poland}
-
-&#42; Diversity - Women in Open Source (Presentation by Amita Sharma
-\[@amsharma\]) &#42;&#42; A foundational talk on DEI, outreach programs
-like PyLadies, Outreachy, GSoC, and support for women in FLOSS.
-&#42;&#42; [Watch the
-video](https://youtu.be/qp0EMGovSnc?si=Ktoeh0iogErNHB7L), [View the
-schedule](https://flock2016.sched.com/event/76nj/diversity-women-in-open-source).
-&#42; Diversity Panel &#42;&#42; [Interactive session collecting
-community feedback on DEI
-efforts](https://flock2016.sched.com/event/6yp5/diversity-panel-building-an-inclusive-community).
-&#42;&#42; [Event Blog - Tatica, Reflection
-Post](https://whatamithinks.wordpress.com/2016/08/15/480/)
-
-## Fedora Appreciation Week (FAW) {#_fedora_appreciation_week_faw}
-
-### [FWD 2023](https://communityblog.fedoraproject.org/fedora-appreciation-week-2023/) {#_fwd_2023}
-
-This year's Appreciation Week featured daily posts highlighting
-community members and their stories:
-
-&#42; [Day
-1](https://communityblog.fedoraproject.org/appreciation-week-2023-day-1/),
-[Day
-2](https://communityblog.fedoraproject.org/appreciation-week-2023-day-2/),
-[Day
-3](https://communityblog.fedoraproject.org/appreciation-week-2023-day-3/),
-[Day
-4](https://communityblog.fedoraproject.org/appreciation-week-2023-day-4/),
-[Day
-5](https://communityblog.fedoraproject.org/appreciation-week-2023-day-5/),
-[Day
-6](https://communityblog.fedoraproject.org/appreciation-week-2023-day-6/),
-[Day
-7](https://communityblog.fedoraproject.org/appreciation-week-2023-day-7/)
-
-### 2018 Docs Series: CommOps FAW {#_2018_docs_series_commops_faw}
-
-&#42; [Press
-Archive](https://docs.fedoraproject.org/en-US/commops/appreciation-week/&#35;_press)
-
-## [Fedora Women's Day (FWD)](https://pagure.io/fedora-diversity/fedora-womens-day) {#_fedora_womens_day_fwd}
-
-### 2020 {#_2020}
-
-&#42; FWD Reflection Post: [Read
-Here](https://communityblog.fedoraproject.org/fedora-womens-day-2020-reflection/)
-&#42; YouTube Video Playlist: [Watch
-Here](https://youtube.com/playlist?list=PL0x39xti0_64NxdF68V6eZ1JWUQtHbR3E&amp;si=VWpfuQG_jahi0BQq)
-
-### 2019 {#_2019}
-
-&#42; Call for Proposals: [Community
-Blog](https://communityblog.fedoraproject.org/call-for-fedora-womens-day-2019-proposals/)
-&#42; Interviews: [YouTube: Alex Calejas &amp;
-Sr_Kranken](https://youtu.be/0AHd8K1K8Bc?si=aBWCocET3ztLPR0s) &#42;
-Event Reports: &#42;&#42; [Fedora Women's Day 2019, Aurangabad
-Maharashtra,
-India](https://nikhilkathole.wordpress.com/2019/10/02/fedora-womens-day-2019/)
-&#42;&#42; [Fedora Women's Day 2019,
-Tirana](https://marianaballa.com/Fedora-Women-Day-2019-Tirana/)
-&#42;&#42; [Fedora Women's Day
-(Bhubaneswar)](https://communityblog.fedoraproject.org/fedora-womens-day-report-bhubaneswar/)
-&#42;&#42; [FWD'19 Mexico
-City](https://communityblog.fedoraproject.org/fwd19-mexico-city/)
-&#42;&#42; [Fedora Women's Day 2019 Lima,
-Peru](https://solanch96.wordpress.com/2019/11/12/fedora-womens-day-fwd-2019/)
-
-### 2018 {#_2018}
-
-&#42; Wiki: [FWD
-2018](https://fedoraproject.org/wiki/Fedora_Women’s_Day_2018) &#42;
-Resources: [How to organize
-FWD](https://communityblog.fedoraproject.org/fedora-womens-day-2018-proposals/)
-(Call for Fedora Women's Day 2018 proposal)
-
-### 2017 {#_2017}
-
-&#42; Wiki: [FWD
-2017](https://fedoraproject.org/wiki/Fedora_Women’s_Day_2017) &#42;
-Local Events:
-[Pune](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Pune),
-[Tirana](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Tirane),
-[Bangalore](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Bangalore),
-[Guwahati](https://fedoraproject.org/wiki/Fedora_Women%27s_Day/2017/Guwahati),
-[Lima](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Lima),
-[Managua](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Managua),
-[Prishtina](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Prishtina),
-[Brno](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Brno),
-[Cusco](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Cusco),
-[Puno](https://fedoraproject.org/wiki/Fedora_Women%27s_Day_2017_Puno).
-&#42; Reports: [Fedora wd Brno
-report](https://rhea-ayase.eu/articles/2017-10/FWD-Brno) &#42; Blog:
-[Fedora Community
-Blog](https://communityblog.fedoraproject.org/fedora-women-days-2017/)
-by Jona Azizaj
-
-### 2016 {#_2016}
-
-&#42; Wiki: [Fedora Women's Day
-2016](https://fedoraproject.org/wiki/Category:Fedora_Women%27s_Day_2016)
-&#42; Description: Celebrated virtually and locally (Pune, Tirana).
-Focused on building networks, recognition, and inclusion. &#42; Workshop
-(Pune): Women in Free Software --- enabled participants to contribute to
-FLOSS, especially Fedora and Ubuntu. &#42;&#42; Links: [Pune workshop
-report](https://whatamithinks.wordpress.com/2016/07/17/event-report-fedora-women-day/)
-
-## Regional community events {#_regional_community_events}
-
-### [Fedora event at Murang'a University](https://fedoramagazine.org/were-in-kenya-fedora-at-muranga-university/) {#_fedora_event_at_muranga_university}
-
-&#42;&#42; On March 28th, 2025, [Cornelius
-Emase](https://fedoraproject.org/wiki/User:Lochipi) hosted an info
-session about open source (Fedora) at Muranga university of technology.
-The event focused on introducing students to Fedora, open source
-contribution paths, and community building. &#42;&#42; Impact factors
-that contributed to its success: &#42;&#42;&#42; Partnered with
-university faculty to secure a venue and promote the event
-&#42;&#42;&#42; Used beginner-friendly materials suitable for new
-contributors &#42;&#42;&#42; Provided actionable next steps (community
-links, Fedora Magazine articles, and Quick Docs) &#42;&#42;&#42;
-Designed a future engagement plan (virtual contribution workshop)
-&#42;&#42; What Worked Well: &#42;&#42;&#42; Collaborating with local
-institutions improved credibility and turnout &#42;&#42;&#42; Leveraging
-personal contributor stories helped attendees connect with Fedora
-&#42;&#42;&#42; The session increased participant confidence on open
-source &#42;&#42;&#42; Localized communication ensured better
-understanding and inclusivity
-
-You can read the full recap here: [Fedora Magazine blog
-post](https://fedoramagazine.org/were-in-kenya-fedora-at-muranga-university/),
-and the [highlights here](https://mut-fedora-event.vercel.app/).
-
-## Build pathways for the community: Beyond events {#_build_pathways_for_the_community_beyond_events}
-
-To truly support contributors from marginalized regions, DEI events must
-connect attendees to long-term opportunities and the possible ways we
-can retain them:
-
-&#42; Industry connections and job pipelines &#42; Global-local
-mentorships &#42; Training and skill-building follow-ups &#42; Fedora
-swag and material support &#42; Inclusion in Fedora working groups and
-decision spaces
-
-This page is maintained by the Fedora Diversity, Equity, &amp; Inclusion
-(DEI) Team. If you'd like to suggest changes or add your event, [contact
-the team](https://docs.fedoraproject.org/en-US/dei/get-involved/) or
-[the DEI
-Adviser](https://docs.fedoraproject.org/en-US/dei/roles/council-advisor/).
-
-# FWD organizer resource pack {#_fwd_organizer_resource_pack}
-
-In this page you can find a resource pack that helps in organizing a
-successful [Fedora Week of Diversity](events:about-fwd.xml) event. The
-points below can be used in the event organizer's agenda:
-
-&#42; How to welcome contributors to Fedora &#42; A summary about Fedora
-D.E.I. team &#42; Overview of different Fedora editions &#42; Fedora and
-Python
-
-## How to welcome new contributors to Fedora? {#_how_to_welcome_new_contributors_to_fedora}
-
-Did you come across folks who are interested in contributing to the
-Fedora project? Then please create [Welcome to Fedora
-ticket](https://pagure.io/fedora-join/WelcomeToFedora/issues) for the
-newcomers with Fedora Join SIG. This ticket helps them to easily track
-their progress in the journey to becoming Fedora contributors. Find more
-information about the welcome ticket process
-[here](https://docs.fedoraproject.org/en-US/fedora-join/welcome/welcome/).
-
-Need help with creating the welcome ticket? Reach out to Fedora Join SIG
-at any of their [Communication
-channels](https://docs.fedoraproject.org/en-US/fedora-join/&#35;communication).
-
-## About Fedora Diversity, Equity, &amp; Inclusion Team {#_about_fedora_diversity_equity_amp_inclusion_team}
-
-At your event, start with an introduction to the Fedora Diversity,
-Equity, &amp; Inclusion Team. Explain the role of D.E.I. team in the
-Fedora community and its upcoming goals. Share our [team's introduction
-page](ROOT:index.xml) with anyone who is interested in learning more.
-
-What is the role of Fedora Diversity, Equity, &amp; Inclusion Team?
-
-:   As the name indicates, the main goal of the D.E.I. team is to foster
-    diversity, equity, and inclusion in Fedora community. Below are some
-    of the many efforts focused by D.E.I. team to achieve its goal:
-    &#42; Creating content and organizing events to spread awareness
-    about diversity within and outside Fedora community (like Fedora
-    Week of Diversity!) &#42; Supporting community building and
-    engagement activities to promote inclusion &#42; Coordinate with
-    Fedora sub-projects to enhance diversity, equity, and inclusion in
-    the community &#42; Supporting programs committed to building
-    diversity, equity, and inclusion in Free and Open Source Software
-    communities
-
-What the D.E.I. team works on?
-
-:   The D.E.I. team works on various tasks to support diversity, equity,
-    and inclusion in the Fedora Project. For example, new additions were
-    made to the 2018 [Fedora Flock
-    conference](https://flocktofedora.org/) such as including
-    gender-neutral bathrooms, a quiet room, and communication preference
-    stickers. These additions in turn supported our existing effort to
-    draft [event inclusion
-    guidelines](https://pagure.io/fedora-diversity/issue/54) for Fedora
-    event organizers. These guidelines when shared within and outside
-    Fedora community provide best practices to organizers holding an
-    event. In the past, we also worked on a [Fedora Project Demographic
-    Survey](survey:index.xml) to understand who is in the Fedora
-    Community.
-
-Community Script
-
-:   Hi, my name is *\_\_\_*, I am from *\_\_\_*, I am *\_\_\_*, and I
-    speak *\_\_\_*. We are from different countries, We speak different
-    languages, We are of different cultures, But Fedora unites us with
-    Open Source. WE ARE FEDORA!
-
-## Fedora Editions {#_fedora_editions}
-
-{FWIKI}/Editions\[Fedora Editions\] are the flagship configurations of
-Fedora offered by the Fedora Project. They are promoted on the
-[getfedora.org](https://getfedora.org/) website. Each Edition has a
-different use case and audience as explained below.
-
-### Fedora Workstation {#_fedora_workstation}
-
-[Fedora Workstation](https://getfedora.org/workstation/) is a primary
-desktop configuration offered by Fedora. Fedora workstation is a great
-choice for someone looking to use a Linux on their desktop or learn to
-develop in a Linux environment. It ships the [GNOME Desktop
-Environment](https://www.gnome.org/), includes latest versions of
-programming languages and libraries, and is easy to make a [bootable USB
-stick](https://fedoramagazine.org/make-fedora-usb-stick/).
-
-&#42; For a comprehensive description of updates and new features, see
-the official release notes
-[here](https://docs.fedoraproject.org/en-US/releases/).
-
-### Fedora Server {#_fedora_server}
-
-[Fedora Server](https://getfedora.org/server/) is a primary server
-configuration offered by Fedora. This makes a good choice for seasoned
-system administrators, allowing them to work with latest technologies
-from the open source community. This is a short-lifecycled,
-community-supported server environment. Fedora Server features
-[Cockpit](https://cockpit-project.org/), [FreeIPA identity
-management](https://www.freeipa.org/page/About), and the brand-new
-[Fedora Server Modular Edition](https://docs.pagure.org/modularity/).
-
-See recent features to Fedora Server
-[here](https://docs.fedoraproject.org/en-US/fedora/latest/release-notes/sysadmin/).
-
-### Fedora Silverblue {#_fedora_silverblue}
-
-[Fedora Silverblue](https://silverblue.fedoraproject.org/) is a variant
-of Fedora Workstation. It looks, feels and behaves like a regular
-desktop operating system giving an experience is similar to a standard
-Fedora Workstation.
-
-However, unlike other operating systems, Silverblue is immutable. This
-means that every installation is identical to every other installation
-of the same version. The operating system that is on disk is exactly the
-same from one machine to the next, and it never changes as it is used.
-
-### Fedora CoreOS {#_fedora_coreos}
-
-[Fedora CoreOS](https://getfedora.org/en/coreos/) is an automatically
-updating, minimal, monolithic, container-focused operating system
-designed for clusters but also operable standalone. This is optimized
-for Kubernetes but also works great without it. It aims to combine the
-best of both CoreOS Container Linux and Fedora Atomic Host, by
-integrating Ignition technology from Container Linux with rpm-ostree and
-SELinux hardening from Project Atomic. The goal of this edition is to
-provide the best container host to run containerized workloads securely
-and at scale.
-
-### Fedora IoT {#_fedora_iot}
-
-[Fedora IoT](iot:ROOT:index.xml) or Fedora Internet of Things provides a
-strong foundation for IoT ecosystems. Whether you're working on a
-project at home, industrial gateways, smart cities or analytics with
-AI/ML, Fedora IoT can provide a trusted open source platform to build
-on. Fedora IoT rolling releases help you keep your ecosystem up-to-date.
-
-## Fedora Objectives {#_fedora_objectives}
-
-> The primary role of the Fedora Council is to identify the short,
-> medium, and long term goals of the Fedora community and to organize
-> and enable the project to best achieve them. Each objective has a
-> designated Objective Lead who is responsible for coordinating efforts
-> to reach the Objective's goals, for evaluating and reporting on
-> progress, and for working regularly with all relevant groups in Fedora
-> to ensure that progress is made.
->
-> --- 
-> \_\'From_https://docs.fedoraproject.org/en-US/project/objectives/\[Fedora_Objectives\]\'
-
-These Objectives are listed as follows:
-
-&#42; [Fedora
-Minimization](https://docs.fedoraproject.org/en-US/project/objectives/minimization-phase-2/)
-&#42; {FWIKI}/Objectives/Fedora_IoT\[Internet of Things (IoT)\]
-
-## Fedora &lt;3 Python {#_fedora_lt3_python}
-
-[&#42;fedoralovespython.org&#42;](https://fedoralovespython.org/)
-
-:   Collection of resources on using Python on Fedora.
-
-[&#42;Python - Fedora Developer Portal&#42;](https://developer.fedoraproject.org/tech/languages/python/python-installation.html)
-
-:   Steps and guides on how to install, use, and develop with Python on
-    Fedora (including Django, Flask,
-    [SciPy](https://developer.fedoraproject.org/tech/languages/python/scipy.html)
-    and more).
-
-[&#42;Python 3 porting database&#42;](http://fedora.portingdb.xyz/)
-
-:   Fedora's Python 3 porting database. Shows progress towards fully
-    migrating Fedora Python packages to Python 3.
-
-[&#42;Python Classroom Lab&#42;](https://labs.fedoraproject.org/python-classroom/)
-
-:   Fedora Lab intended for teachers and instructors teaching students
-    Python. It includes several Python development tools and libraries
-    not normally installed by default (also is available as GNOME
-    desktop, a Vagrant VM, or a Docker container).
-
-[&#42;Contributing to Python in Fedora&#42;](https://whatcanidoforfedora.org/en/&#35;coding&#35;python)
-
-:   Helpful resources to find ways to contribute to Python efforts in
-    Fedora.
-
-[&#42;Python articles on Fedora Magazine&#42;](https://fedoramagazine.org/tag/python/)
-
-:   All articles on the Fedora Magazine related to Python in Fedora. Two
-    great examples are [*Python 3.7 now available in
-    Fedora*](https://fedoramagazine.org/python-3-7-now-available-in-fedora/)
-    and [*How to install Pipenv on
-    Fedora*](https://fedoramagazine.org/install-pipenv-fedora/).
-
 # Fedora and Outreachy {#_fedora_and_outreachy}
 
 Fedora proudly participates in Outreachy to foster diversity, equity,
@@ -3019,120 +2665,6 @@ Will I get mentorship support regularly?
 :   Yes. Mentors are expected to communicate regularly --- through
     Matrix, email, GitLab, or scheduled check-ins --- to help you stay
     on track and feel supported throughout the internship.
-
-# DEI Resource page {#_dei_resource_page}
-
-:::: important
-::: title
-:::
-
-This resource page is meant to be a guide for folks who are interested
-in learning more about why we do what we do. This is not meant to be a
-source of truth in any way but just some resources the team can vouch to
-be a good learning place. Contribution is welcomed and appreciated!
-::::
-
-## Guides {#_guides}
-
-&#42;&#42;English&#42;&#42;
-
-&#42; [Glossary of Bias Terms](https://thedecisionlab.com/biases) &#42;
-[Inclusive Language and Vocabulary for Startups and
-Tech](https://buffer.com/resources/inclusive-language-tech/)
-
-&#42;&#42;French&#42;&#42;
-
-&#42; [Orientations pour un langage inclusif en
-français](https://www.un.org/fr/gender-inclusive-language/guidelines.shtml)
-&#42; [Respecter la non-binarité de genre en
-français](https://www.noslangues-ourlanguages.gc.ca/fr/blogue-blog/respecter-la-non-binarite-de-genre-fra)
-
-## Short Courses \[30-120 minutes\] {#_short_courses_30_120_minutes}
-
-&#42; [Inclusive Open Source Community Orientation by The Linux
-Foundation](https://trainingportal.linuxfoundation.org/learn/course/inclusive-open-source-community-orientation-lfc102/introduction/course-information)
-
-:::: tip
-::: title
-:::
-
-Take this course to claim the [Inclusive Open Source Community
-Orientation
-badge](https://badges.fedoraproject.org/badge/inclusive-open-source-community-orientation)
-::::
-
-## Extensive Courses \[&gt;4 hours\] {#_extensive_courses_gt4_hours}
-
-&#42; [Diversity and inclusion in the
-workplace](https://www.coursera.org/learn/diversity-inclusion-workplace)
-&#42; [Leading With Effective Communication (Inclusive Leadership
-Training)](https://www.edx.org/learn/leadership/catalyst-leading-with-effective-communication-inclusive-leadership-training)
-
-## Communities {#_communities}
-
-:::: tip
-::: title
-:::
-
-These communities are outside of Fedora but actively meet and discuss
-different topics, host events, and more.
-::::
-
-### LGBTQ+ Focused {#_lgbtq_focused}
-
-&#42; [Out in Tech](https://outintech.com/) &#42; [Lesbians Who
-Tech](https://lesbianswhotech.org) &#42; [Pride in
-STEM](https://prideinstem.org/)
-
-### Women's Focused {#_womens_focused}
-
-&#42; [Women Who Code](https://www.womenwhocode.com/) &#42; [Rails
-Girls: Ruby on Rails Focused](https://railsgirls.com/) &#42; [PyLadies:
-Python Focused](https://pyladies.com/)
-
-## Books {#_books}
-
-&#42; [Hacking
-Diversity](https://www.goodreads.com/book/show/45358681-hacking-diversity?ac=1&amp;from_search=true&amp;qid=X1rcWShvWw&amp;rank=1)
-&#42; [Inclusive Design Patterns - Coding Accessibility Into Web
-Design](https://www.goodreads.com/book/show/30816008-inclusive-design-patterns---coding-accessibility-into-web-design)
-&#42; [Whistling
-Vivaldi](https://www.goodreads.com/book/show/6649312-whistling-vivaldi)
-&#42; [The Culture
-Map](https://www.goodreads.com/book/show/22085568-the-culture-map)
-
-## Tools {#_tools}
-
-&#42; [racialequitytools](https://www.racialequitytools.org/)
-
-This site is a starting place to learn about the organizational and
-societal dynamics of racial inclusion and equity. The lens is race, but
-the lessons are more broadly applicable. Organized for action, it will
-help you understand how to get started and what a process might be for
-exploring DEI in your own organization.
-
-## Articles {#_articles}
-
-&#42; [Diversity and inclusion: Stop talking and do your
-homework](https://opensource.com/article/17/9/diversity-and-inclusion-innovation)
-
-## Studies {#_studies}
-
-&#42; [The semantics of grammatical gender: A cross-cultural
-study](https://link.springer.com/article/10.1007/BF01068252&#35;page-1)
-&#42; [Racial Diversity Improves Group Decision Making In Unexpected
-Ways, According To Tufts University
-Research](https://www.sciencedaily.com/releases/2006/04/060410162259.htm)
-&#42; [Ethnic diversity deflates price
-bubbles](https://www.pnas.org/content/111/52/18524.abstract)
-
-## Existing Resources Pages&#42; {#_existing_resources_pages42}
-
-&#42; [Open Source Diversity](https://opensourcediversity.org/) &#42;
-[The Safe Zone Project: Free LGBTQ+ Curriculum, Activities, &amp;
-Resources!](https://thesafezoneproject.com/) &#42; [Diversity, Equity,
-and Inclusion
-Resources](https://www.educause.edu/about/diversity-equity-and-inclusion/resources)
 
 &#42; Role Handbooks
 
@@ -3344,3 +2876,471 @@ Hackfest
     goals. Pre-COVID, teams could propose their own budgets for
     arranging travel, booking accommodations and a venue, and other
     support costs for bringing people together.
+
+# DEI Resource page {#_dei_resource_page}
+
+:::: important
+::: title
+:::
+
+This resource page is meant to be a guide for folks who are interested
+in learning more about why we do what we do. This is not meant to be a
+source of truth in any way but just some resources the team can vouch to
+be a good learning place. Contribution is welcomed and appreciated!
+::::
+
+## Guides {#_guides}
+
+&#42;&#42;English&#42;&#42;
+
+&#42; [Glossary of Bias Terms](https://thedecisionlab.com/biases) &#42;
+[Inclusive Language and Vocabulary for Startups and
+Tech](https://buffer.com/resources/inclusive-language-tech/)
+
+&#42;&#42;French&#42;&#42;
+
+&#42; [Orientations pour un langage inclusif en
+français](https://www.un.org/fr/gender-inclusive-language/guidelines.shtml)
+&#42; [Respecter la non-binarité de genre en
+français](https://www.noslangues-ourlanguages.gc.ca/fr/blogue-blog/respecter-la-non-binarite-de-genre-fra)
+
+## Short Courses \[30-120 minutes\] {#_short_courses_30_120_minutes}
+
+&#42; [Inclusive Open Source Community Orientation by The Linux
+Foundation](https://trainingportal.linuxfoundation.org/learn/course/inclusive-open-source-community-orientation-lfc102/introduction/course-information)
+
+:::: tip
+::: title
+:::
+
+Take this course to claim the [Inclusive Open Source Community
+Orientation
+badge](https://badges.fedoraproject.org/badge/inclusive-open-source-community-orientation)
+::::
+
+## Extensive Courses \[&gt;4 hours\] {#_extensive_courses_gt4_hours}
+
+&#42; [Diversity and inclusion in the
+workplace](https://www.coursera.org/learn/diversity-inclusion-workplace)
+&#42; [Leading With Effective Communication (Inclusive Leadership
+Training)](https://www.edx.org/learn/leadership/catalyst-leading-with-effective-communication-inclusive-leadership-training)
+
+## Communities {#_communities}
+
+:::: tip
+::: title
+:::
+
+These communities are outside of Fedora but actively meet and discuss
+different topics, host events, and more.
+::::
+
+### LGBTQ+ Focused {#_lgbtq_focused}
+
+&#42; [Out in Tech](https://outintech.com/) &#42; [Lesbians Who
+Tech](https://lesbianswhotech.org) &#42; [Pride in
+STEM](https://prideinstem.org/)
+
+### Women's Focused {#_womens_focused}
+
+&#42; [Women Who Code](https://www.womenwhocode.com/) &#42; [Rails
+Girls: Ruby on Rails Focused](https://railsgirls.com/) &#42; [PyLadies:
+Python Focused](https://pyladies.com/)
+
+## Books {#_books}
+
+&#42; [Hacking
+Diversity](https://www.goodreads.com/book/show/45358681-hacking-diversity?ac=1&amp;from_search=true&amp;qid=X1rcWShvWw&amp;rank=1)
+&#42; [Inclusive Design Patterns - Coding Accessibility Into Web
+Design](https://www.goodreads.com/book/show/30816008-inclusive-design-patterns---coding-accessibility-into-web-design)
+&#42; [Whistling
+Vivaldi](https://www.goodreads.com/book/show/6649312-whistling-vivaldi)
+&#42; [The Culture
+Map](https://www.goodreads.com/book/show/22085568-the-culture-map)
+
+## Tools {#_tools}
+
+&#42; [racialequitytools](https://www.racialequitytools.org/)
+
+This site is a starting place to learn about the organizational and
+societal dynamics of racial inclusion and equity. The lens is race, but
+the lessons are more broadly applicable. Organized for action, it will
+help you understand how to get started and what a process might be for
+exploring DEI in your own organization.
+
+## Articles {#_articles}
+
+&#42; [Diversity and inclusion: Stop talking and do your
+homework](https://opensource.com/article/17/9/diversity-and-inclusion-innovation)
+
+## Studies {#_studies}
+
+&#42; [The semantics of grammatical gender: A cross-cultural
+study](https://link.springer.com/article/10.1007/BF01068252&#35;page-1)
+&#42; [Racial Diversity Improves Group Decision Making In Unexpected
+Ways, According To Tufts University
+Research](https://www.sciencedaily.com/releases/2006/04/060410162259.htm)
+&#42; [Ethnic diversity deflates price
+bubbles](https://www.pnas.org/content/111/52/18524.abstract)
+
+## Existing Resources Pages&#42; {#_existing_resources_pages42}
+
+&#42; [Open Source Diversity](https://opensourcediversity.org/) &#42;
+[The Safe Zone Project: Free LGBTQ+ Curriculum, Activities, &amp;
+Resources!](https://thesafezoneproject.com/) &#42; [Diversity, Equity,
+and Inclusion
+Resources](https://www.educause.edu/about/diversity-equity-and-inclusion/resources)
+
+&#42; Archive = Past Fedora DEI Team Activities
+
+This page preserves historical content from the Fedora Diversity,
+Equity, &amp; Inclusion (DEI) Team for transparency and reference. While
+these initiatives are no longer active or current focus areas, their
+legacy contributed to today's DEI work.
+
+## Fedora Women
+
+The &#42;Fedora Women&#42; initiative aimed to nurture the involvement
+of women (cis and trans) and gender-queer people in Fedora and other
+Free and Open Source Software projects.
+
+This community worked to bring awareness to contributions by women and
+non-binary contributors in Fedora.
+
+Although the Fedora Women team is no longer active, many of its goals
+have evolved into broader efforts, such as the [&#42;Fedora Week of
+Diversity (FWD)&#42;](dei::fedora-week-of-diversity.xml).
+
+## Demographic Survey (2015/2016) {#demographic-survey}
+
+In 2015/2016, the Fedora Diversity, Equity, &amp; Inclusion (DEI) Team
+drafted a &#42;demographic survey&#42; to better understand the
+composition of the Fedora community.
+
+Due to data storage concerns, privacy issues, and evolving regulations
+like GDPR, this survey was never launched.
+
+You can check out more about it here in the Demographic survey section.
+
+## Events {#events}
+
+We still run active events like Fedora Week of Diversity (FWD) to
+support diversity in our community, and in open source in general. You
+can also look at the past events section to see what we've done before,
+and follow our channels to stay updated on this year's events.
+
+![Infographic with statistics about Fedora Women's Day since 2016 (now
+expanded to Fedora Week of Diversity). Created by Smera
+Goel.](infographic-2020.png)
+
+If you have questions about this historical content, please [contact the
+DEI Team.](index.xml)
+
+# About Fedora Project Demographic Survey {#_about_fedora_project_demographic_survey}
+
+Fedora Diversity, Equity, &amp; Inclusion Team
+&lt;<diversity@lists.fedoraproject.org>&gt; :toc:
+
+This section documents the Fedora Project Demographic Survey research.
+This was work completed between 2016 to 2018 to launch a demographic
+survey to understand the Fedora Community. Because of legal concerns
+around recent data legislation passed in this time period
+([G.D.P.R.](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation)),
+the survey was planned but never published.
+
+A majority of this work was completed at the [Fedora Diversity
+FAD](https://communityblog.fedoraproject.org/fedora-diversity-fad-2017/)
+in January 2017.
+
+:::: note
+::: title
+:::
+
+This page represents six to eight months of work from the Fedora
+Diversity, Equity, &amp; Inclusion Team in late 2015 and early 2016.
+While the D.E.I. Team is &#42;no longer actively working on this
+survey&#42; due to data collection and storage concerns (i.e. G.D.P.R.),
+it is retained here for historical purposes. The team hopes our research
+and work may be useful for other Open Source communities and Diversity,
+Equity, &amp; Inclusion programmes.
+::::
+
+## Objectives
+
+The Fedora Project Demographic Survey established these key objectives
+for launching such a survey:
+
+### 1. Understand baseline demographics about the Fedora Community. {#understand}
+
+&#42; &#42;Why this objective was important&#42;: Enables Fedora
+Diversity, Equity, &amp; Inclusion Team to identify different areas of
+need for contributing to Fedora, and prioritize to act on areas of
+most-immediate need. &#42; &#42;Examples of target criteria&#42;:
+&#42;&#42; Age &#42;&#42; Gender &#42;&#42; Race and cultural background
+&#42;&#42; Geographic area or region &#42;&#42; Disability &#42;&#42;
+Parents and families &#42;&#42; Non-English languages
+
+### 2. Support underrepresented groups by supplementing on-boarding resources to other Fedora teams. {#support}
+
+&#42; &#42;Why this objective was important&#42;: &#42;&#42; Collaborate
+and support on-going work in other Fedora Teams by advising mentorship
+and teaching programs in Fedora Community &#42;&#42; Disseminate best
+practices through mentorship and community on-boarding &#42;
+&#42;Examples of possible partnering teams&#42;: &#42;&#42; [Join
+SIG](fedora-join::index.xml) &#42;&#42; Mentoring and internship
+programs (GSoC and Outreachy) &#42;&#42; [Fedora
+Classrooms](fedora-join::classroom/classroom.xml)
+
+## Miscellaneous comments {#misc-comments}
+
+When the survey was first drafted in late 2016 and early 2017, several
+comments, ideas, and [resources](:resources.xml) influenced the design
+of the survey and an outreach campaign for it. Some of the pending and
+unresolved notes are below for archival purposes.
+
+> &#42; How were you introduced to Fedora? .. By another Fedora
+> contributor .. At a Fedora event (e.g. FAD / workshop / meetup /
+> release party) .. Conference .. Hackerspace .. Red Hat .. Web / online
+> &#42; What makes contributing to Fedora difficult for you?
+>
+> ---  Bee_Padalkar\_(bee2502)
+
+We also wanted to identify how the data will be used. We aimed to make a
+communication plan for how the data would be used. Ideally, information
+about data use and intentions is available and embedded in the survey.
+
+# Demographic Survey Questions {#_demographic_survey_questions}
+
+Fedora Diversity, Equity, &amp; Inclusion Team
+&lt;<diversity@lists.fedoraproject.org>&gt; v1.0.0 :toc:
+
+This page includes the officially-approved list of questions for the
+Fedora Project Demographic Survey. It contains 23 questions. See the
+[About](index.xml) and [Resources &amp; references](resources.xml) pages
+for additional context behind these questions.
+
+:::: note
+::: title
+:::
+
+This page represents six to eight months of work from the Fedora
+Diversity, Equity, &amp; Inclusion Team in late 2015 and early 2016.
+While the D.E.I. Team is &#42;no longer actively working on this
+survey&#42; due to data collection and storage concerns (i.e. G.D.P.R.),
+it is retained here for historical purposes. The team hopes our research
+and work may be useful for other Open Source communities and Diversity,
+Equity, &amp; Inclusion programmes.
+::::
+
+## Fedora and Free and Open Source software usage and contributions {#fedora-foss}
+
+1.  &#42;How long have you been a Fedora user?&#42; &#42;&#42; I have
+    never used Fedora &#42;&#42; Less than 1 year &#42;&#42; 1 to 3
+    years &#42;&#42; 3 to 6 years &#42;&#42; 6 to 10 years &#42;&#42;
+    Over 10 years &#42;&#42; Prefer not to say
+
+2.  &#42;How long have you been a Fedora contributor?&#42; &#42;&#42; I
+    have never contributed to Fedora &#42;&#42; Less than 1 year
+    &#42;&#42; 1 to 3 years &#42;&#42; 3 to 6 years &#42;&#42; 6 to 10
+    years &#42;&#42; Over 10 years &#42;&#42; Prefer not to say
+
+3.  &#42;Please select types of contributions that you make to
+    Fedora:&#42; &#42;&#42; Community (community leadership, new
+    contributor outreach and onboarding, diversity and inclusion work,
+    marketing, event organization) &#42;&#42; Technical (packaging,
+    programming, infrastructure, operations, release engineering,
+    testing / QA, language-specific SIGs) &#42;&#42; Other non-technical
+    (design, documentation, localization, translation) &#42;&#42; Prefer
+    not to say &#42;&#42; Other (please specify)
+
+4.  &#42;Do you contribute to Fedora as a volunteer or as an employee of
+    a company?&#42; &#42;&#42; Volunteer (student) &#42;&#42; Volunteer
+    (unemployed) &#42;&#42; Volunteer (retired) &#42;&#42; Volunteer
+    (outside regular job) &#42;&#42; Employee (work-related
+    contributions) &#42;&#42; Prefer not to say &#42;&#42; Other (please
+    specify)
+
+5.  &#42;On average, how many hours a week did you spend on Fedora
+    contributions in the last three months?&#42; &#42;&#42; 0, I have
+    not contributed in the last three months &#42;&#42; Less than 2
+    &#42;&#42; 2 - 5 &#42;&#42; 6 - 10 &#42;&#42; 11 - 20 &#42;&#42;
+    21 - 40 &#42;&#42; More than 40 &#42;&#42; Prefer not to say
+
+6.  &#42;What are the top reasons you contribute to Fedora?&#42; Please
+    check a maximum of 4 answers. &#42;&#42; To participate in a global
+    cooperative project &#42;&#42; To participate in a free and open
+    source software project &#42;&#42; To improve a free and open source
+    software project &#42;&#42; Because I think that software should not
+    be proprietary &#42;&#42; To solve a problem that could not be done
+    by proprietary software &#42;&#42; To get help in realizing a good
+    idea for a software project &#42;&#42; To learn and develop new
+    skills &#42;&#42; To share my knowledge and skills &#42;&#42; To
+    improve my job opportunities &#42;&#42; To get a reputation in the
+    free and open source software scene &#42;&#42; To meet other people
+    in the free and open source software community &#42;&#42; Because I
+    enjoy working with other people in the community &#42;&#42; To get
+    funding to travel internationally &#42;&#42; To earn a living
+    &#42;&#42; Prefer not to say &#42;&#42; Other (please specify)
+
+7.  &#42;Think of the time you made your first contribution to Fedora
+    that was incorporated. What best describes your experience?&#42;
+    &#42;&#42; My co-worker, who was paid to work on Fedora, helped me
+    prepare the contribution &#42;&#42; A person I already knew socially
+    helped me prepare the contribution &#42;&#42; A person I did not
+    know before helped me prepare the contribution at an in-person event
+    &#42;&#42; A person I did not know before helped me prepare the
+    contribution via electronic communications &#42;&#42; A mentor for a
+    third-party program (e.g. Google Summer of Code, Outreachy, etc.)
+    helped me prepare the contribution via electornic communications
+    &#42;&#42; A mentor identified by the Fedora Project helped me
+    prepare the contribution via electronic communications &#42;&#42; A
+    person whom I identified as a mentor helped me prepare the
+    contribution via electronic communications &#42;&#42; I submitted my
+    contribution electronically for review and it was reviewed by my
+    co-worker, who was paid to work on Fedora &#42;&#42; I submitted my
+    contribution electronically for review and it was reviewed by
+    someone I already knew socially &#42;&#42; I submitted my
+    contribution electronically for review and it was reviewed by
+    someone I didn't know before &#42;&#42; Prefer not to say &#42;&#42;
+    Other (please specify)
+
+8.  &#42;Do you routinely use software that is not free and open source
+    on Fedora?&#42; &#42;&#42; Yes, but only web-based applications like
+    Google Docs &#42;&#42; Yes, but only locally installed applications
+    (including hardware drivers) &#42;&#42; Yes, both web-based and
+    locally installed applications &#42;&#42; No &#42;&#42; Prefer not
+    to say &#42;&#42; Other (please specify)
+
+## Demographics
+
+1.  &#42;What is your gender?&#42; &#42;&#42; Male &#42;&#42; Female
+    &#42;&#42; Non-binary &#42;&#42; Prefer not to say &#42;&#42; Other
+    (please specify)
+
+2.  &#42;Do you identify as lesbian, gay, bisexual, transgender or
+    queer?&#42; &#42;&#42; Yes &#42;&#42; No &#42;&#42; Prefer not to
+    say
+
+3.  &#42;What is your age range?&#42; &#42;&#42; 17 or younger
+    &#42;&#42; 18 to 24 &#42;&#42; 25 to 34 &#42;&#42; 35 to 44
+    &#42;&#42; 45 to 54 &#42;&#42; 55 to 64 &#42;&#42; 65 to 74
+    &#42;&#42; Over 75 &#42;&#42; Prefer not to say
+
+4.  &#42;Do you have any disability, including, but not limited to any
+    of the ones listed
+    [here](https://www.dol.gov/ofccp/regs/compliance/sec503/Self_ID_Forms/VoluntarySelf-ID_CC-305_ENG_JRF_QA_508c.pdf)?&#42;
+    &#42;&#42; Yes &#42;&#42; No &#42;&#42; Prefer not to say
+
+5.  &#42;Do you have a partner?&#42; &#42;&#42; No, I am a single
+    &#42;&#42; Yes, although we do not live together &#42;&#42; Yes, I
+    live together with my partner &#42;&#42; Yes, I am married
+    &#42;&#42; Yes, I am married, but we do not live together &#42;&#42;
+    Prefer not to say &#42;&#42; Other (please specify)
+
+6.  &#42;How old is your youngest child?&#42; &#42;&#42; I don't have
+    children &#42;&#42; Less than 2 years old &#42;&#42; Between 2 years
+    and 5 years old &#42;&#42; Between 6 years and 10 years old
+    &#42;&#42; Between 11 years and 17 years old &#42;&#42; 18 years or
+    older &#42;&#42; Prefer not to say
+
+7.  &#42;What region of the world do you reside in?&#42; &#42;&#42; Asia
+    and Pacific Countries (APAC) &#42;&#42; Europe and the Middle East
+    (EMEA) &#42;&#42; Latin and South America (LATAM) &#42;&#42; North
+    America (NA) &#42;&#42; Prefer not to say
+
+8.  &#42;What is your country of residence?&#42;
+
+9.  &#42;What is the highest level of education you have completed?&#42;
+    &#42;&#42; Less than secondary (High) school &#42;&#42; Secondary
+    (High) school graduate or equivalent &#42;&#42; Vocational / trade
+    program or apprenticeship &#42;&#42; Some college (working towards a
+    first level university degree) &#42;&#42; Some college (not pursuing
+    a degree anymore) &#42;&#42; Associate degree &#42;&#42; Bachelor's
+    degree &#42;&#42; Master's degree &#42;&#42; Doctorate (Ph.D.) or
+    other advanced degree (e.g. M.D., J.D.) &#42;&#42; Prefer not to say
+    &#42;&#42; Other (please specify)
+
+10. &#42;If you are employed, what organization do you work for?&#42;
+    &#42;&#42; I am not employed &#42;&#42; Employed (please specify
+    organization name) &#42;&#42; Employed, but prefer not to specify
+    the organization &#42;&#42; Prefer not to say
+
+11. &#42;If you are employed, what do you work on?&#42; &#42;&#42; I am
+    not employed &#42;&#42; Software development &#42;&#42; System
+    administration &#42;&#42; Testing / QA / QE &#42;&#42; Technical
+    writing &#42;&#42; UX/UI design &#42;&#42; Marketing /communications
+    &#42;&#42; Community and event management &#42;&#42; Prefer not to
+    say &#42;&#42; Other (please specify)
+
+## Perception of, experience with, and attitudes towards diversity and inclusion {#perception}
+
+:::: note
+::: title
+:::
+
+This section title may need revisions for simplicity.
+::::
+
+The following questions can be presented as a table, with the same set
+of answer options. Questions about diverse perspectives, comfort with
+contributing ideas, valuing best ideas, and feeling respected were
+adapted from Red Hat Associate Survey.
+
+1.  &#42;Please indicate how you feel about the following
+    statements.&#42; &#42;&#42; Diverse perspectives are valued in the
+    Fedora community. &#42;&#42; I feel comfortable contributing my
+    ideas (in meetings or online forums), even when my views differ from
+    other contributors. &#42;&#42; The people I collaborate with value
+    the best ideas regardless of their source. &#42;&#42; I feel
+    respected when I share my ideas and opinions in the Fedora
+    community. &#42;&#42; Having greater diversity of contributors will
+    positively impact the Fedora Project. &#42;&#42; I'm appreciated for
+    the contributions I make.
+
+2.  &#42;Information about Fedora processes, policies or guidelines is
+    easy to find.&#42; &#42;&#42; Strongly agree &#42;&#42; Agree
+    &#42;&#42; Slightly agree &#42;&#42; Neither agree nor disagree
+    &#42;&#42; Slightly disagree &#42;&#42; Disagree &#42;&#42; Strongly
+    disagree
+
+:::: note
+::: title
+:::
+
+For the final two questions, do not add personally-identifying
+information about yourself or others in either text box.
+::::
+
+1.  &#42;Is there anything you believe would improve the inclusivity of
+    the Fedora community?&#42;
+
+2.  &#42;Do you have any feedback on this survey and are there any
+    additional questions you believe it should have asked?&#42;
+
+# Resources &amp; references {#_resources_amp_references}
+
+Several other existing surveys, Open Source research studies, and other
+writing influenced the creation, design, and execution of this survey:
+
+:::: note
+::: title
+:::
+
+FLOSS Survey 2013 focuses on a comparative analysis of different groups
+of respondents instead of asserting authoritative statistics abour
+diversity in the Open Source community.
+::::
+
+FLOSS Survey 2013
+
+:   &#42; [Questions and results](https://floss2013.larjona.net/) &#42;
+    [Women in Free/Libre/Open Source Software: The Situation in the
+    2010s](http://flosshub.org/content/women-freelibreopen-source-software-situation-2010s)
+    paper with results analysis
+
+Apache Software Foundation Committer Diversity Survey
+
+:   &#42; [Announcement
+    e-mail](http://mail-archives.apache.org/mod_mbox/www-announce/201611.mbox/%3Cpony-31e1cbf2b23a01ea035ee3323fe2ab95950c8284-dc1f345f30800e5cbef086a8801c55be77bc49c3%40announce.apache.org%3E)
+    &#42;
+    [Results](https://cwiki.apache.org/confluence/display/COMDEV/ASF+Committer+Diversity+Survey+-+2016)

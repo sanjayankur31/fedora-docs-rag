@@ -8917,8 +8917,6 @@ but MAY be symlinked to \&#96;+%{_libdir}/%{name}+\&#96;.
 
 
 
-
-
 = JavaScript Packaging Guidelines
 :last-reviewed: 2019-01-17
 
@@ -19670,5 +19668,3 @@ rm -rf %{buildroot}
 
 %changelog
 \&#8230;.
-
-

@@ -1,6 +1,4 @@
 
-
-
 = Fedora Community Architecture (CommArch)
 Justin W. Flory; Fedora community
 :page-authors: {author}, {author_2}
@@ -54,8 +52,6 @@ Last updated in {year}.
 
 
 
-
-
 = Unofficial Fedora Community Appendix
 
 This page is an unofficial Fedora Community Appendix.
@@ -74,8 +70,6 @@ Four Foundations::
 Also known as the 'Four F's'.
 Freedom, Friends, Features, First.
 These are the four values of the Fedora community.
-
-
 
 
 
@@ -191,8 +185,6 @@ With Code Search's powerful capabilities, our contributors and users can efficie
 
 
 
-
-
 = Participate in the Fedora community
 
 The Fedora community is large and decentralized.
@@ -209,8 +201,6 @@ You can understand the journey of participation in these key phases:
 
 See the page for each phase for more information.
 Each phase is meant to be followed sequentially.
-
-
 
 
 

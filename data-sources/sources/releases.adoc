@@ -1,0 +1,1722 @@
+= Fedora Linux Release Life Cycle
+
+The Fedora Project releases a new version of Fedora Linux approximately every six months and provides updated packages (maintenance) to these releases for approximately 13 months.
+This allows users to 'skip a release' while still being able to always have a system that is still receiving updates.
+
+== Release Dates
+Our https://fedorapeople.org/groups/schedule/[release schedule] intentionally includes some 'buffer' weeks, with early and later release targets.
+Predictable release dates benefit end users planning on upgrades, downstream distros making their schedules based on our work, and of course our own developers working on getting features to users.
+End users (and the press!) should plan on the release being available by the 'Target date \&#35;1' milestone.
+
+But you know that 'trick' where to keep yourself from being late you set all of your clocks ahead by five minutes?
+For a month or two, it works—you're on time everywhere!—but then you start to compensate because you know that extra time is built in.
+We've put out Fedora Linux releases on time for the past few years, and in order to keep doing that, we need to keep seriously aiming for the early target.
+That way, when we do need it, we can actually use the built in time.
+Fedora contributors should plan on having the release done by the 'Early target' milestone.
+
+== Development Schedule
+
+We say ''approximately every six months'' because like many things, releases don't always go exactly as planned.
+The schedule is not strictly time-based, but a hybrid of time and quality.
+The milestone releases are https://fedoraproject.org/wiki/QA:Release_validation_test_plan[tested] for compliance with the https://fedoraproject.org/wiki/Fedora_Release_Criteria[Fedora Release Criteria], and releases will be delayed if this is not the case.
+
+The schedule for the release currently under development is on its https://fedorapeople.org/groups/schedule/[release schedule] page.
+Beta and General Availability (final) releases happen at approximately 14:00 UTC.
+
+=== Development Planning
+
+Fedora development planning is handled by the xref:program_management::changes_policy.adoc[Release Planning Process].
+So-called ''Changes'' are proposed, initially reviewed, and monitored through the development process by the xref:fesco::index.adoc[Fedora Engineering Steering Committee] (FESCo) and xref:program_management::index.adoc\&#35;_fedora_program_manager[Fedora Program Manager].
+
+=== Development Process
+
+Fedora uses a system involving two 'development' trees. xref:rawhide.adoc[Rawhide] is a constantly rolling development tree.
+No releases are built directly from Rawhide.
+Approximately 10 weeks before the planned date of a Fedora release, a tree for that release is 'xref:branched.adoc[branched]' from the Rawhide tree.
+At that point the Rawhide tree is moving towards the release ''after'' the new Branched release, and the pending release is stabilized in the Branched tree.
+
+TIP: This means that development of a Fedora release is considered to begin at the time its ''predecessor'' branches from Rawhide.
+For instance, development on Fedora Linux 31 began the day after Fedora Linux 30 branched from Rawhide and entered the stabilization process.
+
+After the xref:fesco::Updates_Policy.adoc\&#35;updates-testing-activation[Bodhi activation point] , the https://fedoraproject.org/wiki/Bodhi[Bodhi] system is permanently active on the Branched release (all the way until it goes end of life), and requirements for updates to be marked as ''stable'' are set out in the xref:fesco::Updates_Policy.adoc[Updates Policy].
+Packages must go through the xref:quick-docs::repositories.adoc\&#35;the-updates-testing-repository[''updates-testing''] repository for the release before entering its xref:quick-docs::repositories.adoc\&#35;stable-is-not-a-repository[''stable''] repository, according to rules defined in the updates policy.
+These rules tighten gradually from Beta through to post-GA (Final), but the basic process does not change.
+
+For some time prior to a milestone (Beta, Final) release a https://fedoraproject.org/wiki/Milestone_freezes[freeze] is in effect which prevents packages moving from ''updates-testing'' to ''stable'' except in accordance with the https://fedoraproject.org/wiki/QA:SOP_blocker_bug_process[blocker] and https://fedoraproject.org/wiki/QA:SOP_freeze_exception_bug_process[freeze exception] bug policies.
+This freeze is lifted once the milestone is finished, and so packages begin to move from ''updates-testing'' to ''stable'' as normal again, until the next milestone's freeze date.
+
+=== Schedule Methodology
+
+Fedora Linux release schedules repeat ad infinitum with 'early target' dates of the third Tuesday in April and October.
+Significant changes to the release schedule must be approved by FESCo.
+The Fedora Program Manager works with teams across the project to incorporate their activities into the overall schedule and will make updates that do not affect release milestones.
+
+
+=== Development Schedule Rationale
+
+Fedora generally develops new releases over a six month period to provide a regular and predictable release schedule. The bi-annual targeted release dates are the third Tuesday of April and October, making them easy to remember and avoid significant holiday breaks.
+Changes to this standard must be approved by FESCo.
+
+A six month release schedule also follows the precedence of Red Hat Linux (precursor to Fedora).
+Former Red Hat software engineer Havoc Pennington offers a https://web.archive.org/web/20240607150548/https://listman.redhat.com/archives/fedora-advisory-board/2006-December/002039.html[historical perspective].
+GNOME started following a time based release based on the ideas and success of Red Hat Linux and other distributions following Fedora having adopted a similar release cycle.
+Several other major components have started following a time-based release schedule.
+While the exact release schedules vary between these components and other upstream projects, the interactions between these components and Fedora Linux makes a six month, time-based release schedule a good balance.
+
+
+=== Schedule Contingency Planning
+If ''Mass rebuild'' is not completed on time, all the subsequent milestones starting with ''Branch point'' are pushed back for one week until the ''Mass rebuild'' is completed.
+
+If the Beta https://fedoraproject.org/wiki/Go_No_Go_Meeting[Go/No-Go_Meeting] results in a 'No Go' determination, rescheduling of the milestone and subsequent milestones follows these rules:
+
+\&#42; Slip of the Beta from the Early Target to Target \&#35;1 does not affect Final Release (GA) date. The Final Release (GA) date remains on ''Early Final Target''.
+\&#42; Slip of the Beta to Target \&#35;1 adds a new ''Beta Target \&#35;2''
+\&#42; Slip of the Beta past Target \&#35;N (where N \&gt;= 2) adds a new ''Beta Target \&#35;(N+1)'' and also adds a new ''Final Target \&#35;N''
+
+If the Final https://fedoraproject.org/wiki/Go_No_Go_Meeting[Go/No-Go_Meeting] results in a 'No Go' determination, that milestone and subsequent milestones will be pushed back by one week.
+
+One week is added to the schedule to maintain the practice of releasing on Tuesdays.
+Tuesdays are the designated release day because they are good days for news coverage and correspond to the established day we synchronize our content with the mirrors that carry our releases.
+Be aware of holidays and of possible PR conflicts with the new proposed final date.
+
+Go/No-Go Meetings receive input from representatives of xref:fesco::index.adoc[FESCo], https://docs.pagure.org/releng/[Release Engineering], and https://fedoraproject.org/wiki/QA[Quality Assurance].
+
+== Maintenance Schedule
+We say maintained for ''approximately 13 months'' because the supported period for releases is dependent on the date the release under development goes final.
+As a result, ''Release N'' is supported until four weeks after the release of ''Release N+2''.
+
+
+=== Maintenance Schedule Rationale
+
+Fedora Linux is focused on free and open source software innovations and moves quickly.
+If you want a distribution that moves slower, but has a longer lifecycle, CentOS Stream or Red Hat Enterprise Linux, which are downstream of Fedora might be more suitable for you.
+
+Historically, the Fedora Project has found that supporting two releases plus Rawhide and the pre-release Branched code to be a manageable work load.
+
+== End of Life (EOL)
+
+When a release reaches the point where it is no longer supported when no updates are created for it, then it is considered End of Life (EOL).
+Branches for new packages in the SCM are not allowed for distribution N after the Fedora N+2 release and new builds are no longer allowed.
+
+The tasks performed at EOL are documented in the https://docs.fedoraproject.org/en-US/infra/release_guide/sop_release_eol/[End of life SOP].
+
+xref:eol.adoc[Information about EOL releases] is available.
+
+
+= Spins
+
+Spins are alternate versions of Fedora Linux, tailored for various types of users via hand-picked application sets and other customizations.
+
+We first offered Spins with the release of Fedora Linux 7 in May 2007.
+Previously, we distinguished between Spins—variants featuring non-default desktop environments—and Labs—variants tailored for a particular use case.
+While the websites still maintain this distinction, there is no practical difference.
+One day, we may even get the 'Solutions' moniker to catch on.
+
+== FAQ
+
+=== Where can I find them?
+
+https://spins.fedoraproject.org and https://labs.fedoraproject.org have a full list of all the spins currently offered, and information about each.
+For historical information, see the per-release information on the sidebar.
+
+=== Who makes Spins?
+
+Teams within Fedora are responsible for curating their Spins.
+The release-specific Spins listings on the sidebar have links to the maintainers for each Spin.
+
+Each release, the Fedora Program Manager checks with each Spin maintainer to make sure they still want to keep their Spin active.
+If they do not, or if there is no reply, the Spin is offered to the community for adoption.
+Unmaintained Spins are dropped in order to make sure our users get the intended experience.
+
+=== How do I create my own spin?
+
+More information on creating spins is available in the xref:spins/creating.adoc[Creating Spins documentation].
+
+=== Why don't I just use plain Fedora Linux?
+
+You can.
+Customized spins are merely targeted versions of Fedora Linux.
+It is possible to customize plain Fedora Linux to match any official spin.
+A customized spin can save you time and effort.
+
+=== Why should I choose a custom spin?
+
+Custom spins let you experience a select set of Fedora software, possibly in a particular way.
+For example, a desktop live CD could boot directly to a GNOME desktop, with 3D desktop effects enabled and selected backgrounds, colors and featured applications.
+With further customization, a custom spin could boot directly to a movie player or launch a Web server that is ready to publish custom data.
+
+
+= Creating Spins
+
+This page describes the process for creating a new Spin or adopting an abandoned Spin.
+
+== Prerequisites
+
+There are a few steps you'll need to do first.
+Some of these may seem obvious, but it's best to be clear.
+
+\&#42; Create a https://accounts.fedoraproject.org[Fedora Account]
+\&#42; Sign the https://fedoraproject.org/wiki/Legal:Fedora_Project_Contributor_Agreement[Fedora Project Contributor Agreement] in the https://accounts.fedoraproject.org/[Accounts system]
+\&#42; Sign up for the https://lists.fedoraproject.org/admin/lists/devel-announce.lists.fedoraproject.org/[devel-announce] and https://lists.fedoraproject.org/admin/lists/spins.lists.fedoraproject.org/[spins] mailing lists.
+You may also want to join the higher-volume https://lists.fedoraproject.org/admin/lists/devel.lists.fedoraproject.org/[devel] mailing list and any lists or https://discussion.fedoraproject.org[Discussion] categories that are relevant to your Spin.
+
+== Creating a new Spin
+
+To start a new Spin, you'll need to file a Self-Contained xref:program_management::changes_policy.adoc[Change proposal].
+Since Release Engineering will need to start building the Spin, you'll need to submit a https://pagure.io/releng[ticket with Release Engineering].
+If you want the Spin to have a non-descriptive name (for example: 'Fedora Llamanator' instead of 'Fedora Llama Herder Spin'), file a trademark issue with the https://pagure.io/Fedora-Council/tickets/issues[Fedora Council].
+But before you do any of that\&#8230;
+
+=== Before you submit a Change proposal
+
+In order to be successful, there are a few things you should do as you're starting the process.
+
+\&#42; \&#42;\&#42;Find helpers.\&#42;\&#42;
+Whether it's a single co-maintainer or a full team, having help will lighten the load.
+It gives you the ability to step away when you need to.
+And if you're working with someone else, you can make each other's ideas better.
+\&#42; \&#42;\&#42;Set your goals.\&#42;\&#42;
+You can make a Spin for just about any reason.
+But if you don't identify the reason, you'll have a hard time building a solution for it.
+Who are you trying to serve?
+What problem will you solve for them?
+How will you solve it?
+\&#42; \&#42;\&#42;Make sure a Spin is the right solution.\&#42;\&#42;
+Is a software group in repo a better solution?
+\&#42; \&#42;\&#42;Notify the Respins SIG.\&#42;\&#42;
+The https://fedoraproject.org/wiki/Respins-SIG[Respins SIG] produces updated install media post-release.
+Let them know you have a new Spin coming by posting in the \&#35;fedora-respins channel or emailing https://accounts.fedoraproject.org/user/jbwillia/[Ben Williams].
+
+=== After the change proposal is approved
+
+Great!
+Your proposal is approved.
+Now it's time to make it happen.
+
+\&#42; \&#42;\&#42;Work with Release Engineering to build the Spin.\&#42;\&#42;
+See the xref:spins/maintaining.adoc[Maintaining a Spin docs] for more about this.
+\&#42; \&#42;\&#42;Open a ticket with the Websites \&amp; Apps team.\&#42;\&#42;
+You'll need to get your Spin added to the website if you want people to be able to find it.
+The xref:websites::index.adoc[Websites \&amp; Apps team] can help you get ready.
+\&#42; \&#42;\&#42;Open a ticket with the Design team.\&#42;\&#42;
+At a minimum, you'll want a header image for the website.
+You may also want additional art for the website, stickers, etc.
+The https://gitlab.com/fedora/design/team/requests/-/issues[Design team repo] is your starting point for those requests.
+\&#42; \&#42;\&#42;Open a ticket with Fedora Media Writer.\&#42;\&#42;
+Create an issue in the https://github.com/FedoraQt/MediaWriter/issues[MediaWriter repository] to add your Spin to the media creation tool.
+
+== Adopting a Spin
+
+If a Spin is abandoned and you want to take it over, it doesn't take much beyond raising your hand.
+If the Program Manager has announced that the Spin is abandoned, just reply to their email.
+For a Spin that has been retired, first make sure there's a good use case for bringing it back.
+If there is, submit a Self-Contained xref:program_management::changes_policy.adoc[Change proposal] as if it were a new Spin.
+
+
+= Maintaining a Spin
+
+== Making changes
+
+The contents and configuration of Spins come from kickstart files in the https://pagure.io/fedora-kickstarts/[fedora-kickstarts] repo.
+To make changes, you can submit pull requests against the appropriate file.
+If you have a particularly meaningful change to make, you may want to file a xref:program_management::changes_policy.adoc[Change proposal] in order to communicate it to the wider community (and get it into the release notes).
+
+== Monitoring status
+
+
+You may want to start watching the https://pagure.io/releng/failed-composes/issues[failed composes repo] to see when your Spin fails to compose.
+Currently, you can't get per-Spin notifications, so you'll get notified for all failures.
+You'll probably want to set up a mail filter for this.
+
+If you're not sure what a failure message means or how to resolve it, ask for help on the spins or devel mailing lists, in chat, or somewhere else that seems appropriate.
+
+== Release-blocking status
+
+Spins are not release-blocking by default.
+If you want your Spin to block the release, xref:fesco::index.adoc[FESCo] must approve this.
+
+In addition, we do not re-run release candidate composes for failed non-blocking deliverables.
+That means if your spin fails in the release candidate compose, it will not be a part of the official release artifacts.
+Most failures these days are systemic (in other words, they represent an actual problem with the Spin), so it's on Spin maintainers to watch for and resolve failures as the Go/No-Go decision approaches.
+
+== Keepalive
+
+Once per release cycle, the Fedora Program Manager will check with all Spin maintainers to ensure the Spin should continue to be produced.
+If you do not respond, the Program Manager will attempt to find someone to take maintainership of the Spin.
+
+
+\&#42; Development Releases
+= Rawhide
+
+'Rawhide' is the name given to the current development version of Fedora Linux.
+It consists of a xref:quick-docs::repositories.adoc[package repository] called 'rawhide' and contains the latest build of all Fedora Linux packages updated on a daily basis.
+Each day, the build system attempts to create a full set of deliverables (installation images and so on), and all that compose successfully are included in the Rawhide tree for that day.
+
+Rawhide is sometimes called 'development' or 'main' (as it's the 'main' branch in package git repositories).
+
+== Goals
+
+Rawhide has the following Goals:
+
+\&#42; To allow package maintainers to integrate the newest _usable_ versions of their packages into Fedora.
+\&#42; To allow advanced users access to the newest _usable_ packages in a rolling manner.
+\&#42; To allow incremental changes to packages that are either too minor or major to go to stable Fedora releases.
+\&#42; To identify and fix issues with packages before they reach a stable release of Fedora.
+\&#42; To allow a place where certain low-level packages (approved by FESCo), including (but not limited to) glibc and gcc, can gain real-world testing of pre-release versions.
+
+== Audience
+
+Rawhide is targeted at advanced users, testers, and package maintainers.
+
+As a Rawhide consumer, you should:
+
+\&#42; Be willing to update on an almost daily basis.
+Rawhide gets hundreds of updates a day, and applying those updates on a regular basis allows you to more easily isolate when a bug appeared and what package(s) are responsible.
+\&#42; Be willing and able to troubleshoot problems.
+From time to time there are problems with Rawhide packages, and you will need strong troubleshooting skills and the ability to gather information for bug reports.
+You need a good understanding of dnf and how to downgrade packages, as well as boot time troubleshooting.
+\&#42; Have time and desire to learn new interfaces and changes.
+Rawhide packages stick closely to upstream projects, so interfaces and command-line options are subject to frequent changes.
+\&#42; Be willing to reboot frequently to test new kernel versions and confirm functionality of the boot process.
+If you can't reboot often, consider using a stable release instead.
+\&#42; Be willing and able to report bugs to Bugzilla as you find them and help maintainers gather information to fix them.
+
+If the above doesn't match you, you may wish to instead follow the xref:branched.adoc[Branched] release (depending on the point in the https://fedorapeople.org/groups/schedule/[release cycle]) or use regular stable Fedora releases.
+
+== Using Rawhide
+
+See the https://fedoraproject.org/wiki/Template:Rawhide_branched_install_methods[wiki template] for instructions on installing and using Rawhide.
+
+== Discussing Rawhide
+
+There are a number of ways to communicate with other Rawhide users:
+
+=== IRC
+
+Rawhide discussion is on topic and welcome in both the https://web.libera.chat/?channels=\&#35;fedora-devel[\&#35;fedora-devel] and https://web.libera.chat/?channels=\&#35;fedora-qa[\&#35;fedora-qa] IRC channels.
+
+=== Mailing Lists
+
+Rawhide discussion is on topic and welcome in both the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists.
+
+=== Bugzilla
+
+Rawhide bugs should be reported against the _Fedora_ product, _rawhide_ version and the affected component.
+Please do follow xref:quick-docs::howto-file-a-bug.adoc[best practices] when filing.
+Remember that IRC and mailing lists are useful to help narrow down if some behavior is a bug or where to report it, but are themselves not bug reporting channels.
+Always file bugs in http://bugzilla.redhat.com[Bugzilla].
+
+Note that broken dependencies are mailed to maintainers for each daily Rawhide compose where a package has such broken dependencies.
+Therefore, it's usually not worth filing a bug for broken dependencies unless they don't appear in the daily report, or you have a fix or improvement to suggest.
+
+== Producing Rawhide
+
+Package owners must build for Rawhide using Koji just like you would any other build; you do not go through the Bodhi process and the build becomes available almost immediately.
+
+The Rawhide repository is composed every day starting at 05:15 UTC.
+All rawhide builds in the buildsystem at that time are included in the compose attempt.
+The compose process also attempts to build all the standard Fedora 'deliverables' (live and install images, ARM and Cloud disk images, container images and so on).
+If any release-blocking image fails to build as part of the compose, the compose is considered to have failed.
+If the compose completes successfully, the compose will be 'synced out' to the mirror system.
+(A system where the sync only happens if a set of automated tests run on it passes is planned, but not yet fully implemented).
+
+Rawhide is under \&#96;development/rawhide\&#96; on the mirrors.
+You can find a local 'development' mirror on the https://mirrormanager.fedoraproject.org/mirrors/Fedora/development[public mirror list]. Compose time varies depending on number of changes, but is typically between 2 and 3 hours.
+
+Composes are done in a rawhide chroot using the 'pungi' tool called from https://pagure.io/pungi-fedora/blob/main/f/nightly.sh[a script maintained by Fedora Release engineering].
+If the base set of packages in Rawhide needed to compose Rawhide are broken, the daily compose may fail.
+
+A report for each Rawhide compose is sent to to the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists.
+This report contains output from the repodiff tool from the previous compose as well as a broken dependency report for packages with broken dependencies.
+Additionally, private email is sent to maintainers with packages containing broken dependencies.
+
+Package maintainers should read and follow the xref:fesco::Updates_Policy.adoc\&#35;_rawhide[Rawhide updates policy] for building any packages in Rawhide.
+
+If needed and approved by xref:fesco::index.adoc[FESCo], mass rebuilds are done by Release Engineering in Rawhide a month or so before the next release branches from it.
+Typically these are done for a global change over all packages such as a new gcc release, or rpm package format.
+
+== Questions and Answers
+
+\&#42;Doesn't rawhide eat babies / kill pets / burn down houses / break constantly?\&#42;
+
+No.
+Please stop telling everyone that.
+
+\&#42;So Rawhide is very stable and we can all use it?\&#42;
+
+No. See audience above.
+There are things that break from time to time, but if you are able to downgrade or troubleshoot, such issues aren't too severe.
+Most users should still stick to stable Fedora releases, but Rawhide is a viable option for enthusiasts to experiment with.
+
+\&#42;I'm using a Stable Fedora release, but I want a newer package version that's only available in Rawhide. Can I just \&#96;dnf install\&#96; it?\&#42;
+
+No.
+Mixing releases like this is a bad idea. Better options are:
+
+\&#42; Ask the Fedora maintainer in a bug report to update the stable version if permitted by policy.
+If not, there may be a http://copr.fedoraproject.org/[Copr repository] that provides the updated version.
+See the COPR page for more details.
+\&#42; Obtain the src.rpm for the package you wish and try to \&#96;rpmbuild --rebuild\&#96; it (which may or may not work depending on dependencies).
+
+\&#42;I want to run the Rawhide kernel on my stable Fedora machine. Can I do that?\&#42;
+
+Sometimes yes.
+The kernel is more self-contained than other Rawhide packages and you also can easily boot your older kernel if the Rawhide kernel goes wrong.
+Download and \&#96;dnf install\&#96; the package.
+However, note that Rawhide kernels often have debugging code enabled, which results in them performing noticeably worse than release kernels (they will be slower and consume more memory).
+
+\&#42;Is Rawhide a 'rolling release'?\&#42;
+
+It depends on how you define that, but yes.
+
+\&#42;How can I tell when the Rawhide compose for the day has finished?\&#42;
+
+Check the reports sent to the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists, or watch fedora-messaging for the \&#96;org.fedoraproject.prod.pungi.compose.status.change\&#96; topic.
+
+\&#42;What happens during branching, does it affect my Rawhide release somehow?\&#42;
+
+No, you're still on Rawhide and no action is required.
+(This was handled differently in the past).
+
+\&#42;How do I get out of Rawhide again? I want to switch to the Branched release or a stable release.\&#42;
+
+Note that downgrading your system to a lower release is not supported, not tested, not a good idea, and definitely _at your own risk_.
+The safest approach is to reinstall the system.
+If you really want to downgrade, at least make a filesystem snapshot first (if you use the default Btrfs filesystem).
+
+One common use case is to switch your system to Branched right after it is created (split from Rawhide).
+In this case, the sooner you do it (after branching), the safer and easier it is—the difference between systems is minimal at that point.
+Downgrading after a long time, or downgrading to a stable release (which is completely different from Rawhide) will be more problematic.
+
+You can (attempt to) downgrade to Branched or a stable release using xref:quick-docs::dnf-system-upgrade.adoc[DNF system upgrade] (the same approach as for upgrades).
+However, because Rawhide uses a different set of system repositories, you need to explicitly disable those during the download phase, and explicitly enable the set or repositories used on non-Rawhide systems.
+So the download command would look like this (this will disable and enable the correct repositories, and if you have some additional (including third-party) repositories installed, it will keep them enabled or disabled as they are currently; replace \&#96;NN\&#96; with the target release number): \&#96;sudo dnf system-upgrade download --releasever=NN --disablerepo='rawhide,rawhide-modular' --enablerepo='fedora,updates'\&#96;
+
+Everything else should be unchanged, you can use the rest of the aforelinked guide to proceed.
+There is a higher chance of encountering broken dependencies when downgrading, because while package dependencies must work correctly when going up in versions.
+They don't need to work when going down.
+In that case, you can try \&#96;--skip-broken\&#96; or removing the offending packages (if possible), otherwise you're mostly out of luck.
+
+\&#42;As a package maintainer do I have to build rawhide packages or does the nightly compose take care of that?\&#42;
+
+You must build for Rawhide yourself (using Koji).
+The nightly compose only collects packages already built and marked with the appropriate target (rawhide) in Koji.
+
+\&#42;Are rawhide packages signed?\&#42;
+
+All of them are now signed.
+Make sure you have gpgcheck=1 set in your repo file to take advantage of this.
+
+== Hints and Tips
+
+\&#42; Your package management system can be of great help in diagnosing and working around issues you find. Do read up and understand:
+\&#42;\&#42; \&#96;dnf downgrade\&#96;
+\&#42;\&#42; \&#96;dnf history\&#96;
+\&#42;\&#42; \&#96;dnf update --skip-broken\&#96;
+\&#42;\&#42; \&#96;koji download-build\&#96;
+\&#42; If you are using an immutable variant like Silverblue, you should make good use of the features of OSTree like:
+\&#42;\&#42; \&#96;rpm-ostree rollback\&#96;
+\&#42;\&#42; \&#96;ostree admin config-diff\&#96;
+\&#42;\&#42; \&#96;ostree admin pin 0\&#96;
+\&#42; You should update frequently (preferably every day).
+This allows you to more easily narrow down when a problem or issue appeared.
+If you apply a week of Rawhide updates at once, you have many more packages to examine to narrow down issues.
+\&#42; Reboot often (preferably whenever new kernels arrive).
+This allows you to test the boot up process and packages related to it, as well as newer kernels.
+Read and understand the Dracut troubleshooting steps.
+\&#42; Follow the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists for Rawhide issues.
+Try to at least skim them before doing your daily Rawhide updates.
+Look for '[rawhide]' subjects or reports of issues.
+Additionally, if you find a problem and are not sure what to file bugs against, you can open a discussion there.
+\&#42; Rawhide kernels are often built with varying degrees of debugging code enabled, which will result in worse performance and increased resource usage. See https://fedoraproject.org/wiki/KernelDebugStrategy[Kernel Debugging Strategy] for details on exactly what debugging code is enabled for which kernel builds.
+You can disable SLUB debugging for those builds for which it is enabled by passing \&#96;slub_debug=-\&#96; to your kernel command line in \&#96;/etc/default/grub\&#96; (and re-generating your GRUB config, or just adding it directly).
+Additionally, you can run kernels in the https://fedoraproject.org/wiki/RawhideKernelNodebug[Rawhide Kernel Nodebug] repo that have all debugging disabled.
+\&#42; If you are using a graphical desktop environment in your Rawhide install, you may wish to install several of them.
+This allows you to still login and troubleshoot when your primary desktop environment is not working for some reason.
+\&#42; Have rescue media handy of the current stable Fedora release for emergencies.
+
+== History
+
+Red Hat Linux 'Raw Hide' http://lwn.net/1998/0820/rawhide.html[announcement].
+
+The name might come from the http://en.wikipedia.org/wiki/Rawhide_%28song%29[song with the same name] that starts with 'Rolling, rolling, rolling, \&#8230;'.
+
+At one time, Rawhide would freeze before release milestones.
+This was changed with the https://fedoraproject.org/wiki/No_Frozen_Rawhide_Proposal[No Frozen Rawhide Proposal] and Branched process which we now follow.
+
+
+= Branched
+
+Branched is the name given to a version of Fedora that has 'branched' from the rolling xref:rawhide.adoc[Rawhide] tree and will become the next stable Fedora release.
+It consists of a http://download.fedoraproject.org/pub/fedora/linux/development/[Fedora development release tree] named after the Fedora release it will become.
+It contains builds of all Fedora packages updated by maintainers with the goal of stabilizing before release and fixing any release xref:program_management::changes_policy.adoc[Changes].
+Full nightly composes are also produced each night when a Branched release exists, usually containing all images and installer trees (minus any which fail to build).
+
+== Goals
+
+Branched has the following goals:
+
+\&#42; To allow package maintainers to integrate their packages into Fedora for a stable release.
+\&#42; To allow advanced users access to the newer packages than stable releases typically provide.
+\&#42; To identify and fix issues with packages before they reach a stable release of Fedora.
+
+== Audience
+
+Branched is targeted at advanced users, testers and package maintainers.
+
+As a Branched consumer, you should:
+
+\&#42; Be willing to update often.
+Branched doesn't get as many updates as rawhide (and at times they are frozen), but it still gets a larger amount than a Stable release.
+\&#42; Be willing and able to troubleshoot problems.
+From time to time there are problems with Branched packages, and you will need strong troubleshooting skills and the ability to gather information for bug reports.
+You need a good understanding of dnf and how to downgrade packages, as well as boot-time troubleshooting.
+\&#42; Frequent reboots to test new kernel versions and confirm functionality of the boot process.
+If you can't reboot often, consider using a stable release instead.
+\&#42; Be willing and able to report bugs as you find them and help maintainers gather information to fix them.
+
+If the above doesn't match you, you may wish to use regular stable Fedora releases.
+
+== Using Branched
+
+See the https://fedoraproject.org/wiki/Template:Rawhide_branched_install_methods[wiki template] for instructions on installing and using Branched.
+
+== Communicating
+
+There are a number of ways to communicate with other Branched users:
+
+=== IRC
+
+Branched discussion is on topic and welcome in both the https://web.libera.chat/?channels=\&#35;fedora-devel[\&#35;fedora-devel] and https://web.libera.chat/?channels=\&#35;fedora-qa[\&#35;fedora-qa] IRC channels.
+
+=== Mailing Lists
+
+Branched discussion is on topic and welcome in both the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists.
+
+=== Bugzilla
+
+Branched bugs should be reported against the _Fedora_ product, and version that this branched will become and the affected component.
+Please do follow xref:quick-docs::howto-file-a-bug.adoc[best practices] when filing.
+Remember that IRC and mailing lists are useful to help narrow down if some behavior is a bug or where to report it, but are themselves not bug reporting channels.
+Always file bugs in https://bugzilla.redhat.com[Bugzilla].
+
+Note that broken dependencies are mailed to maintainers for each daily Branched compose where a package has such broken dependencies.
+Therefore, it's usually not worth filing a bug for broken dependencies unless they don't appear in the daily report, or you have a fix or improvement to suggest.
+
+== Producing Branched
+
+The Branched compose runs every day starting at 09:15 UTC.
+All branched package builds at that time that are marked as xref:quick-docs::repositories.adoc[_stable_] are included in the compose attempt.
+If any release-blocking image fails to build as part of the compose, the compose is considered to have failed.
+If the compose completes successfully, a set of automated tests intended to check its compliance with the https://fedoraproject.org/wiki/Basic_Release_Criteria[Basic Release Criteria] are run.
+If these tests pass, the compose will be synced out to the mirror system.
+Note that during https://fedoraproject.org/wiki/Milestone_freezes[freezes] there will be many days where 0 packages are added to the compose.
+The Branched tree is under \&#96;development/branched\&#96; on the mirrors (when it exists).
+You can find a local mirror on the https://mirrormanager.fedoraproject.org/mirrors/Fedora/development[public mirror list].
+Compose time varies depending on number of changes, but is typically between 2 and 3 hours.
+
+Branched is subject to various policies during its life cycle.
+For most of its existence, it is subject to the xref:fesco::Updates_Policy.adoc[Updates Policy] and package updates for it are gated through the https://fedoraproject.org/wiki/Bodhi[Bodhi] package review process.
+At various points of the xref:lifecycle.adoc[Fedora Release Life Cycle], other freezes, policies and requirements come into effect, including the https://fedoraproject.org/wiki/Software_String_Freeze_Policy[Software String Freeze Policy], the https://fedoraproject.org/wiki/Milestone_freezes[freezes], and the xref:program_management::changes_policy.adoc\&#35;_change_process_milestones[Change freezes].
+See all the above links for more details on exactly what changes may occur in the Branched tree under what conditions at what times.
+
+Composes are done using the 'mash' and https://pagure.io/pungi[Pungi] tools called from a script maintained by Fedora Release Engineering.
+If the base set of packages needed to compose are broken, the daily compose may fail.
+
+A report for each Branched compose is sent to to the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists.
+This report contains output from the https://pagure.io/compose-utils[compose-changelog] tool from the previous compose as well as a broken dependency report for packages with broken dependencies.
+Additionally, private email is sent to maintainers with packages containing broken dependencies.
+
+Package maintainers should read and follow the xref:fesco::Updates_Policy.adoc[Branched release updates policy] for building any packages in Branched.
+
+Until the xref:fesco::Updates_Policy.adoc\&#35;updates-testing-activation[Bodhi enabling point], you cannot expect all packages in the Branched tree to be signed.
+To use Branched at these times, GPG signature checking in your package management tool must be disabled.
+
+== Questions and Answers ==
+
+\&#42;So Branched is very stable and we can all use it?\&#42;
+
+Not quite, though it has improved substantially in recent years.
+Still, see audience above.
+There are things that break from time to time, but if you are able to downgrade or troubleshoot, such issues aren't too severe, however most users should stick to stable Fedora releases.
+
+\&#42;I'm using a stable Fedora release, but I want the newer package for foo that is only available in Branched. Can I just yum|dnf install it?\&#42;
+
+No.
+Mixing releases like this is a very bad idea. Better options are:
+
+\&#42; Obtain the src.rpm for the package you wish and try to \&#96;mock --rebuild\&#96; it (which may or may not work depending on dependencies).
+\&#42; Ask the Fedora maintainer in a bug report to update the stable version if permitted by policy.
+
+\&#42;How can I tell when the branched compose for the day has finished?\&#42;
+
+You can see the reports it sends to the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists.
+You can also watch fedora-messaging for the messages that rawhide compose has finished.
+
+== Hints and Tips
+
+\&#42; Your package management system can be of great help in diagnosing and working around issues you find.
+Do read up and understand: \&#96;dnf downgrade\&#96;, \&#96;dnf history\&#96;, \&#96;dnf upgrade\&#96;, and \&#96;koji download-build\&#96;.
+\&#42; You should update frequently (preferably every day).
+This allows you to more easily narrow down when a problem or issue appeared. If you apply a week of Branched updates at once, you have many more packages to examine to narrow down issues.
+\&#42; Reboot often (preferably whenever new kernels arrive).
+This allows you to test the boot up process and packages related to it, as well as newer kernels.
+Read and understand the Dracut troubleshooting steps.
+\&#42; Follow the https://lists.fedoraproject.org/admin/lists/test@lists.fedoraproject.org/[test] and https://lists.fedoraproject.org/admin/lists/devel@lists.fedoraproject.org/[devel] lists for Branched issues.
+Try to at least skim them before doing your daily Branched updates. Look for '[branched]' or '[F\&lt;N+1\&gt;]' subjects or reports of issues.
+Additionally, if you find a problem and are not sure what to file bugs against, you can open a discussion there.
+\&#42; At some times, Branched kernels are made with a large amount of debugging enabled.
+You can often gain a good deal of performance by passing \&#96;slub_debug=-\&#96; to your kernel boot line in \&#96;/etc/grub2.cfg\&#96;.
+Additionally, you can run kernels in the https://fedoraproject.org/wiki/RawhideKernelNodebug[Rawhide Kernel Nodebug] repo that have all debugging disabled.
+\&#42; If you are using a graphical desktop environment in your Branched install, you may wish to install several of them.
+This allows you to still login and troubleshoot when your primary desktop environment is not working for some reason.
+\&#42; Have rescue media handy of the current stable Fedora release for emergencies.
+
+== History
+
+Branched was created as part of the 'No frozen Rawhide' proposals:
+
+\&#42; https://fedoraproject.org/wiki/No_Frozen_Rawhide_Proposal[No Frozen Rawhide Proposal]
+\&#42; https://fedoraproject.org/wiki/No_Frozen_Rawhide_Implementation[No Frozen Rawhide Implementation]
+
+
+\&#42; Upcoming Releases
+= Fedora Linux {release-version}
+:release-version: 43
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+\&#42;\&#42;\&#42; https://fedoraproject.org/wiki/Releases/43/ChangeSet[Change Set]
+= Fedora Linux {release-version} release-blocking deliverables
+:release-version: 43
+
+This is the list of release-blocking deliverables.
+The goal is to provide single point of information for Fedora QA,
+Release Engineering
+and other teams.
+
+\&#42; QA knows what's release blocking and they know where testing priority is
+\&#42; Release Engineering knows what's going to be produced for upcoming release ahead of time
+\&#42; We can avoid last minute juggling with release at Go/No-Go meeting
+
+This list is static
+and will be updated when a Change proposal that includes changing the blocking status is approved by FESCo.
+
+NOTE: This is not an exhaustive list of Fedora deliverables
+This page only lists the blocking deliverables.
+Teams are encouraged to maintain a list of non-blocking deliverables for which they are responsible.
+
+NOTE: Fedora CoreOS deliverables are not included here because they use a different compose process.
+
+NOTE: Images starting 'IoT/' below are found in the separate Fedora-IoT composes, not the main
+Fedora composes.
+
+NOTE: Maximum sizes for compressed raw disk images apply to the uncompressed size.
+
+[cols='7,1']
+.F{release-version} Release-Blocking Deliverables
+|===
+|Image | maximum size
+
+|Cloud/aarch64/images/Fedora-Cloud-Base-Generic-_RELEASE_MILESTONE_.aarch64.qcow2 |
+|Cloud/x86_64/images/Fedora-Cloud-Base-Generic-_RELEASE_MILESTONE_.x86_64.qcow2 |
+|Cloud/x86_64/images/Fedora-Cloud-Base-AmazonEC2-_RELEASE_MILESTONE_.x86_64.raw.xz |
+|Container/x86_64/images/Fedora-Container-Toolbox-_RELEASE_MILESTONE_.x86_64.oci.tar.xz | 400 MB
+|Container/aarch64/images/Fedora-Container-Toolbox-_RELEASE_MILESTONE_.aarch64.oci.tar.xz | 400 MB
+|Everything/x86_64/iso/Fedora-Everything-netinst-x86_64-_RELEASE_MILESTONE_.iso | 1.2 GB
+|IoT/aarch64/images/Fedora-IoT-_RELEASE_MILESTONE_.aarch64.raw.xz |
+|IoT/aarch64/iso/Fedora-IoT-IoT-ostree-aarch64-_RELEASE_MILESTONE_.iso |
+|IoT/x86_64/images/Fedora-IoT-_RELEASE_MILESTONE_.x86_64.raw.xz |
+|IoT/x86_64/iso/Fedora-IoT-IoT-ostree-x86_64-_RELEASE_MILESTONE_.iso |
+|Server/aarch64/iso/Fedora-Server-dvd-aarch64-_RELEASE_MILESTONE_.iso | 4.7 GB
+|Server/aarch64/iso/Fedora-Server-netinst-aarch64-_RELEASE_MILESTONE_.iso | 1.2 GB
+|Server/x86_64/iso/Fedora-Server-dvd-x86_64-_RELEASE_MILESTONE_.iso | 4.7 GB
+|Server/x86_64/iso/Fedora-Server-netinst-x86_64-_RELEASE_MILESTONE_.iso | 1.2 GB
+|Spins/aarch64/images/Fedora-Minimal-RELEASE_MILESTONE_.aarch64.raw.xz | 8 GB
+|Workstation/aarch64/images/Fedora-Workstation-Disk-_RELEASE_MILESTONE_-aarch64.raw.xz | 16 GB
+|Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-_RELEASE_MILESTONE_.iso | 3.0 GB
+|KDE/aarch64/images/Fedora-KDE-Desktop-Disk-_RELEASE_MILESTONE_.aarch64.raw.xz | 16 GB
+|KDE/x86_64/iso/Fedora-KDE-Desktop-Live-_RELEASE_MILESTONE_.x86_64.iso | 4.7 GB
+|===
+
+
+\&#42;\&#42;\&#42; https://fedorapeople.org/groups/schedule/f-43/f-43-key-tasks.html[Schedule]
+= Fedora Linux {release-version} Spins
+:release-version: 42
+
+This page lists Spins (and Labs) that will be produced for Fedora Linux {release-version}.
+
+NOTE: If the maximum size for a spin needs to be updated,
+file an issue against https://pagure.io/fedora-qa/relval/issues[relval].
+
+[cols='2,5,2']
+.F{release-version} Spins and Labs
+|===
+|Name | Description | Maximum size
+
+|https://fedoraproject.org/wiki/Astronomy_Spin[Astronomy Spin] | The Astronomy Spin is a powerful completely open-source and free tool for astronomy amateurs and professionals. | 4 GB
+|https://fedoraproject.org/wiki/Changes/FedoraBudgie[Budgie Spin] | Budgie Desktop’s goal is to be a feature-rich and modern desktop that provides unique ways of interacting with the system while being approachable to many users with its default more traditional look and feel. |
+|https://fedoraproject.org/wiki/Changes/Cinnamon_Spin[Cinnamon Spin] | The Fedora Cinnamon spin provides advanced innovative features and a traditional user experience. | 2.6 GB
+|https://fedoraproject.org/wiki/Design_Suite[Design Suite] | The Fedora Design Suite includes well-selected applications, fitting a variety of use cases. Whether you decide to work on publishing documents, creating images and pictures or even 3D content, the Design Suite has a fitting tool. | 4 GB
+|https://fedoraproject.org/wiki/Fedora_jam[Fedora Jam] | Fedora Jam is a full-featured audio creation spin. It includes all the tools needed to help create the music you want, anything from classical to jazz to Heavy metal. Included in Fedora jam is full support for JACK and JACK to PulseAudio bridging. | 4 GB
+|https://fedoraproject.org/wiki/Games_Spin[Games Spin] | The Fedora Games spin offers a perfect show-case of the best games available in Fedora. The included games span several genres, from first person shooters to real-time and turn based strategy games to puzzle games. Not all the games available in Fedora are included on this spin, but trying out this spin will give you a fair impression of Fedora's abilities to run great games. | 16 GB
+|https://docs.fedoraproject.org/en-US/i3/[i3 Spin] | An Fedora Spin shipping the popular i3 window manager. This Spin is the first Fedora Spin to feature a tiling/window manager instead of a traditional desktop environment. |
+|https://kinoite.fedoraproject.org/[Kinoite] | An rpm-ostree-based KDE Plasma desktop |
+|https://fedoraproject.org/wiki/LXDE_Spin[LXDE Spin] | The Fedora LXDE spin is meant to be a lightweight, but yet complete desktop based on LXDE, the Lightweight X11 Desktop Environment. | 2 GB
+|https://fedoraproject.org/wiki/MATE-Compiz_Spin[MATE-Compiz Spin] | The Fedora MATE spin is meant to provide users with a classic, lightweight and traditional looking desktop. | 3 GB
+|https://fedoraproject.org/wiki/Changes/MobilityPhoshImage[Mobility Phosh Image] | A Wayland shell for mobile devices based on Gnome |
+|https://fedoraproject.org/wiki/Changes/PythonClassroomLab[Python Classroom Lab] | The Fedora Python Classroom Lab makes it even easier for teachers and instructors to use Fedora in their classrooms or workshops. Ready to use operating system with important stuff pre-installed - either with GNOME or as a headless environment for Docker or Vagrant. | 2 GB
+|https://fedoraproject.org/wiki/QA_Test_Day_Spin[QA Test Day Spin]|The purpose of this spin is to provide a model kickstart file to people organizing Test Days that can easily be tweaked for specific Test Days. |
+|https://fedoraproject.org/wiki/Robotics_Spin[Robotics Spin] | Create a spin that provides as many robotics related packages to the spin to maximize out-of-the-box usable hardware and software. Eventually provide out-of-the-box simulation environment for one or more scenarios. | 4 GB
+|https://fedoraproject.org/wiki/Scientific_Spin[Fedora Scientific] | Fedora Scientific spin aims to create a Fedora desktop based spin which will have a generic toolset for Linux users whose profession/studies involve scientific research. To learn more, see the documentation. | 5 GB
+|https://fedoraproject.org/wiki/Security_Spin[Security Spin] | The Fedora Security Spin provides a safe test environment to work on security auditing, forensics, system rescue and teaching security testing methodologies in universities and other organizations. The spin is maintained by a community of security testers and developers. It comes with the clean and fast LXDE Desktop Environment and a customized menu that provides all the instruments needed to follow a proper test path for security testing or to rescue a broken system. The Live image has been crafted to make it possible to install software while running, and if you are running it from a USB stick created with the Live Media Writer's overlay feature, you can install and update software and save your test results permanently. Additional information is available at the Security Spin home page and its wiki page. | 2 GB
+|https://fedoraproject.org/wiki/Sugar_on_a_Stick[Sugar on a Stick Spin] | Sugar on a Stick (SoaS) enables children to reclaim computers. SoaS aims to make it easy for children, parents, or local deployers to provide each student with a small device (USB stick or thumbdrive) that can start any computer with the student's personalized Sugar environment. We would like to see Sugar's presence, journal, and clarity principles usable on any machine — at school, at home, and anywhere there is a suitable computing device. | 2 GB
+|https://fedoraproject.org/wiki/SIGs/Sway[Sway Spin] | Sway is a tiling Wayland compositor similar to the i3 window manager. |
+|https://fedoraproject.org/wiki/Xfce_Spin[Xfce Spin] | The Fedora Xfce spin showcases the Xfce desktop, which aims to be fast and lightweight, while still being visually appealing and user friendly. Xfce is a full fledged desktop using the freedesktop.org standard. | 2 GB
+|https://fedoraproject.org/wiki/Changes/LXQt_Spin[LXQt Spin] | The Fedora LXQt spin is meant to be a lightweight, but yet complete desktop based on LXQt. LXQt is a fast and stable desktop environment already usable on production desktops. It will not get in the user's way. It is focused on being a Classic Desktop with a modern Look \&amp; Feel. | 2 GB
+|===
+
+
+\&#42; Supported Releases
+= Fedora Linux {release-version}
+:release-version: 42
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 41
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= End of Life Releases
+
+The Fedora Project maintains each release of Fedora Linux according to the xref:../lifecycle.adoc[Release Life Cycle].
+The following releases have reached End of Life.
+They are no longer maintained and do not receive any updates.
+To get the latest release, visit https://getfedora.org[Get Fedora].
+If you want to upgrade your old system, please check xref:quick-docs::upgrading.adoc[Upgrading to a new release of Fedora Linux] page for details.
+
+== Unsupported Fedora Linux releases
+
+.EOL Releases
+|===
+|Release|EOL since|Maintained for
+
+|Fedora Linux 41|2025-12-15|412 days
+|Fedora Linux 40|2025-05-13|385 days
+|Fedora Linux 39|2024-11-26|385 days
+|Fedora Linux 38|2024-05-21|399 days
+|Fedora Linux 37|2023-12-05|385 days
+|Fedora Linux 36|2023-05-16|371 days
+|Fedora Linux 35|2022-12-13|406 days
+|Fedora Linux 34|2022-06-07|406 days
+|Fedora Linux 33|2021-11-30|399 days
+|Fedora Linux 32|2021-05-25|392 days
+|Fedora Linux 31|2020-11-24|392 days
+|Fedora Linux 30|2020-05-26|392 days
+|Fedora Linux 29|2019-11-26|392 days
+|Fedora Linux 28|2019-05-28|392 days
+|Fedora Linux 27|2018-11-30|381 days
+|Fedora Linux 26|2018-05-29|322 days
+|Fedora Linux 25|2017-12-12|385 days
+|Fedora Linux 24|2017-08-08|413 days
+|Fedora Linux 23|2016-12-20|413 days
+|Fedora Linux 22|2016-07-19|420 days
+|Fedora Linux 21|2015-12-01|357 days
+|Fedora Linux 20|2015-06-23|553 days
+|Fedora Linux 19|2015-01-06|553 days
+|Fedora Linux 18|2014-01-14|364 days
+|Fedora Linux 17|2013-07-30|427 days
+|Fedora Linux 16|2013-02-12|462 days
+|Fedora Linux 15|2012-06-26|399 days
+|Fedora Linux 14|2011-12-09|402 days
+|Fedora Linux 13|2011-06-24|395 days
+|Fedora Linux 12|2010-12-02|380 days
+|Fedora Linux 11|2010-06-25|381 days
+|Fedora Linux 10|2009-12-17|387 days
+|Fedora Linux 9|2009-07-10|423 days
+|Fedora Linux 8|2009-01-07|426 days
+|Fedora Linux 7|2008-06-13|379 days
+|Fedora Core 6|2007-12-07|409 days
+|Fedora Core 5|2007-07-02|469 days
+|Fedora Core 4|2006-08-07|420 days
+|Fedora Core 3|2006-01-16|434 days
+|Fedora Core 2|2005-04-11|328 days
+|Fedora Core 1|2004-09-20|320 days
+|===
+
+== More information
+
+For more information on how the End of Life process is managed, see the https://docs.pagure.org/releng/sop_end_of_life.html[Release Engineering SOP] and xref:program_management::pgm_guide/release_process.adoc\&#35;_eol_day[PgM Guide].
+
+
+= Fedora Linux {release-version}
+:release-version: 40
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 39
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 38
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 37
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 36
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 35
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 34
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; xref:f{release-version}/blocking.adoc[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; xref:f{release-version}/spins.adoc[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 33
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}Changes[Changes]
+
+
+= Fedora Linux {release-version}
+:release-version: 32
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 31
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 30
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 29
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 28
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FailsToInstall[Failed to Install]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 27
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 26
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 25
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 24
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 23
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ReleaseBlocking[Release-Blocking Deliverables]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 22
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/ChangeSet[Change Set]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 21
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 20
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 19
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaFreezeException[Beta Freeze Exceptions]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalFreezeException[Final Freeze Exceptions]
+
+
+= Fedora Linux {release-version}
+:release-version: 18
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 17
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 16
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 15
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 14
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 13
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 12
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 11
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 10
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/beta/buglist[Beta] and https://qa.fedoraproject.org/blockerbugs/milestone/{release-version}/final/buglist[Final] blockers
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/Spins[Spins and Labs]
+
+== Assorted tracking bugs
+
+\&#42; https://bugzilla.redhat.com/buglist.cgi?bug_status=$$__open__$$\&amp;f1=blocked\&amp;list_id=11983255\&amp;o1=substring\&amp;query_format=advanced\&amp;v1=F{release-version}FTBFS[Failed to Build]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}BetaBlocker[Beta Blockers]
+\&#42; https://bugzilla.redhat.com/show_bug.cgi?id=F{release-version}FinalBlocker[Final Blockers]
+
+
+= Fedora Linux {release-version}
+:release-version: 9
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+
+
+
+= Fedora Linux {release-version}
+:release-version: 8
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/fedora/f{release-version}/
+
+== Quick links
+
+\&#42; https://fedoraproject.org/wiki/Releases/{release-version}/FeatureList[Feature List]
+\&#42; https://fedorapeople.org/groups/schedule/f-{release-version}/f-{release-version}-key-tasks.html[Schedule]
+
+
+
+= Fedora Linux {release-version}
+:release-version: 7
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Fedora Linux {release-version}
+:release-version: 6
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Fedora Linux {release-version}
+:release-version: 5
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Fedora Linux {release-version}
+:release-version: 4
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Fedora Linux {release-version}
+:release-version: 3
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Fedora Linux {release-version}
+:release-version: 2
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Fedora Linux {release-version}
+:release-version: 1
+
+This is a development landing page for Fedora Linux {release-version}.
+User documentation, when available, will be at https://docs.fedoraproject.org/en-US/Fedora/{release-version}/html/Release_Notes/
+
+
+= Release Name History
+
+Prior to Fedora Linux 21, releases had code names.
+This page documents the history of release names.
+
+== Release name relationships
+
+Name n and n+1 must share an 'is-a' (not a 'has-a') relationship, but n and n+2 must not share the same is-a relationship as n and n+1.
+The release names we put up for vote tend to have multiple meanings so as to allow us to select a new name with a different relationship for the next release.
+It is part of the fun!
+
+== Release name history
+
+=== Fedora Linux 21 (Twenty One)
+
+\&#42; Releases are no longer named starting with this release.
+\&#42; https://lists.fedoraproject.org/pipermail/advisory-board/2013-October/012209.html
+
+=== Fedora Linux 20 (Heisenbug)
+
+\&#42; Heisenbug is a term for a software bug that seems to disappear or alter its behaviour when one attempts to study it.
+\&#42; http://en.wikipedia.org/wiki/Heisenbug
+
+=== Fedora Linux 19 (Schrödinger's Cat)
+
+\&#42; Schrödinger's cat corresponds to a theoretical thought experiment.
+\&#42; http://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat
+
+=== Fedora Linux 18 (Spherical Cow)
+
+\&#42; Spherical Cow is something that has never been observed, and may also therefore be considered as a theoretical thought experiment.
+\&#42; http://en.wikipedia.org/wiki/Spherical_cow
+
+=== Fedora Linux 17 (Beefy Miracle)
+
+\&#42; Beefy Miracle is a name that was suggested for Fedora 16 (like Verne), and is also something that has never been observed.
+\&#42; http://beefymiracle.org/history.html
+
+=== Fedora Linux 16 (Verne)
+
+\&#42; James Lovelock is a futurologist, and so was Jules Verne
+\&#42; http://en.wikipedia.org/wiki/Jules_Verne
+
+=== Fedora Linux 15 (Lovelock)
+
+\&#42; Laughlin is a city in the state of Nevada (United States), and so is Lovelock.
+\&#42; http://en.wikipedia.org/wiki/Lovelock,_Nevada
+
+=== Fedora Linux 14 (Laughlin)
+
+\&#42; Robert H. Goddard was a professor of physics, and so was Robert Laughlin.
+\&#42; http://en.wikipedia.org/wiki/Robert_B._Laughlin
+
+=== Fedora Linux 13 (Goddard)
+
+\&#42; Константи́н Эдуа́рдович Циолко́вский (Konstantin/Constantine Tsiolkovsky) was a rocket scientist, and so was Robert Goddard.
+\&#42; http://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky
+\&#42; https://en.wikipedia.org/wiki/Robert_H._Goddard
+
+=== Fedora Linux 12 (Constantine)
+
+\&#42; Constantine is the name of Township in St. Joseph County, Michigan in the United States, as well as a name of a bay in the United Kingdom.
+\&#42; http://en.wikipedia.org/wiki/Constantine,_Michigan
+\&#42; There are several other connections listed at http://en.wikipedia.org/wiki/Constantine
+
+=== Fedora Linux 11 (Leonidas)
+
+\&#42; Leonidas was a ship in the United States Navy.
+\&#42; https://web.archive.org/web/20040310113223/http://www.history.navy.mil/photos/sh-usn/usnsh-l/ad7.htm
+\&#42; https://www.history.navy.mil/content/history/nhhc/research/histories/ship-histories/danfs/l/leonidas-ii.html
+\&#42; Leonidas is also the name of a king.
+\&#42; http://en.wikipedia.org/wiki/Leonidas_I
+
+=== Fedora Linux 10 (Cambridge)
+
+\&#42; Cambridge is a city in the United States, as well as being original code name of Red Hat Linux 10 (before it became Fedora Core 1), and was the name of a ship in the United States Navy.
+\&#42; https://web.archive.org/web/20031006204348/http://www.history.navy.mil/photos/sh-usn/usnsh-c/cambridg.htm
+\&#42; https://www.history.navy.mil/content/history/nhhc/research/histories/ship-histories/danfs/c/cambridge-i.html
+\&#42; http://en.wikipedia.org/wiki/Cambridge%2C_Massachusetts
+\&#42; Voting results: https://web.archive.org/web/20080809205521/http://jwboyer.fedorapeople.org/fedora10relname.txt.asc
+
+=== Fedora Linux 9 (Sulphur)
+
+\&#42; Sulphur is an element that causes an adverse reaction (tarnishing) when it contacts silver. In mythology, it is an element used to drive away werewolves.  Sulphur is also a city in the United States.
+\&#42; http://en.wikipedia.org/wiki/Silver\&#35;Silver_compounds
+\&#42; https://www.redhat.com/archives/fedora-devel-list/2007-December/msg01194.html
+\&#42; http://en.wikipedia.org/wiki/Sulphur,_Louisiana
+
+=== Fedora Linux 8 (Werewolf)
+
+\&#42; Werewolf is the name of a movie about a dude who turns into a werewolf.  A werewolf also has an adverse reaction (death) when it comes into contact with silver.
+\&#42; http://www.imdb.com/title/tt0118137/
+\&#42; http://en.wikipedia.org/wiki/Werewolf
+
+=== Fedora Linux 7 (Moonshine)
+
+\&#42; Moonshine is an independent record label, and also the name of a movie.
+\&#42; http://en.wikipedia.org/wiki/Moonshine_Music
+\&#42; http://www.imdb.com/title/tt0009389/
+
+=== Fedora Core 6 (Zod)
+
+\&#42; General Zod is a character in the DC Comics universe, as well as an independent record label.
+\&#42; http://en.wikipedia.org/wiki/General_Zod
+\&#42; http://www.zodrecords.com/
+
+=== Fedora Core 5 (Bordeaux)
+
+\&#42; Bordeaux is a wine-producing region in France, as well as a comic book character.
+\&#42; http://en.wikipedia.org/wiki/Bordeaux
+\&#42; http://en.wikipedia.org/wiki/Sasha_Bordeaux
+
+=== Fedora Core 4 (Stentz)
+
+\&#42; Andre Stentz is a French winery.  As such, both Heidelberg and Stentz are distributors of alcoholic beverages.
+\&#42; http://www.andre-stentz.fr/
+
+=== Fedora Core 3 (Heidelberg)
+
+\&#42; Heidelberg is a city in Germany, and also a brand/distributor of beer.
+\&#42; http://en.wikipedia.org/wiki/Heidelberg
+\&#42; http://www.heidelbergdistributing.com
+
+=== Fedora Core 2 (Tettnang)
+
+\&#42; Tettnang is a city in Germany that is a producer of hops.
+\&#42; http://en.wikipedia.org/wiki/Tettnang
+
+=== Fedora Core 1 (Yarrow)
+
+\&#42; Yarrow is a plant with many uses.  Prior to the use of hops in the flavoring of beer, yarrow was used for this purpose.
+\&#42; http://en.wikipedia.org/wiki/Yarrow

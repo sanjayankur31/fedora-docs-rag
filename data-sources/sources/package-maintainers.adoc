@@ -517,13 +517,9 @@ The table below summarizes the statuses.
 More details, including additional keywords, flags, and resolutions are given in the following sections.
 
 
-
-
 == Resolutions
 
 The table below describes the resolutions that can apply to the _CLOSED_ status.
-
-
 
 
 == Priority and Severity
@@ -5289,5 +5285,3 @@ perl -i -pe 's/\r\n/\n/gs'
 ----
 sed -i 's/\r$//'
 ----
-
-

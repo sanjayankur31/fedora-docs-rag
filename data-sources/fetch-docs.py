@@ -16,6 +16,7 @@ from contextlib import chdir
 from pathlib import Path
 
 import requests
+import typer
 from yaml import load
 
 try:
@@ -23,6 +24,7 @@ try:
 except ImportError:
     from yaml import Loader
 
+from typing import Optional
 
 logging.basicConfig(
     format="%(name)s (%(levelname)s) >>> %(message)s\n", level=logging.WARNING
@@ -37,7 +39,7 @@ exclude_doc_urls = [
     "https://gitlab.com/fedora/docs/fedora-linux-documentation/fedora-linux-sysadmin-guide.git",
     "https://pagure.io/fedora-docs/localization.git",
 ]
-repo_config_file = "antora.yml"
+docs_proj_config_file = "antora.yml"
 docs_url_base = "https://docs.fedoraproject.org/en-US"
 current_release = "f43"
 # order is important
@@ -57,17 +59,24 @@ replacements = {
 
 
 class RepoToSingleAdoc(object):
-    def __init__(self, embedding_model):
+    def __init__(self):
+        self.app = typer.Typer()
         self.logger = logging.getLogger("fetch-fedora-docs")
         self.logger.setLevel(logging.DEBUG)
         self.repo_download_path = Path("./repos/").absolute()
         self.output_path = Path("./sources/").absolute()
 
-    def runner(self):
+        self.app.command()(self.runner)
+
+    def runner(self, fetch_git_repos: bool = False, repo_filter: Optional[str] = None):
         response = requests.get(all_docs_yaml)
         docs_config = load(response.text, Loader=Loader)
-        self.logger.debug(docs_config)
+        self.logger.debug(f"{docs_config =}")
         repo_urls = {}
+
+        self.fetch_git_repos = fetch_git_repos
+        self.repo_filter = repo_filter
+        self.logger.debug(f"{self.repo_filter =}")
 
         for src in docs_config["content"]["sources"]:
             git_url = src["url"]
@@ -90,59 +99,88 @@ class RepoToSingleAdoc(object):
 
         command = "git clone --depth=1"
         for repo, info in repo_urls.items():
-            if "Council" not in repo:
-                continue
-            url = info["url"]
             branches = info["branches"]
-            variables = {}
-            full_text = ""
-            web_url = ""
-            url_map = {}
+            url = info["url"]
+            repo_path = f"{self.repo_download_path}/{repo}"
+            self.logger.debug(f"{repo_path =}")
 
             self.logger.info(f"Processing {repo}")
-            repo_path = f"{self.repo_download_path}/{repo}"
+            if self.repo_filter:
+                if self.repo_filter not in repo:
+                    self.logger.info(
+                        f"{repo} not matched by filter ({self.repo_filter}). Skipping"
+                    )
+                    continue
 
-            # repo_command = command + f" {url} {repo_path}"
-            # res = subprocess.run(repo_command.split())
-            # if res.returncode:
-            #     self.logger.error(f"Git checkout failed for {repo}. Skipping.")
-            #     continue
-            # else:
-            #     self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
-            #
+            if self.fetch_git_repos:
+                repo_command = command + f" {url} {repo_path}"
+                res = subprocess.run(repo_command.split())
+                if res.returncode:
+                    self.logger.error(f"Git checkout failed for {repo}. Skipping.")
+                    continue
+                else:
+                    self.logger.info(f"Git repo for {repo} checked out at {repo_path}")
+            else:
+                self.logger.info("Repo fetching disabled. Did not clone repos.")
+
             with chdir(repo_path):
                 self.logger.debug(f"Working in {repo_path}")
                 cwd = Path(".")
-                # get url:
-                # for the moment, use the top level repo url
-                # should be possible to map individual pages to web urls using the nav.adoc entries.
-                repo_config_file_paths = list(cwd.rglob(repo_config_file))
-                if len(repo_config_file_paths) == 0:
-                    self.logger.critical(f"{repo_config_file} not found! Skipping")
+
+                docs_proj_config_file_paths = list(cwd.rglob(docs_proj_config_file))
+                if len(docs_proj_config_file_paths) == 0:
+                    self.logger.critical(f"{docs_proj_config_file} not found! Skipping")
                     continue
-                for repo_config_file_path in repo_config_file_paths:
+                for docs_proj_config_file_path in docs_proj_config_file_paths:
+                    self.logger.debug(
+                        f"processing {docs_proj_config_file_path.absolute()}"
+                    )
+                    config_file = docs_proj_config_file_path
+
+                    variables: dict[str, str] = {}
+                    full_text = ""
+                    url_map: dict[str, str] = {}
                     web_url = docs_url_base
-                    self.logger.debug(f"processing {repo_config_file_path.absolute()}")
-                    config_file = repo_config_file_path
 
                     with chdir(config_file.parent):
+                        nav_files = []
                         with open(config_file.name, "r") as f:
-                            repo_config = load(f, Loader=Loader)
-                            self.logger.debug(f"{repo_config =}")
-                            repo_ref = repo_config["name"]
-                            self.logger.debug(f"{repo_ref = }")
-                            web_url += f"/{repo_ref}"
+                            docs_proj_config = load(f, Loader=Loader)
+                            self.logger.debug(f"{docs_proj_config =}")
+                            docs_proj_ref = docs_proj_config["name"]
+                            self.logger.debug(f"{docs_proj_ref = }")
+                            web_url += f"/{docs_proj_ref}"
+                            nav_files = docs_proj_config.get("nav", [])
+                            self.logger.debug(f"{nav_files =}")
 
-                            repo_branch = repo_config.get("version", "main")
+                            if len(nav_files) == 0:
+                                self.logger.warning(
+                                    f"Repo '{repo}/{docs_proj_config_file_path.parent}' does not include a 'nav.adoc' file! Iterating over all docs in no order, starting with index.adoc"
+                                )
+                                nav_files = list(cwd.rglob("index.adoc"))
+                                nav_files.extend(
+                                    [
+                                        p
+                                        for p in cwd.rglob("*.adoc")
+                                        if p.name != "index.adoc"
+                                    ]
+                                )
+                                self.logger.debug(
+                                    f"(no nav file): All files are: {nav_files}"
+                                )
+
+                            docs_proj_branch = docs_proj_config.get("version", "main")
                             # TODO: how can it be None here?
-                            if not repo_branch:
-                                repo_branch = "main"
+                            if not docs_proj_branch:
+                                docs_proj_branch = "main"
 
-                            self.logger.debug(f"{repo_branch = } ({type(repo_branch)})")
+                            self.logger.debug(
+                                f"{docs_proj_branch = } ({type(docs_proj_branch)})"
+                            )
                             self.logger.debug(f"{branches = }")
 
                             ignore_branches = ["None", "master", "main"]
-                            if repo_branch not in ignore_branches:
+                            if docs_proj_branch not in ignore_branches:
                                 if isinstance(branches, list):
                                     if len(branches) > 1:
                                         if current_release in branches:
@@ -150,19 +188,13 @@ class RepoToSingleAdoc(object):
                                         else:
                                             web_url += f"/{branches[0]}"
                                 else:
-                                    web_url += f"/{repo_branch}"
+                                    web_url += f"/{docs_proj_branch}"
 
                             self.logger.debug(f"Repo web url: {web_url}")
                             url_map["DEFAULT"] = web_url
 
-                        nav_files = list(cwd.rglob("nav.adoc"))
-                        if len(nav_files) == 0:
-                            self.logger.info(
-                                f"Repo '{repo}/{repo_config_file_path.parent}' does not include a 'nav.adoc' file. Skipping"
-                            )
-                            continue
-
-                        for nav_file in nav_files:
+                        for anav_file in nav_files:
+                            nav_file = Path(anav_file)
                             self.logger.debug(f"Processing {nav_file}")
                             if "ROOT" not in str(nav_file.parent):
                                 module_root = str(nav_file.parent).split("/")[-1]
@@ -193,15 +225,15 @@ class RepoToSingleAdoc(object):
                         full_text = full_text.replace(a, b)
 
                     # self.logger.debug(
-                    #     f"Writing to {self.output_path}/{repo_ref}.adoc: {full_text}"
+                    #     f"Writing to {self.output_path}/{docs_proj_ref}.adoc: {full_text}"
                     # )
-                    with open(f"{self.output_path}/{repo_ref}.adoc", "w") as f:
+                    with open(f"{self.output_path}/{docs_proj_ref}.adoc", "w") as f:
                         f.write(full_text)
 
                     self.logger.debug(
-                        f"Writing to {self.output_path}/{repo_ref}.json: {url_map}"
+                        f"Writing to {self.output_path}/{docs_proj_ref}.json: {url_map}"
                     )
-                    with open(f"{self.output_path}/{repo_ref}.json", "w") as f:
+                    with open(f"{self.output_path}/{docs_proj_ref}.json", "w") as f:
                         json.dump(url_map, f)
 
     def process_adoc(
@@ -313,5 +345,5 @@ class RepoToSingleAdoc(object):
 
 
 if __name__ == "__main__":
-    converter = RepoToSingleAdoc(embedding_model="ollama:bge-m3:latest")
-    converter.runner()
+    converter = RepoToSingleAdoc()
+    converter.app()

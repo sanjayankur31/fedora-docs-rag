@@ -1,6 +1,4 @@
 
-
-
 = {team_name}
 :page-aliases: contribute/commops-landing.adoc, teams:commops.adoc, teams:commops-role.adoc
 
@@ -182,8 +180,6 @@ image::https://fedoraproject.org/w/uploads/7/72/Happypanda.png[Happy Panda,100]
 
 
 
-
-
 = Join Community Operations
 
 Become a member of Fedora Community Operations (CommOps) by following these steps.
@@ -292,8 +288,6 @@ Inactive members may be removed after two Fedora Linux releases.
 
 
 
-
-
 = Community Blog
 
 The link:{url_commblog}[Fedora Community Blog] (CommBlog) is a WordPress-based site that delivers news, updates, and calls for help from contributors across Fedora.
@@ -385,8 +379,6 @@ Below, you can find a current list of editors:
 
 
 
-
-
 = How to enroll in Fedora Planet
 Justin W. Wheeler \&lt;jww@fedoraproject.org\&gt;; Fedora community contributors
 // Article content last reviewed and verified by a human on…
@@ -440,8 +432,6 @@ Here are some specific instructions for making a category or label and finding y
 \&#42; link:{url_wiki}/How_to_provide_a_category_specific_feed_using_Blogger[How to provide a category specific feed using Blogger]
 \&#42; link:{url_wiki}/How_to_provide_a_category_specific_feed_using_Blogspot[How to provide a category specific feed using Blogspot]
 \&#42; link:{url_wiki}/How_to_provide_a_category_specific_feed_using_Tumblr[How to provide a category specific feed using Tumblr]
-
-
 
 
 
@@ -612,8 +602,6 @@ Here is a quick decision path:
 
 \&#42; Community Analytics
 
-
-
 = Data Dictionary for Fedora
 
 The purpose of this Data Dictionary is to provide a key starting point for the definitions of terms, data, and concepts relevant to the Fedora Project.
@@ -644,184 +632,6 @@ When contributing to this Data Dictionary, please include:
 | Attribution (Personal) | The recognition given to an individual for their contributions to the Fedora project. | Fedora Contributor System |
 | Attribution (Organization) | The recognition given to an organization for its contributions to the Fedora project. | Fedora Contributor System |
 |===
-
-
-\&#42; Design Assets
-
-
-
-= Cheat cubes
-
-Fedora Cheat Cubes are a long time community favorite. They are designed to print, cut, and tape together cubes covered with various Fedora related designs. The traditional theme for Cheat Cubes is Packaging- but we modernized this project by creating other variations!
-
-== Packaging
-
-Find the Packaging Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
-
-image::cheatcube_packaging.png[S]
-
-== How to Join Fedora
-
-Find the How to Join Fedora Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
-
-image::cheatcube_howtojoinFedora_version2.png[Static]
-
-== Four Foundations
-
-Find the Four Foundations Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
-
-image::cheatcube_fourfoundations.png[]
-
-== Community Outreach Teams
-
-Find the Community Outreach Teams Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
-
-image::cheatcube_communityoutreachteams.png[]
-
-
-
-
-
-= How to join Fedora: slide deck presentation
-
-Community Outreach can often mean presenting on a Fedora related topic. In order to help maintain our brand aesthetic, we encourage folks to use this deck of slide templates. Find the source files https://gitlab.com/fedora/commops/archive/-/tree/main/docs/modules/all-assets/Fedora%20Slide%20Template?ref_type=heads[here].
-
-image::fedoraslidetemplate_newbrand.png[]
-
-
-
-
-
-= How to Join Fedora Resources
-
-This page holds resources related to “How to Join Fedora”. The printouts explain the basic steps to joining Fedora and connecting with the community. The slide presentation covers a lot of material. These resources are meant to be used by anyone implementing outreach for Fedora.
-
-== Slide Presentation
-
-This “How to Join Fedora” slide presentation has been designed for general use. There are PDF and ODP files available. The typeface used throughout the deck is Montserrat. Find the files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
-
-=== Outline of the presentation
-
-\&#42; Who and what Fedora is
-\&#42; How Fedora is organized
-\&#42; How to start contributing to Fedora
-\&#42; Tips on becoming a successful contributor
-
-image::join-us/howtojoinfedorapresentation_pic.png[]
-
-== Print Version 1
-
-This “How to Join Fedora” resource has been designed to print at an A4 size and it is also suitable for sharing on the web. It has been translated into French, German, Hindi, Portuguese, and Spanish. Find all the variations and source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
-
-image::join-us/howtojoinfedora_printversion1_english.png[]
-
-== Print Version 2
-
-This “How to Join Fedora” resource has been designed to print at an A4 size and it is also suitable for sharing on the web. It has been translated into French, German, Hindi, Portuguese, and Spanish. Find all the variations and source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
-
-image::join-us/howtojoinfedora_printversion2_english.png[]
-
-== Web Version
-
-This “How to Join Fedora” resource has been designed specifically for sharing on the web. It has been translated into French, German, Hindi, Portuguese, and Spanish. Find all the variations and source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
-
-image::join-us/howtojoinfedora_webversion1_english.png[]
-
-== Cheat Cube Version 1
-
-Fedora Cheat Cubes are a long time community favorite. They are designed to print, cut, and tape together cubes covered with various Fedora related designs. The theme for this Cheat Cube is “How to Join Fedora” version 1. Find the source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
-
-image::join-us/cheatcube_howtojoinfedora_version1.png[]
-
-== Cheat Cube Version 2
-
-Fedora Cheat Cubes are a long time community favorite. They are designed to print, cut, and tape together cubes covered with various Fedora related designs. The theme for this Cheat Cube is “How to Join Fedora” version 2. Find the source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
-
-image::join-us/cheatcube_howtojoinFedora_version2.png[]
-
-
-
-
-
-
-= Fedora Project Organizational Chart
-
-Find the Fedora Project Organization Chart source files https://gitlab.com/fedora/commops/home/-/tree/main/docs/modules/all-assets/Organizational%20Charts%20_%20Infographics/Fedora%20Project%20Organizational%20Chart[here].
-
-image::https://docs.fedoraproject.org/en-US/project/_images/orgchart.png[Fedora Organizational Chart,100%]
-
-
-
-
-
-= Mindshare Teams Infographics
-
-This page holds infographics for the teams “under” the Mindshare Committee. These designs are focused on the achievements of the various teams from 2019/2020(updates welcome!). Ambassadors and folks interested in Fedora related outreach should use these to get an understanding of what kinds of activities each of these teams does. They can also be distributed to interested contributors.
-
-There are infographics for the following teams:
-
-\&#42; Badges
-\&#42; Commops
-\&#42; Design
-\&#42; Diversity, Equity, \&amp; Inclusion
-\&#42; Join SIG
-\&#42; l10n
-\&#42; i18n
-\&#42; Magazine
-\&#42; Mindshare Committee.
-
-Find all the source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Organizational%20Charts%20_%20Infographics/Mindshare%20Teams%20Infographics[here]. These were last updated in the summer of 2020, updates welcomed!
-
-image::mindshare-infographics/mindshareinfographics_design.png[]
-
-
-
-
-
-= Team logos
-
-This page holds the logo files for Fedora’s Community Outreach Teams. You can find more variations of the logos https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets[here]. Variations include vertical logo compositions and logo files for dark backgrounds.
-
-== Advocates Logos
-
-Find all the Advocates logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Advocates[CommOps Docs repo].
-
-image::team-logos/Advocates/Advocates.png[]
-
-== Ambassadors Logos
-
-Find all the CommOps logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors[CommOps Docs repo].
-
-image::team-logos/Ambassadors/Ambassadors.png[]
-
-== Ambassadors Emeritus Logos
-
-Find all the Ambassadors Emeritus logos \&amp; variations https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors%20Emeritus[CommOps Docs repo].
-
-image::team-logos/Ambassadors Emeritus/Ambassadors emeritus.png[]
-
-== CommOps Logos
-
-Find all the CommOps logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/CommOps[CommOps Docs repo].
-
-image::team-logos/CommOps/CommOps.png[]
-
-== Join SIG Logos
-
-Find all the Join SIG logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Join%20SIG[CommOps Docs Repo].
-
-
-image::team-logos/Join SIG/Join SIG.png[]
-
-== Marketing Logos
-
-Find all the CommOps logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Marketing[CommOps Docs repo].
-
-image::team-logos/Marketing/Marketing.png[]
-
-
-
-
 
 
 
@@ -934,8 +744,6 @@ An old idea about promoting Fedora Linux and the Fedora community to students in
 === North America open source events
 
 \&#42; FOSS Yearly (FOSSY), in Portland, Oregon, US
-
-
 
 
 
@@ -1073,10 +881,6 @@ There is an https://github.com/fedora-infra/maubot-pretix-invite/issues/9[open i
 
 
 
-
-
-
-
 = What is Fedocal?
 
 Fedocal is the community calendar used by the Fedora community.
@@ -1149,8 +953,6 @@ Example Steps in Thunderbird:
 2. Follow the directions from Mozilla Thunderbird to enter a Network Calendar with the iCal URL available here: https://support.mozilla.org/en-US/kb/creating-new-calendars\&#35;w_icalendar-ics
 
 TIP: You can get all calendars by subscribing to https://calendar.fedoraproject.org/ical however be aware this will contain a lot of events.
-
-
 
 
 
@@ -1565,8 +1367,6 @@ Following the above procedures, all other website updates should be manageable d
 
 
 
-
-
 = Pretalx CFP Reviewer Guide
 Oluwatosin Olatunji; Justin Wheeler
 v1.1; 2026-02-10
@@ -1807,8 +1607,6 @@ All that is required from a user would be to add necessary tracks to your event 
 
 
 
-
-
 = Matrix @ Fedora CommOps Working Group
 
 A CommOps Working Group focused on the governance and user experience of Fedora's presence on the Matrix platform.
@@ -1882,116 +1680,6 @@ Meeting schedules are announced in the \&#96;\&#35;commops:fedoraproject.org\&#9
 
 
 
-
-\&#42; Community Outreach Badges
-
-
-
-= Event Badges
-Dhairya Chaudhary; Justin W. Wheeler; Sumantro Mukherjee
-:page-authors: {author}, {author_2}, {author_3}
-
-The following badges are awarded for participation in Fedora events.
-
-== Advocates
-
-The link:https://badges.fedoraproject.org/badge/fedora-advocate[Fedora Advocate badge] is awarded for being a organizing an event through the Advocate Program.
-
-image::https://pagure.io/fedora-badges/issue/raw/files/192ea0085e39847f517c417ff42599256ac425324466cbcc5ad3e3384ae1a71d-633-advocate-2.png[alt='Advocates',align='center']
-
-== Panda Sighting
-
-The link:https://pagure.io/fedora-badges/issue/835[Panda Sighting] badge is awarded for making an appearance on the Fedora YouTube Channel.
-
-image::https://pagure.io/fedora-badges/issue/raw/files/7ce2c7cbdc27db57e7add0c8fd33790f546d2f847e8150a1b5fea70827bc6641-sighting.png[alt='Panda Sighting',align='center']
-
-
-
-
-
-= Team Member Badges
-Dhairya Chaudhary; Justin W. Wheeler; Sumantrom
-:page-authors: {author}, {author_2}, {author_3}
-
-These badges are earned for becoming a member of a team, working group, or special interest group in the Fedora Community.
-
-== Ambassador Badge
-
-The link:https://badges.fedoraproject.org/badge/ambassador[Ambassador] badge is awarded for being a Fedora Ambassador.
-
-image::https://badges.fedoraproject.org/pngs/fas-ambassador.png[alt='Fedora Ambassador']
-
-== Ambassador Emeritus Badge
-
-The link:https://pagure.io/fedora-badges/issue/632[Ambassador Emeritus] Badge is awarded for retiring from the Fedora Ambassador Team.
-
-image::https://pagure.io/fedora-badges/issue/raw/files/d689147b14b843b82784f04d28213a6ae98c825055b64003a5bb8f57b9d07da7-emeritus.png[alt='Ambassador Emeritus']
-
-== Called to Action
-
-The link:https://pagure.io/fedora-badges/issue/833[Called to Action] badge is awarded for being a member of the link:https://fedoraproject.org/wiki/Marketing[Fedora Marketing Team].
-
-image::https://pagure.io/fedora-badges/issue/raw/files/1f0dbca7b58b2571d6af76e3e4642e85e329d8785bee05c13cde7d23f236896d-marketing.png[alt='Marketing']
-
-== CommOps Superstar
-
-The link:https://badges.fedoraproject.org/badge/commops-superstar[CommOps Superstar] badge is awarded for being a member of the link:https://docs.fedoraproject.org/en-US/commops/[Fedora CommOps Team].
-
-image::https://pagure.io/Fedora-Badges/issue/raw/ce8faf2664dc1471c9a3b30ce031fb314b4fbde70f66e4041e9f377f007b4a48-464_2.2.png[alt='Commops Star']
-
-== Welcome Wagon
-
-The link:https://pagure.io/fedora-badges/issue/736[Welcome Wagon] badge is awarded for being a member of the link:https://docs.fedoraproject.org/en-US/fedora-join/[Fedora Join Special Interest Group].
-
-image::https://pagure.io/fedora-badges/issue/raw/files/00793571ff965fec5ae38b2d945f279b962cc474a2a29b842afa816572e634ed-Join_SIG.png[alt='Welcome Wagon']
-
-
-
-
-
-= Repo Badges
-Dhairya Chaudhary; Justin W. Wheeler; Sumantro Mukherjee
-:page-authors: {author}, {author_2}, {author_3}
-
-== CommOps Busy Bee
-
-The link:https://pagure.io/fedora-badges/issue/831[CommOps Busy Bee] badges is awarded for opening tickets on the link:https://pagure.io/fedora-commops/issues[CommOps pagure repo].
-
-image::https://pagure.io/fedora-badges/issue/raw/files/4216ba774fac615a23106a47fc36d07b06770e7b41f4a00d4419de5db2049331-busybee1.png[alt='Busy Bee']
-
-== The Bees Knees
-
-The link:https://pagure.io/fedora-badges/issue/832[Bees Knees] badge is award for closing tickets on the
-link:https://pagure.io/fedora-commops/issues[CommOps pagure repo].
-
-image::https://pagure.io/fedora-badges/issue/raw/files/4d7d22cbf3309681126596594103b56e894eaaee5e30e3160a31e02881d4fd23-beesknees1.png[alt='Busy Knees']
-
-== Onboarding Ideas Specialist
-
-The link:https://pagure.io/fedora-badges/issue/836[Onboarding Ideas Specialist] badge is awarded for opening tickets on the
-link:https://pagure.io/fedora-join/Fedora-Join/issues[Fedora Join SIG pagure repo].
-
-image::https://pagure.io/fedora-badges/issue/raw/files/a94c54ba9dca17be06fc1ba3f52577bb87f84e71b439c6b50da1fec45c346e26-onboarding-idea1.png[alt='Onboarding Ideas']
-
-
-== Onboarding Specialist
-
-The link:https://pagure.io/fedora-badges/issue/837[Onboarding Specialist] badge is awarded for closing tickets on the
-link:https://pagure.io/fedora-join/Fedora-Join/issues[Fedora Join SIG pagure repo].
-
-image::https://pagure.io/fedora-badges/issue/raw/files/b78a855c25d77f428d3325cbc4a314336b412600790f81eb6911767dd909d2e0-onboarding1.png[alt='Onboarding Specialists']
-
-== Welcoming Committee
-
-The link:https://pagure.io/fedora-badges/issue/834[Welcoming Committee] badge is awarded for closing tickets on the
-link:https://pagure.io/fedora-join/Welcome-to-Fedora/issues[Welcome-to-Fedora pagure repo]
-
-image::https://pagure.io/fedora-badges/issue/raw/files/0d94003ab209b9a94621f8f8b9cf16386849b9e9b120a0dc56adc6b723bd299a-welcome1.png[alt='Welcoming Committee']
-
-
-
-
-
 = CommOps Teams
 :page-layout: with_menu
 
@@ -2014,8 +1702,6 @@ The Fedora Marketing Team ensures that people in Fedora can consistently explain
 
 
 \&#42;\&#42; Ambassadors
-
-
 
 = Fedora Ambassadors
 
@@ -2043,8 +1729,6 @@ The primary responsibility of Ambassadors is to ensure the Fedora updates are be
 \&#42; Demonstrate Fedora and other open source projects to the public
 
 \&#42; Promote Fedora at local user groups with talks etc.
-
-
 
 
 
@@ -2139,15 +1823,11 @@ The main responsibility of Ambassadors is to ensure the Fedora updates are being
 
 
 
-
-
 == Ambassadors Logos
 
 Find all the CommOps logos \&amp; variations https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos[here]. Repo structure is quite simple to navigate.
 
 image::Ambassadors.png[]
-
-
 
 
 
@@ -2412,8 +2092,6 @@ thread on Discussion.fedoraproject.org.
 
 
 
-
-
 = Ambassadors Emeritus
 
 Ambassadors Emeritus are people who held ambassador position for at least one full year and leave the Ambassador role in good standing.
@@ -2422,8 +2100,6 @@ The Emeritus title is to publicly recognize them as former Ambassador and to tha
 
 These can also be ambassadors who want to take a step back from the ambassador’s responsibility for a while to focus on their personal lives,
 work or to avoid burnout.
-
-
 
 
 
@@ -2442,15 +2118,11 @@ In the meantime, you can check what the rest of the community is up to by readin
 
 
 
-
-
 https://pagure.io/fedora-badges/issue/632[Ambassador Emeritus Badge]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The Ambassador Emeritus Badge is awarded for retiring from the Fedora Ambassador Team.
 
 image:https://pagure.io/fedora-badges/issue/raw/files/d689147b14b843b82784f04d28213a6ae98c825055b64003a5bb8f57b9d07da7-emeritus.png[alt='emeritus']
-
-
 
 
 
@@ -2460,10 +2132,6 @@ Find all the Ambassadors Emeritus logos \&amp; variations https://pagure.io/fedo
 
 
 image::Ambassadors emeritus.png[]
-
-
-
-
 
 
 
@@ -2506,8 +2174,6 @@ image::Ambassadors emeritus.png[]
 
 \&#42;\&#42; Community Ops
 
-
-
 = CommOps Badges
 
 
@@ -2548,8 +2214,6 @@ The Welcoming Committee badge is awarded for closing tickets on the
 https://pagure.io/fedora-join/Welcome-to-Fedora/issues[Welcome-to-Fedora pagure repo]
 
 image:https://pagure.io/fedora-badges/issue/raw/files/0d94003ab209b9a94621f8f8b9cf16386849b9e9b120a0dc56adc6b723bd299a-welcome1.png[alt='Welcoming Committee']
-
-
 
 
 
@@ -2716,15 +2380,11 @@ Examples of sub-project support and on-boarding work:
 
 \&#42;\&#42;\&#42; Community Polls
 
-
-
 = Overview
 
 Various surveys were developed during the Community Outreach Revamp. The most useful questions were refined and collected here for future implementation. Any contributor interested in community metrics should feel free to run these polls using http://discussion.fedoraproject.org/[discussion.fedoraproject.org]. Record your findings on the Informal Poll Results wiki page.
 
 Folks interested in community metrics and health should feel free to take the results and analyze the data. Please share your findings with a post on https://discussion.fedoraproject.org/c/project/commops[Discussion.fedoraproject.org] and use \&#35;commops as the topic.
-
-
 
 
 
@@ -2756,8 +2416,6 @@ or option 3
 == Schedule
 
 These questions should be run as often as the CommOps and/or Mindshare team can initiate them.
-
-
 
 
 
@@ -2937,8 +2595,6 @@ Open ended?
 \&#42;\&#42; link:https://docs.fedoraproject.org/en-US/fedora-join/[Join SIG pass:[\&lt;i class='fas fa-external-link-alt'\&gt;\&lt;/i\&gt;]]
 \&#42;\&#42; link:https://docs.fedoraproject.org/en-US/marketing/[Marketing pass:[\&lt;i class='fas fa-external-link-alt'\&gt;\&lt;/i\&gt;]]
 
-
-
 = CommOps \&amp; Ambassador Reps to Mindshare
 
 There are two representatives from the CommOps structure to Mindshare. Ideally, this would be one Ambassador representative and one representative from CommOps. These people are responsible for representing Ambassadors/CommOps as a collective to the Mindshare Committee and not as a single voice. They will be required to work with all the various groups that collaborate with Mindshare and act as a liaison between these groups and CommOps. These roles will require a fair amount of time investment and good communication skills.
@@ -2989,8 +2645,6 @@ The selected person and the Mindshare Committee will be notified once the select
 
 
 
-
-
 = IRC / Libera Chat Group Contacts
 
 https://libera.chat/[libera.chat] IRC network has a concept of ‘Groups’ for various projects. Group contacts for each of those groups are granted special powers on the network over their groups channels. Additionally, requests from Group contacts can be taken as ‘official’ requests from the group. Fedora group contacts represent Fedora to libera.chat.
@@ -3028,3 +2682,263 @@ Group contacts are added from very trusted project members and kept to a small n
 Link : https://pagure.io/irc
 
 
+\&#42; Community Outreach Badges
+
+= Event Badges
+Dhairya Chaudhary; Justin W. Wheeler; Sumantro Mukherjee
+:page-authors: {author}, {author_2}, {author_3}
+
+The following badges are awarded for participation in Fedora events.
+
+== Advocates
+
+The link:https://badges.fedoraproject.org/badge/fedora-advocate[Fedora Advocate badge] is awarded for being a organizing an event through the Advocate Program.
+
+image::https://pagure.io/fedora-badges/issue/raw/files/192ea0085e39847f517c417ff42599256ac425324466cbcc5ad3e3384ae1a71d-633-advocate-2.png[alt='Advocates',align='center']
+
+== Panda Sighting
+
+The link:https://pagure.io/fedora-badges/issue/835[Panda Sighting] badge is awarded for making an appearance on the Fedora YouTube Channel.
+
+image::https://pagure.io/fedora-badges/issue/raw/files/7ce2c7cbdc27db57e7add0c8fd33790f546d2f847e8150a1b5fea70827bc6641-sighting.png[alt='Panda Sighting',align='center']
+
+
+
+= Team Member Badges
+Dhairya Chaudhary; Justin W. Wheeler; Sumantrom
+:page-authors: {author}, {author_2}, {author_3}
+
+These badges are earned for becoming a member of a team, working group, or special interest group in the Fedora Community.
+
+== Ambassador Badge
+
+The link:https://badges.fedoraproject.org/badge/ambassador[Ambassador] badge is awarded for being a Fedora Ambassador.
+
+image::https://badges.fedoraproject.org/pngs/fas-ambassador.png[alt='Fedora Ambassador']
+
+== Ambassador Emeritus Badge
+
+The link:https://pagure.io/fedora-badges/issue/632[Ambassador Emeritus] Badge is awarded for retiring from the Fedora Ambassador Team.
+
+image::https://pagure.io/fedora-badges/issue/raw/files/d689147b14b843b82784f04d28213a6ae98c825055b64003a5bb8f57b9d07da7-emeritus.png[alt='Ambassador Emeritus']
+
+== Called to Action
+
+The link:https://pagure.io/fedora-badges/issue/833[Called to Action] badge is awarded for being a member of the link:https://fedoraproject.org/wiki/Marketing[Fedora Marketing Team].
+
+image::https://pagure.io/fedora-badges/issue/raw/files/1f0dbca7b58b2571d6af76e3e4642e85e329d8785bee05c13cde7d23f236896d-marketing.png[alt='Marketing']
+
+== CommOps Superstar
+
+The link:https://badges.fedoraproject.org/badge/commops-superstar[CommOps Superstar] badge is awarded for being a member of the link:https://docs.fedoraproject.org/en-US/commops/[Fedora CommOps Team].
+
+image::https://pagure.io/Fedora-Badges/issue/raw/ce8faf2664dc1471c9a3b30ce031fb314b4fbde70f66e4041e9f377f007b4a48-464_2.2.png[alt='Commops Star']
+
+== Welcome Wagon
+
+The link:https://pagure.io/fedora-badges/issue/736[Welcome Wagon] badge is awarded for being a member of the link:https://docs.fedoraproject.org/en-US/fedora-join/[Fedora Join Special Interest Group].
+
+image::https://pagure.io/fedora-badges/issue/raw/files/00793571ff965fec5ae38b2d945f279b962cc474a2a29b842afa816572e634ed-Join_SIG.png[alt='Welcome Wagon']
+
+
+
+= Repo Badges
+Dhairya Chaudhary; Justin W. Wheeler; Sumantro Mukherjee
+:page-authors: {author}, {author_2}, {author_3}
+
+== CommOps Busy Bee
+
+The link:https://pagure.io/fedora-badges/issue/831[CommOps Busy Bee] badges is awarded for opening tickets on the link:https://pagure.io/fedora-commops/issues[CommOps pagure repo].
+
+image::https://pagure.io/fedora-badges/issue/raw/files/4216ba774fac615a23106a47fc36d07b06770e7b41f4a00d4419de5db2049331-busybee1.png[alt='Busy Bee']
+
+== The Bees Knees
+
+The link:https://pagure.io/fedora-badges/issue/832[Bees Knees] badge is award for closing tickets on the
+link:https://pagure.io/fedora-commops/issues[CommOps pagure repo].
+
+image::https://pagure.io/fedora-badges/issue/raw/files/4d7d22cbf3309681126596594103b56e894eaaee5e30e3160a31e02881d4fd23-beesknees1.png[alt='Busy Knees']
+
+== Onboarding Ideas Specialist
+
+The link:https://pagure.io/fedora-badges/issue/836[Onboarding Ideas Specialist] badge is awarded for opening tickets on the
+link:https://pagure.io/fedora-join/Fedora-Join/issues[Fedora Join SIG pagure repo].
+
+image::https://pagure.io/fedora-badges/issue/raw/files/a94c54ba9dca17be06fc1ba3f52577bb87f84e71b439c6b50da1fec45c346e26-onboarding-idea1.png[alt='Onboarding Ideas']
+
+
+== Onboarding Specialist
+
+The link:https://pagure.io/fedora-badges/issue/837[Onboarding Specialist] badge is awarded for closing tickets on the
+link:https://pagure.io/fedora-join/Fedora-Join/issues[Fedora Join SIG pagure repo].
+
+image::https://pagure.io/fedora-badges/issue/raw/files/b78a855c25d77f428d3325cbc4a314336b412600790f81eb6911767dd909d2e0-onboarding1.png[alt='Onboarding Specialists']
+
+== Welcoming Committee
+
+The link:https://pagure.io/fedora-badges/issue/834[Welcoming Committee] badge is awarded for closing tickets on the
+link:https://pagure.io/fedora-join/Welcome-to-Fedora/issues[Welcome-to-Fedora pagure repo]
+
+image::https://pagure.io/fedora-badges/issue/raw/files/0d94003ab209b9a94621f8f8b9cf16386849b9e9b120a0dc56adc6b723bd299a-welcome1.png[alt='Welcoming Committee']
+
+
+\&#42; Design Assets
+
+= Cheat cubes
+
+Fedora Cheat Cubes are a long time community favorite. They are designed to print, cut, and tape together cubes covered with various Fedora related designs. The traditional theme for Cheat Cubes is Packaging- but we modernized this project by creating other variations!
+
+== Packaging
+
+Find the Packaging Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
+
+image::cheatcube_packaging.png[S]
+
+== How to Join Fedora
+
+Find the How to Join Fedora Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
+
+image::cheatcube_howtojoinFedora_version2.png[Static]
+
+== Four Foundations
+
+Find the Four Foundations Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
+
+image::cheatcube_fourfoundations.png[]
+
+== Community Outreach Teams
+
+Find the Community Outreach Teams Cheat Cube source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Cheat%20Cubes[here].
+
+image::cheatcube_communityoutreachteams.png[]
+
+
+
+= How to join Fedora: slide deck presentation
+
+Community Outreach can often mean presenting on a Fedora related topic. In order to help maintain our brand aesthetic, we encourage folks to use this deck of slide templates. Find the source files https://gitlab.com/fedora/commops/archive/-/tree/main/docs/modules/all-assets/Fedora%20Slide%20Template?ref_type=heads[here].
+
+image::fedoraslidetemplate_newbrand.png[]
+
+
+
+= How to Join Fedora Resources
+
+This page holds resources related to “How to Join Fedora”. The printouts explain the basic steps to joining Fedora and connecting with the community. The slide presentation covers a lot of material. These resources are meant to be used by anyone implementing outreach for Fedora.
+
+== Slide Presentation
+
+This “How to Join Fedora” slide presentation has been designed for general use. There are PDF and ODP files available. The typeface used throughout the deck is Montserrat. Find the files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
+
+=== Outline of the presentation
+
+\&#42; Who and what Fedora is
+\&#42; How Fedora is organized
+\&#42; How to start contributing to Fedora
+\&#42; Tips on becoming a successful contributor
+
+image::join-us/howtojoinfedorapresentation_pic.png[]
+
+== Print Version 1
+
+This “How to Join Fedora” resource has been designed to print at an A4 size and it is also suitable for sharing on the web. It has been translated into French, German, Hindi, Portuguese, and Spanish. Find all the variations and source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
+
+image::join-us/howtojoinfedora_printversion1_english.png[]
+
+== Print Version 2
+
+This “How to Join Fedora” resource has been designed to print at an A4 size and it is also suitable for sharing on the web. It has been translated into French, German, Hindi, Portuguese, and Spanish. Find all the variations and source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
+
+image::join-us/howtojoinfedora_printversion2_english.png[]
+
+== Web Version
+
+This “How to Join Fedora” resource has been designed specifically for sharing on the web. It has been translated into French, German, Hindi, Portuguese, and Spanish. Find all the variations and source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
+
+image::join-us/howtojoinfedora_webversion1_english.png[]
+
+== Cheat Cube Version 1
+
+Fedora Cheat Cubes are a long time community favorite. They are designed to print, cut, and tape together cubes covered with various Fedora related designs. The theme for this Cheat Cube is “How to Join Fedora” version 1. Find the source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
+
+image::join-us/cheatcube_howtojoinfedora_version1.png[]
+
+== Cheat Cube Version 2
+
+Fedora Cheat Cubes are a long time community favorite. They are designed to print, cut, and tape together cubes covered with various Fedora related designs. The theme for this Cheat Cube is “How to Join Fedora” version 2. Find the source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/How%20to%20Join%20Fedora[here].
+
+image::join-us/cheatcube_howtojoinFedora_version2.png[]
+
+
+
+
+= Fedora Project Organizational Chart
+
+Find the Fedora Project Organization Chart source files https://gitlab.com/fedora/commops/home/-/tree/main/docs/modules/all-assets/Organizational%20Charts%20_%20Infographics/Fedora%20Project%20Organizational%20Chart[here].
+
+image::https://docs.fedoraproject.org/en-US/project/_images/orgchart.png[Fedora Organizational Chart,100%]
+
+
+
+= Mindshare Teams Infographics
+
+This page holds infographics for the teams “under” the Mindshare Committee. These designs are focused on the achievements of the various teams from 2019/2020(updates welcome!). Ambassadors and folks interested in Fedora related outreach should use these to get an understanding of what kinds of activities each of these teams does. They can also be distributed to interested contributors.
+
+There are infographics for the following teams:
+
+\&#42; Badges
+\&#42; Commops
+\&#42; Design
+\&#42; Diversity, Equity, \&amp; Inclusion
+\&#42; Join SIG
+\&#42; l10n
+\&#42; i18n
+\&#42; Magazine
+\&#42; Mindshare Committee.
+
+Find all the source files https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Organizational%20Charts%20_%20Infographics/Mindshare%20Teams%20Infographics[here]. These were last updated in the summer of 2020, updates welcomed!
+
+image::mindshare-infographics/mindshareinfographics_design.png[]
+
+
+
+= Team logos
+
+This page holds the logo files for Fedora’s Community Outreach Teams. You can find more variations of the logos https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets[here]. Variations include vertical logo compositions and logo files for dark backgrounds.
+
+== Advocates Logos
+
+Find all the Advocates logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Advocates[CommOps Docs repo].
+
+image::team-logos/Advocates/Advocates.png[]
+
+== Ambassadors Logos
+
+Find all the CommOps logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors[CommOps Docs repo].
+
+image::team-logos/Ambassadors/Ambassadors.png[]
+
+== Ambassadors Emeritus Logos
+
+Find all the Ambassadors Emeritus logos \&amp; variations https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Ambassadors%20Emeritus[CommOps Docs repo].
+
+image::team-logos/Ambassadors Emeritus/Ambassadors emeritus.png[]
+
+== CommOps Logos
+
+Find all the CommOps logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/CommOps[CommOps Docs repo].
+
+image::team-logos/CommOps/CommOps.png[]
+
+== Join SIG Logos
+
+Find all the Join SIG logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Join%20SIG[CommOps Docs Repo].
+
+
+image::team-logos/Join SIG/Join SIG.png[]
+
+== Marketing Logos
+
+Find all the CommOps logos \&amp; variations in the https://pagure.io/fedora-commops/blob/main/f/docs/modules/all-assets/Team%20Logos/Marketing[CommOps Docs repo].
+
+image::team-logos/Marketing/Marketing.png[]

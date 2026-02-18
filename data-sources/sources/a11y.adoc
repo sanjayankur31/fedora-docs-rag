@@ -1,6 +1,4 @@
 
-
-
 = Fedora Accessibility (a11y) Working Group
 
 [[vision]]
@@ -23,5 +21,3 @@ The Fedora Accessibility Working Group empowers Fedora to be the accessible dist
 \&#42; Educate accessibility developers about operating system requirements.
 \&#42; Raise awareness about accessibility to the wider community.
 ____
-
-

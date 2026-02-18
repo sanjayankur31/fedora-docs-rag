@@ -14679,9 +14679,7 @@ won't have to select apps one by one in the package chooser \'\'
 
 *Notes:*
 
-&#42;&#42; 2007
-
-&#42;&#42; 2006 = Google Summer of Code 2006
+&#42;&#42; 2007 &#42;&#42; 2006 = Google Summer of Code 2006
 
 The Fedora Project participated in the second Summer of Code event and
 mentored 5 students throughought the summer as they completed their

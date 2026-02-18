@@ -97,8 +97,6 @@ Even when we make a mistake, we will address it as expediently as possible, and 
 
 
 
-
-
 = Kickstart files
 Fedora i3 SIG \&lt;i3wm@lists.fedoraproject.org\&gt;
 :toc:
@@ -190,8 +188,6 @@ The kickstart files that are available are:
 \&#42; \&#96;flat-i3-xfce.ks\&#96; whichi is flattened from \&#96;flat-live-xfce.ks\&#96; which is also branched for F32.
 
 Both of them were modified in order to add the link:https://fedoraproject.org/wiki/SIGs/i3/Brainstorm\&#35;i3-minimal[i3-minimal] packages along with the packages used by the specific DE.
-
-
 
 
 
@@ -373,5 +369,3 @@ Log: \&lt;URL to meetbot .log.html\&gt;
 ----
 
 Thank you for running the meeting.
-
-

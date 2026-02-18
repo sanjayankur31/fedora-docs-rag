@@ -4070,7 +4070,7 @@ Add or enable third-party repositories with font packages
 
 List all available font packages from enabled repositories
 
-:   
+:
 
 <!-- -->
 
@@ -4078,7 +4078,7 @@ List all available font packages from enabled repositories
 
 Install the font package you need
 
-:   
+:
 
 <!-- -->
 
@@ -4107,7 +4107,7 @@ machine will be able to use these fonts.
 
 Create a new directory in the system fonts directory (&#96;/usr/local/share/fonts/&#96;) to accommodate the new font family, and copy the downloaded fonts (e.g. robofont.ttf files)
 
-:   
+:
 
 <!-- -->
 
@@ -4116,7 +4116,7 @@ Create a new directory in the system fonts directory (&#96;/usr/local/share/font
 
 Set permissions and update SELinux labels
 
-:   
+:
 
 <!-- -->
 
@@ -4126,7 +4126,7 @@ Set permissions and update SELinux labels
 
 Update the font cache
 
-:   
+:
 
 <!-- -->
 
@@ -4213,7 +4213,7 @@ locally:
 
 Create a new directory &#96;\~/.local/share/fonts/&lt;font-family-name&gt;/&#96; for the new font family
 
-:   
+:
 
 <!-- -->
 
@@ -4221,7 +4221,7 @@ Create a new directory &#96;\~/.local/share/fonts/&lt;font-family-name&gt;/&#96;
 
 Copy font files (e.g. &#96;.ttf&#96; files) to the new directory
 
-:   
+:
 
 <!-- -->
 
@@ -4229,7 +4229,7 @@ Copy font files (e.g. &#96;.ttf&#96; files) to the new directory
 
 Update the font cache
 
-:   
+:
 
 <!-- -->
 
@@ -12604,8 +12604,6 @@ Version Encryption Signing
     \&#42; https://www.maartenbaert.be/simplescreenrecorder/
 
 
-
-
     = GNOME Shell extensions
     Ankur Sinha; Fedora Documentation Team
 
@@ -14927,10 +14925,6 @@ Version Encryption Signing
 
 
 
-
-
-
-
     = Upgrading Fedora Linux Online Using Package Manager
     Ben Cotton; Kamil Páral;  Caleb McKee
     //:page-aliases:
@@ -15221,16 +15215,6 @@ Version Encryption Signing
 
 
 
-
-
-
-
-
-
-
-
-
-
     = How to debug Dracut problems
     Caleb McKee; Héctor Louzao; Frank Sträter
     //:imagesdir: ./images
@@ -15497,10 +15481,6 @@ Version Encryption Signing
     See the \&#96;dracut.cmdline(7)\&#96;
     https://man7.org/linux/man-pages/man7/dracut.cmdline.7.html[man page] for
     the complete reference.
-
-
-
-
 
 
 
@@ -18294,10 +18274,6 @@ Version Encryption Signing
 
 
     \&#42; Printing and scanning
-
-
-
-
     = CUPS – Useful Tricks
     Brandon Nielsen; Zdenek Dohnal
 

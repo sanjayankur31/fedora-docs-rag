@@ -1,6 +1,4 @@
 
-
-
 = How do I get involved?
 
 == Getting Started
@@ -29,8 +27,6 @@ Check the https://calendar.fedoraproject.org/design[Design Calendar] for updated
 
 Design team members are present on the https://matrix.to/\&#35;/\&#35;design:fedoraproject.org[\&#42;\&#35;design:fedoraproject.org\&#42; Matrix room] on https://chat.fedoraproject.org/[chat.fedoraproject.org].
 Feel free to reach us here!
-
-
 
 
 
@@ -72,8 +68,6 @@ Dedicated page to help you find assets, tutorials, and recommended software to s
 
 
 
-
-
 = Need Design Help?
 
 == Filing an issue
@@ -86,6 +80,3 @@ You can file an https://gitlab.com/fedora/design/team/requests/-/issues/[issue] 
 == Now what?
 
 Because this is mainly a volunteer-staffed team, we don't guarantee to handle all tickets. If you think a ticket needs attention and would like to work on it, but someone else took ownership of the ticket: try to contact the owner and see if they are working on it. If you don't hear from them within a week you can probably take the ticket over. If you have a filed a ticket and have not heard from anyone, please feel free to https://matrix.to/\&#35;/\&#35;design:fedoraproject.org[join our chat] for attention / guidance / support.
-
-
-

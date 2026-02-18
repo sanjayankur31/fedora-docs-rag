@@ -1,5 +1,3 @@
-# Welcome {#_welcome}
-
 This is the documentation for &#42;Fedora Minimal&#42;, a Fedora Spin
 that focuses on having:
 
@@ -16,7 +14,7 @@ This makes &#42;Fedora Minimal&#42; well suited to be used when you want
 to often rebuild, or redeploy, your system. &#42;Fedora Minimal&#42;
 also tries to serve well as a base for further customization.
 
-## Differences {#_differences}
+# Differences {#_differences}
 
 While there is no over-arching definition of what makes Fedora there are
 things that the large majority of Fedora variants share. &#42;Fedora
@@ -30,7 +28,7 @@ These are the differences we feel are the most important and users
 should be aware of before choosing to base their install on &#42;Fedora
 Minimal&#42;.
 
-### No &#96;firewalld&#96; {#_no_96firewalld96}
+## No &#96;firewalld&#96; {#_no_96firewalld96}
 
 Many Fedora variants have *firewalld* installed and enabled by default.
 &#42;Fedora Minimal&#42; does not ship with &#96;firewalld&#96; nor any
@@ -38,7 +36,7 @@ other firewall by default allowing you to pick and choose instead.
 
 &#42;Starting from&#42;: Fedora 43.
 
-### &#96;ext4&#96; on &#96;/&#96; {#_96ext496_on_9696}
+## &#96;ext4&#96; on &#96;/&#96; {#_96ext496_on_9696}
 
 Most Fedora variants have *btrfs* on their root partition. It is
 something Fedora is well known for. &#42;Fedora Minimal&#42; opts to
@@ -60,7 +58,7 @@ Because &#42;Fedora Minimal&#42; focuses on customizability it can be
 
 &#42;Starting from&#42;: Fedora 38.
 
-### No &#96;/etc/fstab&#96; {#_no_96etcfstab96}
+## No &#96;/etc/fstab&#96; {#_no_96etcfstab96}
 
 &#42;Fedora Minimal&#42; uses mount units and the discoverable partition
 specification by default. This means it ships without an

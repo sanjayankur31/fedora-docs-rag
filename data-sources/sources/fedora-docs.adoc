@@ -1,6 +1,4 @@
 
-
-
 = Team Organisation and procedures
 
 [abstract]
@@ -501,8 +499,6 @@ If your changes do not appear online within 60 hours of your PR being merged, pi
 
 
 
-
-
 = Create a new documentation module
 Francois Andrieu, Fedora Documentation Team
 2023-04-28
@@ -816,8 +812,6 @@ Help us with the issues, PRs, onboarding new contributors or keeping our stock o
 
 
 
-
-
 = Contributing to Release Notes
 Fedora Documentation Team \&lt;https://discussion.fedoraproject.org/tag/docs\&gt;
 v0.0.1, 2022-09-26
@@ -1111,8 +1105,6 @@ image::gitlab-ui/pipeline.png[]
 Docs team will evaluate options to reflect changes systematically based on code quality report.
 
 Thanks for your contributions.
-
-
 
 
 = How to edit files on the Pagure Web UI
@@ -2256,8 +2248,6 @@ Fedora Localization Guide for Weblate platform: https://docs.fedoraproject.org/e
 
 //\&#42; Contribute to keeping Docs up and running
 
-
-
 = Contribute to keeping Docs up and running
 
 [abstract]
@@ -2296,8 +2286,6 @@ Sources of Antora UI for the Fedora Docs site
 
 https://docs.antora.org/antora-ui-default/build-preview-ui/[\&#42;Build a UI Project for Local Preview\&#42;]::
 Official \&#96;antora.org\&#96; documentation on how to build a preview site using a custom U.I.
-
-
 
 
 

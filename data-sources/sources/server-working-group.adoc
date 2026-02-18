@@ -537,8 +537,6 @@ The Fedora Server Edition Working Group uses various resources
 
 
 
-
-
 = Meeting Minutes 2026
 Stephen Daley; Peter Boy
 :page-authors: {author}, {author_2}
@@ -5168,5 +5166,3 @@ For reference and documentation of the Server Edition evolution process, we cont
 
 == Working group work plannings
 \&#42; WG work project xref:archive/initial-docs-plan.adoc[Buildup of a renewed documentation on Fedora Server specific topics] planning
-
-

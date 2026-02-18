@@ -168,8 +168,6 @@ A simple image editing package ([application]\&#42;Draw\&#42;) and a relational 
 
 
 
-
-
 = How to file a bug
 Ankur Sinha; Joe Walker
 :page-aliases: howto-file-a-bug.adoc
@@ -2492,12 +2490,6 @@ $ grep '' /tmp/syslog \&gt; /dev/tcp/10.0.2.2/4444
 
 \&#42; Accessibility
 
-
-
-
-
-
-
 \&#42; AI
 = Getting Started with Ollama
 Sumantro Mukherjee;
@@ -2569,8 +2561,6 @@ To explore supported models and advanced configurations, visit the upstream proj
 https://ollama.com/
 
 ---
-
-
 
 
 = Getting Started with PyTorch on Fedora 42
@@ -10568,8 +10558,6 @@ For further editing needs, one can overlay the time over the original video. Thi
 \&#42; https://www.maartenbaert.be/simplescreenrecorder/
 
 
-
-
 = GNOME Shell extensions
 Ankur Sinha; Fedora Documentation Team
 
@@ -12891,10 +12879,6 @@ SELinux denied the \&#96;__httpd__\&#96; process with PID 2465 to access the \&#
 
 
 
-
-
-
-
 = Upgrading Fedora Linux Online Using Package Manager
 Ben Cotton; Kamil Páral;  Caleb McKee
 //:page-aliases:
@@ -13185,16 +13169,6 @@ See a typo, something missing or out of date, or anything else which can be impr
 
 
 
-
-
-
-
-
-
-
-
-
-
 = How to debug Dracut problems
 Caleb McKee; Héctor Louzao; Frank Sträter
 //:imagesdir: ./images
@@ -13461,10 +13435,6 @@ Set udev to loglevel debug
 See the \&#96;dracut.cmdline(7)\&#96;
 https://man7.org/linux/man-pages/man7/dracut.cmdline.7.html[man page] for
 the complete reference.
-
-
-
-
 
 
 
@@ -16258,10 +16228,6 @@ improved? Edit this document at https://pagure.io/fedora-docs/quick-docs.
 
 
 \&#42; Printing and scanning
-
-
-
-
 = CUPS – Useful Tricks
 Brandon Nielsen; Zdenek Dohnal
 
@@ -18614,5 +18580,3 @@ several changes from 20 and later
 |Red Hat Enterprise Linux updates are more conservative and generally focus on security and bug fixes.
 |Fedora's Updates Policy is more liberal compared to Red Hat Enterprise Linux.
 |===
-
-

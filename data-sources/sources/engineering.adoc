@@ -1,0 +1,193 @@
+= Fedora Engineering
+:page-layout: without_menu
+
+xref:fesco:ROOT:index.adoc[\&#42;\&#42;Fedora Engineering Steering Committee\&#42;\&#42;] — FESCo is the Fedora Engineering Steering Committee. It is a fully community elected body and represents the technical leadership in Fedora.
+
+== Engineering Teams
+
+// Include individual team entries as follows:
+//  include::COMPONENT:MODULE:partial$FILENAME.adoc[]
+//  include::partial$team_render.adoc[]
+//
+// Or if it's a local file:
+//  include::partial$FILENAME.adoc[]
+//  include::partial$team_render.adoc[]
+
+
+// Example 1: A team entry using data stored in a different space
+
+// The Template Team
+
+
+// Example 2: A team entry using data stored in this repository (using the template)
+
+// The Template Team
+
+
+
+// Old entries:
+\&#42; xref:modularity:ROOT:index.adoc[\&#42;\&#42;Fedora Modularity\&#42;\&#42;] — Modularity introduces an optional Modular repository that provides additional versions of software on independent lifecycles.
+
+\&#42; xref:containers:ROOT:index.adoc[\&#42;\&#42;Fedora Containers\&#42;\&#42;] — Here you will find Documentation and Guidelines regarding creation, usage and maintenance of Containers in Fedora.
+
+\&#42; xref:neurofedora:ROOT:overview.adoc[\&#42;\&#42;NeuroFedora\&#42;\&#42;] — NeuroFedora is an initiative to provide a ready to use Fedora based Free/Open source software platform for neuroscience.
+
+\&#42; xref:teleirc-sig:ROOT:index.adoc[\&#42;\&#42;Fedora Teleirc SIG\&#42;\&#42;] — The Teleirc SIG is a volunteer-driven group to manage Teleirc bridge bots.
+
+\&#42; xref:ci:ROOT:index.adoc[\&#42;\&#42;Fedora CI\&#42;\&#42;] — Fedora Continuous Integration Portal
+
+\&#42; link:https://fedora-infra-docs.readthedocs.io/en/latest/[\&#42;\&#42;Fedora Infrastructure 🔗\&#42;\&#42;] — Documentation covering the development and administration of the many projects that make Fedora work.
+
+\&#42; xref:qa-docs:ROOT:index.adoc[\&#42;\&#42;Fedora QA\&#42;\&#42;] — This docs outlines all the activities you can get involved in to help with Fedora QA (Quality Assurance) and is meant to guide you through the QA ecosystem.
+
+\&#42; xref:cpe:ROOT:index.adoc[\&#42;\&#42;CPE\&#42;\&#42;] - The Community Platform Engineering Team is a Red Hat team dedicated to the Fedora and CentOS projects where they contribute to the infrastructure and release engineering.
+
+\&#42; xref:kubedevsig:ROOT:index.adoc[\&#42;\&#42;Kubernetes Development SIG\&#42;\&#42;] — SIG for those interested in using, developing and extending Kubernetes related technologies.
+
+== Other Engineering Resources
+////
+Because this page has already existed and linked to other spaces
+that not necessarily represent teams, we have this category to keep those
+so people can still find them.
+////
+
+\&#42; xref:flatpak:ROOT:index.adoc[\&#42;\&#42;Flatpak in Fedora\&#42;\&#42;] — Learn how to build Flatpaks out of Fedora RPM packages.
+
+\&#42; xref:minimization:ROOT:index.adoc[\&#42;\&#42;Fedora Minimization Objective\&#42;\&#42;] — Home of the Fedora Minimization Objective.
+// Team name:
+
+// Team summary:
+
+// Team page URL:
+
+// Team activity status.
+// Choose from: Active, Inactive
+
+// Preferred Asynch communication channel (mailing list, discussion.fp.o, none, etc)
+
+// Preferred Synch (IRC channel, telegram, etc, none)
+
+// Issue tracker
+
+// Meetings
+
+// Any other information?
+// This is a data store of information about a Fedora team.
+
+// File like this would be stored either in the team's docs
+// git repository, or if they don't have any (maybe they live on a wiki).
+// then it can be stored in the council-docs repo next to the template.
+
+// Team name:
+
+// Team summary:
+
+// Team page URL:
+
+// Team activity status.
+// Choose from: Active, Inactive
+
+// Preferred Asynch communication channel (mailing list, discussion.fp.o, none, etc)
+
+// Preferred Synch (IRC channel, telegram, etc, none)
+
+// Issue tracker
+
+// Meetings
+
+// Any other information?
+// Team name:
+
+// Team summary:
+
+// Team page URL:
+
+// Team activity status.
+// Choose from: Active, Inactive
+
+// Preferred Asynch communication channel (mailing list, discussion.fp.o, none, etc)
+
+// Preferred Synch (IRC channel, telegram, etc, none)
+
+// Issue tracker
+//:team_issue_tracker: https://pagure.io/Fedora-Council/tickets
+
+// Meetings
+
+// Any other information?
+//:team_other: Lorem ipsum
+// This is a data store of information about a Fedora team.
+
+// File like this would be stored either in the team's docs
+// git repository, or if they don't have any (maybe they live on a wiki).
+// then it can be stored in the council-docs repo next to the template.
+
+// Team name:
+
+// Team summary:
+
+// Team page URL:
+
+// Team activity status.
+// Choose from: Active, Inactive
+
+// Preferred Asynch communication channel (mailing list, discussion.fp.o, none, etc)
+
+// Preferred Synch (IRC channel, telegram, etc, none)
+
+// Issue tracker
+
+// Meetings
+
+// Any other information?
+// This is a data store of information about a Fedora team.
+
+// File like this would be stored either in the team's docs
+// git repository, or if they don't have any (maybe they live on a wiki).
+// then it can be stored in the council-docs repo next to the template.
+
+// Team name:
+
+// Team summary:
+
+// Team page URL:
+
+// Team activity status.
+// Choose from: Active, Inactive
+
+// Preferred Asynch communication channel (mailing list, discussion.fp.o, none, etc)
+
+// Preferred Synch (IRC channel, telegram, etc, none)
+
+// Issue tracker
+
+// Meetings
+
+// Any other information?
+// TEMPLATE
+
+// This is a data store of information about a Fedora team.
+
+// File like this would be stored either in the team's docs
+// git repository, or if they don't have any (maybe they live on a wiki).
+// then it can be stored in the council-docs repo next to the template.
+
+// Team name:
+
+// Team summary:
+
+// Team page URL:
+
+// Team activity status.
+// Choose from: Active, Inactive
+
+// Preferred Asynch communication channel (mailing list, discussion.fp.o, none, etc)
+
+// Preferred Synch (Matrix room, none, etc.)
+
+// Issue tracker
+
+// Meetings
+
+// Any other information?
+\&#42; https://docs.fedoraproject.org/en-US/council/[\&#42;\&#42;Team Name\&#42;\&#42;] — We serve as a template.

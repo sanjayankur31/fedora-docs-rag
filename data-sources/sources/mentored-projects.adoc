@@ -14407,8 +14407,6 @@ _Notes:_
 
 
 \&#42;\&#42; 2007
-
-
 \&#42;\&#42; 2006
 = Google Summer of Code 2006
 
@@ -16158,5 +16156,3 @@ However, instead of a fixed set of rules, there are general best practices and i
 
 [[flock-mentor-summit]]
 === Flock Mentor Summit: Supported by Mentored Project coordinators
-
-

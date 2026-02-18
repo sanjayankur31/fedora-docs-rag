@@ -1,8 +1,5 @@
 = Welcome
 
-
-= Welcome
-
 This is the documentation for \&#42;Fedora Minimal\&#42;, a Fedora Spin that focuses on having:
 
 - A small set of packages.
@@ -430,5 +427,3 @@ $ sudo image-builder build --extra-repo 'https://download.copr.fedorainfracloud.
 ----
 
 You get a \&#42;Fedora Minimal\&#42; with the kernel and patches from the COPR repository which gives you the highest chance of the most things working. If you're only testing hardware bringup then the blueprint part can be skipped but you won't get updates to the kernel on the system after it has booted.
-
-

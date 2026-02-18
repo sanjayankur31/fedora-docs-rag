@@ -1,6 +1,4 @@
 
-
-
 = How do I get involved?
 Want to be part of the {team_name}? Here's how!
 
@@ -68,8 +66,6 @@ Feedback from official {team_name} members must be provided before accepted to p
 
 \&#42; Check xref:sops/stream-uploads.adoc[our standard procedure to process livestreams] to know how you can easily take livestreams from our events and turn them into talks to upload to our social media profiles;
 \&#42; Check the https://gitlab.com/fedora/podcast/-/issues[Podcast team GitLab repo] if you'd like to help with the Fedora Podcast, as they have a tight relation to our team;
-
-
 
 
 
@@ -535,8 +531,6 @@ For a shorter recap, see this http://www.youtube.com/watch?v=oh9Yi_2jI_g[video o
 
 
 
-
-
 = Fedora Social Media Contribution Model
 Learn more about the Fedora Marketing Team social media model and discover how you can contribute.
 
@@ -666,8 +660,6 @@ Copyediting led by Bassey.
 
 
 
-
-
 = Marketing Resources
 These resources will help you take Fedora to the people.
 
@@ -718,8 +710,6 @@ They are the same tools the Fedora Design Team uses, so you can also help the De
 // \&#42; [[Communication matrix]]
 // \&#42; [[Videos]]
 // \&#42; For the more PR-oriented, a [[Ambassadors/NA/Draft/NewsMedia_HowTo|News Media Howto]] and the [[Fedora_news_distribution_network_%28NDN%29|Fedora News Distribution Network]].
-
-
 
 
 
@@ -900,8 +890,6 @@ Copyediting led by Bassey.
 
 
 
-
-
 = Fedora Ready Brand Guidelines
 Roseline Bassey \&lt;roseline-bassey@fedoraproject.org\&gt;; Justin W. Wheeler \&lt;jww@fedoraproject.org\&gt;; Fedora community contributors
 // Article content last reviewed and verified by a human on…
@@ -1051,8 +1039,6 @@ For titles and headlines.
 
 
 
-
-
 = Fedora Ready Compatibility List
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
@@ -1093,8 +1079,6 @@ Please find Fedora Ready hardware and vendor specific page below:
 
 
 
-
-
 = Framework
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
@@ -1123,8 +1107,6 @@ Details on Framework Linux laptops are available at https://frame.work/linux
 |Fedora supported by vendor  	    |Framework Laptop 13 (12th Gen Intel® Core™)  |Fedora 40	    |link:https://frame.work/products/refurbished-laptop-diy-12-gen-intel?v=FRANDA0016R[purchase page]        |
 
 |Fedora supported by vendor         |Framework Laptop 13 (11th Gen Intel® Core™)  |Fedora 40	    |link:https://frame.work/products/factory-seconds-framework-laptop-13-diy-edition-11th-gen-intel-core?v=FRANBY0BNC[purchase page]|
-
-
 
 
 
@@ -1435,8 +1417,6 @@ Hoping this comes to other geo's soon. In Europe and India look for the 'Build Y
 
 
 
-
-
 = NovaCustom
 Official Fedora Ready compatibility list with hardware and vendors that work well with Fedora Linux out-of-the-box.
 // Article content last reviewed and verified by a human on…
@@ -1461,8 +1441,6 @@ Learn more at https://novacustom.com/.
 |Fedora preinstalled                  |V56 Series         |Fedora 42	      |link:https://novacustom.com/product/v56-series/[Worldwide]
 
 |===
-
-
 
 
 
@@ -1501,8 +1479,6 @@ Details on Slimbook Fedora laptops are available at https://fedora.slimbook.com/
 
 
 
-
-
 = Standard Operating Procedures (SOPs)
 Our formal processes for getting things done.
 
@@ -1514,8 +1490,6 @@ Our formal processes for getting things done.
 
 \&#42;\&#42; https://gitlab.com/fedora/marketing/marketing-planning/-/issues/13[Marketing Team Membership ^[🡵\]^]
 \&#42;\&#42; https://gitlab.com/fedora/mindshare/home/-/issues/26[Social Media Access ^[🡵\]^]
-
-
 
 = Processing Livestreams: A Standardized Workflow
 Adrian Edwards \&lt;moralcode@fedoraproject.org\&gt;; Justin W. Wheeler \&lt;jww@fedoraproject.org\&gt;; Fedora community contributors
@@ -1672,8 +1646,6 @@ These improvements would further enhance the efficiency and robustness of the li
 
 
 
-
-
 = Does your team need marketing help?
 Do you work on a Fedora-related project but can't get people to know it exists?
 
@@ -1687,5 +1659,3 @@ Do you work on a Fedora-related project but can't get people to know it exists?
 
 The Marketing Team reviews tickets during our meetings.
 If your request is more urgent, let us know in our link:{team_synch_communication}[Matrix room] that you opened a ticket.
-
-
