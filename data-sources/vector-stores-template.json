@@ -1,0 +1,254 @@
+[
+    {
+        "name": "fedora-a11y",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/a11y_bge-m3.db"
+    },
+    {
+        "name": "ask-fedora-sops",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/ask-fedora-sops_bge-m3.db"
+    },
+    {
+        "name": "fedora-atomic-desktops",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/atomic-desktops_bge-m3.db"
+    },
+    {
+        "name": "fedora-badges",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/badges_bge-m3.db"
+    },
+    {
+        "name": "fedora-bootc",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/bootc_bge-m3.db"
+    },
+    {
+        "name": "fedora-ci",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/ci_bge-m3.db"
+    },
+    {
+        "name": "fedora-cle",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/cle_bge-m3.db"
+    },
+    {
+        "name": "fedora-cloud",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/cloud_bge-m3.db"
+    },
+    {
+        "name": "fedora-commops",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/commops_bge-m3.db"
+    },
+    {
+        "name": "fedora-community",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/community_bge-m3.db"
+    },
+    {
+        "name": "fedora-containers",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/containers_bge-m3.db"
+    },
+    {
+        "name": "fedora-council",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/council_bge-m3.db"
+    },
+    {
+        "name": "fedora-defensive-coding",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/defensive-coding_bge-m3.db"
+    },
+    {
+        "name": "fedora-dei",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/dei_bge-m3.db"
+    },
+    {
+        "name": "fedora-design",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/design_bge-m3.db"
+    },
+    {
+        "name": "fedora-eln",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/eln_bge-m3.db"
+    },
+    {
+        "name": "fedora-engineering",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/engineering_bge-m3.db"
+    },
+    {
+        "name": "fedora-epel",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/epel_bge-m3.db"
+    },
+    {
+        "name": "fedora-accounts",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-accounts_bge-m3.db"
+    },
+    {
+        "name": "fedora-asahi-remix",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-asahi-remix_bge-m3.db"
+    },
+    {
+        "name": "fedora-coreos",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-coreos_bge-m3.db"
+    },
+    {
+        "name": "fedora-docs",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-docs_bge-m3.db"
+    },
+    {
+        "name": "fedora-join",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-join_bge-m3.db"
+    },
+    {
+        "name": "fedora-magazine",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-magazine_bge-m3.db"
+    },
+    {
+        "name": "fedora-server",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-server_bge-m3.db"
+    },
+    {
+        "name": "fedora",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora_bge-m3.db"
+    },
+    {
+        "name": "fedora-fesco",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fesco_bge-m3.db"
+    },
+    {
+        "name": "fedora-flatpak",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/flatpak_bge-m3.db"
+    },
+    {
+        "name": "fedora-forge-documentation",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/forge-documentation_bge-m3.db"
+    },
+    {
+        "name": "fedora-gaming",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/gaming_bge-m3.db"
+    },
+    {
+        "name": "fedora-i3",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/i3_bge-m3.db"
+    },
+    {
+        "name": "fedora-infra",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/infra_bge-m3.db"
+    },
+    {
+        "name": "fedora-iot-wg",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/iot-wg_bge-m3.db"
+    },
+    {
+        "name": "fedora-iot",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/iot_bge-m3.db"
+    },
+    {
+        "name": "fedora-java-packaging-howto",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/java-packaging-howto_bge-m3.db"
+    },
+    {
+        "name": "fedora-kde",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/kde_bge-m3.db"
+    },
+    {
+        "name": "fedora-legal",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/legal_bge-m3.db"
+    },
+    {
+        "name": "fedora-localization",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/localization_bge-m3.db"
+    },
+    {
+        "name": "fedora-marketing",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/marketing_bge-m3.db"
+    },
+    {
+        "name": "fedora-mentored-projects",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/mentored-projects_bge-m3.db"
+    },
+    {
+        "name": "fedora-mindshare-committee",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/mindshare-committee_bge-m3.db"
+    },
+    {
+        "name": "fedora-mindshare",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/mindshare_bge-m3.db"
+    },
+    {
+        "name": "fedora-minimal-sig",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/minimal-sig_bge-m3.db"
+    },
+    {
+        "name": "fedora-minimal",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/minimal_bge-m3.db"
+    },
+    {
+        "name": "fedora-minimization",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/minimization_bge-m3.db"
+    },
+    {
+        "name": "fedora-modularity",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/modularity_bge-m3.db"
+    },
+    {
+        "name": "neurofedora",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/neurofedora_bge-m3.db"
+    },
+    {
+        "name": "fedora-operations",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/operations_bge-m3.db"
+    },
+    {
+        "name": "fedora-package-maintainers",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/package-maintainers_bge-m3.db"
+    },
+    {
+        "name": "fedora-packaging-guidelines",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/packaging-guidelines_bge-m3.db"
+    },
+    {
+        "name": "fedora-project",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/project_bge-m3.db"
+    },
+    {
+        "name": "fedora-qa-docs",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/qa-docs_bge-m3.db"
+    },
+    {
+        "name": "fedora-quick-docs",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/quick-docs_bge-m3.db"
+    },
+    {
+        "name": "fedora-rawhide-gating",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/rawhide-gating_bge-m3.db"
+    },
+    {
+        "name": "fedora-releases",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/releases_bge-m3.db"
+    },
+    {
+        "name": "fedora-remix-building",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/remix-building_bge-m3.db"
+    },
+    {
+        "name": "fedora-reproducible-builds",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/reproducible-builds_bge-m3.db"
+    },
+    {
+        "name": "fedora-robotics-sig",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/robotics-sig_bge-m3.db"
+    },
+    {
+        "name": "fedora-server-working-group",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/server-working-group_bge-m3.db"
+    },
+    {
+        "name": "fedora-teleirc-sig",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/teleirc-sig_bge-m3.db"
+    },
+    {
+        "name": "fedora-websites",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/websites_bge-m3.db"
+    },
+    {
+        "name": "fedora-workstation-docs",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/workstation-docs_bge-m3.db"
+    },
+    {
+        "name": "fedora-workstation-working-group",
+        "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/workstation-working-group_bge-m3.db"
+    }
+]
