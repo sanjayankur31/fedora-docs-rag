@@ -1,0 +1,3 @@
+[submodule "deployment/huggingface"]
+	path = deployment/huggingface
+	url = git@hf.co:spaces/sanjayankur31/fedora-docs-rag
