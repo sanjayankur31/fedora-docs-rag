@@ -26,6 +26,7 @@ def runner():
         st.stop()
 
     st.title("Fedora RAG")
+    st.caption("Sources (RAG): https://github.com/sanjayankur31/fedora-docs-rag/")
 
     # get history and re-write it
     if "history" not in st.session_state:
