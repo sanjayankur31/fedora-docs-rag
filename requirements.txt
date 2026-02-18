@@ -5,7 +5,4 @@ ollama
 fastapi[standard]
 streamlit
 yaspin
-ruff
-mypy
-pre-commit
 #git+https://github.com/neuroml/neuroml-ai/#subdirectory=utils_pkg
