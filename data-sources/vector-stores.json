@@ -1,6 +1,15 @@
 {
     "embedding_model": "ollama:bge-m3:latest",
     "domains": {
+        "accessibility": {
+            "description": "accessbility (a11y) in Fedora",
+            "vector_stores": [
+                {
+                    "name": "fedora-a11y",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/a11y_bge-m3.db"
+                }
+            ]
+        },
         "ask_fedora": {
             "description": "moderation and use of discussion.fedoraproject.org (previously Ask Fedora)",
             "vector_stores": [
@@ -29,7 +38,7 @@
             ]
         },
         "bootc": {
-            "description": "bootc",
+            "description": "bootable containers (bootc) in Fedora",
             "vector_stores": [
                 {
                     "name": "fedora-bootc",
@@ -64,8 +73,17 @@
                 }
             ]
         },
+        "fedora-commarch": {
+            "description": "set of practices and labor involved in supporting a community across multiple stages of growth and development",
+            "vector_stores": [
+                {
+                    "name": "fedora-community",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/community_bge-m3.db"
+                }
+            ]
+        },
         "fedora-community": {
-            "description": "the Fedora community and community related teams: Community Operations (CommOps); Diversity Equity and Inclusion (DEI) team",
+            "description": "the Fedora community and community related teams: Community Operations (CommOps); Diversity Equity and Inclusion (DEI) team; Fedora Mindshare, Fedora Join",
             "vector_stores": [
                 {
                     "name": "fedora-commops",
@@ -78,6 +96,22 @@
                 {
                     "name": "fedora-dei",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/dei_bge-m3.db"
+                },
+                {
+                    "name": "fedora-engineering",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/engineering_bge-m3.db"
+                },
+                {
+                    "name": "fedora-mindshare",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/mindshare_bge-m3.db"
+                },
+                {
+                    "name": "fedora-join",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-join_bge-m3.db"
+                },
+                {
+                    "name": "fedora-project",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/project_bge-m3.db"
                 }
             ]
         },
@@ -181,7 +215,7 @@
             ]
         },
         "fedora-join": {
-            "description": "the Fedora join team that helps onboard new contributors to the community and their workflow",
+            "description": "for new contributors looking to join the Fedora community, and the Fedora join team that helps them along the way",
             "vector_stores": [
                 {
                     "name": "fedora-join",
@@ -261,6 +295,24 @@
                 }
             ]
         },
+        "fedora-iot": {
+            "description": "the Fedora Internet of Things (IOT) products",
+            "vector_stores": [
+                {
+                    "name": "fedora-iot",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/iot_bge-m3.db"
+                }
+            ]
+        },
+        "fedora-iot-wg": {
+            "description": "the Fedora Internet of Things (IOT) team",
+            "vector_stores": [
+                {
+                    "name": "fedora-iot-wg",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/iot-wg_bge-m3.db"
+                }
+            ]
+        },
         "fedora-kde": {
             "description": "user facing documentation related to the Fedora KDE Plasma desktop",
             "vector_stores": [
@@ -271,7 +323,7 @@
             ]
         },
         "fedora-legal": {
-            "description": "the Fedora legal team, GDPR, licenses in Fedora",
+            "description": "the Fedora legal team, GDPR, and licenses for software that can be included in Fedora",
             "vector_stores": [
                 {
                     "name": "fedora-legal",
@@ -288,7 +340,7 @@
                 }
             ]
         },
-        "fedora-mindshare": {
+        "fedora-mentored": {
             "description": "mentored projects under Fedora: Google Summer of Code, Outreachy, and other internships",
             "vector_stores": [
                 {
@@ -298,11 +350,20 @@
             ]
         },
         "fedora-mindshare": {
-            "description": "the Fedora Mindshare committee: a body focused on representing and supporting the Fedora contributor community, particularly in areas like events, outreach, and recognistion",
+            "description": "the Fedora Mindshare committee: a body focused on representing and supporting the Fedora contributor community, particularly in areas like events, outreach, and recognition",
             "vector_stores": [
                 {
                     "name": "fedora-mindshare-committee",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/mindshare-committee_bge-m3.db"
+                }
+            ]
+        },
+        "fedora-minimal": {
+            "description": "the Fedora minimal variant: focussed on a small set of packages, small size footprint, small complexity, large customizability",
+            "vector_stores": [
+                {
+                    "name": "fedora-minimal",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/minimal_bge-m3.db"
                 }
             ]
         },
@@ -343,11 +404,28 @@
             ]
         },
         "fedora-package-maintainers": {
-            "description": "the Fedora package maintainers",
+            "description": "the Fedora package maintainers, the packaging guidelines, and the package maintenance workflow: new packages, updates, bugs, and maintenance",
             "vector_stores": [
                 {
                     "name": "fedora-package-maintainers",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/package-maintainers_bge-m3.db"
+                },
+                {
+                    "name": "fedora-java-packaging-howto",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/java-packaging-howto_bge-m3.db"
+                },
+                {
+                    "name": "fedora-packaging-guidelines",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/packaging-guidelines_bge-m3.db"
+                }
+            ]
+        },
+        "fedora-project": {
+            "description": "the Fedora community and community related teams: Community Operations (CommOps); Diversity Equity and Inclusion (DEI) team; Fedora Mindshare, Fedora Join",
+            "vector_stores": [
+                {
+                    "name": "fedora-project",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/project_bge-m3.db"
                 }
             ]
         },
@@ -361,7 +439,7 @@
             ]
         },
         "fedora-quick-docs": {
-            "description": "howtos, tutorials and frequently asked questions (FAQs) for using and customising Fedora",
+            "description": "quick documentation (quick docs): howtos, tutorials and frequently asked questions (FAQs) for using and customising Fedora",
             "vector_stores": [
                 {
                     "name": "fedora-quick-docs",
@@ -384,6 +462,24 @@
                 {
                     "name": "fedora-remix-building",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/remix-building_bge-m3.db"
+                }
+            ]
+        },
+        "fedora-releases": {
+            "description": "Fedora releases and the Fedora release cycle",
+            "vector_stores": [
+                {
+                    "name": "fedora-releases",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/releases_bge-m3.db"
+                }
+            ]
+        },
+        "fedora-release-notes": {
+            "description": "release notes for Fedora rawhide",
+            "vector_stores": [
+                {
+                    "name": "fedora",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora_bge-m3.db"
                 }
             ]
         },
@@ -414,12 +510,34 @@
                 }
             ]
         },
+        "fedora-teleirc": {
+            "description": "team documentation for the Fedora teleirc team: connecting Fedora IRC channels to Telegram chat channels",
+            "vector_stores": [
+                {
+                    "name": "fedora-teleirc-sig",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/teleirc-sig_bge-m3.db"
+                }
+            ]
+        },
         "fedora-websites": {
             "description": "the Fedora websites",
             "vector_stores": [
                 {
                     "name": "fedora-websites",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/websites_bge-m3.db"
+                }
+            ]
+        },
+        "fedora-workstation": {
+            "description": "the Fedora workstation desktop product and the fedora workstation team",
+            "vector_stores": [
+                {
+                    "name": "fedora-workstation-docs",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/workstation_bge-m3.db"
+                },
+                {
+                    "name": "fedora-workstation-working-group",
+                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/workstation-working-group_bge-m3.db"
                 }
             ]
         },
