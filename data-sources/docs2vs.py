@@ -79,6 +79,8 @@ class FedoraDocs(object):
         info_files = sorted(glob(f"{self.stores_sources_path}/*.md", recursive=True))
         self.logger.debug(f"{info_files =}")
 
+        output_map: list[dict[str, str]] = []
+
         for src in info_files:
             src_path = Path(src)
             url_map_file = Path(str(src_path).replace(".md", ".json"))
@@ -113,6 +115,12 @@ class FedoraDocs(object):
                 url_map_data = {}
 
             self.process_file(store, src_path, url_map_data)
+            output_map.append(
+                {"name": collection_name, "path": Path(vs_persist_dir).absolute()}
+            )
+
+        with open("vector-stores-template.json", "w") as f:
+            json.dump(output_map, f, indent=4)
 
     def process_file(self, store, file, url_map):
         """Add a markdown file to the vector store
