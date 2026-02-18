@@ -116,7 +116,7 @@
             ]
         },
         "fedora-containers": {
-            "description": "the Fedora community and community related teams: Community Operations (CommOps); Diversity Equity and Inclusion (DEI) team",
+            "description": "creation, usage and maintainance of containers in Fedora",
             "vector_stores": [
                 {
                     "name": "fedora-containers",
@@ -151,8 +151,8 @@
                 }
             ]
         },
-        "fedora-design": {
-            "description": "the Fedora design team that creates artwork and branding for the community",
+        "fedora-eln": {
+            "description": "ELN: new buildroot and compose process for Fedora that takes Fedora Rawhide dist-git sources and emulate a Red Hat Enterprise Linux compose",
             "vector_stores": [
                 {
                     "name": "fedora-eln",
@@ -170,20 +170,11 @@
             ]
         },
         "fedora-accounts": {
-            "description": "the Fedora account system (FAS)",
+            "description": "the Fedora account system (FAS): creating accounts, groups, sponsors, members, 2 factor authentication (2FA), resetting passwords and personal data requrests (PDR)",
             "vector_stores": [
                 {
                     "name": "fedora-accounts",
                     "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora-accounts_bge-m3.db"
-                }
-            ]
-        },
-        "fedora-release-notes": {
-            "description": "release notes for each Fedora release",
-            "vector_stores": [
-                {
-                    "name": "fedora",
-                    "path": "/home/asinha/Documents/02_Code/00_mine/fedora-stuff/fedora-docs-rag/data-sources/vector-stores/fedora_bge-m3.db"
                 }
             ]
         },
@@ -215,7 +206,7 @@
             ]
         },
         "fedora-join": {
-            "description": "for new contributors looking to join the Fedora community, and the Fedora join team that helps them along the way",
+            "description": "for new contributors looking to join the Fedora community, and the Fedora Join team that helps them along the way",
             "vector_stores": [
                 {
                     "name": "fedora-join",
@@ -233,7 +224,7 @@
             ]
         },
         "fedora-server": {
-            "description": "user facing documentation related to the Fedora Server",
+            "description": "user documentation related to the Fedora Server",
             "vector_stores": [
                 {
                     "name": "fedora-server",
@@ -314,7 +305,7 @@
             ]
         },
         "fedora-kde": {
-            "description": "user facing documentation related to the Fedora KDE Plasma desktop",
+            "description": "user documentation related to the Fedora KDE Plasma desktop",
             "vector_stores": [
                 {
                     "name": "fedora-kde",
@@ -421,7 +412,7 @@
             ]
         },
         "fedora-project": {
-            "description": "the Fedora community and community related teams: Community Operations (CommOps); Diversity Equity and Inclusion (DEI) team; Fedora Mindshare, Fedora Join",
+            "description": "the Fedora community: its mission, leadership, organization, communication channels, code of conduct",
             "vector_stores": [
                 {
                     "name": "fedora-project",
