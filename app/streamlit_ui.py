@@ -46,15 +46,18 @@ def runner():
                 with httpx.Client(timeout=None) as client:
                     try:
                         response = client.post(f"{url}/query", params={"query": query})
-                        response_result = response.json().get("result")
-                        st.markdown(response_result)
+                        result = response.content
+                        if response.status_code == httpx.codes.OK:
+                            st.markdown(result)
+                        else:
+                            st.markdown(
+                                f"An error occured. Please try again:\n\n```{response.json()}```"
+                            )
                     except httpx.RequestError as e:
                         st.error(
                             f"An error occured. Please try again:\n\n```\n{e}\n```\n"
                         )
-        st.session_state.history.append(
-            {"role": "assistant", "content": response_result}
-        )
+        st.session_state.history.append({"role": "assistant", "content": result})
     st.caption(
         "The answers are generated using an LLM from Fedora documentation. They may be inaccurate.  Please check with the documentation at https://docs.fedoraproject.org."
     )
